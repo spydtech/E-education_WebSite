@@ -8,7 +8,7 @@ const StudentCourses = () => {
     {
       title: "Full Stack Web Development",
       icon: <IoLogoElectron />,
-      description: "Learn to build dynamic websites and web applications with the Full Stack Web Development course. Covering both front-end and back-end development, this course will teach you everything you need to know to become a proficient web developer. Taught by Rob Percival on Udemy.",
+      description: "Learn to build dynamic websites and web applications with the Full Stack Web Development course. Covering both front-end and back-end development, this course will teach you everything you need to know to become a proficient web developer. Taught by Rob Percival on E-education.",
       link: "/fullStack"
     },
     {
@@ -21,31 +21,31 @@ const StudentCourses = () => {
     {
       title: "Data Structures and Algorithms",
       icon: <IoFlask />,
-      description: "Master the fundamental concepts of data structures and algorithms with the Data Structures and Algorithms course. Offered by Princeton University on Coursera, this course provides a comprehensive understanding of how to design and analyze algorithms.",
+      description: "Master the fundamental concepts of data structures and algorithms with the Data Structures and Algorithms course. Offered by Princeton University on E-education, this course provides a comprehensive understanding of how to design and analyze algorithms.",
       link: "link-to-the-course"
     },
     {
       title: "Machine Learning",
       icon: <IoAnalyticsSharp />,
-      description: "Explore the exciting field of Machine Learning with this course led by Andrew Ng on Coursera. From basic concepts to advanced techniques, you'll learn how to develop machine learning models and apply them to real-world problems.",
+      description: "Explore the exciting field of Machine Learning with this course led by Andrew Ng on E-education. From basic concepts to advanced techniques, you'll learn how to develop machine learning models and apply them to real-world problems.",
       link: "link-to-the-course"
     },
     {
       title: "Game Development",
       icon: <IoGameController />,
-      description: "Create captivating 2D games with the Game Development course. Taught by Ben Tristem on Udemy, this course covers everything from game design principles to implementing gameplay mechanics using C# and Unity.",
+      description: "Create captivating 2D games with the Game Development course. Taught by Ben Tristem on E-education, this course covers everything from game design principles to implementing gameplay mechanics using C# and Unity.",
       link: "link-to-the-course"
     },
     {
       title: "Cybersecurity Fundamentals",
       icon: <IoLockClosed />,
-      description: "Gain a solid understanding of cybersecurity fundamentals with this course on Coursera by NYU. You'll learn about various security concepts, threats, and best practices to protect digital assets.",
+      description: "Gain a solid understanding of cybersecurity fundamentals with this course on E-education by NYU. You'll learn about various security concepts, threats, and best practices to protect digital assets.",
       link: "link-to-the-course"
     },
     {
       title: "Ethical Hacking",
       icon: <IoShieldCheckmark />,
-      description: "Become an ethical hacker with the Ethical Hacking course on Udemy by Ermin Kreponic. Learn how to identify vulnerabilities, exploit security weaknesses, and strengthen systems against cyber attacks.",
+      description: "Become an ethical hacker with the Ethical Hacking course on E-education by Ermin Kreponic. Learn how to identify vulnerabilities, exploit security weaknesses, and strengthen systems against cyber attacks.",
       link: "link-to-the-course"
     },
     {
@@ -63,25 +63,25 @@ const StudentCourses = () => {
     {
       title: "Data Analysis with Python",
       icon: <IoCodeSlash />,
-      description: "Learn data analysis with Python through the Python for Data Science and Machine Learning Bootcamp on Udemy by Jose Portilla. This course covers essential Python libraries for data manipulation, visualization, and machine learning.",
+      description: "Learn data analysis with Python through the Python for Data Science and Machine Learning Bootcamp on E-education by Jose Portilla. This course covers essential Python libraries for data manipulation, visualization, and machine learning.",
       link: "link-to-the-course"
     },
     {
       title: "Data Visualization",
       icon: <IoCodeWorking />,
-      description: "Master the art of data visualization with the Data Visualization with Python course on Coursera by University of Michigan. Visualize data effectively using Python libraries like Matplotlib and Seaborn.",
+      description: "Master the art of data visualization with the Data Visualization with Python course on E-education by University of Michigan. Visualize data effectively using Python libraries like Matplotlib and Seaborn.",
       link: "link-to-the-course"
     },
     {
       title: "Big Data",
       icon: <IoConstructSharp />,
-      description: "Dive into the world of big data with the Big Data Specialization on Coursera by University of California, San Diego. Learn about big data technologies, platforms, and analytics techniques to derive valuable insights from large datasets.",
+      description: "Dive into the world of big data with the Big Data Specialization on E-education by University of California, San Diego. Learn about big data technologies, platforms, and analytics techniques to derive valuable insights from large datasets.",
       link: "link-to-the-course"
     },
     {
       title: "Data Engineering",
       icon: <IoHardwareChipSharp />,
-      description: "Become a skilled data engineer with the Data Engineering, Big Data, and Machine Learning on GCP course on Coursera by Google Cloud. Learn how to design and implement scalable data processing systems on Google Cloud Platform.",
+      description: "Become a skilled data engineer with the Data Engineering, Big Data, and Machine Learning on GCP course on E-education by Google Cloud. Learn how to design and implement scalable data processing systems on Google Cloud Platform.",
       link: "link-to-the-course"
     },
     {
@@ -105,19 +105,19 @@ const StudentCourses = () => {
     {
       title: "Cisco CCNA",
       icon: <IoWifiSharp />,
-      description: "Prepare for the Cisco CCNA 200-301 exam with the Cisco CCNA 200-301 – The Complete Guide to Getting Certified course on Udemy by Neil Anderson. Gain the knowledge and skills required to install, configure, operate, and troubleshoot network devices.",
+      description: "Prepare for the Cisco CCNA 200-301 exam with the Cisco CCNA 200-301 – The Complete Guide to Getting Certified course on E-education by Neil Anderson. Gain the knowledge and skills required to install, configure, operate, and troubleshoot network devices.",
       link: "link-to-the-course"
     },
     {
       title: "CompTIA A+",
       icon: <IoConstructSharp />,
-      description: "Get certified with the CompTIA A+ 2019 Certification 1001. The Total Course on Udemy by Mike Meyers. This course covers essential topics such as hardware, networking, mobile devices, and troubleshooting.",
+      description: "Get certified with the CompTIA A+ 2019 Certification 1001. The Total Course on E-education by Mike Meyers. This course covers essential topics such as hardware, networking, mobile devices, and troubleshooting.",
       link: "link-to-the-course"
     },
     {
       title: "Linux Administration",
       icon: <IoConstructSharp />,
-      description: "Master Linux administration with the Linux Administration Bootcamp: Go from Beginner to Advanced course on Udemy by Jason Cannon. Learn essential Linux skills, including system administration, shell scripting, and networking.",
+      description: "Master Linux administration with the Linux Administration Bootcamp: Go from Beginner to Advanced course on E-education by Jason Cannon. Learn essential Linux skills, including system administration, shell scripting, and networking.",
       link: "link-to-the-course"
     },
    

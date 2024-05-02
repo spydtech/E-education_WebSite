@@ -43,7 +43,7 @@ function Professional() {
     </div>
     <div class="hero-image md:px-5 lg:px-0 w-full lg:w-1/2 rounded-3xl md:pt-2 lg:pt-0 relative isolate z-10">
         <img class="rounded-3xl w-full"
-            src="https://images.ctfassets.net/wp1lcwdav1p1/26DCtkTPoTmq6osZvSsvln/91573a360ea7ae37acd964bbe9190721/CourseraCertificate.png"
+            src="https://images.ctfassets.net/wp1lcwdav1p1/26DCtkTPoTmq6osZvSsvln/91573a360ea7ae37acd964bbe9190721/E-educationCertificate.png"
             alt="" />
     </div>
 </div>

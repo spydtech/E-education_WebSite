@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import ProfessionalsCourses from "./ProfessionalsCourses";
 import Navbar from "../../Navbar";
 const Professionals = () => {
   return (
@@ -31,6 +32,8 @@ const Professionals = () => {
       <ShuffleGrid />
     </section>
       </div>
+
+<ProfessionalsCourses />
     </>
   );
 };
@@ -115,7 +118,7 @@ const squareData = [
   },
   {
     id: 16,
-    src: "https://img-b.udemycdn.com/course/750x422/4607780_3549.jpg",
+    src: "https://img-b.E-educationcdn.com/course/750x422/4607780_3549.jpg",
   },
 ];
 

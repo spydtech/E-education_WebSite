@@ -66,7 +66,7 @@ const FullStackWebDevelopmentTestimonioals = () => {
                 <div>Spana S.</div>
                 <h5 className="text-gray-800 px-5 text-center mt-5">
                   "Learning isn't just about being better at your job: it's so
-                  much more than that. Coursera allows me to learn without
+                  much more than that. E-education allows me to learn without
                   limits."
                 </h5>
               </div>

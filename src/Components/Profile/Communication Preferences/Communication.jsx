@@ -9,14 +9,14 @@ function Communication () {
         <div className='py-10 '>
         <label class="inline-flex items-center hover:text-blue-300 cursor-pointer" for="CheckBox">
           <input id="CheckBox" type="checkbox" class="w-6 h-6 grey-100 hover:text-blue-300 cursor-pointe"  />
-          <span class="ml-2 text-sm md:text-lg ">Opt-out of all Coursera emails (Optional)</span>
+          <span class="ml-2 text-sm md:text-lg ">Opt-out of all E-education emails (Optional)</span>
         </label>
     </div>
 
 
         <hr />
 
-        <h1 className='pt-10 font-semibold'>Communication from Coursera
+        <h1 className='pt-10 font-semibold'>Communication from E-education
 </h1>
 <h2 className='py-2 font-semibold'>I want to receive the following:</h2>
 
@@ -43,7 +43,7 @@ function Communication () {
     <div>
         <label class="inline-flex items-center" for="CheckBox">
           <input id="CheckBox" type="checkbox" class="md:w-8 md:h-8 w-14 h-14 grey-100" checked />
-          <span class="ml-2 text-sm md:text-lg text-gray-400">Surveys and invitations to help us improve Coursera content and your experience</span>
+          <span class="ml-2 text-sm md:text-lg text-gray-400">Surveys and invitations to help us improve E-education content and your experience</span>
         </label>
     </div>
 </div>  
