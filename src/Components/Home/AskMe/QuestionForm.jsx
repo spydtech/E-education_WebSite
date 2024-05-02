@@ -19,6 +19,7 @@ const QuestionForm = () => {
         {
           headers: {
             'Content-Type': 'application/json',
+            // 'Authorization': 'sk-proj-rs0dR4PMgYLrGYgSaGbuT3BlbkFJPrGqOtDu5UZOV4yGPyC8',
           },
         }
       );
