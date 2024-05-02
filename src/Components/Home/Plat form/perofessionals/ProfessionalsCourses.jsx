@@ -130,7 +130,7 @@ const ProfessionalsCourses = () => {
     <>
 
     <div >
-    <div className="text-4xl font-bold text-center mb-8 text-gray-800 underline">Explore Your Courses</div>
+    <div className="text-4xl font-bold text-center mb-8 text-gray-800 underline mt-48">Explore Your Courses</div>
    
 
     </div>

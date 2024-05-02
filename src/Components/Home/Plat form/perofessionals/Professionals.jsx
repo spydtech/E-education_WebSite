@@ -2,38 +2,39 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import ProfessionalsCourses from "./ProfessionalsCourses";
-import Navbar from "../../Navbar";
+import Navbar from "../../../Navbar";
+import ProfessionalsCard from "./ProfessionalsCard";
 const Professionals = () => {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="container">
-      <section className="w-full px-2 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
-      <div>
-        <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
-          Elevate Your Skills
-        </span>
-        <h3 className="text-4xl md:text-6xl font-semibold text-gradient">
-          Explore New Horizons
-        </h3>
-        <p className="text-base md:text-lg text-slate-700 my-4 md:my-6 ">
-          Broaden your expertise with advanced courses and hands-on projects.
-          Stay ahead in the ever-evolving tech landscape.
-        </p>
-        <p className="text-base md:text-lg text-slate-700 my-4 md:my-6 ">
-          Our courses are designed to empower tech professionals with
-          specialized knowledge and practical skills. Dive deep into emerging
-          technologies and master industry-relevant tools.
-        </p>
-        <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
-          Find a class
-        </button>
+        <section className="w-full px-2 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
+          <div>
+            <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
+              Elevate Your Skills
+            </span>
+            <h3 className="text-4xl md:text-6xl font-semibold text-gradient">
+              Explore New Horizons
+            </h3>
+            <p className="text-base md:text-lg text-slate-700 my-4 md:my-6 ">
+              Broaden your expertise with advanced courses and hands-on
+              projects. Stay ahead in the ever-evolving tech landscape.
+            </p>
+            <p className="text-base md:text-lg text-slate-700 my-4 md:my-6 ">
+              Our courses are designed to empower tech professionals with
+              specialized knowledge and practical skills. Dive deep into
+              emerging technologies and master industry-relevant tools.
+            </p>
+            <button className="bg-[#264653] text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
+              Find a class
+            </button>
+          </div>
+          <ShuffleGrid />
+        </section>
       </div>
-      <ShuffleGrid />
-    </section>
-      </div>
-
-<ProfessionalsCourses />
+      <ProfessionalsCard />
+      <ProfessionalsCourses />
     </>
   );
 };
@@ -118,7 +119,7 @@ const squareData = [
   },
   {
     id: 16,
-    src: "https://img-b.E-educationcdn.com/course/750x422/4607780_3549.jpg",
+    src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29ya2luZyUyMG9uJTIwbGFwdG9wfGVufDB8fDB8fHww",
   },
 ];
 

@@ -12,7 +12,7 @@ import MyCourse from "./Components/mycourse/MyCourse";
 import DataAnalytics from "./Components/Profile/BrowseProject/dataAnalytics/DataAnalytics";
 import FullStack from "./Components/Home/Plat form/AllCourses/FullStack";
 import Student from "./Components/Home/Plat form/Student";
-import Professional from "./Components/Home/Plat form/Professionals";
+import Professional from "./Components/Home/Plat form/perofessionals/Professionals";
 import ArtsandHumanities from "./Components/Home/Plat form/AllCourses/ArtsandHumanities";
 import Business from "./Components/Home/Plat form/AllCourses/Business";
 import ComputerScience from "./Components/Home/Plat form/AllCourses/ComputerScience";
