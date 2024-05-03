@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import ProfessionalsCourses from "./ProfessionalsCourses";
 import Navbar from "../../../Navbar";
 import ProfessionalsCard from "./ProfessionalsCard";
+import Footer from "../../footer/Footer";
 const Professionals = () => {
   return (
     <>
@@ -35,6 +36,7 @@ const Professionals = () => {
       </div>
       <ProfessionalsCard />
       <ProfessionalsCourses />
+      <Footer />
     </>
   );
 };

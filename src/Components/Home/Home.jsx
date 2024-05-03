@@ -14,6 +14,7 @@ import Platform from "./Plat form/Platform";
 import Pricing from "./Pricing/Pricing";
 import SlideInTimer from "./Timer/SlideInTimer";
 import ImageHomePage from "../Home/Plat form/AllCourses/ImageHomepage";
+import SingupHome from "../Home/SingUpHome/SignUpHome";
 
 function Home({ usernameFirstLetter }) {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -153,17 +154,16 @@ function Home({ usernameFirstLetter }) {
             </p>
           </div>
         </div>
-
       </div>
       <Platform />
-      
+
       <ImageHomePage />
       <Aurora />
-    
-      <FinalTestimonials />
+
       <Pricing />
       <SlideInTimer />
-
+      <SingupHome />
+      <FinalTestimonials />
       <Footer />
     </>
   );

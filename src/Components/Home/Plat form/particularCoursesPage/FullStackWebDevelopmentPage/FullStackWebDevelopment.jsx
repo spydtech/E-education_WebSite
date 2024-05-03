@@ -1,9 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../../../Navbar";
 import AboutCourses from "./AboutCourses";
 import Community from "../../../Community/community";
 import SuccessStory from "../../../SuccessStory/successstory";
+import Award from "../../../Award/Award";
+import Footer from "../../../footer/Footer";
+
+const images = [
+  "https://www.cdmi.in/courses@2x/full-stack.webp",
+  "https://www.weblineindia.com/wp-content/uploads/2017/03/full-stack-development-by-weblineindia-2.jpg",
+  "https://images.saymedia-content.com/.image/t_share/MTc0NTEwODM4NTk2NzczODc4/full-stack-web-development-are-you-a-game-for-this.jpg",
+];
 const ParticularFullStack = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 3000); // Change the time interval here (in milliseconds) for auto-sliding
+
+    return () => clearInterval(interval);
+  }, [currentSlide]);
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  //   }, 3000); // Change the time interval here (in milliseconds) for auto-sliding
+
+  //   return () => clearInterval(interval);
+  // }, [currentSlide]);
   return (
     <>
       <Navbar />
@@ -31,18 +63,40 @@ const ParticularFullStack = () => {
           </button>
           <div className="py-4">11,095 already enrolled</div>
         </div>
-        <div className="mr-32">
-          <img
+        <div className="relative pl-12">
+          {/* <img
             src="https://www.cdmi.in/courses@2x/full-stack.webp"
             alt="Hero Student"
             className="h-[400px] w-full"
+          /> */}
+          <img
+            className="h-[300px] w-[500px]"
+            src={images[currentSlide]}
+            alt={`Slide ${currentSlide + 1}`}
           />
+
+          <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-8">
+            <button
+              onClick={prevSlide}
+              className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
+            >
+              &larr;
+            </button>
+            <button
+              onClick={nextSlide}
+              className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
+            >
+              &rarr;
+            </button>
+          </div>
         </div>
       </div>
 
       <AboutCourses />
       <Community />
+      <Award />
       <SuccessStory />
+      <Footer />
     </>
   );
 };

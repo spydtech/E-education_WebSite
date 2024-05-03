@@ -19,6 +19,7 @@ import ComputerScience from "./Components/Home/Plat form/AllCourses/ComputerScie
 import FullStackWebDevelopment from './Components/Home/Plat form/particularCoursesPage/FullStackWebDevelopmentPage/FullStackWebDevelopment'
 import DataScience from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
 import Health from "./Components/Home/Plat form/AllCourses/Health";
+// import FullStackWebDev from "./Components/Home/Plat form/perofessionals/PerofessionalsParticularPage/FullStackWebDevelopment";
 import Features from './Components/Home/FeaturesOfE-education/Features'
 import PersonalDevelopment from "./Components/Home/Plat form/AllCourses/PersonalDevelopment";
 import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience";

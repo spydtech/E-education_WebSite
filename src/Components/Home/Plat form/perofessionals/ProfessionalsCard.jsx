@@ -17,22 +17,16 @@ function ProfessionalsCard() {
     return () => clearInterval(interval);
   }, [currentSlide]);
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
+ 
 
   return (
     <div className="py-10 ">
       <div class="relative flex flex-col  items-center mx-auto md:flex-row lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
-        <div class="w-full h-64 lg:w-1/2 lg:h-auto ">
+        <div class="w-full h-full lg:w-1/2 lg:h-auto ">
           <div className="relative">
             <div className="overflow-hidden">
               <img
-                className="w-full h-auto py-10"
+                className="w-full h-full py-10"
                 src={images[currentSlide]}
                 alt={`Slide ${currentSlide + 1}`}
               />
