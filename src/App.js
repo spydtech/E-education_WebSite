@@ -5,6 +5,8 @@ import SignUp from "./Components/Login/SignUp";
 import Certificates from "./Components/Home/Professional Certificates/Certificates";
 import Profile from "./Components/Profile/Profile";
 import Settings from "./Components/Profile/Settings";
+import PostFeeds from "./Components/Home/post/PostFeeds"
+import QuestionForm from "./Components/Home/AskMe/QuestionForm"
 import ForgotPassword from "./Components/Login/ForgotPassword";
 import Purchases from "./Components/Profile/Purchases/Purchases";
 import Payment from "./Components/Profile/Payment/Payment";
@@ -37,6 +39,8 @@ function App() {
           <Route path="/ForgotPassword" element={<ForgotPassword />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/Profile" element={<Profile />} />
+          <Route path="/PostFeeds" element={<PostFeeds />} />
+          <Route path="/QuestionForm" element={<QuestionForm />} />
           <Route path="/Settings" element={<Settings />} />
           <Route path="/Payment" element={<Payment />} />
           <Route path="/Purchases" element={<Purchases />} />

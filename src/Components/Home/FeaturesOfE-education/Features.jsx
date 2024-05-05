@@ -3,8 +3,7 @@ import Features2 from './Features2'
 import Navbar from '../../Navbar'
 import Footer from '../footer/Footer'
 import HeroSection from './HeroSection'
-import PostFeeds from '../post/PostFeeds'
-import QuestionForm from '../AskMe/QuestionForm'
+
 
 function Features() {
   return (
@@ -210,8 +209,7 @@ function Features() {
                 <h1 className='text-4xl border-l-8 md:ml-72   font-lora '>Start Your Learning Journey Today</h1>
            <Features2 />
             </div>
-            <PostFeeds />
-            <QuestionForm />
+          
             <Footer />
     </div>
   )
