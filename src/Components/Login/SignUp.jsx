@@ -193,8 +193,6 @@
 
 // export default SignUp;
 
-
-
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -206,11 +204,50 @@ function SignUp() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [otp, setOtp] = useState("");
+  const [otpSent, setOtpSent] = useState(false);
+  const [showOtpPopup, setShowOtpPopup] = useState(false);
   const navigate = useNavigate();
-  const handleSubmit = async (e) => {
-    e.preventDefault();
 
+  const handleSendOtp = async () => {
+    try {
+      // Send a request to your backend to generate and send OTP to the provided email
+      const response = await axios.post(
+        "http://localhost:3465/api/v1/user/send-otp",
+        {
+          email: email,
+        }
+      );
+      console.log("OTP sent:", response.data);
+      setOtpSent(true);
+      setShowOtpPopup(true); // Show the OTP popup after sending OTP
+    } catch (error) {
+      console.error("Error sending OTP:", error);
+    }
+  };
+
+  const handleVerifyOtp = async () => {
+    try {
+      // Send a request to your backend to verify the OTP
+      const response = await axios.post(
+        "http://localhost:3465/api/v1/user/verify-otp",
+        {
+          email: email,
+          otp: otp,
+        }
+      );
+      console.log("OTP verified:", response.data);
+      // Close the OTP popup after successful verification
+      setShowOtpPopup(false);
+      // Now you can proceed with the signup
+      await handleSubmit();
+    } catch (error) {
+      console.error("Error verifying OTP:", error);
+      // Handle error
+    }
+  };
+
+  const handleSubmit = async () => {
     try {
       const response = await axios.post(
         "http://localhost:3465/api/v1/user/save",
@@ -218,16 +255,13 @@ function SignUp() {
           employeename: username,
           email: email,
           password: password,
+          otp: otp,
         }
       );
       alert("Employee Registration Successfully");
-
-      // Handle success response
       console.log("Response:", response.data);
-      // Redirect to login page upon successful signup
       navigate("/Login");
     } catch (error) {
-      // Handle error
       console.error("Error:", error);
     }
   };
@@ -235,28 +269,30 @@ function SignUp() {
   return (
     <>
       <Navbar />
-      <div className="grid  grid-cols-1 md:grid-cols-2 font-poppins min-w-screen min-h-screen dark:bg-gray-900">
-        <div className=" py-2   flex justify-center ">
+      <div className="grid grid-cols-1 md:grid-cols-2 font-poppins min-w-screen min-h-screen dark:bg-gray-900">
+        <div className="py-2 flex justify-center">
           <img
             src={student}
-            className=" md:w-auto md:h-auto lg:w-auto lg:h-auto w-96 h-96"
+            className="md:w-auto md:h-auto lg:w-auto lg:h-auto w-96 h-96"
             alt="Student"
           />
         </div>
 
-        <div className="flex justify-center ">
-          <div className="max-w-md  ">
-            {/*  */}
-            <div id="back-div" className=" rounded-lg ">
-              <div className="bg-white  border-[20px] border-transparent rounded-[20px] dark:bg-gray-900  shadow-lg xl:p-10 2xl:p-10 lg:px-10 lg:py-0  md:p-10 sm:p-0 ">
-                <div className=" ">
-                  <img src={IMG} className="w-56 mx-auto " alt="Logo" />
+        <div className="flex justify-center">
+          <div className="max-w-md">
+            <div id="back-div" className="rounded-lg">
+              <div className="bg-white border-[20px] border-transparent rounded-[20px] dark:bg-gray-900 shadow-lg xl:p-10 2xl:p-10 lg:px-10 lg:py-0 md:p-10 sm:p-0">
+                <div className="">
+                  <img src={IMG} className="w-56 mx-auto" alt="Logo" />
                 </div>
-                <h1 className="font-Calistoga  pb-6 text-violet-600  text-4xl dark:text-gray-400 text-center cursor-default">
+                <h1 className="font-Calistoga pb-6 text-violet-600 text-4xl dark:text-gray-400 text-center cursor-default">
                   Sign Up
                 </h1>
                 <form
-                  onSubmit={handleSubmit}
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleSendOtp();
+                  }}
                   action="#"
                   method="post"
                   className="space-y-4"
@@ -316,7 +352,7 @@ function SignUp() {
                     className="font-Calistoga bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg mt-6 p-2 text-white rounded-lg w-full hover:scale-105 hover:from-purple-500 hover:to-blue-500 transition duration-300 ease-in-out"
                     type="submit"
                   >
-                    Sign Up
+                    Send OTP
                   </button>
                 </form>
                 <div className="flex flex-col mt-4 items-center justify-center text-sm">
@@ -375,10 +411,31 @@ function SignUp() {
                 </div>
               </div>
             </div>
-            {/* end */}
           </div>
         </div>
       </div>
+
+      {/* OTP Popup */}
+      {showOtpPopup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+          <div className="bg-white p-8 max-w-md rounded-lg shadow-lg">
+            <h2 className="text-2xl font-semibold mb-4">Enter OTP</h2>
+            <input
+              type="text"
+              value={otp}
+              onChange={(e) => setOtp(e.target.value)}
+              placeholder="Enter OTP"
+              className="border border-gray-300 rounded-lg p-2 mb-4 w-full"
+            />
+            <button
+              onClick={handleVerifyOtp}
+              className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+            >
+              Verify OTP
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

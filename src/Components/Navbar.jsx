@@ -120,10 +120,10 @@ const Navbar = () => {
 
                 <div className='flex items-center'>
                   {/* Feeds */}
-                  <Link to='/feeds' className='text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-
+                  <Link to='/PostFeeds' className='text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-
 3 py-2 mt-2 text-sm font-medium ml-4 mb-2'>Feeds</Link>
                   {/* Ask Me Later */}
-                  <Link to='/ask-me-later' className='text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 mt-2 text-sm font-medium ml-4 mb-2'>
+                  <Link to='/QuestionForm' className='text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 mt-2 text-sm font-medium ml-4 mb-2'>
                     Ask Me Later
                   </Link>
                   {/* Dropdown menu */}
