@@ -38,8 +38,8 @@ function Home({ usernameFirstLetter }) {
           Start a new career with E-education &#8594;
         </span>
       </div>
-      <div className="w-full mt-10 px-16">
-        {/* Tab Buttons */}
+      {/* <div className="w-full mt-10 px-16">
+      
         <div className="p-2 rounded-t-lg overflow-x-auto">
           <div className="flex space-x-4">
             <button
@@ -93,7 +93,7 @@ function Home({ usernameFirstLetter }) {
           </div>
         </div>
 
-        {/* Tab Content */}
+     
         <div className="border-2 rounded-lg border-blue-100  pb-5">
           <div
             id="tab1"
@@ -154,7 +154,7 @@ function Home({ usernameFirstLetter }) {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
       <Platform />
 
       <ImageHomePage />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import Girl1 from './Home/Girl1'
 const images = [
     'https://miro.medium.com/v2/resize:fit:660/1*NRk6YQMA_w-wWcc6JYe7yA.png',
     'https://findit-resources.s3.amazonaws.com/forums/1677056552844.jpg',
@@ -62,8 +62,9 @@ function Main() {
     </div>
 
     {/* <!--   Image Section     --> */}
-    <div class="lg:inset-y-0 lg:right-0 lg:w-1/2  border-1 shadow-lg border-gray-500 relative">
-                            <div className="overflow-hidden">
+    <div class="lg:inset-y-0 lg:right-0 lg:w-1/2  relative">
+    <Girl1 />
+                            {/* <div className="overflow-hidden">
                                 <img
                                     className="w-full h-[450px] py-10"
                                     src={images[currentSlide]}
@@ -83,7 +84,7 @@ function Main() {
                                 >
                                     &rarr;
                                 </button>
-                            </div>
+                            </div> */}
                         </div>
     
     {/* <!--   End of Image Section     --> */}
