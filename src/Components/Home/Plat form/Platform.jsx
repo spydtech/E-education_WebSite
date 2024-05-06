@@ -10,7 +10,7 @@ function Platform() {
     
     <Certified />
     <EducationCarousel />
-    <div className='bg-blue-200'>
+    <div className='bg-blue-200 font-lora'>
      
       <div className='ml-96 h-92 w-96 -mb-16'>
       <img
@@ -19,11 +19,11 @@ function Platform() {
       />
       </div>
      
-        <h1 className="text-7xl  text-center p-[5%] font-anton ">The perfect platform to boost your technical skills</h1>
+        <h1 className="text-7xl font-bold text-center p-[5%] font-lora">The perfect platform to boost your technical skills</h1>
         <div className='flex p-20 gap-8'>
           <Link to = "/student">
           
-            <div className='text-center shadow-2xl p-4'>
+            <div className='text-center shadow-2xl p-4 font-lora'>
                <div className='flex justify-center items-center'>
                <img src={IMG} className='h-[360px] w-[360px]' />
                </div>
@@ -35,7 +35,7 @@ function Platform() {
           </Link>
           <Link to = '/professional'>
           
-            <div className='text-center shadow-2xl p-4 '>
+            <div className='text-center shadow-2xl p-4 font-lora'>
               <div className='flex justify-center items-center'>
 
                 <img  src='https://png.pngtree.com/png-vector/20240201/ourmid/pngtree-man-seated-using-laptop-character-png-image_11581009.png' />

@@ -15,32 +15,28 @@ import Pricing from "./Pricing/Pricing";
 import SlideInTimer from "./Timer/SlideInTimer";
 import ImageHomePage from "../Home/Plat form/AllCourses/ImageHomepage";
 import SingupHome from "../Home/SingUpHome/SignUpHome";
-
+import StartNewCarrer from "./StartNewCarrer/StartNewCarrer";
 function Home({ usernameFirstLetter }) {
-  const [activeTab, setActiveTab] = useState("tab1");
+  // const [activeTab, setActiveTab] = useState("tab1");
 
-  useEffect(() => {
-    // Initialize the first tab
-    showTab("tab1");
-  }, []);
+  // useEffect(() => {
+  //   // Initialize the first tab
+  //   showTab("tab1");
+  // }, []);
 
-  function showTab(tabId) {
-    // Update active tab
-    setActiveTab(tabId);
-  }
+  // function showTab(tabId) {
+  //   // Update active tab
+  //   setActiveTab(tabId);
+  // }
 
   return (
     <>
       <Navbar usernameFirstLetter={usernameFirstLetter} />
       <Main />
-      <div class="w-full px-16  ">
-        <span class="text-5xl font-bold text-[#0284c7]  border-b border-[#023047]">
-          Start a new career with E-education &#8594;
-        </span>
-      </div>
+    <StartNewCarrer />
       {/* <div className="w-full mt-10 px-16">
       
-        <div className="p-2 rounded-t-lg overflow-x-auto">
+        {/* <div className="p-2 rounded-t-lg overflow-x-auto">
           <div className="flex space-x-4">
             <button
               className={`px-4 py-2 font-semibold border-b-4 border-blue-100 rounded-lg hover:bg-blue-100 focus:outline-none tab-button ${
