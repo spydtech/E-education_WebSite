@@ -64,7 +64,7 @@ function SignUpContent() {
                   Get Started With
                   {/* <p className="text-yellow-800 text-5xl font-medium">
                     {" "}
-                    E-Education
+                    E-education
                   </p> */}
                   <div className=" ">
                     <img src={IMG} className="w-56  mx-auto " alt="Logo" />
