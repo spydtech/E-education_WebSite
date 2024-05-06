@@ -86,7 +86,7 @@ export default function EducationCarousel() {
           {courses.map((course, index) => (
           <div
             key={index}
-            className={`p-4 rounded-lg  ${course.bgColor} text-center cursor shadow-2xl transform hover:-translate-y-2 transition-transform`}
+            className={`p-4 rounded-lg  ${course.bgColor} text-center cursor hover:shadow-2xl transform hover:-translate-y-2 transition-transform`}
           >
           <div className="flex justify-center items-center">
           <div className="text-4xl mb-4">{course.icon}</div>

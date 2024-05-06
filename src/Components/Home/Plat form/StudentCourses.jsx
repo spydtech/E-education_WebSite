@@ -114,12 +114,7 @@ const StudentCourses = () => {
       description: "Get certified with the CompTIA A+ 2019 Certification 1001. The Total Course on E-education by Mike Meyers. This course covers essential topics such as hardware, networking, mobile devices, and troubleshooting.",
       link: "link-to-the-course"
     },
-    {
-      title: "Linux Administration",
-      icon: <IoConstructSharp />,
-      description: "Master Linux administration with the Linux Administration Bootcamp: Go from Beginner to Advanced course on E-education by Jason Cannon. Learn essential Linux skills, including system administration, shell scripting, and networking.",
-      link: "link-to-the-course"
-    },
+    
    
   ];
   return (
@@ -182,7 +177,7 @@ const TiltCard = ({ title, description, icon, link }) => { // Accept link prop
           rotateX,
           transformStyle: "preserve-3d",
         }}
-        className="relative h-[400px] w-72 gap-0 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300 mb-5 "
+        className="relative h-[400px] w-72 gap-0 rounded-xl bg-[#219ebc] mb-5 "
       >
         <div
           style={{
@@ -195,7 +190,7 @@ const TiltCard = ({ title, description, icon, link }) => { // Accept link prop
           }}
           className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
         >
-          <div className="w-20 h-20 bg-blue-800 rounded-full flex justify-center items-center ">
+          <div className="w-20 h-20 bg-[#669bbc] rounded-full flex justify-center items-center ">
             <h1 className="text-white text-4xl">{icon}</h1>
           </div>
           <h3 className="py-2 font-extrabold font-xl text-gradient">{title}</h3>

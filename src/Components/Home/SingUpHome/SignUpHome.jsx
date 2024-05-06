@@ -38,7 +38,7 @@ function SignUpContent() {
     <>
       <div
         id="main"
-        className="grid grid-cols-1 md:lg:grid-cols-2 h-[750px] bg-violet-900 mb-26"
+        className="grid grid-cols-1 md:lg:grid-cols-2 h-[750px] bg-violet-900 mb-26 font-lora"
       >
         <div
           id="text"

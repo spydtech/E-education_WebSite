@@ -23,7 +23,7 @@ function Platform() {
         <div className='flex p-20 gap-8'>
           <Link to = "/student">
           
-            <div className='text-center shadow-2xl p-4 font-lora'>
+            <div className='text-center shadow-2xl p-4 font-lora transform hover:-translate-y-2 transition-transform'>
                <div className='flex justify-center items-center'>
                <img src={IMG} className='h-[360px] w-[360px]' />
                </div>
@@ -35,7 +35,7 @@ function Platform() {
           </Link>
           <Link to = '/professional'>
           
-            <div className='text-center shadow-2xl p-4 font-lora'>
+            <div className='text-center shadow-2xl p-4 font-lora transform hover:-translate-y-2 transition-transform'>
               <div className='flex justify-center items-center'>
 
                 <img  src='https://png.pngtree.com/png-vector/20240201/ourmid/pngtree-man-seated-using-laptop-character-png-image_11581009.png' />
