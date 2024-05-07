@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../Navbar";
 import HeroStudent from "../../../assets/student/student2.svg";
+
 import StudentCourses from "./StudentCourses";
 import Footer from "../footer/Footer";
 const Student = () => {
