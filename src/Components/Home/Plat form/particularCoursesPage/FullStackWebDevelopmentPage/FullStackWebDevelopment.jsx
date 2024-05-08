@@ -5,6 +5,7 @@ import Community from "../../../Community/community";
 import SuccessStory from "../../../SuccessStory/successstory";
 import Award from "../../../Award/Award";
 import Footer from "../../../footer/Footer";
+import FullStackCard from "./FullStackCard";
 
 const images = [
   "https://www.cdmi.in/courses@2x/full-stack.webp",
@@ -64,11 +65,7 @@ const ParticularFullStack = () => {
           <div className="py-4">11,095 already enrolled</div>
         </div>
         <div className="relative pl-12">
-          {/* <img
-            src="https://www.cdmi.in/courses@2x/full-stack.webp"
-            alt="Hero Student"
-            className="h-[400px] w-full"
-          /> */}
+         
           <img
             className="h-[300px] w-[500px]"
             src={images[currentSlide]}
@@ -90,9 +87,13 @@ const ParticularFullStack = () => {
             </button>
           </div>
         </div>
+      
+
+
       </div>
 
       <AboutCourses />
+      <FullStackCard />
       <Community />
       {/* <Award /> */}
       <SuccessStory />

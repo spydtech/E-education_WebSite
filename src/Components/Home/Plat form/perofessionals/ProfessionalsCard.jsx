@@ -17,8 +17,6 @@ function ProfessionalsCard() {
     return () => clearInterval(interval);
   }, [currentSlide]);
 
- 
-
   return (
     <div className="py-10 ">
       <div class="relative flex flex-col  items-center mx-auto md:flex-row lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
@@ -30,6 +28,7 @@ function ProfessionalsCard() {
                 src={images[currentSlide]}
                 alt={`Slide ${currentSlide + 1}`}
               />
+             
             </div>
             <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-4"></div>
           </div>

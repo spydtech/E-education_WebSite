@@ -64,7 +64,7 @@ const AboutCourses = () => {
         </div>
 
         {/* Tab Content */}
-        <div className="border-2 rounded-lg border-blue-800 pb-5">
+        <div className=" rounded-lg  pb-5">
           <div
             id="tab1"
             className={`p-4 tab-content bg-white rounded-lg ${

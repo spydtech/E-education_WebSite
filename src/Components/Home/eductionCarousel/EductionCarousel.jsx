@@ -76,7 +76,7 @@ export default function EducationCarousel() {
     <>
       <div className="my-8 ">
       <div className="text-xl lg:text-5xl font-semibold pb-4 text-center font-lora">
-  <span className="border-b-2 border-gray-800">Choose a course for you</span>
+  <span className="">Choose a course for you</span>
 </div>
        
       </div>

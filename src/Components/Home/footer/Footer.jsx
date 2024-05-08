@@ -53,8 +53,8 @@ function FooterPart() {
       links: [
         { label: "Machine Learning", url: "#" },
         { label: "Ai", url: "#" },
-        { label: "Ai", url: "#" },
-        { label: "Ai", url: "#" },
+        // { label: "Ai", url: "#" },
+        // { label: "Ai", url: "#" },
       ],
     },
     {
