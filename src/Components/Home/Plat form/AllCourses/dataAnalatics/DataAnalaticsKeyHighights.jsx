@@ -23,7 +23,7 @@ function DataAnalaticsKeyHighights() {
               <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16  bg-gray-200 shadow-2xl">
               <p className="text-2xl font-medium text-pink-600 py-4">Key HighLights</p>
                <li>Advanced modules with Generative AI fusion</li>
-                <li> E-Education certificate via upGrad collaboration</li>
+                <li> E-education certificate via upGrad collaboration</li>
                 <li>
                   Access to live training sessions by Meta Blueprint trainers
                 </li>
@@ -89,7 +89,7 @@ function DataAnalaticsKeyHighights() {
                 </li>
                 <li>Experience seamless integration with Gen AI modules.</li>
                 <li>
-                  Attain E-Education Executive Alumni Status for exclusive
+                  Attain E-education Executive Alumni Status for exclusive
                   benefits.
                 </li>
                 <li>Access EMI at RS. 2,879/month for greater flexibility.</li>
@@ -133,7 +133,7 @@ function DataAnalaticsKeyHighights() {
           <div id="subdiv1" className="pt-4">
             <div id="h1" className="">
               <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-pink-900">
-                E-Education Course Highlights
+                E-education Course Highlights
               </p>
             </div>
             <div

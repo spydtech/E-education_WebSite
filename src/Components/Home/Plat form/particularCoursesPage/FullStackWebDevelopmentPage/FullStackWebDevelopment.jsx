@@ -39,7 +39,7 @@ const ParticularFullStack = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
+      <div className="w-full md:pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
         <div>
           <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
             Explore Full Stack Web Development
@@ -94,7 +94,7 @@ const ParticularFullStack = () => {
 
       <AboutCourses />
       <Community />
-      <Award />
+      {/* <Award /> */}
       <SuccessStory />
       <Footer />
     </>

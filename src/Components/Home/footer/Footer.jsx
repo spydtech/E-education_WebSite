@@ -70,7 +70,7 @@ function FooterPart() {
 
   return (
     <>
-      <footer className="md:lg:h-[650px] h-auto bg-black">
+      <footer className="md:lg:h-[700px] h-auto bg-black font-lora">
         <div className=" p-2   pb-4 text-sm">
           <div className="container mx-auto px-6 pt-24  flex justify-center">
             <div className="grid grid-cols-4  gap-6 md:grid-cols-8 lg:grid-cols-12 justify-around   bg-black">
@@ -207,7 +207,7 @@ function FooterPart() {
         </div>
         <div className="mt-4 mx-auto text-center">
           <p className="text-xs text-white">
-            &copy; {new Date().getFullYear()} E-Education. All rights reserved.
+            &copy; {new Date().getFullYear()} E-education. All rights reserved.
           </p>
         </div>
       </footer>

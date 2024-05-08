@@ -107,7 +107,7 @@ function Features2() {
        `}</style>
        <div>
        <h1 class="text-2xl md:text-3xl pl-2 my-2 border-l-4  font-lora  border-teal-400  dark:text-gray-200">
-       Join the E-Education Revolution
+       Join the E-education Revolution
 </h1>
 
 <div class="sm:flex items-center max-w-screen-xl">
@@ -122,7 +122,7 @@ function Features2() {
             <h2 class="my-4 font-bold text-3xl  sm:text-4xl ">Join <span class="text-indigo-600">E-education</span>
             </h2>
             <p class="text-gray-700 pb-5">
-            Experience the power of e-education and take control of your learning journey. 
+            Experience the power of E-education and take control of your learning journey. 
             Start today and embark on a path of continuous growth and success.
             </p>
             <button class="relative px-8 py-2 rounded-md bg-white isolation-auto z-10 border-2 border-indigo-600

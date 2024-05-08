@@ -4,7 +4,7 @@ import img2 from "../../../../assets/img2students.png";
 import img3 from "../../../../assets/img3students.png";
 const ImageHomePage = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col font-lora">
       <div className="container mx-auto px-4   ">
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 h-auto relative bottom-10 ">
           <div className="max-w-full  rounded overflow-y-visible  flex flex-col  ">

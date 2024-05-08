@@ -56,7 +56,7 @@ const ComputerScience = () => {
       title: "Computer Networks",
       description: "Understand the fundamentals of computer networking.",
       image:
-        "https://media.istockphoto.com/id/1360633055/vector/digital-network-connection-illustration-internet-of-things-seo-online-education-platform.jpg?s=612x612&w=0&k=20&c=9Lm1coagArCxjA6xTkUSyk6ESCZfR1uadIe4bKvuSHE=",
+        "https://media.istockphoto.com/id/1360633055/vector/digital-network-connection-illustration-internet-of-things-seo-onlinE-education-platform.jpg?s=612x612&w=0&k=20&c=9Lm1coagArCxjA6xTkUSyk6ESCZfR1uadIe4bKvuSHE=",
     },
     {
       id: 7,

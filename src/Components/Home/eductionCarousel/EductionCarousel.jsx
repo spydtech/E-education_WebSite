@@ -75,18 +75,18 @@ export default function EducationCarousel() {
   return (
     <>
       <div className="my-8 ">
-        <div className=" text-xl lg:text-4xl font-semibold pb-4 text-center">
-         Choose a course for you
-        </div>
+      <div className="text-xl lg:text-5xl font-semibold pb-4 text-center font-lora">
+  <span className="border-b-2 border-gray-800">Choose a course for you</span>
+</div>
        
       </div>
-      <div className="glide-01 relative  mb-12">
+      <div className="glide-01 relative  mb-12 font-lora">
         <div className="overflow-hidden" data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap relative flex   overflow-hidden p-0">
           {courses.map((course, index) => (
           <div
             key={index}
-            className={`p-4 rounded-lg shadow-lg ${course.bgColor} text-center cursor`}
+            className={`p-4 rounded-lg  ${course.bgColor} text-center cursor hover:shadow-2xl transform hover:-translate-y-2 transition-transform`}
           >
           <div className="flex justify-center items-center">
           <div className="text-4xl mb-4">{course.icon}</div>
