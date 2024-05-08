@@ -1,8 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import Navbar from "../../Navbar";
 import HeroStudent from "../../../assets/student/student2.svg";
 import StudentCourses from "./StudentCourses";
+
+
+const images = [
+  'https://miro.medium.com/v2/resize:fit:660/1*NRk6YQMA_w-wWcc6JYe7yA.png',
+  'https://findit-resources.s3.amazonaws.com/forums/1677056552844.jpg',
+  'https://media.istockphoto.com/id/1403523196/photo/focused-female-adult-student-in-headphones-using-laptop.jpg?s=612x612&w=0&k=20&c=Aqz1SYxmeF9WsFWEiX3cZ4-AHJ6ltNRgPX8M98VpwtU=',
+];
+
+
 const Student = () => {
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+      const interval = setInterval(() => {
+          setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+      }, 5000); // Change the time interval here (in milliseconds) for auto-sliding
+
+      return () => clearInterval(interval);
+  }, [currentSlide]);
+
+  const prevSlide = () => {
+      setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+      setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <>
       <Navbar />
@@ -11,7 +39,7 @@ const Student = () => {
           <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
             Kickstart Your Journey
           </span>
-          <h3 className="text-4xl md:text-6xl font-semibold text-gradient">
+          <h3 className="text-4xl md:text-6xl font-lora text-gradient">
             Master Tech Fundamentals
           </h3>
           <p className="text-base md:text-lg text-slate-700 my-4 md:my-6 ">
@@ -30,7 +58,30 @@ const Student = () => {
           </button>
         </div>
         <div className="    mr-32 ">
-          <img src={HeroStudent} alt="Hero Student" />
+          {/* <img src={HeroStudent} alt="Hero Student" /> */}
+          <div class="lg:inset-y-0 lg:right-0 lg:w-[500px]  border-1  border-gray-500 relative">
+                            <div className="overflow-hidden">
+                                <img
+                                    className="w-[550px] h-[450px] py-10"
+                                    src={images[currentSlide]}
+                                    alt={`Slide ${currentSlide + 1}`}
+                                />
+                            </div>
+                            <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-4">
+                                <button
+                                    onClick={prevSlide}
+                                    className=" text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
+                                >
+                                    &larr;
+                                </button>
+                                <button
+                                    onClick={nextSlide}
+                                    className=" text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
+                                >
+                                    &rarr;
+                                </button>
+                            </div>
+                        </div>
         </div>
       </div>
       <StudentCourses />
