@@ -3,7 +3,7 @@ import React from 'react'
 function Pricing() {
   return (
     <div>
-        <div class="pt-5 bg-gray-900" id="pricing">
+        <div class="pt-5 bg-gray-900 font-lora" id="pricing">
   <div class="mx-auto pb-20 mt-4 max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-4xl text-center">
       <h1 class="text-base font-semibold leading-7 text-indigo-400">Pricing</h1>
@@ -15,9 +15,9 @@ function Pricing() {
       {/* <!-- First Product --> */}
       <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10">
         <div class="flex items-center justify-between gap-x-4">
-          <h2 id="product1" class="text-lg font-semibold leading-8 text-white">Product Type 1</h2>
+          <h2 id="product1" class="text-lg font-semibold leading-8 text-white">Basic</h2>
         </div>
-        <p class="mt-4 text-sm leading-6 text-gray-300">Product details for Product Type 1</p>
+        <p class="mt-4 text-sm leading-6 text-gray-300">Product details for Basic</p>
         <p class="mt-6 flex items-baseline gap-x-1">
           <span class="text-4xl font-bold tracking-tight text-white">€ 10 / unit</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
         </p>
@@ -49,10 +49,10 @@ function Pricing() {
       {/* <!-- Second Product --> */}
       <div class="bg-white/5 ring-2 ring-indigo-500 rounded-3xl p-8 xl:p-10">
         <div class="flex items-baseline justify-between gap-x-4">
-          <h2 id="product2" class="text-lg font-semibold leading-8 text-white">Product Type 2</h2>
+          <h2 id="product2" class="text-lg font-semibold leading-8 text-white">Premium</h2>
           <p class="rounded-full bg-indigo-500 px-2.5 py-1 text-xs font-semibold leading-5 text-white">Most popular</p>
         </div>
-        <p class="mt-4 text-sm leading-6 text-gray-300">The most popular choice. Product details for Product Type 2</p>
+        <p class="mt-4 text-sm leading-6 text-gray-300">The most popular choice. Product details for Premium</p>
         <p class="mt-6 flex items-baseline gap-x-1">
           <span class="text-4xl font-bold tracking-tight text-white">€ 20 / unit</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
         </p>
@@ -84,9 +84,9 @@ function Pricing() {
       {/* <!-- Third Product --> */}
       <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10">
         <div class="flex items-center justify-between gap-x-4">
-          <h2 id="product3" class="text-lg font-semibold leading-8 text-white">Product Type 3</h2>
+          <h2 id="product3" class="text-lg font-semibold leading-8 text-white">Advance</h2>
         </div>
-        <p class="mt-4 text-sm leading-6 text-gray-300">Product details for Product Type 3</p>
+        <p class="mt-4 text-sm leading-6 text-gray-300">Product details for Advance</p>
         <p class="mt-6 flex items-baseline gap-x-1">
           <span class="text-4xl font-bold tracking-tight text-white">€ 50 / unit</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
         </p>

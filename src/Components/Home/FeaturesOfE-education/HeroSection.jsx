@@ -89,27 +89,27 @@ function HeroSection() {
     <div class="notiborderglow"></div>
     <div class="notititle">Feeds</div>
     <div class="notibody">Stay up-to-date with the latest trends, insights,
-     and updates in the world of e-education through our feeds feature. 
+     and updates in the world of E-education through our feeds feature. 
      Explore a curated collection of articles, blog posts, videos,
       and news related to online learning, educational technology, and more. 
       Whether you're looking for tips on effective study strategies, industry trends, 
       or inspiring success stories, our feeds have you covered. Join the conversation, 
       share your thoughts,
-     and connect with a community of learners passionate about e-education.</div>
+     and connect with a community of learners passionate about E-education.</div>
   </div>
 
   <div class="notification">
     <div class="notiglow"></div>
     <div class="notiborderglow"></div>
     <div class="notititle">Ask Me Question</div>
-    <div class="notibody">Got a burning question about e-education? Don't worry,
+    <div class="notibody">Got a burning question about E-education? Don't worry,
      we've got you covered! Our "Ask Me a Question" feature allows you to get instant 
      answers to your queries from our team of experts. Whether you need advice on
       choosing the right course, tips for staying motivated, or guidance on navigating 
       the world of online learning, simply submit your question and let our knowledgeable 
       team provide you with the answers you need. With "Ask Me a Question," 
       help is just a click away, 
-    so don't hesitate to reach out and make the most of your e-education journey.</div>
+    so don't hesitate to reach out and make the most of your E-education journey.</div>
   </div>
   <style jsx>{`
   .notification {

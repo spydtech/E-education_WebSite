@@ -1,12 +1,19 @@
 
 
 
+
 import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react";
+
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar";
 import IMG from "../../assets/E- education logo .png";
 import student from "../../assets/singup1.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { register } from "../../State/Auth/Action";
+import { getUser, sendOtp, verifyOtp } from "../../State/Auth/Action";
 
 function generateOTP() {
   // Generate a random 6-digit number
@@ -16,6 +23,7 @@ function generateOTP() {
 
 
 function SignUp() {
+
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -95,6 +103,105 @@ const handleOTPEnter = (index, value) => {
       // Handle error
       console.error("Error:", error);
     }
+
+
+  const [otp, setOtp] = useState("");
+  const [showOtpPopup, setShowOtpPopup] = useState(false);
+  const jwt = localStorage.getItem('jwt');
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { auth, otpStatus } = useSelector(store => store)
+  const [formData, setFormData] = useState({
+    userName: '',
+    email: '',
+    password: ''
+  });
+  useEffect(() => {
+    if (jwt) {
+      dispatch(getUser(jwt));
+    }
+  }, [jwt, auth.jwt]);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // const handleSendOtp = async () => {
+  //   try {
+  //     // Send a request to your backend to generate and send OTP to the provided email
+  //     const response = await axios.post(
+  //       "http://localhost:3465/api/v1/user/send-otp",
+  //       {
+  //         email: email,
+  //       }
+  //     );
+  //     console.log("OTP sent:", response.data);
+  //     setOtpSent(true);
+  //     setShowOtpPopup(true); // Show the OTP popup after sending OTP
+  //   } catch (error) {
+  //     console.error("Error sending OTP:", error);
+  //   }
+  // };
+
+  const handleSendOtp = () => {
+    dispatch(sendOtp(formData.email));// Dispatch sendOtp action with email
+    setShowOtpPopup(true);
+  };
+
+  // const handleVerifyOtp = async () => {
+  //   try {
+  //     // Send a request to your backend to verify the OTP
+  //     const response = await axios.post(
+  //       "http://localhost:3465/api/v1/user/verify-otp",
+  //       {
+  //         email: email,
+  //         otp: otp,
+  //       }
+  //     );
+  //     console.log("OTP verified:", response.data);
+  //     // Close the OTP popup after successful verification
+  //     setShowOtpPopup(false);
+  //     // Now you can proceed with the signup
+  //     await handleSubmit();
+  //   } catch (error) {
+  //     console.error("Error verifying OTP:", error);
+  //     // Handle error
+  //   }
+  // };
+
+
+  const handleVerifyOtp = () => {
+    dispatch(verifyOtp(formData.email, otp));// Dispatch verifyOtp action with email and otp
+    handleSubmit();
+  };
+
+
+  // const handleSubmit = async () => {
+  //   try {
+  //     const userData =
+  //     {
+  //       userName: username,
+  //       email: email,
+  //       password: password,
+  //       otp: otp,
+  //     }
+
+  //     alert("Employee Registration Successfully");
+  //     console.log("user Data", userData);
+  //     dispatch(register(userData));
+  //     navigate("/Login");
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //   }
+  // };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Dispatch the register action with form data
+    dispatch(register(formData));
+    alert("user registered successfully")
+    navigate("/"); // Navigate to Home Page
+
   };
 
   return (
@@ -134,13 +241,13 @@ const handleOTPEnter = (index, value) => {
                       User Name
                     </label>
                     <input
-                      id="name"
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
-                      className="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
-                      type="name"
-                      placeholder="Name"
+                      id='userName'
+                      className='border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300'
+                      name='userName'
+                      label='UserName'
+                      placeholder='User'
                       required
+                      onChange={handleChange}
                     />
                   </div>
                   <div>
@@ -151,13 +258,13 @@ const handleOTPEnter = (index, value) => {
                       Email
                     </label>
                     <input
-                      id="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
-                      type="email"
-                      placeholder="Email"
+                      id='email'
+                      className='border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300'
+                      name='email'
+                      label='Email'
+                      placeholder='Email'
                       required
+                      onChange={handleChange}
                     />
                   </div>
                   <div>
@@ -168,13 +275,14 @@ const handleOTPEnter = (index, value) => {
                       Password
                     </label>
                     <input
-                      id="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      className="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 mb-2 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
+                      id='password'
+                      className='border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300'
+                      name='password'
+                      label='Password'
+                      placeholder='password'
                       type="password"
-                      placeholder="Password"
                       required
+                      onChange={handleChange}
                     />
                   </div>
                   <button
@@ -182,7 +290,7 @@ const handleOTPEnter = (index, value) => {
                     type="submit"
                     onClick={handleSendOTP}
                   >
-                    Send OTP
+                    SignUp
                   </button>
 
                   {showOTP && (
@@ -268,6 +376,30 @@ const handleOTPEnter = (index, value) => {
           </div>
         </div>
       </div>
+
+
+      {/* OTP Popup */}
+      {otpStatus === true && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+          <div className="bg-white p-8 max-w-md rounded-lg shadow-lg">
+            <h2 className="text-2xl font-semibold mb-4">Enter OTP</h2>
+            <input
+              type="text"
+              value={otp}
+              onChange={(e) => setOtp(e.target.value)}
+              placeholder="Enter OTP"
+              className="border border-gray-300 rounded-lg p-2 mb-4 w-full"
+            />
+            <button
+              onClick={handleVerifyOtp}
+              className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+            >
+              Verify OTP
+            </button>
+          </div>
+        </div>
+      )}
+
     </>
   );
 }

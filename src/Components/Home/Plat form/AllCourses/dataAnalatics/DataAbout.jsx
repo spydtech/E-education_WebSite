@@ -27,7 +27,7 @@ function DataAbout() {
         <div id="div1" className=" p-10 space-y-5">
           <div id="h1" className="">
             <p className="md:lg:w-auto w-96 font-semibold text-xl text-pink-900">
-              Introduction To Advanced DM course from E-Education
+              Introduction To Advanced DM course from E-education
             </p>
           </div>
           <div id="h2" className="flex space-x-3 ">

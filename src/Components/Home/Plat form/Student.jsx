@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from "../../Navbar";
 import HeroStudent from "../../../assets/student/student2.svg";
+
 import StudentCourses from "./StudentCourses";
+
 
 
 const images = [
@@ -10,6 +12,8 @@ const images = [
   'https://media.istockphoto.com/id/1403523196/photo/focused-female-adult-student-in-headphones-using-laptop.jpg?s=612x612&w=0&k=20&c=Aqz1SYxmeF9WsFWEiX3cZ4-AHJ6ltNRgPX8M98VpwtU=',
 ];
 
+
+import Footer from "../footer/Footer";
 
 const Student = () => {
 
@@ -85,6 +89,7 @@ const Student = () => {
         </div>
       </div>
       <StudentCourses />
+      <Footer />
     </>
   );
 };

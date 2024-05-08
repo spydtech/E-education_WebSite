@@ -9,7 +9,7 @@ const FullStackWebDevelopmentTestimonioals = () => {
           Why people choose E-education for their career
           </h3>
           <p className="text-base text-gray-600">
-          As e-education continues to evolve and expand, its transformative impact on the future of learning and career development remains undeniable. By embracing the flexibility, accessibility, and opportunities offered by online education, individuals can unlock their full potential and pursue rewarding career paths with confidence and resilience.
+          As E-education continues to evolve and expand, its transformative impact on the future of learning and career development remains undeniable. By embracing the flexibility, accessibility, and opportunities offered by online education, individuals can unlock their full potential and pursue rewarding career paths with confidence and resilience.
           </p>
         </div>
         <div className="flex flex-col lg:flex-row justify-between items-center gap-10">
