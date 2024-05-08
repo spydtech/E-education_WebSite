@@ -11,6 +11,7 @@ import { getUser, logout } from '../State/Auth/Action';
 const Navbar = () => {
   const [navigationMenu, setNavigationMenu] = useState(null);
   const [navigationMenuOpen, setNavigationMenuOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const navigationRef = useRef(null); // Initialize navigationRef with useRef
   const navigate = useNavigate();
   const jwt = localStorage.getItem('jwt');
@@ -108,12 +109,126 @@ const Navbar = () => {
                         'rounded-md px-3 py-2 mt-2 text-sm font-medium ml-4 mb-2'
                       )}
                       aria-current={item.current ? 'page' : undefined}
+                      onMouseEnter={() => {
+                        if (item.name === 'Explore') {
+                          setShowPopup(true);
+                        }
+                      }}
+                      
                     >
                       {item.name}
                     </a>
                   ))}
                 </div>
               </div>
+
+               {/* Popup */}
+          {showPopup && (
+            <div
+            onMouseLeave={() => setShowPopup(false)}
+            className="absolute top-14 left-0 bg-white p-4 border border-gray-300 rounded shadow-lg">
+              {/* Your popup content here */}
+              <h1 className='text-xl '>Explore Here Courses List</h1>
+              <hr className='text-2xl'/>
+              <div className='flex gap-10 py-5'> 
+              <div class="p-4 max-w-lg mx-auto ">
+    <details class="mb-2">
+        <summary class="bg-gray-200 p-4 rounded-lg cursor-pointer shadow-md mb-4">
+            <span class="font-semibold">Advanced Courses</span>
+        </summary>
+        <ul class="ml-8 space-y-4">
+            <li>
+                <details class="mb-2">
+                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span class="font-semibold">Python Programming</span>
+                    </summary>
+                   
+                </details>
+            </li>
+            <li>
+                <details class="mb-2">
+                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span class="font-semibold">Data Science</span>
+                    </summary>
+                   
+                </details>
+            </li>
+            <details class="mb-2">
+                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span class="font-semibold">Machine Learning</span>
+                    </summary>
+                   
+                </details>
+            <li>
+                <details class="mb-2">
+                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span class="font-semibold">Digital Markenting</span>
+                    </summary>
+                   
+                </details>
+            </li>
+            <li>
+                <details class="mb-2">
+                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span class="font-semibold">Cyber Security</span>
+                    </summary>
+                   
+                </details>
+            </li>
+            <li>
+               
+            </li>
+           
+        </ul>
+    </details>
+
+    <details class="mb-2">
+        <summary class="bg-gray-200 p-4 rounded-lg cursor-pointer shadow-md mb-4">
+            <span class="font-semibold">Web developement</span>
+        </summary>
+        <ul class="ml-8 space-y-4">
+            <li>
+                <details class="mb-2">
+                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span class="font-semibold">Front-end Development</span>
+                    </summary>
+                   
+                </details>
+            </li>
+            <li>
+                <details class="mb-2">
+                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span class="font-semibold">Backend development</span>
+                    </summary>
+                   
+                </details>
+            </li>
+            <li>
+                <details class="mb-2">
+                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span class="font-semibold">Full-stack development</span>
+                    </summary>
+                   
+                </details>
+            </li>
+            <li>
+                <details class="mb-2">
+                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span class="font-semibold">  Ui/Ux Design</span>
+                    </summary>
+                   
+                </details>
+            </li>
+        </ul>
+    </details>
+</div>
+               
+              </div>
+
+
+             
+            </div>
+          )}
 
               {/* User Initials */}
               {auth.user && (
