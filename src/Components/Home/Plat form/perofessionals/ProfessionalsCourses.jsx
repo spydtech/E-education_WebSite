@@ -369,13 +369,13 @@ const courses = [
     link: "link-to-the-course",
     icon: <MdOutlineNetworkCheck style={{ width: '40px', height: '40px' }} />,
   },
-  {
-    title: "Certified Information Systems Security Professional (CISSP)",
-    description:
-      "Prepare for the CISSP certification exam with official training  E-education.",
-    link: "link-to-the-course",
-    icon: <GrShieldSecurity style={{ width: '40px', height: '40px' }} />,
-  },
+  // {
+  //   title: "Certified Information Systems Security Professional (CISSP)",
+  //   description:
+  //     "Prepare for the CISSP certification exam with official training  E-education.",
+  //   link: "link-to-the-course",
+  //   icon: <GrShieldSecurity style={{ width: '40px', height: '40px' }} />,
+  // },
   {
     title: "Cloud Computing",
     description:
@@ -404,13 +404,13 @@ const courses = [
     link: "link-to-the-course",
     icon: <FaComputer style={{ width: '40px', height: '40px' }} />,
   },
-  {
-    title: "Software Engineering Practices",
-    description:
-      "Learn agile, scrum, testing, and DevOps courses on E-education.",
-    link: "link-to-the-course",
-    icon: <SiPaloaltosoftware  style={{ width: '40px', height: '40px' }} />,
-  },
+  // {
+  //   title: "Software Engineering Practices",
+  //   description:
+  //     "Learn agile, scrum, testing, and DevOps courses on E-education.",
+  //   link: "link-to-the-course",
+  //   icon: <SiPaloaltosoftware  style={{ width: '40px', height: '40px' }} />,
+  // },
   // Add more courses here with respective icons
 ];
 

@@ -14,8 +14,8 @@ import { MdModelTraining } from "react-icons/md";
 
 function Delivery_Methods() {
   return (
-    <>
-      <div id="heading" className=" py-10 space-y-2 px-32 ">
+    <div className="mb-32">
+      <div id="heading" className=" py-10 space-y-2 px-32  ">
         <h1 className="text-center font-bold text-5xl md:lg:sm:w-auto w-96 text-violet-800">
           Our Available Delivery Methods
         </h1>
@@ -182,7 +182,7 @@ function Delivery_Methods() {
           </div>
         </div>
         </div>
-    </>
+    </div>
   );
 }
 export default Delivery_Methods;

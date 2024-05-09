@@ -93,7 +93,7 @@ const ParticularFullStack = () => {
       </div>
 
       <AboutCourses />
-      <FullStackCard />
+      {/* <FullStackCard /> */}
       <Delivery_Methods />
       <Community />
       {/* <Award /> */}
