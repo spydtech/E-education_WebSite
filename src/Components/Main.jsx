@@ -1,27 +1,7 @@
 import React, { useState, useEffect } from "react";
-
-
-const images = [
-   "https://miro.medium.com/v2/resize:fit:660/1*NRk6YQMA_w-wWcc6JYe7yA.png",
-//    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlAU4GQ__PSxZ4UW4vhDmBXSm22aBc0hl8KpbtTXvKCw&s"
-
-  ];
-function Main() {
-    const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 3000); // Change the time interval here (in milliseconds) for auto-sliding
-
-    return () => clearInterval(interval);
-  }, [currentSlide]);
-
-
 import Boy1 from "./Home/Boy1";
 
 function Main() {
-
   return (
     <>
       <div>
@@ -63,44 +43,10 @@ function Main() {
               {/* <!-- End of Button Section --> */}
             </div>
 
-        </div>
-        {/* <!-- End of Button Section --> */}
-    </div>
-
-    {/* <!--   Image Section     --> */}
-    <div class="w-full h-64 lg:w-1/2 lg:h-auto ">
-          <div className="relative">
-            <div className="overflow-hidden">
-              <img
-                className="w-full h-auto py-10"
-                src={images[currentSlide]}
-                alt={`Slide ${currentSlide + 1}`}
-              />
-            </div>
-          
-          </div>
-        </div>
-           
-          </div>
-       
-    {/* <div class="lg:inset-y-0 lg:right-0 lg:w-1/2 my-4">
-        <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://miro.medium.com/v2/resize:fit:660/1*NRk6YQMA_w-wWcc6JYe7yA.png" alt="" />
-    </div> */}
-    {/* <!--   End of Image Section     --> */}
-    </section>
-</div>
-    
-
-
-
-   
-
-
             {/* <!--   Image Section     --> */}
             <div class="lg:inset-y-0 lg:right-0 lg:w-1/2  relative ">
               <Boy1 />
             </div>
-
 
             {/* <!--   End of Image Section     --> */}
           </div>
@@ -110,4 +56,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Main;

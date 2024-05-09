@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from "../../Navbar";
 import HeroStudent from "../../../assets/student/student2.svg";
+import Footer from "../footer/Footer";
 
 import StudentCourses from "./StudentCourses";
 
@@ -13,7 +14,6 @@ const images = [
 ];
 
 
-import Footer from "../footer/Footer";
 
 const Student = () => {
 
