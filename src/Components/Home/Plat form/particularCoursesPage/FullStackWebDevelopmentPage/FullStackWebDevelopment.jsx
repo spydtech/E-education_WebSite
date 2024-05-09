@@ -6,7 +6,7 @@ import SuccessStory from "../../../SuccessStory/successstory";
 import Award from "../../../Award/Award";
 import Footer from "../../../footer/Footer";
 import FullStackCard from "./FullStackCard";
-
+import Delivery_Methods from "./deliverymethods/Delivery_Methods";
 const images = [
   "https://www.cdmi.in/courses@2x/full-stack.webp",
   "https://www.weblineindia.com/wp-content/uploads/2017/03/full-stack-development-by-weblineindia-2.jpg",
@@ -94,6 +94,7 @@ const ParticularFullStack = () => {
 
       <AboutCourses />
       <FullStackCard />
+      <Delivery_Methods />
       <Community />
       {/* <Award /> */}
       <SuccessStory />

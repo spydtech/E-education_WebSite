@@ -454,7 +454,7 @@ function ProfessionalsCourses() {
                  {course.description}
               </div>
               
-              <Link>
+              <Link to={course.link}>
                 <div className="font-bold gap-4 w-[390px] border-none flex justify-center items-center  hover:text-white bg-blue-300 hover:bg-blue-600 transition duration-500 p-2">
                   <div className="">
                     <BsTelephoneOutbound className="w-8 h-8 " />
