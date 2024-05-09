@@ -6,27 +6,27 @@ const Outcomes = () => {
     <>
       <div className="flex md:flex-row flex-col justify-center items-center">
         <div className="w-full">
-          <div className="text-start text-xl font-bold">
+          <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
             Elevate your career with sought-after skills in full stack web
             development
           </div>
           <div className="pl-4">
-            <div className="flex justify-start items-center gap-2">
+            <div className="flex justify-start items-center gap-2 mt-2">
               <div><FaCaretRight /> </div>
-             <div>  Acquire full stack web skills.Industry-recognized certification.
+             <div className=" text-base text-gray-600 text-md font-lora" >  Acquire full stack web skills.Industry-recognized certification.
               Excel in tech.</div>
               
 
             </div>
-            <div className="flex justify-start items-center  gap-2">
+            <div className="flex justify-start items-center  gap-2 mt-2">
             <div><FaCaretRight /></div>
-            <div>  Master front-end, back-end. Real-world projects. Career-ready in
+            <div className=" text-base text-gray-600 text-md font-lora">  Master front-end, back-end. Real-world projects. Career-ready in
               web development. </div>
             
             </div>
-            <div className="flex justify-start items-center  gap-2">
+            <div className="flex justify-start items-center  gap-2 mt-2">
               <div><FaCaretRight /> </div>
-             <div> Elevate career with full stack. Google-endorsed. Prepare for
+             <div className=" text-base text-gray-600 text-md font-lora"> Elevate career with full stack. Google-endorsed. Prepare for
               industry. Success awaits. </div>
             </div>
           </div>
@@ -47,23 +47,23 @@ const Outcomes = () => {
           />
         </div>
         <div className="w-full">
-          <div className="text-start text-xl font-bold pl-12">
+          <div className="mt-3 text-base  font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora pl-12">
             Master Full Stack Web Development for Career Advancement
           </div>
           <div className="pl-16">
-            <div className="flex justify-start items-center gap-2">
+            <div className="flex justify-start items-center gap-2 mt-2">
             <div><FaCaretRight /> </div>
-             <div> Acquire comprehensive full stack web skills for industry
+             <div className=" text-base text-gray-600 text-md font-lora"> Acquire comprehensive full stack web skills for industry
               recognition.</div>
             </div>
-            <div className="flex justify-start items-center gap-2">
+            <div className="flex justify-start items-center gap-2 mt-2">
             <div><FaCaretRight /> </div>
-             <div> Excel in both front-end and back-end development with real-world
+             <div className=" text-base text-gray-600 text-md font-lora"> Excel in both front-end and back-end development with real-world
               projects.</div>
             </div>
-            <div className="flex justify-start items-center gap-2">
+            <div className="flex justify-start items-center gap-2 mt-2">
             <div><FaCaretRight /> </div>
-             <div> Elevate your career with Google-endorsed training, preparing you
+             <div className=" text-base text-gray-600 text-md font-lora"> Elevate your career with Google-endorsed training, preparing you
               for industry success.</div>
             </div>
           </div>
@@ -72,19 +72,19 @@ const Outcomes = () => {
 
       <div className="flex md:flex-row flex-col justify-center items-center">
         <div className="w-full">
-          <div className='text-start text-xl font-bold'>Unlock Career Opportunities with Full Stack Web Development</div>
+          <div className="text-base  font-extrabold text-gray-600  sm:text-xl lg:text-lg xl:text-xl font-lora">Unlock Career Opportunities with Full Stack Web Development</div>
           <div className='pl-4 '>
-            <div className="flex justify-start items-center gap-2">
+            <div className="flex justify-start items-center gap-2 mt-2 ">
             <div><FaCaretRight /> </div>
-             <div> Master both front-end and back-end technologies for diverse job roles.</div>
+             <div className=" text-base text-gray-600  font-lora"> Master both front-end and back-end technologies for diverse job roles.</div>
             </div>
-            <div className="flex justify-start items-center gap-2">
+            <div className="flex justify-start items-center gap-2 mt-2">
             <div><FaCaretRight /> </div>
-             <div> Gain hands-on experience through real-world projects and case studies.</div>
+             <div className=" text-base text-gray-600  font-lora"> Gain hands-on experience through real-world projects and case studies.</div>
              </div>
-            <div className="flex justify-start items-center gap-2">
+            <div className="flex justify-start items-center gap-2 mt-2">
             <div><FaCaretRight /> </div>
-             <div> Prepare for success with industry-recognized certification and Google-endorsed training.</div>
+             <div className=" text-base text-gray-600  font-lora"> Prepare for success with industry-recognized certification and Google-endorsed training.</div>
             </div>
           </div>
         </div>
