@@ -1,5 +1,11 @@
-import React, {useState, useEffect} from 'react'
-import DataAnalaticsKeyHighights from './DataAnalaticsKeyHighights'
+import React, { useState, useEffect } from "react";
+import DataAnalaticsKeyHighights from "./DataAnalaticsKeyHighights";
+import DataCertificate from "./DataCertificate";
+import DataCareers from "./DataCareers";
+import DataAnalyticsProgram from "./DataAnalyticsProgram";
+
+import DataAnalyticsSyallabus from "./DataAnalyticsSyallabus";
+import DataAnalyticsIntroduction from "./DataAnalyticsIntroduction";
 const DataAnalaticsNavigation = () => {
   const sections = [
     "Introduction",
@@ -68,10 +74,14 @@ const DataAnalaticsNavigation = () => {
           </button>
         </div> */}
       </nav>
-      {/* Conditionally render KeyHighlights based on currentSection */}
+      {currentSection === 0 && <DataAnalyticsIntroduction />}
       {currentSection === 1 && <DataAnalaticsKeyHighights />}
+      {currentSection === 2 && <DataCareers />}
+      {currentSection === 3 && <DataAnalyticsProgram />}
+      {currentSection === 4 && <DataCertificate />}
+      {currentSection === 5 && <DataAnalyticsSyallabus />}
     </>
   );
 };
 
-export default DataAnalaticsNavigation
+export default DataAnalaticsNavigation;

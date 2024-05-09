@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 function DataAnalaticsKeyHighights() {
-    const [selectedItem, setSelectedItem] = useState(null);
+    const [selectedItem, setSelectedItem] = useState(0);
   
     const data = [
       { label: "Key Highlights" },
