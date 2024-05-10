@@ -26,6 +26,7 @@ import Features from './Components/Home/FeaturesOfE-education/Features'
 import PersonalDevelopment from "./Components/Home/Plat form/AllCourses/PersonalDevelopment";
 import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience";
 import DataAnalatics from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
+import MachineLearning from "./Components/Home/Plat form/AllCourses/MachineLearning/MachineLearning";
 function App() {
 
   return (
@@ -55,6 +56,7 @@ function App() {
           <Route path="/professional" element={<Professional />} />
           <Route path="/dataAnalatics" element={<DataAnalatics />} />
           <Route path="/health" element={<Health />} />
+          <Route path="/machineLearning" element={<MachineLearning />} />
           <Route
             path="/personaldevelopment"
             element={<PersonalDevelopment />}

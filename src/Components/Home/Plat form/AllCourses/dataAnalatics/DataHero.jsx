@@ -69,19 +69,19 @@ function DataHero() {
     // // </div>
 
     <>
-      <div className="flex flex-row justify-center items-center">
+      <div className="flex flex-row justify-center items-center font-lora">
         <div>
           <div className="rounded-r-3xl p-8 z-10 w-[700px]">
             <div className="flex flex-col md:flex-row items-center mb-4">
-              <button className="bg-blue-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mr-4 mb-2 md:mb-0">
+              <button className="bg-blue-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mr-4 mb-2 md:mb-0 font-lora">
               Explore Data Analytics
               </button>
-              <button className="bg-blue-200 hover:bg-blue-300 text-white font-bold py-2 px-4 rounded mr-4 mb-2 md:mb-0">
+              <button className="bg-blue-200 hover:bg-blue-300 text-white font-bold py-2 px-4 rounded mr-4 mb-2 md:mb-0 font-lora">
               Discover Data Analytics
               </button>
               <IoMdShare className="text-4xl mb-2 md:mb-0" />
             </div>
-            <h1 className="text-3xl font-bold mb-4">
+            <h1 className="text-3xl font-bold mb-4 font-lora">
               <span className="text-blue-500">EonlineCourse</span>{" "}
               <span className="text-purple-700">Advanced Certificate</span>{" "}
               <span className="text-pink-500">in</span>{" "}
@@ -89,7 +89,7 @@ function DataHero() {
               <span className="text-blue-500">and</span>{" "}
               <span className="text-purple-700">Communication</span>
             </h1>
-            <p className="mb-8 text-lg">
+            <p className="mb-8 text-lg font-lora">
               Dive deep into data analytics, a multifaceted field encompassing
               data cleaning, visualization, statistical analysis, and predictive
               modeling. With a focus on practical skills and real-world
@@ -100,13 +100,13 @@ function DataHero() {
               data for business growth and innovation.
             </p>
             <div>
-              <button className="bg-blue-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mb-4 mr-4">
+              <button className="font-lora bg-blue-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mb-4 mr-4">
                 Download Syllabus
               </button>
-              <button className="bg-blue-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mb-4">
+              <button className="font-lora bg-blue-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mb-4">
                 Apply Now
               </button>
-              <p className="text-sm text-gray-700">
+              <p className="text-sm text-gray-700 font-lora">
                 Enroll now and embark on a journey towards mastering data
                 analytics.
               </p>
