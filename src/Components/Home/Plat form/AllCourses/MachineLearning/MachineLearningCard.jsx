@@ -8,6 +8,7 @@ const MachineLearningCard = () => {
     <div className="text-center mb-12">
       <h2 className="text-4xl font-bold ">Mastering Machine Learning: Transform Your Skills</h2>
       <p className="text-lg text-indigo-500 font-semibold px-28 mt-2 ">
+        
       Elevate your skills with our machine learning courses. Dive deep into principles and gain hands-on experience. Whether novice or pro, unlock your potential.
       </p>
     </div>
