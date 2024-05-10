@@ -45,7 +45,7 @@
         icon: <IoAnalyticsSharp />,
         description:
           "Explore machine learning from basic to advanced techniques.",
-        link: "link-to-the-course",
+        link: "/machineLearning",
       },
       // {
       //   title: "Game Development",

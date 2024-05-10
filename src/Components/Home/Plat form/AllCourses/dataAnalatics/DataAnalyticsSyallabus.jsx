@@ -37,7 +37,7 @@ function DataAnalyticsSyallabus() {
   ];
   return (
     <>
-      <div id="subdiv" className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6 ">
+      <div id="subdiv" className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6 md:mb-20 ">
         <div
           id="div1"
           className=" flex items-center justify-center     xl:lg:md:w-auto "

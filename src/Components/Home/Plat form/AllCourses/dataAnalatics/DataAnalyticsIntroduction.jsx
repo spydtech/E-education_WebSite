@@ -77,7 +77,7 @@ function DataAnalyticsIntroduction() {
     <>
       <div
         id="subdiv"
-        className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6 h-[530px] "
+        className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6 h-[530px] md:mb-20"
       >
         <div
           id="div1"

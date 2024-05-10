@@ -20,7 +20,7 @@ function DataAnalaticsKeyHighights() {
           return (
             <>
            
-              <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16  bg-gray-200 shadow-2xl">
+              <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16  bg-gray-200 shadow-2xl md:my-16">
               <p className="text-2xl font-medium text-pink-600 py-4">Key HighLights</p>
                <li>Advanced modules with Generative AI fusion</li>
                 <li> E-education certificate via upGrad collaboration</li>
@@ -60,11 +60,11 @@ function DataAnalaticsKeyHighights() {
           return (
             <>
               {" "}
+              <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16  bg-gray-200 shadow-2xl">
               <p className="text-2xl font-medium  text-pink-600">
                 Promising job opportunities are available post successful
                 completion
               </p>
-              <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
                 <li>Digital Marketing Manager</li>
                 <li>SEM Manager</li>
                 <li>SEO Manager</li>
@@ -79,10 +79,10 @@ function DataAnalaticsKeyHighights() {
         case 3:
           return (
             <>
+              <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16  bg-gray-200 shadow-2xl">
               <p className="text-2xl font-medium  text-pink-600">
                 For the Enthusiatic Learners
               </p>
-              <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
                 <li>List of target audience goes here...</li>
                 <li>
                   Explore 2 tracks & 5 specializations for diverse learning.
@@ -104,10 +104,10 @@ function DataAnalaticsKeyHighights() {
           return (
             <>
               {" "}
+              <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16  bg-gray-200 shadow-2xl">
               <p className="text-2xl font-medium  text-pink-600">
                 Learn To Leverage ChatGPT in Digital Marketing
               </p>
-              <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
                 <li>
                   Utilise ChatGPT to assist in creative unique content,plan
                   strategies,build,calenders,and more
