@@ -18,13 +18,13 @@ function ProfessionalsCard() {
   }, [currentSlide]);
 
   return (
-    <div className="py-10 ">
+    <div className="py-6 ">
       <div class="relative flex flex-col  items-center mx-auto md:flex-row lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
-        <div class="w-full h-full lg:w-1/2 lg:h-auto ">
+        <div class="md:w-full md:h-full lg:w-1/2 lg:h-auto ">
           <div className="relative">
             <div className="overflow-hidden">
               <img
-                className="w-full h-full py-10"
+                className="w-full h-full md:py-10 py-4"
                 src={images[currentSlide]}
                 alt={`Slide ${currentSlide + 1}`}
               />
@@ -33,34 +33,34 @@ function ProfessionalsCard() {
             <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-4"></div>
           </div>
         </div>
-        <div class="max-w-lg bg-white md:max-w-2xl md:z-10 md:shadow-2xl md:absolute md:bottom-48 md:mt-20 lg:w-3/5 lg:left-[450px] lg:mt-20 lg:ml-20 xl:mt-20 xl:ml-12">
-          <div class="flex flex-col p-12 md:px-16">
-            <h2 class="text-2xl font-bold  text-[#264653] lg:text-4xl">
+        <div class="max-w-lg md:bg-white bg-gray-200 py-6 mb-9 md:max-w-2xl md:z-10 md:shadow-2xl md:absolute md:bottom-48 md:mt-20 lg:w-3/5 lg:left-[450px] lg:mt-20 lg:ml-20 xl:mt-20 xl:ml-12">
+          <div class="flex flex-col md:p-12 md:px-16">
+            <h2 class="md:text-2xl text-xl font-bold  text-[#264653] lg:text-4xl pl-4">
               Professional Development Made Simple
             </h2>
-            <p class="mt-4">
+            <p class="mt-4 pl-4">
               Elevate your career with our curated professional courses designed
               to sharpen your skills and propel you towards success. Embrace the
               flexibility of online learning and seize the opportunity to grow,
               no matter where you are located.
             </p>
 
-            <div class="mt-8">
+            <div class="mt-8 pl-4">
               <a
                 href="#"
-                class="inline-block w-full text-center text-lg font-medium text-gray-100 bg-[#264653] p-2  py-2 hover:bg-blue-800 hover:shadow-md md:w-48"
+                class="inline-block text-center text-lg font-medium text-gray-100 bg-[#264653] p-2  py-2 hover:bg-blue-800 hover:shadow-md w-48"
               >
                 Discover Courses
               </a>
             </div>
           </div>
         </div>
-        <div class="max-w-lg bg-white md:max-w-2xl md:z-10 md:shadow-2xl md:absolute md:top-56 md:mt-20 lg:w-3/5 lg:left-[250px] lg:mt-20 lg:ml-20 xl:mt-20 xl:ml-12">
-          <div class="flex flex-col p-12 md:px-16">
-            <h2 class="text-2xl font-bold text-[#023047] lg:text-4xl">
+        <div class="max-w-lg md:bg-white bg-gray-200 py-6 md:max-w-2xl md:z-10 md:shadow-2xl md:absolute md:top-56 md:mt-20 lg:w-3/5 lg:left-[250px] lg:mt-20 lg:ml-20 xl:mt-20 xl:ml-12">
+          <div class="flex flex-col md:p-12  md:px-16">
+            <h2 class="md:text-2xl text-xl font-bold text-[#023047] lg:text-4xl pl-4">
               Enhance Your Professional Skills
             </h2>
-            <p class="mt-4">
+            <p class="mt-4 pl-4">
               In today's dynamic job market, staying ahead requires continuous
               learning. Our professional courses provide targeted skills and
               knowledge to propel your career forward. Experience the
@@ -68,10 +68,10 @@ function ProfessionalsCard() {
               your busy schedule and professional goals.
             </p>
 
-            <div class="mt-8">
+            <div class="mt-8 pl-4">
               <a
                 href="#"
-                class="inline-block w-full text-center text-lg font-medium text-gray-100 bg-[#023047] p-2  py-2 hover:bg-blue-800 hover:shadow-md md:w-48"
+                class="inline-block  text-center text-lg font-medium text-gray-100 bg-[#023047] p-2  py-2 hover:bg-blue-800 hover:shadow-md w-48"
               >
                 Explore Courses
               </a>
