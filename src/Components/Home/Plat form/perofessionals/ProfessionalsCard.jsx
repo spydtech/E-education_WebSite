@@ -18,7 +18,7 @@ function ProfessionalsCard() {
   }, [currentSlide]);
 
   return (
-    <div className="py-6 ">
+    <div className="py-6 md:my-36">
       <div class="relative flex flex-col  items-center mx-auto md:flex-row lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
         <div class="md:w-full md:h-full lg:w-1/2 lg:h-auto ">
           <div className="relative">
@@ -55,7 +55,7 @@ function ProfessionalsCard() {
             </div>
           </div>
         </div>
-        <div class="max-w-lg md:bg-white bg-gray-200 py-6 md:max-w-2xl md:z-10 md:shadow-2xl md:absolute md:top-56 md:mt-20 lg:w-3/5 lg:left-[250px] lg:mt-20 lg:ml-20 xl:mt-20 xl:ml-12">
+        <div class="max-w-lg md:bg-white md:mb-32 bg-gray-200 py-6 md:max-w-2xl md:z-10 md:shadow-2xl md:absolute md:top-56 md:mt-20 lg:w-3/5 lg:left-[250px] lg:mt-20 lg:ml-20 xl:mt-20 xl:ml-12">
           <div class="flex flex-col md:p-12  md:px-16">
             <h2 class="md:text-2xl text-xl font-bold text-[#023047] lg:text-4xl pl-4">
               Enhance Your Professional Skills

@@ -10,7 +10,7 @@ const Professionals = () => {
     <>
       <Navbar />
       <ProfessionalsCard />
-      <div className="container md:mt-36 mt-4">
+      <div className="container md:mt-32 mt-4">
         <section className="w-full px-2 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-24 max-w-6xl mx-auto">
           <ShuffleGrid />
           <div className="pl-4">
@@ -157,7 +157,7 @@ const ShuffleGrid = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 grid-rows-4 h-[450px] gap-1">
+    <div className="grid grid-cols-4 grid-rows-4 h-[450px] gap-1 md:mt-32">
       {squares.map((sq) => sq)}
     </div>
   );
