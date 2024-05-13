@@ -17,7 +17,8 @@ const Navbar = () => {
   const { auth } = useSelector((store) => store);
   const dispatch = useDispatch();
 
-  const navigation = [{ name: 'Explore', href: '/Explore', current: false }];
+  const navigation = [{ name: 'Explore', href: '/Explore', current: false },
+  ];
   if (auth.user) {
     navigation.push({ name: 'My Learning', href: '/mylearning', current: false },
       { name: 'Course', href: '/Mycourse', current: false },
@@ -135,7 +136,7 @@ const Navbar = () => {
                     >
                       {/* User initials */}
                       <span className='p-3 w-12 rounded-full bg-blue-400 text-white font-bold text-center cursor-pointer'>
-                        {auth.user.firstName[0].toUpperCase()}
+                        {auth.user.userName[0].toUpperCase()}
                       </span>
                       {/* Dropdown arrow icon */}
                       <svg
