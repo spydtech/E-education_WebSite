@@ -53,8 +53,8 @@ function FooterPart() {
       links: [
         { label: "Machine Learning", url: "#" },
         { label: "Ai", url: "#" },
-        { label: "Ai", url: "#" },
-        { label: "Ai", url: "#" },
+        // { label: "Ai", url: "#" },
+        // { label: "Ai", url: "#" },
       ],
     },
     {
@@ -124,8 +124,8 @@ function FooterPart() {
           </div>
         </div>
         {/* foot */}
-        <div className="container mx-auto   px-8  py-6 bg-gray-900  text-white ">
-          <div className=" justify-between items-center grid gap-6 ml-10 grid-cols-2 px-10 lg:md:grid-cols-5 ">
+        <div className="container mx-auto flex justify-center items-center  px-8 py-6 bg-gray-900  text-white ">
+          <div className="grid gap-6 md:ml-10 md:grid-cols-3 md:px-10 lg:grid-cols-5  grid-cols-2">
             <div>
               <a
                 href="https://twitter.com/"

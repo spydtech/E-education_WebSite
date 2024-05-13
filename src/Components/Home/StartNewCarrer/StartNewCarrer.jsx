@@ -10,7 +10,7 @@ const StartNewCarrer = () => {
   return (
     <>
       <div class="w-full px-16  pb-16">
-        <span class="text-5xl font-bold text-[#2A063D]  border-b-4 border-[#023047] font-lora">
+        <span class="text-5xl font-bold text-[#2A063D]  font-lora">
           Start a new career with E-education &#8594;
         </span>
       </div>

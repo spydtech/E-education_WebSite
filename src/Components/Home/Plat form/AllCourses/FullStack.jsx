@@ -50,12 +50,7 @@ const FullStack = () => {
       description: "Explore Java for building full-stack applications.",
       image: "https://media.geeksforgeeks.org/wp-content/uploads/20230926163338/Java-Full-Stack.png",
     },
-    {
-      id: 7,
-      title: "Ruby on Rails Full Stack",
-      description: "Learn Ruby on Rails for full-stack web development.",
-      image: "https://www.edureka.co/blog/wp-content/uploads/2019/02/ruby-on-rails-developer-singapore-528x269.jpg",
-    },
+    
     {
       id: 8,
       title: "Full Stack PHP",

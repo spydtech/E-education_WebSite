@@ -1,12 +1,17 @@
 import React from 'react';
 import Avatar from './Avatar';
+// import Navbar from '../../Navbar';
+// import Footer from "./../footer/Footer"
 
 const Post = ({ name, message, timestamp, image, text, video, feeling, taggedUsers }) => {
   return (
-    <div className="bg-white p-4 mb-4 border rounded-md">
+
+    <>
+    {/* <Navbar /> */}
+     <div className="bg-white p-4 mb-4 border rounded-md">
       {/* Avatar profile (placeholder) */}
       <div className="flex items-center mb-2">
-        <Avatar src="avatar.jpg" alt="User Avatar" />
+        <Avatar  alt="User Avatar" />
        
         <span className="font-semibold">{name}</span>
         <span className="font-semibold">{timestamp}</span>
@@ -26,6 +31,9 @@ const Post = ({ name, message, timestamp, image, text, video, feeling, taggedUse
         </p>
       )}
     </div>
+    {/* <Footer /> */}
+    </>
+   
   );
 };
 

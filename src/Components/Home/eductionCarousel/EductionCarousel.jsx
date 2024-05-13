@@ -1,47 +1,56 @@
 import React, { useEffect } from "react";
 import Glide from "@glidejs/glide";
 import { FaBrain, FaCode, FaDatabase, FaReact, FaPython, FaJs } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 const courses = [
   {
     title: "Generative AI in Practice",
     bgColor: "bg-blue-300",
     icon: <FaBrain className="text-blue-800" />,
+    link: "/machineLearning"
   },
   {
     title: "Web Development",
     bgColor: "bg-green-300",
     icon: <FaCode className="text-green-800" />,
+    link: "/fullStackWebDevelopment"
   },
   {
     title: "Data Science Fundamentals",
     bgColor: "bg-purple-300",
     icon: <FaDatabase className="text-purple-800" />,
+    link: "/course/Data Science"
   },
   {
     title: "React.js Mastery",
     bgColor: "bg-yellow-300",
     icon: <FaReact className="text-yellow-800" />,
+    link: "/reactjs"
   },
   {
     title: "Python Programming",
     bgColor: "bg-red-300",
     icon: <FaPython className="text-red-800" />,
+    link: "/"
   },
   {
     title: "JavaScript Essentials",
     bgColor: "bg-indigo-300",
     icon: <FaJs className="text-indigo-800" />,
+    link: "/"
   },
   {
     title: "Machine Learning Algorithms",
     bgColor: "bg-pink-300",
     icon: <FaBrain className="text-pink-800" />,
+    link: "/machineLearning"
   },
   {
     title: "Database Design and Optimization",
     bgColor: "bg-orange-300",
     icon: <FaDatabase className="text-orange-800" />,
+    link: "/"
   },
 ];
 
@@ -76,7 +85,7 @@ export default function EducationCarousel() {
     <>
       <div className="my-8 ">
       <div className="text-xl lg:text-5xl font-semibold pb-4 text-center font-lora">
-  <span className="border-b-2 border-gray-800">Choose a course for you</span>
+  <span className="">Choose a course for you</span>
 </div>
        
       </div>
@@ -84,7 +93,8 @@ export default function EducationCarousel() {
         <div className="overflow-hidden" data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap relative flex   overflow-hidden p-0">
           {courses.map((course, index) => (
-          <div
+          <Link
+          to = {`${course.link}`}
             key={index}
             className={`p-4 rounded-lg  ${course.bgColor} text-center cursor hover:shadow-2xl transform hover:-translate-y-2 transition-transform`}
           >
@@ -95,7 +105,7 @@ export default function EducationCarousel() {
             <p className="text-gray-800">
               Learn and master {course.title.toLowerCase()}!
             </p>
-          </div>
+          </Link>
         ))}
           </ul>
         </div>
