@@ -415,7 +415,7 @@ const courses = [
 function ProfessionalsCourses() {
   return (
     <>
-      <div id="heading" className="md:mt-40 space-y-6 flex flex-col justify-center items-center mt-16">
+      <div id="heading" className="md:mt-20  flex flex-col justify-center items-center mt-16 gap-y-4">
         <div className="text-center text-xl md:lg:sm:w-auto w-96 text-black">
           Best Selling Courses in India
         </div>
@@ -428,11 +428,11 @@ function ProfessionalsCourses() {
           <IoRemoveOutline className="text-[40px]" />
         </div>
       </div>
-      <div className="flex md:flex-row flex-col justify-center items-center">
+      <div className="flex md:flex-row flex-col justify-center items-center mb-28">
 
       <div
         id="submain"
-        className=" h-auto w-full grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 md:lg:gap-y-10 gap-y-12 grid-cols-1"
+        className=" h-auto w-full grid  md:grid-cols-3  grid-cols-1 place-items-center gap-8"
       >
         {courses.map((course, index) => (
           <div

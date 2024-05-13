@@ -33,7 +33,7 @@ function ProfessionalsCard() {
             <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-4"></div>
           </div>
         </div>
-        <div class="max-w-lg md:bg-white bg-gray-200 py-6 mb-9 md:max-w-2xl md:z-10 md:shadow-2xl md:absolute md:bottom-48 md:mt-20 lg:w-3/5 lg:left-[450px] lg:mt-20 lg:ml-20 xl:mt-20 xl:ml-12">
+        <div class="max-w-lg md:bg-[#81b29a] bg-gray-200 py-6 mb-9 md:max-w-2xl md:z-10 md:shadow-2xl md:absolute md:bottom-48 md:mt-20 lg:w-3/5 lg:left-[450px] lg:mt-20 lg:ml-20 xl:mt-20 xl:ml-12">
           <div class="flex flex-col md:p-12 md:px-16">
             <h2 class="md:text-2xl text-xl font-bold  text-[#264653] lg:text-4xl pl-4">
               Professional Development Made Simple
@@ -55,7 +55,7 @@ function ProfessionalsCard() {
             </div>
           </div>
         </div>
-        <div class="max-w-lg md:bg-white md:mb-32 bg-gray-200 py-6 md:max-w-2xl md:z-10 md:shadow-2xl md:absolute md:top-56 md:mt-20 lg:w-3/5 lg:left-[250px] lg:mt-20 lg:ml-20 xl:mt-20 xl:ml-12">
+        <div class="max-w-lg md:bg-[#b5e48c] md:mb-32 bg-gray-200 py-6 md:max-w-2xl md:z-10 md:shadow-2xl md:absolute md:top-56 md:mt-20 lg:w-3/5 lg:left-[250px] lg:mt-20 lg:ml-20 xl:mt-20 xl:ml-12">
           <div class="flex flex-col md:p-12  md:px-16">
             <h2 class="md:text-2xl text-xl font-bold text-[#023047] lg:text-4xl pl-4">
               Enhance Your Professional Skills
