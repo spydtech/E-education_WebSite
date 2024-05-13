@@ -39,7 +39,7 @@ const MachineLearningCard = () => {
             <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
             Explore Course Catalog
             </h3>
-            <span className="text-sm font-bold text-pink-500 group-hover:text-white pt-4">
+            <span className="text-sm font-bold text-[#219ebc] group-hover:text-white pt-4">
             Browse our extensive catalog of Machine Learning courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.
             </span>
           </div>
@@ -57,7 +57,7 @@ const MachineLearningCard = () => {
             <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
             Enroll in Foundational Courses
             </h3>
-            <span className="text-sm font-bold text-pink-500 group-hover:text-white pt-4">
+            <span className="text-sm font-bold text-[#219ebc] group-hover:text-white pt-4">
             Start with foundational courses covering basic concepts, algorithms, and programming languages essential for Machine Learning. 
             </span>
           </div>
@@ -75,7 +75,7 @@ const MachineLearningCard = () => {
             <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
             Practice with Real-world Projects
             </h3>
-            <span className="text-sm font-bold text-pink-500 group-hover:text-white pt-4">
+            <span className="text-sm font-bold text-[#219ebc] group-hover:text-white pt-4">
             Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience in data analysis, model building, and evaluation under the guidance of industry experts.
             </span>
           </div>
@@ -93,7 +93,7 @@ const MachineLearningCard = () => {
             <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
             Track Your Progress
             </h3>
-            <span className="text-sm font-bold text-pink-500 group-hover:text-white pt-4">
+            <span className="text-sm font-bold text-[#219ebc] group-hover:text-white pt-4">
             Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Machine Learning concepts as you advance through the courses.
             </span>
           </div>
@@ -111,7 +111,7 @@ const MachineLearningCard = () => {
             <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
             Specialize and Advance
             </h3>
-            <span className="text-sm font-bold text-pink-500 group-hover:text-white pt-4">
+            <span className="text-sm font-bold text-[#219ebc] group-hover:text-white pt-4">
             Choose specialized tracks or advanced courses to delve deeper into specific areas of Machine Learning, such as deep learning, natural language processing, or computer vision. Customize your learning path to align with your interests and career goals.
             </span>
           </div>
@@ -129,7 +129,7 @@ const MachineLearningCard = () => {
             <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
             Earn Recognized Certifications
             </h3>
-            <span className="text-sm font-bold text-pink-500 group-hover:text-white pt-4">
+            <span className="text-sm font-bold text-[#219ebc] group-hover:text-white pt-4">
             Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.
             </span>
           </div>
