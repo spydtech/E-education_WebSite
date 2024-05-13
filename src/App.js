@@ -27,6 +27,7 @@ import PersonalDevelopment from "./Components/Home/Plat form/AllCourses/Personal
 import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience";
 import DataAnalatics from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
 import MachineLearning from "./Components/Home/Plat form/AllCourses/MachineLearning/MachineLearning";
+import Reactjs from "./Components/Home/eductionCarousel/ReactjsMastery/Reactjs";
 function App() {
 
   return (
@@ -55,6 +56,7 @@ function App() {
           <Route path="/computerscience" element={<ComputerScience />} />
           <Route path="/professional" element={<Professional />} />
           <Route path="/dataAnalatics" element={<DataAnalatics />} />
+          <Route path="/reactjs" element={<Reactjs />} />
           <Route path="/health" element={<Health />} />
           <Route path="/machineLearning" element={<MachineLearning />} />
           <Route

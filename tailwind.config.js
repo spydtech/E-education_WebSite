@@ -23,16 +23,20 @@ module.exports = {
         'anton': ['Anton', 'sans-serif'], // Example font family
         'lora': ['Lora', 'serif'], // Example font family
       },
-      keyframes: {
-        rotate: {
-          '0%': { transform: 'perspective(1000px) rotateY(0deg)'},
-          '100%': { transform: 'perspective(1000px) rotateY(360deg)'}
-        }
-      },
       animation: {
-        rotate: 'rotate 30s linear infinite',
-      }
-    }
+        'spin-slow': 'spin 5s linear infinite', // Adjust the duration (5s) to control the speed
+      },
+      keyframes: {
+        spin: {
+          from: {
+            transform: 'rotate(0deg)',
+          },
+          to: {
+            transform: 'rotate(360deg)',
+          },
+        },
+      },
+    },
   },
   plugins: [
     require('flowbite/plugin')
