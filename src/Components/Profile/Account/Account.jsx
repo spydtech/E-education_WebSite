@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 function Account() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    number: '',
-    location: ''
-  });
+  const [formData, setFormData] = useState({});
   const [editMode, setEditMode] = useState(false);
+  const { auth } = useSelector((state) => state);
+
 
   // Dummy user data
-  const users = [
-    { fullName: 'John Doe', emailAddress: 'john@example.com', mobileNumber: '+1234567890', location: 'New York' },
-  ];
-
-  // Set initial form data when component mounts
   useEffect(() => {
-    setFormData(users[0]); // Assuming there's only one user in the array
-  }, []);
+    if (auth.user) {
+      const { userName, email, mobileNumber, location } = auth.user;
+      const fullName = `${userName}`;
+      setFormData({
+        fullName,
+        emailAddress: email,
+        mobileNumber: mobileNumber || '',
+        location: location || '',
+      });
+    }
+  }, [auth]);
+
 
   // Function to handle input changes
   const handleInputChange = (e) => {
