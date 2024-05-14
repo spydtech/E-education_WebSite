@@ -28,6 +28,8 @@ import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience"
 import DataAnalatics from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
 import MachineLearning from "./Components/Home/Plat form/AllCourses/MachineLearning/MachineLearning";
 import Reactjs from "./Components/Home/eductionCarousel/ReactjsMastery/Reactjs";
+import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
+import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
 function App() {
 
   return (
@@ -59,6 +61,8 @@ function App() {
           <Route path="/reactjs" element={<Reactjs />} />
           <Route path="/health" element={<Health />} />
           <Route path="/machineLearning" element={<MachineLearning />} />
+          <Route path="/wishLists" element={<WishLists />} />
+          <Route path="/cart" element={<Cart />} />
           <Route
             path="/personaldevelopment"
             element={<PersonalDevelopment />}
