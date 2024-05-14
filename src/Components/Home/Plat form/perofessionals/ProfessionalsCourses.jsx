@@ -415,27 +415,29 @@ const courses = [
 function ProfessionalsCourses() {
   return (
     <>
-      <div id="heading" className="mt-40 space-y-6 px-32 ">
-        <p className="text-center text-xl md:lg:sm:w-auto w-96 text-black">
+      <div id="heading" className="md:mt-20  flex flex-col justify-center items-center mt-16 gap-y-4">
+        <div className="text-center text-xl md:lg:sm:w-auto w-96 text-black">
           Best Selling Courses in India
-        </p>
-        <h1 className="text-center font-bold text-4xl md:lg:sm:w-auto w-96 text-violet-800">
+        </div>
+        <div className="text-center font-bold text-4xl md:lg:sm:w-auto w-96 text-violet-800">
           Highly Demanded Skill Enhancement Courses
-        </h1>
-        <h1 className="flex justify-center md:lg:sm:w-auto w-96 text-cyan-500">
+        </div>
+        <div className="flex justify-center md:lg:sm:w-auto w-96 text-cyan-500">
           <IoRemoveOutline className="text-[40px]" />
           <IoReorderThreeOutline className="text-[40px]" />{" "}
           <IoRemoveOutline className="text-[40px]" />
-        </h1>
+        </div>
       </div>
+      <div className="flex md:flex-row flex-col justify-center items-center mb-28">
+
       <div
         id="submain"
-        className="pr-4 mb-24  md:lg:xl:pl-12 pl-32  h-auto w-full grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 md:lg:gap-y-10 gap-y-12 grid-cols-1"
+        className=" h-auto w-full grid  md:grid-cols-3  grid-cols-1 place-items-center gap-8"
       >
         {courses.map((course, index) => (
           <div
             key={index}
-            className="w-[390px]  group hover:bg-white border-2 shadow-xl shadow-gray-400 rounded "
+            className="md:w-[390px]  group hover:bg-white border-2 shadow-xl shadow-gray-400 rounded "
           >
             <div className="flex rounded justify-center bg-gray-200  px-16 w-auto h-36 items-center text-4xl cursor-pointer relative before:absolute group-hover:before:bg-[#023047] before:bottom-0 before:left-0 before:h-full before:w-full before:origin-bottom before:scale-y-[0.0] group-hover:before:scale-y-100 before:transition-transform before:ease-in-out before:duration-500">
               <div className="border-b-2 mx-16 px-8 absolute border-[#023047] bg-white  group-hover:border-none h-[80px] md:w-[350px]  flex items-center justify-between">
@@ -451,7 +453,7 @@ function ProfessionalsCourses() {
               </div>
 
               <Link to={course.link}>
-                <div className="font-bold gap-4 w-[390px] border-none flex justify-center items-center  hover:text-white bg-[#2a9d8f] hover:bg-[#023047] transition duration-500 p-2">
+                <div className="font-bold gap-4 md:w-[390px] border-none flex justify-center items-center  hover:text-white bg-[#2a9d8f] hover:bg-[#023047] transition duration-500 p-2">
                   <div className="">
                     <FaLocationArrow className="w-8 h-8 " />
                   </div>{" "}
@@ -461,6 +463,7 @@ function ProfessionalsCourses() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </>
   );
