@@ -34,11 +34,12 @@ function ProfileCard() {
 //   };
 
   return (
-    <div className='p-10'>
+    <div className='p-5'>
+       <h1 className='text-xl'>Profile</h1>
       {userData.map(user => (
         <div
           key={user.id}
-          className="profile-card w-[300px] rounded-md shadow-xl   cursor-pointer snap-start shrink-0 bg-white flex flex-col items-center justify-center gap-3 transition-all duration-300 group"
+          className="profile-card w-[300px] pt-5 rounded-md shadow-xl   cursor-pointer snap-start shrink-0 bg-white flex flex-col items-center justify-center gap-3 transition-all duration-300 group"
         >
           {/* Avatar and other profile info */}
           <img 
@@ -90,6 +91,11 @@ function ProfileCard() {
           />
         </div>
       ))}
+      <div className='flex p-2 gap-10 justify-center bg-white'>
+        <button className='hover:underline'>Visit Profile</button>
+       
+        <button className=''>Feeds</button>
+      </div>
     </div>
   )
 }

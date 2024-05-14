@@ -1,6 +1,7 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
+
 import SignUp from "./Components/Login/SignUp";
 import Certificates from "./Components/Home/Professional Certificates/Certificates";
 import Profile from "./Components/Profile/Profile";
@@ -27,6 +28,9 @@ import PersonalDevelopment from "./Components/Home/Plat form/AllCourses/Personal
 import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience";
 import DataAnalatics from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
 import MachineLearning from "./Components/Home/Plat form/AllCourses/MachineLearning/MachineLearning";
+// import Space from "./Components/WorkSpace/Space";
+import WSpace from "./Components/Profile/WorkSpace1/WSpace";
+
 function App() {
 
   return (
@@ -40,6 +44,10 @@ function App() {
           <Route path="/ForgotPassword" element={<ForgotPassword />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/Profile" element={<Profile />} />
+          {/* <Route path="/Space" element={<Space />} /> */}
+          <Route path="/WSpace" element={<WSpace />} />
+          
+          
           <Route path="/PostFeeds" element={<PostFeeds />} />
           <Route path="/QuestionForm" element={<QuestionForm />} />
           <Route path="/Settings" element={<Settings />} />
