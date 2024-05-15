@@ -31,7 +31,7 @@ import DataAnalatics from "./Components/Home/Plat form/AllCourses/dataAnalatics/
 import MachineLearning from "./Components/Home/Plat form/AllCourses/MachineLearning/MachineLearning";
 import Reactjs from "./Components/Home/eductionCarousel/ReactjsMastery/Reactjs";
 import EthicalHacking from "./Components/Home/Plat form/AllCourses/EthicalHacking/EthicalHacking";
-import Cybersecurity from "./Components/Home/StartNew Car/Cybersecurity/Cybersecurity";
+import Cybersecurity from "./Components/Home/Plat form/AllCourses/Cybersecurity/cybersecurity";
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
 import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
 function App() {
