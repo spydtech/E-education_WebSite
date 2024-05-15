@@ -30,6 +30,7 @@ import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience"
 import DataAnalatics from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
 import MachineLearning from "./Components/Home/Plat form/AllCourses/MachineLearning/MachineLearning";
 import Reactjs from "./Components/Home/eductionCarousel/ReactjsMastery/Reactjs";
+import AdminRouter from "./Routers/AdminRouter"
 function App() {
 
   return (
