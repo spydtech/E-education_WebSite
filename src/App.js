@@ -28,6 +28,7 @@ import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience"
 import DataAnalatics from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
 import MachineLearning from "./Components/Home/Plat form/AllCourses/MachineLearning/MachineLearning";
 import Reactjs from "./Components/Home/eductionCarousel/ReactjsMastery/Reactjs";
+import AdminRouter from "./Routers/AdminRouter";
 function App() {
 
   return (
@@ -40,7 +41,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/ForgotPassword" element={<ForgotPassword />} />
           <Route path="/signUp" element={<SignUp />} />
-          <Route path="/Profile" element={<Profile />} />
+          {/* <Route path="/Profile" element={<Profile />} /> */}
           <Route path="/PostFeeds" element={<PostFeeds />} />
           <Route path="/QuestionForm" element={<QuestionForm />} />
           <Route path="/Settings" element={<Settings />} />
@@ -64,10 +65,11 @@ function App() {
             element={<PersonalDevelopment />}
           />
           <Route path="/socialscience" element={<SocialScience />} />
+          <Route path="/admin/*" element={<AdminRouter />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
 
-export default App;
+export default App;
