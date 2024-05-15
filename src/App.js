@@ -5,6 +5,7 @@ import Login from "./Components/Login/Login";
 import SignUp from "./Components/Login/SignUp";
 import Certificates from "./Components/Home/Professional Certificates/Certificates";
 import Profile from "./Components/Profile/Profile";
+import WSpace from "./Components/Profile/WorkSpace1/WSpace"
 import Settings from "./Components/Profile/Settings";
 import PostFeeds from "./Components/Home/post/PostFeeds"
 import QuestionForm from "./Components/Home/AskMe/QuestionForm"
@@ -28,6 +29,8 @@ import PersonalDevelopment from "./Components/Home/Plat form/AllCourses/Personal
 import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience";
 import DataAnalatics from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
 import MachineLearning from "./Components/Home/Plat form/AllCourses/MachineLearning/MachineLearning";
+import Reactjs from "./Components/Home/eductionCarousel/ReactjsMastery/ReactjsCard"
+
 function App() {
 
   return (
