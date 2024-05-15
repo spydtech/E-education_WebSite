@@ -59,14 +59,14 @@
         icon: <IoLockClosed />,
         description:
           "Gain understanding of cybersecurity concepts & best practices.",
-        link: "link-to-the-course",
+        link: "/cybersecurity",
       },
       {
         title: "Ethical Hacking",
         icon: <IoShieldCheckmark />,
         description:
           "Learn ethical hacking: identify vulnerabilities & strengthen systems.",
-        link: "link-to-the-course",
+        link: "/ethicalHacking",
       },
       {
         title: "Network Security",
