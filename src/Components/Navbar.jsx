@@ -4,7 +4,8 @@ import { Disclosure, Menu } from '@headlessui/react';
 import { FaBars } from 'react-icons/fa';
 import { IoCloseSharp } from 'react-icons/io5';
 import IMG from '../assets/E- education logo .png';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUser, logout } from '../State/Auth/Action';
 
@@ -15,7 +16,8 @@ const Navbar = () => {
   const navigationRef = useRef(null); // Initialize navigationRef with useRef
   const navigate = useNavigate();
   const jwt = localStorage.getItem('jwt');
-  const { auth } = useSelector((store) => store);
+ const auth = useSelector((state) => state.auth);
+
   const dispatch = useDispatch();
 
   const navigation = [{ name: 'Explore', href: '/Explore', current: false },
@@ -133,45 +135,45 @@ const Navbar = () => {
               <hr className='text-2xl'/>
               <div className='flex gap-10 py-5'> 
               <div class="p-4 max-w-lg mx-auto ">
-    <details class="mb-2">
-        <summary class="bg-gray-200 p-4 rounded-lg cursor-pointer shadow-md mb-4">
-            <span class="font-semibold">Advanced Courses</span>
+    <details ClassName="mb-2">
+        <summary ClassName="bg-gray-200 p-4 rounded-lg cursor-pointer shadow-md mb-4">
+            <span ClassName="font-semibold">Advanced Courses</span>
         </summary>
-        <ul class="ml-8 space-y-4">
+        <ul ClassName="ml-8 space-y-4">
             <li>
-                <details class="mb-2">
-                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span class="font-semibold">Python Programming</span>
+                <details ClassName="mb-2">
+                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span ClassName="font-semibold">Python Programming</span>
                     </summary>
                    
                 </details>
             </li>
             <li>
-                <details class="mb-2">
-                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span class="font-semibold">Data Science</span>
+                <details ClassName="mb-2">
+                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span ClassName="font-semibold">Data Science</span>
                     </summary>
                    
                 </details>
             </li>
-            <details class="mb-2">
-                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span class="font-semibold">Machine Learning</span>
+            <details ClassName="mb-2">
+                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span ClassName="font-semibold">Machine Learning</span>
                     </summary>
                    
                 </details>
             <li>
-                <details class="mb-2">
-                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span class="font-semibold">Digital Markenting</span>
+                <details ClassName="mb-2">
+                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span ClassName="font-semibold">Digital Markenting</span>
                     </summary>
                    
                 </details>
             </li>
             <li>
-                <details class="mb-2">
-                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span class="font-semibold">Cyber Security</span>
+                <details ClassName="mb-2">
+                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span ClassName="font-semibold">Cyber Security</span>
                     </summary>
                    
                 </details>
@@ -183,39 +185,39 @@ const Navbar = () => {
         </ul>
     </details>
 
-    <details class="mb-2">
-        <summary class="bg-gray-200 p-4 rounded-lg cursor-pointer shadow-md mb-4">
-            <span class="font-semibold">Web developement</span>
+    <details ClassName="mb-2">
+        <summary ClassName="bg-gray-200 p-4 rounded-lg cursor-pointer shadow-md mb-4">
+            <span ClassName="font-semibold">Web developement</span>
         </summary>
-        <ul class="ml-8 space-y-4">
+        <ul ClassName="ml-8 space-y-4">
             <li>
-                <details class="mb-2">
-                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span class="font-semibold">Front-end Development</span>
+                <details ClassName="mb-2">
+                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span ClassName="font-semibold">Front-end Development</span>
                     </summary>
                    
                 </details>
             </li>
             <li>
-                <details class="mb-2">
-                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span class="font-semibold">Backend development</span>
+                <details ClassName="mb-2">
+                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span ClassName="font-semibold">Backend development</span>
                     </summary>
                    
                 </details>
             </li>
             <li>
-                <details class="mb-2">
-                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span class="font-semibold">Full-stack development</span>
+                <details ClassName="mb-2">
+                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span ClassName="font-semibold">Full-stack development</span>
                     </summary>
                    
                 </details>
             </li>
             <li>
-                <details class="mb-2">
-                    <summary class="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span class="font-semibold">  Ui/Ux Design</span>
+                <details ClassName="mb-2">
+                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                        <span ClassName="font-semibold">  Ui/Ux Design</span>
                     </summary>
                    
                 </details>
@@ -277,7 +279,8 @@ const Navbar = () => {
                         <a href='/Purchases' className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'>Purchases</a>
                         <a href='/Profile' className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'>Profile</a>
                         <a href='/Settings' className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'>Settings</a>
-                        <a href='#' className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'>Updates</a>
+                        <a href='/' className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'>Updates</a>
+                        <a href='/WSpace' className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'>WorkSpace</a>
                         <a href='#' className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'>Accomplishments</a>
                         <a href='#' className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'>Help Center</a>
                         <a href='#' className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900' onClick={handleLogout}>Logout</a>

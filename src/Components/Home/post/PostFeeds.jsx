@@ -15,16 +15,16 @@ function PostFeeds() {
   return (
     <>
     <Navbar />
-    <div className="flex ">
-    <div className='text-center pt-10'>
-      <h1 className='text-xl'>Profile</h1>
+    <div className="flex bg-[#d6d3d1]">
+    <div className='text-center pt-5'>
+     
       <ProfileCard />
     </div>
      <div className="container mx-auto mt-8">
     <PostForm onSubmit={handlePostSubmit} />
     <Feed posts={posts} />
   </div>
-  <div className='text-center pt-10 '>
+  <div className='text-center pt-10 ' >
     <h1 className='text-xl'>Updates</h1>
     <Notification />
   </div>

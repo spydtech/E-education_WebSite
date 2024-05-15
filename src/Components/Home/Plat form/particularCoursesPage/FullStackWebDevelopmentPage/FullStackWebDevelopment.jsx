@@ -5,7 +5,7 @@ import Community from "../../../Community/community";
 import SuccessStory from "../../../SuccessStory/successstory";
 import Award from "../../../Award/Award";
 import Footer from "../../../footer/Footer";
-
+// import FullStackCard from "./FullStackCard";
 import WebDeveloper from "./Web_Development/WebDeveloper";
 import Delivery_Methods from "./deliverymethods/Delivery_Methods";
 const images = [

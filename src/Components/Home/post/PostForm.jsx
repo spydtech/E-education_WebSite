@@ -37,8 +37,9 @@ const PostForm = ({ onSubmit }) => {
   
     const handleSubmit = (e) => {
       e.preventDefault();
+      const currentTime = new Date();
       // Implement logic to submit post data
-      onSubmit({ message, image, video, taggedUsers });
+      onSubmit({ message, image, video, taggedUsers, timestamp: currentTime  });
       // Reset form fields
       setMessage('');
       setImage(null);
@@ -52,7 +53,7 @@ const PostForm = ({ onSubmit }) => {
           value={message}
           onChange={handleChange}
           placeholder="What's on your mind?"
-          className="w-full resize-none border rounded-md p-2 mb-2"
+          className="w-full resize-none border rounded-xl p-2 mb-2"
           rows="3"
         ></textarea>
         <div className="flex text-2xl gap-5">
@@ -190,9 +191,9 @@ const PostForm = ({ onSubmit }) => {
             )}
           </div>
           <div className="flex items-center">
-            <span> @ </span>
+            {/* <span> @ </span>
             <span> # </span>
-            <span> 💼 </span>
+            <span> 💼 </span> */}
             {/* Add more symbols here */}
           </div>
         </div>
