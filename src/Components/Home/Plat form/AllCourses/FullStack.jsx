@@ -4,19 +4,19 @@
 // const FullStack = () => {
 //   const [searchQuery, setSearchQuery] = useState("");
 
-//   const CourseCard = ({ id, title, description, image, link }) => { 
-//     return (
-//       <Link to={link}> 
-//         <div className="max-w-sm rounded overflow-hidden shadow-lg transition-transform duration-300 transform hover:scale-105">
-//           <img className="w-full" src={image} alt={title} />
-//           <div className="px-6 py-4">
-//             <div className="font-bold text-xl mb-2">{title}</div>
-//             <p className="text-gray-700 text-base">{description}</p>
-//           </div>
+// const CourseCard = ({ id, title, description, image, link }) => {
+//   return (
+//     <Link to={link}>
+//       <div className="max-w-sm rounded overflow-hidden shadow-lg transition-transform duration-300 transform hover:scale-105">
+//         <img className="w-full" src={image} alt={title} />
+//         <div className="px-6 py-4">
+//           <div className="font-bold text-xl mb-2">{title}</div>
+//           <p className="text-gray-700 text-base">{description}</p>
 //         </div>
-//       </Link>
-//     );
-//   };
+//       </div>
+//     </Link>
+//   );
+// };
 //   const courses = [
 //     {
 //       id: 1,
@@ -37,7 +37,7 @@
 //       description: "Explore MongoDB, Express.js, Angular, and Node.js for full-stack development.",
 //       image: "https://crampete-staticfiles.s3.ap-south-1.amazonaws.com/blogs/Blog-133/mean-stack-image1.png",
 //     },
-    
+
 //     {
 //       id: 5,
 //       title: "Full Stack Python",
@@ -50,7 +50,7 @@
 //       description: "Explore Java for building full-stack applications.",
 //       image: "https://media.geeksforgeeks.org/wp-content/uploads/20230926163338/Java-Full-Stack.png",
 //     },
-    
+
 //     {
 //       id: 8,
 //       title: "Full Stack PHP",
@@ -70,7 +70,7 @@
 //       image: "https://miro.medium.com/v2/resize:fit:1400/0*cl7fc6pt1MHjIF4K.png",
 //     },
 //   ];
-  
+
 //   const filteredCourses = courses.filter((course) =>
 //     course.title.toLowerCase().includes(searchQuery.toLowerCase())
 //   );
@@ -96,7 +96,7 @@
 //        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
 //     <div className="container mx-auto px-4 py-8">
 //     <h1 className="text-4xl font-bold mb-4 text-center text-purple-600 underline">Explore Full Stack Development Courses</h1>
-      
+
 //       <div className="mb-4 flex justify-center">
 //         <input
 //           type="text"
@@ -114,10 +114,6 @@
 
 // export default FullStack;
 
-
-
-
-
 import React, { useEffect, useState } from "react";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
@@ -129,7 +125,6 @@ const FullStack = () => {
   const [wishlist, setWishlist] = useState([]);
   const [sh, setShow] = useState(false);
   const navigate = useNavigate();
-  // const dataArray = ['Item 1', 'Item 2', 'Item 3'];
 
   const handleWishList = (course) => {
     const index = wishlist.findIndex((item) => item.id === course.id);
@@ -142,11 +137,9 @@ const FullStack = () => {
     }
   };
 
-  // onDelete={(id) => handleDelete(id)}
-
   useEffect(() => {
     console.log("wish", wishlist);
-    if (sh) navigate("/wishLists", { state: {wishlist}});
+    if (sh) navigate("/wishLists", { state: { wishlist } });
   }, [wishlist]);
 
   const handleDelete = (id) => {
@@ -162,6 +155,7 @@ const FullStack = () => {
       description: "Learn how to build web applications from front to back.",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCP7WwqRZMt45muqpTdBtWssi3TJHjGG4UkwvxBaIBRAV5naPe4-XBwl6tatEPaZWkDDk&usqp=CAU",
+      link: "/fullStackWebDevelopment",
     },
     {
       id: 2,
@@ -170,6 +164,7 @@ const FullStack = () => {
         "Master JavaScript for both front-end and back-end development.",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlpaPlcovcoH9QHUUJmlEgAPMw73NMmJAC4LcyZTNjmQ&s",
+      link: "/fullStackJavaScript",
     },
     {
       id: 3,
@@ -178,6 +173,7 @@ const FullStack = () => {
         "Explore MongoDB, Express.js, Angular, and Node.js for full-stack development.",
       image:
         "https://crampete-staticfiles.s3.ap-south-1.amazonaws.com/blogs/Blog-133/mean-stack-image1.png",
+      link: "/meanStackDevelopment",
     },
     {
       id: 4,
@@ -185,6 +181,7 @@ const FullStack = () => {
       description: "Master Python for both front-end and back-end development.",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwU-4XlioqzwP5cv2Ujy_MtoMNogfoYCw5W7rK1cGLyQ&s",
+      link: "/fullStackPython",
     },
     {
       id: 5,
@@ -192,20 +189,7 @@ const FullStack = () => {
       description: "Explore Java for building full-stack applications.",
       image:
         "https://media.geeksforgeeks.org/wp-content/uploads/20230926163338/Java-Full-Stack.png",
-    },
-    {
-      id: 6,
-      title: "Ruby on Rails Full Stack",
-      description: "Learn Ruby on Rails for full-stack web development.",
-      image:
-        "https://www.edureka.co/blog/wp-content/uploads/2019/02/ruby-on-rails-developer-singapore-528x269.jpg",
-    },
-    {
-      id: 7,
-      title: "Full Stack PHP",
-      description: "Master PHP for both front-end and back-end development.",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfO_sKvmDyAYJCF5DJhVhvh2rE2o4FlKLasttqAy2XYw&s",
+      link: "/fullStackJava",
     },
     {
       id: 8,
@@ -213,6 +197,7 @@ const FullStack = () => {
       description: "Explore the .NET framework for full-stack development.",
       image:
         "https://www.radicaltechnologies.co.in/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-25-at-5.55.16-PM-1.jpeg",
+      link: "/fullStackDotNet",
     },
     {
       id: 9,
@@ -221,33 +206,30 @@ const FullStack = () => {
         "Learn DevOps practices for full-stack development environments.",
       image:
         "https://miro.medium.com/v2/resize:fit:1400/0*cl7fc6pt1MHjIF4K.png",
+      link: "/fullStackDevOps",
     },
   ];
 
-  const CourseCard = ({ id, title, description, image }) => {
+  const CourseCard = ({ id, title, description, image, link }) => {
     const [liked, setLiked] = useState(false);
 
     const handledataTransfer = () => {
       setShow(true);
       setLiked((prevLiked) => !prevLiked);
       handleWishList({ id, title, description, image });
-      // navigate("/wishLists", {data: wishlist});
     };
 
     return (
       <div className="max-w-sm rounded overflow-hidden shadow-lg transition-transform duration-300 transform hover:scale-105">
         <div className="text-white">
           <img className="w-full h-60 relative" src={image} alt={title} />{" "}
-          {/* <Link to={{ pathname: '/wishLists', state: { wishlist } }}> */}
           <button id="wishlist" onClick={handledataTransfer}>
             {liked ? (
               <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125  rounded  h-8  text-white top-3 left-3 absolute" />
             ) : (
               <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
-
             )}
           </button>
-          {/* </Link> */}
         </div>
 
         <div className="px-6 py-4">
@@ -264,10 +246,9 @@ const FullStack = () => {
 
   return (
     <>
-
-<img
+      <img
         src="https://miro.medium.com/v2/resize:fit:1400/1*e4HBnH84BpwLCFr78xvfjg.gif"
-        className=" object-cover  w-full md:h-[450px]"
+        className="object-cover w-full md:h-[450px]"
         alt="Background Image"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
@@ -291,12 +272,6 @@ const FullStack = () => {
           ))}
         </div>
       </div>
-      {/* {wishlist.length > 0 && (
-      
-        
-        <WishLists courses={wishlist} onDelete={(id) => handleDelete(id)} />
-       
-      )} */}
     </>
   );
 };
