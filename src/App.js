@@ -5,6 +5,7 @@ import Login from "./Components/Login/Login";
 import SignUp from "./Components/Login/SignUp";
 import Certificates from "./Components/Home/Professional Certificates/Certificates";
 import Profile from "./Components/Profile/Profile";
+import AdminRouter from "./Routers/AdminRouter"
 import WSpace from "./Components/Profile/WorkSpace1/WSpace"
 import Settings from "./Components/Profile/Settings";
 import PostFeeds from "./Components/Home/post/PostFeeds"
@@ -47,10 +48,6 @@ function App() {
           <Route path="/ForgotPassword" element={<ForgotPassword />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/Profile" element={<Profile />} />
-          {/* <Route path="/Space" element={<Space />} /> */}
-          <Route path="/WSpace" element={<WSpace />} />
-          
-          
           <Route path="/PostFeeds" element={<PostFeeds />} />
           <Route path="/QuestionForm" element={<QuestionForm />} />
           <Route path="/Settings" element={<Settings />} />
@@ -78,10 +75,11 @@ function App() {
             element={<PersonalDevelopment />}
           />
           <Route path="/socialscience" element={<SocialScience />} />
+          <Route path="/admin/*" element={<AdminRouter />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
 
-export default App;
+export default App;

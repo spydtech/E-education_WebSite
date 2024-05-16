@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { register, verifyOtp, getUser } from "../../State/Auth/Action"; // Import the Redux action creators
+import { register, verifyOtp, getUser, checkEmail } from "../../State/Auth/Action"; // Import the Redux action creators
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-modal'; // Import react-modal
 import Navbar from '../Navbar';
 import student from "../../assets/singup1.svg";
 import IMG from "../../assets/E- education logo .png";
+
 
 
 Modal.setAppElement('#root'); // Set the root element for react-modal
@@ -23,6 +24,8 @@ const SignUp = () => {
     password: ''
   });
   const inputRefs = useRef([]); // State for showing OTP modal
+
+
 
 
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
@@ -45,9 +48,9 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(register(userData))
-
+    dispatch(register(userData));
   };
+
   const handleOTPEnter = (e, index) => {
     const value = e.target.value;
     const newOtp = [...otp];
@@ -254,4 +257,4 @@ const SignUp = () => {
 };
 
 
-export default SignUp;
+export default SignUp;
