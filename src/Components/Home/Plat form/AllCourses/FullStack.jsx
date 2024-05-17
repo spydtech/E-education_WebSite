@@ -220,7 +220,6 @@ const FullStack = () => {
     };
 
     return (
-      <>
       <div className="max-w-sm rounded overflow-hidden shadow-lg transition-transform duration-300 transform hover:scale-105">
         <div className="text-white">
           <img className="w-full h-60 relative" src={image} alt={title} />{" "}
@@ -238,7 +237,6 @@ const FullStack = () => {
           <p className="text-gray-700 text-base">{description}</p>
         </div>
       </div>
-      </>
     );
   };
 

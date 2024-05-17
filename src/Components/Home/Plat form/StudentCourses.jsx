@@ -31,7 +31,7 @@
         icon: <BiBarChartSquare />,
         description:
           "Master data analytics essentials for informed decisions & success.",
-        link: "/dataAnalatics",
+        link: "/dataScienceArray",
       },
       // {
       //   title: "Data Structures",
@@ -40,13 +40,13 @@
       //     "Master fundamental concepts of data structures and algorithms.",
       //   link: "link-to-the-course",
       // },
-      {
-        title: "Machine Learning",
-        icon: <IoAnalyticsSharp />,
-        description:
-          "Explore machine learning from basic to advanced techniques.",
-        link: "/machineLearning",
-      },
+      // {
+      //   title: "Machine Learning",
+      //   icon: <IoAnalyticsSharp />,
+      //   description:
+      //     "Explore machine learning from basic to advanced techniques.",
+      //   link: "/machineLearning",
+      // },
       // {
       //   title: "Game Development",
       //   icon: <IoGameController />,
