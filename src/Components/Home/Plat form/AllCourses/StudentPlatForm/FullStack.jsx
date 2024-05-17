@@ -163,6 +163,9 @@ const CourseCard = ({ course, handleWishList, setShow }) => {
        
        <p>{`${description} with`} <span className="font-bold" >{title}</span></p>
       </div>
+      </Link>
+      <Link>
+
       <button id="wishlist" onClick={handleDataTransfer}>
         {liked ? (
           <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
@@ -171,6 +174,7 @@ const CourseCard = ({ course, handleWishList, setShow }) => {
         )}
       </button>
       </Link>
+   
     </div>
   );
 };

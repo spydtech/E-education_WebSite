@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
-import WishLists from "../../AddtoCart/WishLists";
+// import WishLists from "../../AddtoCart/WishLists";
 import { Link } from "react-router-dom";
 
 const DataScienceArray = () => {
