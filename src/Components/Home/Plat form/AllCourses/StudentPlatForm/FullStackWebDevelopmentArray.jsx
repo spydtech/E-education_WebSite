@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import WishLists from "../../AddtoCart/WishLists";
 import { Link } from "react-router-dom";
 
-const FullStack = () => {
+const FullStackWebDevelopmentArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
   const [sh, setShow] = useState(false);
@@ -179,4 +179,4 @@ const CourseCard = ({ course, handleWishList, setShow }) => {
   );
 };
 
-export default FullStack;
+export default FullStackWebDevelopmentArray;

@@ -1,10 +1,11 @@
+
 import React, { useEffect, useState } from "react";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 // import WishLists from "../../AddtoCart/WishLists";
 import { Link } from "react-router-dom";
 
-const DataScienceArray = () => {
+const EthicalHackingStudentArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
   const [sh, setShow] = useState(false);
@@ -32,89 +33,42 @@ const DataScienceArray = () => {
     );
   };
 
-  const dataScienceCourses = [
+
+
+
+  const ethicalHackingCourses = [
     {
       id: 1,
-      title: "Introduction to Data Science",
-      description:
-        "Learn the basics of data science, including data analysis, visualization, and machine learning.",
-      image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/Data-Science-vs.-Big-Data-vs.jpg",
-      link: "/introduction-to-data-science",
+      title: "Ethical Hacking Basics",
+      description: "Learn the fundamentals of ethical hacking, including reconnaissance, scanning, and vulnerability assessment.",
+      image: "https://www.eccouncil.org/cybersecurity-exchange/wp-content/uploads/2022/03/ETHICAL-HACKING.jpg",
+      link: "/ethicalHacking",
     },
     {
       id: 2,
-      title: "Data Science with Python",
-      description:
-        "Master data science concepts and techniques using Python, including libraries like NumPy, Pandas, and Matplotlib.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqXD4t6RsUw-DI-72VKpe7DfmqARUJePZ2oOFrRSsKg&s",
-      link: "/data-science-with-python",
+      title: "Advanced Ethical Hacking",
+      description: "Dive deeper into ethical hacking techniques, including exploitation, privilege escalation, and post-exploitation.",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLbv6P5JmHHMLlrqLXCN21RuKXNZTeTxvC2w5T_AoERcEH9YNTrIzAghuPcLAgnN-KAKk&usqp=CAU",
+      link: "/advanced-ethical-hacking",
     },
     {
       id: 3,
-      title: "Machine Learning",
-      description:
-        "Dive deep into machine learning algorithms, model evaluation, and real-world applications.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp29onQyD0OWe3CebFWRXojKYMnrd1kYvMi2E26RdbLA&s",
-      link: "/machineLearning",
+      title: "Certified Ethical Hacker",
+      description: "Prepare for the Certified Ethical Hacker (CEH) certification with comprehensive coverage of ethical hacking topics.",
+      image: "https://ceh.nativeva.com/wp-content/uploads/2023/04/Unlock-Your-Potential-1-1.png",
+      link: "/certified-ethical-hacker",
     },
-    {
-      id: 4,
-      title: "Data Visualization",
-      description:
-        "Learn how to create compelling visualizations and communicate data insights effectively.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbP6OsiwOE84EbESpngmC6vXl9TlvFrzI9zVdR5hfLtQ&s",
-      link: "/data-visualization",
-    },
-    {
-      id: 5,
-      title: "Big Data Analytics",
-      description:
-        "Understand the principles and tools for processing and analyzing large datasets, including Hadoop and Spark.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSSwWQgP37V68ba2IRUb-evTUJ9yInu5E74bJwW7LRow&s",
-      link: "/big-data-analytics",
-    },
-    {
-      id: 6,
-      title: "Data Analytics",
-      description:
-        "Gain a solid foundation in statistical methods and their applications in data science.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbbm2jd1osOphRA5Qjf93Utd0GYYbtjTDp6BQE6R-K7g&s",
-      link: "/dataAnalatics",
-    },
-    // {
-    //   id: 7,
-    //   title: "Deep Learning",
-    //   description:
-    //     "Explore deep learning techniques, neural networks, and their applications in various domains.",
-    //   image: "https://example.com/images/deep-learning.jpg",
-    //   link: "/deep-learning",
-    // },
-    // {
-    //   id: 8,
-    //   title: "Natural Language Processing",
-    //   description:
-    //     "Learn about natural language processing (NLP) techniques for text analysis and language generation.",
-    //   image: "https://example.com/images/natural-language-processing.jpg",
-    //   link: "/natural-language-processing",
-    // },
-    // {
-    //   id: 9,
-    //   title: "Data Science Capstone Project",
-    //   description:
-    //     "Apply your data science skills to a real-world project and showcase your expertise.",
-    //   image: "https://example.com/images/data-science-capstone.jpg",
-    //   link: "/data-science-capstone",
-    // },
   ];
+  
 
-  const filteredCourses = dataScienceCourses.filter((course) =>
+  const filteredCourses = ethicalHackingCourses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <>
       <img
-        src="https://media.licdn.com/dms/image/D4D12AQH1TB_xjecewg/article-cover_image-shrink_720_1280/0/1688565793035?e=2147483647&v=beta&t=yujmOBi1mTaYAI6mJnbrOa62rt3hUtUbYzRPAHHj9y4"
+        src="https://www.trinitytechnology.in/_logo/hacking.webp"
         className="object-cover w-full"
         alt="Background Image"
       />
@@ -186,4 +140,4 @@ const CourseCard = ({ course, handleWishList, setShow }) => {
   );
 };
 
-export default DataScienceArray;
+export default EthicalHackingStudentArray;
