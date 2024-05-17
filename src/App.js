@@ -5,6 +5,7 @@ import Login from "./Components/Login/Login";
 import SignUp from "./Components/Login/SignUp";
 import Certificates from "./Components/Home/Professional Certificates/Certificates";
 import Profile from "./Components/Profile/Profile";
+import AdminRouter from "./Routers/AdminRouter"
 import WSpace from "./Components/Profile/WorkSpace1/WSpace"
 import Settings from "./Components/Profile/Settings";
 import PostFeeds from "./Components/Home/post/PostFeeds"
@@ -31,6 +32,8 @@ import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience"
 import DataAnalatics from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
 import MachineLearning from "./Components/Home/Plat form/AllCourses/MachineLearning/MachineLearning";
 import Reactjs from "./Components/Home/eductionCarousel/ReactjsMastery/Reactjs";
+import EthicalHacking from "./Components/Home/Plat form/AllCourses/EthicalHacking/EthicalHacking";
+import Cybersecurity from "./Components/Home/Plat form/AllCourses/Cybersecurity/cybersecurity";
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
 import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
 function App() {
@@ -46,10 +49,6 @@ function App() {
           <Route path="/ForgotPassword" element={<ForgotPassword />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/Profile" element={<Profile />} />
-          {/* <Route path="/Space" element={<Space />} /> */}
-          <Route path="/WSpace" element={<WSpace />} />
-          
-          
           <Route path="/PostFeeds" element={<PostFeeds />} />
           <Route path="/QuestionForm" element={<QuestionForm />} />
           <Route path="/Settings" element={<Settings />} />
@@ -69,6 +68,8 @@ function App() {
           <Route path="/reactjs" element={<Reactjs />} />
           <Route path="/health" element={<Health />} />
           <Route path="/machineLearning" element={<MachineLearning />} />
+          <Route path="/cybersecurity" element={<Cybersecurity />} />
+          <Route path="/ethicalHacking" element={<EthicalHacking />} />
           <Route path="/wishLists" element={<WishLists />} />
           <Route path="/cart" element={<Cart />} />
           <Route
@@ -76,10 +77,11 @@ function App() {
             element={<PersonalDevelopment />}
           />
           <Route path="/socialscience" element={<SocialScience />} />
+          <Route path="/admin/*" element={<AdminRouter />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
 
-export default App;
+export default App;
