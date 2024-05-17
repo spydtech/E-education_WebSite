@@ -14,14 +14,15 @@ import Purchases from "./Components/Profile/Purchases/Purchases";
 import Payment from "./Components/Profile/Payment/Payment";
 import MyCourse from "./Components/mycourse/MyCourse";
 import DataAnalytics from "./Components/Profile/BrowseProject/dataAnalytics/DataAnalytics";
-import FullStack from "./Components/Home/Plat form/AllCourses/FullStack";
+import FullStack from "./Components/Home/Plat form/AllCourses/StudentPlatForm/FullStack";
+// import DataAnalatics from "./Components/Home/Plat form/AllCourses/StudentPlatForm/DataAnalatics";
 import Student from "./Components/Home/Plat form/Student";
 import Professional from "./Components/Home/Plat form/perofessionals/Professionals";
 import ArtsandHumanities from "./Components/Home/Plat form/AllCourses/ArtsandHumanities";
 import Business from "./Components/Home/Plat form/AllCourses/Business";
 import ComputerScience from "./Components/Home/Plat form/AllCourses/ComputerScience";
 import FullStackWebDevelopment from './Components/Home/Plat form/particularCoursesPage/FullStackWebDevelopmentPage/FullStackWebDevelopment'
-import DataScience from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
+import DataScienceArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/DataScienceArray";
 import Health from "./Components/Home/Plat form/AllCourses/Health";
 // import FullStackWebDev from "./Components/Home/Plat form/perofessionals/PerofessionalsParticularPage/FullStackWebDevelopment";
 import Features from './Components/Home/FeaturesOfE-education/Features'
@@ -58,12 +59,13 @@ function App() {
           <Route path="/course/Data Science" element={<DataAnalytics />} />
           <Route path="/student" element={<Student />} />
           <Route path="/fullStack" element={<FullStack />} />
+          <Route path="/dataAnalatics" element={<DataAnalatics />} />
           <Route path="/fullStackWebDevelopment" element={<FullStackWebDevelopment />} />
           <Route path="/artsandHumanities" element={<ArtsandHumanities />} />
           <Route path="/business" element={<Business />} />
           <Route path="/computerscience" element={<ComputerScience />} />
           <Route path="/professional" element={<Professional />} />
-          <Route path="/dataAnalatics" element={<DataAnalatics />} />
+          <Route path="/dataScienceArray" element={<DataScienceArray />} />
           <Route path="/reactjs" element={<Reactjs />} />
           <Route path="/health" element={<Health />} />
           <Route path="/machineLearning" element={<MachineLearning />} />
