@@ -58,7 +58,7 @@ const FullStackWebDevelopmentArray = () => {
         "Explore MongoDB, Express.js, Angular, and Node.js for full-stack development",
       image:
         "https://crampete-staticfiles.s3.ap-south-1.amazonaws.com/blogs/Blog-133/mean-stack-image1.png",
-      link: "/meanStackDevelopment",
+      link: "/meanStackDeveloper",
     },
     {
       id: 4,
@@ -66,7 +66,7 @@ const FullStackWebDevelopmentArray = () => {
       description: "Master Python for both front-end and back-end development",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwU-4XlioqzwP5cv2Ujy_MtoMNogfoYCw5W7rK1cGLyQ&s",
-      link: "/fullStackPython",
+      link: "/FullStackPythonDevelopment",
     },
     {
       id: 5,
