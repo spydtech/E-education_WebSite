@@ -74,7 +74,7 @@ const FullStackWebDevelopmentArray = () => {
       description: "Explore Java for building full-stack applications",
       image:
         "https://media.geeksforgeeks.org/wp-content/uploads/20230926163338/Java-Full-Stack.png",
-      link: "/fullStackJava",
+      link: "/fullStackJavaDevelopment",
     },
     {
       id: 8,
@@ -91,7 +91,7 @@ const FullStackWebDevelopmentArray = () => {
         "Learn DevOps practices for full-stack development environments",
       image:
         "https://miro.medium.com/v2/resize:fit:1400/0*cl7fc6pt1MHjIF4K.png",
-      link: "/fullStackDevOps",
+      link: "/fullStackDevops",
     },
   ];
 

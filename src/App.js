@@ -41,6 +41,8 @@ import EthicalHackingStudentArray from './Components/Home/Plat form/AllCourses/S
 import CyberSecurityArray from './Components/Home/Plat form/AllCourses/StudentPlatForm/CyberSecurityArray'
 import NetworkSecurityArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/NetworkSecurityArray";
 import MeanStackDeveloper from "./Components/Home/Plat form/AllCourses/MernStackDevelopment/Main/MeanStackDevelopment";
+import FullStackDevops from './Components/Home/Plat form/AllCourses/FullStackDevops_Development/FullStackDevopsDevelopment';
+import FullStackJava from './Components/Home/Plat form/AllCourses/FullStackJava_Development/FullStackJavaDevelopment'
 function App() {
 
   return (
@@ -72,6 +74,7 @@ function App() {
           <Route path="/health" element={<Health />} />
           <Route path="/meanStackDeveloper" element={<MeanStackDeveloper />} />
           <Route path="/machineLearning" element={<MachineLearning />} />
+          <Route path="/fullStackDevops" element={<FullStackDevops />} />
           <Route path="/cybersecurity" element={<Cybersecurity />} />
           <Route path="/student/fullStackWebDevelopmentArray" element={<FullStackWebDevelopmentArray />} />
           <Route path="/student/dataScienceArray" element={<DataScienceArray />} />
@@ -80,6 +83,7 @@ function App() {
           <Route path= "/student/cyberSecurityArray" element={<CyberSecurityArray />} />
           <Route path="/ethicalHacking" element={<EthicalHacking />} />
           <Route path="/fullStackPythonDevelopment" element={<FullStackPythonDevelopment />} />
+          <Route path="/fullStackJavaDevelopment" element={<FullStackJava />} />
           <Route path="/wishLists" element={<WishLists />} />
           <Route path="/cart" element={<Cart />} />
           <Route
