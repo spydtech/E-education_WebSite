@@ -1,5 +1,5 @@
 import React from "react";
-import Cybersecuritycertificate from "../../assets/cybersecuritycertificate.png";
+import Cybersecuritycertificate from "../../../../../assets/dataAnalatics/Certificate-PNG-Pic.png";
 
 function CybersecurityCertificate() {
   return (
