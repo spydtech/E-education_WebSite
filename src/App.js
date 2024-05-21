@@ -32,17 +32,6 @@ import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience"
 import DataAnalatics from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
 import MachineLearning from "./Components/Home/Plat form/AllCourses/MachineLearning/MachineLearning";
 import Reactjs from "./Components/Home/eductionCarousel/ReactjsMastery/Reactjs";
-import EthicalHacking from "./Components/Home/Plat form/AllCourses/EthicalHacking/EthicalHacking";
-import Cybersecurity from "./Components/Home/Plat form/AllCourses/Cybersecurity/cybersecurity";
-import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
-import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
-import FullStackPythonDevelopment from './Components/Home/Plat form/AllCourses/fullStackPython/Main/FullStackPythonDevelopment'
-import EthicalHackingStudentArray from './Components/Home/Plat form/AllCourses/StudentPlatForm/EthicalHackingStudentArray'
-import CyberSecurityArray from './Components/Home/Plat form/AllCourses/StudentPlatForm/CyberSecurityArray'
-import NetworkSecurityArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/NetworkSecurityArray";
-import MeanStackDeveloper from "./Components/Home/Plat form/AllCourses/MernStackDevelopment/Main/MeanStackDevelopment";
-import FullStackDevops from './Components/Home/Plat form/AllCourses/FullStackDevops_Development/FullStackDevopsDevelopment';
-import FullStackJava from './Components/Home/Plat form/AllCourses/FullStackJava_Development/FullStackJavaDevelopment'
 function App() {
 
   return (
@@ -78,9 +67,9 @@ function App() {
           <Route path="/cybersecurity" element={<Cybersecurity />} />
           <Route path="/student/fullStackWebDevelopmentArray" element={<FullStackWebDevelopmentArray />} />
           <Route path="/student/dataScienceArray" element={<DataScienceArray />} />
-          <Route path= "/student/ethicalHackingStudentArray" element={<EthicalHackingStudentArray />} />
-          <Route path= "/student/networkSecurityArray" element={<NetworkSecurityArray />} />
-          <Route path= "/student/cyberSecurityArray" element={<CyberSecurityArray />} />
+          <Route path="/student/ethicalHackingStudentArray" element={<EthicalHackingStudentArray />} />
+          <Route path="/student/networkSecurityArray" element={<NetworkSecurityArray />} />
+          <Route path="/student/cyberSecurityArray" element={<CyberSecurityArray />} />
           <Route path="/ethicalHacking" element={<EthicalHacking />} />
           <Route path="/fullStackPythonDevelopment" element={<FullStackPythonDevelopment />} />
           <Route path="/fullStackJavaDevelopment" element={<FullStackJava />} />

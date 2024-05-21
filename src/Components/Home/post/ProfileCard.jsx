@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Post from './Post';
 
-function ProfileCard() {
+function ProfileCard({ posts = [] }) {
+  const [showFeeds, setShowFeeds] = useState(false);
+
+  const handleFeedsClick = () => {
+    setShowFeeds(!showFeeds);
+  };
 
     const userData = [
         {
@@ -92,10 +99,25 @@ function ProfileCard() {
         </div>
       ))}
       <div className='flex p-2 gap-10 justify-center bg-white'>
+        <Link to="/Profile">
         <button className='hover:underline'>Visit Profile</button>
+        </Link>
        
-        <button className=''>Feeds</button>
+       
+        <button className='' onClick={handleFeedsClick}>Feeds</button>
       </div>
+      {showFeeds && (
+        <div className='p-5 mt-5 bg-gray-100 rounded-md shadow-md'>
+          <h2 className='text-lg font-semibold'>Feeds</h2>
+          <ul className='list-disc list-inside'>
+            <div style={{ overflowY: 'scroll', maxHeight: '500px' }}>
+              {posts.map((post, index) => (
+                <Post key={index} {...post} />
+              ))}
+            </div>
+          </ul>
+        </div>
+      )}
     </div>
   )
 }

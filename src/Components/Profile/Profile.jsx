@@ -3,6 +3,8 @@
 import Navbar from "../Navbar"
 import Footer from "../Home/footer/Footer"
 import React, { useState } from 'react';
+import { FaUserEdit } from "react-icons/fa";
+import { FaCamera } from "react-icons/fa";
 
 function EditModal({ userData, onSave, onClose }) {
   const [editedData, setEditedData] = useState(userData);
@@ -244,7 +246,13 @@ function Profile() {
 
       <section className="w-full p-2 border-2 shadow-lg overflow-hidden dark:bg-gray-900">
         <div className="flex flex-col">
-          <img src={userData.coverImage} alt="User Cover" className="w-full xl:h-[20rem] lg:h-[18rem] md:h-[16rem] sm:h-[14rem] xs:h-[11rem]" />
+        <FaCamera className="relative justify-end items-end" />
+          <img src={userData.coverImage}
+           alt="User Cover"
+           
+           onClick={() => document.getElementById('profile-image-input').click()} 
+            className="w-full xl:h-[20rem] lg:h-[18rem] md:h-[16rem] sm:h-[14rem] xs:h-[11rem]" />
+         
           <div className="sm:w-[80%] xs:w-[90%] mx-auto flex ">
             <label htmlFor="profile-image-input" className="cursor-pointer">
               <img
@@ -256,12 +264,12 @@ function Profile() {
 
             </label>
             <input type="file" id="profile-image-input" className="hidden" onChange={handleProfileImageChange} accept="image/*" />
-            <div className="h-20 w-full bg-gray-300">
-              <h1 className="w-full  text-left my-4 sm:mx-4 xs:pl-4 text-gray-800 dark:text-white lg:text-4xl md:text-3xl sm:text-3xl xs:text-xl font-serif">
-                {userData.details.firstName} {userData.details.lastName}
-              </h1>
-            </div>
-
+           <div className="h-20 w-full bg-gray-300">
+           <h1 className="w-full  text-left my-4 sm:mx-4 xs:pl-4 text-gray-800 dark:text-white lg:text-4xl md:text-3xl sm:text-3xl xs:text-xl font-serif">
+              {userData.details.firstName} {userData.details.lastName}
+            </h1>
+           </div>
+            
           </div>
           <div className="xl:w-[80%] lg:w-[90%] md:w-[90%] sm:w-[92%] xs:w-[90%] mx-auto flex flex-col gap-4 items-center relative lg:-top-8 md:-top-6 sm:-top-4 xs:-top-4">
             <p className="w-fit text-gray-700 dark:text-gray-400 text-md">{userData.details.bio}</p>
@@ -309,7 +317,7 @@ function Profile() {
                 </div>
               </div>
             </div>
-            <button onClick={handleEdit} className="bg-blue-500 text-white px-4 py-2 rounded-md">Edit</button>
+           
             {showEditModal && <EditModal userData={userData} onSave={handleSave} onClose={handleCloseModal} />}
           </div>
         </div>
