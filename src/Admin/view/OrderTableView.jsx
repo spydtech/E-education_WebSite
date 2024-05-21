@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getOrders } from '../../State/Admin/Order/Action';
+
+import { getOrders } from '../../State/Admin/Order/Action'
 import { Box, Card, CardHeader, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
-const OrderTable = () => {
+
+const OrderTableView = () => {
     const dispatch = useDispatch();
 
     const { adminOrder } = useSelector(store => store)
@@ -12,9 +14,9 @@ const OrderTable = () => {
     }, [adminOrder.confirmed, adminOrder.devlivered])
     console.log("admin Orders", adminOrder)
     return (
-        <div className='p-5'>
-            <Card className='mt-2 bg-[#1b1b1b]'>
-                <CardHeader title="Recent Orders" />
+        <div>
+            <Card className='mt-2'>
+                <CardHeader title="All Orders" />
                 <TableContainer component={Paper}>
                     <Table sx={{ minWidth: 800 }} aria-label="table in dashboard">
                         <TableHead>
@@ -24,8 +26,6 @@ const OrderTable = () => {
                                 <TableCell sx={{ textAlign: "center" }}>Price</TableCell>
                                 <TableCell sx={{ textAlign: "center" }}>Status</TableCell>
                                 <TableCell sx={{ textAlign: "center" }}>Update</TableCell>
-
-                                <TableCell sx={{ textAlign: "center" }}>Delete</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -43,4 +43,4 @@ const OrderTable = () => {
     )
 }
 
-export default OrderTable
+export default OrderTableView

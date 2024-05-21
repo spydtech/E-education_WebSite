@@ -6,10 +6,10 @@ import Benefits from './Benefits'
 import StartLearning from './StartLearning';
 import MostPopular from './MostPopular'
 import Footer from '../Home/footer/Footer'
-const MyCourse = ({ usernameFirstLetter }) => {
+const MyCourse = () => {
   return (
     <>
-      <Navbar usernameFirstLetter={usernameFirstLetter} />
+      <Navbar />
       <WaterDropGrid />
       <Counter />
       <StartLearning />

@@ -21,7 +21,6 @@ import ArtsandHumanities from "./Components/Home/Plat form/AllCourses/ArtsandHum
 import Business from "./Components/Home/Plat form/AllCourses/Business";
 import ComputerScience from "./Components/Home/Plat form/AllCourses/ComputerScience";
 import FullStackWebDevelopment from './Components/Home/Plat form/particularCoursesPage/FullStackWebDevelopmentPage/FullStackWebDevelopment'
-import DataScience from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
 import Health from "./Components/Home/Plat form/AllCourses/Health";
 // import FullStackWebDev from "./Components/Home/Plat form/perofessionals/PerofessionalsParticularPage/FullStackWebDevelopment";
 import Features from './Components/Home/FeaturesOfE-education/Features'
@@ -30,6 +29,7 @@ import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience"
 import DataAnalatics from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
 import MachineLearning from "./Components/Home/Plat form/AllCourses/MachineLearning/MachineLearning";
 import Reactjs from "./Components/Home/eductionCarousel/ReactjsMastery/Reactjs";
+import AdminRouter from "./Routers/AdminRouter"
 function App() {
 
   return (
@@ -61,10 +61,6 @@ function App() {
           <Route path="/reactjs" element={<Reactjs />} />
           <Route path="/health" element={<Health />} />
           <Route path="/machineLearning" element={<MachineLearning />} />
-          <Route path="/cybersecurity" element={<Cybersecurity />} />
-          <Route path="/ethicalHacking" element={<EthicalHacking />} />
-          <Route path="/wishLists" element={<WishLists />} />
-          <Route path="/cart" element={<Cart />} />
           <Route
             path="/personaldevelopment"
             element={<PersonalDevelopment />}
