@@ -36,7 +36,7 @@ function Community() {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-cyan-500 to-blue-500 min-h-screen flex items-center justify-center mt-8">
+    <div className="bg-[#b8b8ff] min-h-screen flex items-center justify-center mt-8">
       <div className="container mx-auto px-4 py-8 text-center relative">
         <div className="relative mb-8">
           <div className="images-container absolute inset-0 flex justify-between items-center pointer-events-none">

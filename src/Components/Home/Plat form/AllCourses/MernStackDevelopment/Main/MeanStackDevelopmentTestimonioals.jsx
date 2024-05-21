@@ -28,12 +28,12 @@ const MeanStackDevelopmentTestimonioals = () => {
               >
                 <div>
                   <img
-                    src="https://img.freepik.com/free-photo/young-handsome-guy-wearing-checkered-shirt-is-going-note-with-pen-copybook-standing-khaki-wall_141793-30758.jpg?t=st=1715830618~exp=1715834218~hmac=721f6d0178b82550c183b0fd228aab5f2fb151e69457daed1e49e0fa24cf4887&w=900"
+                    src="https://img.freepik.com/free-photo/happiness-wellbeing-confidence-concept-cheerful-attractive-african-american-woman-curly-haircut-cross-arms-chest-self-assured-powerful-pose-smiling-determined-wear-yellow-sweater_176420-35063.jpg"
                     alt=""
                     className="rounded-full h-48 w-48"
                   />
                 </div>
-                <div>Lope MJ.</div>
+                <div>Neha Kumals.</div>
                 <h5 className="text-gray-800 px-5 text-center mt-5">
                   "Having the flexibility to learn at my own speed and on my own
                   time has been incredible. I can study when it's most

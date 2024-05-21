@@ -47,7 +47,7 @@ const FullStackPythonDevelopmentCard = () => {
               />
             </svg>
             <div className="relative justify-start hidden w-full lg:flex">
-              <div className="flex justify-start  p-8 pr-8 text-base leading-relaxed text-blue-700 bg-gradient-to-r from-fuchsia-600 to-pink-600 rounded-lg shadow-lg xl:text-lg xl:pr-16">
+              <div className="flex justify-start  p-8 pr-8 text-base leading-relaxed text-black bg-[#6a4c93] rounded-lg shadow-lg xl:text-lg xl:pr-16">
                 <pre>
                   <span className="text-blue-100">
                     // Create a Full Stack Python app{" "}
@@ -76,7 +76,7 @@ const FullStackPythonDevelopmentCard = () => {
             <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base font-lora">
               Full Stack Python Development
             </div>
-            <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-blue-700 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl font-lora">
+            <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-[#6a4c93] sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl font-lora">
               Next-Gen Full Stack Python Development
             </h2>
             <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
@@ -90,19 +90,19 @@ const FullStackPythonDevelopmentCard = () => {
               <div className="rounded-md shadow font-lora">
                 <a
                   href="/"
-                  className="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-blue-400 border border-transparent rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10"
+                  className="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-[#6a4c93] border border-transparent rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10"
                 >
-                  Documentation
+                  Explore Now
                 </a>
               </div>
-              <div className="mt-3 sm:mt-0 sm:ml-3">
+              {/* <div className="mt-3 sm:mt-0 sm:ml-3">
                 <a
                   href=""
                   className="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-indigo-700 transition duration-150 ease-in-out bg-indigo-100 border border-transparent rounded-md hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300 md:py-4 md:text-lg md:px-10"
                 >
                   Tutorial
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
