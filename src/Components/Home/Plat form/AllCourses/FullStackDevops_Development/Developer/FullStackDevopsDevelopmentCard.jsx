@@ -47,7 +47,7 @@ const FullStackDevOpsDevelopmentCard = () => {
               />
             </svg>
             <div className="relative justify-start hidden w-full lg:flex">
-              <div className="flex justify-start  p-8 pr-8 text-base leading-relaxed text-[#25a244] bg-gradient-to-r from-[#e8aa14] to-[#ff5714]  rounded-lg shadow-lg xl:text-lg xl:pr-16">
+              <div className="flex justify-start  p-8 pr-8 text-base leading-relaxed text-[#25a244] bg-[#14213d]  rounded-lg shadow-lg xl:text-lg xl:pr-16">
                 <pre>
                   <span className="text-white">
                     // Setting Up a Kubernetes Environment cluster
@@ -98,12 +98,28 @@ const FullStackDevOpsDevelopmentCard = () => {
               Next-Gen Full Stack DevOps
             </h2>
             <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
-              Accelerate your software delivery process with our Full Stack
-              DevOps solutions. From continuous integration and delivery to
-              automated deployments, our comprehensive courses cover all aspects
-              of DevOps practices to help you build, test, and release software
-              faster and more reliably.
+              Our Full Stack DevOps solutions are designed to help you navigate
+              the complexities of modern software development. With our
+              comprehensive courses, you will gain the knowledge and skills
+              needed to implement DevOps practices that accelerate your delivery
+              process, improve software quality, and enhance team collaboration.
+              Join us to revolutionize your approach to software development and
+              stay ahead in the competitive tech landscape.
             </p>
+            <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
+            Enroll in our Full Stack DevOps courses today and take the first step towards a more efficient, reliable, and scalable software delivery process.
+            </p>
+            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <div className="rounded-md shadow font-lora">
+                <a
+                  href="/"
+                  className="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-[#25a244] border border-transparent rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10"
+                >
+                  Explore Now
+                </a>
+              </div>
+             
+            </div>
           </div>
         </div>
       </div>

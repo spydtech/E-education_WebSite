@@ -4,7 +4,8 @@ import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import WishLists from "../../AddtoCart/WishLists";
 import { Link } from "react-router-dom";
-
+import Navbar from "../../../../Navbar";
+import Footer from "../../../footer/Footer";
 const FullStackWebDevelopmentArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
@@ -101,6 +102,7 @@ const FullStackWebDevelopmentArray = () => {
 
   return (
     <>
+    <Navbar />
       <img
         src="https://miro.medium.com/v2/resize:fit:1400/1*e4HBnH84BpwLCFr78xvfjg.gif"
         className="object-cover w-full md:h-[450px]"
@@ -132,6 +134,7 @@ const FullStackWebDevelopmentArray = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

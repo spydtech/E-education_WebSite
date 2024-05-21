@@ -10,7 +10,7 @@ import { MdModelTraining } from "react-icons/md";
 function Delivery_Methods() {
   return (
     <div className="mb-32">
-      <div id="heading" className=" py-10 space-y-2 px-32  ">
+      <div id="heading" className=" py-10 space-y-2 md:px-32  ">
         <h1 className="text-center font-bold text-5xl md:lg:sm:w-auto w-96 text-[#f3a916]  font-lora">
           Our Available Delivery Methods
         </h1>
@@ -29,7 +29,7 @@ function Delivery_Methods() {
       <div className="flex md:flex-row justify-center items-center gap-24">
         <div
           id="submain"
-          className="grid  lg:grid-cols-4  md:grid-cols-2 md:lg:sm:px-0  grid-cols-1  lg:md:xl:gap-16 mx-20 items-center justify-center"
+          className="grid  lg:grid-cols-4  md:grid-cols-2 md:lg:sm:px-0  grid-cols-1 gap-8 lg:md:xl:gap-16 md:mx-20 items-center justify-center"
         >
           <div id="1" className=" relative">
             <div className=" relative" id="mainone">

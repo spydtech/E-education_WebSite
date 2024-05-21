@@ -3,7 +3,8 @@ import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 // import WishLists from "../../AddtoCart/WishLists";
 import { Link } from "react-router-dom";
-
+import Navbar from "../../../../Navbar";
+import Footer from "../../../footer/Footer";
 const DataScienceArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
@@ -113,6 +114,7 @@ const DataScienceArray = () => {
 
   return (
     <>
+    <Navbar />
       <img
         src="https://media.licdn.com/dms/image/D4D12AQH1TB_xjecewg/article-cover_image-shrink_720_1280/0/1688565793035?e=2147483647&v=beta&t=yujmOBi1mTaYAI6mJnbrOa62rt3hUtUbYzRPAHHj9y4"
         className="object-cover w-full"
@@ -144,6 +146,7 @@ const DataScienceArray = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
