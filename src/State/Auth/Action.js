@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_BASE_URL } from '../../Config/ApiConfig';
+import { API_BASE_URL } from '../../Config/api';
 import {
   REGISTER_SUCCESS,
   REGISTER_REQUEST,
@@ -13,25 +13,40 @@ import {
   LOGOUT,
   VERIFY_OTP_FAILURE,
   VERIFY_OTP_REQUEST,
-  VERIFY_OTP_SUCCESS
+  VERIFY_OTP_SUCCESS,
+  EMAIL_EXISTS
+
 } from './ActionType';
 
 const token = localStorage.getItem('jwt');
+
 
 // Action creators for registering a user
 export const registerRequest = () => ({ type: REGISTER_REQUEST });
 export const registerSuccess = () => ({ type: REGISTER_SUCCESS });
 export const registerFailure = (error) => ({ type: REGISTER_FAILURE, payload: error });
+export const emailExists = () => ({ type: EMAIL_EXISTS });
 
 export const register = (userData) => async (dispatch) => {
   dispatch(registerRequest());
-
   try {
     const response = await axios.post(`${API_BASE_URL}/auth/register`, userData);
-    dispatch(registerSuccess());
-    // Handle OTP verification logic here if needed
+
+    if (response.status === 400) {
+      // Email already registered
+      const errorMessage = response.data?.message || 'Email is already registered';
+      dispatch(registerFailure(errorMessage));
+      alert(errorMessage); // Show alert message
+    } else {
+      // Registration successful
+      dispatch(registerSuccess());
+      alert('OTP sent successfully. Please check your email to verify.');
+    }
   } catch (error) {
-    dispatch(registerFailure(error.message));
+    // Handle other errors
+    console.error('Error during registration:', error);
+    dispatch(registerFailure('An error occurred during registration.'));
+    alert('Email is already registered. Please use a different email.')
   }
 };
 
@@ -53,33 +68,9 @@ export const verifyOtp = (otpData) => async (dispatch) => {
   } catch (error) {
     dispatch(verifyOtpFailure(error.message));
   }
-  //   const token = response.data.jwt; // Assuming the API returns a JWT token on successful verification
-  //   dispatch(verifyOtpSuccess(token));
-  //   // Handle token storage or redirection to authenticated routes
-  // } catch (error) {
-  //   dispatch(verifyOtpFailure(error.message));
-  // }
 };
 
-// const registerRequest = () => ({ type: REGISTER_REQUEST });
-// const registerSuccess = (user) => ({ type: REGISTER_SUCCESS, payload: user });
-// const registerFailure = (error) => ({ type: REGISTER_FAILURE, payload: error });
 
-// export const register = (userData) => async (dispatch) => {
-//   dispatch(registerRequest());
-
-//   try {
-//     const response = await axios.post(`${API_BASE_URL}/auth/signup`, userData);
-//     const user = response.data;
-//     if (user.jwt) {
-//       localStorage.setItem('jwt', user.jwt);
-//     }
-//     console.log('user', user);
-//     dispatch(registerSuccess(user.jwt));
-//   } catch (error) {
-//     dispatch(registerFailure(error.message));
-//   }
-// };
 
 const loginRequest = () => ({ type: LOGIN_REQUEST });
 const loginSuccess = (user) => ({ type: LOGIN_SUCCESS, payload: user });
