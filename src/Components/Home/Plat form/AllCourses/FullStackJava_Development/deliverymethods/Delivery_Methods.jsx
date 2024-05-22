@@ -10,7 +10,7 @@ import { MdModelTraining } from "react-icons/md";
 function Delivery_Methods() {
   return (
     <div className="mb-32">
-      <div id="heading" className=" py-10 space-y-2 md:px-32  ">
+      <div id="heading" className=" py-10 space-y-2 lg:px-32  ">
         <h1 className="text-center font-bold text-5xl md:lg:sm:w-auto w-96 text-[#f3a916]  font-lora">
           Our Available Delivery Methods
         </h1>
@@ -19,7 +19,7 @@ function Delivery_Methods() {
           <IoReorderThreeOutline className="text-[40px]" />{" "}
           <IoRemoveOutline className="text-[40px]" />
         </h1>
-        <p className="text-center text-xl md:lg:sm:w-full w-[400px] font-lora">
+        <p className="text-center text-xl md:lg:sm:w-full lg:w-[400px] font-lora">
           The E-Education is World's Leading Organisation for training
           professionals.The E-Education provides training is 490+ location is
           around 221+ countries,covering 3000 subjects with the following

@@ -37,8 +37,8 @@ function Community() {
 
   return (
     <div className="bg-gray-200 min-h-screen flex items-center justify-center mt-8">
-      <div className="container mx-auto px-4 py-8 text-center relative">
-        <div className="relative mb-8">
+      <div className="container mx-auto px-4 py-16 text-center relative">
+        <div className="relative mb-8 pt-20">
           <div className="images-container absolute inset-0 flex justify-between items-center pointer-events-none">
             {/* Place the techimage in the center */}
             <img
@@ -75,12 +75,12 @@ function Community() {
           </div>
         </div>
         <h1
-          className="text-4xl font-bold text-gray-800 "
+          className="md:text-4xl text-xl font-bold text-gray-800 "
           style={{ marginTop: "250px" }}
         >
           Join Our Thriving Community
         </h1>
-        <h2 className="text-5xl font-bold text-blue-600 mb-4">7,05,07,278</h2>
+        <h2 className="md:text-5xl text-2xl font-bold text-blue-600 mb-4">7,05,07,278</h2>
         <p className="text-lg text-gray-700 mb-6">
           Share your code today and design beautiful, responsive, and dynamic
           websites.
