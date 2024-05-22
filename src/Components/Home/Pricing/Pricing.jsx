@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 function Pricing() {
   return (
     <div>
@@ -21,9 +21,12 @@ function Pricing() {
         <p class="mt-6 flex items-baseline gap-x-1">
           <span class="text-4xl font-bold tracking-tight text-white">€ 10 / unit</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
         </p>
-        <a href="/order" aria-describedby="product1"
-          class="bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Order
-          Now</a>
+        <Link to="/basicCourses">
+        
+        <button  aria-describedby="product1"
+          class="bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Explore
+          Now</button>
+        </Link>
         <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
           <li class="flex gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
               aria-hidden="true" class="h-6 w-5 flex-none text-white">

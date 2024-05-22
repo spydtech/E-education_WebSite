@@ -43,7 +43,7 @@ import MeanStackDeveloper from './Components/Home/Plat form/AllCourses/MernStack
 import FullStackDevops from './Components/Home/Plat form/AllCourses/FullStackDevops_Development/FullStackDevopsDevelopment';
 import FullStackPythonDevelopment from "./Components/Home/Plat form/AllCourses/fullStackPython/Main/FullStackPythonDevelopment";
 import FullStackJava from "./Components/Home/Plat form/AllCourses/FullStackJava_Development/FullStackJavaDevelopment";
-
+import BasicArray from  "./Components/BasicCourse/BasicCourseArray"
 function App() {
 
   return (
@@ -93,6 +93,12 @@ function App() {
           />
           <Route path="/socialscience" element={<SocialScience />} />
           <Route path="/admin/*" element={<AdminRouter />} />
+
+
+
+          {/* Basic Advance Preminum Cousrses here */}
+          <Route path="/basicCourses" element={<BasicArray />} />
+
         </Routes>
       </BrowserRouter>
     </div>
