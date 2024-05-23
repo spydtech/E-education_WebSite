@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Faq from "react-faq-component";
 
 const data = {
-    title: <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">Courses We Are Covered in this Course</div>,
+    title: <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 text-md lg:text-lg xl:text-xl font-lora">Courses We Are Covered in this Course</div>,
     rows: [
         {
             title: 

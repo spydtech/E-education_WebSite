@@ -19,7 +19,7 @@ const AboutCourses = () => {
 
   return (
     <>
-      <div className="w-full px-16  "></div>
+      <div className="w-full px-24  "></div>
       <div className="w-full mt-10 px-16">
         {/* Tab Buttons */}
         <div className="p-2 rounded-t-lg overflow-x-auto">

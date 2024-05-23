@@ -1,13 +1,22 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
+// import React from 'react'
+
+// const BasicCourseArray = () => {
+//   return (
+//     <div>BasicCourseArray</div>
+//   )
+// }
+
+// export default BasicCourseArray
+
 
 import React, { useEffect, useState } from "react";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
-import WishLists from "../../AddtoCart/WishLists";
+// import WishLists from "../../AddtoCart/WishLists";
 import { Link } from "react-router-dom";
-import Navbar from "../../../../Navbar";
-import Footer from "../../../footer/Footer";
-const FullStackWebDevelopmentArray = () => {
+import Navbar from "../Navbar";
+import Footer from "../Home/footer/Footer";
+const BasicCourseArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
   const [sh, setShow] = useState(false);
@@ -38,61 +47,61 @@ const FullStackWebDevelopmentArray = () => {
   const courses = [
     {
       id: 1,
-      title: "Full Stack Web Development",
+      title: " Web Development",
       description: "Learn how to build web applications from front to back",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCP7WwqRZMt45muqpTdBtWssi3TJHjGG4UkwvxBaIBRAV5naPe4-XBwl6tatEPaZWkDDk&usqp=CAU",
+        "https://media.geeksforgeeks.org/wp-content/uploads/20231205165904/web-development-image.webp",
       link: "/fullStackWebDevelopment",
     },
     {
       id: 2,
-      title: "Full Stack JavaScript",
+      title: "Software Testing",
       description:
         "Master JavaScript for both front-end and back-end development",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlpaPlcovcoH9QHUUJmlEgAPMw73NMmJAC4LcyZTNjmQ&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3wuCZOCBggFb3RK8AGPGGQagsocutNezBfghSNLrdg&s",
       link: "/fullStackJavaScript",
     },
     {
       id: 3,
-      title: "MEAN Stack Development",
+      title: "Basic Php",
       description:
         "Explore MongoDB, Express.js, Angular, and Node.js for full-stack development",
       image:
-        "https://crampete-staticfiles.s3.ap-south-1.amazonaws.com/blogs/Blog-133/mean-stack-image1.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUlEZMH3R-k_ZreGPfhhNKcNisvEIJ1cJW4S5iBz0bbg&s",
       link: "/meanStackDeveloper",
     },
     {
       id: 4,
-      title: "Full Stack Python",
+      title: "Basic Java",
       description: "Master Python for both front-end and back-end development",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwU-4XlioqzwP5cv2Ujy_MtoMNogfoYCw5W7rK1cGLyQ&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH8fykmTo-LhT_p6RpgZYs6yxPMkeD2oPU81kRBDw_Qg&s",
       link: "/FullStackPythonDevelopment",
     },
     {
       id: 5,
-      title: "Full Stack Java",
+      title: "Wordpress",
       description: "Explore Java for building full-stack applications",
       image:
-        "https://media.geeksforgeeks.org/wp-content/uploads/20230926163338/Java-Full-Stack.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShJLRL6BkYIDEuHrcDO4WYFQnDvefYi8jNbgsjcywYCw&s",
       link: "/fullStackJavaDevelopment",
     },
     {
       id: 8,
-      title: "Full Stack .NET",
+      title: "Basic JavaScript",
       description: "Explore the .NET framework for full-stack development",
       image:
-        "https://www.radicaltechnologies.co.in/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-25-at-5.55.16-PM-1.jpeg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYmpKizkiZ4vR50ndoXJZnBi2l2O7yj2NGw-YdjX2Jfg&s",
       link: "/fullStackDotNet",
     },
     {
       id: 9,
-      title: "Full Stack DevOps",
+      title: "Basic C/C++",
       description:
         "Learn DevOps practices for full-stack development environments",
       image:
-        "https://miro.medium.com/v2/resize:fit:1400/0*cl7fc6pt1MHjIF4K.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvhwX49W-oHzQ9SNKqBuslHTLFfoCuhXGDhZXBzxpcUg&s",
       link: "/fullStackDevops",
     },
   ];
@@ -105,14 +114,14 @@ const FullStackWebDevelopmentArray = () => {
     <>
     <Navbar />
       <img
-        src="https://miro.medium.com/v2/resize:fit:1400/1*e4HBnH84BpwLCFr78xvfjg.gif"
-        className="object-cover w-full md:h-[450px]"
+        src="https://www.elitc.com/wp-content/uploads/BTS-Banner.png"
+        className="object-cover w-full md:h-[550px]"
         alt="Background Image"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-4 text-center text-purple-600 underline">
-          Explore Full Stack Development Courses
+          Explore Basic Courses
         </h1>
 
         <div className="mb-4 flex justify-center">
@@ -141,7 +150,7 @@ const FullStackWebDevelopmentArray = () => {
 };
 
 const CourseCard = ({ course, handleWishList, setShow }) => {
-  const { id, title, description, image, link } = course;
+  const { id, title, description, image,link } = course;
   const [liked, setLiked] = useState(false);
 
   const handleDataTransfer = () => {
@@ -152,35 +161,35 @@ const CourseCard = ({ course, handleWishList, setShow }) => {
 
   return (
     <div className="mx-auto relative mb-12 cursor-pointer">
-      <Link to={link}>
-
-
-        <img
-          src={image}
-          alt={title}
-          className="h-[240px] w-full hover:scale-105 transition-all duration-500 shadow-2xl"
-        />
-        <div
-          className="text-center px-4 py-8 bg-white shadow-lg rounded-md
+      <Link to = {link}>
+      
+   
+      <img
+        src={image}
+        alt={title}
+        className="h-[240px] w-full hover:scale-105 transition-all duration-500 shadow-2xl"
+      />
+      <div
+        className="text-center px-4 py-8 bg-white shadow-lg rounded-md
                 md:w-3/4 mx-auto absolute left-0 right-0 -bottom-12 hover:-translate-y-4 transition-all duration-300"
-        >
-
-          <p>{`${description} with`} <span className="font-bold" >{title}</span></p>
-        </div>
+      >
+       
+       <p> <span className="font-bold" >{title}</span></p>
+      </div>
       </Link>
       <Link>
 
-        <button id="wishlist" onClick={handleDataTransfer}>
-          {liked ? (
-            <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
-          ) : (
-            <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
-          )}
-        </button>
+      <button id="wishlist" onClick={handleDataTransfer}>
+        {liked ? (
+          <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
+        ) : (
+          <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
+        )}
+      </button>
       </Link>
-
+   
     </div>
   );
 };
 
-export default FullStackWebDevelopmentArray;
+export default BasicCourseArray;

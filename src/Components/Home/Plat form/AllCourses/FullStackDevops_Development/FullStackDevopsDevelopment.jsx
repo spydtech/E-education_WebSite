@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Navbar from '../../../../Navbar'
 // import Navbar from "../../../../Navbar";
 import AboutCourses from "./AboutCourses";
 import Community from "./Community/community";
@@ -6,7 +7,7 @@ import SuccessStory from "./SuccessStory/successstory";
 // import Award from "../Award/Award";
 import Delivery_Methods from "./deliverymethods/Delivery_Methods";
 import FullStackDevopsDeveloper from "./Developer/FullStackDevopsDeveloper";
-// import Footer from "../../../footer/Footer";
+import Footer from "../../../footer/Footer";
 
 const images = [
   "https://media.istockphoto.com/id/1161702497/vector/team-of-programmer-concept-with-devops-software-development-practices-methodology-vector.jpg?s=612x612&w=0&k=20&c=5cqLQaudaYaXv3OdYQHjt-F-LhcuOiBhXWtHLMwj4PU=",
@@ -36,23 +37,23 @@ const FullStackDevopsDevelopment = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
-      <div className="w-full bg-gradient-to-r from-[#e8aa14] to-[#ff5714] md:pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
+      <Navbar />
+      <div className="w-full bg-[#14213d] md:pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
         <div className="font-l">
-          <span className="text-sm font-semibold tracking-wide text-black uppercase sm:text-base lg:text-sm xl:text-base">
+          <span className="text-sm font-semibold tracking-wide text-white uppercase sm:text-base lg:text-sm xl:text-base">
             Explore Full Stack DevOps Course
           </span>
           <h3 className="mt-1 text-4xl font-lora font-extrabold leading-10 tracking-tight text-[#25a244] sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
             Master Full Stack DevOps
           </h3>
-          <p className="mt-3 text-base text-black sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+          <p className="mt-3 text-base text-white sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
             Elevate your technical skills with comprehensive courses focused on
             full stack DevOps development. Master CI/CD, Kubernetes, Docker,
             AWS, and more, covering both front-end and back-end technologies.
             Develop expertise in building scalable, automated environments and
             position yourself for success as a full stack DevOps developer.
           </p>
-          <p className="text-base md:text-lg text-black my-4 md:my-6">
+          <p className="text-base md:text-lg text-white my-4 md:my-6">
             Our courses empower you to dive deep into full stack DevOps
             technologies. Develop practical skills and stand out in a
             competitive job market. Start your full stack DevOps journey today.
@@ -91,7 +92,7 @@ const FullStackDevopsDevelopment = () => {
       <Community />
       {/* <Award /> */}
       <SuccessStory />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

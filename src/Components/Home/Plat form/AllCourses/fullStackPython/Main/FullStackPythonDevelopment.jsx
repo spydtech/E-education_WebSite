@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import Navbar from "../../../../Navbar";
+import Navbar from "../../../../../Navbar";
+import Footer from "../../../../footer/Footer";
 import AboutCourses from "./AboutCourses";
 import Community from "../Community/community";
 import SuccessStory from "../SuccessStory/successstory";
@@ -41,13 +43,13 @@ const FullStackPythonDevelopment = () => {
   // }, [currentSlide]);
   return (
     <>
-      {/* <Navbar /> */}
-      <div className="w-full bg-gradient-to-r from-fuchsia-600 to-pink-600 md:pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
+      <Navbar />
+      <div className="w-full bg-[#c8b6ff] md:pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
         <div className="font-l">
           <span className="text-sm font-semibold tracking-wide text-black uppercase sm:text-base lg:text-sm xl:text-base">
             Explore Full Stack Python Course
           </span>
-          <h3 className="mt-1 text-4xl font-lora font-extrabold leading-10 tracking-tight text-blue-700 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
+          <h3 className="mt-1 text-4xl text-[#6a4c93] font-lora font-extrabold leading-10 tracking-tight  sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
             Master Full Stack Python Development
           </h3>
           <p className="mt-3 text-base text-black sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
@@ -96,7 +98,7 @@ const FullStackPythonDevelopment = () => {
       <Community />
       {/* <Award /> */}
       <SuccessStory />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

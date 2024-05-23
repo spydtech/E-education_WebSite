@@ -5,6 +5,8 @@ import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 // import WishLists from "../../AddtoCart/WishLists";
 import { Link } from "react-router-dom";
+import Navbar from "../../../../Navbar";
+import Footer from "../../../footer/Footer";
 
 const CyberSecurityArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -67,6 +69,7 @@ const CyberSecurityArray = () => {
 
   return (
     <>
+    <Navbar />
       <img
         src="https://www.springboard.com/blog/wp-content/uploads/2021/06/shutterstock_505066678-scaled-scaled.jpg"
         className="object-cover w-full md:h-[340px]"
@@ -98,6 +101,8 @@ const CyberSecurityArray = () => {
           ))}
         </div>
       </div>
+
+      <Footer />
     </>
   );
 };

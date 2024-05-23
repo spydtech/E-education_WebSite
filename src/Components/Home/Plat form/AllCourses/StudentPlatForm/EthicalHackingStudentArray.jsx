@@ -4,6 +4,8 @@ import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 // import WishLists from "../../AddtoCart/WishLists";
 import { Link } from "react-router-dom";
+import Navbar from "../../../../Navbar";
+import FooterPart from "../../../footer/Footer";
 
 const EthicalHackingStudentArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -67,6 +69,7 @@ const EthicalHackingStudentArray = () => {
 
   return (
     <>
+    <Navbar />
       <img
         src="https://www.trinitytechnology.in/_logo/hacking.webp"
         className="object-cover w-full"
@@ -98,6 +101,7 @@ const EthicalHackingStudentArray = () => {
           ))}
         </div>
       </div>
+      <FooterPart />
     </>
   );
 };

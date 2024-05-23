@@ -81,7 +81,7 @@ function Community() {
           Join Our Thriving Community
         </h1>
         <h2 className="text-5xl font-bold text-black mb-4">7,05,07,278</h2>
-        <p className="text-lg text-gray-700 mb-6">
+        <p className="text-lg text-[#f3a916]  mb-6">
           Share your code today and design beautiful, responsive, and dynamic
           websites.
         </p>

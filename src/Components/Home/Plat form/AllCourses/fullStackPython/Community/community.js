@@ -37,7 +37,7 @@ function Community() {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-fuchsia-600 to-pink-600 min-h-screen flex items-center justify-center mt-8">
+    <div className="bg-[#6a4c93] min-h-screen flex items-center justify-center mt-16 pt-16 text-white">
       <div className="container mx-auto px-4 py-8 text-center relative">
         <div className="relative mb-8">
           <div className="images-container absolute inset-0 flex justify-between items-center pointer-events-none">
@@ -76,13 +76,13 @@ function Community() {
           </div>
         </div>
         <h1
-          className="text-4xl font-bold font-lora text-gray-800 "
+          className="text-4xl font-bold font-lora text-white "
           style={{ marginTop: "250px" }}
         >
           Join Our Thriving Community
         </h1>
-        <h2 className="text-5xl font-bold text-violet-800 mb-4">7,05,07,278</h2>
-        <p className="text-lg text-gray-700 mb-6">
+        <h2 className="text-5xl font-bold text-black mb-4">7,05,07,278</h2>
+        <p className="text-lg text-white mb-6">
           Share your code today and design beautiful, responsive, and dynamic
           websites.
         </p>
