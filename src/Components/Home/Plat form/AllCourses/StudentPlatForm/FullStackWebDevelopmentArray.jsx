@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 
 import React, { useEffect, useState } from "react";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
@@ -137,7 +138,7 @@ const FullStackWebDevelopmentArray = () => {
 };
 
 const CourseCard = ({ course, handleWishList, setShow }) => {
-  const { id, title, description, image,link } = course;
+  const { id, title, description, image, link } = course;
   const [liked, setLiked] = useState(false);
 
   const handleDataTransfer = () => {
@@ -148,33 +149,33 @@ const CourseCard = ({ course, handleWishList, setShow }) => {
 
   return (
     <div className="mx-auto relative mb-12 cursor-pointer">
-      <Link to = {link}>
-      
-   
-      <img
-        src={image}
-        alt={title}
-        className="h-[240px] w-full hover:scale-105 transition-all duration-500 shadow-2xl"
-      />
-      <div
-        className="text-center px-4 py-8 bg-white shadow-lg rounded-md
+      <Link to={link}>
+
+
+        <img
+          src={image}
+          alt={title}
+          className="h-[240px] w-full hover:scale-105 transition-all duration-500 shadow-2xl"
+        />
+        <div
+          className="text-center px-4 py-8 bg-white shadow-lg rounded-md
                 md:w-3/4 mx-auto absolute left-0 right-0 -bottom-12 hover:-translate-y-4 transition-all duration-300"
-      >
-       
-       <p>{`${description} with`} <span className="font-bold" >{title}</span></p>
-      </div>
+        >
+
+          <p>{`${description} with`} <span className="font-bold" >{title}</span></p>
+        </div>
       </Link>
       <Link>
 
-      <button id="wishlist" onClick={handleDataTransfer}>
-        {liked ? (
-          <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
-        ) : (
-          <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
-        )}
-      </button>
+        <button id="wishlist" onClick={handleDataTransfer}>
+          {liked ? (
+            <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
+          ) : (
+            <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
+          )}
+        </button>
       </Link>
-   
+
     </div>
   );
 };
