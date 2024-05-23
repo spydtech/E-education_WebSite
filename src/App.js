@@ -36,13 +36,14 @@ import EthicalHacking from "./Components/Home/Plat form/AllCourses/EthicalHackin
 import Cybersecurity from "./Components/Home/Plat form/AllCourses/Cybersecurity/cybersecurity";
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
 import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
-import FullStackPythonDevelopment from './Components/Home/Plat form/AllCourses/fullStackPython/Main/FullStackPythonDevelopment'
 import EthicalHackingStudentArray from './Components/Home/Plat form/AllCourses/StudentPlatForm/EthicalHackingStudentArray'
 import CyberSecurityArray from './Components/Home/Plat form/AllCourses/StudentPlatForm/CyberSecurityArray'
 import NetworkSecurityArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/NetworkSecurityArray";
 import MeanStackDeveloper from './Components/Home/Plat form/AllCourses/MernStackDevelopment/Main/MeanStackDevelopment';
 import FullStackDevops from './Components/Home/Plat form/AllCourses/FullStackDevops_Development/FullStackDevopsDevelopment';
-import FullStackJava from './Components/Home/Plat form/AllCourses/FullStackJava_Development/FullStackJavaDevelopment'
+import FullStackPythonDevelopment from "./Components/Home/Plat form/AllCourses/fullStackPython/Main/FullStackPythonDevelopment";
+import FullStackJava from "./Components/Home/Plat form/AllCourses/FullStackJava_Development/FullStackJavaDevelopment";
+import BasicArray from "./Components/BasicCourse/BasicCourseArray"
 function App() {
 
   return (
@@ -90,7 +91,6 @@ function App() {
             path="/personaldevelopment"
             element={<PersonalDevelopment />}
           />
-          <Route path="/course-details" element={<CourseDetails />} />
           <Route path="/socialscience" element={<SocialScience />} />
           <Route path="/admin/*" element={<AdminRouter />} />
 
@@ -101,7 +101,6 @@ function App() {
 
         </Routes>
       </BrowserRouter>
-
     </div>
   );
 }
