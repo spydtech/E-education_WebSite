@@ -1,6 +1,7 @@
   import React from "react";
   import { BiBarChartSquare } from "react-icons/bi";
   import { Link } from "react-router-dom";
+  import { SiPaloaltosoftware } from "react-icons/si";
   import {
     IoLogoElectron,
     IoCodeWorking,
@@ -54,6 +55,12 @@
         description:
           "Discover principles of network security: encryption, firewalls, IDS.",
         link: "/student/networkSecurityArray",
+      }, {
+        title: "Software Testing",
+        icon: <SiPaloaltosoftware />,
+        description:
+          "software application functions correctly and meets specified requirements.",
+        link: "/student/softwareTestingArray",
       },
     
     ];

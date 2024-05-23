@@ -5,7 +5,8 @@ import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 // import WishLists from "../../AddtoCart/WishLists";
 import { Link } from "react-router-dom";
-
+import Navbar from "../../../../Navbar";
+import Footer from "../../../footer/Footer";
 const NetworkSecurityArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
@@ -67,6 +68,7 @@ const NetworkSecurityArray = () => {
 
   return (
     <>
+    <Navbar />
       <img
         src="https://assets-global.website-files.com/5b6df8bb681f89c158b48f6b/5d95e4e76593e827edc795e5_network-security-specialist.jpg"
         className="object-cover w-full"
@@ -97,7 +99,9 @@ const NetworkSecurityArray = () => {
             />
           ))}
         </div>
-      </div>
+      </div> 
+
+      <Footer />
     </>
   );
 };

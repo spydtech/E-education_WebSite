@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
-
+import MyLearning from './Components/MyLearning/MyLearningHero'
 import SignUp from "./Components/Login/SignUp";
 import Certificates from "./Components/Home/Professional Certificates/Certificates";
 import Profile from "./Components/Profile/Profile";
@@ -43,7 +43,9 @@ import MeanStackDeveloper from './Components/Home/Plat form/AllCourses/MernStack
 import FullStackDevops from './Components/Home/Plat form/AllCourses/FullStackDevops_Development/FullStackDevopsDevelopment';
 import FullStackPythonDevelopment from "./Components/Home/Plat form/AllCourses/fullStackPython/Main/FullStackPythonDevelopment";
 import FullStackJava from "./Components/Home/Plat form/AllCourses/FullStackJava_Development/FullStackJavaDevelopment";
-import BasicArray from  "./Components/BasicCourse/BasicCourseArray"
+import BasicArray from  "./Components/BasicCourse/BasicCourseArray";
+import AboutUs from './Components/AboutUs/AboutUs'
+import SoftwareTestingArray from './Components/Home/Plat form/AllCourses/StudentPlatForm/SoftwareTestingArray'
 function App() {
 
   return (
@@ -51,6 +53,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about_us" element={<AboutUs />} />
+          <Route path="/mylearning" element={<MyLearning />} />
           <Route path="/Certificates" element={<Certificates />} />
           <Route path="/features" element={<Features />} />
           <Route path="/login" element={<Login />} />
@@ -81,6 +85,7 @@ function App() {
           <Route path="/student/dataScienceArray" element={<DataScienceArray />} />
           <Route path="/student/ethicalHackingStudentArray" element={<EthicalHackingStudentArray />} />
           <Route path="/student/networkSecurityArray" element={<NetworkSecurityArray />} />
+          <Route path="/student/softwareTestingArray" element={<SoftwareTestingArray />} />
           <Route path="/student/cyberSecurityArray" element={<CyberSecurityArray />} />
           <Route path="/ethicalHacking" element={<EthicalHacking />} />
           <Route path="/fullStackPythonDevelopment" element={<FullStackPythonDevelopment />} />
