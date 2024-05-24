@@ -37,6 +37,8 @@ import EthicalHacking from "./Components/Home/Plat form/AllCourses/EthicalHackin
 import AdvanceEthicalHacking from './Components/Home/Plat form/AllCourses/AdvancedEthicalHacking/AdvanceEthicalHackingHero';
 import CertifiedEthicalHacking from "./Components/Home/Plat form/AllCourses/CertifiedEthicalHacking/CertifiedEthicalHackingHero";
 import Cybersecurity from "./Components/Home/Plat form/AllCourses/Cybersecurity/cybersecurity";
+import CybersecurityBiginers from "./Components/Home/Plat form/AllCourses/CybersecurityBiginers/CyberSecurityEssentialsNavigation";
+import CybersecurityEssentials from './Components/Home/Plat form/AllCourses/CybersecurityEssentials/CyberSecurityEssentialsNavigation'
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
 import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
 import EthicalHackingStudentArray from './Components/Home/Plat form/AllCourses/StudentPlatForm/EthicalHackingStudentArray'
@@ -90,7 +92,11 @@ function App() {
           <Route path="/meanStackDeveloper" element={<MeanStackDeveloper />} />
           <Route path="/machineLearning" element={<MachineLearning />} />
           <Route path="/fullStackDevops" element={<FullStackDevops />} />
-          <Route path="/cybersecurity" element={<Cybersecurity />} />
+          <Route path="/student/Cybersecurity/Cybersecurity_fundamentals" element={<Cybersecurity />} />
+          <Route path="/student/Cybersecurity/cybersecurity_beginners" element={<CybersecurityBiginers />} />
+
+          <Route path="/student/Cybersecurity/cybersecurity_essentials" element={<CybersecurityEssentials />} />
+
           <Route path="/student/student_fullStack_WebDevelopment" element={<FullStackWebDevelopmentArray />} />
           <Route path="/student/student_data_Science" element={<DataScienceArray />} />
           <Route path="/student/student_ethical_Hacking" element={<EthicalHackingStudentArray />} />

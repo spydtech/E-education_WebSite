@@ -36,7 +36,7 @@
       },
     
       {
-        title: "Cybersecurity Fundamentals",
+        title: "Cyber Security",
         icon: <IoLockClosed />,
         description:
           "Gain understanding of cybersecurity concepts & best practices.",
