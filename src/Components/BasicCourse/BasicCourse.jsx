@@ -76,7 +76,7 @@ const BasicCourseArray = () => {
       title: "Basic Java",
       description: "Master Python for both front-end and back-end development",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH8fykmTo-LhT_p6RpgZYs6yxPMkeD2oPU81kRBDw_Qg&s",
+        "https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2023_01_Untitled-design-1.jpg",
       link: "/FullStackPythonDevelopment",
     },
     {
@@ -84,7 +84,7 @@ const BasicCourseArray = () => {
       title: "Wordpress",
       description: "Explore Java for building full-stack applications",
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShJLRL6BkYIDEuHrcDO4WYFQnDvefYi8jNbgsjcywYCw&s",
+        "https://i.ytimg.com/vi/71EZb94AS1k/maxresdefault.jpg",
       link: "/fullStackJavaDevelopment",
     },
     {
@@ -114,8 +114,8 @@ const BasicCourseArray = () => {
     <>
     <Navbar />
       <img
-        src="https://www.elitc.com/wp-content/uploads/BTS-Banner.png"
-        className="object-cover w-full md:h-[550px]"
+        src="https://img.freepik.com/premium-photo/word-basic-consists-wooden-cubes-with-letters-top-view-light-background-work-space_284815-2974.jpg"
+        className="object-cover w-full md:h-[450px]"
         alt="Background Image"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>

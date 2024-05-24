@@ -14,6 +14,7 @@ import ForgotPassword from "./Components/Login/ForgotPassword";
 import Purchases from "./Components/Profile/Purchases/Purchases";
 import Payment from "./Components/Profile/Payment/Payment";
 import MyCourse from "./Components/mycourse/MyCourse";
+import PremiumCourses from './Components/PremiumCourses/PremiumCourses'
 import DataAnalytics from "./Components/Profile/BrowseProject/dataAnalytics/DataAnalytics";
 import FullStackWebDevelopmentArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/FullStackWebDevelopmentArray";
 // import DataAnalatics from "./Components/Home/Plat form/AllCourses/StudentPlatForm/DataAnalatics";
@@ -43,7 +44,8 @@ import MeanStackDeveloper from './Components/Home/Plat form/AllCourses/MernStack
 import FullStackDevops from './Components/Home/Plat form/AllCourses/FullStackDevops_Development/FullStackDevopsDevelopment';
 import FullStackPythonDevelopment from "./Components/Home/Plat form/AllCourses/fullStackPython/Main/FullStackPythonDevelopment";
 import FullStackJava from "./Components/Home/Plat form/AllCourses/FullStackJava_Development/FullStackJavaDevelopment";
-import BasicArray from "./Components/BasicCourse/BasicCourseArray";
+import BasicCourses from "./Components/BasicCourse/BasicCourse";
+import AdvanceCourses from "./Components/AdvanceCourses/Advance_Courses";
 import AboutUs from './Components/AboutUs/AboutUs'
 import SoftwareTestingArray from './Components/Home/Plat form/AllCourses/StudentPlatForm/SoftwareTestingArray'
 function App() {
@@ -102,7 +104,10 @@ function App() {
 
 
           {/* Basic Advance Preminum Cousrses here */}
-          <Route path="/basicCourses" element={<BasicArray />} />
+          <Route path="/basic_courses" element={<BasicCourses />} />
+          <Route path="/premium_courses" element={<PremiumCourses />} />
+          <Route path="/advance_courses" element={<AdvanceCourses />} />
+
 
         </Routes>
       </BrowserRouter>
