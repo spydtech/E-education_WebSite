@@ -8,12 +8,18 @@ import Footer from "../../../footer/Footer";
 // import FullStackCard from "./FullStackCard";
 import WebDeveloper from "./Web_Development/WebDeveloper";
 import Delivery_Methods from "./deliverymethods/Delivery_Methods";
+import { useNavigate } from "react-router-dom";
+
+
 const images = [
   "https://www.cdmi.in/courses@2x/full-stack.webp",
   "https://www.weblineindia.com/wp-content/uploads/2017/03/full-stack-development-by-weblineindia-2.jpg",
   "https://images.saymedia-content.com/.image/t_share/MTc0NTEwODM4NTk2NzczODc4/full-stack-web-development-are-you-a-game-for-this.jpg",
 ];
+
+
 const ParticularFullStack = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,7 +29,7 @@ const ParticularFullStack = () => {
     return () => clearInterval(interval);
   }, [currentSlide]);
 
- 
+
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -54,26 +60,26 @@ const ParticularFullStack = () => {
             Develop practical skills and stand out in a competitive job market.
             Start your full stack journey today.
           </p>
-          <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
+          <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95" navigate="/course-details">
             Eroll Now
           </button>
           <div className="py-4">11,095 already enrolled</div>
         </div>
-        <div className="flex justify-center items-center pl-4">
-         
+        <div className="relative pl-12">
+
           <img
             className="md:h-[300px] md:w-[500px] "
             src={images[currentSlide]}
             alt={`Slide ${currentSlide + 1}`}
           />
-      
+
         </div>
-      
+
 
 
       </div>
 
-   
+
       <WebDeveloper />
       <AboutCourses />
       <Delivery_Methods />

@@ -31,16 +31,12 @@ export const register = (userData) => async (dispatch) => {
   dispatch(registerRequest());
   try {
     const response = await axios.post(`${API_BASE_URL}/auth/register`, userData);
-
-    if (response.status === 400) {
-      // Email already registered
-      const errorMessage = response.data?.message || 'Email is already registered';
-      dispatch(registerFailure(errorMessage));
-      alert(errorMessage); // Show alert message
-    } else {
-      // Registration successful
+    if (response.status === 200) {
       dispatch(registerSuccess());
       alert('OTP sent successfully. Please check your email to verify.');
+
+    } else {
+      alert(registerFailure('An error occurred during registration.'));
     }
   } catch (error) {
     // Handle other errors

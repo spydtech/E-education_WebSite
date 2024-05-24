@@ -4,6 +4,7 @@ import { FaCartArrowDown } from "react-icons/fa";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from '.././../../Navbar'
+
 const Cart = ({ courses, onDelete }) => {
   const location = useLocation();
   const {cart} = location.state || {};

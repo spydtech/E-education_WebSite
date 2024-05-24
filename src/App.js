@@ -43,7 +43,7 @@ import MeanStackDeveloper from './Components/Home/Plat form/AllCourses/MernStack
 import FullStackDevops from './Components/Home/Plat form/AllCourses/FullStackDevops_Development/FullStackDevopsDevelopment';
 import FullStackPythonDevelopment from "./Components/Home/Plat form/AllCourses/fullStackPython/Main/FullStackPythonDevelopment";
 import FullStackJava from "./Components/Home/Plat form/AllCourses/FullStackJava_Development/FullStackJavaDevelopment";
-import BasicArray from  "./Components/BasicCourse/BasicCourseArray";
+import BasicArray from "./Components/BasicCourse/BasicCourseArray";
 import AboutUs from './Components/AboutUs/AboutUs'
 import SoftwareTestingArray from './Components/Home/Plat form/AllCourses/StudentPlatForm/SoftwareTestingArray'
 function App() {
