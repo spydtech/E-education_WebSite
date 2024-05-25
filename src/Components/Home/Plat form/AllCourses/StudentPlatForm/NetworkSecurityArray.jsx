@@ -43,21 +43,21 @@ const NetworkSecurityArray = () => {
       title: "Network Security Fundamentals",
       description: "Understand the basics of network security, including firewalls, intrusion detection systems, and VPNs.",
       image: "https://miro.medium.com/v2/resize:fit:640/1*A2X0FaO48D1tv4HpuKUdkg.jpeg",
-      link: "/network-security-fundamentals",
+      link: "/student/student_network_security/network-security-fundamentals",
     },
     {
       id: 2,
       title: "Advanced Network Security",
       description: "Learn advanced network security techniques and strategies to protect against sophisticated cyber threats.",
       image: "https://www.logsign.com/uploads/ensuring_network_security_e34d6ce4bb.png",
-      link: "/advanced-network-security",
+      link: "/student/student_network_security/advance-network-secuity",
     },
     {
       id: 3,
       title: "Network Security Best Practices",
       description: "Explore best practices for securing network infrastructure.",
       image: "https://www.itarian.com/images/network-security.png",
-      link: "/network-security-best-practices",
+      link: "/student/student_network_security/network-security-best-practices",
     },
   ];
   

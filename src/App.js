@@ -79,9 +79,7 @@ function App() {
           <Route path="/Payment" element={<Payment />} />
           <Route path="/Purchases" element={<Purchases />} />
           <Route path="/Mycourse" element={<MyCourse />} />
-          <Route path="/course/Data Science" element={<DataAnalytics />} />
           <Route path="/student" element={<Student />} />
-          <Route path="/dataAnalatics" element={<DataAnalatics />} />
         
         
           <Route path="/artsandHumanities" element={<ArtsandHumanities />} />
@@ -91,8 +89,14 @@ function App() {
           <Route path="/reactjs" element={<Reactjs />} />
           <Route path="/health" element={<Health />} />
           {/* Data Science */}
-          <Route path="/machineLearning" element={<MachineLearning />} />
-        
+          <Route path="/student/student_data_Science" element={<DataScienceArray />} />
+          <Route path="/course/Data Science" element={<DataAnalytics />} />
+          <Route path="/student/student_data_Science/data-Analatics" element={<DataAnalatics />} />
+          <Route path="/student/student_data_Science/machine-Learning" element={<MachineLearning />} />
+          <Route path="/student/student_data_Science/introduction-to-data-science" element={<DataScience />} />
+          <Route path="/student/student_data_Science/data-science-with-python" element={<DataScienceWithPython />} />
+          <Route path="/student/student_data_Science/big-data-analysis" element={<BigDataAnalysis />} />
+          {/* /student/student_data_Science/data-visualization */}
         {/* Cyber Security */}
           <Route path="/student/student_cyber_security" element={<CyberSecurityArray />} />
           <Route path="/student/Cybersecurity/Cybersecurity_fundamentals" element={<Cybersecurity />} />
@@ -100,9 +104,16 @@ function App() {
           <Route path="/student/Cybersecurity/cybersecurity_essentials" element={<CybersecurityEssentials />} />
 
 
-          <Route path="/student/student_data_Science" element={<DataScienceArray />} />
-          
+          {/* Network Security */}
           <Route path="/student/student_network_security" element={<NetworkSecurityArray />} />
+          <Route path="/student/student_network_security/network-security-fundamentals" element={<NetworkSecurity />} />
+          <Route path="/student/student_network_security/advance-network-secuity" element={<AdvanceNetworkSecuity />} />
+          {/* /student/student_network_security/network-security-best-practices */}
+
+
+
+
+          {/* Software Testing */}
           <Route path="/student/student_software_Testing" element={<SoftwareTestingArray />} />
           {/* Ethical Hacking */}
           <Route path="/student/student_ethical_Hacking" element={<EthicalHackingStudentArray />} />
