@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../../../Navbar";
-import FooterPart from "../../footer/Footer";
+import Navbar from "../../../../Navbar";
+import FooterPart from "../../../../Home/footer/Footer";
 
 import AdvanceEthicalHackingCard from "./AdvanceEthicalHackingCard";
 import AdvancedEthicalHackingNavigation from "./AdvanceEthicalHackingAbout/AdvancedEthicalHackingNavigation";
