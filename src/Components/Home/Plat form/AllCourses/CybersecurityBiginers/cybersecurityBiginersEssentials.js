@@ -3,9 +3,20 @@ import { Link } from "react-router-dom";
 import Cybersecurityimg from "../../../../../assets/CyberSecurityImages/cybersecurityimg.png";
 import learning from "../../../../../assets/CyberSecurityImages/learning.png";
 import CybersecurityNavigation from "./CyberSecurityEssentialsNavigation";
-
+import Navbar from "../../../../Navbar";
+import FooterPart from "../../../footer/Footer";
 const CybersecurityBeginners = () => {
   return (
+    <>
+    <Navbar />
+    <div>
+        <img
+          // src="https://thumbs.dreamstime.com/b/ascending-arrow-icons-data-science-292911896.jpg?w=992"
+          src="https://media.licdn.com/dms/image/C5612AQFdCSO2X1NjOA/article-cover_image-shrink_720_1280/0/1618174438027?e=2147483647&v=beta&t=eCGSEs-YGSEt5h6SoVpv1Sg645J3iTnKD_fvTd7RZ5Y"
+          className="w-full object-cover md:h-[500px]"
+        />
+          {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
+      </div>
     <div className="lg:container lg:mx-auto px-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12">
         {/* Left Section */}
@@ -32,7 +43,7 @@ const CybersecurityBeginners = () => {
         {/* Right Section */}
         <div className="text-center lg:text-right">
           <img
-            src="https://img.freepik.com/free-vector/isometric-server-ddos-attack-template_1284-40024.jpg?t=st=1716525443~exp=1716529043~hmac=6945cb9dd159656352b2bef567a3382f1116b93ccd8fb13be1b02c051b8b83c8&w=740"
+            src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2023-12-22/cyber-security-certifications-thumbnail.jpg"
             alt="cybersecurity"
             className="mx-auto lg:mx-0 mt-8 rounded-lg shadow-lg"
             style={{ height: "370px", width: "800px" }}
@@ -44,9 +55,9 @@ const CybersecurityBeginners = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-0 mt-12">
         <div className="text-center lg:text-right">
           <img
-            src="https://img.freepik.com/free-vector/people-face-scan-devices_24908-56393.jpg?t=st=1716525385~exp=1716528985~hmac=6889111455ef1de95ce641453ca57a97ea433c4d315942610af1e0261434c2f9&w=740"
+            src="https://d2ds8yldqp7gxv.cloudfront.net/Blog+Explanatory+Images/Which+Certification+is+best+for+Cybersecurity+1.webp"
             alt="learning"
-            className="w-80 ml-64 lg:w-96 h-80 lg:h-96 mx-auto lg:mx-0 rounded-lg shadow-lg"
+            className="w-80 ml-64 lg:w-[450px] h-80 lg:h-96 mx-auto lg:mx-0 "
           />
         </div>
         <div className="lg:w-1/2 lg:ml-12 mt-8 lg:mt-0">
@@ -75,8 +86,10 @@ const CybersecurityBeginners = () => {
         </div>
       </div>
 
-      <CybersecurityNavigation />
     </div>
+      <CybersecurityNavigation />
+      <FooterPart />
+    </>
   );
 };
 

@@ -36,8 +36,8 @@ import EthicalHacking from "./Components/Home/Plat form/AllCourses/EthicalHackin
 import AdvanceEthicalHacking from "./Components/Home/Plat form/AllCourses/AdvancedEthicalHacking/AdvanceEthicalHacking";
 import CertifiedEthicalHacking from "./Components/Home/Plat form/AllCourses/CertifiedEthicalHacking/certifiedEthicalHacking";
 import Cybersecurity from "./Components/Home/Plat form/AllCourses/Cybersecurity/cybersecurity";
-import CybersecurityBiginers from "./Components/Home/Plat form/AllCourses/CybersecurityBiginers/CyberSecurityEssentialsNavigation";
-import CybersecurityEssentials from "./Components/Home/Plat form/AllCourses/CybersecurityEssentials/CyberSecurityEssentialsNavigation";
+import CybersecurityBiginers from "./Components/Home/Plat form/AllCourses/CybersecurityBiginers/cybersecurityBiginersEssentials";
+import CybersecurityEssentials from "./Components/Home/Plat form/AllCourses/CybersecurityEssentials/cybersecurityEssentials";
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
 import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
 import EthicalHackingStudentArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/EthicalHackingStudentArray";
