@@ -66,6 +66,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about_us" element={<AboutUs />} />
+          {/* WSpace */}
+          <Route path="/WSpace" element={<WSpace />} />
           <Route path="/mylearning" element={<MyLearning />} />
           <Route path="/Certificates" element={<Certificates />} />
           <Route path="/features" element={<Features />} />

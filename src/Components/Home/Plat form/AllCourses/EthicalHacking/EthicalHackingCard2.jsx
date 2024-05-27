@@ -3,6 +3,14 @@ import React from 'react'
 const EthicalHackingCard2 = () => {
   return (
     <>
+    <div>
+        <img
+          // src="https://thumbs.dreamstime.com/b/ascending-arrow-icons-data-science-292911896.jpg?w=992"
+          src="https://trainings.internshala.com/blog/wp-content/uploads/2023/03/What-is-ethical-hacking-1.jpg"
+          className="w-full object-cover md:h-[500px]"
+        />
+          {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
+      </div>
           <div
         className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
         data-aos="fade-right"
