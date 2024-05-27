@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-i
+
 
 function BigDataSyllabus() {
   const data = [

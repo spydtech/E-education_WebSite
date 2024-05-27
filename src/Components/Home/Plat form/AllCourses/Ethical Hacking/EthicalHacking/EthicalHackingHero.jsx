@@ -1,6 +1,6 @@
 import React from "react";
 import { debounce } from 'lodash';
-import EthicalHackingScroller from "./EthicalHackingScroller";
+// import EthicalHackingScroller from "./EthicalHackingScroller";
 const EthicalHackingHero = () => {
   const handleScroll = debounce(() => {
     // Your scroll handling logic

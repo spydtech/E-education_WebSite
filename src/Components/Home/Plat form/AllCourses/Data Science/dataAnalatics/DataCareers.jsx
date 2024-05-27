@@ -2,12 +2,12 @@ import { BsGraphUpArrow } from "react-icons/bs";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { FcPositiveDynamic } from "react-icons/fc";
 import { GrTransaction } from "react-icons/gr";
-import amazon from "../../../../../assets/dataAnalatics/amazon.png";
-import google from "../../../../../assets/dataAnalatics/google.png";
-import microsoft from "../../../../../assets/dataAnalatics/microsoft.png";
-import ibm from "../../../../../assets/dataAnalatics/IBM.png";
-import deloitte from "../../../../../assets/dataAnalatics/deloitte_BIG.png";
-import accenture from "../../../../../assets/dataAnalatics/ACN_BIG.png";
+import amazon from "../../../../../../assets/dataAnalatics/amazon.png";
+import google from "../../../../../../assets/dataAnalatics/google.png";
+import microsoft from "../../../../../../assets/dataAnalatics/microsoft.png";
+import ibm from "../../../../../../assets/dataAnalatics/IBM.png";
+import deloitte from "../../../../../../assets/dataAnalatics/deloitte_BIG.png";
+import accenture from "../../../../../../assets/dataAnalatics/ACN_BIG.png";
 
 function DataCareers() {
   const recruiters = [amazon, microsoft, google, ibm, deloitte, accenture];

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 // import Navbar from "../../../../Navbar";
+import Navbar from '../../../../../Navbar'
 import AboutCourses from "./AboutCourses";
 import Community from "./Community/community";
 import SuccessStory from "./SuccessStory/successstory";
 // import Award from "../Award/Award";
 import Delivery_Methods from "./deliverymethods/Delivery_Methods";
 import FullStackJavaDeveloper from "./Developer/FullStackJavaDeveloper";
-// import Footer from "../../../footer/Footer";
+import Footer from "../../../../footer/Footer";
 
 const images = [
   "https://media.istockphoto.com/id/2027690301/vector/backend-development-coding-and-programming-it-specialist-sit-and-write-code-on-a-laptop-for.jpg?s=612x612&w=0&k=20&c=XFAq03A3tCnwvoKzT4mS3oBxlCiKJg1C5JaJVRmbH6I=",
@@ -42,7 +43,7 @@ const FullStackJavaDevelopment = () => {
   // }, [currentSlide]);
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="w-full bg-gradient-to-r to-[#8b008b] from-[#9340da] md:pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
         <div className="font-l">
           <span className="text-sm font-semibold tracking-wide text-black uppercase sm:text-base lg:text-sm xl:text-base">
@@ -98,7 +99,7 @@ const FullStackJavaDevelopment = () => {
       <Community />
       {/* <Award /> */}
       <SuccessStory />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
