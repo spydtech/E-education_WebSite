@@ -56,7 +56,7 @@ const NetworkSecurityArray = () => {
       id: 3,
       title: "Network Security Best Practices",
       description: "Explore best practices for securing network infrastructure.",
-      image: "https://www.itarian.com/images/network-security.png",
+      image: "https://networkats.com/wp-content/uploads/2023/06/feaeefe5-f2bd-409c-b069-8869066894f2.webp",
       link: "/student/student_network_security/network-security-best-practices",
     },
   ];

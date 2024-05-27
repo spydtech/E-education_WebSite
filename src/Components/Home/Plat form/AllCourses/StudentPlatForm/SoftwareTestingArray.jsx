@@ -52,89 +52,89 @@ const SoftwareTestingArray = () => {
     {
         "id": 1,
         "title": "Unit Testing",
-        "description": "Unit Testing involves testing individual components of the software to ensure they work correctly in isolation.",
+        "description": "Testing individual components in isolation.",
         "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200514113957/What-is-Unit-Testing-and-Why-Developer-Should-Learn-It.png",
         "link": "https://example.com/unit-testing"
     },
     {
         "id": 2,
         "title": "Integration Testing",
-        "description": "Integration Testing checks the interaction between different components of the software to ensure they work together as expected.",
-        "image": "https://wp.testbytes.net/wp-content/uploads/2016/02/19-1-2016-integration-testing-what-is-it-1.gif",
+        "description": "Testing software components together.",
+        "image": "https://testsigma.com/blog/wp-content/uploads/In-article-MC410.jpg",
         "link": "https://example.com/integration-testing"
     },
     {
         "id": 3,
         "title": "System Testing",
-        "description": "System Testing validates the complete and integrated software to verify that it meets the specified requirements.",
+        "description": "Testing the complete integrated software.",
         "image": "https://artoftesting.com/wp-content/uploads/2019/12/System-Testing.jpg",
         "link": "https://example.com/system-testing"
     },
     {
         "id": 4,
         "title": "Acceptance Testing",
-        "description": "Acceptance Testing is performed to determine whether the software is ready for release and meets the end user's needs.",
+        "description": "Testing if software meets user needs.",
         "image": "https://www.spaceo.ca/wp-content/uploads/2023/04/What-is-Acceptance-Testing.jpg",
         "link": "https://example.com/acceptance-testing"
     },
     {
         "id": 5,
         "title": "Performance Testing",
-        "description": "Performance Testing evaluates the speed, responsiveness, and stability of the software under various conditions.",
+        "description": "Testing speed and stability.",
         "image": "https://artoftesting.com/wp-content/uploads/2019/12/types-of-performance-testing.jpg",
         "link": "https://example.com/performance-testing"
     },
     {
         "id": 6,
         "title": "Security Testing",
-        "description": "Security Testing aims to identify vulnerabilities and ensure that the software is protected against attacks.",
+        "description": "Testing for vulnerabilities.",
         "image": "https://miro.medium.com/v2/resize:fit:750/1*wYU7HChNgP-Mt8iZvdiFxQ.jpeg",
         "link": "https://example.com/security-testing"
     },
     {
         "id": 7,
         "title": "Usability Testing",
-        "description": "Usability Testing assesses how easy and user-friendly the software is for end users.",
+        "description": "Testing user-friendliness.",
         "image": "https://er9wjw26noi.exactdn.com/wp-content/uploads/2022/08/What-is-usability-testing.jpg?lossy=1&quality=88&webp=88&ssl=1",
         "link": "https://example.com/usability-testing"
     },
     {
         "id": 8,
         "title": "Compatibility Testing",
-        "description": "Compatibility Testing ensures that the software works well across different devices, browsers, and operating systems.",
-        "image": "https://www.360logica.com/blog/wp-content/uploads/2018/05/Software-Compatibility-Testing.jpg",
+        "description": "Testing across different environments.",
+        "image": "https://www.collidu.com/media/catalog/product/img/7/8/78772832867f22e863a6a75381dc0029637dd1400bdf68eb5657858d7bd95deb/compatibility-testing-slide1.png",
         "link": "https://example.com/compatibility-testing"
     },
     {
         "id": 9,
         "title": "Regression Testing",
-        "description": "Regression Testing involves re-running previously conducted tests to ensure that recent changes haven't adversely affected the software.",
+        "description": "Testing recent changes for new issues.",
         "image": "https://assets-global.website-files.com/619e15d781b21202de206fb5/62165ea063f4cb7c15c9fc6e_regression-testing-guide.jpg",
         "link": "https://example.com/regression-testing"
     },
     {
         "id": 10,
         "title": "Stress Testing",
-        "description": "Stress Testing evaluates how the software performs under extreme conditions or high load to identify breaking points.",
+        "description": "Testing under extreme conditions.",
         "image": "https://cdn.educba.com/academy/wp-content/uploads/2019/09/What-is-Stress-Testing.png",
         "link": "https://example.com/stress-testing"
     },
     {
         "id": 11,
         "title": "Manual Testing",
-        "description": "Manual Testing is performed by human testers who manually execute test cases without the use of automation tools.",
+        "description": "Testing done manually by testers.",
         "image": "https://azilen-technologies.s3.us-west-1.amazonaws.com/wp-content/uploads/2023/07/Manual-testing.jpg",
         "link": "https://example.com/manual-testing"
     },
     {
         "id": 12,
         "title": "Automated Testing",
-        "description": "Automated Testing uses scripts and automation tools to run tests on the software, increasing efficiency and coverage.",
+        "description": "Testing using automation tools.",
         "image": "https://api.edoxi.com/assets/studyhub/Automation_Testing_-_Introduction_to_Automation_Testing1.webp",
         "link": "https://example.com/automated-testing"
     }
 ]
-  
+
 
   const filteredCourses = SoftwareTestingArray.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())

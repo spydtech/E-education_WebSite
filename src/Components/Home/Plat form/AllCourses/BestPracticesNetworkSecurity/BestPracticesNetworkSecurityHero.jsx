@@ -6,9 +6,10 @@ const NetworkSecurityBestPracticesHero = () => {
       {/* First Part */}
       <div>
         <img
-          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKhq4jcFEdc4obx8mRinwJAejpfb34-Jt71zwUhUPqplgZCvA3GFfUgVETiA3bkLebYEFdq3Sti_1H1-8A-sTzGoogRcJB7SIb6Qv3kb1nSPKBw3al6cpj9Hi8VJecrGH6EApBKeatBY985fe2_Z0TqMJAQAFB52bGgLEPwlHbopYb9UN8p7hYnFtN/s728-rw-e30/network-security.png"
-          className="md:lg:xl:w-screen md:lg:xl:h-screen md:lg:xl:block hidden"
+          src="https://apicms.thestar.com.my/uploads/images/2023/06/27/2147131.jpg"
+          className="w-full object-cover md:h-[500px]"
         />
+         {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
       </div>
       <div
         className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"

@@ -55,6 +55,7 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import SoftwareTestingArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/SoftwareTestingArray";
 import DataScience from "./Components/Home/Plat form/AllCourses/IntroductionTo_DataScience/DataScience";
 import NetworkSecurity from "./Components/Home/Plat form/AllCourses/NetworkSecurity_Fundamentals/NetworkSecurityFundamentals";
+import BestPracticesNetworkSecurity from "./Components/Home/Plat form/AllCourses/BestPracticesNetworkSecurity/BestPracticesNetworkSecurity";
 import DataScienceWithPython from "./Components/Home/Plat form/AllCourses/DataScienceWith_Python/DataScienceWithPython";
 import BigDataAnalysis from "./Components/Home/Plat form/AllCourses/BigDataAnalysis/BigData";
 import AdvanceNetworkSecuity from "./Components/Home/Plat form/AllCourses/AdvancedNetworkSecurity/AdvancedNetworkSecurity";
@@ -147,6 +148,12 @@ function App() {
             path="/student/student_network_security/advance-network-secuity"
             element={<AdvanceNetworkSecuity />}
           />
+
+          <Route
+            path="/student/student_network_security/network-security-best-practices"
+            element={<BestPracticesNetworkSecurity />}
+          />
+          {/* BestPracticesNetworkSecurity */}
           {/* /student/student_network_security/network-security-best-practices */}
 
           {/* Software Testing */}
