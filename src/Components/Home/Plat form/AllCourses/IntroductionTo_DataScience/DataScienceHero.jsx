@@ -3,6 +3,8 @@ import React from "react";
 const DataScienceHero = () => {
   return (
     <>
+  
+   
       {/* First Part */}
       <div>
         <img

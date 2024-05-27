@@ -5,7 +5,7 @@ import assistance from "../../../../../assets/dataAnalatics/assistance.jpg";
 
 const DataAnalyticsProgram = () => {
   return (
-    <div className="container mx-auto px-5 pl-20 p-1">
+    <div className="container mx-auto px-5 pl-20 p-1 ">
       <div className=" pt-0">
         {" "}
         <p className="text-pink-800 text-xl font-medium">

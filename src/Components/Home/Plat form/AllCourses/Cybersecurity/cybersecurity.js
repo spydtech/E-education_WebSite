@@ -1,10 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../../../../Navbar";
+import Footer from "../../../../Home/footer/Footer"
 import Cybersecurityimg from "../../../../../assets/CyberSecurityImages/cybersecurityimg.png";
 import learning from "../../../../../assets/CyberSecurityImages/learning.png";
 import CybersecurityNavigation from "./CyberSecurityNavigation";
 const Cybersecurity = () => {
   return (
+    <>
+   
+   <Navbar />
+   <div>
+        <img
+          // src="https://thumbs.dreamstime.com/b/ascending-arrow-icons-data-science-292911896.jpg?w=992"
+          src="https://media.licdn.com/dms/image/D4D12AQG254VnJBPZrg/article-cover_image-shrink_720_1280/0/1702236740059?e=2147483647&v=beta&t=S9hcQK328TSngJQOqqiUpojTFTz_DFO3ReFn9rhJYyM"
+          className="w-full object-cover md:h-[500px]"
+        />
+          {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
+      </div>
     <div className="lg:container lg:mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Left Section */}
@@ -42,7 +55,7 @@ const Cybersecurity = () => {
       <div className="flex flex-col lg:flex-row items-center lg:w-full flex justify-between px-8 lg:px-0 mt-12">
         <div className="text-center lg:text-right ml-8">
           <img
-            src={learning}
+            src="https://online.sbu.edu/sites/default/files/field/image/sbu-cybersecurity-job-outlook-feature.jpg"
             alt="learning"
             className="w-80 lg:w-96 h-80 lg:h-96 mx-auto lg:mx-0 ml-8"
           />
@@ -78,7 +91,7 @@ const Cybersecurity = () => {
       </div>
 
       {/* List Section */}
-      <div style={{ marginLeft: "700px" }}>
+      <div style={{ marginLeft: "650px" }}>
         <li>Explore 2 tracks & 5 specializations for diverse learning</li>
         <li>
           Experience seamless integration with Advanced cybersecurity and AI
@@ -90,8 +103,11 @@ const Cybersecurity = () => {
         <li>Explore 2 tracks & 5 specializations for diverse learning</li>
       </div>
 
-      <CybersecurityNavigation />
     </div>
+      <CybersecurityNavigation />
+
+    <Footer/>
+    </>
   );
 };
 

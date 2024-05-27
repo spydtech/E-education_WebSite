@@ -7,10 +7,11 @@ const BigDataHero = () => {
       {/* First Part */}
       <div>
         <img
-          src="https://cdn.pixabay.com/photo/2018/06/01/04/01/big-data-3445683_1280.png"
+          src="https://venture.com.bd/wp-content/uploads/2021/01/Big-Data-scaled.jpg"
           // src="https://wallpaperaccess.com/full/1704582.jpg"
-          className="md:lg:xl:w-screen md:lg:xl:h-screen md:lg:xl:block hidden"
+          className="w-full object-cover md:h-[500px]"
         />
+           <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
       </div>
       <div
         className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"

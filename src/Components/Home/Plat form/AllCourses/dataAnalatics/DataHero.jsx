@@ -72,7 +72,7 @@ function DataHero() {
       <div className="flex flex-row justify-center items-center font-lora">
         <div>
           <div className="rounded-r-3xl p-8 z-10 w-[700px]">
-            <div className="flex flex-col md:flex-row items-center mb-4">
+            <div className="flex flex-col md:flex-row items-center">
               <button className="bg-blue-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mr-4 mb-2 md:mb-0 font-lora">
               Explore Data Analytics
               </button>
@@ -117,6 +117,7 @@ function DataHero() {
         <div className=" h-full mb-8 rounded-r-3xl ">
           <img src="https://ik.imagekit.io/upgrad1/marketing-platform-assets/sprites/images/seo_content__1665728539142.png" />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
       </div>
     </>
   );
