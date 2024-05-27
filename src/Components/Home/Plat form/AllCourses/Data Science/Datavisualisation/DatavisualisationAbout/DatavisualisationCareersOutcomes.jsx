@@ -1,7 +1,5 @@
 import React from "react";
-import programmer from "../../../../../../assets/dataAnalatics/programmer.jpg";
-import assistance from "../../../../../../assets/dataAnalatics/assistance.jpg";
-// import support from "../../../../../assets/Platform/support.jpg";
+
 
 const DatavisualisationOutcomes = () => {
   return (

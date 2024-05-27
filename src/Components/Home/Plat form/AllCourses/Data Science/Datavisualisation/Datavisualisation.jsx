@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../../../../Navbar";
-import Footer from "../../../footer/Footer";
+import Navbar from "../../../../../Navbar";
+import Footer from "../../../../footer/Footer";
 import DatavisualisationHero from "./DatavisualisationHero";
 // import MachineLearningCard from "../MachineLearning/MachineLearningCard";
 import DatavisualisationCard from "./DatavisualisationCard";
