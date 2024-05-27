@@ -7,8 +7,8 @@ const NetworkSecurityHero = () => {
       {/* First Part */}
       <div>
         <img
-          src="https://www.extnoc.com/learn/wp-content/uploads/2022/02/Network-Security.jpg"
-          className="md:lg:xl:w-screen md:lg:xl:h-screen md:lg:xl:block hidden"
+          src="https://verityit.com/wp-content/uploads/2021/09/NetworkSecurity.png"
+          className="w-full object-cover md:h-[500px]"
         />
       </div>
       <div

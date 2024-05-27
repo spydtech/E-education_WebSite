@@ -36,7 +36,7 @@ function NetworkSecuritySyallabus() {
     <>
       <div
         id="subdiv"
-        className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6  bg-gradient-to-br from-[#0077b6] to-[#03045e]"
+        className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6 md:my-20 bg-gradient-to-br from-[#0077b6] to-[#03045e]"
       >
         <div
           id="div1"

@@ -5,7 +5,7 @@ import assistance from "../../../../../../assets/dataAnalatics/assistance.jpg";
 
 const NetworkSecurityAbout = () => {
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br from-[#0077b6] to-[#03045e]">
+    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br from-[#0077b6] to-[#03045e] mb-16">
       <div className="pt-0">
         <p className="text-[#f9ac13] text-xl font-medium">
           About The Network Security Course
