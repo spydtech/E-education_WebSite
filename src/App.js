@@ -48,6 +48,7 @@ import FullStackWebDevelopment from './Components/Home/Plat form/AllCourses/Full
 import FullStackDevops from './Components/Home/Plat form/AllCourses/FullStackDevops_Development/FullStackDevopsDevelopment';
 import FullStackPythonDevelopment from "./Components/Home/Plat form/AllCourses/fullStackPython/Main/FullStackPythonDevelopment";
 import FullStackJava from "./Components/Home/Plat form/AllCourses/FullStackJava_Development/FullStackJavaDevelopment";
+import FullStackJavaScript from './Components/Home/Plat form/AllCourses/FullStackJavaScript/Main/JavascriptDevelopment'
 import BasicCourses from "./Components/BasicCourse/BasicCourse";
 import AdvanceCourses from "./Components/AdvanceCourses/Advance_Courses";
 import AboutUs from './Components/AboutUs/AboutUs'
@@ -128,7 +129,10 @@ function App() {
             <Route path="/student/student_fullStack_WebDevelopment/fullStack-Web-Development" element={<FullStackWebDevelopment />} />
           <Route path="/student/student_fullStack_WebDevelopment/fullStack-Python-Development" element={<FullStackPythonDevelopment />} />
           <Route path="/student/student_fullStack_WebDevelopment/fullStack-Java-Development" element={<FullStackJava />} />
-          {/* /student/student_fullStack_WebDevelopment/full-stack-javascript */}
+          {/* FullStackJavaScript */}
+          <Route path="/student/student_fullStack_WebDevelopment/full-stack-javascript" element={<FullStackJavaScript />} />
+
+      
           {/* /student/student_fullStack_WebDevelopment/fullStack-DotNet */}
          
          {/* WishList/ Cart */}
