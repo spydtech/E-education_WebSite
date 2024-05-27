@@ -3,18 +3,20 @@ import programmer from "../../../../../../assets/dataAnalatics/programmer.jpg";
 import assistance from "../../../../../../assets/dataAnalatics/assistance.jpg";
 // import support from "../../../../../assets/Platform/support.jpg";
 
-const MachineLearningAbout = () => {
+const BestPracticesNetworkSecurityAbout = () => {
   return (
-    <div className=" mx-auto w-full md:lg:xl:pl-20  p-1 bg-gradient-to-br from-yellow-300 via-orange-500 to-red-600">
+    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br from-[#aad922] to-[#ffef19]">
       <div className="pt-0">
-        <p className="text-pink-800 text-xl font-medium">
-          About The Machine Learning Course
+        <p className="text-[#ec3400] text-xl font-medium">
+          About The Network Security Best Practices Course
         </p>
       </div>
       <div className="py-2">
         <p className="text-6xl font-lora">
           Discover the
-          <p className="text-violet-800 my-2">Machine Learning Program</p>
+          <p className="text-[#ec3400] my-2">
+            Network Security Best Practices Program
+          </p>
         </p>
       </div>
 
@@ -23,14 +25,14 @@ const MachineLearningAbout = () => {
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <img
               className="w-full h-52 object-cover object-center"
-              src={assistance}
-              alt="career-assistance"
+              src={programmer}
+              alt="security-training"
             />
             <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Career Assistance</h2>
+              <h2 className="text-xl font-bold mb-2">Comprehensive Training</h2>
               <p className="text-gray-700">
-                Stay ahead with access to one-on-one career counseling sessions
-                and mock interviews with industry professionals.
+                Equip yourself with cutting-edge security practices through our
+                comprehensive training sessions.
               </p>
             </div>
           </div>
@@ -40,15 +42,14 @@ const MachineLearningAbout = () => {
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <img
               className="w-full h-52 object-cover"
-              src={programmer}
-              alt="student-support"
+              src={assistance}
+              alt="expert-guidance"
             />
             <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Student Support</h2>
+              <h2 className="text-xl font-bold mb-2">Expert Guidance</h2>
               <p className="text-gray-700">
-                Access student support via support@machinelearning.com or
-                through the "ask us?" option on our learning platform for urgent
-                queries.
+                Receive guidance from industry experts to stay updated with the
+                latest trends and techniques in network security.
               </p>
             </div>
           </div>
@@ -58,4 +59,4 @@ const MachineLearningAbout = () => {
   );
 };
 
-export default MachineLearningAbout;
+export default BestPracticesNetworkSecurityAbout;

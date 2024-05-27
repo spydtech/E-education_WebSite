@@ -1,25 +1,25 @@
 import React from "react";
 import certificate from "../../../../../../assets/dataAnalatics/Certificate-PNG-Pic.png";
 
-function MachineLearningCertificate() {
+function BestPracticesNetworkSecurityCertificate() {
   return (
     <>
       <div
         id="main"
-        className="grid  grid-cols-1 md:lg:grid-cols-2 pb-16 bg-gradient-to-br from-yellow-300 via-orange-500 to-red-600"
+        className="grid  grid-cols-1 md:lg:grid-cols-2 pb-16 bg-gradient-to-br from-[#aad922] to-[#ffef19]"
       >
         <div id="content" className="flex justify-center items-center">
           <div className="p-5 space-y-5 w-[450px] h-96">
-            <p className="text-pink-800 text-xl font-medium">
-              Machine Learning Certification
+            <p className="text-[#ec3400] text-xl font-medium">
+              Network Security Certification
             </p>
             <p className="text-6xl font-lora">
               Achieve{" "}
-              <p className="text-violet-800">Credentials and Recognition</p>
+              <p className="text-[#ec3400]">Credentials and Recognition</p>
             </p>
             <p className="text-xl text-gray-500">
-              Successfully complete all course modules to obtain a Machine
-              Learning certification, greatly enhancing career prospects and
+              Successfully complete all course modules to obtain a Network
+              Security certification, greatly enhancing career prospects and
               skill development.
             </p>
           </div>
@@ -34,4 +34,4 @@ function MachineLearningCertificate() {
     </>
   );
 }
-export default MachineLearningCertificate;
+export default BestPracticesNetworkSecurityCertificate;

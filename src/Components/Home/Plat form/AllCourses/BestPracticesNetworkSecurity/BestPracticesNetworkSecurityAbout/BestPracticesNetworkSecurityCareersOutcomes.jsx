@@ -9,25 +9,25 @@ import { GrTransaction } from "react-icons/gr";
 // import deloitte from "../../../../../../assets/dataAnalatics/deloitte_BIG.png";
 // import accenture from "../../../../../../assets/dataAnalatics/ACN_BIG.png";
 
-function MachineLearningCareersOutcomes() {
+function BestPracticesNetworkSecurityCareersOutcomes() {
   // const recruiters = ["apple", "facebook", "intel", "oracle", "sap", "nvidia"];
 
   return (
     <>
       <div
         id="main"
-        className="bg-gradient-to-br md:lg:xl:pl-20 from-yellow-300 via-orange-500 to-red-600"
+        className=" md:lg:xl:pl-20  bg-gradient-to-br from-[#aad922] to-[#ffef19]"
       >
         <div id="headings" className="grid grid-cols-1 text-start ">
           <div>
-            <p className="text-pink-800 text-xl font-medium">
-              Career Outcomes in Machine Learning Program
+            <p className="text-[#ec3400] text-xl font-medium">
+              Career Outcomes in Network Security Program
             </p>
           </div>
           <div className="py-5">
             <p className="text-6xl font-lora">
               Discover What our{" "}
-              <p className="text-violet-800">Learners Have Achieved</p>
+              <p className="text-[#ec3400]">Learners Have Achieved</p>
             </p>
           </div>
           <div>
@@ -39,27 +39,27 @@ function MachineLearningCareersOutcomes() {
         <div id="subdiv" className="grid grid-cols-1 md:grid-cols-2 gap-x-6 ">
           <div
             id="a"
-            className="grid grid-rows-2 grid-cols-2 gap-8 p-3  hover:cursor-pointer text-xl font-medium my-6 items-center border-2 border-opacity-15 rounded-md overflow-hidden bg-white"
+            className="grid grid-rows-2 grid-cols-2 gap-8 p-3  hover:cursor-pointer text-xl font-medium my-6 items-center bg-gray-100 border-4 border-[#ec3400] border-opacity-50 rounded-md overflow-hidden shadow-lg "
           >
             <div id="x">
               <p>
                 <BsGraphUpArrow className="w-10 h-10 text-green-700" />
               </p>
-              <p>57%</p>
+              <p>60%</p>
               <p className="text-gray-500 text-[16px]">Average salary hike</p>
             </div>
             <div id="y">
               <p>
                 <FaPeopleGroup className="w-10 h-10 text-blue-700" />
               </p>
-              <p>100+</p>
+              <p>120+</p>
               <p className="text-gray-500 text-[16px]">Hiring partners</p>
             </div>
             <div id="z">
               <p>
                 <FcPositiveDynamic className="w-10 h-10 text-green-700" />
               </p>
-              <p>5/6</p>
+              <p>6/7</p>
               <p className="text-gray-500 text-[16px]">
                 Learners saw positive career growth
               </p>
@@ -68,7 +68,7 @@ function MachineLearningCareersOutcomes() {
               <p>
                 <GrTransaction className="w-10 h-10 text-red-800" />
               </p>
-              <p>300+</p>
+              <p>400+</p>
               <p className="text-gray-500 text-[16px]">Career Transitions</p>
             </div>
           </div>
@@ -93,4 +93,4 @@ function MachineLearningCareersOutcomes() {
   );
 }
 
-export default MachineLearningCareersOutcomes;
+export default BestPracticesNetworkSecurityCareersOutcomes;

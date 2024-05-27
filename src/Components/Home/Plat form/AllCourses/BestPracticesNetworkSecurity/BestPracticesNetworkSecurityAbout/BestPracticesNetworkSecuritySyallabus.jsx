@@ -1,8 +1,4 @@
-import React, { useState } from "react";
-import { BsGraphUpArrow } from "react-icons/bs";
-import { FaPeopleGroup } from "react-icons/fa6";
-import { FcPositiveDynamic } from "react-icons/fc";
-import { GrTransaction } from "react-icons/gr";
+import React from "react";
 import amazon from "../../../../../../assets/dataAnalatics/amazon.png";
 import google from "../../../../../../assets/dataAnalatics/google.png";
 import microsoft from "../../../../../../assets/dataAnalatics/microsoft.png";
@@ -10,28 +6,28 @@ import microsoft from "../../../../../../assets/dataAnalatics/microsoft.png";
 // import spotify from "../../../../../assets/dataAnalatics/spotify.png";
 // import uber from "../../../../../assets/dataAnalatics/uber.png";
 
-function MachineLearningSyallabus() {
+function BestPracticesNetworkSecuritySyllabus() {
   const data = [
     {
-      heading: "Machine Learning",
+      heading: "Network Security Best Practices",
       subheading: "Topics (16)",
       items: [
-        "Introduction to Machine Learning",
-        "Supervised Learning Algorithms",
-        "Unsupervised Learning Algorithms",
-        "Reinforcement Learning",
-        "Deep Learning Fundamentals",
-        "Convolutional Neural Networks (CNNs)",
-        "Recurrent Neural Networks (RNNs)",
-        "Generative Adversarial Networks (GANs)",
-        "Natural Language Processing (NLP)",
-        "Computer Vision",
-        "Dimensionality Reduction Techniques",
-        "Model Evaluation and Validation",
-        "Hyperparameter Tuning",
-        "Feature Engineering",
-        "Deployment Strategies for ML Models",
-        "Ethical Considerations in Machine Learning",
+        "Introduction to Network Security",
+        "Types of Network Threats",
+        "Firewall and VPN Technologies",
+        "Intrusion Detection and Prevention Systems",
+        "Encryption and Secure Communications",
+        "Access Control and Authentication",
+        "Wireless Network Security",
+        "Network Security Protocols (SSL/TLS, IPSec)",
+        "Network Segmentation and Isolation",
+        "Security Information and Event Management (SIEM)",
+        "Incident Response and Management",
+        "Security Policies and Procedures",
+        "Threat Intelligence and Analysis",
+        "Zero Trust Architecture",
+        "Cloud Network Security",
+        "Future Trends in Network Security",
       ],
     },
   ];
@@ -40,7 +36,7 @@ function MachineLearningSyallabus() {
     <>
       <div
         id="subdiv"
-        className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6 bg-gradient-to-br from-yellow-300 via-orange-500 to-red-600"
+        className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6  bg-gradient-to-br from-[#aad922] to-[#ffef19]"
       >
         <div
           id="div1"
@@ -48,12 +44,12 @@ function MachineLearningSyallabus() {
         >
           <div id="headings" className="grid grid-cols-1 text-start px-20">
             <div>
-              <p className="text-orange-800 text-xl font-medium">Syllabus</p>
+              <p className="text-[#ec3400] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
               <p className="text-6xl font-lora">
                 Discover What You
-                <p className="text-violet-800 inline pl-2">Will Learn</p>
+                <p className="text-[#ec3400] inline pl-2">Will Learn</p>
               </p>
             </div>
             <div>
@@ -67,12 +63,12 @@ function MachineLearningSyallabus() {
         </div>
         <div
           id="div2"
-          className="space-y-5 flex justify-center px-10 p-4 my-2 mx-2 border-2 border-opacity-15 rounded overflow-hidden bg-gray-200 shadow-2xl"
+          className="space-y-5 flex justify-center px-10 p-4 my-2 mx-2 mb-2 border-2 border-opacity-15 rounded overflow-hidden bg-gray-200 shadow-2xl"
         >
           <div className="container mx-auto">
             {data.map((category, index) => (
               <div key={index} className="mb-6">
-                <h2 className="text-4xl font-semibold mb-2 text-orange-600">
+                <h2 className="text-4xl font-semibold mb-2 text-[#ec3400]">
                   {category.heading}
                 </h2>
                 <h3 className="text-2xl font-medium mb-2">
@@ -94,4 +90,4 @@ function MachineLearningSyallabus() {
   );
 }
 
-export default MachineLearningSyallabus;
+export default BestPracticesNetworkSecuritySyllabus;

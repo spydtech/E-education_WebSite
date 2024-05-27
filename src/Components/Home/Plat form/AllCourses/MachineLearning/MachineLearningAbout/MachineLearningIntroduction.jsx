@@ -59,7 +59,7 @@ function MachineLearningIntroduction() {
       ],
     },
   ];
-  
+
   const goToPreviousSlide = () => {
     setCurrentSlide((prevSlide) =>
       prevSlide === 0 ? slidesData.length - 1 : prevSlide - 1
@@ -76,21 +76,26 @@ function MachineLearningIntroduction() {
     <>
       <div
         id="subdiv"
-        className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6 h-[600px] md:mb-20 bg-gradient-to-br from-yellow-300 via-orange-500 to-red-600"
+        className="grid grid-cols-1  w-fit   md:lg:grid-cols-2  h-full bg-gradient-to-br from-yellow-300 via-orange-500 to-red-600"
       >
         <div
           id="div1"
           className="  flex items-center justify-center   xl:lg:md:w-auto "
         >
-          <div id="headings" className="grid grid-cols-1 text-start px-20 font-lora">
+          <div
+            id="headings"
+            className="grid grid-cols-1 text-start px-10 font-lora"
+          >
             <div>
               {" "}
-              <p className="text-orange-800 text-xl font-medium">Introduction</p>
+              <p className="text-orange-800 text-xl font-medium">
+                Introduction
+              </p>
             </div>
             <div className="py-5">
               <p className="text-6xl font-lora ">
                 So what is
-                <p className="text-orange-800 inline pl-2">Machine Learning</p>
+                <p className="text-violet-800 inline pl-2">Machine Learning</p>
               </p>
             </div>
             <div>
