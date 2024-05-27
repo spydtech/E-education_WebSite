@@ -1,10 +1,10 @@
 import React from "react";
 import { IoRemoveOutline } from "react-icons/io5";
 import { IoReorderThreeOutline } from "react-icons/io5";
-import istock from "../../../../../../../src/assets/Delivery_MethodsPic/istock.jpg";
-import onsite from "../../../../../../../src/assets/Delivery_MethodsPic/onsite.jpg";
-import online from "../../../../../../../src/assets/Delivery_MethodsPic/selfinstrutor.jpg";
-import self from "../../../../../../../src/assets/Delivery_MethodsPic/onlineinstrutor.jpg";
+import istock from "../../../../../../../../src/assets/Delivery_MethodsPic/istock.jpg";
+import onsite from "../../../../../../../../src/assets/Delivery_MethodsPic/onsite.jpg";
+import online from "../../../../../../../../src/assets/Delivery_MethodsPic/selfinstrutor.jpg";
+import self from "..././../../../../../../src/assets/Delivery_MethodsPic/onlineinstrutor.jpg";
 import { Link } from "react-router-dom";
 import { SiGoogleclassroom } from "react-icons/si";
 import { FaLaptopCode } from "react-icons/fa";

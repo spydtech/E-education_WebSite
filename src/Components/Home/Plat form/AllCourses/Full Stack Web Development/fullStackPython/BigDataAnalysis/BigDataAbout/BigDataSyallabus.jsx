@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import amazon from "../../../../../../assets/dataAnalatics/amazon.png";
-import google from "../../../../../../assets/dataAnalatics/google.png";
-import microsoft from "../../../../../../assets/dataAnalatics/microsoft.png";
-// import flipkart from "../../../../../assets/dataAnalatics/flipkart.png";
-// import spotify from "../../../../../assets/dataAnalatics/spotify.png";
-// import uber from "../../../../../assets/dataAnalatics/uber.png";
+
 
 function BigDataSyllabus() {
   const data = [

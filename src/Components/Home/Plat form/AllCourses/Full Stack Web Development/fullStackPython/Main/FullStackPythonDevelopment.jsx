@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import Navbar from "../../../../Navbar";
-import Navbar from "../../../../../Navbar";
-import Footer from "../../../../footer/Footer";
+import Navbar from "../../../../../../Navbar";
+import Footer from "../../../../../footer/Footer";
 import AboutCourses from "./AboutCourses";
 import Community from "../Community/community";
 import SuccessStory from "../SuccessStory/successstory";

@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import AboutCourses from "./AboutCourses";
 import Community from "../Community/community";
 import SuccessStory from "../SuccessStory/successstory";
-import Navber from '../../../../../Navbar';
-import Footer from '../../../../footer/Footer'
+import Navber from '../../../../../../Navbar';
+import Footer from '../../../../../footer/Footer'
 // import Award from "../Award/Award";
 
 // import Footer from "../../../footer/Footer";

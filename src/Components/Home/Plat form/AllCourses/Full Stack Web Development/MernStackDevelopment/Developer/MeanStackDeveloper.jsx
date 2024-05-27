@@ -3,9 +3,9 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import { IoRemoveOutline } from "react-icons/io5";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import MeanStackDevelopmentCard from "./MeanStackDevelopmentCard";
-import skills from "../../../../../../assets/Assests_MeanStack/WebDeveloper/skills.png";
+import skills from "../../../../../../../assets/Assests_MeanStack/WebDeveloper/skills.png";
 // Assests_MeanStack/WebDeveloper/skills.png";
-import requirements from "../../../../../../assets/Assests_MeanStack/WebDeveloper/requirements.png";
+import requirements from "../../../../../../../assets/Assests_MeanStack/WebDeveloper/requirements.png";
 
 const softSkills = [
   { name: "Project Management" },
