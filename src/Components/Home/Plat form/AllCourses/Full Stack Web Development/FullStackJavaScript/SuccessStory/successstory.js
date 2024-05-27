@@ -1,8 +1,8 @@
 import React from "react";
 // import successImage from "../Assests_MeanStack/successstoryimages/studentsitting.jpg";
-import successImage from "../../../../../../assets/Assests_MeanStack/successstoryimages/studentsitting.jpg";
-import company from "../../../../../../assets/Assests_MeanStack/successstoryimages/company.png";
-import webcertificate from "../../../../../../assets/Assests_MeanStack/successstoryimages/webcertificate.png";
+import successImage from "../../../../../../../assets/Assests_MeanStack/successstoryimages/studentsitting.jpg";
+import company from "../../../../../../../assets/Assests_MeanStack/successstoryimages/company.png";
+import webcertificate from "../../../../../../../assets/Assests_MeanStack/successstoryimages/webcertificate.png";
 import { ImQuotesLeft } from "react-icons/im";
 
 function SuccessStory() {

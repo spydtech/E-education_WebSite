@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../../../../../Navbar";
+import Navbar from "../../../../../../Navbar";
 import AboutCourses from "./AboutCourses";
 import Community from "../Community/community";
 import SuccessStory from "../SuccessStory/successstory";
-import Footer from "../../../../footer/Footer";
+import Footer from "../../../../../footer/Footer";
 
 import Delivery_Methods from "../deliverymethods/Delivery_Methods";
 // import MeanStackDeveloper from "../Developer/MeanStackDeveloper";

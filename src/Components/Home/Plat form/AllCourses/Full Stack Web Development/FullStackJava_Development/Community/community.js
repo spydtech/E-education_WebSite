@@ -1,15 +1,15 @@
 import React from "react";
-import techimage from "../../../../../../assets/Assests_FullStackJava/communityimages/techimage.png";
-import kid1 from "../../../../../../assets/Assests_FullStackJava/communityimages/kid1.png";
-import kid2 from "../../../../../../assets/Assests_FullStackJava/communityimages/kid2.png";
-import women1 from "../../../../../../assets/Assests_FullStackJava/communityimages/women1.png";
-import women2 from "../../../../../../assets/Assests_FullStackJava/communityimages/women2.png";
-import artificialigence from "../../../../../../assets/Assests_FullStackJava/communityimages/artificialinteligence.png";
-import discussion from "../../../../../../assets/Assests_FullStackJava/communityimages/discussion.png";
-import gathering from "../../../../../../assets/Assests_FullStackJava/communityimages/gathering.png";
-import internationalimage from "../../../../../../assets/Assests_FullStackJava/communityimages/internationalimage.png";
-import success from "../../../../../../assets/Assests_FullStackJava/communityimages/success.png";
-import thinking from "../../../../../../assets/Assests_FullStackJava/communityimages/thinking.png";
+import techimage from "../../../../../../../assets/Assests_FullStackJava/communityimages/techimage.png";
+import kid1 from "../../../../../../../assets/Assests_FullStackJava/communityimages/kid1.png";
+import kid2 from "../../../../../../../assets/Assests_FullStackJava/communityimages/kid2.png";
+import women1 from "../../../../../../../assets/Assests_FullStackJava/communityimages/women1.png";
+import women2 from "../../../../../../../assets/Assests_FullStackJava/communityimages/women2.png";
+import artificialigence from "../../../../../../../assets/Assests_FullStackJava/communityimages/artificialinteligence.png";
+import discussion from "../../../../../../../assets/Assests_FullStackJava/communityimages/discussion.png";
+import gathering from "../../../../../../../assets/Assests_FullStackJava/communityimages/gathering.png";
+import internationalimage from "../../../../../../../assets/Assests_FullStackJava/communityimages/internationalimage.png";
+import success from "../../../../../../../assets/Assests_FullStackJava/communityimages/success.png";
+import thinking from "../../../../../../../assets/Assests_FullStackJava/communityimages/thinking.png";
 
 function Community() {
   const calculatePosition = (total, index) => {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar from '../../../../Navbar'
+import Navbar from '../../../../../Navbar'
 // import Navbar from "../../../../Navbar";
 import AboutCourses from "./AboutCourses";
 import Community from "./Community/community";
@@ -7,7 +7,7 @@ import SuccessStory from "./SuccessStory/successstory";
 // import Award from "../Award/Award";
 import Delivery_Methods from "./deliverymethods/Delivery_Methods";
 import FullStackDevopsDeveloper from "./Developer/FullStackDevopsDeveloper";
-import Footer from "../../../footer/Footer";
+import Footer from "../../../../footer/Footer";
 
 const images = [
   "https://media.istockphoto.com/id/1161702497/vector/team-of-programmer-concept-with-devops-software-development-practices-methodology-vector.jpg?s=612x612&w=0&k=20&c=5cqLQaudaYaXv3OdYQHjt-F-LhcuOiBhXWtHLMwj4PU=",

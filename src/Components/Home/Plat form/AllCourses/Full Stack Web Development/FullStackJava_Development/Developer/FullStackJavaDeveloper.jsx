@@ -3,8 +3,8 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import { IoRemoveOutline } from "react-icons/io5";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import FullStackJavaDevelopmentCard from "./FullStackJavaDevelopmentCard";
-import javaSkills from "../../../../../../assets/Assests_FullStackJava/JavaDeveloper/skills.png";
-import javaRequirements from "../../../../../../assets/Assests_FullStackJava/JavaDeveloper/requirements.png";
+import javaSkills from "../../../../../../../assets/Assests_FullStackJava/JavaDeveloper/skills.png";
+import javaRequirements from "../../../../../../../assets/Assests_FullStackJava/JavaDeveloper/requirements.png";
 
 const softSkills = [
   { name: "Team Collaboration" },
