@@ -1,5 +1,5 @@
 import React from "react";
-import certificate from "../../../../../../assets/dataAnalatics/Certificate-PNG-Pic.png";
+import certificate from "../../../../../../../assets/dataAnalatics/Certificate-PNG-Pic.png";
 
 // ERROR in ./src/Components/Home/Plat form/AllCourses/CertifiedEthicalHacking/CertifiedEthicalHackingAbout/CertifiedEthicalHackingCertificate.jsx 43:0-86
 // Module not found: Error: Can't resolve '../../../../../assets/dataAnalatics/Certificate-PNG-Pic.png' in 'D:\E-education_Frontend\E-education_WebSite\src\Components\Home\Plat form\AllCourses\CertifiedEthicalHacking\CertifiedEthicalHackingAbout'

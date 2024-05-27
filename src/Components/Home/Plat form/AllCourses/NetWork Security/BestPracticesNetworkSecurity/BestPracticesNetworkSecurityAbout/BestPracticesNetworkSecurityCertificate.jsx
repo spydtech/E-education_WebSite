@@ -1,5 +1,5 @@
 import React from "react";
-import certificate from "../../../../../../assets/dataAnalatics/Certificate-PNG-Pic.png";
+import certificate from "../../../../../../../assets/dataAnalatics/Certificate-PNG-Pic.png";
 
 function BestPracticesNetworkSecurityCertificate() {
   return (
