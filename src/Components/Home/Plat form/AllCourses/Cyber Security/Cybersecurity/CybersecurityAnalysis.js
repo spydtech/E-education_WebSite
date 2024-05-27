@@ -2,7 +2,9 @@ import React from "react";
 import DataHero from "./DataHero";
 import DataAbout from "./DataAbout";
 import DataAnalaticsNavigation from "./CyberSecurityNavigation";
-import Navbar from "../../../../Navbar";
+
+import Navbar from "../../../../../Navbar";
+import FooterPart from "../../../../footer/Footer";
 const DataAnalatics = () => {
   return (
     <>
@@ -10,6 +12,7 @@ const DataAnalatics = () => {
       <DataHero />
       <DataAbout />
       <DataAnalaticsNavigation />
+      <FooterPart />
     </>
   );
 };

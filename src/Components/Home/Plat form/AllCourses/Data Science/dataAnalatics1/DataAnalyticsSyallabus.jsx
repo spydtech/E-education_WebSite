@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import { BsGraphUpArrow } from "react-icons/bs";
-import { FaPeopleGroup } from "react-icons/fa6";
-import { FcPositiveDynamic } from "react-icons/fc";
-import { GrTransaction } from "react-icons/gr";
-import amazon from "../../../../../assets/dataAnalatics/amazon.png";
-import google from "../../../../../assets/dataAnalatics/google.png";
-import microsoft from "../../../../../assets/dataAnalatics/microsoft.png";
-// import flipkart from "../../../../../assets/dataAnalatics/flipkart.png";
-// import spotify from "../../../../../assets/dataAnalatics/spotify.png";
-// import uber from "../../../../../assets/dataAnalatics/uber.png";
+
 
 function DataAnalyticsSyallabus() {
   const data = [

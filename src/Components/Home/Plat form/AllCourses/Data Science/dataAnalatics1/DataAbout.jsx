@@ -1,5 +1,5 @@
 import React from "react";
-import girl3 from "../../../../../assets/girl3.png";
+import girl3 from "../../../../../../assets/girl3.png";
 
 function DataAbout() {
   const data = [

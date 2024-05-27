@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../../../../Navbar";
-import FooterPart from "../../../footer/Footer";
-import Cybersecurityimg from "../../../../../assets/CyberSecurityImages/cybersecurityimg.png";
-import learning from "../../../../../assets/CyberSecurityImages/learning.png";
+import Navbar from "../../../../../Navbar";
+import FooterPart from "../../../../footer/Footer";
+
 import CybersecurityNavigation from "./CyberSecurityEssentialsNavigation";
 
 const CybersecurityEssentials = () => {

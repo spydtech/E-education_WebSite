@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Cybersecurityimg from "../../../../../assets/CyberSecurityImages/cybersecurityimg.png";
-import learning from "../../../../../assets/CyberSecurityImages/learning.png";
+
 import CybersecurityNavigation from "./CyberSecurityEssentialsNavigation";
-import Navbar from "../../../../Navbar";
-import FooterPart from "../../../footer/Footer";
+import Navbar from "../../../../../Navbar";
+import FooterPart from "../../../../footer/Footer";
 const CybersecurityBeginners = () => {
   return (
     <>
