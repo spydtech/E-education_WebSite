@@ -7,9 +7,10 @@ const DataScienceHero = () => {
       <div>
         <img
           // src="https://thumbs.dreamstime.com/b/ascending-arrow-icons-data-science-292911896.jpg?w=992"
-          src="https://assets-global.website-files.com/63ccf2f0ea97be12ead278ed/644a18b637053fa3709c5ba2_what-is-data-science.jpg"
-          className="md:lg:xl:w-screen md:lg:xl:h-screen md:lg:xl:block hidden"
+          src="https://t3.ftcdn.net/jpg/03/04/68/52/360_F_304685223_ttVGVAkC5JlfgEOTO8KYbN4tjnRqM715.jpg"
+          className="w-full object-cover md:h-[500px]"
         />
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
       </div>
       <div
         className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"

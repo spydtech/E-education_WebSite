@@ -9,8 +9,8 @@ const DataScienceWithPythonHero = () => {
       <div className="">
         <img
           // src="https://t3.ftcdn.net/jpg/05/90/54/50/240_F_590545034_KBdVwbAy6i5kVQYht1oswK8c8D6oVabA.jpg"
-          src="https://insidebigdata.com/wp-content/uploads/2019/04/DataScience_shutterstock_1054542323.jpg"
-          className="md:lg:xl:w-screen md:lg:xl:h-screen md:lg:xl:block hidden  "
+          src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230318230239/Python-Data-Science-Tutorial.jpg"
+          className="w-full object-cover md:h-[500px]"
         />
       </div>
       <div
