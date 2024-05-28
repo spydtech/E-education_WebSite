@@ -48,6 +48,7 @@ import FullStackWebDevelopment from "./Components/Home/Plat form/AllCourses/Full
 import FullStackDevops from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackDevops_Development/FullStackDevopsDevelopment";
 import FullStackPythonDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/fullStackPython/Main/FullStackPythonDevelopment";
 import FullStackJava from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackJava_Development/FullStackJavaDevelopment";
+// import DotnetDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackDotNet/DotnetDevelopment";
 import FullStackJavaScript from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackJavaScript/Main/JavascriptDevelopment";
 import BasicCourses from "./Components/BasicCourse/BasicCourse";
 import AdvanceCourses from "./Components/AdvanceCourses/Advance_Courses";
@@ -253,7 +254,11 @@ function App() {
             path="/fullStack_WebDevelopment/full-stack-javascript"
             element={<FullStackJavaScript />}
           />
-
+  {/* <Route
+            path="/fullStack_WebDevelopment/dot-net-development"
+            element={<DotnetDevelopment />}
+          /> */}
+{/* DotnetDevelopment */}
           {/* /student/student_fullStack_WebDevelopment/fullStack-DotNet */}
 
           {/* WishList/ Cart */}

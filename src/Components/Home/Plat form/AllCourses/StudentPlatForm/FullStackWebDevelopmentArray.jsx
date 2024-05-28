@@ -84,7 +84,7 @@ const FullStackWebDevelopmentArray = () => {
       description: "Explore the .NET framework for full-stack development",
       image:
         "https://www.radicaltechnologies.co.in/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-25-at-5.55.16-PM-1.jpeg",
-      link: "/fullStack_WebDevelopment/fullStack-DotNet",
+      link: "/fullStack_WebDevelopment/dot-net-development",
     },
     {
       id: 9,
