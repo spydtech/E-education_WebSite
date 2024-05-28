@@ -63,6 +63,8 @@ import AdvanceNetworkSecuity from "./Components/Home/Plat form/AllCourses/NetWor
 import PerformanceTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Performance_Testing/PerformanceTesting";
 import SecurityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Security_Testing/SecurityTesting";
 import UsabilityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Usablity_Testing/UsabilityTesting";
+import UnitTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Unit_Testing/UnitTestingFundamentals";
+import CompatabilityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Compatibility_Testing/CompatabilityFundamentals";
 function App() {
   return (
     <div>
@@ -184,6 +186,15 @@ function App() {
             element={<UsabilityTesting />}
           />
 
+<Route
+            path="/software_Testing/unit-testing"
+            element={<UnitTesting />}
+          />
+
+<Route
+            path="/software_Testing/compatability-testing"
+            element={<CompatabilityTesting />}
+          />
 
 
 

@@ -7,10 +7,14 @@ const PerformanceTestingHero = () => {
       {/* First Part */}
       <div>
         <img
-          src="https://images.squarespace-cdn.com/content/v1/5e51872712c0b73372f8fa1a/b8b28554-f8ac-430a-be53-16969000c48b/Performance+Testing+Process-TestEvolve.jpg"
-          className="md:lg:xl:w-screen md:lg:xl:h-screen md:lg:xl:block hidden"
+        
+          src="https://images.squarespace-cdn.com/content/v1/5e51872712c0b73372f8fa1a/14b656b0-072d-436b-9746-712f87564b5a/Performance+Testing.png"
+          className="w-full object-cover md:h-[500px]"
         />
+          {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
       </div>
+
+
       <div
         className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
         data-aos="fade-right"
