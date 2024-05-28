@@ -29,7 +29,7 @@ import Health from "./Components/Home/Plat form/AllCourses/Health";
 import Features from "./Components/Home/FeaturesOfE-education/Features";
 import PersonalDevelopment from "./Components/Home/Plat form/AllCourses/PersonalDevelopment";
 import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience";
-import DataAnalatics from "./Components/Home/Plat form/AllCourses/Data Science/dataAnalatics/DataAnalatics";
+import DataAnalatics from "./Components/Home/Plat form/AllCourses/Data Science/dataAnalatics1/DataAnalatics";
 import MachineLearning from "./Components/Home/Plat form/AllCourses/Data Science/MachineLearning/MachineLearning";
 import Reactjs from "./Components/Home/eductionCarousel/ReactjsMastery/Reactjs";
 import EthicalHacking from "./Components/Home/Plat form/AllCourses/Ethical Hacking/EthicalHacking/EthicalHacking";
