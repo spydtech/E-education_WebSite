@@ -40,7 +40,7 @@ const DataScienceArray = () => {
       description:
         "Learn the basics of data science, including data analysis, visualization, and machine learning.",
       image: "https://www.simplilearn.com/ice9/free_resources_article_thumb/Data-Science-vs.-Big-Data-vs.jpg",
-      link: "/student/student_data_Science/introduction-to-data-science",
+      link: "/data_Science/introduction-to-data-science",
     },
     {
       id: 2,
@@ -48,7 +48,7 @@ const DataScienceArray = () => {
       description:
         "Master data science concepts and techniques using Python, including libraries like NumPy, Pandas, and Matplotlib.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqXD4t6RsUw-DI-72VKpe7DfmqARUJePZ2oOFrRSsKg&s",
-      link: "/student/student_data_Science/data-science-with-python",
+      link: "/data_Science/data-science-with-python",
     },
     {
       id: 3,
@@ -56,7 +56,7 @@ const DataScienceArray = () => {
       description:
         "Dive deep into machine learning algorithms, model evaluation, and real-world applications.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp29onQyD0OWe3CebFWRXojKYMnrd1kYvMi2E26RdbLA&s",
-      link: "/student/student_data_Science/machine-Learning",
+      link: "/data_Science/machine-Learning",
     },
     {
       id: 4,
@@ -64,7 +64,7 @@ const DataScienceArray = () => {
       description:
         "Learn how to create compelling visualizations and communicate data insights effectively.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbP6OsiwOE84EbESpngmC6vXl9TlvFrzI9zVdR5hfLtQ&s",
-      link: "/student/student_data_Science/data-visualization",
+      link: "/data_Science/data-visualization",
     },
     {
       id: 5,
@@ -72,7 +72,7 @@ const DataScienceArray = () => {
       description:
         "Understand the principles and tools for processing and analyzing large datasets, including Hadoop and Spark.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSSwWQgP37V68ba2IRUb-evTUJ9yInu5E74bJwW7LRow&s",
-      link: "/student/student_data_Science/big-data-analysis",
+      link: "/data_Science/big-data-analysis",
     },
     {
       id: 6,
@@ -80,7 +80,7 @@ const DataScienceArray = () => {
       description:
         "Gain a solid foundation in statistical methods and their applications in data science.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbbm2jd1osOphRA5Qjf93Utd0GYYbtjTDp6BQE6R-K7g&s",
-      link: "/student/student_data_Science/data-Analatics",
+      link: "/data_Science/data-Analatics",
     },
     // {
     //   id: 7,

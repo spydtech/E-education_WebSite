@@ -42,7 +42,7 @@ const FullStackWebDevelopmentArray = () => {
       description: "Learn how to build web applications from front to back",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCP7WwqRZMt45muqpTdBtWssi3TJHjGG4UkwvxBaIBRAV5naPe4-XBwl6tatEPaZWkDDk&usqp=CAU",
-      link: "/student/student_fullStack_WebDevelopment/fullStack-Web-Development",
+      link: "/fullStack_WebDevelopment/fullStack-Web-Development",
     },
     {
       id: 2,
@@ -51,7 +51,7 @@ const FullStackWebDevelopmentArray = () => {
         "Master JavaScript for both front-end and back-end development",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlpaPlcovcoH9QHUUJmlEgAPMw73NMmJAC4LcyZTNjmQ&s",
-      link: "/student/student_fullStack_WebDevelopment/full-stack-javascript",
+      link: "/fullStack_WebDevelopment/full-stack-javascript",
     },
     {
       id: 3,
@@ -60,7 +60,7 @@ const FullStackWebDevelopmentArray = () => {
         "Explore MongoDB, Express.js, Angular, and Node.js for full-stack development",
       image:
         "https://crampete-staticfiles.s3.ap-south-1.amazonaws.com/blogs/Blog-133/mean-stack-image1.png",
-      link: "/student/student_fullStack_WebDevelopment/mean-Stack-Developer",
+      link: "/fullStack_WebDevelopment/mean-Stack-Developer",
     },
     {
       id: 4,
@@ -68,7 +68,7 @@ const FullStackWebDevelopmentArray = () => {
       description: "Master Python for both front-end and back-end development",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwU-4XlioqzwP5cv2Ujy_MtoMNogfoYCw5W7rK1cGLyQ&s",
-      link: "/student/student_fullStack_WebDevelopment/fullStack-Python-Development",
+      link: "/fullStack_WebDevelopment/fullStack-Python-Development",
     },
     {
       id: 5,
@@ -76,7 +76,7 @@ const FullStackWebDevelopmentArray = () => {
       description: "Explore Java for building full-stack applications",
       image:
         "https://media.geeksforgeeks.org/wp-content/uploads/20230926163338/Java-Full-Stack.png",
-      link: "/student/student_fullStack_WebDevelopment/fullStack-Java-Development",
+      link: "/fullStack_WebDevelopment/fullStack-Java-Development",
     },
     {
       id: 8,
@@ -84,7 +84,7 @@ const FullStackWebDevelopmentArray = () => {
       description: "Explore the .NET framework for full-stack development",
       image:
         "https://www.radicaltechnologies.co.in/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-25-at-5.55.16-PM-1.jpeg",
-      link: "/student/student_fullStack_WebDevelopment/fullStack-DotNet",
+      link: "/fullStack_WebDevelopment/fullStack-DotNet",
     },
     {
       id: 9,
@@ -93,7 +93,7 @@ const FullStackWebDevelopmentArray = () => {
         "Learn DevOps practices for full-stack development environments",
       image:
         "https://miro.medium.com/v2/resize:fit:1400/0*cl7fc6pt1MHjIF4K.png",
-      link: "/student/student_fullStack_WebDevelopment/fullStack-Devops",
+      link: "/fullStack_WebDevelopment/fullStack-Devops",
     },
   ];
 

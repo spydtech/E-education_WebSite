@@ -60,7 +60,9 @@ import DataScienceWithPython from "./Components/Home/Plat form/AllCourses/Data S
 import BigDataAnalysis from "./Components/Home/Plat form/AllCourses/Data Science/BigDataAnalysis/BigData";
 import Datavisualisation from "./Components/Home/Plat form/AllCourses/Data Science/Datavisualisation/Datavisualisation";
 import AdvanceNetworkSecuity from "./Components/Home/Plat form/AllCourses/NetWork Security/AdvancedNetworkSecurity/AdvancedNetworkSecurity";
-
+import PerformanceTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Performance_Testing/PerformanceTesting";
+import SecurityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Security_Testing/SecurityTesting";
+import UsabilityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Usablity_Testing/UsabilityTesting";
 function App() {
   return (
     <div>
@@ -93,70 +95,70 @@ function App() {
           <Route path="/health" element={<Health />} />
           {/* Data Science */}
           <Route
-            path="/student/student_data_Science"
+            path="/data_Science"
             element={<DataScienceArray />}
           />
           <Route path="/course/Data Science" element={<DataAnalytics />} />
           <Route
-            path="/student/student_data_Science/data-Analatics"
+            path="/data_Science/data-Analatics"
             element={<DataAnalatics />}
           />
           <Route
-            path="/student/student_data_Science/machine-Learning"
+            path="/data_Science/machine-Learning"
             element={<MachineLearning />}
           />
           <Route
-            path="/student/student_data_Science/introduction-to-data-science"
+            path="/data_Science/introduction-to-data-science"
             element={<DataScience />}
           />
           <Route
-            path="/student/student_data_Science/data-science-with-python"
+            path="/data_Science/data-science-with-python"
             element={<DataScienceWithPython />}
           />
           <Route
-            path="/student/student_data_Science/big-data-analysis"
+            path="/data_Science/big-data-analysis"
             element={<BigDataAnalysis />}
           />
 
           <Route
-            path="/student/student_data_Science/data-visualization"
+            path="/data_Science/data-visualization"
             element={<Datavisualisation />}
           />
 
           {/* Cyber Security */}
           <Route
-            path="/student/student_cyber_security"
+            path="/cyber_security"
             element={<CyberSecurityArray />}
           />
           <Route
-            path="/student/Cybersecurity/Cybersecurity_fundamentals"
+            path="/Cybersecurity/Cybersecurity_fundamentals"
             element={<Cybersecurity />}
           />
           <Route
-            path="/student/Cybersecurity/cybersecurity_beginners"
+            path="/Cybersecurity/cybersecurity_beginners"
             element={<CybersecurityBiginers />}
           />
           <Route
-            path="/student/Cybersecurity/cybersecurity_essentials"
+            path="/Cybersecurity/cybersecurity_essentials"
             element={<CybersecurityEssentials />}
           />
 
           {/* Network Security */}
           <Route
-            path="/student/student_network_security"
+            path="/network_security"
             element={<NetworkSecurityArray />}
           />
           <Route
-            path="/student/student_network_security/network-security-fundamentals"
+            path="/network_security/network-security-fundamentals"
             element={<NetworkSecurity />}
           />
           <Route
-            path="/student/student_network_security/advance-network-secuity"
+            path="/network_security/advance-network-secuity"
             element={<AdvanceNetworkSecuity />}
           />
 
           <Route
-            path="/student/student_network_security/network-security-best-practices"
+            path="/network_security/network-security-best-practices"
             element={<BestPracticesNetworkSecurity />}
           />
           {/* BestPracticesNetworkSecurity */}
@@ -164,54 +166,80 @@ function App() {
 
           {/* Software Testing */}
           <Route
-            path="/student/student_software_Testing"
+            path="/software_testing"
             element={<SoftwareTestingArray />}
           />
+
+<Route
+            path="/software_Testing/performance-testing"
+            element={<PerformanceTesting />}
+          />
+
+<Route
+            path="/software_Testing/security-testing"
+            element={<SecurityTesting />}
+          />
+            <Route
+            path="/software_Testing/usability-testing"
+            element={<UsabilityTesting />}
+          />
+
+
+
+
+
+
+
+
+
+
+
+
           {/* Ethical Hacking */}
           <Route
-            path="/student/student_ethical_Hacking"
+            path="/ethical_Hacking"
             element={<EthicalHackingStudentArray />}
           />
           <Route
-            path="/student/Ethical_Hacking/basic_ethical_Hacking"
+            path="/Ethical_Hacking/basic_ethical_Hacking"
             element={<EthicalHacking />}
           />
           <Route
-            path="/student/Ethical_Hacking/advance_Ethical_Hacking"
+            path="/Ethical_Hacking/advance_Ethical_Hacking"
             element={<AdvanceEthicalHacking />}
           />
           <Route
-            path="/student/Ethical-Hacking/certified_Ethical_Hacking"
+            path="/Ethical-Hacking/certified_Ethical_Hacking"
             element={<CertifiedEthicalHacking />}
           />
 
           {/* Full Stack */}
           <Route
-            path="/student/student_fullStack_WebDevelopment/mean-Stack-Developer"
+            path="/fullStack_WebDevelopment/mean-Stack-Developer"
             element={<MeanStackDeveloper />}
           />
           <Route
-            path="/student/student_fullStack_WebDevelopment"
+            path="/fullStack_WebDevelopment"
             element={<FullStackWebDevelopmentArray />}
           />
           <Route
-            path="/student/student_fullStack_WebDevelopment/fullStack-Devops"
+            path="/fullStack_WebDevelopment/fullStack-Devops"
             element={<FullStackDevops />}
           />
           <Route
-            path="/student/student_fullStack_WebDevelopment/fullStack-Web-Development"
+            path="/fullStack_WebDevelopment/fullStack-Web-Development"
             element={<FullStackWebDevelopment />}
           />
           <Route
-            path="/student/student_fullStack_WebDevelopment/fullStack-Python-Development"
+            path="/fullStack_WebDevelopment/fullStack-Python-Development"
             element={<FullStackPythonDevelopment />}
           />
           <Route
-            path="/student/student_fullStack_WebDevelopment/fullStack-Java-Development"
+            path="/fullStack_WebDevelopment/fullStack-Java-Development"
             element={<FullStackJava />}
           />
           <Route
-            path="/student/student_fullStack_WebDevelopment/full-stack-javascript"
+            path="/fullStack_WebDevelopment/full-stack-javascript"
             element={<FullStackJavaScript />}
           />
 

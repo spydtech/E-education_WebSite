@@ -25,14 +25,14 @@
         icon: <IoLogoElectron />,
         description:
           "Build dynamic websites & applications with front-end & back-end skills.",
-        link: "/student/student_fullStack_WebDevelopment",
+        link: "/fullStack_WebDevelopment",
       },
       {
         title: "Data Science",
         icon: <BiBarChartSquare />,
         description:
           "Master data analytics essentials for informed decisions & success.",
-        link: "/student/student_data_Science",
+        link: "/data_Science",
       },
     
       {
@@ -40,27 +40,27 @@
         icon: <IoLockClosed />,
         description:
           "Gain understanding of cybersecurity concepts & best practices.",
-        link: "/student/student_cyber_security",
+        link: "/cyber_security",
       },
       {
         title: "Ethical Hacking",
         icon: <IoShieldCheckmark />,
         description:
           "Learn ethical hacking: identify vulnerabilities & strengthen systems.",
-        link: "/student/student_ethical_Hacking",
+        link: "/ethical_Hacking",
       },
       {
         title: "Network Security",
         icon: <IoWifiSharp />,
         description:
           "Discover principles of network security: encryption, firewalls, IDS.",
-        link: "/student/student_network_security",
+        link: "/network_security",
       }, {
         title: "Software Testing",
         icon: <SiPaloaltosoftware />,
         description:
           "software application functions correctly and meets specified requirements.",
-        link: "/student/student_software_Testing",
+        link: "/software_Testing",
       },
     
     ];

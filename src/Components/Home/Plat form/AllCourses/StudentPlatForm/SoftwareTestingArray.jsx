@@ -82,21 +82,21 @@ const SoftwareTestingArray = () => {
         "title": "Performance Testing",
         "description": "Testing speed and stability.",
         "image": "https://artoftesting.com/wp-content/uploads/2019/12/types-of-performance-testing.jpg",
-        "link": "https://example.com/performance-testing"
+        "link": "/software_Testing/performance-testing"
     },
     {
         "id": 6,
         "title": "Security Testing",
         "description": "Testing for vulnerabilities.",
         "image": "https://miro.medium.com/v2/resize:fit:750/1*wYU7HChNgP-Mt8iZvdiFxQ.jpeg",
-        "link": "https://example.com/security-testing"
+        "link": "/software_Testing/security-testing"
     },
     {
         "id": 7,
         "title": "Usability Testing",
         "description": "Testing user-friendliness.",
         "image": "https://er9wjw26noi.exactdn.com/wp-content/uploads/2022/08/What-is-usability-testing.jpg?lossy=1&quality=88&webp=88&ssl=1",
-        "link": "https://example.com/usability-testing"
+        "link": "/software_Testing/usability-testing"
     },
     {
         "id": 8,
