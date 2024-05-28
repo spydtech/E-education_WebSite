@@ -1,66 +1,19 @@
 import React from "react";
 
 const DatavisualisationHero = () => {
-  // return (
-  //   <>
-  //     {/* First part */}
-  //     <div className="w-full flex flex-col items-center py-16 px-4 md:px-10 lg:px-24 bg-gradient-to-br from-purple-400 via-pink-500 to-red-500">
-  //       {/* <div className="max-w-full mx-auto">
-  //         <img
-  //           id="heroImg1"
-  //           className="transition-all duration-300 ease-in-out hover:scale-105 w-full max-w-full rounded-lg shadow-lg"
-  //           alt="Awesome hero page image"
-  //           src="https://media.istockphoto.com/id/947667368/video/motion-infographic-hud-colorful-infographics-interface-with-alpha-channel.jpg?s=640x640&k=20&c=DkiArZn2wrkfqCoII7kOPvYGEdU4LycuGFGkWPR_EyY="
-  //         />
-  //       </div> */}
-  //       <div>
-  //         <img
-  //           // src="https://t3.ftcdn.net/jpg/05/90/54/50/240_F_590545034_KBdVwbAy6i5kVQYht1oswK8c8D6oVabA.jpg"
-  //           src="https://media.istockphoto.com/id/947667368/video/motion-infographic-hud-colorful-infographics-interface-with-alpha-channel.jpg?s=640x640&k=20&c=DkiArZn2wrkfqCoII7kOPvYGEdU4LycuGFGkWPR_EyY="
-  //           className="md:lg:xl:w-screen md:lg:xl:h-screen md:lg:xl:block hidden"
-  //         />
-  //       </div>
-  //       <div className="mt-8 text-center lg:text-left max-w-2xl">
-  //         <h1 className="text-4xl font-bold font-lora text-blue-900 lg:text-5xl xl:text-6xl">
-  //           <span className="block w-full">Data Visualization</span> for
-  //           <span className="text-purple-700"> optimizing your business!</span>
-  //         </h1>
-  //         <p className="py-4 text-lg text-white md:py-6 xl:py-8">
-  //           Empowering you to leverage advanced visualizations and data
-  //           insights, we are your trusted partners in driving business success.
-  //           Our state-of-the-art data visualization tools transform complex
-  //           datasets into intuitive, interactive visual narratives. By making
-  //           data more accessible and understandable, we help you uncover hidden
-  //           patterns, trends, and correlations that can inform strategic
-  //           decisions. Whether you're looking to optimize operations, enhance
-  //           customer experiences, or identify new market opportunities, our
-  //           solutions empower you to make data-driven decisions with confidence.
-  //         </p>
-
-  //         <div className="mt-6">
-  //           <a
-  //             href="#contact"
-  //             className="inline-block px-8 py-4 text-lg font-medium tracking-wider text-white bg-purple-600 rounded-lg md:px-10 hover:bg-purple-700 shadow-md transition-transform transform hover:-translate-y-1"
-  //           >
-  //             <span>Explore More</span>
-  //           </a>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </>
-  // );
+ 
   return (
     <>
       {/* First Part */}
-      <div>
+      <div className="">
         <img
           // src="https://t3.ftcdn.net/jpg/05/90/54/50/240_F_590545034_KBdVwbAy6i5kVQYht1oswK8c8D6oVabA.jpg"
-          src="https://media.istockphoto.com/id/947667368/video/motion-infographic-hud-colorful-infographics-interface-with-alpha-channel.jpg?s=640x640&k=20&c=DkiArZn2wrkfqCoII7kOPvYGEdU4LycuGFGkWPR_EyY="
-          className="md:lg:xl:w-screen md:lg:xl:h-screen md:lg:xl:block hidden"
+          src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2023_04_Understanding-Break-Statement-in-C-35.jpg"
+          className="w-full object-cover md:h-[500px]"
         />
       </div>
       <div
-        className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
+        className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5 md:gap-24"
         data-aos="fade-right"
         data-aos-duration={800}
       >

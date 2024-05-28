@@ -55,7 +55,7 @@ const DatavisualisationNavigation = () => {
 
   return (
     <>
-      <nav className="flex items-center px-4 sm:px-6 py-4">
+      <nav className="flex items-center px-4 sm:px-6 py-4 mx-0">
         <button className="text-black text-2xl sm:hidden" onClick={toggleMenu}>
           {menuOpen ? <FaTimes className="mb-56" /> : <FaBars />}{" "}
           {/* Toggle between menu and close icon */}

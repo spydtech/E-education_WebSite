@@ -58,6 +58,7 @@ import NetworkSecurity from "./Components/Home/Plat form/AllCourses/NetWork Secu
 import BestPracticesNetworkSecurity from "./Components/Home/Plat form/AllCourses/NetWork Security/BestPracticesNetworkSecurity/BestPracticesNetworkSecurity";
 import DataScienceWithPython from "./Components/Home/Plat form/AllCourses/Data Science/DataScienceWith_Python/DataScienceWithPython";
 import BigDataAnalysis from "./Components/Home/Plat form/AllCourses/Data Science/BigDataAnalysis/BigData";
+import Datavisualisation from "./Components/Home/Plat form/AllCourses/Data Science/Datavisualisation/Datavisualisation";
 import AdvanceNetworkSecuity from "./Components/Home/Plat form/AllCourses/NetWork Security/AdvancedNetworkSecurity/AdvancedNetworkSecurity";
 
 function App() {
@@ -116,7 +117,12 @@ function App() {
             path="/student/student_data_Science/big-data-analysis"
             element={<BigDataAnalysis />}
           />
-          {/* /student/student_data_Science/data-visualization */}
+
+          <Route
+            path="/student/student_data_Science/data-visualization"
+            element={<Datavisualisation />}
+          />
+
           {/* Cyber Security */}
           <Route
             path="/student/student_cyber_security"
