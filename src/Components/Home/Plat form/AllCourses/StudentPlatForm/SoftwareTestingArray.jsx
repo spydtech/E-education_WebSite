@@ -54,7 +54,7 @@ const SoftwareTestingArray = () => {
         "title": "Unit Testing",
         "description": "Testing individual components in isolation.",
         "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200514113957/What-is-Unit-Testing-and-Why-Developer-Should-Learn-It.png",
-        "link": "https://example.com/unit-testing"
+        "link": "/software_Testing/unit-testing"
     },
     {
         "id": 2,
@@ -103,7 +103,7 @@ const SoftwareTestingArray = () => {
         "title": "Compatibility Testing",
         "description": "Testing across different environments.",
         "image": "https://www.collidu.com/media/catalog/product/img/7/8/78772832867f22e863a6a75381dc0029637dd1400bdf68eb5657858d7bd95deb/compatibility-testing-slide1.png",
-        "link": "https://example.com/compatibility-testing"
+        "link": "/software_Testing/compatability-testing"
     },
     {
         "id": 9,

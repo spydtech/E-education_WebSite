@@ -1,6 +1,6 @@
 import React from "react";
-// import Navbar from "../../../../Navbar";
-// import Footer from "../../../footer/Footer";
+import Navbar from "../../../../../Navbar";
+import Footer from "../../../../footer/Footer";
 import UnitTestingNavigation from "./UnitTestingAbout/UnitTestingNavigation";
 import UnitTestingHero from "./UnitTestingHero";
 import UnitTestingCard from "./UnitTestingCard";
@@ -9,13 +9,13 @@ import UnitTestingCareersOutcomes from "./UnitTestingAbout/UnitTestingCareersOut
 const UnitTesting = () => {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <UnitTestingHero />
       <UnitTestingCard />
       <UnitTestingNavigation />
       <UnitTestingFoot />
       {/* <UnitTestingCareersOutcomes /> */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

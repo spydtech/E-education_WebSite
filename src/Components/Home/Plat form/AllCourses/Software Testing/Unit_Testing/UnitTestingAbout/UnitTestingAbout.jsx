@@ -1,7 +1,7 @@
 import React from "react";
-import protection from "../../../../../..";
-import programmer from "../../../../../../assets/dataAnalatics/programmer.jpg";
-import assistance from "../../../../../../assets/dataAnalatics/assistance.jpg";
+
+import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
+import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
 
 const UnitTestingAbout = () => {
   return (

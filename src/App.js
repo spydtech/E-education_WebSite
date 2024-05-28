@@ -64,7 +64,7 @@ import PerformanceTesting from "./Components/Home/Plat form/AllCourses/Software 
 import SecurityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Security_Testing/SecurityTesting";
 import UsabilityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Usablity_Testing/UsabilityTesting";
 import UnitTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Unit_Testing/UnitTestingFundamentals";
-import CompatabilityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Compatibility_Testing/CompatabilityFundamentals";
+import CompatabilityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Compatability_Testing/CompatabilityFundamentals";
 function App() {
   return (
     <div>

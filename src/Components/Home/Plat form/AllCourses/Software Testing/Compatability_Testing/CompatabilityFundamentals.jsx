@@ -1,26 +1,25 @@
 import React from "react";
-// import Navbar from "../../../../Navbar";
-// import Footer from "../../../footer/Footer";
-// import UnitTestingNavigation from "./UnitTestingAbout/UnitTestingNavigation";
+import Navbar from "../../../../../Navbar";
+
 import CompatabilityNavigation from "./CompatabilityAbout/CompatabilityNavigation";
-// import UnitTestingHero from "./CompatabilityHero";
+
 import CompatabilityHero from "./CompatabilityHero";
-// import UnitTestingCard from "./UnitTestingCard";
+
 import CompatabilityCard from "./CompatabilityCard";
-// import UnitTestingFoot from "./UnitTestingFoot";
+
 import CompatabilityFoot from "./CompatabilityFoot";
-import CompatabilityCareersOutcomes from "./CompatabilityAbout/CompatilityCareersOutcomes";
-// import UnitTestingCareersOutcomes from "./UnitTestingAbout/UnitTestingCareersOutcomes";
+import Footer from "../../../../footer/Footer";
+
 const CompatabilityTesting = () => {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <CompatabilityHero />
       <CompatabilityCard />
       <CompatabilityNavigation />
       <CompatabilityFoot />
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

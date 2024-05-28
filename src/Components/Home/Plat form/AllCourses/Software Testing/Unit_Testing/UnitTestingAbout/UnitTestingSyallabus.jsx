@@ -1,8 +1,4 @@
 import React from "react";
-import amazon from "../../../../../../assets/dataAnalatics/amazon.png";
-import google from "../../../../../../assets/dataAnalatics/google.png";
-import microsoft from "../../../../../../assets/dataAnalatics/microsoft.png";
-
 function UnitTestingSyllabus() {
   const data = [
     {

@@ -17,7 +17,7 @@ const PerformanceTestingCard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-1">
+              <a >
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/tiny-people-testing-quality-assurance-software-isolated-flat-vector-illustration-cartoon-character-fixing-bugs-hardware-device-application-test-it-service-concept_74855-10172.jpg?t=st=1716794667~exp=1716798267~hmac=b97dedb68e1abc43abc371702ab3b6213361edb8dd3ca8f0d717d0764f3be7b3&w=826"

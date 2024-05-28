@@ -7,18 +7,11 @@ const CompatabilityHero = () => {
       {/* First Part */}
       <div>
         <img
-          // src="https://www.extnoc.com/learn/wp-content/uploads/2022/02/Network-Security.jpg"
-          src="https://www.tatvasoft.com/outsourcing/wp-content/uploads/2022/12/Compatibility-Testing.jpg"
-          className="md:lg:xl:w-screen md:lg:xl:h-screen md:lg:xl:block hidden"
-          // style={{
-          //   width: "900px",
-          //   height: "600px",
-          //   justifyContent: "center",
-          //   alignItems: "center",
-          //   marginLeft: "120px",
-          //   marginTop: "0px",
-          // }}
+        
+          src="https://www.perfomatix.com/wp-content/uploads/2022/07/Perfomatix-blog-featured-image-Compatibility-Testing-Everything-You-Need-to-Know-About.png"
+          className="w-full object-cover md:h-[500px]"
         />
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
       </div>
       <div
         className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"

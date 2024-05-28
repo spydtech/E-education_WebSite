@@ -7,18 +7,11 @@ const UnitTestingHero = () => {
       {/* First Part */}
       <div>
         <img
-          // src="https://www.extnoc.com/learn/wp-content/uploads/2022/02/Network-Security.jpg"
-          src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200514113957/What-is-Unit-Testing-and-Why-Developer-Should-Learn-It.png"
-          className="md:lg:xl:w-screen md:lg:xl:h-screen md:lg:xl:block hidden"
-          // style={{
-          //   width: "900px",
-          //   height: "600px",
-          //   justifyContent: "center",
-          //   alignItems: "center",
-          //   marginLeft: "120px",
-          //   marginTop: "0px",
-          // }}
+        
+          src="https://assets.codegrip.tech/wp-content/uploads/2019/10/04113325/1_Y07KF-_laqG2cJ1Squ0Bag.png"
+          className="w-full object-cover md:h-[500px]"
         />
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
       </div>
       <div
         className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
