@@ -1,14 +1,3 @@
-// import React from 'react'
-
-// const Advance_Courses = () => {
-//   return (
-//     <div>Advance_Courses</div>
-//   )
-// }
-
-// export default Advance_Courses
-
-
 import React, { useEffect, useState } from "react";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
@@ -50,14 +39,14 @@ const Advance_Courses = () => {
         title: "Advanced Full Stack Web Development",
         description: "Learn to build full-fledged web applications using the latest technologies and frameworks.",
         image: "https://media.licdn.com/dms/image/D4E12AQHPfeaf61ARlw/article-cover_image-shrink_720_1280/0/1707956393334?e=2147483647&v=beta&t=GYpFx7NlLhBWpF2Ow0tzdwoqWrF78PvPmI-wVFuO3B8",
-        link: "/advancedFullStackWebDevelopment",
+        link: "/fullStack_WebDevelopment/fullStack-Web-Development",
       },
       {
         id: 2,
         title: "Comprehensive Software Testing",
         description: "Master advanced software testing techniques and tools to ensure high-quality software delivery.",
         image: "https://www.buildoffshoreteam.com/blog/wp-content/uploads/2024/03/type-of-testing.jpg",
-        link: "/comprehensiveSoftwareTesting",
+        link: "/software_testing",
       },
       {
         id: 3,
@@ -71,7 +60,7 @@ const Advance_Courses = () => {
         title: "Java Programming Mastery",
         description: "Become proficient in advanced Java programming for enterprise-level applications.",
         image: "https://img-c.udemycdn.com/course/750x422/5638204_76bd.jpg",
-        link: "/javaProgrammingMastery",
+        link: "/fullStack_WebDevelopment/fullStack-Java-Development",
       },
       {
         id: 5,
@@ -85,13 +74,13 @@ const Advance_Courses = () => {
         title: "JavaScript for Advanced Developers",
         description: "Enhance your JavaScript skills with advanced programming techniques for front-end and back-end development.",
         image: "https://www.bluejaywebsolutions.com/sites/default/files/2021-08/javascript.jpg",
-        link: "/javascriptAdvancedDevelopers",
+        link: "/fullStack_WebDevelopment/full-stack-javascript",
       }, {
         id: 7,
         title: "Advanced Data Science Techniques",
         description: "Master advanced data science techniques including data mining, predictive modeling, and big data analytics.",
         image: "https://cdn.hackr.io/uploads/posts/large/1573232636UxdizR1FyX.png",
-        link: "/advancedDataScienceTechniques",
+        link: "/data_Science",
       },
       {
         id: 8,

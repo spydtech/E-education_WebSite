@@ -198,15 +198,6 @@ function App() {
           />
 
 
-
-
-
-
-
-
-
-
-
           {/* Ethical Hacking */}
           <Route
             path="/ethical_Hacking"

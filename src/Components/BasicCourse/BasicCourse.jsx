@@ -1,14 +1,3 @@
-// import React from 'react'
-
-// const BasicCourseArray = () => {
-//   return (
-//     <div>BasicCourseArray</div>
-//   )
-// }
-
-// export default BasicCourseArray
-
-
 import React, { useEffect, useState } from "react";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
@@ -51,16 +40,16 @@ const BasicCourseArray = () => {
       description: "Learn how to build web applications from front to back",
       image:
         "https://media.geeksforgeeks.org/wp-content/uploads/20231205165904/web-development-image.webp",
-      link: "/fullStackWebDevelopment",
+      link: "/fullStack_WebDevelopment",
     },
     {
       id: 2,
-      title: "Software Testing",
+      title: "Unit Testing",
       description:
         "Master JavaScript for both front-end and back-end development",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3wuCZOCBggFb3RK8AGPGGQagsocutNezBfghSNLrdg&s",
-      link: "/fullStackJavaScript",
+      link: "/software_Testing/unit-testing",
     },
     {
       id: 3,

@@ -51,7 +51,7 @@ const PremiumCourses = () => {
       description: "Learn how to build web applications from front to back",
       image:
         "https://i0.wp.com/blog.apitier.com/wp-content/uploads/2023/02/MERN_Stack.jpg?fit=560%2C315&ssl=1",
-      link: "/fullStackWebDevelopment",
+      link: "/fullStack_WebDevelopment/mean-Stack-Developer",
     },
     {
       id: 2,
@@ -60,7 +60,7 @@ const PremiumCourses = () => {
         "Master JavaScript for both front-end and back-end development",
       image:
         "https://media.geeksforgeeks.org/wp-content/uploads/20230823152056/What-is-Advance-JAVA.png",
-      link: "/fullStackJavaScript",
+      link: "/fullStack_WebDevelopment/fullStack-Java-Development",
     },
     {
       id: 3,
@@ -77,14 +77,14 @@ const PremiumCourses = () => {
       description: "Master Python for both front-end and back-end development",
       image:
         "https://www.simplilearn.com/ice9/free_resources_article_thumb/Deep-Learning-vs-Machine-Learning.jpg",
-      link: "/FullStackPythonDevelopment",
+      link: "/data_Science/machine-Learning",
     },
     {
         id: 5,
         title: "DevOps Mastery",
         description: "Learn advanced DevOps practices and tools for automating and streamlining development workflows.",
         image: "https://s3.amazonaws.com/tf-nightingale/2023/04/How-DevOps-Mastery-Optimizes-Development-and-Operations-for-Business-Success--2.jpg",
-        link: "/devOpsMastery",
+        link: "/fullStack_WebDevelopment/fullStack-Devops",
       },
   
       
@@ -100,7 +100,7 @@ const PremiumCourses = () => {
         title: "Cybersecurity Advanced Practices",
         description: "Learn advanced techniques and tools for protecting systems and networks from cyber threats.",
         image: "https://www.ggoffice.com/wp-content/uploads/2024/03/Golden-Gate-March-2024-Blog-Image-Cybersecurity.jpg",
-        link: "/cybersecurityAdvancedPractices",
+        link: "/Cybersecurity/cybersecurity_essentials",
       },
       {
         id: 8,
