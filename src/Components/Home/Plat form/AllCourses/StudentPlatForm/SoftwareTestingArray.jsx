@@ -124,7 +124,7 @@ const SoftwareTestingArray = () => {
         "title": "Manual Testing",
         "description": "Testing done manually by testers.",
         "image": "https://azilen-technologies.s3.us-west-1.amazonaws.com/wp-content/uploads/2023/07/Manual-testing.jpg",
-        "link": "https://example.com/manual-testing"
+        "link": "/software_Testing/manual_testing"
     },
     {
         "id": 12,

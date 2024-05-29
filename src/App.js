@@ -68,7 +68,7 @@ import UnitTesting from "./Components/Home/Plat form/AllCourses/Software Testing
 import CompatabilityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Compatability_Testing/CompatabilityFundamentals";
 import IntigrationTesting from './Components/Home/Plat form/AllCourses/Software Testing/Integration_Testing/IntegrationFundamentals';
 import SystemTesting from "./Components/Home/Plat form/AllCourses/Software Testing/System_Testing/SystemFundamentals";
-
+import ManualTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Manual_Testing/ManualTesting";
 function App() {
   return (
     <div>
@@ -211,6 +211,12 @@ function App() {
             path="/software_Testing/system_testing"
             element={<SystemTesting />}
           />
+
+<Route
+            path="/software_Testing/manual_testing"
+            element={<ManualTesting />}
+          />
+
 
 
           {/* Ethical Hacking */}
