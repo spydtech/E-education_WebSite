@@ -131,7 +131,7 @@ const SoftwareTestingArray = () => {
         "title": "Automated Testing",
         "description": "Testing using automation tools.",
         "image": "https://api.edoxi.com/assets/studyhub/Automation_Testing_-_Introduction_to_Automation_Testing1.webp",
-        "link": "https://example.com/automated-testing"
+        "link": "/software_Testing/automation_testing"
     }
 ]
 
