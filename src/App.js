@@ -29,15 +29,11 @@ import Health from "./Components/Home/Plat form/AllCourses/Health";
 import Features from "./Components/Home/FeaturesOfE-education/Features";
 import PersonalDevelopment from "./Components/Home/Plat form/AllCourses/PersonalDevelopment";
 import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience";
-import DataAnalatics from "./Components/Home/Plat form/AllCourses/dataAnalatics/DataAnalatics";
-import MachineLearning from "./Components/Home/Plat form/AllCourses/MachineLearning/MachineLearning";
+import DataAnalatics from "./Components/Home/Plat form/AllCourses/Data Science/dataAnalatics1/DataAnalatics";
+import MachineLearning from "./Components/Home/Plat form/AllCourses/Data Science/MachineLearning/MachineLearning";
 import Reactjs from "./Components/Home/eductionCarousel/ReactjsMastery/Reactjs";
 import EthicalHacking from "./Components/Home/Plat form/AllCourses/EthicalHacking/EthicalHacking";
-import AdvanceEthicalHacking from "./Components/Home/Plat form/AllCourses/AdvancedEthicalHacking/AdvanceEthicalHacking";
-import CertifiedEthicalHacking from "./Components/Home/Plat form/AllCourses/CertifiedEthicalHacking/certifiedEthicalHacking";
 import Cybersecurity from "./Components/Home/Plat form/AllCourses/Cybersecurity/cybersecurity";
-import CybersecurityBiginers from "./Components/Home/Plat form/AllCourses/CybersecurityBiginers/CyberSecurityEssentialsNavigation";
-import CybersecurityEssentials from "./Components/Home/Plat form/AllCourses/CybersecurityEssentials/CyberSecurityEssentialsNavigation";
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
 import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
 import EthicalHackingStudentArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/EthicalHackingStudentArray";
@@ -71,8 +67,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about_us" element={<AboutUs />} />
-          <Route path="/mylearning" element={<MyLearning />} />
           <Route path="/Certificates" element={<Certificates />} />
           <Route path="/features" element={<Features />} />
           <Route path="/login" element={<Login />} />
@@ -93,153 +87,18 @@ function App() {
           <Route path="/professional" element={<Professional />} />
           <Route path="/reactjs" element={<Reactjs />} />
           <Route path="/health" element={<Health />} />
-          {/* Data Science */}
-          <Route
-            path="/student/student_data_Science"
-            element={<DataScienceArray />}
-          />
-          <Route path="/course/Data Science" element={<DataAnalytics />} />
-          <Route
-            path="/student/student_data_Science/data-Analatics"
-            element={<DataAnalatics />}
-          />
-          <Route
-            path="/student/student_data_Science/machine-Learning"
-            element={<MachineLearning />}
-          />
-          <Route
-            path="/student/student_data_Science/introduction-to-data-science"
-            element={<DataScience />}
-          />
-          <Route
-            path="/student/student_data_Science/data-science-with-python"
-            element={<DataScienceWithPython />}
-          />
-          <Route
-            path="/student/student_data_Science/big-data-analysis"
-            element={<BigDataAnalysis />}
-          />
-          {/* /student/student_data_Science/data-visualization */}
-          {/* Cyber Security */}
-          <Route
-            path="/student/student_cyber_security"
-            element={<CyberSecurityArray />}
-          />
-          <Route
-            path="/student/Cybersecurity/Cybersecurity_fundamentals"
-            element={<Cybersecurity />}
-          />
-          <Route
-            path="/student/Cybersecurity/cybersecurity_beginners"
-            element={<CybersecurityBiginers />}
-          />
-          <Route
-            path="/student/Cybersecurity/cybersecurity_essentials"
-            element={<CybersecurityEssentials />}
-          />
-
-          {/* Network Security */}
-          <Route
-            path="/student/student_network_security"
-            element={<NetworkSecurityArray />}
-          />
-          <Route
-            path="/student/student_network_security/network-security-fundamentals"
-            element={<NetworkSecurity />}
-          />
-          <Route
-            path="/student/student_network_security/advance-network-secuity"
-            element={<AdvanceNetworkSecuity />}
-          />
-
-          <Route
-            path="/bestpracticesnetworksecurity"
-            element={<BestPracticesNetworkSecurity />}
-          />
-          {/* /student/student_network_security/network-security-best-practices */}
-
-          {/* Software Testing */}
-          <Route
-            path="/student/student_software_Testing"
-            element={<SoftwareTestingArray />}
-          />
-
-          <Route
-            path="/student/student_software_Testing/performancetesting"
-            element={<PerformanceTesting />}
-          />
-
-          <Route
-            path="/student/student_software_Testing/securitytesting"
-            element={<SecurityTesting />}
-          />
-
-          <Route
-            path="/student/student_software_Testing/usabilitytesting"
-            element={<UsabilityTesting />}
-          />
-
-          <Route
-            path="/student/student_software_Testing/manualtesting"
-            element={<ManualTesting />}
-          />
-
-          <Route
-            path="/student/student_software_Testing/automationtesting"
-            element={<AutomationTesting />}
-          />
-
-          <Route
-            path="/student/student_software_Testing/regressiontesting"
-            element={<RegressionTesting />}
-          />
-          {/* Ethical Hacking */}
-          <Route
-            path="/student/student_ethical_Hacking"
-            element={<EthicalHackingStudentArray />}
-          />
-          <Route
-            path="/student/Ethical_Hacking/basic_ethical_Hacking"
-            element={<EthicalHacking />}
-          />
-          <Route
-            path="/student/Ethical_Hacking/advance_Ethical_Hacking"
-            element={<AdvanceEthicalHacking />}
-          />
-          <Route
-            path="/student/Ethical-Hacking/certified_Ethical_Hacking"
-            element={<CertifiedEthicalHacking />}
-          />
-
-          {/* Full Stack */}
-          <Route
-            path="/student/student_fullStack_WebDevelopment/mean-Stack-Developer"
-            element={<MeanStackDeveloper />}
-          />
-          <Route
-            path="/student/student_fullStack_WebDevelopment"
-            element={<FullStackWebDevelopmentArray />}
-          />
-          <Route
-            path="/student/student_fullStack_WebDevelopment/fullStack-Devops"
-            element={<FullStackDevops />}
-          />
-          <Route
-            path="/student/student_fullStack_WebDevelopment/fullStack-Web-Development"
-            element={<FullStackWebDevelopment />}
-          />
-          <Route
-            path="/student/student_fullStack_WebDevelopment/fullStack-Python-Development"
-            element={<FullStackPythonDevelopment />}
-          />
-          <Route
-            path="/student/student_fullStack_WebDevelopment/fullStack-Java-Development"
-            element={<FullStackJava />}
-          />
-          {/* /student/student_fullStack_WebDevelopment/full-stack-javascript */}
-          {/* /student/student_fullStack_WebDevelopment/fullStack-DotNet */}
-
-          {/* WishList/ Cart */}
+          <Route path="/meanStackDeveloper" element={<MeanStackDeveloper />} />
+          <Route path="/machineLearning" element={<MachineLearning />} />
+          <Route path="/fullStackDevops" element={<FullStackDevops />} />
+          <Route path="/cybersecurity" element={<Cybersecurity />} />
+          <Route path="/student/fullStackWebDevelopmentArray" element={<FullStackWebDevelopmentArray />} />
+          <Route path="/student/dataScienceArray" element={<DataScienceArray />} />
+          <Route path="/student/ethicalHackingStudentArray" element={<EthicalHackingStudentArray />} />
+          <Route path="/student/networkSecurityArray" element={<NetworkSecurityArray />} />
+          <Route path="/student/cyberSecurityArray" element={<CyberSecurityArray />} />
+          <Route path="/ethicalHacking" element={<EthicalHacking />} />
+          <Route path="/fullStackPythonDevelopment" element={<FullStackPythonDevelopment />} />
+          <Route path="/fullStackJavaDevelopment" element={<FullStackJava />} />
           <Route path="/wishLists" element={<WishLists />} />
           <Route path="/cart" element={<Cart />} />
           <Route
