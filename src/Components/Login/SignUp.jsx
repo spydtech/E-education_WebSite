@@ -24,10 +24,6 @@ const SignUp = () => {
     password: ''
   });
   const inputRefs = useRef([]); // State for showing OTP modal
-
-
-
-
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
   const [error, setError] = useState('');
   // const [showOtpModal, setShowOtpModal] = useState(false); // State for showing OTP modal

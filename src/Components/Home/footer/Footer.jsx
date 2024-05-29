@@ -7,7 +7,7 @@ import { BsInstagram } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
 import IMG from "../../../assets/E- education logo .png";
 
-function FooterPart() {
+function Footer() {
   const sections = [
     {
       title: "Learning Paths",
@@ -215,4 +215,4 @@ function FooterPart() {
   );
 }
 
-export default FooterPart;
+export default Footer;

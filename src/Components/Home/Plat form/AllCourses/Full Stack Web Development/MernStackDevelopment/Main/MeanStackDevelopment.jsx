@@ -3,11 +3,10 @@ import React, { useState, useEffect } from "react";
 import AboutCourses from "./AboutCourses";
 import Community from "../Community/community";
 import SuccessStory from "../SuccessStory/successstory";
-import Navber from '../../../../../Navbar';
-import Footer from '../../../../footer/Footer'
+import Navbar from "../../../../../../Navbar";
+import FooterPart from "../../../../../footer/Footer";
 // import Award from "../Award/Award";
 
-// import Footer from "../../../footer/Footer";
 
 import Delivery_Methods from "../deliverymethods/Delivery_Methods";
 import MeanStackDeveloper from "../Developer/MeanStackDeveloper";
@@ -44,8 +43,7 @@ const MeanStackDevelopment = () => {
   // }, [currentSlide]);
   return (
     <>
-      <Navber />
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="w-full bg-[#b8b8ff] md:pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
         <div className="font-l">
           <span className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base">
@@ -101,7 +99,7 @@ const MeanStackDevelopment = () => {
       {/* <Award /> */}
       <SuccessStory />
       {/* <Footer /> */}
-      <Footer />
+      <FooterPart />
     </>
   );
 };
