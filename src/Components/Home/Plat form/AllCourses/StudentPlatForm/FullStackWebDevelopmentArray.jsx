@@ -51,7 +51,7 @@ const FullStackWebDevelopmentArray = () => {
         "Master JavaScript for both front-end and back-end development",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlpaPlcovcoH9QHUUJmlEgAPMw73NMmJAC4LcyZTNjmQ&s",
-      link: "/fullStackJavaScript",
+      link: "/fullStack_WebDevelopment/full-stack-javascript",
     },
     {
       id: 3,
@@ -60,7 +60,7 @@ const FullStackWebDevelopmentArray = () => {
         "Explore MongoDB, Express.js, Angular, and Node.js for full-stack development",
       image:
         "https://crampete-staticfiles.s3.ap-south-1.amazonaws.com/blogs/Blog-133/mean-stack-image1.png",
-      link: "/meanStackDeveloper",
+      link: "/fullStack_WebDevelopment/mean-Stack-Developer",
     },
     {
       id: 4,
@@ -68,7 +68,7 @@ const FullStackWebDevelopmentArray = () => {
       description: "Master Python for both front-end and back-end development",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwU-4XlioqzwP5cv2Ujy_MtoMNogfoYCw5W7rK1cGLyQ&s",
-      link: "/FullStackPythonDevelopment",
+      link: "/fullStack_WebDevelopment/fullStack-Python-Development",
     },
     {
       id: 5,
@@ -76,7 +76,7 @@ const FullStackWebDevelopmentArray = () => {
       description: "Explore Java for building full-stack applications",
       image:
         "https://media.geeksforgeeks.org/wp-content/uploads/20230926163338/Java-Full-Stack.png",
-      link: "/fullStackJavaDevelopment",
+      link: "/fullStack_WebDevelopment/fullStack-Java-Development",
     },
     {
       id: 8,
@@ -84,7 +84,7 @@ const FullStackWebDevelopmentArray = () => {
       description: "Explore the .NET framework for full-stack development",
       image:
         "https://www.radicaltechnologies.co.in/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-25-at-5.55.16-PM-1.jpeg",
-      link: "/fullStackDotNet",
+      link: "/fullStack_WebDevelopment/dot-net-development",
     },
     {
       id: 9,
@@ -93,7 +93,7 @@ const FullStackWebDevelopmentArray = () => {
         "Learn DevOps practices for full-stack development environments",
       image:
         "https://miro.medium.com/v2/resize:fit:1400/0*cl7fc6pt1MHjIF4K.png",
-      link: "/fullStackDevops",
+      link: "/fullStack_WebDevelopment/fullStack-Devops",
     },
   ];
 
@@ -103,7 +103,7 @@ const FullStackWebDevelopmentArray = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <img
         src="https://miro.medium.com/v2/resize:fit:1400/1*e4HBnH84BpwLCFr78xvfjg.gif"
         className="object-cover w-full md:h-[450px]"

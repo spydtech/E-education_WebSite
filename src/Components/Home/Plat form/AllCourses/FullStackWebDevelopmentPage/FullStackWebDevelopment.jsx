@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Navbar from "../../../../Navbar";
 import AboutCourses from "./AboutCourses";
 import Community from "../../../Community/community";
@@ -9,6 +9,7 @@ import Footer from "../../../footer/Footer";
 import WebDeveloper from "./Web_Development/WebDeveloper";
 import Delivery_Methods from "./deliverymethods/Delivery_Methods";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../../../../CartContext";
 
 
 const images = [
@@ -21,6 +22,7 @@ const images = [
 const ParticularFullStack = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { addToCart } = useContext(CartContext);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -29,6 +31,16 @@ const ParticularFullStack = () => {
     return () => clearInterval(interval);
   }, [currentSlide]);
 
+  const handleEnroll = () => {
+    const course = {
+      name: 'Full Stack Web Development',
+      seller: 'SPY D TECH',
+      price: 199,
+      image: images[currentSlide],
+    };
+    addToCart(course);
+    navigate('/cart'); // Navigate to CartItem page
+  };
 
 
   // useEffect(() => {
@@ -60,7 +72,7 @@ const ParticularFullStack = () => {
             Develop practical skills and stand out in a competitive job market.
             Start your full stack journey today.
           </p>
-          <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95" navigate="/course-details">
+          <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95" onClick={handleEnroll}>
             Eroll Now
           </button>
           <div className="py-4">11,095 already enrolled</div>

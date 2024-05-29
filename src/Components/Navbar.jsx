@@ -16,7 +16,7 @@ const Navbar = () => {
   const navigationRef = useRef(null); // Initialize navigationRef with useRef
   const navigate = useNavigate();
   const jwt = localStorage.getItem('jwt');
- const auth = useSelector((state) => state.auth);
+  const auth = useSelector((state) => state.auth);
 
   const dispatch = useDispatch();
 
@@ -117,7 +117,7 @@ const Navbar = () => {
                           setShowPopup(true);
                         }
                       }}
-                      
+
                     >
                       {item.name}
                     </a>
@@ -125,113 +125,113 @@ const Navbar = () => {
                 </div>
               </div>
 
-               {/* Popup */}
-          {showPopup && (
-            <div
-            onMouseLeave={() => setShowPopup(false)}
-            className="absolute top-14 left-0 bg-white p-4 border border-gray-300 rounded shadow-lg">
-              {/* Your popup content here */}
-              <h1 className='text-xl '>Explore Here Courses List</h1>
-              <hr className='text-2xl'/>
-              <div className='flex gap-10 py-5'> 
-              <div class="p-4 max-w-lg mx-auto ">
-    <details ClassName="mb-2">
-        <summary ClassName="bg-gray-200 p-4 rounded-lg cursor-pointer shadow-md mb-4">
-            <span ClassName="font-semibold">Advanced Courses</span>
-        </summary>
-        <ul ClassName="ml-8 space-y-4">
-            <li>
-                <details ClassName="mb-2">
-                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span ClassName="font-semibold">Python Programming</span>
-                    </summary>
-                   
-                </details>
-            </li>
-            <li>
-                <details ClassName="mb-2">
-                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span ClassName="font-semibold">Data Science</span>
-                    </summary>
-                   
-                </details>
-            </li>
-            <details ClassName="mb-2">
-                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span ClassName="font-semibold">Machine Learning</span>
-                    </summary>
-                   
-                </details>
-            <li>
-                <details ClassName="mb-2">
-                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span ClassName="font-semibold">Digital Markenting</span>
-                    </summary>
-                   
-                </details>
-            </li>
-            <li>
-                <details ClassName="mb-2">
-                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span ClassName="font-semibold">Cyber Security</span>
-                    </summary>
-                   
-                </details>
-            </li>
-            <li>
-               
-            </li>
-           
-        </ul>
-    </details>
+              {/* Popup */}
+              {showPopup && (
+                <div
+                  onMouseLeave={() => setShowPopup(false)}
+                  className="absolute top-14 left-0 bg-white p-4 border border-gray-300 rounded shadow-lg">
+                  {/* Your popup content here */}
+                  <h1 className='text-xl '>Explore Here Courses List</h1>
+                  <hr className='text-2xl' />
+                  <div className='flex gap-10 py-5'>
+                    <div class="p-4 max-w-lg mx-auto ">
+                      <details ClassName="mb-2">
+                        <summary ClassName="bg-gray-200 p-4 rounded-lg cursor-pointer shadow-md mb-4">
+                          <span ClassName="font-semibold">Advanced Courses</span>
+                        </summary>
+                        <ul ClassName="ml-8 space-y-4">
+                          <li>
+                            <details ClassName="mb-2">
+                              <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                                <span ClassName="font-semibold">Python Programming</span>
+                              </summary>
 
-    <details ClassName="mb-2">
-        <summary ClassName="bg-gray-200 p-4 rounded-lg cursor-pointer shadow-md mb-4">
-            <span ClassName="font-semibold">Web developement</span>
-        </summary>
-        <ul ClassName="ml-8 space-y-4">
-            <li>
-                <details ClassName="mb-2">
-                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span ClassName="font-semibold">Front-end Development</span>
-                    </summary>
-                   
-                </details>
-            </li>
-            <li>
-                <details ClassName="mb-2">
-                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span ClassName="font-semibold">Backend development</span>
-                    </summary>
-                   
-                </details>
-            </li>
-            <li>
-                <details ClassName="mb-2">
-                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span ClassName="font-semibold">Full-stack development</span>
-                    </summary>
-                   
-                </details>
-            </li>
-            <li>
-                <details ClassName="mb-2">
-                    <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                        <span ClassName="font-semibold">  Ui/Ux Design</span>
-                    </summary>
-                   
-                </details>
-            </li>
-        </ul>
-    </details>
-</div>
-               
-              </div>
+                            </details>
+                          </li>
+                          <li>
+                            <details ClassName="mb-2">
+                              <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                                <span ClassName="font-semibold">Data Science</span>
+                              </summary>
+
+                            </details>
+                          </li>
+                          <details ClassName="mb-2">
+                            <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                              <span ClassName="font-semibold">Machine Learning</span>
+                            </summary>
+
+                          </details>
+                          <li>
+                            <details ClassName="mb-2">
+                              <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                                <span ClassName="font-semibold">Digital Markenting</span>
+                              </summary>
+
+                            </details>
+                          </li>
+                          <li>
+                            <details ClassName="mb-2">
+                              <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                                <span ClassName="font-semibold">Cyber Security</span>
+                              </summary>
+
+                            </details>
+                          </li>
+                          <li>
+
+                          </li>
+
+                        </ul>
+                      </details>
+
+                      <details ClassName="mb-2">
+                        <summary ClassName="bg-gray-200 p-4 rounded-lg cursor-pointer shadow-md mb-4">
+                          <span ClassName="font-semibold">Web developement</span>
+                        </summary>
+                        <ul ClassName="ml-8 space-y-4">
+                          <li>
+                            <details ClassName="mb-2">
+                              <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                                <span ClassName="font-semibold">Front-end Development</span>
+                              </summary>
+
+                            </details>
+                          </li>
+                          <li>
+                            <details ClassName="mb-2">
+                              <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                                <span ClassName="font-semibold">Backend development</span>
+                              </summary>
+
+                            </details>
+                          </li>
+                          <li>
+                            <details ClassName="mb-2">
+                              <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                                <span ClassName="font-semibold">Full-stack development</span>
+                              </summary>
+
+                            </details>
+                          </li>
+                          <li>
+                            <details ClassName="mb-2">
+                              <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
+                                <span ClassName="font-semibold">  Ui/Ux Design</span>
+                              </summary>
+
+                            </details>
+                          </li>
+                        </ul>
+                      </details>
+                    </div>
+
+                  </div>
 
 
-             
-            </div>
-          )}
+
+                </div>
+              )}
 
               {/* User Initials */}
               {auth.user && (
@@ -253,7 +253,7 @@ const Navbar = () => {
                     >
                       {/* User initials */}
                       <span className='p-3 w-12 rounded-full bg-blue-400 text-white font-bold text-center cursor-pointer'>
-                        {auth.user.userName[0].toUpperCase()}
+                        {auth.user.firstName[0].toUpperCase()}
                       </span>
                       {/* Dropdown arrow icon */}
                       <svg

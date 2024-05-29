@@ -35,7 +35,8 @@ import Reactjs from "./Components/Home/eductionCarousel/ReactjsMastery/Reactjs";
 import EthicalHacking from "./Components/Home/Plat form/AllCourses/EthicalHacking/EthicalHacking";
 import Cybersecurity from "./Components/Home/Plat form/AllCourses/Cybersecurity/cybersecurity";
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
-import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
+// import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
+import Cart from "./Components/Cart/Cart"
 import EthicalHackingStudentArray from './Components/Home/Plat form/AllCourses/StudentPlatForm/EthicalHackingStudentArray'
 import CyberSecurityArray from './Components/Home/Plat form/AllCourses/StudentPlatForm/CyberSecurityArray'
 import NetworkSecurityArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/NetworkSecurityArray";
@@ -44,6 +45,7 @@ import FullStackDevops from './Components/Home/Plat form/AllCourses/FullStackDev
 import FullStackPythonDevelopment from "./Components/Home/Plat form/AllCourses/fullStackPython/Main/FullStackPythonDevelopment";
 import FullStackJava from "./Components/Home/Plat form/AllCourses/FullStackJava_Development/FullStackJavaDevelopment";
 import BasicArray from "./Components/BasicCourse/BasicCourseArray"
+import CourseDetails from "./Components/CourseDetails/CourseDetails";
 function App() {
 
   return (
@@ -98,6 +100,7 @@ function App() {
 
           {/* Basic Advance Preminum Cousrses here */}
           <Route path="/basicCourses" element={<BasicArray />} />
+          <Route path="/course-details" element={<CourseDetails />} />
 
         </Routes>
       </BrowserRouter>

@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 // import Navbar from "../../../../Navbar";
 import AboutCourses from "./AboutCourses";
 import Community from "../Community/community";
 import SuccessStory from "../SuccessStory/successstory";
 import Navber from '../../../../../Navbar';
 import Footer from '../../../../footer/Footer'
+import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../../../../../CartContext";
 // import Award from "../Award/Award";
 
 // import Footer from "../../../footer/Footer";
@@ -19,6 +21,8 @@ const images = [
 ];
 const MeanStackDevelopment = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { addToCart } = useContext(CartContext);
+  const navigate = useNavigate()
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -35,6 +39,17 @@ const MeanStackDevelopment = () => {
     setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  const handleEnroll = () => {
+    const course = {
+      name: 'Mern Stack Development',
+      seller: 'SPY D TECH',
+      price: 333,
+      image: images[currentSlide],
+    };
+    addToCart(course);
+    navigate('/cart'); // Navigate to CartItem page
+  };
+
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -44,7 +59,7 @@ const MeanStackDevelopment = () => {
   // }, [currentSlide]);
   return (
     <>
-    <Navber />
+      <Navber />
       {/* <Navbar /> */}
       <div className="w-full bg-[#b8b8ff] md:pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
         <div className="font-l">
@@ -66,7 +81,7 @@ const MeanStackDevelopment = () => {
             Develop practical skills and stand out in a competitive job market.
             Start your mean stack journey today.
           </p>
-          <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
+          <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95" onClick={handleEnroll}>
             Enroll Now
           </button>
           <div className="py-4">11,095 already enrolled</div>

@@ -1,5 +1,5 @@
+import { API_BASE_URL } from '../../Config/apiConfig';
 import axios from 'axios';
-import { API_BASE_URL } from '../../Config/api';
 import {
   REGISTER_SUCCESS,
   REGISTER_REQUEST,
