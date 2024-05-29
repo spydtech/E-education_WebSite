@@ -61,7 +61,7 @@ const SoftwareTestingArray = () => {
         "title": "Integration Testing",
         "description": "Testing software components together.",
         "image": "https://testsigma.com/blog/wp-content/uploads/In-article-MC410.jpg",
-        "link": "https://example.com/integration-testing"
+        "link": "/software_Testing/intigration-testing"
     },
     {
         "id": 3,

@@ -66,6 +66,7 @@ import SecurityTesting from "./Components/Home/Plat form/AllCourses/Software Tes
 import UsabilityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Usablity_Testing/UsabilityTesting";
 import UnitTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Unit_Testing/UnitTestingFundamentals";
 import CompatabilityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Compatability_Testing/CompatabilityFundamentals";
+import IntigrationTesting from './Components/Home/Plat form/AllCourses/Software Testing/IntegrationTesting/IntegrationFundamentals';
 function App() {
   return (
     <div>
@@ -195,6 +196,12 @@ function App() {
 <Route
             path="/software_Testing/compatability-testing"
             element={<CompatabilityTesting />}
+          />
+
+{/* IntigrationTesting */}
+<Route
+            path="/software_Testing/intigration-testing"
+            element={<IntigrationTesting />}
           />
 
 
