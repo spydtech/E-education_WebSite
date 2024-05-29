@@ -68,7 +68,7 @@ const SoftwareTestingArray = () => {
         "title": "System Testing",
         "description": "Testing the complete integrated software.",
         "image": "https://artoftesting.com/wp-content/uploads/2019/12/System-Testing.jpg",
-        "link": "https://example.com/system-testing"
+        "link": "/software_Testing/system_testing"
     },
     {
         "id": 4,
