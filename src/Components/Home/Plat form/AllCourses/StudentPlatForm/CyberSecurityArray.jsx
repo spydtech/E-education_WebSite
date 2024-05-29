@@ -44,21 +44,21 @@ const CyberSecurityArray = () => {
       title: "Introduction to Cybersecurity",
       description: "Learn the basic principles of cybersecurity, including risk management, threat detection, and security policies.",
       image: "https://images.shiksha.com/mediadata/images/articles/1709545684phpPfnagp.jpeg",
-      link: "/cybersecurity",
+      link: "/Cybersecurity/Cybersecurity_fundamentals",
     },
     {
       id: 2,
       title: "Cybersecurity Essentials",
       description: "Understand the core concepts of cybersecurity, including network security, cryptography, and incident response.",
       image: "https://i.ytimg.com/vi/xsL5ax44530/maxresdefault.jpg",
-      link: "/cybersecurity-essentials",
+      link: "/Cybersecurity/cybersecurity_essentials",
     },
     {
       id: 3,
       title: "Cybersecurity for Beginners",
       description: "An introductory course for those new to the field of cybersecurity, covering fundamental concepts and best practices.",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKr60KjwzYEQPATOULM6X99sU6NAn8AqX1dsTeUSRqQ&s",
-      link: "/cybersecurity-for-beginners",
+      link: "/Cybersecurity/cybersecurity_beginners",
     },
   ];
   

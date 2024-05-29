@@ -107,11 +107,25 @@ const SignUp = () => {
                       htmlFor='name'
                       className='mb-2 dark:text-gray-400 text-lg font-NotoSans'
                     >
-                      User Name
+                      First Name
                     </label>
                     <input
-                      type="text" label='UserName' name="userName" placeholder="Username" value={userData.userName} onChange={handleChange}
-                      id='userName'
+                      type="text" label='FirstName' name="firstName" placeholder="Firstname" value={userData.firstName} onChange={handleChange}
+                      id='firstName'
+                      className='border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300'
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor='name'
+                      className='mb-2 dark:text-gray-400 text-lg font-NotoSans'
+                    >
+                      Last Name
+                    </label>
+                    <input
+                      type="text" label='LastName' name="lastName" placeholder="Lastname" value={userData.lastName} onChange={handleChange}
+                      id='lastName'
                       className='border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300'
                       required
                     />
