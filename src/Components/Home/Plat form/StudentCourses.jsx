@@ -3,8 +3,17 @@ import { BiBarChartSquare } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import {
   IoLogoElectron,
+  IoCodeWorking,
+  IoFlask,
+  IoGameController,
   IoLockClosed,
+  IoAnalyticsSharp,
+  IoCloudSharp,
+  IoCodeSlash,
+  IoConstructSharp,
+  IoHardwareChipSharp,
   IoShieldCheckmark,
+  IoArrowUndoCircleSharp,
   IoWifiSharp,
 } from "react-icons/io5";
 
@@ -24,6 +33,7 @@ const StudentCourses = () => {
         "Master data analytics essentials for informed decisions & success.",
       link: "/student/dataScienceArray",
     },
+
     {
       title: "Cybersecurity Fundamentals",
       icon: <IoLockClosed />,
@@ -45,6 +55,7 @@ const StudentCourses = () => {
         "Discover principles of network security: encryption, firewalls, IDS.",
       link: "/student/networkSecurityArray",
     },
+
   ];
 
   return (

@@ -10,7 +10,7 @@
 
 # production
 /build
-
+/error.text
 # misc
 .DS_Store
 .env.local

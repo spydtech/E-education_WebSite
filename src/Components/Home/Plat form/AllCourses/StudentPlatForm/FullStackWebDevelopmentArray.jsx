@@ -42,7 +42,7 @@ const FullStackWebDevelopmentArray = () => {
       description: "Learn how to build web applications from front to back",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCP7WwqRZMt45muqpTdBtWssi3TJHjGG4UkwvxBaIBRAV5naPe4-XBwl6tatEPaZWkDDk&usqp=CAU",
-      link: "/fullStackWebDevelopment",
+      link: "/fullStack_WebDevelopment/fullStack-Web-Development",
     },
     {
       id: 2,

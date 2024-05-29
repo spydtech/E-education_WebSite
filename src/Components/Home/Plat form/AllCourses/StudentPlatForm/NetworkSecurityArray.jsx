@@ -5,7 +5,8 @@ import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 // import WishLists from "../../AddtoCart/WishLists";
 import { Link } from "react-router-dom";
-
+import Navbar from "../../../../Navbar";
+import Footer from "../../../footer/Footer";
 const NetworkSecurityArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
@@ -42,21 +43,21 @@ const NetworkSecurityArray = () => {
       title: "Network Security Fundamentals",
       description: "Understand the basics of network security, including firewalls, intrusion detection systems, and VPNs.",
       image: "https://miro.medium.com/v2/resize:fit:640/1*A2X0FaO48D1tv4HpuKUdkg.jpeg",
-      link: "/network-security-fundamentals",
+      link: "/network_security/network-security-fundamentals",
     },
     {
       id: 2,
       title: "Advanced Network Security",
       description: "Learn advanced network security techniques and strategies to protect against sophisticated cyber threats.",
       image: "https://www.logsign.com/uploads/ensuring_network_security_e34d6ce4bb.png",
-      link: "/advanced-network-security",
+      link: "/network_security/advance-network-secuity",
     },
     {
       id: 3,
       title: "Network Security Best Practices",
       description: "Explore best practices for securing network infrastructure.",
-      image: "https://www.itarian.com/images/network-security.png",
-      link: "/network-security-best-practices",
+      image: "https://networkats.com/wp-content/uploads/2023/06/feaeefe5-f2bd-409c-b069-8869066894f2.webp",
+      link: "/network_security/network-security-best-practices",
     },
   ];
   
@@ -67,6 +68,7 @@ const NetworkSecurityArray = () => {
 
   return (
     <>
+    <Navbar />
       <img
         src="https://assets-global.website-files.com/5b6df8bb681f89c158b48f6b/5d95e4e76593e827edc795e5_network-security-specialist.jpg"
         className="object-cover w-full"
@@ -97,7 +99,9 @@ const NetworkSecurityArray = () => {
             />
           ))}
         </div>
-      </div>
+      </div> 
+
+      <Footer />
     </>
   );
 };

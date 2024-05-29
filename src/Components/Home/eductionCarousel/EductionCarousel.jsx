@@ -8,19 +8,19 @@ const courses = [
     title: "Generative AI in Practice",
     bgColor: "bg-blue-300",
     icon: <FaBrain className="text-blue-800" />,
-    link: "/machineLearning"
+    link: "/data_Science/machine-Learning"
   },
   {
     title: "Web Development",
     bgColor: "bg-green-300",
     icon: <FaCode className="text-green-800" />,
-    link: "/fullStackWebDevelopment"
+    link: "/fullStack_WebDevelopment"
   },
   {
     title: "Data Science Fundamentals",
     bgColor: "bg-purple-300",
     icon: <FaDatabase className="text-purple-800" />,
-    link: "/course/Data Science"
+    link: "/data_Science/introduction-to-data-science"
   },
   {
     title: "React.js Mastery",
@@ -32,25 +32,25 @@ const courses = [
     title: "Python Programming",
     bgColor: "bg-red-300",
     icon: <FaPython className="text-red-800" />,
-    link: "/"
+    link: "/fullStack_WebDevelopment/fullStack-Python-Development"
   },
   {
     title: "JavaScript Essentials",
     bgColor: "bg-indigo-300",
     icon: <FaJs className="text-indigo-800" />,
-    link: "/"
+    link: "/fullStack_WebDevelopment/full-stack-javascript"
   },
   {
     title: "Machine Learning Algorithms",
     bgColor: "bg-pink-300",
     icon: <FaBrain className="text-pink-800" />,
-    link: "/machineLearning"
+    link: "/data_Science/machine-Learning"
   },
   {
-    title: "Database Design and Optimization",
+    title: "Software Testing",
     bgColor: "bg-orange-300",
     icon: <FaDatabase className="text-orange-800" />,
-    link: "/"
+    link: "/software_testing"
   },
 ];
 

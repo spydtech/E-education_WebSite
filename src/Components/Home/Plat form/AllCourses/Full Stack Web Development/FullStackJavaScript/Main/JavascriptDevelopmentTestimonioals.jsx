@@ -1,0 +1,86 @@
+import React from "react";
+
+const JavascriptDevelopmentTestimonioals = () => {
+  return (
+    <>
+      <div className="md:px-14 px-4 max-w-screen-2xl mx-auto">
+        <div className="py-8">
+          <h3 className="mt-3 font-extrabold text-violet-800  sm:mt-5 sm:text-xl lg:text-lg xl:text-4xl font-lora">
+            Why people choose E-education for their career
+          </h3>
+          <p className=" text-base text-gray-600 text-md font-lora mt-4 pl-2">
+            As E-education continues to evolve and expand, its transformative
+            impact on the future of learning and career development remains
+            undeniable. By embracing the flexibility, accessibility, and
+            opportunities offered by online education, individuals can unlock
+            their full potential and pursue rewarding career paths with
+            confidence and resilience.
+          </p>
+        </div>
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-10">
+          {/* featured card */}
+          <div className="w-full">
+            <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-start md:gap-12 gap-8">
+              <div
+                className=" rounded-[35px] h-96 shadow-2xl p-8 flex
+                justify-center items-center flex-col hover:-translate-y-4 transition-all duration-300 border border-gray-50
+                "
+              >
+                <div>
+                  <img
+                    src="https://img.freepik.com/free-photo/young-handsome-guy-wearing-checkered-shirt-is-going-note-with-pen-copybook-standing-khaki-wall_141793-30758.jpg?t=st=1715830618~exp=1715834218~hmac=721f6d0178b82550c183b0fd228aab5f2fb151e69457daed1e49e0fa24cf4887&w=900"
+                    alt=""
+                    className="rounded-full h-48 w-48"
+                  />
+                </div>
+                <div>Lope MJ.</div>
+                <h5 className="text-gray-800 px-5 text-center mt-5">
+                  "Having the flexibility to learn at my own speed and on my own
+                  time has been incredible. I can study when it's most
+                  convenient for me."
+                </h5>
+              </div>
+              <div
+                className=" rounded-[35px] h-96 shadow-2xl p-8 flex flex-col
+                justify-center items-center hover:-translate-y-4 transition-all duration-300 md:mt-16 border border-gray-50
+                "
+              >
+                <img
+                  src="https://img.freepik.com/free-photo/young-tender-curly-girl-holding-documents_176420-239.jpg?t=st=1715830236~exp=1715833836~hmac=c8944d11f1810de4bb54a4acbdfb10c17b0087c83f953b6d09d4b60a896e6ca6&w=996"
+                  alt=""
+                  className="rounded-full h-52 w-52"
+                />
+                {/* <img src="https://st2.depositphotos.com/35018808/44240/v/450/depositphotos_442402190-stock-illustration-illustration-little-girl-working-computer.jpg"  alt=""/> */}
+                <div>Samantha J.</div>
+                <h5 className="text-gray-800 px-5 text-center mt-5">
+                  "The knowledge and skills I gained from my courses allowed me
+                  to tackle an innovative project at my job with confidence."
+                </h5>
+              </div>
+              <div
+                className=" rounded-[35px] h-96 shadow-2xl p-8 flex flex-col border border-gray-50
+                justify-center items-center hover:-translate-y-4 transition-all duration-300
+                "
+              >
+                <img
+                  src="https://img.freepik.com/free-photo/female-student-with-books-paperworks_1258-48204.jpg?t=st=1715830841~exp=1715834441~hmac=2346133ec64dcee998aeefeb1d577beec37175baa1f0c5b0c16db1c232342ccf&w=996"
+                  alt=""
+                  className="rounded-full h-48 w-48"
+                />
+
+                <div>Julie S.</div>
+                <h5 className="text-gray-800 px-5 text-center mt-5">
+                  "Education goes beyond improving work skills; it's about
+                  personal growth. E-learning empowers me to learn without
+                  boundaries."
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default JavascriptDevelopmentTestimonioals;
