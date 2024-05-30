@@ -19,6 +19,14 @@ const images = [
 const ParticularFullStack = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const [courseName] = useState('Master Full Stack Web Development'); // Placeholder for course name
+  const [coursePrice] = useState(199);
+
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate('/course-details', { state: { courseName, coursePrice } });
+  };
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -58,7 +66,7 @@ const ParticularFullStack = () => {
             Develop practical skills and stand out in a competitive job market.
             Start your full stack journey today.
           </p>
-          <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95" navigate="/course-details">
+          <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95" onClick={handleEnroll}>
             Eroll Now
           </button>
           <div className="py-4">11,095 already enrolled</div>
