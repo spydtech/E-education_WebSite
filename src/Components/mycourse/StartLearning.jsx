@@ -1,122 +1,128 @@
-import React, { useState } from "react";
-const courses = [
+import React, { useEffect, useState } from "react";
+import { FcLike, FcLikePlaceholder } from "react-icons/fc";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+const StartLearningcourses = [
   {
-    imageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhi3ipD6eO2WqHb7mOvCHVvIblKkMR9Snt9TmTFAdpvw&s",
-    tagText: "Web Development",
-    title: "Web Development Bootcamp",
-    rating: "4.9",
-    reviews: "1200+ reviews",
-    button: "Start Web Development Journey"
+    id: 1,
+    title: "Introduction to Cybersecurity",
+    description:
+      "Learn the basic principles of cybersecurity, including risk management, threat detection, and security policies.",
+    image:
+      "https://images.shiksha.com/mediadata/images/articles/1709545684phpPfnagp.jpeg",
+    link: "/Cybersecurity/Cybersecurity_fundamentals",
   },
   {
-    imageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJP7J81ga4NqNKsdCUoNPjFKDDKTicHdSJVqjNF0zhfw&s",
-    tagText: "Data Science",
-    title: "Data Analysis",
-    rating: "4.7",
-    reviews: "800+ reviews",
-    button: "Explore Data Science Career"
+    id: 2,
+    title: "Ethical Hacking Basics",
+    description:
+      "Learn the fundamentals of ethical hacking, including reconnaissance, scanning, and vulnerability assessment.",
+    image:
+      "https://www.eccouncil.org/cybersecurity-exchange/wp-content/uploads/2022/03/ETHICAL-HACKING.jpg",
+    link: "/Ethical_Hacking/basic_ethical_Hacking",
   },
   {
-    imageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuDgBa-7nZDeQAH1G3xvWZqfIUrBpFVztmuEqvB3EvTQ&s",
-    tagText: "Finance",
-    title: "Financial Planning and Investment Strategies",
-    rating: "4.8",
-    reviews: "1000+ reviews",
-    button: "Start Finance Career"
+    id: 3,
+    title: "Network Security Fundamentals",
+    description:
+      "Understand the basics of network security, including firewalls, intrusion detection systems, and VPNs.",
+    image:
+      "https://miro.medium.com/v2/resize:fit:640/1*A2X0FaO48D1tv4HpuKUdkg.jpeg",
+    link: "/network_security/network-security-fundamentals",
   },
   {
-    imageSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfTUW8IUzYqWiuK0aMj1dKe7G30tPvnxjtgtJm5knVSA&s",
-    tagText: "Business",
-    title: "Entrepreneurship Essentials",
-    rating: "4.6",
-    reviews: "900+ reviews",
-    button: "Launch Business Journey"
+    id: 4,
+    title: "Certified Ethical Hacker",
+    description:
+      "Prepare for the Certified Ethical Hacker (CEH) certification with comprehensive coverage of ethical hacking topics.",
+    image:
+      "https://ceh.nativeva.com/wp-content/uploads/2023/04/Unlock-Your-Potential-1-1.png",
+    link: "/Ethical-Hacking/certified_Ethical_Hacking",
   },
   {
-    imageSrc:
-      "https://www.simplilearn.com/ice9/free_resources_article_thumb/Why-Digital-Marketing-is-Critical-to-Your-Organization-in-2017.jpg",
-    tagText: "Digital Marketing",
-    title: "Advanced Digital Marketing Techniques",
-    rating: "4.5",
-    reviews: "900+ reviews",
-    button: "Start Digital Marketing Career"
+    id: 5,
+    title: "Regression Testing",
+    description: "Testing recent changes for new issues.",
+    image:
+      "https://assets-global.website-files.com/619e15d781b21202de206fb5/62165ea063f4cb7c15c9fc6e_regression-testing-guide.jpg",
+    link: "/software-testing/regression-testing",
   },
   {
-    imageSrc:
-      "https://static.javatpoint.com/tutorial/machine-learning/images/ai-vs-machine-learning.png",
-    tagText: "Data Science",
-    title: "Machine Learning and AI",
-    rating: "4.7",
-    reviews: "800+ reviews",
-    button: "Begin Data Science Career"
+    id: 6,
+    title: "System Testing",
+    description: "Testing the complete integrated software.",
+    image:
+      "https://artoftesting.com/wp-content/uploads/2019/12/System-Testing.jpg",
+    link: "/software-testing/system-testing",
+  },
+  {
+    id: 7,
+    title: "Performance Testing",
+    description: "Testing speed and stability.",
+    image:
+      "https://artoftesting.com/wp-content/uploads/2019/12/types-of-performance-testing.jpg",
+    link: "/software-testing/performance-testing",
+  },
+  {
+    id: 8,
+    title: "Usability Testing",
+    description: "Testing user-friendliness.",
+    image:
+      "https://er9wjw26noi.exactdn.com/wp-content/uploads/2022/08/What-is-usability-testing.jpg?lossy=1&quality=88&webp=88&ssl=1",
+    link: "/software_testing/usability-testing",
   },
 ];
-
-
-const CourseCard = ({ course }) => (
-  <>
-  
-  <div className="bg-white rounded-lg overflow-hidden border transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300  hover:shadow-2xl">
-   
-     {/* Image */}
-     <img
-      className="h-40 w-full object-cover object-end rounded-lg"
-      src={course.imageSrc}
-      alt="Course"
-    />
-    <div className="p-6">
-      <div className="flex items-baseline gap-2">
-        {/* Tag */}
-      
-        <span className="dark:text-gray-300">{course.tagText}</span>
-      </div>
-      <h4 className="mt-2 font-semibold text-lg leading-tight truncate">
-        {course.title}
-      </h4>
-      <div className="mt-1">
-        <span>{course.skills}</span>
-      </div>
-      <div className="gap-2 flex items-center mt-2">
-        {/* Star Rating */}
-        <span>{course.rating}</span>
-        <span className="text-teal-600 font-semibold">
-          <i className="fas fa-star"></i>
-        </span>
-        <span className="ml-2 text-gray-600 text-sm">{course.reviews}</span>
-      </div>
-    </div>
- 
-    <div className="flex justify-start items-start pl-4 mb-2"><button className="border border-[#0F172A] p-2 font-bold rounded-lg bg-[#0F172A] hover:bg-white text-white hover:text-black">{course.button}</button></div>
-  </div>
-  </>
-);
 const StartLearning = () => {
+  const [wishlist, setWishlist] = useState([]);
+  const [sh, setShow] = useState(false);
+  const navigate = useNavigate();
   const [showAllCourses, setShowAllCourses] = useState(false);
 
-  const displayedCourses = showAllCourses ? courses : courses.slice(0, 4);
+  const displayedCourses = showAllCourses
+    ? StartLearningcourses
+    : StartLearningcourses.slice(0, 6);
+
+  const handleWishList = (course) => {
+    const index = wishlist.findIndex((item) => item.id === course.id);
+    if (index !== -1) {
+      const updatedWishlist = [...wishlist];
+      updatedWishlist.splice(index, 1);
+      setWishlist(updatedWishlist);
+    } else {
+      setWishlist((prevWishlist) => [...prevWishlist, course]);
+    }
+  };
+
+  useEffect(() => {
+    console.log("wish", wishlist);
+    if (sh) navigate("/wishLists", { state: { wishlist } });
+  }, [wishlist, sh]);
+
+  const handleDelete = (id) => {
+    setWishlist((prevWishlist) =>
+      prevWishlist.filter((course) => course.id !== id)
+    );
+  };
+
   return (
     <>
-    
-      <div className=" mt-4">
-      {/* <div class="w-full mt-28  pl-4">
-        <span class="text-4xl font-bold text-[#023047]  border-b border-[#023047]">
-          Start learning with courses &#8594;
-        </span>
-      </div> */}
-        <h1 className="pt-10 text-xl font-semibold pb-4 pl-8 md:text-2xl">
-        Earn Your Degree
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-4 text-center text-purple-600 underline">
+          Pursue Your Degree
         </h1>
-        <div className=" flex items-center justify-center px-8">
-          <div className="grid md:grid-cols-4 grid-cols-1 gap-8 ">
-            {displayedCourses.map((course, index) => (
-              <CourseCard key={index} course={course} className="border rounded-lg border-[#0F172A] shadow-xl "/>
-            ))}
-          </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {displayedCourses.map((course) => (
+            <CourseCard
+              key={course.id}
+              course={course}
+              handleWishList={handleWishList}
+              setShow={setShow}
+            />
+          ))}
         </div>
+
         <div class=" text-base font-semibold flex justify-center items-center mt-12 pb-8">
           <button
             className="border border-[#0F172A] text-white p-2 rounded-lg bg-[#0F172A] hover:bg-white hover:text-black transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300  hover:shadow-2xl shadow-lg shadow-[#0F172A]"
@@ -127,6 +133,46 @@ const StartLearning = () => {
         </div>
       </div>
     </>
+  );
+};
+
+const CourseCard = ({ course, handleWishList, setShow }) => {
+  const { id, title, description, image, link } = course;
+  const [liked, setLiked] = useState(false);
+
+  const handleDataTransfer = () => {
+    setShow(true);
+    setLiked((prevLiked) => !prevLiked);
+    handleWishList(course);
+  };
+
+  return (
+    <div className="mx-auto relative mb-12 cursor-pointer">
+      <Link to={link}>
+        <img
+          src={image}
+          alt={title}
+          className="h-[240px] w-full hover:scale-105 transition-all duration-500 shadow-2xl"
+        />
+        <div
+          className="text-center px-4 py-8 bg-white shadow-lg rounded-md
+                  md:w-3/4 mx-auto absolute left-0 right-0 -bottom-12 hover:-translate-y-4 transition-all duration-300"
+        >
+          <p>
+            {`${description} with`} <span className="font-bold">{title}</span>
+          </p>
+        </div>
+      </Link>
+      <Link>
+        <button id="wishlist" onClick={handleDataTransfer}>
+          {liked ? (
+            <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
+          ) : (
+            <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
+          )}
+        </button>
+      </Link>
+    </div>
   );
 };
 
