@@ -1,39 +1,25 @@
-
-
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { StarIcon } from '@heroicons/react/20/solid';
 import { FcLike, FcLikePlaceholder } from 'react-icons/fc';
 import Navbar from '../Navbar';
-import { useNavigate } from 'react-router-dom';
-
-const product = {
-    name: 'Full Stack Web Development',
-    price: '₹192',
-    href: '#',
-    images: [
-        {
-            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCP7WwqRZMt45muqpTdBtWssi3TJHjGG4UkwvxBaIBRAV5naPe4-XBwl6tatEPaZWkDDk&usqp=CAU',
-            alt: 'Product Image',
-        },
-    ],
-    highlights: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'User Experience(UX)',
-        'User Interface(UI)'
-    ],
-};
+import { useLocation, useNavigate } from 'react-router-dom';
+import { CartContext } from '../../CartContext';
 
 
-export default function CourseDetails() {
+
+export default function CourseDetails({ course }) {
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ')
     }
 
     const [liked, setLiked] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
+    const { courseName, coursePrice } = location.state;
+    const { addToCart } = useContext(CartContext);
+
     const handleAddToCart = () => {
+        addToCart({ courseName, coursePrice })
         navigate('/cart')
     }
 
@@ -43,26 +29,15 @@ export default function CourseDetails() {
             <div className="bg-white lg:px-20 max-h-full">
                 <div className="pt-6">
                     <section className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2 px-4 pt-10">
-                        {/* Image gallery */}
-                        <div className="flex flex-col items-center ">
-                            <div className=" overflow-hidden rounded-lg max-w-[30rem] max-h-[40rem] mt-10">
-                                <img
-                                    src={product.images[0].src}
-                                    alt={product.images[0].alt}
-                                    className="h-full w-full object-cover object-center pt-10"
-                                />
-                            </div>
-                        </div>
-
                         {/* Product info */}
                         <div className="lg:col-span-1 mx-auto max-w-2xl px-4 pb-16 sm:px-6  lg:max-w-7xl  lg:px-8 lg:pb-24">
                             <div className="lg:col-span-2">
-                                <h2 className="text-lg lg:text-xl tracking-tight text-gray-900 opacity-60 pt-1">{product.name}</h2>
+                                <h2 className="text-lg lg:text-xl tracking-tight text-gray-900 opacity-60 pt-1">{courseName}</h2>
                             </div>
                             <div className='"mt-4 lg:row-span-3 lg:mt-0"'>
                                 <div className="flex space-x-5 items-center text-lg lg:text-xl tracking-tight text-gray-900 mt-6">
-                                    <p className='font-semibold'>{product.price}</p>
-                                    <p className='opacity-50 line-through'>$211</p>
+                                    <p className='font-semibold'>{coursePrice}</p>
+
                                     <p className='text-green-600 font-semibold'>5% Off</p>
                                 </div>
                             </div>
@@ -87,9 +62,8 @@ export default function CourseDetails() {
                             <div data-purpose="money-back-guarantee" className="dark-bg-text pt-5 money-back-guarantee--color-subdued---0rZH"><span class="money-back">30-Day Money-Back Guarantee</span></div>
                             <div class="generic-purchase-section--local-incentive--4i-xF"><div data-purpose="full-lifetime-access" class="ud-text-xs dark-bg-text full-lifetime-access--color-subdued--o52tD">Full Lifetime Access</div></div>
 
-
                             {/* Highlights */}
-                            <div className='mt-10'>
+                            {/* <div className='mt-10'>
                                 <h2 className="text-xl font-semibold text-gray-900">Highlights</h2>
                                 <div className='mt-4'>
                                     <ul className="list-disc list-inside text-gray-700">
@@ -98,7 +72,7 @@ export default function CourseDetails() {
                                         ))}
                                     </ul>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                     </section>

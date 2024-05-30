@@ -39,7 +39,8 @@ import Cybersecurity from "./Components/Home/Plat form/AllCourses/Cyber Security
 import CybersecurityBiginers from "./Components/Home/Plat form/AllCourses/Cyber Security/CybersecurityBiginers/cybersecurityBiginersEssentials";
 import CybersecurityEssentials from "./Components/Home/Plat form/AllCourses/Cyber Security/CybersecurityEssentials/cybersecurityEssentials";
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
-import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
+// import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
+import Cart from "./Components/Cart/Cart";
 import EthicalHackingStudentArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/EthicalHackingStudentArray";
 import CyberSecurityArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/CyberSecurityArray";
 import NetworkSecurityArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/NetworkSecurityArray";
@@ -77,11 +78,11 @@ import RegressionTesting from './Components/Home/Plat form/AllCourses/Software T
 import Java from './Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava'
 import Wordpress from './Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress'
 import Php from './Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp'
-
 import DataBase from './Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB'
-
-
 import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
+import CourseDetails from "./Components/CourseDetails/CourseDetails";
+
+
 function App() {
   return (
     <div>
@@ -113,6 +114,7 @@ function App() {
           <Route path="/reactjs" element={<Reactjs />} />
           <Route path="/health" element={<Health />} />
           <Route path="/database" element={<DataBase />} />
+          <Route path="course-details" element={<CourseDetails />} />
 
           {/* Data Science */}
           <Route

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-import { api,API_BASE_URL } from "../../Config/apiConfig";
+import { api, API_BASE_URL } from "../../Config/api";
 import {
     ADD_ITEM_TO_CART_REQUEST,
     ADD_ITEM_TO_CART_SUCCESS,
@@ -29,14 +29,12 @@ export const addItemToCart = (reqData) => (dispatch) => {
 export const getCart = (jwt) => async (dispatch) => {
     try {
         dispatch({ type: GET_CART_REQUEST });
-        // const config = {
-        //     headers: {
-        //         Authorization: `Bearer ${jwt}`,
-        //         "Content-Type": "application/json"
-        //     },
-        // };
-        const { data } = await axios.get(`${API_BASE_URL}/api/cart/`);
-        console.log("cart ", data)
+
+        const { data } = await axios.get(`${API_BASE_URL}/api/cart/`, {
+            headers: {
+                Authorization: `Bearer ${jwt}`,
+            },
+        });
         dispatch({
             type: GET_CART_SUCCESS,
             payload: data,

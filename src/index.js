@@ -6,13 +6,17 @@ import reportWebVitals from './reportWebVitals';
 // import { BrowserRouter } from 'react-router-dom/dist';
 import { Provider } from 'react-redux';
 import { store } from './State/store';
+import CartProvider from './CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <CartProvider>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </CartProvider>
+
   </React.StrictMode>
 );
 
