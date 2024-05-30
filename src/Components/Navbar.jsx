@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, logout } from "../State/Auth/Action";
+import { NotificationAdd } from "@mui/icons-material";
+import Notification1 from "./Notification1";
 
 const Navbar = () => {
   const [navigationMenu, setNavigationMenu] = useState(null);
@@ -17,6 +19,8 @@ const Navbar = () => {
   const navigate = useNavigate();
   const jwt = localStorage.getItem("jwt");
   const auth = useSelector((state) => state.auth);
+  const [showSidebar, setShowSidebar] = useState(false);
+
 
   const dispatch = useDispatch();
 
@@ -266,21 +270,21 @@ const Navbar = () => {
                     {/* Dropdown button */}
                     <button
                       className={`inline-flex items-center justify-center h-14 px-4 py-2 text-sm font-medium transition-colors rounded-md ${navigationMenu === "getting-started"
-                          ? "border-2 border-black"
-                          : ""
+                        ? "border-2 border-black"
+                        : ""
                         } ${navigationMenu !== "getting-started" ? "" : ""}`}
                       onClick={() => toggleNavigationMenu("getting-started")}
                     >
                       {/* User initials */}
                       <span className="p-3 w-12 rounded-full bg-blue-400 text-white font-bold text-center cursor-pointer">
-                        {auth.user.userName[0].toUpperCase()}
+                        {auth.user.firstName[0].toUpperCase()}
                       </span>
                       {/* Dropdown arrow icon */}
                       <svg
                         className={`relative top-[1px] ml-1 h-5 w-5 ease-out duration-300 ${navigationMenuOpen &&
-                            navigationMenu === "getting-started"
-                            ? "-rotate-180"
-                            : ""
+                          navigationMenu === "getting-started"
+                          ? "-rotate-180"
+                          : ""
                           }`}
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -358,8 +362,19 @@ const Navbar = () => {
                         </div>
                       )}
                   </div>
+                  <NotificationAdd className="color:yellow" onClick={() => setShowSidebar(!showSidebar)}></NotificationAdd>
+                  {/* Sidebar */}
+                  <div
+                    className={`fixed inset-y-0 right-0 w-64  mt-[5%] bg-gray-800 text-white transition-transform transform ${showSidebar ? 'translate-x-0' : 'translate-x-full'
+                      } ease-in-out duration-300`}
+                  >
+                    {/* Sidebar content */}
+                    <Notification1 />
+                  </div>
+
                 </div>
               )}
+
               {/* Login and Join Us Buttons */}
               {!auth.user && (
                 <div className="flex items-center space-x-4">

@@ -69,7 +69,7 @@ import CompatabilityTesting from "./Components/Home/Plat form/AllCourses/Softwar
 import IntigrationTesting from './Components/Home/Plat form/AllCourses/Software Testing/Integration_Testing/IntegrationFundamentals';
 import SystemTesting from "./Components/Home/Plat form/AllCourses/Software Testing/System_Testing/SystemFundamentals";
 import ManualTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Manual_Testing/ManualTesting";
-import AutomationTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Automation_Testing/AutomationTesting";  
+import AutomationTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Automation_Testing/AutomationTesting";
 import AcceptanceTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Acceptance_testing/AcceptanceTesting"
 import StressTesting from './Components/Home/Plat form/AllCourses/Software Testing/Stress_Testing/StressTestingFundamentals'
 import RegressionTesting from './Components/Home/Plat form/AllCourses/Software Testing/Regression_Testing/RegressionTesting'
@@ -79,7 +79,7 @@ import Wordpress from './Components/BasicCourse/BasicAllCourses/Wordpress/Wordpr
 import Php from './Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp'
 import JavaScript from './Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript'
 import C_Cplus from './Components/BasicCourse/BasicAllCourses/Basic_C&C++/BasicC_Cplus'
- 
+import GoogleCalender from './Components/Profile/Calendar Sync/GoogleCalendar' 
 
 import DataBase from './Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB'
 
@@ -108,6 +108,7 @@ function App() {
           <Route path="/Purchases" element={<Purchases />} />
           <Route path="/mycourse" element={<MyCourse />} />
           <Route path="/student" element={<Student />} />
+          <Route path="/googlecalender" element={<GoogleCalender />} />
 
           <Route path="/artsandHumanities" element={<ArtsandHumanities />} />
           <Route path="/business" element={<Business />} />
@@ -194,67 +195,67 @@ function App() {
             element={<SoftwareTestingArray />}
           />
 
-<Route
+          <Route
             path="/software-testing/performance-testing"
             element={<PerformanceTesting />}
           />
 
-<Route
+          <Route
             path="/software-testing/security-testing"
             element={<SecurityTesting />}
           />
-            <Route
+          <Route
             path="/software-testing/usability-testing"
             element={<UsabilityTesting />}
           />
 
-<Route
+          <Route
             path="/software-testing/unit-testing"
             element={<UnitTesting />}
           />
 
-<Route
+          <Route
             path="/software-testing/compatability-testing"
             element={<CompatabilityTesting />}
           />
 
-<Route
+          <Route
             path="/software-testing/acceptance-testing"
             element={<AcceptanceTesting />}
           />
 
-<Route
+          <Route
             path="/software-testing/stress-testing"
             element={<StressTesting />}
           />
-{/* IntigrationTesting */}
-<Route
+          {/* IntigrationTesting */}
+          <Route
             path="/software-testing/intigration-testing"
             element={<IntigrationTesting />}
           />
 
 
-<Route
+          <Route
             path="/software-testing/system-testing"
             element={<SystemTesting />}
           />
 
-<Route
+          <Route
             path="/software-testing/manual-testing"
             element={<ManualTesting />}
           />
 
-<Route
+          <Route
             path="/software-testing/automation-testing"
             element={<AutomationTesting />}
           />
-<Route
+          <Route
             path="/software-testing/regression-testing"
             element={<RegressionTesting />}
           />
 
 
-<Route
+          <Route
             path="/cloud-testing"
             element={<CloudTesting />}
           />
@@ -307,11 +308,11 @@ function App() {
             path="/fullStack_WebDevelopment/full-stack-javascript"
             element={<FullStackJavaScript />}
           />
-  {/* <Route
+          {/* <Route
             path="/fullStack_WebDevelopment/dot-net-development"
             element={<DotnetDevelopment />}
           /> */}
-{/* DotnetDevelopment */}
+          {/* DotnetDevelopment */}
           {/* /student/student_fullStack_WebDevelopment/fullStack-DotNet */}
 
           {/* WishList/ Cart */}
@@ -326,10 +327,10 @@ function App() {
 
           {/* Basic Advance Preminum Cousrses here */}
           <Route path="/basic-courses" element={<BasicCourses />} />
-{/* Basic Courses */}
-<Route path="/java" element={<Java />} />
-<Route path="/wordpress" element={<Wordpress />} />
-<Route path="/php" element={<Php />} />
+          {/* Basic Courses */}
+          <Route path="/java" element={<Java />} />
+          <Route path="/wordpress" element={<Wordpress />} />
+          <Route path="/php" element={<Php />} />
 <Route path="/javaScript" element={<JavaScript />} />
 <Route path="/c_c++" element={<C_Cplus />} />
           <Route path="/premium-courses" element={<PremiumCourses />} />
