@@ -40,7 +40,7 @@ const BasicCourseArray = () => {
       description: "Learn how to build web applications from front to back",
       image:
         "https://media.geeksforgeeks.org/wp-content/uploads/20231205165904/web-development-image.webp",
-      link: "/fullStack_WebDevelopment",
+      link: "/fullStack_WebDevelopment/fullStack-Web-Development",
     },
     {
       id: 2,
@@ -49,7 +49,7 @@ const BasicCourseArray = () => {
         "Master JavaScript for both front-end and back-end development",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3wuCZOCBggFb3RK8AGPGGQagsocutNezBfghSNLrdg&s",
-      link: "/software_Testing/unit-testing",
+      link: "/software-testing/unit-testing",
     },
     {
       id: 3,
@@ -58,7 +58,7 @@ const BasicCourseArray = () => {
         "Explore MongoDB, Express.js, Angular, and Node.js for full-stack development",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUlEZMH3R-k_ZreGPfhhNKcNisvEIJ1cJW4S5iBz0bbg&s",
-      link: "/meanStackDeveloper",
+      link: "/php",
     },
     {
       id: 4,
@@ -66,7 +66,7 @@ const BasicCourseArray = () => {
       description: "Master Python for both front-end and back-end development",
       image:
         "https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2023_01_Untitled-design-1.jpg",
-      link: "/FullStackPythonDevelopment",
+      link: "/java",
     },
     {
       id: 5,
@@ -74,7 +74,7 @@ const BasicCourseArray = () => {
       description: "Explore Java for building full-stack applications",
       image:
         "https://i.ytimg.com/vi/71EZb94AS1k/maxresdefault.jpg",
-      link: "/fullStackJavaDevelopment",
+      link: "/wordpress",
     },
     {
       id: 8,

@@ -73,6 +73,10 @@ import AutomationTesting from "./Components/Home/Plat form/AllCourses/Software T
 import AcceptanceTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Acceptance_testing/AcceptanceTesting"
 import StressTesting from './Components/Home/Plat form/AllCourses/Software Testing/Stress_Testing/StressTestingFundamentals'
 import RegressionTesting from './Components/Home/Plat form/AllCourses/Software Testing/Regression_Testing/RegressionTesting'
+
+import Java from './Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava'
+import Wordpress from './Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress'
+import Php from './Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp'
 function App() {
   return (
     <div>
@@ -308,9 +312,13 @@ function App() {
           <Route path="/admin/*" element={<AdminRouter />} />
 
           {/* Basic Advance Preminum Cousrses here */}
-          <Route path="/basic_courses" element={<BasicCourses />} />
-          <Route path="/premium_courses" element={<PremiumCourses />} />
-          <Route path="/advance_courses" element={<AdvanceCourses />} />
+          <Route path="/basic-courses" element={<BasicCourses />} />
+{/* Basic Courses */}
+<Route path="/java" element={<Java />} />
+<Route path="/wordpress" element={<Wordpress />} />
+<Route path="/php" element={<Php />} />
+          <Route path="/premium-courses" element={<PremiumCourses />} />
+          <Route path="/advance-courses" element={<AdvanceCourses />} />
         </Routes>
       </BrowserRouter>
     </div>
