@@ -70,6 +70,7 @@ import IntigrationTesting from './Components/Home/Plat form/AllCourses/Software 
 import SystemTesting from "./Components/Home/Plat form/AllCourses/Software Testing/System_Testing/SystemFundamentals";
 import ManualTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Manual_Testing/ManualTesting";
 import AutomationTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Automation_Testing/AutomationTesting";  
+import AcceptanceTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Acceptance_testing/AcceptanceTesting"
 function App() {
   return (
     <div>
@@ -199,6 +200,11 @@ function App() {
 <Route
             path="/software_Testing/compatability-testing"
             element={<CompatabilityTesting />}
+          />
+
+<Route
+            path="/software_Testing/acceptance-testing"
+            element={<AcceptanceTesting />}
           />
 
 {/* IntigrationTesting */}

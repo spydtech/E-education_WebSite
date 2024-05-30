@@ -75,7 +75,7 @@ const SoftwareTestingArray = () => {
         "title": "Acceptance Testing",
         "description": "Testing if software meets user needs.",
         "image": "https://www.spaceo.ca/wp-content/uploads/2023/04/What-is-Acceptance-Testing.jpg",
-        "link": "https://example.com/acceptance-testing"
+        "link": "/software_Testing/acceptance-testing"
     },
     {
         "id": 5,
