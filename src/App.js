@@ -71,6 +71,7 @@ import SystemTesting from "./Components/Home/Plat form/AllCourses/Software Testi
 import ManualTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Manual_Testing/ManualTesting";
 import AutomationTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Automation_Testing/AutomationTesting";  
 import AcceptanceTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Acceptance_testing/AcceptanceTesting"
+import StressTesting from './Components/Home/Plat form/AllCourses/Software Testing/Stress_Testing/StressTestingFundamentals'
 function App() {
   return (
     <div>
@@ -179,53 +180,57 @@ function App() {
           />
 
 <Route
-            path="/software_Testing/performance-testing"
+            path="/software-testing/performance-testing"
             element={<PerformanceTesting />}
           />
 
 <Route
-            path="/software_Testing/security-testing"
+            path="/software-testing/security-testing"
             element={<SecurityTesting />}
           />
             <Route
-            path="/software_Testing/usability-testing"
+            path="/software-testing/usability-testing"
             element={<UsabilityTesting />}
           />
 
 <Route
-            path="/software_Testing/unit-testing"
+            path="/software-testing/unit-testing"
             element={<UnitTesting />}
           />
 
 <Route
-            path="/software_Testing/compatability-testing"
+            path="/software-testing/compatability-testing"
             element={<CompatabilityTesting />}
           />
 
 <Route
-            path="/software_Testing/acceptance-testing"
+            path="/software-testing/acceptance-testing"
             element={<AcceptanceTesting />}
           />
 
+<Route
+            path="/software-testing/stress-testing"
+            element={<StressTesting />}
+          />
 {/* IntigrationTesting */}
 <Route
-            path="/software_Testing/intigration-testing"
+            path="/software-testing/intigration-testing"
             element={<IntigrationTesting />}
           />
 
 
 <Route
-            path="/software_Testing/system_testing"
+            path="/software-testing/system-testing"
             element={<SystemTesting />}
           />
 
 <Route
-            path="/software_Testing/manual_testing"
+            path="/software-testing/manual-testing"
             element={<ManualTesting />}
           />
 
 <Route
-            path="/software_Testing/automation_testing"
+            path="/software-testing/automation-testing"
             element={<AutomationTesting />}
           />
 

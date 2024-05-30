@@ -54,56 +54,56 @@ const SoftwareTestingArray = () => {
         "title": "Unit Testing",
         "description": "Testing individual components in isolation.",
         "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200514113957/What-is-Unit-Testing-and-Why-Developer-Should-Learn-It.png",
-        "link": "/software_Testing/unit-testing"
+        "link": "/software-testing/unit-testing"
     },
     {
         "id": 2,
         "title": "Integration Testing",
         "description": "Testing software components together.",
         "image": "https://testsigma.com/blog/wp-content/uploads/In-article-MC410.jpg",
-        "link": "/software_Testing/intigration-testing"
+        "link": "/software-testing/intigration-testing"
     },
     {
         "id": 3,
         "title": "System Testing",
         "description": "Testing the complete integrated software.",
         "image": "https://artoftesting.com/wp-content/uploads/2019/12/System-Testing.jpg",
-        "link": "/software_Testing/system_testing"
+        "link": "/software-testing/system-testing"
     },
     {
         "id": 4,
         "title": "Acceptance Testing",
         "description": "Testing if software meets user needs.",
         "image": "https://www.spaceo.ca/wp-content/uploads/2023/04/What-is-Acceptance-Testing.jpg",
-        "link": "/software_Testing/acceptance-testing"
+        "link": "/software-testing/acceptance-testing"
     },
     {
         "id": 5,
         "title": "Performance Testing",
         "description": "Testing speed and stability.",
         "image": "https://artoftesting.com/wp-content/uploads/2019/12/types-of-performance-testing.jpg",
-        "link": "/software_Testing/performance-testing"
+        "link": "/software-testing/performance-testing"
     },
     {
         "id": 6,
         "title": "Security Testing",
         "description": "Testing for vulnerabilities.",
         "image": "https://miro.medium.com/v2/resize:fit:750/1*wYU7HChNgP-Mt8iZvdiFxQ.jpeg",
-        "link": "/software_Testing/security-testing"
+        "link": "/software-testing/security-testing"
     },
     {
         "id": 7,
         "title": "Usability Testing",
         "description": "Testing user-friendliness.",
         "image": "https://er9wjw26noi.exactdn.com/wp-content/uploads/2022/08/What-is-usability-testing.jpg?lossy=1&quality=88&webp=88&ssl=1",
-        "link": "/software_Testing/usability-testing"
+        "link": "/software_testing/usability-testing"
     },
     {
         "id": 8,
         "title": "Compatibility Testing",
         "description": "Testing across different environments.",
         "image": "https://www.collidu.com/media/catalog/product/img/7/8/78772832867f22e863a6a75381dc0029637dd1400bdf68eb5657858d7bd95deb/compatibility-testing-slide1.png",
-        "link": "/software_Testing/compatability-testing"
+        "link": "/software-testing/compatability-testing"
     },
     {
         "id": 9,
@@ -117,21 +117,21 @@ const SoftwareTestingArray = () => {
         "title": "Stress Testing",
         "description": "Testing under extreme conditions.",
         "image": "https://cdn.educba.com/academy/wp-content/uploads/2019/09/What-is-Stress-Testing.png",
-        "link": "https://example.com/stress-testing"
+        "link": "/software-testing/stress-testing"
     },
     {
         "id": 11,
         "title": "Manual Testing",
         "description": "Testing done manually by testers.",
         "image": "https://azilen-technologies.s3.us-west-1.amazonaws.com/wp-content/uploads/2023/07/Manual-testing.jpg",
-        "link": "/software_Testing/manual_testing"
+        "link": "/software-testing/manual-testing"
     },
     {
         "id": 12,
         "title": "Automated Testing",
         "description": "Testing using automation tools.",
         "image": "https://api.edoxi.com/assets/studyhub/Automation_Testing_-_Introduction_to_Automation_Testing1.webp",
-        "link": "/software_Testing/automation_testing"
+        "link": "/software-testing/automation-testing"
     }
 ]
 
