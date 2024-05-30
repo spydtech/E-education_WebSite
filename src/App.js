@@ -77,6 +77,9 @@ import RegressionTesting from './Components/Home/Plat form/AllCourses/Software T
 import Java from './Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava'
 import Wordpress from './Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress'
 import Php from './Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp'
+import JavaScript from './Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript'
+import C_Cplus from './Components/BasicCourse/BasicAllCourses/Basic_C&C++/BasicC_Cplus'
+ 
 
 import DataBase from './Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB'
 
@@ -327,6 +330,8 @@ function App() {
 <Route path="/java" element={<Java />} />
 <Route path="/wordpress" element={<Wordpress />} />
 <Route path="/php" element={<Php />} />
+<Route path="/javaScript" element={<JavaScript />} />
+<Route path="/c_c++" element={<C_Cplus />} />
           <Route path="/premium-courses" element={<PremiumCourses />} />
           <Route path="/advance-courses" element={<AdvanceCourses />} />
         </Routes>
