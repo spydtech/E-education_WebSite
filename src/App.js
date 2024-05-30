@@ -72,6 +72,7 @@ import ManualTesting from "./Components/Home/Plat form/AllCourses/Software Testi
 import AutomationTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Automation_Testing/AutomationTesting";  
 import AcceptanceTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Acceptance_testing/AcceptanceTesting"
 import StressTesting from './Components/Home/Plat form/AllCourses/Software Testing/Stress_Testing/StressTestingFundamentals'
+import RegressionTesting from './Components/Home/Plat form/AllCourses/Software Testing/Regression_Testing/RegressionTesting'
 function App() {
   return (
     <div>
@@ -233,7 +234,12 @@ function App() {
             path="/software-testing/automation-testing"
             element={<AutomationTesting />}
           />
+<Route
+            path="/software-testing/regression-testing"
+            element={<RegressionTesting />}
+          />
 
+{/* RegressionTesting */}
 
 
 

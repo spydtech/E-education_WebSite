@@ -110,7 +110,7 @@ const SoftwareTestingArray = () => {
         "title": "Regression Testing",
         "description": "Testing recent changes for new issues.",
         "image": "https://assets-global.website-files.com/619e15d781b21202de206fb5/62165ea063f4cb7c15c9fc6e_regression-testing-guide.jpg",
-        "link": "https://example.com/regression-testing"
+        "link": "/software-testing/regression-testing"
     },
     {
         "id": 10,

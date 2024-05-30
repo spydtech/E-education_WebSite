@@ -8,10 +8,10 @@ const StressTestingHero = () => {
       <div>
         <img
         
-          src="https://duws858oznvmq.cloudfront.net/stress_testing_in_performance_testing_ff56eb7e06.webp"
+          src="https://i0.wp.com/www.qatouch.com/wp-content/uploads/2023/05/6-15.png?resize=1024%2C535&ssl=1"
           className="w-full object-cover md:h-[500px]"
         />
-          {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
       </div>
      
       <div
