@@ -70,6 +70,13 @@ import IntigrationTesting from './Components/Home/Plat form/AllCourses/Software 
 import SystemTesting from "./Components/Home/Plat form/AllCourses/Software Testing/System_Testing/SystemFundamentals";
 import ManualTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Manual_Testing/ManualTesting";
 import AutomationTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Automation_Testing/AutomationTesting";  
+import AcceptanceTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Acceptance_testing/AcceptanceTesting"
+import StressTesting from './Components/Home/Plat form/AllCourses/Software Testing/Stress_Testing/StressTestingFundamentals'
+import RegressionTesting from './Components/Home/Plat form/AllCourses/Software Testing/Regression_Testing/RegressionTesting'
+
+import Java from './Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava'
+import Wordpress from './Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress'
+import Php from './Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp'
 
 
 
@@ -182,52 +189,64 @@ function App() {
           />
 
 <Route
-            path="/software_Testing/performance-testing"
+            path="/software-testing/performance-testing"
             element={<PerformanceTesting />}
           />
 
 <Route
-            path="/software_Testing/security-testing"
+            path="/software-testing/security-testing"
             element={<SecurityTesting />}
           />
             <Route
-            path="/software_Testing/usability-testing"
+            path="/software-testing/usability-testing"
             element={<UsabilityTesting />}
           />
 
 <Route
-            path="/software_Testing/unit-testing"
+            path="/software-testing/unit-testing"
             element={<UnitTesting />}
           />
 
 <Route
-            path="/software_Testing/compatability-testing"
+            path="/software-testing/compatability-testing"
             element={<CompatabilityTesting />}
           />
 
+<Route
+            path="/software-testing/acceptance-testing"
+            element={<AcceptanceTesting />}
+          />
+
+<Route
+            path="/software-testing/stress-testing"
+            element={<StressTesting />}
+          />
 {/* IntigrationTesting */}
 <Route
-            path="/software_Testing/intigration-testing"
+            path="/software-testing/intigration-testing"
             element={<IntigrationTesting />}
           />
 
 
 <Route
-            path="/software_Testing/system_testing"
+            path="/software-testing/system-testing"
             element={<SystemTesting />}
           />
 
 <Route
-            path="/software_Testing/manual_testing"
+            path="/software-testing/manual-testing"
             element={<ManualTesting />}
           />
 
 <Route
-            path="/software_Testing/automation_testing"
+            path="/software-testing/automation-testing"
             element={<AutomationTesting />}
           />
+<Route
+            path="/software-testing/regression-testing"
+            element={<RegressionTesting />}
+          />
 
-{/* Cloud Testing */}
 
 <Route
             path="/cloud-testing"
@@ -300,9 +319,13 @@ function App() {
           <Route path="/admin/*" element={<AdminRouter />} />
 
           {/* Basic Advance Preminum Cousrses here */}
-          <Route path="/basic_courses" element={<BasicCourses />} />
-          <Route path="/premium_courses" element={<PremiumCourses />} />
-          <Route path="/advance_courses" element={<AdvanceCourses />} />
+          <Route path="/basic-courses" element={<BasicCourses />} />
+{/* Basic Courses */}
+<Route path="/java" element={<Java />} />
+<Route path="/wordpress" element={<Wordpress />} />
+<Route path="/php" element={<Php />} />
+          <Route path="/premium-courses" element={<PremiumCourses />} />
+          <Route path="/advance-courses" element={<AdvanceCourses />} />
         </Routes>
       </BrowserRouter>
     </div>
