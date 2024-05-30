@@ -112,7 +112,7 @@ const courses = [
   {
     title: "Cloud Computing",
     description: "Embark on a journey into cloud computing with E-education.",
-    link: "link-to-the-course",
+    link: "/cloud-testing",
     icon: <FaMixcloud style={{ width: "40px", height: "40px" }} />,
   },
   {
@@ -126,7 +126,7 @@ const courses = [
     title: "Database Management",
     description:
       "Unlock the potential of database management with E-education.",
-    link: "link-to-the-course",
+    link: "/database",
     icon: <FaDatabase style={{ width: "40px", height: "40px" }} />,
   },
   {
