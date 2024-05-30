@@ -2,28 +2,28 @@
 
 import React from "react";
 
-function CloudSyallabus() {
+function DBSyallabus() {
   const data = [
     {
-      heading: "Introduction to Cloud Computing",
+      heading: "Introduction to Database Management",
       subheading: "Topics (16)",
       items: [
-        "Overview of Cloud Computing",
-        "Cloud Service Models (IaaS, PaaS, SaaS)",
-        "Cloud Deployment Models (Public, Private, Hybrid)",
-        "Cloud Infrastructure Components",
-        "Virtualization in Cloud Computing",
-        "Scalability and Elasticity",
-        "Security in Cloud Computing",
-        "Identity and Access Management (IAM)",
-        "Data Privacy and Compliance",
-        "Cloud Networking Fundamentals",
-        "Load Balancing and Content Delivery Networks (CDNs)",
-        "High Availability and Disaster Recovery",
-        "Serverless Computing",
-        "Big Data and Analytics in the Cloud",
-        "Artificial Intelligence and Machine Learning in the Cloud",
-        "Future Trends in Cloud Computing",
+        "Overview of Database Management Systems (DBMS)",
+        "Types of Databases (Relational, NoSQL, In-Memory)",
+        "Database Architecture and Components",
+        "Data Modeling and Database Design",
+        "SQL Basics and Advanced Queries",
+        "Normalization and Denormalization",
+        "Transactions and Concurrency Control",
+        "Database Security and Encryption",
+        "Backup and Recovery Strategies",
+        "Performance Tuning and Optimization",
+        "Stored Procedures, Triggers, and Functions",
+        "NoSQL Databases: MongoDB, Cassandra",
+        "Big Data and Distributed Databases",
+        "Data Warehousing and OLAP",
+        "Database Administration and Maintenance",
+        "Future Trends in Database Technology",
       ],
     },
   ];
@@ -51,7 +51,7 @@ function CloudSyallabus() {
             <div>
               <p className="text-xl text-gray-300">
                 Dive into the comprehensive curriculum covering key concepts,
-                practical applications, and advanced topics in cloud computing.
+                practical applications, and advanced topics in database management.
               </p>
             </div>
           </div>
@@ -85,4 +85,4 @@ function CloudSyallabus() {
   );
 }
 
-export default CloudSyallabus;
+export default DBSyallabus;

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-function CloudKeyHighights() {
+function DBKeyHighights() {
   const [selectedItem, setSelectedItem] = useState(0);
 
   const data = [
@@ -22,12 +22,12 @@ function CloudKeyHighights() {
       case 0:
         return (
           <>
-            <ul className="space-y-2 pt-4 font-normal text-[16px] list-disc pl-16  bg-gray-200 shadow-2xl">
+            <ul className="space-y-2 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
               <p className="text-2xl font-medium text-blue-500 py-4">Overview</p>
-              <li>Introduction to cloud computing fundamentals</li>
-              <li>Benefits and advantages of cloud computing</li>
-              <li>Overview of cloud service models and deployment models</li>
-              <li>Real-world examples of cloud computing applications</li>
+              <li>Introduction to database management systems (DBMS)</li>
+              <li>Importance and benefits of effective database management</li>
+              <li>Overview of different types of database systems</li>
+              <li>Real-world applications of database management</li>
             </ul>
           </>
         );
@@ -38,27 +38,26 @@ function CloudKeyHighights() {
               <p className="text-2xl font-medium text-blue-500 py-4">
                 Key Concepts
               </p>
-              <li>Infrastructure as a Service (IaaS)</li>
-              <li>Platform as a Service (PaaS)</li>
-              <li>Software as a Service (SaaS)</li>
-              <li>Public, private, and hybrid cloud models</li>
-              <li>Cloud security and compliance</li>
+              <li>Relational Database Management Systems (RDBMS)</li>
+              <li>NoSQL Databases</li>
+              <li>Data Modeling and Database Design</li>
+              <li>SQL and Query Optimization</li>
+              <li>Database Security and Integrity</li>
             </ul>
           </>
         );
       case 2:
         return (
           <>
-            {" "}
             <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium  text-blue-500">
+              <p className="text-2xl font-medium text-blue-500">
                 Applications
               </p>
-              <li>Web and mobile application development</li>
-              <li>Big data analytics and processing</li>
-              <li>Artificial intelligence and machine learning</li>
-              <li>Internet of Things (IoT) platforms</li>
-              <li>Enterprise resource planning (ERP) systems</li>
+              <li>Data Warehousing and Business Intelligence</li>
+              <li>Web and Mobile Application Databases</li>
+              <li>Big Data Analytics</li>
+              <li>Enterprise Resource Planning (ERP) Systems</li>
+              <li>Customer Relationship Management (CRM) Systems</li>
             </ul>
           </>
         );
@@ -66,30 +65,29 @@ function CloudKeyHighights() {
         return (
           <>
             <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium  text-blue-500">
+              <p className="text-2xl font-medium text-blue-500">
                 Skills Developed
               </p>
-              <li>Understanding of cloud computing principles and practices</li>
-              <li>Proficiency in deploying and managing cloud services</li>
-              <li>Ability to design scalable and resilient cloud architectures</li>
-              <li>Experience with cloud-based development and deployment tools</li>
-              <li>Knowledge of cloud security best practices</li>
+              <li>Proficiency in SQL and database querying</li>
+              <li>Ability to design and normalize database schemas</li>
+              <li>Understanding of database management and optimization</li>
+              <li>Experience with NoSQL databases</li>
+              <li>Knowledge of database security best practices</li>
             </ul>
           </>
         );
       case 4:
         return (
           <>
-            {" "}
             <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium  text-blue-500">
+              <p className="text-2xl font-medium text-blue-500">
                 Target Audience
               </p>
-              <li>Software developers and engineers</li>
-              <li>System administrators and IT professionals</li>
-              <li>Cloud architects and solution architects</li>
-              <li>Enterprise decision-makers and business leaders</li>
-              <li>Students and aspiring cloud professionals</li>
+              <li>Database Administrators and Managers</li>
+              <li>Software Developers and Engineers</li>
+              <li>Data Analysts and Scientists</li>
+              <li>IT Professionals and System Administrators</li>
+              <li>Students and Aspiring Database Professionals</li>
             </ul>
           </>
         );
@@ -102,7 +100,7 @@ function CloudKeyHighights() {
     <>
       <div
         id="main"
-        className=" md:lg:xl:px-20  bg-gradient-to-br  from-[#cca000] to-[#f5cc00]"
+        className="md:lg:xl:px-20 bg-gradient-to-r from-rose-500 to-red-500"
       >
         <div id="subdiv1" className="pt-4 font-lora">
           <div id="h1" className="">
@@ -112,9 +110,9 @@ function CloudKeyHighights() {
           </div>
           <div
             id="h2"
-            className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
+            className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96 h-auto"
           >
-            <p className="text-5xl font-bold ">What does this</p>
+            <p className="text-5xl font-bold">What does this</p>
             <p className="text-5xl font-bold text-[#00509d] inline">
               Course have to offer?
             </p>
@@ -122,17 +120,17 @@ function CloudKeyHighights() {
         </div>
         <div
           id="subdiv2"
-          className="justify-between grid  grid-cols-1 lg:md:grid-cols-2"
+          className="justify-between grid grid-cols-1 lg:md:grid-cols-2"
         >
           {/* content start*/}
-          <div id="content1" className="">
+          <div id="content1">
             {data.map((item, index) => (
               <div
                 key={index}
                 onClick={() => handleClick(index)}
-                className={`hover:text-blue-500 p-5 text-start hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-80 lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden  transition-transform duration-300 transform hover:scale-105 ${
+                className={`hover:text-blue-500 p-5 text-start hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-80 lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden transition-transform duration-300 transform hover:scale-105 ${
                   selectedItem === index
-                    ? "bg-[#00509d]  text-white hover:text-white border-none"
+                    ? "bg-[#00509d] text-white hover:text-white border-none"
                     : ""
                 }`}
               >
@@ -153,4 +151,4 @@ function CloudKeyHighights() {
   );
 }
 
-export default CloudKeyHighights;
+export default DBKeyHighights;

@@ -78,6 +78,7 @@ import Java from './Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava'
 import Wordpress from './Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress'
 import Php from './Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp'
 
+import DataBase from './Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB'
 
 
 import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
@@ -111,6 +112,8 @@ function App() {
           <Route path="/professional" element={<Professional />} />
           <Route path="/reactjs" element={<Reactjs />} />
           <Route path="/health" element={<Health />} />
+          <Route path="/database" element={<DataBase />} />
+
           {/* Data Science */}
           <Route
             path="/data_Science"
