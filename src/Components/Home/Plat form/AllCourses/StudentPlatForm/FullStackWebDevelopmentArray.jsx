@@ -7,6 +7,8 @@ import WishLists from "../../AddtoCart/WishLists";
 import { Link } from "react-router-dom";
 import Navbar from "../../../../Navbar";
 import Footer from "../../../footer/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { findCourses, getAllCourses } from "../../../../../State/Course/Action";
 const FullStackWebDevelopmentArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
@@ -23,6 +25,7 @@ const FullStackWebDevelopmentArray = () => {
       setWishlist((prevWishlist) => [...prevWishlist, course]);
     }
   };
+
 
   useEffect(() => {
     console.log("wish", wishlist);
@@ -103,7 +106,7 @@ const FullStackWebDevelopmentArray = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <img
         src="https://miro.medium.com/v2/resize:fit:1400/1*e4HBnH84BpwLCFr78xvfjg.gif"
         className="object-cover w-full md:h-[450px]"
@@ -125,10 +128,10 @@ const FullStackWebDevelopmentArray = () => {
           />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filteredCourses.map((course) => (
+          {filteredCourses.map((item) => (
             <CourseCard
-              key={course.id}
-              course={course}
+              key={item.id}
+              course={item}
               handleWishList={handleWishList}
               setShow={setShow}
             />

@@ -177,48 +177,48 @@ function App() {
             element={<SoftwareTestingArray />}
           />
 
-<Route
+          <Route
             path="/software_Testing/performance-testing"
             element={<PerformanceTesting />}
           />
 
-<Route
+          <Route
             path="/software_Testing/security-testing"
             element={<SecurityTesting />}
           />
-            <Route
+          <Route
             path="/software_Testing/usability-testing"
             element={<UsabilityTesting />}
           />
 
-<Route
+          <Route
             path="/software_Testing/unit-testing"
             element={<UnitTesting />}
           />
 
-<Route
+          <Route
             path="/software_Testing/compatability-testing"
             element={<CompatabilityTesting />}
           />
 
-{/* IntigrationTesting */}
-<Route
+          {/* IntigrationTesting */}
+          <Route
             path="/software_Testing/intigration-testing"
             element={<IntigrationTesting />}
           />
 
 
-<Route
+          <Route
             path="/software_Testing/system_testing"
             element={<SystemTesting />}
           />
 
-<Route
+          <Route
             path="/software_Testing/manual_testing"
             element={<ManualTesting />}
           />
 
-<Route
+          <Route
             path="/software_Testing/automation_testing"
             element={<AutomationTesting />}
           />
@@ -273,11 +273,11 @@ function App() {
             path="/fullStack_WebDevelopment/full-stack-javascript"
             element={<FullStackJavaScript />}
           />
-  {/* <Route
+          {/* <Route
             path="/fullStack_WebDevelopment/dot-net-development"
             element={<DotnetDevelopment />}
           /> */}
-{/* DotnetDevelopment */}
+          {/* DotnetDevelopment */}
           {/* /student/student_fullStack_WebDevelopment/fullStack-DotNet */}
 
           {/* WishList/ Cart */}
