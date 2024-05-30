@@ -70,6 +70,10 @@ import IntigrationTesting from './Components/Home/Plat form/AllCourses/Software 
 import SystemTesting from "./Components/Home/Plat form/AllCourses/Software Testing/System_Testing/SystemFundamentals";
 import ManualTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Manual_Testing/ManualTesting";
 import AutomationTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Automation_Testing/AutomationTesting";  
+
+
+
+import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 function App() {
   return (
     <div>
@@ -223,7 +227,12 @@ function App() {
             element={<AutomationTesting />}
           />
 
+{/* Cloud Testing */}
 
+<Route
+            path="/cloud-testing"
+            element={<CloudTesting />}
+          />
 
 
           {/* Ethical Hacking */}
