@@ -81,6 +81,7 @@ import Php from './Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp'
 import DataBase from './Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB'
 import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 import CourseDetails from "./Components/CourseDetails/CourseDetails";
+import GoogleCalendar from "./Components/Profile/Calendar Sync/GoogleCalendar";
 
 
 function App() {
@@ -92,6 +93,7 @@ function App() {
           <Route path="/about_us" element={<AboutUs />} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
+          <Route path="/googleCalender" element={<GoogleCalendar />} />
           <Route path="/mylearning" element={<MyLearning />} />
           <Route path="/Certificates" element={<Certificates />} />
           <Route path="/features" element={<Features />} />

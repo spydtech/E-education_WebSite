@@ -248,7 +248,7 @@ const Navbar = () => {
               )}
 
               {/* User Initials */}
-              {auth.user && (
+              {auth.user && auth.user.firstName && (
                 <div className="flex items-center">
                   {/* Feeds */}
                   <Link

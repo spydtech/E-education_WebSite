@@ -6,7 +6,7 @@ import Navbar from "../../Navbar";
 import Footer from "../../Home/footer/Footer";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import IMG from "../../../assets/calender/undraw_Booked_re_vtod.png"
+import IMG from "../../../assets/Calender/undraw_Booked_re_vtod.png"
 
 const localizer = momentLocalizer(moment);
 
