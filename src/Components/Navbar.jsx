@@ -24,7 +24,7 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
 
-  const navigation = [{ name: "Explore", href: "/Explore", current: false }];
+  const navigation = [{ name: "Explore", href: "/", current: false }];
   if (auth.user) {
     navigation.push(
       { name: "My Learning", href: "/mylearning", current: false },
@@ -152,43 +152,43 @@ const Navbar = () => {
                           <li>
                             <details ClassName="mb-2">
                               <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                                <span ClassName="font-semibold">
+                                <Link to = "/fullStack_WebDevelopment/fullStack-Python-Development" ClassName="font-semibold">
                                   Python Programming
-                                </span>
+                                </Link>
                               </summary>
                             </details>
                           </li>
                           <li>
                             <details ClassName="mb-2">
                               <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                                <span ClassName="font-semibold">
+                                <Link to = "/data_Science" ClassName="font-semibold">
                                   Data Science
-                                </span>
+                                </Link>
                               </summary>
                             </details>
                           </li>
                           <details ClassName="mb-2">
                             <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                              <span ClassName="font-semibold">
+                              <Link to = "/data_Science/machine-Learning" ClassName="font-semibold">
                                 Machine Learning
-                              </span>
+                              </Link>
                             </summary>
                           </details>
                           <li>
                             <details ClassName="mb-2">
                               <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                                <span ClassName="font-semibold">
-                                  Digital Markenting
-                                </span>
+                                <Link to = "/ethical_Hacking" ClassName="font-semibold">
+                                  Ethical hacking
+                                </Link>
                               </summary>
                             </details>
                           </li>
                           <li>
                             <details ClassName="mb-2">
                               <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                                <span ClassName="font-semibold">
+                                <Link to = "/cyber_security" ClassName="font-semibold">
                                   Cyber Security
-                                </span>
+                                </Link>
                               </summary>
                             </details>
                           </li>
@@ -206,37 +206,37 @@ const Navbar = () => {
                           <li>
                             <details ClassName="mb-2">
                               <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                                <span ClassName="font-semibold">
+                                <Link to= "/fullStack_WebDevelopment/fullStack-Web-Development" ClassName="font-semibold">
                                   Front-end Development
-                                </span>
+                                </Link>
                               </summary>
                             </details>
                           </li>
                           <li>
                             <details ClassName="mb-2">
                               <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                                <span ClassName="font-semibold">
+                                <Link to = "/fullStack_WebDevelopment/mean-Stack-Developer" ClassName="font-semibold">
                                   Backend development
-                                </span>
+                                </Link>
                               </summary>
                             </details>
                           </li>
                           <li>
                             <details ClassName="mb-2">
                               <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                                <span ClassName="font-semibold">
+                                <Link to= "/fullStack_WebDevelopment" ClassName="font-semibold">
                                   Full-stack development
-                                </span>
+                                </Link>
                               </summary>
                             </details>
                           </li>
                           <li>
                             <details ClassName="mb-2">
                               <summary ClassName="bg-gray-100 p-3 rounded-lg cursor-pointer shadow">
-                                <span ClassName="font-semibold">
+                                <Link to = "/ui_ux_design" ClassName="font-semibold">
                                   {" "}
                                   Ui/Ux Design
-                                </span>
+                                </Link>
                               </summary>
                             </details>
                           </li>
