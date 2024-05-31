@@ -85,7 +85,9 @@ import DataBase from './Components/Home/Plat form/perofessionals/professionalsCo
 import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 import CourseDetails from "./Components/CourseDetails/CourseDetails";
 import GoogleCalendar from "./Components/Profile/Calendar Sync/GoogleCalendar";
-// import 
+import AdvancePhp from './Components/AdvanceCourses/Advance-courses/AdvancePhp/AdvancePhp';
+import BlockChain from "./Components/AdvanceCourses/Advance-courses/BlockChain/BlockChain";
+import CloudComputing from "./Components/AdvanceCourses/Advance-courses/CloudComputing/CloudComputing";
 
 function App() {
   return (
@@ -339,6 +341,13 @@ function App() {
 <Route path="/c_c++" element={<C_Cplus />} />
           <Route path="/premium-courses" element={<PremiumCourses />} />
           <Route path="/advance-courses" element={<AdvanceCourses />} />
+          {/* Advance courses */}
+          <Route path="/advance-php" element={<AdvancePhp />} />
+          <Route path="/blockchain" element={<BlockChain />} />
+          <Route path="/cloud-computing" element={<CloudComputing />} />
+          
+          
+          
         </Routes>
       </BrowserRouter>
     </div>

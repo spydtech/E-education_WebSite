@@ -1,20 +1,20 @@
 import React from "react";
 
-import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
-import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
+import programmer from "../../../../../assets/dataAnalatics/programmer.jpg";
+import assistance from "../../../../../assets/dataAnalatics/assistance.jpg";
 
-const BlockChainAbout = () => {
+const AdvancePhpAbout = () => {
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br  to-[#0a0908] from-[#272640]">
+    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br  to-[#9e0059] from-[#640d14]">
       <div className="pt-0">
-        <p className="text-[#ff7000] text-xl font-medium">
-          About Block Chain Development Course
+        <p className="text-[#ffbc42] text-xl font-medium">
+          About Advance Php Course
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora text-white">
+        <p className="text-6xl font-lora">
           Discover the
-          <p className="text-[#ff7000] my-2">Block Chain Development Program</p>
+          <p className="text-[#ffbc42] my-2">Advance Php Program</p>
         </p>
       </div>
 
@@ -57,4 +57,4 @@ const BlockChainAbout = () => {
   );
 };
 
-export default BlockChainAbout;
+export default AdvancePhpAbout;

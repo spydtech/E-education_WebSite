@@ -100,7 +100,6 @@
 
 
 import { useState, useContext } from 'react';
-import { StarIcon } from '@heroicons/react/20/solid';
 import { FcLike, FcLikePlaceholder } from 'react-icons/fc';
 import Navbar from '../Navbar';
 import { useLocation, useNavigate } from 'react-router-dom';

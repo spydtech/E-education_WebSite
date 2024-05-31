@@ -1,20 +1,20 @@
 import React from "react";
 
-import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
-import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
+import programmer from "../../../../../assets/dataAnalatics/programmer.jpg";
+import assistance from "../../../../../assets/dataAnalatics/assistance.jpg";
 
-const AdvancePhpAbout = () => {
+const CloudComputingAbout = () => {
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br  to-[#9e0059] from-[#640d14]">
+    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br  from-[#04e761] to-[#00916e]">
       <div className="pt-0">
-        <p className="text-[#ffbc42] text-xl font-medium">
-          About Advance Php Course
+        <p className="text-[#072ac8] text-xl font-medium">
+          About CloudComputing with AWS Course
         </p>
       </div>
       <div className="py-2">
         <p className="text-6xl font-lora">
           Discover the
-          <p className="text-[#ffbc42] my-2">Advance Php Program</p>
+          <p className="text-[#072ac8] my-2">CloudComputing with AWS program</p>
         </p>
       </div>
 
@@ -57,4 +57,4 @@ const AdvancePhpAbout = () => {
   );
 };
 
-export default AdvancePhpAbout;
+export default CloudComputingAbout;

@@ -58,7 +58,7 @@ const Advance_Courses = () => {
         "Explore MongoDB, Express.js, Angular, and Node.js for full-stack development",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM_-_y91ofGI7yjop5oRlM1uL1hA5r1hJ40Ld6oyN1bw&s",
-      link: "/meanStackDeveloper",
+      link: "/advance-php",
     },
     {
       id: 4,
@@ -81,7 +81,7 @@ const Advance_Courses = () => {
         title: "Cloud Computing with AWS",
         description: "Advanced AWS cloud computing course, focusing on architecture and deployment.",
         image: "https://images.squarespace-cdn.com/content/v1/60cfd646701da4034512a1c5/1654217981309-RTSZMBJWA9YJ5V32UN8R/AWS-Cloud.png",
-        link: "/cloudComputingAWS",
+        link: "/cloud-computing",
       },
       {
         id: 7,
@@ -95,7 +95,7 @@ const Advance_Courses = () => {
         title: "Blockchain Development",
         description: "Advanced blockchain development course covering smart contracts, Ethereum, and decentralized applications.",
         image: "https://ideausher.com/wp-content/uploads/2022/12/Blockchain-Developer-Hire_-A-Complete-Guide-1.webp",
-        link: "/blockchainDevelopment",
+        link: "/blockchain",
       }
   ];
 

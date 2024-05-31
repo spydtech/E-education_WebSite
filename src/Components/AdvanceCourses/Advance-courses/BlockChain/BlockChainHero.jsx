@@ -10,6 +10,7 @@ const BlockChainHero = () => {
           src="https://wallpaper.forfun.com/fetch/e2/e26042c747d0c6131146b07d38104c46.jpeg"
           className="w-full object-cover md:h-[500px]"
         />
+    <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
       </div>
 
       <div
