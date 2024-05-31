@@ -82,7 +82,7 @@ const BasicCourseArray = () => {
       description: "Explore the .NET framework for full-stack development",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYmpKizkiZ4vR50ndoXJZnBi2l2O7yj2NGw-YdjX2Jfg&s",
-      link: "/fullStackDotNet",
+      link: "/javaScript",
     },
     {
       id: 9,
@@ -91,7 +91,7 @@ const BasicCourseArray = () => {
         "Learn DevOps practices for full-stack development environments",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvhwX49W-oHzQ9SNKqBuslHTLFfoCuhXGDhZXBzxpcUg&s",
-      link: "/fullStackDevops",
+      link: "/c_c++",
     },
   ];
 
