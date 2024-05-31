@@ -80,15 +80,18 @@ import Wordpress from './Components/BasicCourse/BasicAllCourses/Wordpress/Wordpr
 import Php from './Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp'
 import JavaScript from './Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript'
 import C_Cplus from './Components/BasicCourse/BasicAllCourses/Basic_C&C++/BasicC_Cplus'
-import GoogleCalender from './Components/Profile/Calendar Sync/GoogleCalendar' 
+import GoogleCalender from './Components/Profile/Calendar Sync/GoogleCalendar'
 import DataBase from './Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB'
 import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 import CourseDetails from "./Components/CourseDetails/CourseDetails";
 import GoogleCalendar from "./Components/Profile/Calendar Sync/GoogleCalendar";
-import AdvancePhp from './Components/AdvanceCourses/Advance-courses/AdvancePhp/AdvancePhp';
+import AdvancePhp from './Components/AdvanceCourses/Advance-courses/Advance PHP1/AdvancephpFundamentals';
 import BlockChain from "./Components/AdvanceCourses/Advance-courses/BlockChain/BlockChain";
 import CloudComputing from "./Components/AdvanceCourses/Advance-courses/CloudComputing/CloudComputing";
-
+import UiUx from "./Components/BasicCourse/BasicAllCourses/UI_UX/Ui_Ux";
+import FullStackMobileApp from './Components/PremiumCourses/Premium-Courses/Fullstackmobileapp/mobileappFundamentals'
+import PreAdvancePhp from './Components/PremiumCourses/Premium-Courses/pre-AdvancePhp/AdvancePhp'
+import PreWordPress from './Components/PremiumCourses/Premium-Courses/pre-Wordpress/AdvancewordpressFundamentals'
 function App() {
   return (
     <div>
@@ -332,22 +335,26 @@ function App() {
           <Route path="/admin/*" element={<AdminRouter />} />
 
           {/* Basic Advance Preminum Cousrses here */}
-          <Route path="/basic-courses" element={<BasicCourses />} />
           {/* Basic Courses */}
+          <Route path="/basic-courses" element={<BasicCourses />} />
           <Route path="/java" element={<Java />} />
           <Route path="/wordpress" element={<Wordpress />} />
           <Route path="/php" element={<Php />} />
-<Route path="/javaScript" element={<JavaScript />} />
-<Route path="/c_c++" element={<C_Cplus />} />
-          <Route path="/premium-courses" element={<PremiumCourses />} />
-          <Route path="/advance-courses" element={<AdvanceCourses />} />
+          <Route path="/ui_ux_design" element={<UiUx />} />
+          <Route path="/javaScript" element={<JavaScript />} />
+          <Route path="/c_c++" element={<C_Cplus />} />
           {/* Advance courses */}
+          <Route path="/advance-courses" element={<AdvanceCourses />} />
           <Route path="/advance-php" element={<AdvancePhp />} />
           <Route path="/blockchain" element={<BlockChain />} />
           <Route path="/cloud-computing" element={<CloudComputing />} />
-          
-          
-          
+{/* Premium Courses */}
+          <Route path="/premium-courses" element={<PremiumCourses />} />
+          <Route path="/fullStackMobileAppDevelopment" element={<FullStackMobileApp />} />
+          <Route path="/advancedPhpProgramming" element={<PreAdvancePhp />} />
+          <Route path="/masteringWordPressDevelopment" element={<PreWordPress />} />
+
+
         </Routes>
       </BrowserRouter>
     </div>
