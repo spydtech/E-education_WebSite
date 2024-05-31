@@ -9,7 +9,7 @@ const EthicalHackingCard = () => {
             <h2 className="text-4xl font-bold font-lora text-violet-800">
               Mastering Ethical Hacking: Transform Your Skills
             </h2>
-            <p className="text-lg text-orange-600 font-semibold px-28 mt-2 ">
+            <p className="text-lg text-orange-600 font-semibold  mt-2 ">
               Elevate your skills with our Ethical Hacking courses. Dive deep
               into principles and gain hands-on experience. Whether novice or
               pro, unlock your potential.

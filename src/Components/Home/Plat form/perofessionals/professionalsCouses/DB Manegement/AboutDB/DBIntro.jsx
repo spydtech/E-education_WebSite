@@ -1,7 +1,3 @@
-
-
-
-
 import React, { useState } from "react";
 
 function DBIntro() {
@@ -75,22 +71,22 @@ function DBIntro() {
           id="div1"
           className="flex items-center justify-center xl:lg:md:w-auto"
         >
-          <div
-            id="headings"
-            className="grid grid-cols-1 text-start px-10 font-lora"
-          >
+          <div id="headings" className="grid grid-cols-1 text-start  font-lora">
             <div>
               <p className="text-[#00509d] text-xl font-medium">Introduction</p>
             </div>
             <div className="py-5">
               <p className="text-6xl font-lora">
                 Welcome to
-                <p className="text-[#00509d] inline pl-2">Database Management!</p>
+                <p className="text-[#00509d] inline pl-2">
+                  Database Management!
+                </p>
               </p>
             </div>
             <div>
               <p className="text-xl text-gray-500">
-                Gain insights into the foundational concepts and principles of database management.
+                Gain insights into the foundational concepts and principles of
+                database management.
               </p>
             </div>
           </div>

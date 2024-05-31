@@ -32,7 +32,7 @@ function EthicalHackingSyallabus() {
     <>
       <div
         id="subdiv"
-        className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6 md:mb-20 bg-gradient-to-br from-cyan-400 via-sky-500  to-blue-500"
+        className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6 bg-gradient-to-br  from-cyan-400 via-sky-500  to-blue-500"
       >
         <div
           id="div1"
@@ -40,16 +40,16 @@ function EthicalHackingSyallabus() {
         >
           <div id="headings" className="grid grid-cols-1 text-start px-20">
             <div>
-              <p className="text-orange-600 text-xl font-medium">Syllabus</p>
+              <p className="text-[#7400b8] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
               <p className="text-6xl font-lora">
                 Discover What You
-                <p className="text-violet-800 inline pl-2">Will Learn</p>
+                <p className="text-[#7400b8] inline pl-2">Will Learn</p>
               </p>
             </div>
             <div>
-              <p className="text-xl text-gray-500">
+              <p className="text-xl text-gray-300">
                 Top-notch and up-to-date curriculum taught by renowned
                 professors and industry experts using videos, case studies,
                 hands-on projects, and live sessions.
@@ -59,12 +59,12 @@ function EthicalHackingSyallabus() {
         </div>
         <div
           id="div2"
-          className="space-y-5 flex justify-center m-2 px-10 p-4 mb-2 border-2 border-opacity-15 rounded overflow-hidden bg-gray-200 shadow-2xl"
+          className="space-y-5 flex justify-center px-10 p-4 my-2 mx-2 mb-2 border-2 border-opacity-15 rounded overflow-hidden bg-gray-200 shadow-2xl"
         >
           <div className="container mx-auto">
             {data.map((category, index) => (
               <div key={index} className="mb-6">
-                <h2 className="text-4xl font-semibold mb-2 text-orange-600">
+                <h2 className="text-4xl font-semibold mb-2 text-[#7400b8]">
                   {category.heading}
                 </h2>
                 <h3 className="text-2xl font-medium mb-2">

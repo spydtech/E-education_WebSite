@@ -76,7 +76,7 @@ function CybersecurityEssentialsIntroduction() {
     <>
       <div
         id="subdiv"
-        className="grid grid-cols-1  md:lg:grid-cols-2 gap-x-6 h-[600px] md:mb-20  mb-16 bg-gradient-to-br from-purple-300 via-pink-500 to-red-600"
+        className="grid grid-cols-1 w-fit md:lg:grid-cols-2 h-full bg-gradient-to-br  from-[#89fc00] to-[#12862b]"
       >
         <div
           id="div1"
@@ -84,22 +84,22 @@ function CybersecurityEssentialsIntroduction() {
         >
           <div
             id="headings"
-            className="grid grid-cols-1 text-start px-20 font-lora"
+            className="grid grid-cols-1 text-start px-4 font-lora"
           >
             <div>
-              <p className="text-white text-xl font-medium">Introduction</p>
+              <p className="text-[#7400b8] text-xl font-medium">Introduction</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora text-white">
-                What is
-                <span className="text-yellow-400 inline pl-2">
-                  Cybersecurity?
-                </span>
+              <p className="text-6xl font-lora">
+                So what is{" "}
+                <p className="text-[#7400b8] inline ">
+                  Cyber Security Essentials ?
+                </p>
               </p>
             </div>
             <div>
-              <p className="text-xl text-white">
-                A brief overview of cybersecurity and its significance.
+              <p className="text-xl text-gray-500">
+                Brief about Cyber Security Essentials
               </p>
             </div>
           </div>
@@ -118,14 +118,14 @@ function CybersecurityEssentialsIntroduction() {
               <div className="flex justify-between">
                 <button
                   onClick={goToPreviousSlide}
-                  className="hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
+                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
                 >
                   Previous
                 </button>
                 <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
                 <button
                   onClick={goToNextSlide}
-                  className="hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
+                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
                 >
                   Next
                 </button>

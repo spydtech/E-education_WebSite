@@ -20,8 +20,10 @@ function EthicalHackingKeyHighights() {
       case 0:
         return (
           <>
-            <ul className="space-y-3  font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl md:my-8">
-              <p className="text-2xl font-medium text-orange-600 ">Overview</p>
+            <ul className="space-y-2 pt-4 font-normal text-[16px] list-disc pl-16  bg-gray-200 shadow-2xl">
+              <p className="text-2xl font-medium text-violet-500 py-4">
+                Overview
+              </p>
               <li>Advanced modules with Generative AI fusion</li>
               <li>E-education certificate via upGrad collaboration</li>
               <li>
@@ -40,8 +42,8 @@ function EthicalHackingKeyHighights() {
       case 1:
         return (
           <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl md:my-16">
-              <p className="text-2xl font-medium text-orange-600 py-4">
+            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
+              <p className="text-2xl font-medium text-violet-500 py-4">
                 Key Concepts
               </p>
               <li>Generative AI in digital marketing</li>
@@ -58,8 +60,8 @@ function EthicalHackingKeyHighights() {
         return (
           <>
             {" "}
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl md:my-16">
-              <p className="text-2xl font-medium  text-orange-600">
+            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
+              <p className="text-2xl font-medium  text-violet-500">
                 Applications
               </p>
               <li>Digital Marketing Manager</li>
@@ -76,8 +78,8 @@ function EthicalHackingKeyHighights() {
       case 3:
         return (
           <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl md:my-20">
-              <p className="text-2xl font-medium  text-orange-600">
+            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
+              <p className="text-2xl font-medium  text-violet-500">
                 Skills Developed
               </p>
               <li>List of target audience goes here...</li>
@@ -101,8 +103,8 @@ function EthicalHackingKeyHighights() {
         return (
           <>
             {" "}
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl md:my-10">
-              <p className="text-2xl font-medium  text-orange-600">
+            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
+              <p className="text-2xl font-medium  text-violet-500">
                 Target Audience
               </p>
               <li>
@@ -125,20 +127,20 @@ function EthicalHackingKeyHighights() {
     <>
       <div
         id="main"
-        className=" px-20 bg-gradient-to-br from-cyan-400 via-sky-500  to-blue-500"
+        className=" md:lg:xl:px-20  bg-gradient-to-br  from-cyan-400 via-sky-500  to-blue-500"
       >
-        <div id="subdiv1" className="pt-4">
+        <div id="subdiv1" className="pt-4 font-lora">
           <div id="h1" className="">
-            <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-orange-600">
+            <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#7400b8]">
               E-education Course Highlights
             </p>
           </div>
           <div
             id="h2"
-            className="md:lg:flex pl-2 font-lora space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
+            className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
           >
-            <p className="text-6xl ">What does this</p>
-            <p className="text-6xl  text-violet-800 inline">
+            <p className="text-5xl font-bold ">What does this</p>
+            <p className="text-5xl font-bold text-[#7400b8] inline">
               Course have to offer?
             </p>
           </div>
@@ -153,10 +155,10 @@ function EthicalHackingKeyHighights() {
               <div
                 key={index}
                 onClick={() => handleClick(index)}
-                className={`hover:text-violet-700 p-5 text-start hover:cursor-pointer text-xl font-medium my-6 h-16 w-96 lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden shadow-lg shadow-gray-400 transition-transform duration-300 transform hover:scale-105 ${
+                className={`hover:text-violet-500 p-5 text-start hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-80 lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden  transition-transform duration-300 transform hover:scale-105 ${
                   selectedItem === index
-                    ? "bg-cyan-600  text-white hover:text-white border-none"
-                    : "bg-white"
+                    ? "bg-[#7400b8]  text-white hover:text-white border-none"
+                    : ""
                 }`}
               >
                 <p>{item.label}</p>
@@ -165,7 +167,7 @@ function EthicalHackingKeyHighights() {
           </div>
           <div
             id="content2"
-            className="md:lg:w-auto md:lg:h-auto w-[400px] h-auto pt-4 pl-4 text-xl"
+            className="md:lg:w-auto md:lg:h-auto md:lg:xl:w-[400px] h-auto pt-4 md:lg:xl:pl-4 text-xl"
           >
             {renderContent()}
           </div>

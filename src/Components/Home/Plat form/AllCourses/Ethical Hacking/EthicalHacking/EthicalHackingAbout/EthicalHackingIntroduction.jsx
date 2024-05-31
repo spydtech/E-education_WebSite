@@ -73,38 +73,36 @@ function EthicalHackingIntroduction() {
     <>
       <div
         id="subdiv"
-        className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6 h-[600px]  bg-gradient-to-br  from-cyan-400 via-sky-500  to-blue-500"
+        className="grid grid-cols-1 w-fit md:lg:grid-cols-2 h-full bg-gradient-to-br  from-cyan-400 via-sky-500  to-blue-500"
       >
         <div
           id="div1"
-          className="  flex items-center justify-center   xl:lg:md:w-auto "
+          className="flex items-center justify-center xl:lg:md:w-auto"
         >
           <div
             id="headings"
-            className="grid grid-cols-1 text-start px-20 font-lora"
+            className="grid grid-cols-1 text-start px-10 font-lora"
           >
             <div>
-              {" "}
-              <p className="text-orange-600 text-xl font-medium">
-                Introduction
-              </p>
+              <p className="text-[#7400b8] text-xl font-medium">Introduction</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora ">
+              <p className="text-6xl font-lora">
                 So what is
-                <p className="text-violet-800 inline pl-2">Ethical Hacking</p>
+                <p className="text-[#7400b8] inline pl-2">
+                  Automation Testing?
+                </p>
               </p>
             </div>
             <div>
               <p className="text-xl text-gray-500">
-                Brief about Ethical Hacking
+                Brief about Automation Testing
               </p>
             </div>
           </div>
         </div>
-        <div id="div2" className=" px-10   ">
-          {/*  */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 ">
+        <div id="div2" className="px-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
             <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
               <div className="relative w-full overflow-hidden">
                 <div className="flex">
@@ -117,14 +115,14 @@ function EthicalHackingIntroduction() {
               <div className="flex justify-between">
                 <button
                   onClick={goToPreviousSlide}
-                  className=" hover:text-pink-700  text-black font-bold py-2 px-4 rounded"
+                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
                 >
                   Previous
                 </button>
                 <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
                 <button
                   onClick={goToNextSlide}
-                  className=" hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
+                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
                 >
                   Next
                 </button>

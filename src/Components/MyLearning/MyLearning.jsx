@@ -232,7 +232,7 @@ const MyLearning = () => {
   ];
   return (
     <>
-      <h2 className="text-2xl font-bold text-center  font-lora py-8">
+      <h2 className="text-2xl font-bold text-center  font-lora py-8 my-10">
         Embark on Your Learning Journey with MyLearning Courses
       </h2>
       <div className="video-container mt-4- ml-5">

@@ -9,24 +9,24 @@ import IMG from "../../../assets/E- education logo .png";
 
 function SignUpContent() {
   const dispatch = useDispatch();
-  const jwt = localStorage.getItem('jwt')
-  const { auth } = useSelector(store => store)
+  const jwt = localStorage.getItem("jwt");
+  const { auth } = useSelector((store) => store);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    userName: '',
-    email: '',
-    password: ''
+    userName: "",
+    email: "",
+    password: "",
   });
 
   useEffect(() => {
     if (jwt) {
-      dispatch(getUser(jwt))
+      dispatch(getUser(jwt));
     }
-  }, [jwt, auth.jwt])
+  }, [jwt, auth.jwt]);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,9 +35,9 @@ function SignUpContent() {
       .then(() => {
         // Clear the form fields after successful signup
         setFormData({
-          userName: '',
-          email: '',
-          password: ''
+          userName: "",
+          email: "",
+          password: "",
         });
         alert("User registered successfully");
         navigate("/"); // Navigate to Home Page
@@ -47,7 +47,7 @@ function SignUpContent() {
         console.error("Registration error:", error);
         // Optionally, you can display an error message to the user
       });
-  }
+  };
 
   return (
     <>
@@ -57,13 +57,16 @@ function SignUpContent() {
       >
         <div
           id="text"
-          className=" text-white  bg-violet-900 flex items-center w-[500px]  md:lg:xl:w-auto"
+          className=" text-white  bg-violet-900 flex  justify-center items-center w-96  md:w-auto lg:xl:w-auto"
         >
           <p className="text-[44px] text-center pl-4">
             Join Our Community Of Learners
           </p>
         </div>
-        <div id="signup" className="bg-violet-900 w-auto">
+        <div
+          id="signup"
+          className="bg-violet-900 flex justify-center items-center w-auto"
+        >
           {/* sin */}
           <div className="max-w-md mx-12 ">
             {/*  */}
@@ -99,11 +102,11 @@ function SignUpContent() {
                       User Name
                     </label>
                     <input
-                      id='userName'
-                      className='border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300'
-                      name='userName'
-                      label='UserName'
-                      placeholder='User'
+                      id="userName"
+                      className="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
+                      name="userName"
+                      label="UserName"
+                      placeholder="User Name"
                       required
                       onChange={handleChange}
                     />
@@ -116,11 +119,11 @@ function SignUpContent() {
                       Email
                     </label>
                     <input
-                      id='email'
-                      className='border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300'
-                      name='email'
-                      label='Email'
-                      placeholder='Email'
+                      id="email"
+                      className="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
+                      name="email"
+                      label="Email"
+                      placeholder="Email"
                       required
                       onChange={handleChange}
                     />
@@ -133,11 +136,11 @@ function SignUpContent() {
                       Password
                     </label>
                     <input
-                      id='password'
-                      className='border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300'
-                      name='password'
-                      label='Password'
-                      placeholder='password'
+                      id="password"
+                      className="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
+                      name="password"
+                      label="Password"
+                      placeholder="password"
                       type="password"
                       required
                       onChange={handleChange}
