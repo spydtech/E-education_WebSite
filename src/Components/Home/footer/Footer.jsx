@@ -12,58 +12,57 @@ function FooterPart() {
     {
       title: "Learning Paths",
       links: [
-        { label: "Web development", url: "#" },
-        { label: "Python Developer", url: "#" },
-        { label: "Coding Foundations", url: "#" },
-        { label: "Coding for Data", url: "#" },
-        { label: "Front-end for Beginners", url: "#" },
+        { label: "Web development", Link: "/fullStack_WebDevelopment/fullStack-Web-Development" },
+        { label: "Python Developer", Link: "/fullStack_WebDevelopment/fullStack-Python-Development" },
+        { label: "Data Science", Link: "/data_Science" },
+        { label: "Coding For Hacking", Link: "/ethical_Hacking" },
+        { label: "Software Testing", Link: "/software_testing" },
       ],
     },
     {
       title: "Student Courses",
       links: [
-        { label: "Introduction to C", url: "#" },
-        { label: "Introduction to Python", url: "#" },
-        { label: "Introduction to C#", url: "#" },
-        { label: "Introduction to SQL", url: "#" },
-        { label: "Introduction to HTML", url: "#" },
-        { label: "Introduction to CSS", url: "#" },
-        { label: "Introduction to Java", url: "#" },
-        { label: "Introduction to JavaScript", url: "#" },
-        { label: "Introduction to C++", url: "#" },
-        { label: "Tech for EveryOne", url: "#" },
-        { label: "Generative AI for practise", url: "#" },
+        { label: "Introduction to C", Link: "#" },
+        { label: "Introduction to Python", Link: "#" },
+        { label: "Introduction to C++", Link: "#" },
+        { label: "Introduction to DataBase", Link: "#" },
+        { label: "Introduction to HTML", Link: "#" },
+        { label: "Introduction to CSS", Link: "#" },
+        { label: "Introduction to Java", Link: "#" },
+        { label: "Introduction to JavaScript", Link: "#" },
+        { label: "Tech for EveryOne", Link: "#" },
+        { label: "Generative AI for practise", Link: "#" },
       ],
     },
     {
       title: "Professional Courses",
       links: [
-        { label: "C# Intermediate", url: "#" },
-        { label: "Python Intermediate", url: "#" },
-        { label: "Java Intermediate", url: "#" },
-        { label: "JavaScript Intermediate", url: "#" },
-        { label: "C++ Intermediate", url: "#" },
-        { label: "C Intermediate", url: "#" },
-        { label: "SQL Intermediate", url: "#" },
-        { label: "Angular", url: "#" },
+        { label: "C# Intermediate", Link: "#" },
+        { label: "Python Intermediate", Link: "#" },
+        { label: "Java Intermediate", Link: "#" },
+        { label: "JavaScript Intermediate", Link: "#" },
+        { label: "C++ Intermediate", Link: "#" },
+        { label: "C Intermediate", Link: "#" },
+        { label: "SQL Intermediate", Link: "#" },
+        { label: "Angular", Link: "#" },
       ],
     },
     {
       title: "Advanced Courses",
       links: [
-        { label: "Machine Learning", url: "#" },
-        { label: "Ai", url: "#" },
-        // { label: "Ai", url: "#" },
-        // { label: "Ai", url: "#" },
+        { label: "Machine Learning", Link: "#" },
+        { label: "Ai", Link: "#" },
+        // { label: "Ai", Link: "#" },
+        // { label: "Ai", Link: "#" },
       ],
     },
     {
       title: "Community",
       links: [
-        { label: "Discuss", url: "#" },
-        { label: "Code Bits", url: "#" },
-        { label: "Feeds", url: "#" },
-        { label: "Ask me!", url: "#" },
+        { label: "Discuss", Link: "#" },
+        { label: "Code Bits", Link: "#" },
+        { label: "Feeds", Link: "#" },
+        { label: "Ask me!", Link: "#" },
       ],
     },
   ];
@@ -109,12 +108,12 @@ function FooterPart() {
                         key={index}
                         className="mb-2 text-gray-400 leading-7 text-[18px]"
                       >
-                        <a
-                          href={link.url}
+                        <Link
+                          to={link.Link}
                           className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
                         >
                           {link.label}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
