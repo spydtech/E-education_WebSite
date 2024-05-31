@@ -1,8 +1,8 @@
 import React from "react";
 // import DotnetSuccess from "../../DotnetSuccess/DotnetSuccess3.jpg";
-import DotnetSuccess from "../../../../../../assets/DotnetSuccess/DotnetSuccess3.jpg";
-import company from "../../../../../../assets/DotnetSuccess/company.png";
-import webcertificate from "../../../../../../assets/DotnetSuccess/webcertificate.jpg";
+import DotnetSuccess from "../../../../../../assets/dotnet/DotnetSuccess3.jpg";
+import company from "../../../../../../assets/dotnet/company.png";
+import webcertificate from "../../../../../../assets/dotnet/webcertificate.jpg";
 import { ImQuotesLeft } from "react-icons/im";
 
 function SuccessStory() {
