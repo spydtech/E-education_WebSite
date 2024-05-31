@@ -1,10 +1,10 @@
-
-
 import Navbar from "../Navbar"
 import Footer from "../Home/footer/Footer"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaUserEdit } from "react-icons/fa";
 import { FaCamera } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from "../../State/Auth/Action";
 
 function EditModal({ userData, onSave, onClose }) {
   const [editedData, setEditedData] = useState(userData);
@@ -99,6 +99,8 @@ function EditModal({ userData, onSave, onClose }) {
 
 function Profile() {
   const [showEditModal, setShowEditModal] = useState(false);
+  const { auth } = useSelector((state) => state)
+  const dispatch = useDispatch();
   const [userData, setUserData] = useState({
     coverImage: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw5fHxjb3ZlcnxlbnwwfDB8fHwxNzEwNzQxNzY0fDA&ixlib=rb-4.0.3&q=80&w=1080',
     profileImage: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw3fHxwZW9wbGV8ZW58MHwwfHx8MTcxMTExMTM4N3ww&ixlib=rb-4.0.3&q=80&w=1080',
@@ -116,6 +118,7 @@ function Profile() {
       Website: 'https://www.teclick.com'
     }
   });
+
 
   const handleEdit = () => {
     setShowEditModal(true);
@@ -145,114 +148,19 @@ function Profile() {
   };
 
 
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const generateYearOptions = (startYear, endYear) => {
-    const years = [];
-    for (let year = startYear; year <= endYear; year++) {
-      years.push(year.toString());
-    }
-    return years;
-  };
-
-  const years = generateYearOptions(1990, new Date().getFullYear());
-
-  //   const profiles = [
-  //     {
-  //       id: 1,
-  //       Email: "Emily Wilson",
-  //       role: "Share Profile Link",
-  //       description:
-  //         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia Maiores et perferendis eaque.",
-  //       imageUrl:
-  //         "https://static.vecteezy.com/system/resources/thumbnails/024/354/297/small_2x/business-woman-isolated-illustration-ai-generative-free-photo.jpg",
-  //     },
-  //   ];
-
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [iseducationopen, setIsEducationOpen] = useState(false);
-
-
-
-  const openEducationModel = () => {
-    setIsEducationOpen(true);
-  };
-  const closeEducationModel = () => {
-    setIsEducationOpen(false);
-  };
-  const openModal = () => {
-    setIsOpen(true);
-  };
-
-
-  const [formData, setFormData] = useState({
-    educationInstitute: "",
-    degree: "",
-    educationStartMonth: "",
-    educationStartYear: "",
-    graduationMonth: "",
-    graduationYear: "",
-    currentlyStudying: false,
-  });
-
-
-  const handleEducationSubmit = (e) => {
-    e.preventDefault();
-    fetchEducationDetails();
-  };
-
-  const fetchEducationDetails = () => {
-    // Mock implementation to simulate fetching education details
-    const mockData = {
-      institution: formData.educationInstitute,
-      degree: formData.degree,
-      startMonth: formData.educationStartMonth,
-      startYear: formData.educationStartYear,
-      graduationMonth: formData.graduationMonth,
-      graduationYear: formData.graduationYear,
-      currentlyStudying: formData.currentlyStudying
-    };
-    setEducationDetails(mockData);
-  };
-
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prevData1) => ({
-      ...prevData1,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
-
-  const generateYearOptions2 = (startYear, endYear) => {
-    const years = [];
-    for (let year = startYear; year <= endYear; year++) {
-      years.push(year.toString());
-    }
-    return years;
-  };
-
-
-  const [educationDetails, setEducationDetails] = useState(null);
-
-
-  const years2 = generateYearOptions2(1990, new Date().getFullYear());
-
-
-
   return (
     <div>
       <Navbar />
 
       <section className="w-full p-2 border-2 shadow-lg overflow-hidden dark:bg-gray-900">
         <div className="flex flex-col">
-        <FaCamera className="relative justify-end items-end" />
+          <FaCamera className="relative justify-end items-end" />
           <img src={userData.coverImage}
-           alt="User Cover"
-           
-           onClick={() => document.getElementById('profile-image-input').click()} 
+            alt="User Cover"
+
+            onClick={() => document.getElementById('profile-image-input').click()}
             className="w-full xl:h-[20rem] lg:h-[18rem] md:h-[16rem] sm:h-[14rem] xs:h-[11rem]" />
-         
+
           <div className="sm:w-[80%] xs:w-[90%] mx-auto flex ">
             <label htmlFor="profile-image-input" className="cursor-pointer">
               <img
@@ -264,12 +172,12 @@ function Profile() {
 
             </label>
             <input type="file" id="profile-image-input" className="hidden" onChange={handleProfileImageChange} accept="image/*" />
-           <div className="h-20 w-full bg-gray-300">
-           <h1 className="w-full  text-left my-4 sm:mx-4 xs:pl-4 text-gray-800 dark:text-white lg:text-4xl md:text-3xl sm:text-3xl xs:text-xl font-serif">
-              {userData.details.firstName} {userData.details.lastName}
-            </h1>
-           </div>
-            
+            <div className="h-20 w-full bg-gray-300">
+              <h1 className="w-full  text-left my-4 sm:mx-4 xs:pl-4 text-gray-800 dark:text-white lg:text-4xl md:text-3xl sm:text-3xl xs:text-xl font-serif">
+                {auth.user.firstName} {auth.user.lastName}
+              </h1>
+            </div>
+
           </div>
           <div className="xl:w-[80%] lg:w-[90%] md:w-[90%] sm:w-[92%] xs:w-[90%] mx-auto flex flex-col gap-4 items-center relative lg:-top-8 md:-top-6 sm:-top-4 xs:-top-4">
             <p className="w-fit text-gray-700 dark:text-gray-400 text-md">{userData.details.bio}</p>
@@ -279,11 +187,11 @@ function Profile() {
                   <dl className="text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
                     <div className="flex flex-col pb-3">
                       <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">First Name</dt>
-                      <dd className="text-lg font-semibold">{userData.details.firstName}</dd>
+                      <dd className="text-lg font-semibold">{auth.user.firstName}</dd>
                     </div>
                     <div className="flex flex-col py-3">
                       <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Last Name</dt>
-                      <dd className="text-lg font-semibold">{userData.details.lastName}</dd>
+                      <dd className="text-lg font-semibold">{auth.user.lastName}</dd>
                     </div>
                     <div className="flex flex-col py-3">
                       <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Date Of Birth</dt>
@@ -307,359 +215,26 @@ function Profile() {
                     </div>
                     <div className="flex flex-col pt-3">
                       <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Email</dt>
-                      <dd className="text-lg font-semibold">{userData.details.Email}</dd>
+                      <dd className="text-lg font-semibold">{auth.user.email}</dd>
                     </div>
                     <div className="flex flex-col pt-3">
                       <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Website</dt>
                       <dd className="text-lg font-semibold">{userData.details.Website}</dd>
+
+                      {showEditModal && <EditModal userData={userData} onSave={handleSave} onClose={handleCloseModal} />}
                     </div>
                   </dl>
                 </div>
               </div>
             </div>
-           
-            {showEditModal && <EditModal userData={userData} onSave={handleSave} onClose={handleCloseModal} />}
+            <button onClick={handleEdit} className="bg-blue-500 text-white px-4 py-2 rounded-md mr-2">
+              <FaUserEdit className="inline-block mr-1" />
+              Edit Profile
+            </button>
+
           </div>
         </div>
       </section>
-
-      <div className=" p-10 pt-10 md:justify-end  mb-8">
-
-
-        <h1 className="text-2xl font-bold py-4">Education</h1>
-        <div class="p-5 border bg-white rounded text-gray-500">
-          <div class="flex items-center">
-            <div class="">
-              <div class="font-bold text-lg py-2 leading-none hover:underline text-gray-900 hover:text-indigo-600 transition duration-500 ease-in-out">
-                Credentials
-              </div>
-              <div className="mb-4">
-                Update your educational background to showcase where you are
-                currently studying or have recently graduated. Including this
-                information is essential for potential employers. Even if you
-                are still in school or haven't completed your studies, it's
-                beneficial to share your educational path. If you have
-                obtained a college degree, you can exclude your high school or
-                GED details. Remember, all fields are optional but can greatly
-                enhance your profile.
-              </div>
-
-              <div className="py-2 gap-5 boder bg-gray-200 flex flex-col md:flex-row p-2">
-                <button
-                  onClick={openEducationModel}
-                  className="px-5  h-16 border-2 border-blue-700"
-                >
-                  + Add Education
-                </button>
-                {/* education open */}
-                {iseducationopen && (
-                  <div className="fixed inset-0 bg-black bg-opacity-30 z-50 flex items-center justify-center mt-16 ">
-                    <div className="relative w-auto max-w-lg mx-auto my-6 overflow-y-auto max-h-full">
-                      <div className="bg-white rounded-lg shadow-lg relative flex flex-col w-full p-8">
-                        <button
-                          className="absolute top-0 right-0 text-gray-500 hover:text-gray-700"
-                          onClick={closeEducationModel}
-                        >
-                          <svg
-                            className="h-6 w-6 fill-current"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M3.293 3.293a1 1 0 011.414 0L10 8.586l5.293-5.293a1 1 0 111.414 1.414L11.414 10l5.293 5.293a1 1 0 01-1.414 1.414L10 11.414l-5.293 5.293a1 1 0 01-1.414-1.414L8.586 10 3.293 4.707a1 1 0 010-1.414z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </button>
-
-                        {/* Modal content */}
-                        <form
-                          className="text-start"
-                          onSubmit={handleEducationSubmit}
-                        >
-                          <h2 className="text-xl font-bold mb-4">
-                            Education
-                          </h2>
-                          <p className="mb-4">
-                            Add your educational background to let employers
-                            know where you studied or are currently studying.
-                            Even if you didn’t finish, it’s important to
-                            include it here. And if you’ve earned a college
-                            degree, you don’t need to add your high
-                            school/GED. All fields are optional.
-                          </p>
-                          <div className="max-w-sm">
-                            <label
-                              htmlFor="educationInstitute"
-                              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white "
-                            >
-                              Name of institution
-                            </label>
-                            <select
-                              value={formData.educationInstitute}
-                              onChange={handleInputChange}
-                              id="educationInstitute"
-                              name="educationInstitute"
-                              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            >
-                              <option value="">Choose an institution</option>
-                              <option value="Harvard University">
-                                Harvard University
-                              </option>
-                              <option value="Stanford University">
-                                Stanford University
-                              </option>
-                              <option value="Massachusetts Institute of Technology (MIT)">
-                                Massachusetts Institute of Technology (MIT)
-                              </option>
-                              <option value="University of Oxford">
-                                University of Oxford
-                              </option>
-                              <option value="University of Cambridge">
-                                University of Cambridge
-                              </option>
-                            </select>
-                          </div>
-
-                          <div className="max-w-sm">
-                            <label
-                              htmlFor="degree"
-                              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white pt-4"
-                            >
-                              Degree
-                            </label>
-                            <select
-                              value={formData.degree}
-                              onChange={handleInputChange}
-                              name="degree"
-                              id="degree"
-                              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            >
-                              <option value="">Choose a degree</option>
-                              <option value="Less than high school diploma">
-                                Less than high School diploma (or equivalent)
-                              </option>
-                              <option value="High school diploma">
-                                High school diploma (or equivalent)
-                              </option>
-                              <option value="Associate Degree">
-                                Associate Degree (e.g.,AA,AS)
-                              </option>
-                              <option value="Bachelor's degree">
-                                Bachelor's degree (e.g.,BA,BTECH)
-                              </option>
-                              <option value="Master's degree">
-                                Master's degree (e.g.,MA,MS,MEd,MSW,MBA)
-                              </option>
-                              <option value="Professional school degree ">
-                                Professional school degree
-                                (e.g.,MD,DDS,DVM,LLB,JD)
-                              </option>
-                              <option value="Doctorate degree ">
-                                Doctorate degree (e.g.,phD,EdD)
-                              </option>
-                            </select>
-                          </div>
-                          {/* start Month */}
-                          <label
-                            htmlFor="EducationStartDate"
-                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white pt-4 "
-                          >
-                            Start date
-                          </label>
-                          <div className="flex justify-start items-start flex-rows gap-12">
-                            <div className="max-w-sm">
-                              <label
-                                htmlFor="educationStartMonth"
-                                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                              >
-                                Month
-                              </label>
-                              <select
-                                value={formData.educationStartMonth}
-                                onChange={handleInputChange}
-                                name="educationStartMonth"
-                                id="educationStartMonth"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              >
-                                <option value="">Choose a month</option>
-                                <option value="January">January</option>
-                                <option value="February">February</option>
-                                <option value="March">March</option>
-                                <option value="April">April</option>
-                                <option value="May">May</option>
-                                <option value="June">June</option>
-                                <option value="July">July</option>
-                                <option value="August">August</option>
-                                <option value="September">September</option>
-                                <option value="October">October</option>
-                                <option value="November">November</option>
-                                <option value="December">December</option>
-                              </select>
-                            </div>
-                            <div className="max-w-sm">
-                              <label
-                                htmlFor="educationStartYear"
-                                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                              >
-                                Year
-                              </label>
-                              <select
-                                value={formData.educationStartYear}
-                                onChange={handleInputChange}
-                                name="educationStartYear"
-                                id="educationStartYear"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              >
-                                <option value="">Choose a year</option>
-                                {/* List of year options */}
-                                {years2.map((year2) => (
-                                  <option key={year2} value={year2}>
-                                    {year2}
-                                  </option>
-                                ))}
-                              </select>
-                            </div>
-                          </div>
-
-                          {/* End month  */}
-                          <label
-                            htmlFor="graduationDate"
-                            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white pt-4"
-                          >
-                            Graduation date or expected graduation date
-                          </label>
-
-                          <div className="flex justify-start items-start flex-rows gap-12">
-                            <div className="max-w-sm">
-                              <label
-                                htmlFor="graduationMonth"
-                                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                              >
-                                Month
-                              </label>
-                              <select
-                                value={formData.graduationMonth}
-                                onChange={handleInputChange}
-                                name="graduationMonth"
-                                id="graduationMonth"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              >
-                                <option value="">Choose a month</option>
-                                <option value="January">January</option>
-                                <option value="February">February</option>
-                                <option value="March">March</option>
-                                <option value="April">April</option>
-                                <option value="May">May</option>
-                                <option value="June">June</option>
-                                <option value="July">July</option>
-                                <option value="August">August</option>
-                                <option value="September">September</option>
-                                <option value="October">October</option>
-                                <option value="November">November</option>
-                                <option value="December">December</option>
-                              </select>
-                            </div>
-                            <div className="max-w-sm">
-                              <label
-                                htmlFor="graduation-Year"
-                                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                              >
-                                Year
-                              </label>
-                              <select
-                                value={formData.graduationYear}
-                                name="graduationYear"
-                                onChange={handleInputChange}
-                                id="graduationYear"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              >
-                                <option value="">Choose a year</option>
-                                {/* List of year options */}
-                                {years2.map((year2) => (
-                                  <option key={year2} value={year2}>
-                                    {year2}
-                                  </option>
-                                ))}
-                              </select>
-                            </div>
-                          </div>
-
-                          {/* Currently work here */}
-
-                          <div className="flex items-center py-4">
-                            <input
-                              value={formData.currentlyStudying}
-                              onChange={handleInputChange}
-                              name="currentlyStudying"
-                              id="currentlyStudying"
-                              type="checkbox"
-                              // value="currently studying"
-                              className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                            />
-                            <label
-                              htmlFor="currentlyStudying"
-                              className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                            >
-                              I currently studying here
-                            </label>
-                          </div>
-
-                          <div className="flex md:flex-row justify-start items-start mt-4 gap-8">
-                            <div>
-                              <button
-                                type="submit"
-                                className="bg-white hover:bg-blue-700 text-blue-700 hover:text-white border border-gray-400 hover:border-none font-bold py-2 px-4 rounded"
-                              >
-                                Save
-                              </button>
-                            </div>
-                            <div>
-                              <button
-                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                                onClick={closeEducationModel}
-                              >
-                                Remove
-                              </button>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {/* education close */}
-                <p className="font-bold hover:underline hover:text-blue-600 py-2">
-                  Browse your Certificate
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        {educationDetails && (
-          <div className="mt-8">
-            {/* Render education details */}
-            <h2 className="text-2xl font-semibold">Education Details:</h2>
-            <ul className="flex gap-10">
-              <li>
-                <p>Institution: {educationDetails.institution}</p>
-                <p>Degree: {educationDetails.degree}</p>
-                <p>startMonth:{educationDetails.startMonth}</p>
-                <p>startYear:{educationDetails.startYear}</p>
-              </li>
-
-              <li>
-                <p>graduationMonth:{educationDetails.graduationMonth}</p>
-                <p>graduationYear:{educationDetails.graduationYear}</p>
-                <p>currentlyStudying:{educationDetails.currentlyStudying}</p>
-              </li>
-
-
-            </ul>
-          </div>
-        )}
-      </div>
 
       <Footer />
     </div>

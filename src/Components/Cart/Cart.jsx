@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import CartItem from './CartItem';
 import Navbar from '../Navbar';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Button } from '@mui/material';
 import { CartContext } from '../../CartContext';
 import { getCart } from '../../State/Cart/Action';
@@ -12,10 +12,7 @@ const Cart = () => {
     const { cartItems, setCartItems } = useContext(CartContext);
     const jwt = localStorage.getItem('jwt');
     const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(getUser(jwt));
-    }, [jwt, dispatch]);
+    const { auth } = useSelector((state) => state)
 
     // Calculate total price and discount price
     const totalPrice = cartItems.reduce((total, item) => total + item.coursePrice, 0);
@@ -57,6 +54,8 @@ const Cart = () => {
                 },
             });
             rzp.open(); // Open Razorpay payment popup
+
+
         } catch (error) {
             console.error('Error initiating payment:', error);
             alert('Error initiating payment. Please try again.'); // Handle payment error
