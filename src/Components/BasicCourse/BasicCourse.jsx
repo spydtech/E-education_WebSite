@@ -93,6 +93,14 @@ const BasicCourseArray = () => {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvhwX49W-oHzQ9SNKqBuslHTLFfoCuhXGDhZXBzxpcUg&s",
       link: "/c_c++",
     },
+    {
+      id: 10,
+      title: "UI/UX Design",
+      description: "Master the art of UI/UX Design",
+      image: "https://miro.medium.com/v2/resize:fit:1100/1*4Fl8H1Q_ZvhDoSSRBFmPhw.png",
+      link: "/ui_ux_design",
+    }
+    
   ];
 
   const filteredCourses = courses.filter((course) =>

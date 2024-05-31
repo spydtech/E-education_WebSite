@@ -12,58 +12,61 @@ function FooterPart() {
     {
       title: "Learning Paths",
       links: [
-        { label: "Web development", url: "#" },
-        { label: "Python Developer", url: "#" },
-        { label: "Coding Foundations", url: "#" },
-        { label: "Coding for Data", url: "#" },
-        { label: "Front-end for Beginners", url: "#" },
+        { label: "Web development", Link: "/fullStack_WebDevelopment/fullStack-Web-Development" },
+        { label: "Python Developer", Link: "/fullStack_WebDevelopment/fullStack-Python-Development" },
+        { label: "Data Science", Link: "/data_Science" },
+        { label: "Coding For Hacking", Link: "/ethical_Hacking" },
+        { label: "Software Testing", Link: "/software_testing" },
       ],
     },
     {
       title: "Student Courses",
       links: [
-        { label: "Introduction to C", url: "#" },
-        { label: "Introduction to Python", url: "#" },
-        { label: "Introduction to C#", url: "#" },
-        { label: "Introduction to SQL", url: "#" },
-        { label: "Introduction to HTML", url: "#" },
-        { label: "Introduction to CSS", url: "#" },
-        { label: "Introduction to Java", url: "#" },
-        { label: "Introduction to JavaScript", url: "#" },
-        { label: "Introduction to C++", url: "#" },
-        { label: "Tech for EveryOne", url: "#" },
-        { label: "Generative AI for practise", url: "#" },
+        { label: "Full Stack JavaScript", Link: "/fullStack_WebDevelopment/fullStack-Java-Development" },
+        { label: "MERN Stack Development", Link: "/fullStack_WebDevelopment/mean-Stack-Developer" },
+        { label: "Full Stack java", Link: "/fullStack_WebDevelopment/fullStack-Java-Development" },
+        { label: "Full Stack .Net", Link: "/fullStack_WebDevelopment/dot-net-development" },
+        { label: "Full Stack Devops", Link: "/fullStack_WebDevelopment/fullStack-Devops" },
+        { label: "Introduction to Data Science", Link: "/data_Science/introduction-to-data-science" },
+        { label: "Data Science with python", Link: "/data_Science/data-science-with-python" },
+        { label: "Introduction of Data Analytics", Link: "/data_Science/big-data-analysis" },
+        { label: "Big Data Analytics", Link: "/data_Science/big-data-analysis" },
+        { label: "Generative AI", Link: "/data_Science/machine-Learning" },
       ],
     },
     {
       title: "Professional Courses",
       links: [
-        { label: "C# Intermediate", url: "#" },
-        { label: "Python Intermediate", url: "#" },
-        { label: "Java Intermediate", url: "#" },
-        { label: "JavaScript Intermediate", url: "#" },
-        { label: "C++ Intermediate", url: "#" },
-        { label: "C Intermediate", url: "#" },
-        { label: "SQL Intermediate", url: "#" },
-        { label: "Angular", url: "#" },
+        { label: "Ethical Hacking", Link: "/Ethical_Hacking/advance_Ethical_Hacking" },
+        { label: "Network Security", Link: "/network_security/advance-network-secuity" },
+        { label: "Data Visualization", Link: "/data_Science/data-visualization" },
+        { label: "Cyber Security", Link: "/Cybersecurity/Cybersecurity_fundamentals" },
+        { label: "Mobile App Development", Link: "/fullStackMobileAppDevelopment" },
+        { label: "Data Base Management", Link: "/database" },
+        { label: "UI/Ux Design", Link: "/ui_ux_design" },
+        { label: "React", Link: "/reactjs" },
+        { label: "Wordpress Developemt", Link: "/masteringWordPressDevelopment" },
       ],
     },
     {
       title: "Advanced Courses",
       links: [
-        { label: "Machine Learning", url: "#" },
-        { label: "Ai", url: "#" },
-        // { label: "Ai", url: "#" },
-        // { label: "Ai", url: "#" },
+        { label: "Machine Learning", Link: "/data_Science/machine-Learning" },
+        { label: "Ai", Link: "/data_Science/machine-Learning" },
+        { label: "Cloud Computing", Link: "/cloud-testing" },
+        { label: "It and Networking", Link: "/network_security/advance-network-secuity" },
+        { label: "Big Data", Link: "/data_Science/big-data-analysis" },
+        { label: "Block Chain Developemt", Link: "/blockchain" },
+        { label: "DevOps Mastry", Link: "/fullStack_WebDevelopment/fullStack-Devops" },
       ],
     },
     {
       title: "Community",
       links: [
-        { label: "Discuss", url: "#" },
-        { label: "Code Bits", url: "#" },
-        { label: "Feeds", url: "#" },
-        { label: "Ask me!", url: "#" },
+        { label: "Discuss", Link: "/" },
+        { label: "Code Bits", Link: "/" },
+        { label: "Feeds", Link: "/PostFeeds" },
+        { label: "Ask me!", Link: "/QuestionForm" },
       ],
     },
   ];
@@ -109,12 +112,12 @@ function FooterPart() {
                         key={index}
                         className="mb-2 text-gray-400 leading-7 text-[18px]"
                       >
-                        <a
-                          href={link.url}
+                        <Link
+                          to={link.Link}
                           className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
                         >
                           {link.label}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

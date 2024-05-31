@@ -49,7 +49,7 @@ import FullStackWebDevelopment from "./Components/Home/Plat form/AllCourses/Full
 import FullStackDevops from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackDevops_Development/FullStackDevopsDevelopment";
 import FullStackPythonDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/fullStackPython/Main/FullStackPythonDevelopment";
 import FullStackJava from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackJava_Development/FullStackJavaDevelopment";
-// import DotnetDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackDotNet/DotnetDevelopment";
+import DotnetDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackDotNet/DotnetDevelopment";
 import FullStackJavaScript from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackJavaScript/Main/JavascriptDevelopment";
 import BasicCourses from "./Components/BasicCourse/BasicCourse";
 import AdvanceCourses from "./Components/AdvanceCourses/Advance_Courses";
@@ -85,8 +85,13 @@ import DataBase from './Components/Home/Plat form/perofessionals/professionalsCo
 import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 import CourseDetails from "./Components/CourseDetails/CourseDetails";
 import GoogleCalendar from "./Components/Profile/Calendar Sync/GoogleCalendar";
-
-
+import AdvancePhp from './Components/AdvanceCourses/Advance-courses/Advance PHP1/AdvancephpFundamentals';
+import BlockChain from "./Components/AdvanceCourses/Advance-courses/BlockChain/BlockChain";
+import CloudComputing from "./Components/AdvanceCourses/Advance-courses/CloudComputing/CloudComputing";
+import UiUx from "./Components/BasicCourse/BasicAllCourses/UI_UX/Ui_Ux";
+import FullStackMobileApp from './Components/PremiumCourses/Premium-Courses/Fullstackmobileapp/mobileappFundamentals'
+import PreAdvancePhp from './Components/PremiumCourses/Premium-Courses/pre-AdvancePhp/AdvancePhp'
+import PreWordPress from './Components/PremiumCourses/Premium-Courses/pre-Wordpress/AdvancewordpressFundamentals'
 function App() {
   return (
     <div>
@@ -312,10 +317,10 @@ function App() {
             path="/fullStack_WebDevelopment/full-stack-javascript"
             element={<FullStackJavaScript />}
           />
-          {/* <Route
+          <Route
             path="/fullStack_WebDevelopment/dot-net-development"
             element={<DotnetDevelopment />}
-          /> */}
+          />
           {/* DotnetDevelopment */}
           {/* /student/student_fullStack_WebDevelopment/fullStack-DotNet */}
 
@@ -330,15 +335,28 @@ function App() {
           <Route path="/admin/*" element={<AdminRouter />} />
 
           {/* Basic Advance Preminum Cousrses here */}
-          <Route path="/basic-courses" element={<BasicCourses />} />
           {/* Basic Courses */}
+          <Route path="/basic-courses" element={<BasicCourses />} />
           <Route path="/java" element={<Java />} />
           <Route path="/wordpress" element={<Wordpress />} />
           <Route path="/php" element={<Php />} />
           <Route path="/javaScript" element={<JavaScript />} />
           <Route path="/c_c++" element={<C_Cplus />} />
-          <Route path="/premium-courses" element={<PremiumCourses />} />
+          <Route path="/ui_ux_design" element={<UiUx />} />
+          <Route path="/javaScript" element={<JavaScript />} />
+          <Route path="/c_c++" element={<C_Cplus />} />
+          {/* Advance courses */}
           <Route path="/advance-courses" element={<AdvanceCourses />} />
+          <Route path="/advance-php" element={<AdvancePhp />} />
+          <Route path="/blockchain" element={<BlockChain />} />
+          <Route path="/cloud-computing" element={<CloudComputing />} />
+          {/* Premium Courses */}
+          <Route path="/premium-courses" element={<PremiumCourses />} />
+          <Route path="/fullStackMobileAppDevelopment" element={<FullStackMobileApp />} />
+          <Route path="/advancedPhpProgramming" element={<PreAdvancePhp />} />
+          <Route path="/masteringWordPressDevelopment" element={<PreWordPress />} />
+
+
         </Routes>
       </BrowserRouter>
     </div>
