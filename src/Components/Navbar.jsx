@@ -423,34 +423,30 @@
 // export default Navbar;
 
 
-import { Fragment, useRef, useEffect } from "react";
-import React, { useState } from "react";
+import React, { Fragment, useRef, useEffect, useState } from "react";
 import { Disclosure, Menu } from "@headlessui/react";
 import { FaBars } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-import IMG from "../assets/E- education logo .png";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import IMG from "../assets/logo/E-eLogo.png";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, logout } from "../State/Auth/Action";
 import { NotificationAdd } from "@mui/icons-material";
-import Notification1 from "./Notification1"
-import Explore from "./Explore"
+import Notification1 from "./Notification1";
+import Explore from "./Explore";
 
 const Navbar = () => {
   const [navigationMenu, setNavigationMenu] = useState(null);
   const [navigationMenuOpen, setNavigationMenuOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const navigationRef = useRef(null); // Initialize navigationRef with useRef
+  const navigationRef = useRef(null);
   const navigate = useNavigate();
   const jwt = localStorage.getItem("jwt");
   const auth = useSelector((state) => state.auth);
   const [showSidebar, setShowSidebar] = useState(false);
-
-
   const dispatch = useDispatch();
 
-  const navigation = [{ name: "Explore", href: "/", current: false }];
+  const navigation = [{ name: "Explore", current: false }];
   if (auth.user) {
     navigation.push(
       { name: "My Learning", href: "/mylearning", current: false },
@@ -508,7 +504,7 @@ const Navbar = () => {
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 font-lora">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-32 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
@@ -521,8 +517,17 @@ const Navbar = () => {
                     <FaBars className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
+
+                {open && (
+                  <div
+                    onMouseLeave={() => setShowPopup(false)}
+                    className="absolute top-14 left-0 bg-white p-4 border border-gray-300 rounded shadow-lg md:hidden"
+                  >
+                    <Explore />
+                  </div>
+                )}
               </div>
-              <div className="flex flex-1 items-center justify-between sm:justify-start">
+              <div className="flex flex-1 items-center justify-between sm:justify-start pl-8 ">
                 <div className="flex flex-shrink-0 items-center">
                   <Link to="/">
                     <img
@@ -533,7 +538,7 @@ const Navbar = () => {
                   </Link>
                 </div>
                 {/* Navigation Links */}
-                <div className="flex space-x-4">
+                <div className="hidden md:flex space-x-4">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
@@ -542,7 +547,7 @@ const Navbar = () => {
                         item.current
                           ? "bg-gray-900 text-white"
                           : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "rounded-md px-3 py-2 mt-2 text-sm font-medium ml-4 mb-2 lg:hidden"
+                        "rounded-md px-3 py-2 mt-2 text-sm font-medium ml-4 mb-2"
                       )}
                       aria-current={item.current ? "page" : undefined}
                       onMouseEnter={() => {
@@ -563,50 +568,39 @@ const Navbar = () => {
                   onMouseLeave={() => setShowPopup(false)}
                   className="absolute top-14 left-0 bg-white p-4 border border-gray-300 rounded shadow-lg"
                 >
-                  {/* Your popup content here */}
-                 <Explore />
+                  <Explore />
                 </div>
               )}
 
               {/* User Initials */}
               {auth.user && auth.user.firstName && (
                 <div className="flex items-center">
-                  {/* Feeds */}
                   <Link
                     to="/PostFeeds"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-
-3 py-2 mt-2 text-sm font-medium ml-4 mb-2"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 mt-2 text-sm font-medium ml-4 mb-2"
                   >
                     Feeds
                   </Link>
-                  {/* Ask Me Later */}
                   <Link
                     to="/QuestionForm"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 mt-2 text-sm font-medium ml-4 mb-2"
                   >
                     Ask Me Later
                   </Link>
-                  {/* Dropdown menu */}
                   <div className="relative inline-block">
-                    {/* Dropdown button */}
                     <button
-                      className={`inline-flex items-center justify-center h-14 px-4 py-2 text-sm font-medium transition-colors rounded-md ${navigationMenu === "getting-started"
-                        ? "border-2 border-black"
-                        : ""
-                        } ${navigationMenu !== "getting-started" ? "" : ""}`}
+                      className={`inline-flex items-center justify-center h-14 px-4 py-2 text-sm font-medium transition-colors rounded-md ${
+                        navigationMenu === "getting-started" ? "border-2 border-black" : ""
+                      }`}
                       onClick={() => toggleNavigationMenu("getting-started")}
                     >
-                      {/* User initials */}
                       <span className="p-3 w-12 rounded-full bg-blue-400 text-white font-bold text-center cursor-pointer">
                         {auth.user.firstName[0].toUpperCase()}
                       </span>
-                      {/* Dropdown arrow icon */}
                       <svg
-                        className={`relative top-[1px] ml-1 h-5 w-5 ease-out duration-300 ${navigationMenuOpen &&
-                          navigationMenu === "getting-started"
-                          ? "-rotate-180"
-                          : ""
-                          }`}
+                        className={`relative top-[1px] ml-1 h-5 w-5 ease-out duration-300 ${
+                          navigationMenuOpen && navigationMenu === "getting-started" ? "-rotate-180" : ""
+                        }`}
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="none"
@@ -620,83 +614,80 @@ const Navbar = () => {
                       </svg>
                     </button>
 
-                    {/* Dropdown menu items */}
-                    {navigationMenuOpen &&
-                      navigationMenu === "getting-started" && (
-                        <div className="absolute z-10 mt-1 w-48 -ml-20 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                          {/* List of links */}
-                          <a
-                            href="/MyCourse"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          >
-                            My Courses
-                          </a>
-                          <a
-                            href="/Purchases"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          >
-                            Purchases
-                          </a>
-                          <a
-                            href="/Profile"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          >
-                            Profile
-                          </a>
-                          <a
-                            href="/Settings"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          >
-                            Settings
-                          </a>
-                          <a
-                            href="/"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          >
-                            Updates
-                          </a>
-                          <a
-                            href="/WSpace"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          >
-                            WorkSpace
-                          </a>
-                          <a
-                            href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          >
-                            Accomplishments
-                          </a>
-                          <a
-                            href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                          >
-                            Help Center
-                          </a>
-                          <a
-                            href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                            onClick={handleLogout}
-                          >
-                            Logout
-                          </a>
-                        </div>
-                      )}
+                    {navigationMenuOpen && navigationMenu === "getting-started" && (
+                      <div className="absolute z-10 mt-1 w-48 -ml-20 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <a
+                          href="/MyCourse"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        >
+                          My Courses
+                        </a>
+                        <a
+                          href="/Purchases"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        >
+                          Purchases
+                        </a>
+                        <a
+                          href="/Profile"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        >
+                          Profile
+                        </a>
+                        <a
+                          href="/Settings"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        >
+                          Settings
+                        </a>
+                        <a
+                          href="/"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        >
+                          Updates
+                        </a>
+                        <a
+                          href="/WSpace"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        >
+                          WorkSpace
+                        </a>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        >
+                          Accomplishments
+                        </a>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        >
+                          Help Center
+                        </a>
+                        <a
+                          href="#"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                          onClick={handleLogout}
+                        >
+                          Logout
+                        </a>
+                      </div>
+                    )}
                   </div>
-                  <NotificationAdd className="color:yellow" onClick={() => setShowSidebar(!showSidebar)} />
-                  {/* Sidebar */}
+                  <NotificationAdd
+                    className="text-yellow-400 ml-4 cursor-pointer"
+                    onClick={() => setShowSidebar(!showSidebar)}
+                  />
                   <div
-                    className={`fixed inset-y-0 right-0 w-64  mt-[5%] bg-gray-800 text-white transition-transform transform ${showSidebar ? 'translate-x-0' : 'translate-x-full'
-                      } ease-in-out duration-300`}
+                    className={`fixed inset-y-0 right-0 w-64 mt-[5%] bg-gray-800 text-white transition-transform transform ${
+                      showSidebar ? "translate-x-0" : "translate-x-full"
+                    } ease-in-out duration-300`}
                   >
-                    {/* Sidebar content */}
                     <Notification1 />
                   </div>
-
                 </div>
               )}
 
-              {/* Login and Join Us Buttons */}
               {!auth.user && (
                 <div className="flex items-center space-x-4">
                   <Menu as="div" className="relative">
