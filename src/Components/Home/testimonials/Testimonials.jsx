@@ -36,7 +36,7 @@ const Testimonials = ({data}) => {
       <h1 className='text-4xl mt-2 mb-8'>
         E-education
       </h1>
-      <div className='h-[200px] w-[100%] relative md:my-[70px] my-[20px]'>
+      <div className='h-[200px] md:w-[100%] relative md:my-[70px] my-[20px]'>
         <Card id={0} data={data[0]} currentId={currentId} setCurrentId={setCurrentId} ></Card>
         <Card id={1} data={data[1]} currentId={currentId} setCurrentId={setCurrentId} ></Card>
         <Card id={2} data={data[2]} currentId={currentId} setCurrentId={setCurrentId} ></Card>

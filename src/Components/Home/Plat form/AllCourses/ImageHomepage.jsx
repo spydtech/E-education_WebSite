@@ -6,7 +6,7 @@ const ImageHomePage = () => {
   return (
     <div className="flex flex-col font-lora">
       <div className="container mx-auto px-4   ">
-        <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 h-auto relative bottom-10 ">
+        <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-4 h-auto relative bottom-10 ">
           <div className="max-w-full  rounded overflow-y-visible  flex flex-col  ">
             <div className="mx-auto  flex-1  relative top-24">
               <img className="w-auto h-60" src={img1} alt="student" />

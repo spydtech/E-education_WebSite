@@ -6,21 +6,21 @@ import { motion } from "framer-motion";
 const StartNewCarrer = () => {
   return (
     <>
-      <div class="w-full px-16  pb-16">
-        <span class="text-5xl font-bold text-[#2A063D]  font-lora">
+      <div class="w-full md:px-16 pl-4  pb-16">
+        <span class="md:text-5xl text-2xl font-bold text-[#2A063D]  font-lora">
           Start a new career with E-education &#8594;
         </span>
       </div>
-      <div className="flex md:flex-row justify-center items-center px-16 md:mb-24 md:gap-x-8 md:mx-16">
+      <div className="flex md:flex-row flex-col justify-center items-center md:px-16 md:mb-24 md:gap-x-8 md:mx-16">
         <div className="border-r-2 border-[#023047] ">
           <Girl1 />
         </div>
         <div className="ml-6 ">
-          <div className="flex  flex-col items-start justify-start min-w-[400px] gap-8">
-            <div className="font-lora font-bold text-3xl text-[#2A063D] ">
+          <div className="flex  flex-col items-start justify-start md:min-w-[400px] gap-8">
+            <div className="font-lora font-bold  text-xl md:text-3xl text-[#2A063D] ">
               Unlocking Career Horizons: Navigating New Paths with E-education
             </div>
-            <div className="font-lora text-md mb-8 ">
+            <div className="font-lora md:text-md text-base mb-8 ">
               Embracing E-education for a new career path offers flexible
               learning opportunities accessible anytime, anywhere. In today's
               digital era, online platforms provide vast resources for skill
