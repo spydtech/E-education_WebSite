@@ -4,10 +4,9 @@ function CybersecurityBiginersSyllabus() {
   const data = [
     {
       heading: "Cybersecurity",
-      subheading: "Topics (16)",
+      subheading: "Topics (15)",
       items: [
         "Introduction to Cybersecurity",
-        "Network Security",
         "Cryptography",
         "Cyber Threats and Defense",
         "Security Operations and Incident Response",

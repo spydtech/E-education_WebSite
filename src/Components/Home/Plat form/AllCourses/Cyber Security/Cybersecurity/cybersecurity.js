@@ -1,17 +1,16 @@
-// import React from "react";
-import { Link } from "react-router-dom";
+
+import React, { useState, useEffect } from "react";
 import Navbar from "../../../../../Navbar";
 import Footer from "../../../../../Home/footer/Footer";
 import Cybersecurityimg from "../../../../../../assets/CyberSecurityImages/cybersecurityimg.png";
-
-import React, { useState } from "react";
-// import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import CybersecurityNavigation from "./CyberSecurityNavigation";
 const Cybersecurity = () => {
   const [courseName] = useState("Introduction To CyberSecurity"); // Placeholder for course name
   const [coursePrice] = useState(199);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate();
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters

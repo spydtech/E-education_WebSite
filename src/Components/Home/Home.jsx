@@ -30,7 +30,9 @@ function Home() {
   //   setActiveTab(tabId);
   // }
   const { auth } = useSelector((store) => store);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from "react";
-// import Cybersecurityintroduction from "./CybersecurityBiginersintraduction";
 import CybersecurityBeginnersIntroduction from "./CybersecurityBiginersintraduction";
-// import CybersecurityKeyHighelets from "./CybersecurityBiginersKeyHighelets";
 import CybersecurityBiginersKeyHighlights from "./CybersecurityBiginersKeyHighelets";
-// import Cybersecurityoutcomes from "./CybersecurityBiginersOutcomes";
 import CybersecurityCareersOutcomes from "./CybersecurityBiginersOutcomes";
-// import CybersecurityAbout from "./CybersecurityBiginersAbout";
 import CybersecurityBiginersAbout from "./CybersecurityBiginersAbout";
-// import Certificate from "./CybersecurityBiginerscertificate";
 import CybersecurityBiginersCertificate from "./CybersecurityBiginerscertificate";
-// import CybersecuritySyllabus from "./CybersecurityBiginerssyllabus";
 import CybersecurityBiginersSyllabus from "./CybersecurityBiginerssyllabus";
 import { TbPlayerTrackNextFilled } from "react-icons/tb";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for menu toggle
