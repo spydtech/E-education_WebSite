@@ -7,25 +7,24 @@ import Footer from "../../../../footer/Footer";
 import WebDeveloper from "./Web_Development/WebDeveloper";
 import Delivery_Methods from "./deliverymethods/Delivery_Methods";
 import { useNavigate } from "react-router-dom";
-
-
+import SuccessStory from "./Web_Development/SuccessStory/successstory";
+import Community from "./Web_Development/Community/community";
 const images = [
   "https://www.cdmi.in/courses@2x/full-stack.webp",
   "https://www.weblineindia.com/wp-content/uploads/2017/03/full-stack-development-by-weblineindia-2.jpg",
   "https://images.saymedia-content.com/.image/t_share/MTc0NTEwODM4NTk2NzczODc4/full-stack-web-development-are-you-a-game-for-this.jpg",
 ];
 
-
 const ParticularFullStack = () => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const [courseName] = useState('Master Full Stack Web Development'); // Placeholder for course name
+  const [courseName] = useState("Master Full Stack Web Development"); // Placeholder for course name
   const [coursePrice] = useState(199);
 
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters
-    navigate('/course-details', { state: { courseName, coursePrice } });
+    navigate("/course-details", { state: { courseName, coursePrice } });
   };
 
   useEffect(() => {
@@ -36,8 +35,6 @@ const ParticularFullStack = () => {
     return () => clearInterval(interval);
   }, [currentSlide]);
 
-
-
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -45,6 +42,7 @@ const ParticularFullStack = () => {
 
   //   return () => clearInterval(interval);
   // }, [currentSlide]);
+
   return (
     <>
       <Navbar />
@@ -67,32 +65,29 @@ const ParticularFullStack = () => {
             Develop practical skills and stand out in a competitive job market.
             Start your full stack journey today.
           </p>
-          <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95" onClick={handleEnroll}>
+          <button
+            onClick={handleEnroll}
+            className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95"
+          >
             Eroll Now
           </button>
           <div className="py-4">11,095 already enrolled</div>
         </div>
         <div className="relative pl-12">
-
           <img
             className="md:h-[300px] md:w-[500px] "
             src={images[currentSlide]}
             alt={`Slide ${currentSlide + 1}`}
           />
-
         </div>
-
-
-
       </div>
-
 
       <WebDeveloper />
       <AboutCourses />
       <Delivery_Methods />
-      {/* <Community /> */}
+      <Community />
       {/* <Award /> */}
-      {/* <SuccessStory /> */}
+      <SuccessStory />
       <Footer />
     </>
   );

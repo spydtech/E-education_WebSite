@@ -1,6 +1,5 @@
 import React from "react";
-import { IoRemoveOutline } from "react-icons/io5";
-import { IoReorderThreeOutline } from "react-icons/io5";
+import { IoRemoveOutline, IoReorderThreeOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { SiGoogleclassroom } from "react-icons/si";
 import { FaLaptopCode } from "react-icons/fa";
@@ -10,26 +9,26 @@ import { MdModelTraining } from "react-icons/md";
 function Delivery_Methods() {
   return (
     <div className="mb-32">
-      <div id="heading" className=" py-10 space-y-2 px-32  ">
-        <h1 className="text-center font-bold text-5xl md:lg:sm:w-auto w-96 text-violet-800 font-lora">
+      <div id="heading" className="py-10 space-y-2 px-8 md:px-32">
+        <h1 className="text-center font-bold text-5xl md:text-lg lg:text-xl sm:text-2xl text-violet-800 font-lora">
           Our Available Delivery Methods
         </h1>
-        <h1 className=" flex justify-center md:lg:sm:w-auto w-96 text-cyan-500">
+        <h1 className="flex justify-center text-cyan-500">
           <IoRemoveOutline className="text-[40px]" />
           <IoReorderThreeOutline className="text-[40px]" />{" "}
           <IoRemoveOutline className="text-[40px]" />
         </h1>
-        <p className="text-center text-xl md:lg:sm:w-full w-[400px] font-lora">
+        <p className="text-center text-xl md:text-lg lg:text-base sm:text-xl font-lora">
           The E-Education is World's Leading Organisation for training
-          professionals.The E-Education provides training is 490+ location is
-          around 221+ countries,covering 3000 subjects with the following
+          professionals. The E-Education provides training in 490+ locations
+          around 221+ countries, covering 3000 subjects with the following
           delivery methods
         </p>
       </div>
       <div className="flex md:flex-row justify-center items-center gap-24">
         <div
           id="submain"
-          className="grid  lg:grid-cols-4  md:grid-cols-2 md:lg:sm:px-0  grid-cols-1  lg:md:xl:gap-16 mx-20 items-center justify-center"
+          className="grid gap-8 md:gap-24 lg:grid-cols-4 md:grid-cols-2 md:lg:sm:px-0 grid-cols-1 lg:md:xl:gap-16 mx-20 items-center justify-center"
         >
           <div id="1" className=" relative">
             <div className=" relative" id="mainone">
@@ -46,7 +45,7 @@ function Delivery_Methods() {
                 ></div>
               </div>
               <div
-                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row  gap-8 shadow-2xl absolute text-black -bottom-11 left-4 z-10 w-[288px] h-24"
+                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row  gap-4 shadow-2xl absolute text-black -bottom-11 left-4 z-10 w-[265px] h-24"
                 id="card"
               >
                 <p className=" font-bold pt-2 text-[17px]">Training</p>
@@ -80,7 +79,7 @@ function Delivery_Methods() {
                 ></div>
               </div>
               <div
-                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row  gap-8 shadow-2xl absolute text-black -bottom-11 left-4 z-10 w-[288px] h-24"
+                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row  gap-4 shadow-2xl absolute text-black -bottom-11 left-4 z-10 w-[265px] h-24"
                 id="card"
               >
                 <p className=" font-bold pt-2 text-[17px]">Instructor-Led</p>
@@ -114,7 +113,7 @@ function Delivery_Methods() {
                 ></div>
               </div>
               <div
-                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row gap-8 shadow-2xl absolute text-black -bottom-11 left-4 z-10 w-[288px] h-24"
+                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row gap-4 shadow-2xl absolute text-black -bottom-11 left-4 z-10 w-[265px] h-24"
                 id="card"
               >
                 <p className=" font-bold pt-2 text-[17px]">Self-Paced</p>
@@ -148,7 +147,7 @@ function Delivery_Methods() {
                 ></div>
               </div>
               <div
-                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row  gap-8 shadow-2xl absolute text-black -bottom-11 left-4 z-10 w-[288px] h-24"
+                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row  gap-4 shadow-2xl absolute text-black -bottom-11 left-4 z-10 w-[275px] h-24"
                 id="card"
               >
                 {/* <div className="flex justify-center items-center flex-row h-24 gap-8"> */}
@@ -176,4 +175,5 @@ function Delivery_Methods() {
     </div>
   );
 }
+
 export default Delivery_Methods;

@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-// import Navbar from "../../../../Navbar";
-import Navbar from '../../../../../Navbar'
+import { useNavigate } from "react-router-dom"; // Add this import for navigation
+import Navbar from "../../../../../Navbar";
+import Footer from "../../../../footer/Footer";
 import AboutCourses from "./AboutCourses";
 import Community from "./Community/community";
 import SuccessStory from "./SuccessStory/successstory";
-// import Award from "../Award/Award";
 import Delivery_Methods from "./deliverymethods/Delivery_Methods";
 import FullStackJavaDeveloper from "./Developer/FullStackJavaDeveloper";
-import Footer from "../../../../footer/Footer";
 
 const images = [
   "https://media.istockphoto.com/id/2027690301/vector/backend-development-coding-and-programming-it-specialist-sit-and-write-code-on-a-laptop-for.jpg?s=612x612&w=0&k=20&c=XFAq03A3tCnwvoKzT4mS3oBxlCiKJg1C5JaJVRmbH6I=",
@@ -16,8 +15,13 @@ const images = [
   "https://media.istockphoto.com/id/1133790798/vector/business-process-automation-bpa-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=GRwvE4U_Eqg-6nw6LuBe81w3HIDoOu9-7wZUieIkcj4=",
   "https://media.istockphoto.com/id/869155894/vector/online-training.jpg?s=612x612&w=0&k=20&c=E-_RGAHB0a2f6wxlP8KX7NLFG5c5I9O1iY2Ak131_uI=",
 ];
+
 const FullStackJavaDevelopment = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [courseName] = useState("Master Full Stack Web Development"); // Moved inside component
+  const [coursePrice] = useState(199); // Moved inside component
+  const navigate = useNavigate(); // useNavigate hook for navigation
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -33,26 +37,23 @@ const FullStackJavaDevelopment = () => {
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  //   }, 3000); // Change the time interval here (in milliseconds) for auto-sliding
-
-  //   return () => clearInterval(interval);
-  // }, [currentSlide]);
   return (
     <>
       <Navbar />
       <div className="w-full bg-gradient-to-r to-[#8b008b] from-[#9340da] md:pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
-        <div className="font-l">
+        <div className="font-l text-center md:text-left">
           <span className="text-sm font-semibold tracking-wide text-black uppercase sm:text-base lg:text-sm xl:text-base">
             Explore Full Stack Java Course
           </span>
-          <h3 className="mt-1 text-4xl font-lora font-extrabold leading-10 tracking-tight text-[#f3a916] sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
+          <h3 className="mt-1 text-4xl md:text-5xl lg:text-6xl text-[#f3a916] font-lora font-extrabold leading-10 tracking-tight">
             Master Full Stack Java Development
           </h3>
-          <p className="mt-3 text-base text-black sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+          <p className="mt-3 text-base md:text-lg lg:text-base xl:text-lg text-black">
             Elevate your technical skills with comprehensive courses focused on
             full stack Java development. Master Java, Spring Boot, Hibernate,
             RESTful APIs, and more, covering both front-end and back-end
@@ -65,14 +66,17 @@ const FullStackJavaDevelopment = () => {
             technologies. Develop practical skills and stand out in a
             competitive job market. Start your full stack Java journey today.
           </p>
-          <button className="bg-yellow-400 text-white font-medium py-2 px-4 rounded transition-all hover:bg-[#f3a916] active:scale-95">
+          <button
+            onClick={handleEnroll}
+            className="bg-yellow-400 text-white font-medium py-2 px-4 rounded transition-all hover:bg-[#f3a916] active:scale-95"
+          >
             Enroll Now
           </button>
           <div className="py-4">10,299 already enrolled</div>
         </div>
-        <div className="relative pl-12">
+        <div className="relative pl-0 md:pl-12">
           <img
-            className="h-[300px] w-[500px]"
+            className="h-[300px] md:h-auto w-full object-cover"
             src={images[currentSlide]}
             alt={`Slide ${currentSlide + 1}`}
           />

@@ -15,11 +15,11 @@ const softSkills = [
 ];
 
 const technicalSkills = [
-  { name: "HTML" },
-  { name: "CSS" },
-  { name: "JavaScript" },
-  { name: "User Experience(UX)" },
-  { name: "User Interface(UI)" },
+  { name: "MongoDB" },
+  { name: "Express.js" },
+  { name: "Angular" },
+  { name: "Node.js" },
+  { name: "RESTful APIs" },
 ];
 
 const WebDeveloper = () => {
@@ -28,69 +28,61 @@ const WebDeveloper = () => {
       <WebDevelopmentCard />
       <div
         id="main"
-        className="pl-8 p-10 gap-y-8 gap-x-16 flex flex-col lg:flex-row justify-center items-center "
+        className=" gap-10 py-20   grid lg:md:grid-cols-3 grid-cols-1  p-10 justify-center items-center "
       >
-        <div id="1" className=" md:w-[400px] rounded-lg  h-60 ">
-          <div className="bg-white p-4 rounded-lg shadow-2xl border-cyan-500 border-2 flex justify-center items-center md:flex-row flex-col gap-8">
-            <div>
-              <img src={skills} className="w-24 h-24  " />
-            </div>
-            <div>
-              <h2 className="text-base  font-extrabold text-violet-700  sm:text-xl lg:text-lg xl:text-3xl font-lora">
-                Soft Skills
-              </h2>
-              <div className="">
-                {softSkills.map((skill, index) => (
-                  <div key={index} className="flex items-center  mr-4 mb-2">
-                    <p className=" text-base text-gray-600  font-lora">
-                      <FaArrowAltCircleRight className="text-green-600 inline mx-2" />
-                      {skill.name}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="2" className=" rounded-lg  md:w-[400px] h-60 ">
-          <div className="bg-white p-4 rounded-lg shadow-2xl border-cyan-500 border-2 flex justify-center items-center md:flex-row flex-col">
-            <div>
-              <img src={requirements} className="w-24 h-24 " />
-            </div>
-            <div>
-              <h2 className="text-base  font-extrabold text-violet-700  sm:text-xl lg:text-lg xl:text-3xl font-lora">
-                Technical Skills
-              </h2>
-              <div className="">
-                {technicalSkills.map((skill, index) => (
-                  <div key={index} className="flex items-center mr-4 mb-2">
-                    <p className=" text-base text-gray-600  font-lora">
-                      <FaArrowAltCircleRight className="text-green-600 inline mx-2" />
-                      {skill.name}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          id="3"
-          className=" md:w-[400px] h-40 rounded-lg  items-center flex"
-        >
-          <div className=" p-4 rounded-lg  ">
-            <h2 className="text-base  font-extrabold text-violet-700  sm:text-xl lg:text-lg xl:text-3xl font-lora text-center">
-              Web Developer Skills
+        <div id="1" className=" w-[400px] rounded-lg   h-60 relative">
+          <div className="  p-4 rounded-lg shadow-2xl border-violet-800 border-2">
+            <img src={skills} className="w-24 h-24 absolute left-[280px]" />
+            <h2 className="text-base  font-extrabold text-violet-700  sm:text-xl lg:text-lg xl:text-3xl font-lora">
+              Soft Skills
             </h2>
-            <div className=" flex text-cyan-500 justify-center items-center">
+            <div className="">
+              {softSkills.map((skill, index) => (
+                <div key={index} className="flex items-center  mr-4 mb-2">
+                  <p className=" text-base text-gray-600  font-lora">
+                    <FaArrowAltCircleRight className="text-violet-800 inline mx-2" />
+                    {skill.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div id="2" className=" rounded-lg  w-[400px] h-60 relative">
+          <div className="bg-white p-4 rounded-lg shadow-2xl border-violet-800 border-2 ">
+            <img
+              src={requirements}
+              className="w-24 h-24 absolute left-[280px]"
+            />
+            <h2 className="text-base  font-extrabold text-violet-700  sm:text-xl lg:text-lg xl:text-3xl font-lora">
+              Technical Skills
+            </h2>
+            <div className="">
+              {technicalSkills.map((skill, index) => (
+                <div key={index} className="flex items-center mr-4 mb-2">
+                  <p className=" text-base text-gray-600  font-lora">
+                    <FaArrowAltCircleRight className="text-violet-800 inline mx-2" />
+                    {skill.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div id="3" className=" w-[400px] h-40 rounded-lg  items-center flex">
+          <div className=" p-4 rounded-lg  ">
+            <h2 className="text-base  font-extrabold text-violet-700  sm:text-xl lg:text-lg xl:text-3xl font-lora">
+              Mean Stack Developer Skills
+            </h2>
+            <div className=" flex text-violet-700 justify-center items-center">
               <IoRemoveOutline className="text-[40px]" />
               <IoReorderThreeOutline className="text-[40px]" />{" "}
               <IoRemoveOutline className="text-[40px]" />
             </div>
             <p className=" text-base text-gray-600  font-lora">
-              Over the last decade,web design expectations have shifted
-              dramatically,with many business now expecting their Web Developers
-              to be mutli skilled masters
+              Over the last decade, webdevelopment expectations have shifted
+              dramatically, with many businesses now expecting their MEAN stack
+              developers to be multi-skilled experts.
             </p>
             {/* Add more content as needed */}
           </div>
