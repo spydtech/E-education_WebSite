@@ -35,59 +35,67 @@ const Advance_Courses = () => {
 
   const courses = [
     {
-        id: 1,
-        title: "Advanced Full Stack Web Development",
-        description: "Learn to build full-fledged web applications using the latest technologies and frameworks.",
-        image: "https://media.licdn.com/dms/image/D4E12AQHPfeaf61ARlw/article-cover_image-shrink_720_1280/0/1707956393334?e=2147483647&v=beta&t=GYpFx7NlLhBWpF2Ow0tzdwoqWrF78PvPmI-wVFuO3B8",
-        link: "/fullStack_WebDevelopment/fullStack-Web-Development",
-      },
-      {
-        id: 2,
-        title: "Comprehensive Software Testing",
-        description: "Master advanced software testing techniques and tools to ensure high-quality software delivery.",
-        image: "https://www.buildoffshoreteam.com/blog/wp-content/uploads/2024/03/type-of-testing.jpg",
-        link: "/software_testing",
-      },
-      {
-        id: 3,
-        title: "Advanced PHP Programming",
-        description: "Explore advanced PHP programming concepts and frameworks for robust web development.",
-        image: "https://solman.in/wp-content/uploads/2018/12/php.jpg",
-        link: "/advancedPhpProgramming",
-      },
-      {
-        id: 4,
-        title: "Java Programming Mastery",
-        description: "Become proficient in advanced Java programming for enterprise-level applications.",
-        image: "https://img-c.udemycdn.com/course/750x422/5638204_76bd.jpg",
-        link: "/fullStack_WebDevelopment/fullStack-Java-Development",
-      },
-      {
+      id: 1,
+      title: " MERN Stack",
+      description: "Learn how to build web applications from front to back",
+      image:
+        "https://i0.wp.com/blog.apitier.com/wp-content/uploads/2023/02/MERN_Stack.jpg?fit=560%2C315&ssl=1",
+      link: "/fullStack_WebDevelopment/mean-Stack-Developer",
+    },
+    {
+      id: 2,
+      title: "Advance Java",
+      description:
+        "Master JavaScript for both front-end and back-end development",
+      image:
+        "https://media.geeksforgeeks.org/wp-content/uploads/20230823152056/What-is-Advance-JAVA.png",
+      link: "/fullStack_WebDevelopment/fullStack-Java-Development",
+    },
+    {
+      id: 3,
+      title: "Advance Php",
+      description:
+        "Explore MongoDB, Express.js, Angular, and Node.js for full-stack development",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM_-_y91ofGI7yjop5oRlM1uL1hA5r1hJ40Ld6oyN1bw&s",
+      link: "/advance-php",
+    },
+    {
+      id: 4,
+      title: "Machine Learning with AI",
+      description: "Master Python for both front-end and back-end development",
+      image:
+        "https://www.simplilearn.com/ice9/free_resources_article_thumb/Deep-Learning-vs-Machine-Learning.jpg",
+      link: "/data_Science/machine-Learning",
+    },
+    {
         id: 5,
-        title: "Mastering WordPress Development",
-        description: "Gain expertise in WordPress development, from theme creation to advanced plugin development.",
-        image: "https://magicminds.io/wp-content/uploads/2023/12/guide-to-mastering-wordpress-development.png",
-        link: "/masteringWordPressDevelopment",
+        title: "DevOps Mastery",
+        description: "Learn advanced DevOps practices and tools for automating and streamlining development workflows.",
+        image: "https://s3.amazonaws.com/tf-nightingale/2023/04/How-DevOps-Mastery-Optimizes-Development-and-Operations-for-Business-Success--2.jpg",
+        link: "/fullStack_WebDevelopment/fullStack-Devops",
       },
+  
       {
         id: 6,
-        title: "JavaScript for Advanced Developers",
-        description: "Enhance your JavaScript skills with advanced programming techniques for front-end and back-end development.",
-        image: "https://www.bluejaywebsolutions.com/sites/default/files/2021-08/javascript.jpg",
-        link: "/fullStack_WebDevelopment/full-stack-javascript",
-      }, {
+        title: "Cloud Computing with AWS",
+        description: "Advanced AWS cloud computing course, focusing on architecture and deployment.",
+        image: "https://images.squarespace-cdn.com/content/v1/60cfd646701da4034512a1c5/1654217981309-RTSZMBJWA9YJ5V32UN8R/AWS-Cloud.png",
+        link: "/cloud-computing",
+      },
+      {
         id: 7,
-        title: "Advanced Data Science Techniques",
-        description: "Master advanced data science techniques including data mining, predictive modeling, and big data analytics.",
-        image: "https://cdn.hackr.io/uploads/posts/large/1573232636UxdizR1FyX.png",
-        link: "/data_Science",
+        title: "Cybersecurity Advanced Practices",
+        description: "Learn advanced techniques and tools for protecting systems and networks from cyber threats.",
+        image: "https://www.ggoffice.com/wp-content/uploads/2024/03/Golden-Gate-March-2024-Blog-Image-Cybersecurity.jpg",
+        link: "/Cybersecurity/cybersecurity_essentials",
       },
       {
         id: 8,
-        title: "Full Stack Mobile App Development",
-        description: "Learn to develop advanced mobile applications for both iOS and Android platforms.",
-        image: "https://qph.cf2.quoracdn.net/main-qimg-73b9c74a99ce21c0ba7b760b8828172b",
-        link: "/fullStackMobileAppDevelopment",
+        title: "Blockchain Development",
+        description: "Advanced blockchain development course covering smart contracts, Ethereum, and decentralized applications.",
+        image: "https://ideausher.com/wp-content/uploads/2022/12/Blockchain-Developer-Hire_-A-Complete-Guide-1.webp",
+        link: "/blockchain",
       }
   ];
 

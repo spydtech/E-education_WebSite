@@ -3,6 +3,8 @@ import Footer from "../Home/footer/Footer";
 import React, { useState } from "react";
 import { FaUserEdit } from "react-icons/fa";
 import { FaCamera } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from "../../State/Auth/Action";
 
 function EditModal({ userData, onSave, onClose }) {
   const [editedData, setEditedData] = useState(userData);
@@ -204,6 +206,8 @@ function EditModal({ userData, onSave, onClose }) {
 
 function Profile() {
   const [showEditModal, setShowEditModal] = useState(false);
+  const { auth } = useSelector((state) => state);
+  const dispatch = useDispatch();
   const [userData, setUserData] = useState({
     coverImage:
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw5fHxjb3ZlcnxlbnwwfDB8fHwxNzEwNzQxNzY0fDA&ixlib=rb-4.0.3&q=80&w=1080",
@@ -372,7 +376,7 @@ function Profile() {
               accept="image/*"
             />
             <div className="h-20 w-full bg-gray-300">
-              <h1 className="w-full ml-6 text-left my-4 sm:mx-4 xs:pl-4 text-gray-800 dark:text-white lg:text-4xl md:text-3xl sm:text-3xl xs:text-xl font-serif">
+              <h1 className="w-full  text-left my-4 sm:mx-4 xs:pl-4 text-gray-800 dark:text-white lg:text-4xl md:text-3xl sm:text-3xl xs:text-xl font-serif">
                 {userData.details.firstName} {userData.details.lastName}
               </h1>
             </div>

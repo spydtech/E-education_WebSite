@@ -92,7 +92,7 @@ function CybersecurityBeginnersIntroduction() {
             <div className="py-5">
               <p className="text-6xl font-lora">
                 So what is{" "}
-                <p className="text-[#7400b8] inline ">Automation Testing?</p>
+                <p className="text-[#7400b8] inline ">Cyber Security?</p>
               </p>
             </div>
             <div>

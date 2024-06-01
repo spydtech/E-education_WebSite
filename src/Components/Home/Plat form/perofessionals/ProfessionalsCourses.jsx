@@ -25,7 +25,6 @@ import { GiPreviousButton } from "react-icons/gi";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { FaLocationArrow } from "react-icons/fa6";
 
-
 const courses = [
   {
     title: "Full Stack Web Development",
@@ -38,7 +37,7 @@ const courses = [
     title: "Mobile App Development",
     description:
       "Start your journey in iOS app development with expert guidance.",
-    link: "",
+    link: "/fullStackMobileAppDevelopment",
     icon: <FaMobile style={{ width: "40px", height: "40px" }} />,
   },
   {
@@ -133,7 +132,7 @@ const courses = [
     title: "UI/UX Design",
     description:
       "Master the principles of UI/UX design with courses on E-education.",
-    link: "link-to-the-course",
+    link: "/ui_ux_design",
     icon: <FaComputer style={{ width: "40px", height: "40px" }} />,
   },
   // {
@@ -149,7 +148,10 @@ const courses = [
 function ProfessionalsCourses() {
   return (
     <>
-      <div id="heading" className="md:mt-20  flex flex-col justify-center items-center mt-16 gap-y-4">
+      <div
+        id="heading"
+        className="md:mt-20  flex flex-col justify-center items-center mt-16 gap-y-4"
+      >
         <div className="text-center text-xl md:lg:sm:w-auto w-96 text-black">
           Best Selling Courses in India
         </div>
@@ -163,41 +165,40 @@ function ProfessionalsCourses() {
         </div>
       </div>
       <div className="flex md:flex-row flex-col justify-center items-center mb-28">
-
-      <div
-        id="submain"
-        className=" h-auto w-full grid  md:grid-cols-3  grid-cols-1 place-items-center gap-8"
-      >
-        {courses.map((course, index) => (
-          <div
-            key={index}
-            className="md:w-[390px]  group hover:bg-white border-2 shadow-xl shadow-gray-400 rounded "
-          >
-            <div className="flex rounded justify-center bg-gray-200  px-16 w-auto h-36 items-center text-4xl cursor-pointer relative before:absolute group-hover:before:bg-[#023047] before:bottom-0 before:left-0 before:h-full before:w-full before:origin-bottom before:scale-y-[0.0] group-hover:before:scale-y-100 before:transition-transform before:ease-in-out before:duration-500">
-              <div className="border-b-2 mx-16 px-8 absolute border-[#023047] bg-white  group-hover:border-none h-[80px] md:w-[350px]  flex items-center justify-between">
-                <div className="font-bold   text-base">{course.title}</div>
-                <div id="logo" className="">
-                  {course.icon}
+        <div
+          id="submain"
+          className=" h-auto w-full grid  md:grid-cols-3  grid-cols-1 place-items-center gap-8"
+        >
+          {courses.map((course, index) => (
+            <div
+              key={index}
+              className="md:w-[390px]  group hover:bg-white border-2 shadow-xl shadow-gray-400 rounded "
+            >
+              <div className="flex rounded justify-center bg-gray-200  px-16 w-auto h-36 items-center text-4xl cursor-pointer relative before:absolute group-hover:before:bg-[#023047] before:bottom-0 before:left-0 before:h-full before:w-full before:origin-bottom before:scale-y-[0.0] group-hover:before:scale-y-100 before:transition-transform before:ease-in-out before:duration-500">
+                <div className="border-b-2 mx-16 px-8 absolute border-[#023047] bg-white  group-hover:border-none h-[80px] md:w-[350px]  flex items-center justify-between">
+                  <div className="font-bold   text-base">{course.title}</div>
+                  <div id="logo" className="">
+                    {course.icon}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className=" h-32 rounded ">
-              <div className="text-start  font-medium pl-4 py-4 ">
-                {course.description}
-              </div>
-
-              <Link to={course.link}>
-                <div className="font-bold gap-4 md:w-[390px] border-none flex justify-center items-center  hover:text-white bg-[#2a9d8f] hover:bg-[#023047] transition duration-500 p-2">
-                  <div className="">
-                    <FaLocationArrow className="w-8 h-8 " />
-                  </div>{" "}
-                  Explore Now
+              <div className=" h-32 rounded ">
+                <div className="text-start  font-medium pl-4 py-4 ">
+                  {course.description}
                 </div>
-              </Link>
+
+                <Link to={course.link}>
+                  <div className="font-bold gap-4 md:w-[390px] border-none flex justify-center items-center  hover:text-white bg-[#2a9d8f] hover:bg-[#023047] transition duration-500 p-2">
+                    <div className="">
+                      <FaLocationArrow className="w-8 h-8 " />
+                    </div>{" "}
+                    Explore Now
+                  </div>
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </>
   );

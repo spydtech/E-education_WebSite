@@ -1,7 +1,19 @@
-import React from "react";
+// import React from "react";
 // import BigDataScroller from "./BigDataScroller";
 
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const IntigrationHero = () => {
+  const [courseName] = useState("Integration Testing"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+
+  const navigate = useNavigate();
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+
   return (
     <>
       {/* First Part */}
@@ -11,7 +23,7 @@ const IntigrationHero = () => {
           src="https://testsigma.com/blog/wp-content/uploads/System-Integration-Testing-A-Complete-Guide.jpg"
           className="w-full object-cover md:h-[500px]"
         />
-          {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
       </div>
       <div
         className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
@@ -21,7 +33,7 @@ const IntigrationHero = () => {
         <div className="pr-2 md:mb-14 py-14 font-lora md:py-0">
           <h1 className="text-3xl font-semibold text-[#f9ac13] xl:text-5xl lg:text-3xl">
             <span className="block w-full">
-            Master the Art of Integration Testing
+              Master the Art of Integration Testing
             </span>{" "}
             to Ensure Software Quality!
           </h1>
@@ -33,10 +45,10 @@ const IntigrationHero = () => {
 
           <div className="mt-4">
             <a
-              href="#contact"
+              onClick={handleEnroll}
               className="px-5 py-3 text-lg tracking-wider text-white bg-yellow-300 rounded-lg md:px-8 hover:bg-yellow-400 group"
             >
-              <span>Learn More</span>{" "}
+              <span>Enroll Now</span>{" "}
             </a>
           </div>
         </div>

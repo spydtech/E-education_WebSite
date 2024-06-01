@@ -1,6 +1,16 @@
-import React from "react";
-
+// import React from "react";
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const WordpressHero = () => {
+  const [courseName] = useState("Basic WordPress"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+
+  const navigate = useNavigate();
   return (
     <>
       {/* First Part */}
@@ -31,10 +41,10 @@ const WordpressHero = () => {
 
           <div className="mt-4">
             <a
-              href="#contact"
+              onClick={handleEnroll}
               className="px-5 py-3 text-lg tracking-wider text-white bg-green-300 rounded-lg md:px-8 hover:bg-green-500 group"
             >
-              <span>Get Started</span>{" "}
+              <span>Enroll Now</span>{" "}
             </a>
           </div>
         </div>

@@ -1,7 +1,17 @@
-import React from "react";
-
+// import React from "react";
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const DatavisualisationHero = () => {
- 
+  const [courseName] = useState("Data Visualization"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+  const navigate = useNavigate();
+
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+
   return (
     <>
       {/* First Part */}
@@ -34,10 +44,10 @@ const DatavisualisationHero = () => {
 
           <div className="mt-4">
             <a
-              href="#contact"
+              onClick={handleEnroll}
               className="px-5 py-3 text-lg tracking-wider text-white bg-pink-500 rounded-lg md:px-8 hover:bg-pink-700 group"
             >
-              <span>Learn More</span>{" "}
+              <span>Enroll Now</span>{" "}
             </a>
           </div>
         </div>
