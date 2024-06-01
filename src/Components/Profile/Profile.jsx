@@ -1,8 +1,11 @@
-import Navbar from "../Navbar";
-import Footer from "../Home/footer/Footer";
-import React, { useState } from "react";
+
+import Navbar from "../Navbar"
+import Footer from "../Home/footer/Footer"
+import React, { useState, useEffect } from 'react';
 import { FaUserEdit } from "react-icons/fa";
 import { FaCamera } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from "../../State/Auth/Action";
 
 function EditModal({ userData, onSave, onClose }) {
   const [editedData, setEditedData] = useState(userData);
@@ -204,6 +207,8 @@ function EditModal({ userData, onSave, onClose }) {
 
 function Profile() {
   const [showEditModal, setShowEditModal] = useState(false);
+  const { auth } = useSelector((state) => state)
+  const dispatch = useDispatch();
   const [userData, setUserData] = useState({
     coverImage:
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw5fHxjb3ZlcnxlbnwwfDB8fHwxNzEwNzQxNzY0fDA&ixlib=rb-4.0.3&q=80&w=1080",
@@ -223,6 +228,7 @@ function Profile() {
       Website: "https://www.teclick.com",
     },
   });
+
 
   const handleEdit = () => {
     setShowEditModal(true);
@@ -250,6 +256,7 @@ function Profile() {
       reader.readAsDataURL(file);
     }
   };
+
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -337,6 +344,7 @@ function Profile() {
 
   const years2 = generateYearOptions2(1990, new Date().getFullYear());
 
+
   return (
     <div>
       <Navbar />
@@ -344,6 +352,7 @@ function Profile() {
       <section className="w-full p-2 border-2 shadow-lg overflow-hidden dark:bg-gray-900">
         <div className="flex flex-col">
           <FaCamera className="relative justify-end items-end" />
+
           <img
             src={userData.coverImage}
             alt="User Cover"
@@ -364,6 +373,7 @@ function Profile() {
                 }
               />
             </label>
+
             <input
               type="file"
               id="profile-image-input"
@@ -376,6 +386,7 @@ function Profile() {
                 {userData.details.firstName} {userData.details.lastName}
               </h1>
             </div>
+
           </div>
           <div className="xl:w-[80%] lg:w-[90%] md:w-[90%] sm:w-[92%] xs:w-[90%] mx-auto flex flex-col gap-4 items-center relative lg:-top-8 md:-top-6 sm:-top-4 xs:-top-4">
             <p className="w-fit text-gray-700 dark:text-gray-400 text-md">
@@ -386,6 +397,7 @@ function Profile() {
                 <div className="w-full">
                   <dl className="text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
                     <div className="flex flex-col pb-3">
+
                       <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
                         First Name
                       </dt>
@@ -400,6 +412,7 @@ function Profile() {
                       <dd className="text-lg font-semibold">
                         {userData.details.lastName}
                       </dd>
+
                     </div>
                     <div className="flex flex-col py-3">
                       <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
@@ -438,6 +451,7 @@ function Profile() {
                       </dd>
                     </div>
                     <div className="flex flex-col pt-3">
+
                       <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
                         Email
                       </dt>
@@ -452,11 +466,13 @@ function Profile() {
                       <dd className="text-lg font-semibold">
                         {userData.details.Website}
                       </dd>
+
                     </div>
                   </dl>
                 </div>
               </div>
             </div>
+
 
             {showEditModal && (
               <EditModal

@@ -27,6 +27,7 @@ const ParticularFullStack = () => {
     // Navigate to the card details page with course details as parameters
     navigate('/course-details', { state: { courseName, coursePrice } });
   };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));

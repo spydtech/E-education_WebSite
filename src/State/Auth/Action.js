@@ -31,13 +31,8 @@ export const register = (userData) => async (dispatch) => {
   dispatch(registerRequest());
   try {
     const response = await axios.post(`${API_BASE_URL}/auth/register`, userData);
-    if (response.status === 200) {
-      dispatch(registerSuccess());
-      alert('OTP sent successfully. Please check your email to verify.');
-
-    } else {
-      alert(registerFailure('An error occurred during registration.'));
-    }
+    dispatch(registerSuccess());
+    alert('OTP sent successfully. Please check your email to verify.');
   } catch (error) {
     // Handle other errors
     console.error('Error during registration:', error);

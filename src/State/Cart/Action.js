@@ -17,15 +17,23 @@ import {
     UPDATE_CART_ITEM_SUCCESS,
 } from "./ActionType";
 
-export const addItemToCart = (reqData) => (dispatch) => {
+export const addItemToCart = (reqData, jwt) => async (dispatch) => {
     dispatch({ type: ADD_ITEM_TO_CART_REQUEST })
     try {
-        const { data } = axios.post(`${API_BASE_URL}/api/cart/add`, reqData.data)
+
+        const { data } = await axios.put(`${API_BASE_URL}/api/cart/add`, reqData, {
+            headers: {
+                Authorization: jwt, // Pass the JWT token in the Authorization header
+            },
+        })
         dispatch({ type: ADD_ITEM_TO_CART_SUCCESS, payload: data })
+        console.log("Data Added to cart", data)
     } catch (error) {
+        console.error("Error adding item to cart:", error);
         dispatch({ type: ADD_ITEM_TO_CART_FAILURE, payload: error.message })
     }
 }
+
 export const getCart = (jwt) => async (dispatch) => {
     try {
         dispatch({ type: GET_CART_REQUEST });

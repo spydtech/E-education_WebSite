@@ -1,5 +1,4 @@
 import { useState, useContext } from 'react';
-import { StarIcon } from '@heroicons/react/20/solid';
 import { FcLike, FcLikePlaceholder } from 'react-icons/fc';
 import Navbar from '../Navbar';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -17,9 +16,18 @@ export default function CourseDetails({ course }) {
     const location = useLocation();
     const { courseName, coursePrice } = location.state;
     const { addToCart } = useContext(CartContext);
+    const generateCourseId = () => {
+        const digits = '0123456789';
+        let courseId = '';
+        for (let i = 0; i < 6; i++) { // Generate a 6-digit courseId
+            courseId += digits.charAt(Math.floor(Math.random() * digits.length));
+        }
+        return courseId;
+    };
+    const courseId = generateCourseId();
 
     const handleAddToCart = () => {
-        addToCart({ courseName, coursePrice })
+        addToCart({ courseName, coursePrice, courseId })
         navigate('/cart')
     }
 
@@ -82,5 +90,3 @@ export default function CourseDetails({ course }) {
 
     );
 }
-
-
