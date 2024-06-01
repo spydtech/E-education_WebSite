@@ -1,6 +1,17 @@
-import React from "react";
-
+// import React from "react";
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 function WordpressFoot() {
+  const [courseName] = useState("Basic WordPress"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+
+  const navigate = useNavigate();
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+
   return (
     <>
       <div className="md:my-16 flex flex-1 font-lora w-full flex-col items-center justify-center text-center px-4 py-20 bg-[#e9d8a6] dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
@@ -30,6 +41,7 @@ function WordpressFoot() {
         <a
           className="bg-green-300 dark:bg-gray-800 rounded-xl text-white dark:text-gray-300 font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-green-600 dark:hover:bg-gray-600 transition mb-0"
           href=""
+          onClick={handleEnroll}
         >
           Get started
         </a>

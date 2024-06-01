@@ -14,7 +14,7 @@ function CybersecurityCertificate() {
           </p>
           <p className="text-5xl font-lora text-white">
             Achieve{" "}
-            <span className="text-yellow-300 block">
+            <span className="text-[#7400b8] block">
               Credentials and Recognition
             </span>
           </p>

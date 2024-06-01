@@ -459,8 +459,8 @@ const AboutUs = () => {
         </section>
 
         <footer className="bg-white text-black text-center py-8">
-    {/* <p>© Copyright E-education . All rights reserved ⛵</p> */}
-  </footer>
+          {/* <p>© Copyright E-education . All rights reserved ⛵</p> */}
+        </footer>
       </div>
 
       <Footer />

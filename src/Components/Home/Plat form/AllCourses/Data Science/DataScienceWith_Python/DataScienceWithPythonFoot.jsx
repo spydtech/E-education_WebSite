@@ -1,6 +1,17 @@
-import React from "react";
+// import React from "react";
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function DataScienceWithPythonFoot() {
+  const [courseName] = useState("Data Science With Python"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+  const navigate = useNavigate();
   return (
     <>
       <div className="flex flex-1 font-lora w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-pink-100 to-pink-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
@@ -32,6 +43,7 @@ function DataScienceWithPythonFoot() {
         <a
           className="bg-pink-800 dark:bg-gray-800 rounded-xl text-white dark:text-gray-300 font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-pink-900 dark:hover:bg-gray-600 transition mb-0"
           href=""
+          onClick={handleEnroll}
         >
           Get started
         </a>

@@ -1,6 +1,18 @@
-import React from "react";
+// import React from "react";
 
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 function Datavisualisationsupersection() {
+  const [courseName] = useState("Data Visualization"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+  const navigate = useNavigate();
+
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+
   return (
     <div>
       <div className="flex flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-br from-yellow-300 via-orange-500 to-red-600 mb-8">
@@ -28,6 +40,7 @@ function Datavisualisationsupersection() {
         <a
           className="bg-white text-orange-600 rounded-xl font-medium px-4 py-3 mt-8 sm:mt-10 hover:bg-gray-200 transition"
           href="#"
+          onClick={handleEnroll}
         >
           Get started
         </a>

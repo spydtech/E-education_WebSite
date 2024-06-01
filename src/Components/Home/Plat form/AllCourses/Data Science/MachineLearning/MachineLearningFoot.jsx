@@ -1,5 +1,16 @@
-
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 function MachineLearningFoot() {
+  const [courseName] = useState("Machine Learning"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+  const navigate = useNavigate();
+
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+
   return (
     <>
       <div className="flex font-lora flex-1 w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-orange-100  to-orange-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 md:my-28">
@@ -28,10 +39,10 @@ function MachineLearningFoot() {
         <a
           className="bg-orange-600 dark:bg-gray-800 rounded-xl text-white dark:text-gray-300 font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-orange-500 dark:hover:bg-gray-600 transition mb-0"
           href=""
+          onClick={handleEnroll}
         >
           Get started
         </a>
-      
       </div>
     </>
   );

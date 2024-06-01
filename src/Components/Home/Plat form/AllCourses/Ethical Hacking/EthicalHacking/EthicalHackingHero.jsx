@@ -1,7 +1,19 @@
-import React from "react";
-import { debounce } from 'lodash';
+// import React from "react";
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { debounce } from "lodash";
 // import EthicalHackingScroller from "./EthicalHackingScroller";
 const EthicalHackingHero = () => {
+  const [courseName] = useState("Ethical Hacking Basics"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+  const navigate = useNavigate();
+
   const handleScroll = debounce(() => {
     // Your scroll handling logic
   }, 2000);
@@ -34,6 +46,7 @@ const EthicalHackingHero = () => {
         <a
           className="bg-violet-600 dark:bg-gray-800 rounded-xl text-white dark:text-gray-300 font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-violet-800 dark:hover:bg-gray-600 transition mb-0"
           href=""
+          onClick={handleEnroll}
         >
           Get started
         </a>

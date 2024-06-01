@@ -44,7 +44,7 @@ function Main() {
             </div>
 
             {/* <!--   Image Section     --> */}
-            <div class="lg:inset-y-0 lg:right-0 lg:w-1/2  relative ">
+            <div class="lg:inset-y-0 lg:right-0 lg:w-1/2 md:flex md:justify-center md:items-center  relative ">
               <Boy1 />
             </div>
 
@@ -56,4 +56,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Main;

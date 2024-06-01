@@ -1,6 +1,17 @@
-import React from "react";
-
+// import React from "react";
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 function AdvancedNetworkSecurityFoot() {
+  const [courseName] = useState("Advanced Network Security"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+
+  const navigate = useNavigate();
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+
   return (
     <>
       <div className="flex flex-1 font-lora w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-cyan-100  to-cyan-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 md:my:28">
@@ -33,6 +44,7 @@ function AdvancedNetworkSecurityFoot() {
         <a
           className="bg-cyan-500 dark:bg-gray-800 rounded-xl text-white dark:text-gray-300 font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-cyan-700 dark:hover:bg-gray-600 transition mb-0"
           href=""
+          onClick={handleEnroll}
         >
           Get started
         </a>

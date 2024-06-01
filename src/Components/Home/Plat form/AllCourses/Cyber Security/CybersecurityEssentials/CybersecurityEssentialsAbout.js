@@ -1,61 +1,54 @@
 import React from "react";
+import programmer from "../../../../../../assets/dataAnalatics/programmer.jpg";
+import assistance from "../../../../../../assets/dataAnalatics/assistance.jpg";
 
 const CybersecurityAbout = () => {
   return (
-    <div className="mx-auto w-full p-8 mb-16 bg-gradient-to-br from-purple-400 via-pink-500 to-red-600">
-      <div className="text-center mb-6">
-        <h1 className="text-gray-800 text-3xl font-bold">
-          About The Cybersecurity Course
-        </h1>
+    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br from-[#89fc00] to-[#12862b]">
+      <div className="pt-0">
+        <p className="text-[#7400b8] text-xl font-medium">
+          About The Cyber Security Essentials Course
+        </p>
       </div>
-      <div className="py-4 text-center">
-        <h2 className="text-5xl font-lora font-semibold text-white">
+      <div className="py-2">
+        <p className="text-6xl font-lora">
           Discover the
-          <span className="block text-violet-800 my-2">
-            Cybersecurity Program
-          </span>
-        </h2>
+          <p className="text-[#7400b8] my-2">
+            Cyber Security Essentials Program
+          </p>
+        </p>
       </div>
 
-      <div className="flex flex-wrap -mx-4 items-center pb-6 justify-center">
-        <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
-            <div className="p-6">
-              <h3 className="text-2xl font-bold mb-4 text-teal-600">
-                Career Assistance
-              </h3>
+      <div className="flex flex-wrap -mx-4 items-center pb-6">
+        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              className="w-full h-52 object-cover object-center"
+              src={programmer}
+              alt="Automation-protection"
+            />
+            <div className="p-4">
+              <h2 className="text-xl font-bold mb-2">Student Supoort</h2>
               <p className="text-gray-700">
-                Stay ahead with access to one-on-one career counseling sessions
-                and mock interviews with industry professionals.
+                Learn about the latest techniques and get support for courses
+                24/7.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
-            <div className="p-6">
-              <h3 className="text-2xl font-bold mb-4 text-teal-600">
-                Student Support
-              </h3>
+        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              className="w-full h-52 object-cover"
+              src={assistance}
+              alt="network-monitoring"
+            />
+            <div className="p-4">
+              <h2 className="text-xl font-bold mb-2">Carrer Assistance</h2>
               <p className="text-gray-700">
-                Access student support via support@cybersecurity.com or through
-                the "ask us?" option on our learning platform for urgent
-                queries.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
-            <div className="p-6">
-              <h3 className="text-2xl font-bold mb-4 text-teal-600">
-                24/7 Support
-              </h3>
-              <p className="text-gray-700">
-                Our support team is available 24/7 to assist you with any
-                queries or issues you may face during the course.
+                Gain expertise in continuous network monitoring to detect
+                anomalies and respond to incidents in real-time.
               </p>
             </div>
           </div>

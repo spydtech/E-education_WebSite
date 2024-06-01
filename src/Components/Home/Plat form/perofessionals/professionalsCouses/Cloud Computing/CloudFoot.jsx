@@ -1,9 +1,21 @@
-import React from 'react'
+// import React from 'react'
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const CloudFoot = () => {
+  const [courseName] = useState("Cloud Computing"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+
+  const navigate = useNavigate();
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+
   return (
     <>
-     <div className="flex flex-1 font-lora w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-indigo-600 to-blue-500 md:my-20">
+      <div className="flex flex-1 font-lora w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-indigo-600 to-blue-500 md:my-20">
         <h1 className="mx-auto max-w-4xl font-display text-2xl font-bold tracking-normal text-white dark:text-gray-300 md:text-7xl">
           Elevating Software Quality with &nbsp;
           <span className="relative text-white dark:text-gray-300">
@@ -32,12 +44,13 @@ const CloudFoot = () => {
         <a
           className="bg-yellow-300 dark:bg-gray-800 rounded-xl text-white dark:text-gray-300 font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-yellow-400 dark:hover:bg-gray-600 transition mb-0"
           href=""
+          onClick={handleEnroll}
         >
           Get started
         </a>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default CloudFoot
+export default CloudFoot;

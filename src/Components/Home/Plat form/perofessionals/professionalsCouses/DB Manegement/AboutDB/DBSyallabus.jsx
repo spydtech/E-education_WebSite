@@ -1,5 +1,3 @@
-
-
 import React from "react";
 
 function DBSyallabus() {
@@ -40,18 +38,19 @@ function DBSyallabus() {
         >
           <div id="headings" className="grid grid-cols-1 text-start px-20">
             <div>
-              <p className="text-[#f9ac13] text-xl font-medium">Syllabus</p>
+              <p className="text-[#00509d] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
               <p className="text-6xl font-lora">
                 Discover What You
-                <p className="text-[#f9ac13] inline pl-2">Will Learn</p>
+                <p className="text-[#00509d] inline pl-2">Will Learn</p>
               </p>
             </div>
             <div>
               <p className="text-xl text-gray-300">
                 Dive into the comprehensive curriculum covering key concepts,
-                practical applications, and advanced topics in database management.
+                practical applications, and advanced topics in database
+                management.
               </p>
             </div>
           </div>
@@ -63,7 +62,7 @@ function DBSyallabus() {
           <div className="container mx-auto">
             {data.map((category, index) => (
               <div key={index} className="mb-6">
-                <h2 className="text-4xl font-semibold mb-2 text-[#f9ac13]">
+                <h2 className="text-4xl font-semibold mb-2 text-[#00509d]">
                   {category.heading}
                 </h2>
                 <h3 className="text-2xl font-medium mb-2">

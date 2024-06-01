@@ -67,13 +67,14 @@ import SecurityTesting from "./Components/Home/Plat form/AllCourses/Software Tes
 import UsabilityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Usablity_Testing/UsabilityTesting";
 import UnitTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Unit_Testing/UnitTestingFundamentals";
 import CompatabilityTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Compatability_Testing/CompatabilityFundamentals";
-import IntigrationTesting from './Components/Home/Plat form/AllCourses/Software Testing/Integration_Testing/IntegrationFundamentals';
+import IntigrationTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Integration_Testing/IntegrationFundamentals";
 import SystemTesting from "./Components/Home/Plat form/AllCourses/Software Testing/System_Testing/SystemFundamentals";
 import ManualTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Manual_Testing/ManualTesting";
 import AutomationTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Automation_Testing/AutomationTesting";
-import AcceptanceTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Acceptance_testing/AcceptanceTesting"
-import StressTesting from './Components/Home/Plat form/AllCourses/Software Testing/Stress_Testing/StressTestingFundamentals'
-import RegressionTesting from './Components/Home/Plat form/AllCourses/Software Testing/Regression_Testing/RegressionTesting'
+import AcceptanceTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Acceptance_testing/AcceptanceTesting";
+import StressTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Stress_Testing/StressTestingFundamentals";
+import RegressionTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Regression_Testing/RegressionTesting";
+
 
 import Java from './Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava'
 import Wordpress from './Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress'
@@ -92,6 +93,7 @@ import UiUx from "./Components/BasicCourse/BasicAllCourses/UI_UX/Ui_Ux";
 import FullStackMobileApp from './Components/PremiumCourses/Premium-Courses/Fullstackmobileapp/mobileappFundamentals'
 import PreAdvancePhp from './Components/PremiumCourses/Premium-Courses/pre-AdvancePhp/AdvancePhp'
 import PreWordPress from './Components/PremiumCourses/Premium-Courses/pre-Wordpress/AdvancewordpressFundamentals'
+
 function App() {
   return (
     <div>
@@ -108,30 +110,30 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/ForgotPassword" element={<ForgotPassword />} />
           <Route path="/signUp" element={<SignUp />} />
+          {/*  */}
           <Route path="/Profile" element={<Profile />} />
           <Route path="/PostFeeds" element={<PostFeeds />} />
           <Route path="/QuestionForm" element={<QuestionForm />} />
           <Route path="/Settings" element={<Settings />} />
+          {/*  */}
           <Route path="/Payment" element={<Payment />} />
           <Route path="/Purchases" element={<Purchases />} />
           <Route path="/mycourse" element={<MyCourse />} />
           <Route path="/student" element={<Student />} />
           <Route path="/googlecalender" element={<GoogleCalender />} />
-
+          {/*  */}
           <Route path="/artsandHumanities" element={<ArtsandHumanities />} />
           <Route path="/business" element={<Business />} />
           <Route path="/computerscience" element={<ComputerScience />} />
           <Route path="/professional" element={<Professional />} />
+          {/*  */}
           <Route path="/reactjs" element={<Reactjs />} />
           <Route path="/health" element={<Health />} />
           <Route path="/database" element={<DataBase />} />
-          <Route path="course-details" element={<CourseDetails />} />
+          <Route path="/course-details" element={<CourseDetails />} />
 
           {/* Data Science */}
-          <Route
-            path="/data_Science"
-            element={<DataScienceArray />}
-          />
+          <Route path="/data_Science" element={<DataScienceArray />} />
           <Route path="/course/Data Science" element={<DataAnalytics />} />
           <Route
             path="/data_Science/data-Analatics"
@@ -158,12 +160,9 @@ function App() {
             path="/data_Science/data-visualization"
             element={<Datavisualisation />}
           />
-
+          {/* done */}
           {/* Cyber Security */}
-          <Route
-            path="/cyber_security"
-            element={<CyberSecurityArray />}
-          />
+          <Route path="/cyber_security" element={<CyberSecurityArray />} />
           <Route
             path="/Cybersecurity/Cybersecurity_fundamentals"
             element={<Cybersecurity />}
@@ -178,10 +177,7 @@ function App() {
           />
 
           {/* Network Security */}
-          <Route
-            path="/network_security"
-            element={<NetworkSecurityArray />}
-          />
+          <Route path="/network_security" element={<NetworkSecurityArray />} />
           <Route
             path="/network_security/network-security-fundamentals"
             element={<NetworkSecurity />}
@@ -199,10 +195,7 @@ function App() {
           {/* /student/student_network_security/network-security-best-practices */}
 
           {/* Software Testing */}
-          <Route
-            path="/software_testing"
-            element={<SoftwareTestingArray />}
-          />
+          <Route path="/software_testing" element={<SoftwareTestingArray />} />
 
           <Route
             path="/software-testing/performance-testing"
@@ -243,7 +236,6 @@ function App() {
             element={<IntigrationTesting />}
           />
 
-
           <Route
             path="/software-testing/system-testing"
             element={<SystemTesting />}
@@ -263,12 +255,7 @@ function App() {
             element={<RegressionTesting />}
           />
 
-
-          <Route
-            path="/cloud-testing"
-            element={<CloudTesting />}
-          />
-
+          <Route path="/cloud-testing" element={<CloudTesting />} />
 
           {/* Ethical Hacking */}
           <Route
@@ -287,7 +274,7 @@ function App() {
             path="/Ethical-Hacking/certified_Ethical_Hacking"
             element={<CertifiedEthicalHacking />}
           />
-
+          {/*  */}
           {/* Full Stack */}
           <Route
             path="/fullStack_WebDevelopment/mean-Stack-Developer"
@@ -342,10 +329,12 @@ function App() {
           <Route path="/php" element={<Php />} />
           <Route path="/javaScript" element={<JavaScript />} />
           <Route path="/c_c++" element={<C_Cplus />} />
+
           <Route path="/ui_ux_design" element={<UiUx />} />
           <Route path="/javaScript" element={<JavaScript />} />
           <Route path="/c_c++" element={<C_Cplus />} />
           {/* Advance courses */}
+
           <Route path="/advance-courses" element={<AdvanceCourses />} />
           <Route path="/advance-php" element={<AdvancePhp />} />
           <Route path="/blockchain" element={<BlockChain />} />

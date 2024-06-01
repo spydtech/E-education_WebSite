@@ -1,44 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Navbar from "../../Navbar";
 import HeroStudent from "../../../assets/student/student2.svg";
 import Footer from "../footer/Footer";
 
 import StudentCourses from "./StudentCourses";
 
-
-
 const images = [
-  'https://miro.medium.com/v2/resize:fit:660/1*NRk6YQMA_w-wWcc6JYe7yA.png',
-  'https://findit-resources.s3.amazonaws.com/forums/1677056552844.jpg',
-  'https://media.istockphoto.com/id/1403523196/photo/focused-female-adult-student-in-headphones-using-laptop.jpg?s=612x612&w=0&k=20&c=Aqz1SYxmeF9WsFWEiX3cZ4-AHJ6ltNRgPX8M98VpwtU=',
+  "https://miro.medium.com/v2/resize:fit:660/1*NRk6YQMA_w-wWcc6JYe7yA.png",
+  "https://findit-resources.s3.amazonaws.com/forums/1677056552844.jpg",
+  "https://media.istockphoto.com/id/1403523196/photo/focused-female-adult-student-in-headphones-using-laptop.jpg?s=612x612&w=0&k=20&c=Aqz1SYxmeF9WsFWEiX3cZ4-AHJ6ltNRgPX8M98VpwtU=",
 ];
 
-
-
 const Student = () => {
-
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-      const interval = setInterval(() => {
-          setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-      }, 5000); // Change the time interval here (in milliseconds) for auto-sliding
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, 5000); // Change the time interval here (in milliseconds) for auto-sliding
 
-      return () => clearInterval(interval);
+    return () => clearInterval(interval);
   }, [currentSlide]);
 
   const prevSlide = () => {
-      setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-      setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
   return (
     <>
       <Navbar />
-      <div className="w-full pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
+      <div className="w-full  py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl px-4">
         <div>
           <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
             Kickstart Your Journey
@@ -63,29 +58,29 @@ const Student = () => {
         </div>
         <div className="    mr-32 ">
           {/* <img src={HeroStudent} alt="Hero Student" /> */}
-          <div class="lg:inset-y-0 lg:right-0 lg:w-[500px]  border-1  border-gray-500 relative">
-                            <div className="overflow-hidden">
-                                <img
-                                    className="w-[550px] h-[450px] py-10"
-                                    src={images[currentSlide]}
-                                    alt={`Slide ${currentSlide + 1}`}
-                                />
-                            </div>
-                            <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-4">
-                                <button
-                                    onClick={prevSlide}
-                                    className=" text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
-                                >
-                                    &larr;
-                                </button>
-                                <button
-                                    onClick={nextSlide}
-                                    className=" text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
-                                >
-                                    &rarr;
-                                </button>
-                            </div>
-                        </div>
+          <div class="lg:inset-y-0 lg:right-0 lg:w-[500px] w-96  border-1  border-gray-500 relative">
+            <div className="overflow-hidden">
+              <img
+                className="w-[550px] h-[450px] py-10"
+                src={images[currentSlide]}
+                alt={`Slide ${currentSlide + 1}`}
+              />
+            </div>
+            <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-4">
+              <button
+                onClick={prevSlide}
+                className=" text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
+              >
+                &larr;
+              </button>
+              <button
+                onClick={nextSlide}
+                className=" text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
+              >
+                &rarr;
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <StudentCourses />

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
@@ -35,33 +34,35 @@ const EthicalHackingStudentArray = () => {
     );
   };
 
-
-
-
   const ethicalHackingCourses = [
     {
       id: 1,
       title: "Ethical Hacking Basics",
-      description: "Learn the fundamentals of ethical hacking, including reconnaissance, scanning, and vulnerability assessment.",
-      image: "https://www.eccouncil.org/cybersecurity-exchange/wp-content/uploads/2022/03/ETHICAL-HACKING.jpg",
+      description:
+        "Learn the fundamentals of ethical hacking, including reconnaissance, scanning, and vulnerability assessment.",
+      image:
+        "https://www.eccouncil.org/cybersecurity-exchange/wp-content/uploads/2022/03/ETHICAL-HACKING.jpg",
       link: "/Ethical_Hacking/basic_ethical_Hacking",
     },
     {
       id: 2,
       title: "Advanced Ethical Hacking",
-      description: "Dive deeper into ethical hacking techniques, including exploitation, privilege escalation, and post-exploitation.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLbv6P5JmHHMLlrqLXCN21RuKXNZTeTxvC2w5T_AoERcEH9YNTrIzAghuPcLAgnN-KAKk&usqp=CAU",
+      description:
+        "Dive deeper into ethical hacking techniques, including exploitation, privilege escalation, and post-exploitation.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLbv6P5JmHHMLlrqLXCN21RuKXNZTeTxvC2w5T_AoERcEH9YNTrIzAghuPcLAgnN-KAKk&usqp=CAU",
       link: "/Ethical_Hacking/advance_Ethical_Hacking",
     },
     {
       id: 3,
       title: "Certified Ethical Hacker",
-      description: "Prepare for the Certified Ethical Hacker (CEH) certification with comprehensive coverage of ethical hacking topics.",
-      image: "https://ceh.nativeva.com/wp-content/uploads/2023/04/Unlock-Your-Potential-1-1.png",
+      description:
+        "Prepare for the Certified Ethical Hacker (CEH) certification with comprehensive coverage of ethical hacking topics.",
+      image:
+        "https://ceh.nativeva.com/wp-content/uploads/2023/04/Unlock-Your-Potential-1-1.png",
       link: "/Ethical-Hacking/certified_Ethical_Hacking",
     },
   ];
-  
 
   const filteredCourses = ethicalHackingCourses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -69,7 +70,7 @@ const EthicalHackingStudentArray = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <img
         src="https://www.trinitytechnology.in/_logo/hacking.webp"
         className="object-cover w-full"
@@ -78,7 +79,7 @@ const EthicalHackingStudentArray = () => {
       {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-4 text-center text-purple-600 underline">
-          Explore Data Science Courses
+          Explore Ethical Hacking Courses
         </h1>
 
         <div className="mb-4 flex justify-center">
@@ -133,13 +134,13 @@ const CourseCard = ({ course, handleWishList, setShow }) => {
           </p>
         </div>
       </Link>
-        <button id="wishlist" onClick={handleDataTransfer}>
-          {liked ? (
-            <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
-          ) : (
-            <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
-          )}
-        </button>
+      <button id="wishlist" onClick={handleDataTransfer}>
+        {liked ? (
+          <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
+        ) : (
+          <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
+        )}
+      </button>
     </div>
   );
 };

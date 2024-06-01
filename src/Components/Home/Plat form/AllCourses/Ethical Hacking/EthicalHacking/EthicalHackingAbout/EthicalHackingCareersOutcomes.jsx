@@ -8,18 +8,18 @@ function EthicalHackingCareersOutcomes() {
     <>
       <div
         id="main"
-        className=" bg-gradient-to-r from-cyan-400 via-sky-500  to-blue-500"
+        className=" md:lg:xl:pl-20  bg-gradient-to-br  from-cyan-400 via-sky-500  to-blue-500"
       >
-        <div id="headings" className="grid grid-cols-1 text-start px-20">
+        <div id="headings" className="grid grid-cols-1 text-start ">
           <div>
-            <p className="text-orange-600 text-xl font-medium">
-              Career Outcomes in Ethical Hacking Program
+            <p className="text-[#7400b8] text-xl font-medium">
+              Career Outcomes in Automation Testing Program
             </p>
           </div>
           <div className="py-5">
             <p className="text-6xl font-lora">
               Discover What our{" "}
-              <p className="text-violet-800">Learners Have Achieved</p>
+              <p className="text-[#7400b8]">Learners Have Achieved</p>
             </p>
           </div>
           <div>
@@ -28,33 +28,30 @@ function EthicalHackingCareersOutcomes() {
             </p>
           </div>
         </div>
-        <div
-          id="subdiv"
-          className="grid grid-cols-1 md:grid-cols-2 gap-x-6 pl-20"
-        >
+        <div id="subdiv" className="grid grid-cols-1 md:grid-cols-2 gap-x-6 ">
           <div
             id="a"
-            className="grid grid-rows-2 grid-cols-2 gap-8 p-3 pl-20 hover:cursor-pointer text-xl font-medium my-6 items-center border-2 border-opacity-15 rounded-md overflow-hidden shadow-lg shadow-gray-400"
+            className="grid grid-rows-2 grid-cols-2 gap-8 p-3  hover:cursor-pointer text-xl font-medium my-6 items-center bg-gray-100 border-4 border-[#7400b8] border-opacity-50 rounded-md overflow-hidden  "
           >
             <div id="x">
               <p>
                 <BsGraphUpArrow className="w-10 h-10 text-green-700" />
               </p>
-              <p>57%</p>
+              <p>60%</p>
               <p className="text-gray-500 text-[16px]">Average salary hike</p>
             </div>
             <div id="y">
               <p>
                 <FaPeopleGroup className="w-10 h-10 text-blue-700" />
               </p>
-              <p>100+</p>
+              <p>120+</p>
               <p className="text-gray-500 text-[16px]">Hiring partners</p>
             </div>
             <div id="z">
               <p>
-                <FcPositiveDynamic className="w-10 h-10 text-green-700" />
+                <FcPositiveDynamic className="w-10 h-10 text-yellow-500" />
               </p>
-              <p>5/6</p>
+              <p>6/7</p>
               <p className="text-gray-500 text-[16px]">
                 Learners saw positive career growth
               </p>
@@ -63,7 +60,7 @@ function EthicalHackingCareersOutcomes() {
               <p>
                 <GrTransaction className="w-10 h-10 text-red-800" />
               </p>
-              <p>300+</p>
+              <p>400+</p>
               <p className="text-gray-500 text-[16px]">Career Transitions</p>
             </div>
           </div>
@@ -73,7 +70,6 @@ function EthicalHackingCareersOutcomes() {
               id="n"
               className="p-5 text-xl font-medium my-6 rounded-md overflow-hidden"
             >
-              <p className="p-4 pt-0">Top Recruiters</p>
               <div id="list" className="grid grid-rows-3 gap-y-8 grid-cols-3  ">
                 {/* {recruiters.map((recruiter, index) => (
             <div key={index} className="w-12 h-12">

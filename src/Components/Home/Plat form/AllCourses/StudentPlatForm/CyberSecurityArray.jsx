@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
@@ -36,32 +34,35 @@ const CyberSecurityArray = () => {
     );
   };
   // /cybersecurity
-  
 
   const cybersecurityCourses = [
     {
       id: 1,
       title: "Introduction to Cybersecurity",
-      description: "Learn the basic principles of cybersecurity, including risk management, threat detection, and security policies.",
-      image: "https://images.shiksha.com/mediadata/images/articles/1709545684phpPfnagp.jpeg",
+      description:
+        "Learn the basic principles of cybersecurity, including risk management, threat detection, and security policies.",
+      image:
+        "https://images.shiksha.com/mediadata/images/articles/1709545684phpPfnagp.jpeg",
       link: "/Cybersecurity/Cybersecurity_fundamentals",
     },
     {
       id: 2,
       title: "Cybersecurity Essentials",
-      description: "Understand the core concepts of cybersecurity, including network security, cryptography, and incident response.",
+      description:
+        "Understand the core concepts of cybersecurity, including network security, cryptography, and incident response.",
       image: "https://i.ytimg.com/vi/xsL5ax44530/maxresdefault.jpg",
       link: "/Cybersecurity/cybersecurity_essentials",
     },
     {
       id: 3,
       title: "Cybersecurity for Beginners",
-      description: "An introductory course for those new to the field of cybersecurity, covering fundamental concepts and best practices.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKr60KjwzYEQPATOULM6X99sU6NAn8AqX1dsTeUSRqQ&s",
+      description:
+        "An introductory course for those new to the field of cybersecurity, covering fundamental concepts and best practices.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKr60KjwzYEQPATOULM6X99sU6NAn8AqX1dsTeUSRqQ&s",
       link: "/Cybersecurity/cybersecurity_beginners",
     },
   ];
-  
 
   const filteredCourses = cybersecurityCourses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -69,7 +70,7 @@ const CyberSecurityArray = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <img
         src="https://www.springboard.com/blog/wp-content/uploads/2021/06/shutterstock_505066678-scaled-scaled.jpg"
         className="object-cover w-full md:h-[340px]"
@@ -78,7 +79,7 @@ const CyberSecurityArray = () => {
       {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-4 text-center text-purple-600 underline">
-          Explore Data Science Courses
+          Explore Cyber Security Courses
         </h1>
 
         <div className="mb-4 flex justify-center">
@@ -134,13 +135,13 @@ const CourseCard = ({ course, handleWishList, setShow }) => {
           </p>
         </div>
       </Link>
-        <button id="wishlist" onClick={handleDataTransfer}>
-          {liked ? (
-            <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
-          ) : (
-            <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
-          )}
-        </button>
+      <button id="wishlist" onClick={handleDataTransfer}>
+        {liked ? (
+          <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
+        ) : (
+          <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
+        )}
+      </button>
     </div>
   );
 };

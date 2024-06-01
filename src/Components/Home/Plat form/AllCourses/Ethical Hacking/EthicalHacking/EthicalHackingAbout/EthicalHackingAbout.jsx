@@ -5,32 +5,32 @@ import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg
 
 const EthicalHackingAbout = () => {
   return (
-    <div className=" mx-auto w-full pl-20 p-1 bg-gradient-to-br from-cyan-400 via-sky-500  to-blue-500">
+    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br  from-cyan-400 via-sky-500  to-blue-500">
       <div className="pt-0">
-        <p className="text-orange-600 text-xl font-medium">
-          About The Ethical Hacking Course
+        <p className="text-[#7400b8] text-xl font-medium">
+          About The Automation Testing Course
         </p>
       </div>
       <div className="py-2">
         <p className="text-6xl font-lora">
           Discover the
-          <p className="text-violet-800 my-2">Ethical Hacking Program</p>
+          <p className="text-[#7400b8] my-2">Automation Testing Program</p>
         </p>
       </div>
 
-      <div className="flex flex-wrap  items-center pb-6">
+      <div className="flex flex-wrap -mx-4 items-center pb-6">
         <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <img
               className="w-full h-52 object-cover object-center"
-              src={assistance}
-              alt="career-assistance"
+              src={programmer}
+              alt="Automation-protection"
             />
             <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Career Assistance</h2>
+              <h2 className="text-xl font-bold mb-2">Student Supoort</h2>
               <p className="text-gray-700">
-                Stay ahead with access to one-on-one career counseling sessions
-                and mock interviews with industry professionals.
+                Learn about the latest techniques and get support for courses
+                24/7.
               </p>
             </div>
           </div>
@@ -40,15 +40,14 @@ const EthicalHackingAbout = () => {
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <img
               className="w-full h-52 object-cover"
-              src={programmer}
-              alt="student-support"
+              src={assistance}
+              alt="network-monitoring"
             />
             <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Student Support</h2>
+              <h2 className="text-xl font-bold mb-2">Carrer Assistance</h2>
               <p className="text-gray-700">
-                Access student support via support@machinelearning.com or
-                through the "ask us?" option on our learning platform for urgent
-                queries.
+                Gain expertise in continuous network monitoring to detect
+                anomalies and respond to incidents in real-time.
               </p>
             </div>
           </div>
