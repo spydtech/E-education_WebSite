@@ -7,7 +7,7 @@ function Pricing() {
         <div class="mx-auto pb-20 mt-4 max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-4xl text-center">
             <h1 class="text-base font-semibold leading-7 text-indigo-400">
-            Course Category
+              Course Category
             </h1>
             <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
               Whether it's just you, or your entire team - we've got you
@@ -32,10 +32,12 @@ function Pricing() {
                 Course details for Basic
               </p>
               <p class="mt-6 flex items-baseline gap-x-1">
-                <span class="text-4xl font-bold tracking-tight text-white">
-                  40 / days
+
+                <span className="text-4xl font-bold tracking-tight text-white">
+                  4999<span className="align-top text-base">&#8377;</span>
+                  <span className="text-lg italic">/ course</span>
                 </span>
-                <span class="text-sm font-semibold leading-6 text-gray-300"></span>
+                {/* <span class="text-sm font-semibold leading-6 text-gray-300"></span> */}
               </p>
               <Link to="/basic-courses">
                 <button
@@ -63,7 +65,7 @@ function Pricing() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  40 days
+                  45 to 60 days
                 </li>
                 <li class="flex gap-x-3">
                   <svg
@@ -95,7 +97,39 @@ function Pricing() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
+                  5 Projects
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
                   Quick learning
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-lex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  course completion certificate
                 </li>
               </ul>
             </div>
@@ -117,10 +151,11 @@ function Pricing() {
                 The most popular choice. Courses details for Premium
               </p>
               <p class="mt-6 flex items-baseline gap-x-1">
-                <span class="text-4xl font-bold tracking-tight text-white">
-                120 / days
+                <span className="text-4xl font-bold tracking-tight text-white">
+                  34999<span className="align-top text-base">&#8377;</span>
+                  <span className="text-lg italic">/ course</span>
                 </span>
-                <span class="text-sm font-semibold leading-6 text-gray-300"></span>
+
               </p>
               <Link to="/premium-courses">
                 <button
@@ -164,6 +199,39 @@ function Pricing() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
+                  Doubt Solving
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  10 projects
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                
                   Recorded section
                 </li>
                 <li class="flex gap-x-3">
@@ -180,7 +248,89 @@ function Pricing() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  Doubt Solving
+                
+                  Lifetime access
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                one month Internship opportunity
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Resume preparation
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Mock interview preparation
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Reference in interview
+                </li>
+               
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  course completion certificate
                 </li>
               </ul>
             </div>
@@ -199,9 +349,11 @@ function Pricing() {
                 Course details for Advance
               </p>
               <p class="mt-6 flex items-baseline gap-x-1">
-                <span class="text-4xl font-bold tracking-tight text-white">
-                  90 / days
+                <span className="text-4xl font-bold tracking-tight text-white">
+                  14999<span className="align-top text-base">&#8377;</span>
+                  <span className="text-lg italic"> / course</span>
                 </span>
+
                 <span class="text-sm font-semibold leading-6 text-gray-300"></span>
               </p>
 
@@ -231,6 +383,22 @@ function Pricing() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
+                  90 days
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
                   Doubt Solving
                 </li>
                 <li class="flex gap-x-3">
@@ -247,7 +415,7 @@ function Pricing() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  10 Project
+                  10 projects
                 </li>
                 <li class="flex gap-x-3">
                   <svg
@@ -263,7 +431,90 @@ function Pricing() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  Internship opportunity
+                
+                  Recorded section
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                
+                  Lifetime access
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Resume preparation
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Mock interview preparation
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Reference in interview
+                </li>
+               
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  course completion certificate
                 </li>
               </ul>
             </div>
