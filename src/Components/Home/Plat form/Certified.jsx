@@ -20,7 +20,7 @@ function Certified() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-10 gap-y-16 justify-center  bg-white py-8 font-lora">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-10 gap-y-16 place-items-center bg-white py-8 font-lora">
         {[1, 2, 3].map((index) => (
           <div
             key={index}

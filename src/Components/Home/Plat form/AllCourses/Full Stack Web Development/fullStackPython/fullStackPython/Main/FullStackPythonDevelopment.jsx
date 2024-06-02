@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Add this import for navigation
+
+// import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+// import Navbar from "../../../../Navbar";
 import Navbar from "../../../../../../../Navbar";
 import Footer from "../../../../../../footer/Footer";
 import AboutCourses from "./AboutCourses";
@@ -16,7 +21,8 @@ const images = [
 ];
 
 const FullStackPythonDevelopment = () => {
-  const [courseName] = useState("Master Full Stack Python Development");
+  const [courseName] = useState("full stack python developmwnt"); // Placeholder for course name
+  // const [coursePrice] = useState(199);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [coursePrice] = useState(199);
   const navigate = useNavigate(); // useNavigate hook for navigation

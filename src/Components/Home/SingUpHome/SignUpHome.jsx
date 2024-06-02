@@ -53,13 +53,13 @@ function SignUpContent() {
     <>
       <div
         id="main"
-        className="grid grid-cols-1 md:lg:grid-cols-2 h-[750px] bg-violet-900 mb-26 font-lora"
+        className="grid grid-cols-1 md:lg:grid-cols-2 md:h-[750px] bg-violet-900 mb-26 font-lora"
       >
         <div
           id="text"
-          className=" text-white  bg-violet-900 flex  justify-center items-center w-96  md:w-auto lg:xl:w-auto"
+          className=" text-white  bg-violet-900 flex  justify-center items-center"
         >
-          <p className="text-[44px] text-center pl-4">
+          <p className="md:text-[44px] text-center md:pl-4">
             Join Our Community Of Learners
           </p>
         </div>
@@ -68,7 +68,7 @@ function SignUpContent() {
           className="bg-violet-900 flex justify-center items-center w-auto"
         >
           {/* sin */}
-          <div className="max-w-md mx-12 ">
+          <div className="md:max-w-md md:mx-12 ">
             {/*  */}
             <div id="back-div" className=" rounded-lg ">
               <div className="bg-gray-800  rounded-[20px] dark:bg-gray-900 mt-3  shadow-lg xl:p-6 2xl:p-6 lg:px-6 lg:py-0  md:p-6 sm:p-4 p-4">

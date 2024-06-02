@@ -1,6 +1,6 @@
 import Navbar from "../Navbar";
 import Footer from "../Home/footer/Footer";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaUserEdit } from "react-icons/fa";
 import { FaCamera } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";

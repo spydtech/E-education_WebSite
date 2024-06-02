@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Add this import for navigation
-
 import AboutCourses from "./AboutCourses";
 import Community from "./Community/community";
 import SuccessStory from "./SuccessStory/successstory";

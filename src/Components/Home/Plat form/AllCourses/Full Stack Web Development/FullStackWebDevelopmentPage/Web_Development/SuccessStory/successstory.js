@@ -1,9 +1,10 @@
-// import React from "react";
-import React, { useState, useEffect } from "react";
-// import DotnetSuccess from "../../DotnetSuccess/DotnetSuccess3.jpg";
-import DotnetSuccess from "../../../../../../../assets/success.png";
-import company from "../../../../../../../assets/company.png";
-import webcertificate from "../../../../../../../assets/webcertificate.png";
+import React, { useEffect, useState } from "react";
+// import successImage from "../../../../../../../assets/Assests_MeanStack/successstoryimages/studentsitting.jpg";
+// import company from "../../../../../../../assets/Assests_MeanStack/successstoryimages/company.png";
+// import webcertificate from "../../../../../../../assets/Assests_MeanStack/successstoryimages/webcertificate.png";
+import successImage from "../../../../../../../../assets/Assests_MeanStack/successstoryimages/studentsitting.jpg";
+import company from "../../../../../../../../assets/Assests_MeanStack/successstoryimages/company.png";
+import webcertificate from "../../../../../../../../assets/Assests_MeanStack/successstoryimages/webcertificate.png";
 import { ImQuotesLeft } from "react-icons/im";
 
 function SuccessStory() {
@@ -25,7 +26,7 @@ function SuccessStory() {
       <div
         className="relative bg-cover bg-center w-96 h-96 mb-4 mt-4 sm:w-80 sm:h-80 md:w-96 md:h-96"
         style={{
-          backgroundImage: `url(${DotnetSuccess})`,
+          backgroundImage: `url(${successImage})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",

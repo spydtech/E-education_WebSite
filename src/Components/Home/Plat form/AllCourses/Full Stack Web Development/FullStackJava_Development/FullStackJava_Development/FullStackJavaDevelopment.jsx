@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Add this import for navigation
+import { useNavigate } from "react-router-dom";
+// import Navbar from "../../../../Navbar";
 import Navbar from "../../../../../../Navbar";
-import Footer from "../../../../../footer/Footer";
 import AboutCourses from "./AboutCourses";
 import Community from "./Community/community";
 import SuccessStory from "./SuccessStory/successstory";
 import Delivery_Methods from "./deliverymethods/Delivery_Methods";
 import FullStackJavaDeveloper from "./Developer/FullStackJavaDeveloper";
+import Footer from "../../../../../footer/Footer";
 
 const images = [
   "https://media.istockphoto.com/id/2027690301/vector/backend-development-coding-and-programming-it-specialist-sit-and-write-code-on-a-laptop-for.jpg?s=612x612&w=0&k=20&c=XFAq03A3tCnwvoKzT4mS3oBxlCiKJg1C5JaJVRmbH6I=",
@@ -17,11 +18,13 @@ const images = [
 ];
 
 const FullStackJavaDevelopment = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [courseName] = useState("Master Full Stack Java Development"); // Moved inside component
-  const [coursePrice] = useState(199); // Moved inside component
-  const navigate = useNavigate(); // useNavigate hook for navigation
+  const [courseName] = useState(" Testing"); // Placeholder for course name
+  const [coursePrice] = useState(199);
 
+  const navigate = useNavigate();
+
+  // const navigate = useNavigate();
+  const [currentSlide, setCurrentSlide] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
