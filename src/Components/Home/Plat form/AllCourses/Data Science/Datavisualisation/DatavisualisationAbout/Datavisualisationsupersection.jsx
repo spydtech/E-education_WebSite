@@ -39,7 +39,6 @@ function Datavisualisationsupersection() {
         </h2>
         <a
           className="bg-white text-orange-600 rounded-xl font-medium px-4 py-3 mt-8 sm:mt-10 hover:bg-gray-200 transition"
-          href="#"
           onClick={handleEnroll}
         >
           Get started

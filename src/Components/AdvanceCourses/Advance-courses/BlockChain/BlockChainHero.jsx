@@ -1,6 +1,19 @@
-import React from "react";
+// import React from "react";
+
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const BlockChainHero = () => {
+  const [courseName] = useState("Block Chain Development"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+
+  const navigate = useNavigate();
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+
   return (
     <>
       {/* First Part */}
@@ -10,7 +23,7 @@ const BlockChainHero = () => {
           src="https://wallpaper.forfun.com/fetch/e2/e26042c747d0c6131146b07d38104c46.jpeg"
           className="w-full object-cover md:h-[500px]"
         />
-    <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
       </div>
 
       <div
@@ -33,10 +46,10 @@ const BlockChainHero = () => {
 
           <div className="mt-4">
             <a
-              href="#contact"
+              onClick={handleEnroll}
               className="px-5 py-3 text-lg tracking-wider text-white bg-orange-300 rounded-lg md:px-8 hover:bg-orange-500 group"
             >
-              <span>Learn More</span>
+              <span>Enroll Now</span>
             </a>
           </div>
         </div>

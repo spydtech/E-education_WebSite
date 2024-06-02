@@ -1,10 +1,19 @@
-import React from "react";
-
+// import React from "react";
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const DataScienceHero = () => {
+  const [courseName] = useState("Introduction to Data Science"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+  const navigate = useNavigate();
+
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+
   return (
     <>
-  
-   
       {/* First Part */}
       <div>
         <img
@@ -12,7 +21,7 @@ const DataScienceHero = () => {
           src="https://t3.ftcdn.net/jpg/03/04/68/52/360_F_304685223_ttVGVAkC5JlfgEOTO8KYbN4tjnRqM715.jpg"
           className="w-full object-cover md:h-[500px]"
         />
-          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
       </div>
       <div
         className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
@@ -34,10 +43,10 @@ const DataScienceHero = () => {
 
           <div className="mt-4">
             <a
-              href="#contact"
+              onClick={handleEnroll}
               className="px-5 py-3 text-lg tracking-wider text-white bg-pink-500 rounded-lg md:px-8 hover:bg-pink-700 group"
             >
-              <span>Learn More</span>{" "}
+              <span>Enroll Now</span>{" "}
             </a>
           </div>
         </div>

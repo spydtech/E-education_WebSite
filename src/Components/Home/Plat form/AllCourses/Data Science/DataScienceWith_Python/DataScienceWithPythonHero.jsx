@@ -1,7 +1,18 @@
-import React from "react";
+// import React from "react";
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 // import PythonDataScroller from "./PythonDataScroller";
 
 const DataScienceWithPythonHero = () => {
+  const [courseName] = useState("Data Science With Python"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+  const navigate = useNavigate();
   return (
     <>
       {/* First Part */}
@@ -33,10 +44,10 @@ const DataScienceWithPythonHero = () => {
 
           <div className="mt-4">
             <a
-              href="#contact"
+              onClick={handleEnroll}
               className="px-5 py-3 text-lg tracking-wider text-white bg-pink-800 rounded-lg md:px-8 hover:bg-pink-900 group"
             >
-              <span>Learn More</span>{" "}
+              <span>Enroll Now</span>{" "}
             </a>
           </div>
         </div>

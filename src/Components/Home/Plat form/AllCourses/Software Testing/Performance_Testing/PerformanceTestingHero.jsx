@@ -1,19 +1,30 @@
-import React from "react";
+// import React from "react";
+
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 // import PerformanceTestingScroller from "./PerformanceTestingScroller";
 
 const PerformanceTestingHero = () => {
+  const [courseName] = useState("Performance Testing"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+
+  const navigate = useNavigate();
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
+
   return (
     <>
       {/* First Part */}
       <div>
         <img
-        
           src="https://images.squarespace-cdn.com/content/v1/5e51872712c0b73372f8fa1a/14b656b0-072d-436b-9746-712f87564b5a/Performance+Testing.png"
           className="w-full object-cover md:h-[500px]"
         />
-          {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
       </div>
-
 
       <div
         className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
@@ -35,10 +46,10 @@ const PerformanceTestingHero = () => {
 
           <div className="mt-4">
             <a
-              href="#contact"
+              onClick={handleEnroll}
               className="px-5 py-3 text-lg tracking-wider text-white bg-sky-300 rounded-lg md:px-8 hover:bg-sky-500 group"
             >
-              <span>Explore More</span>{" "}
+              <span>Enroll Now</span>{" "}
             </a>
           </div>
         </div>

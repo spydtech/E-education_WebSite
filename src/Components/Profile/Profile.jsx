@@ -1,7 +1,6 @@
-
-import Navbar from "../Navbar"
-import Footer from "../Home/footer/Footer"
-import React, { useState, useEffect } from 'react';
+import Navbar from "../Navbar";
+import Footer from "../Home/footer/Footer";
+import React, { useState, useEffect } from "react";
 import { FaUserEdit } from "react-icons/fa";
 import { FaCamera } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
@@ -207,7 +206,7 @@ function EditModal({ userData, onSave, onClose }) {
 
 function Profile() {
   const [showEditModal, setShowEditModal] = useState(false);
-  const { auth } = useSelector((state) => state)
+  const { auth } = useSelector((state) => state);
   const dispatch = useDispatch();
   const [userData, setUserData] = useState({
     coverImage:
@@ -228,7 +227,6 @@ function Profile() {
       Website: "https://www.teclick.com",
     },
   });
-
 
   const handleEdit = () => {
     setShowEditModal(true);
@@ -256,7 +254,6 @@ function Profile() {
       reader.readAsDataURL(file);
     }
   };
-
 
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
@@ -344,7 +341,6 @@ function Profile() {
 
   const years2 = generateYearOptions2(1990, new Date().getFullYear());
 
-
   return (
     <div>
       <Navbar />
@@ -352,7 +348,6 @@ function Profile() {
       <section className="w-full p-2 border-2 shadow-lg overflow-hidden dark:bg-gray-900">
         <div className="flex flex-col">
           <FaCamera className="relative justify-end items-end" />
-
           <img
             src={userData.coverImage}
             alt="User Cover"
@@ -373,7 +368,6 @@ function Profile() {
                 }
               />
             </label>
-
             <input
               type="file"
               id="profile-image-input"
@@ -382,11 +376,10 @@ function Profile() {
               accept="image/*"
             />
             <div className="h-20 w-full bg-gray-300">
-              <h1 className="w-full ml-6 text-left my-4 sm:mx-4 xs:pl-4 text-gray-800 dark:text-white lg:text-4xl md:text-3xl sm:text-3xl xs:text-xl font-serif">
+              <h1 className="w-full  text-left my-4 sm:mx-4 xs:pl-4 text-gray-800 dark:text-white lg:text-4xl md:text-3xl sm:text-3xl xs:text-xl font-serif">
                 {userData.details.firstName} {userData.details.lastName}
               </h1>
             </div>
-
           </div>
           <div className="xl:w-[80%] lg:w-[90%] md:w-[90%] sm:w-[92%] xs:w-[90%] mx-auto flex flex-col gap-4 items-center relative lg:-top-8 md:-top-6 sm:-top-4 xs:-top-4">
             <p className="w-fit text-gray-700 dark:text-gray-400 text-md">
@@ -397,7 +390,6 @@ function Profile() {
                 <div className="w-full">
                   <dl className="text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
                     <div className="flex flex-col pb-3">
-
                       <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
                         First Name
                       </dt>
@@ -412,7 +404,6 @@ function Profile() {
                       <dd className="text-lg font-semibold">
                         {userData.details.lastName}
                       </dd>
-
                     </div>
                     <div className="flex flex-col py-3">
                       <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
@@ -451,7 +442,6 @@ function Profile() {
                       </dd>
                     </div>
                     <div className="flex flex-col pt-3">
-
                       <dt className="mb-1 text-gray-500 md:text-lg dark:text-gray-400">
                         Email
                       </dt>
@@ -466,13 +456,11 @@ function Profile() {
                       <dd className="text-lg font-semibold">
                         {userData.details.Website}
                       </dd>
-
                     </div>
                   </dl>
                 </div>
               </div>
             </div>
-
 
             {showEditModal && (
               <EditModal

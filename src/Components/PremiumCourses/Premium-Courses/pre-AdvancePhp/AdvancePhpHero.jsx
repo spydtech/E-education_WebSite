@@ -1,6 +1,16 @@
-import React from "react";
-
+// import React from "react";
+import React, { useState } from "react";
+// import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const AdvancePhpHero = () => {
+  const [courseName] = useState("Advance Php"); // Placeholder for course name
+  const [coursePrice] = useState(199);
+
+  const navigate = useNavigate();
+  const handleEnroll = () => {
+    // Navigate to the card details page with course details as parameters
+    navigate("/course-details", { state: { courseName, coursePrice } });
+  };
   return (
     <>
       {/* First Part */}
@@ -35,10 +45,10 @@ const AdvancePhpHero = () => {
 
           <div className="mt-4">
             <a
-              href="#contact"
+              onClick={handleEnroll}
               className="px-5 py-3 text-lg tracking-wider text-white bg-yellow-300 rounded-lg md:px-8 hover:bg-yellow-500 group"
             >
-              <span>Explore More</span>{" "}
+              <span>Enroll Now</span>{" "}
             </a>
           </div>
         </div>
