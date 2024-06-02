@@ -17,7 +17,7 @@ const DataScienceWithPythonCard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/course-catalog">
+              <div>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/coding-concept-illustration_114360-1673.jpg"
@@ -35,10 +35,10 @@ const DataScienceWithPythonCard = () => {
                     backgrounds.
                   </span>
                 </div>
-              </a>
+              </div>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/foundational-courses">
+              <div>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1676.jpg"
@@ -55,10 +55,10 @@ const DataScienceWithPythonCard = () => {
                     Python.
                   </span>
                 </div>
-              </a>
+              </div>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/real-world-projects">
+              <div>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/development-concept-illustration_114360-1497.jpg"
@@ -76,10 +76,10 @@ const DataScienceWithPythonCard = () => {
                     the guidance of industry experts.
                   </span>
                 </div>
-              </a>
+              </div>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/track-progress">
+              <div>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/progress-concept-illustration_114360-3983.jpg"
@@ -97,10 +97,10 @@ const DataScienceWithPythonCard = () => {
                     you advance through the courses.
                   </span>
                 </div>
-              </a>
+              </div>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/specialize">
+              <div>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/analysis-concept-illustration_114360-2119.jpg"
@@ -119,10 +119,10 @@ const DataScienceWithPythonCard = () => {
                     and career goals.
                   </span>
                 </div>
-              </a>
+              </div>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/certifications">
+              <div>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/sentiment-analysis-concept-illustration_114360-5182.jpg?t=st=1716457888~exp=1716461488~hmac=ca0d563d291cbaf977ed37e3775e0b602428036a08979aefd79e32de0de0df23&w=740"
@@ -139,7 +139,7 @@ const DataScienceWithPythonCard = () => {
                     expertise to employers and enhance your career prospects.
                   </span>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>

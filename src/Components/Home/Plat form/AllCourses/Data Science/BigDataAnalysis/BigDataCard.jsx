@@ -17,7 +17,7 @@ const BigDataCard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-1">
+              <div>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/business-people-working-laptop-development_1262-18907.jpg?t=st=1716451689~exp=1716455289~hmac=5003308bd9853a6a219cecb543ed814f050a9783c081ccc419c9373864215eaa&w=740"
@@ -34,10 +34,10 @@ const BigDataCard = () => {
                     designed to accommodate learners of all backgrounds.
                   </span>
                 </div>
-              </a>
+              </div>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-2">
+              <div >
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/professional-group-working-project_1262-19870.jpg?t=st=1716451730~exp=1716455330~hmac=fd01243d56f7ec3da7ef48d177d9989de62264b5b9f74f0b6e10b5c282f304b3&w=826"
@@ -53,10 +53,10 @@ const BigDataCard = () => {
                     algorithms, and tools essential for Big Data Analysis.
                   </span>
                 </div>
-              </a>
+              </div>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-3">
+              <div >
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/developer-activity-concept-illustration_114360-1981.jpg?t=st=1716451791~exp=1716455391~hmac=c86a92b1d63b3101ca8613e375d680aed869af3efa2c133b2a013f421f1a0905&w=740"
@@ -74,10 +74,10 @@ const BigDataCard = () => {
                     the guidance of industry experts.
                   </span>
                 </div>
-              </a>
+              </div>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-4">
+              <div>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/editorial-commission-concept-illustration_114360-7751.jpg?t=st=1716451869~exp=1716455469~hmac=246961f52c32000bb50d053509901ce96fb870fe5c681d57ad0cb52753931cd8&w=826"
@@ -95,10 +95,10 @@ const BigDataCard = () => {
                     advance through the courses.
                   </span>
                 </div>
-              </a>
+              </div>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-5">
+              <div >
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/webinar-concept-illustration_114360-4874.jpg?t=st=1716451967~exp=1716455567~hmac=5e2bd3ddcde45c8e0eb85beb1f3eccab38e00f96b1b8a610ded208a0d77a947a&w=740"
@@ -117,10 +117,10 @@ const BigDataCard = () => {
                     your interests and career goals.
                   </span>
                 </div>
-              </a>
+              </div>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-6">
+              <div>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://spacema-dev.com/elevate/assets/images/portfolio-6.png"
@@ -137,7 +137,7 @@ const BigDataCard = () => {
                     expertise to employers and enhance your career prospects.
                   </span>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
