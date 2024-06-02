@@ -37,7 +37,7 @@ const Advance_Courses = () => {
     {
       id: 1,
       title: " MERN Stack",
-      description: "Learn how to build web applications from front to back",
+   
       image:
         "https://i0.wp.com/blog.apitier.com/wp-content/uploads/2023/02/MERN_Stack.jpg?fit=560%2C315&ssl=1",
       link: "/fullStack_WebDevelopment/mean-Stack-Developer",
@@ -45,51 +45,54 @@ const Advance_Courses = () => {
     {
       id: 5,
       title: "Mastering WordPress Development",
-      description: "Gain expertise in WordPress development, from theme creation to advanced plugin development.",
+   
       image: "https://magicminds.io/wp-content/uploads/2023/12/guide-to-mastering-wordpress-development.png",
       link: "/masteringWordPressDevelopment",
     },
     {
       id: 3,
       title: "Advanced PHP Programming",
-      description: "Explore advanced PHP programming concepts and frameworks for robust web development.",
       image: "https://solman.in/wp-content/uploads/2018/12/php.jpg",
       link: "/advancedPhpProgramming",
     },
     {
       id: 4,
       title: "Java Programming Mastery",
-      description: "Become proficient in advanced Java programming for enterprise-level applications.",
+   
       image: "https://img-c.udemycdn.com/course/750x422/5638204_76bd.jpg",
       link: "/fullStack_WebDevelopment/fullStack-Java-Development",
     },
     {
       id: 6,
       title: "JavaScript for Advanced Developers",
-      description: "Enhance your JavaScript skills with advanced programming techniques for front-end and back-end development.",
+    
       image: "https://www.bluejaywebsolutions.com/sites/default/files/2021-08/javascript.jpg",
       link: "/fullStack_WebDevelopment/full-stack-javascript",
     },
-      {
-        id: 6,
-        title: "Cloud",
-        description: "Advanced AWS cloud computing course, focusing on architecture and deployment.",
-        image: "https://images.squarespace-cdn.com/content/v1/60cfd646701da4034512a1c5/1654217981309-RTSZMBJWA9YJ5V32UN8R/AWS-Cloud.png",
-        link: "/cloud-computing",
-      },
+    
       {
         id: 7,
-        title: "Cybersecurity Advanced Practices",
-        description: "Learn advanced techniques and tools for protecting systems and networks from cyber threats.",
-        image: "https://www.ggoffice.com/wp-content/uploads/2024/03/Golden-Gate-March-2024-Blog-Image-Cybersecurity.jpg",
-        link: "/Cybersecurity/cybersecurity_essentials",
+        title: "Network Security",
+        image: "https://www.logsign.com/uploads/ensuring_network_security_e34d6ce4bb.png",
+        link: "/network_security",
       },
       {
         id: 8,
         title: "Full Stack Mobile App Development",
-        description: "Learn to develop advanced mobile applications for both iOS and Android platforms.",
         image: "https://qph.cf2.quoracdn.net/main-qimg-73b9c74a99ce21c0ba7b760b8828172b",
         link: "/fullStackMobileAppDevelopment",
+      },
+      {
+        id: 9,
+        title: "ERP-Software-Development",
+        image: "https://www.tatvasoft.com/outsourcing/wp-content/uploads/2023/10/What-is-ERP-Software-Development.jpg",
+        link: "/erp-software-development",
+      },
+      {
+        id: 10,
+        title: "Power BI Development",
+        image: "https://3852769.fs1.hubspotusercontent-na1.net/hubfs/3852769/Power%20BI%20Developer%20Roles%20and%20Responsibilities%20%20Skills%20Scope%20and%20More%20Thumbnail.jpg",
+        link: "/power-bi-development",
       }
   ];
 
