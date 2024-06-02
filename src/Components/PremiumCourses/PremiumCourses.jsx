@@ -43,52 +43,65 @@ const PremiumCourses = () => {
       },
       {
         id: 2,
-        title: "Comprehensive Software Testing",
+        title: "Software Testing",
         description: "Master advanced software testing techniques and tools to ensure high-quality software delivery.",
         image: "https://www.buildoffshoreteam.com/blog/wp-content/uploads/2024/03/type-of-testing.jpg",
         link: "/software_testing",
       },
-      {
-        id: 3,
-        title: "Advanced PHP Programming",
-        description: "Explore advanced PHP programming concepts and frameworks for robust web development.",
-        image: "https://solman.in/wp-content/uploads/2018/12/php.jpg",
-        link: "/advancedPhpProgramming",
-      },
+     
       {
         id: 4,
-        title: "Java Programming Mastery",
-        description: "Become proficient in advanced Java programming for enterprise-level applications.",
-        image: "https://img-c.udemycdn.com/course/750x422/5638204_76bd.jpg",
-        link: "/fullStack_WebDevelopment/fullStack-Java-Development",
+        title: "Machine Learning with AI",
+        description: "Master Python for both front-end and back-end development",
+        image:
+          "https://www.simplilearn.com/ice9/free_resources_article_thumb/Deep-Learning-vs-Machine-Learning.jpg",
+        link: "/data_Science/machine-Learning",
       },
       {
         id: 5,
-        title: "Mastering WordPress Development",
-        description: "Gain expertise in WordPress development, from theme creation to advanced plugin development.",
-        image: "https://magicminds.io/wp-content/uploads/2023/12/guide-to-mastering-wordpress-development.png",
-        link: "/masteringWordPressDevelopment",
+        title: "DevOps Mastery",
+        description: "Learn advanced DevOps practices and tools for automating and streamlining development workflows.",
+        image: "https://s3.amazonaws.com/tf-nightingale/2023/04/How-DevOps-Mastery-Optimizes-Development-and-Operations-for-Business-Success--2.jpg",
+        link: "/fullStack_WebDevelopment/fullStack-Devops",
+      },
+      {
+        id: 8,
+        title: "Blockchain Development",
+        description: "Advanced blockchain development course covering smart contracts, Ethereum, and decentralized applications.",
+        image: "https://ideausher.com/wp-content/uploads/2022/12/Blockchain-Developer-Hire_-A-Complete-Guide-1.webp",
+        link: "/blockchain",
       },
       {
         id: 6,
-        title: "JavaScript for Advanced Developers",
-        description: "Enhance your JavaScript skills with advanced programming techniques for front-end and back-end development.",
-        image: "https://www.bluejaywebsolutions.com/sites/default/files/2021-08/javascript.jpg",
-        link: "/fullStack_WebDevelopment/full-stack-javascript",
-      }, {
+        title: "Cloud with AWS",
+        description: "Advanced AWS cloud computing course, focusing on architecture and deployment.",
+        image: "https://images.squarespace-cdn.com/content/v1/60cfd646701da4034512a1c5/1654217981309-RTSZMBJWA9YJ5V32UN8R/AWS-Cloud.png",
+        link: "/cloud-computing",
+      },
+    
+    
+      {
         id: 7,
-        title: "Advanced Data Science Techniques",
+        title: "Data Science Techniques",
         description: "Master advanced data science techniques including data mining, predictive modeling, and big data analytics.",
         image: "https://cdn.hackr.io/uploads/posts/large/1573232636UxdizR1FyX.png",
         link: "/data_Science",
       },
       {
         id: 8,
-        title: "Full Stack Mobile App Development",
-        description: "Learn to develop advanced mobile applications for both iOS and Android platforms.",
-        image: "https://qph.cf2.quoracdn.net/main-qimg-73b9c74a99ce21c0ba7b760b8828172b",
-        link: "/fullStackMobileAppDevelopment",
-      }
+        title: "Ethical Hacking",
+        description: "Master advanced data science techniques including data mining, predictive modeling, and big data analytics.",
+        image: "https://www.bugcrowd.com/wp-content/uploads/2022/05/ethical-hackers-1.jpg",
+        link: "/ethical_Hacking",
+      },
+      {
+        id: 9,
+        title: "Cyber Security",
+        description: "Master advanced data science techniques including data mining, predictive modeling, and big data analytics.",
+        image: "https://cdn.hackr.io/uploads/posts/large/1573232636UxdizR1FyX.png",
+        link: "/cyber_security",
+      },
+     
   ];
 
   const filteredCourses = courses.filter((course) =>

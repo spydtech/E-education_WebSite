@@ -44,7 +44,7 @@ const BasicCourseArray = () => {
     },
     {
       id: 2,
-      title: "Unit Testing",
+      title: "Software Testing",
       description:
         "Master JavaScript for both front-end and back-end development",
       image:
@@ -53,7 +53,7 @@ const BasicCourseArray = () => {
     },
     {
       id: 3,
-      title: "Basic Php",
+      title: " Php",
       description:
         "Explore MongoDB, Express.js, Angular, and Node.js for full-stack development",
       image:
@@ -62,7 +62,7 @@ const BasicCourseArray = () => {
     },
     {
       id: 4,
-      title: "Basic Java",
+      title: " Java",
       description: "Master Python for both front-end and back-end development",
       image:
         "https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2023_01_Untitled-design-1.jpg",
@@ -78,7 +78,7 @@ const BasicCourseArray = () => {
     },
     {
       id: 8,
-      title: "Basic JavaScript",
+      title: " JavaScript",
       description: "Explore the .NET framework for full-stack development",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYmpKizkiZ4vR50ndoXJZnBi2l2O7yj2NGw-YdjX2Jfg&s",
@@ -86,7 +86,7 @@ const BasicCourseArray = () => {
     },
     {
       id: 9,
-      title: "Basic C/C++",
+      title: " C/C++",
       description:
         "Learn DevOps practices for full-stack development environments",
       image:

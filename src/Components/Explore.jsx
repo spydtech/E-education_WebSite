@@ -9,7 +9,7 @@ function Explore() {
       <div className="flex flex-col md:flex-row gap-5 pt-5 md:p-5 overflow-y-scroll">
         <div className=" w-[250px]">
           <h1 className="shyam cursor-pointer relative font-extrabold uppercase transition-colors duration-400 ease-cubic">
-            Basic Course
+       Course
           </h1>
           <div className="pt-6 text-xs">
             <Link
