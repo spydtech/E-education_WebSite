@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Navbar from "../../../../../Navbar";
 import Footer from "../../../../footer/Footer";
 import DatavisualisationHero from "./DatavisualisationHero";
@@ -8,6 +8,9 @@ import DatavisualisationCard from "./DatavisualisationCard";
 import DatavisualisationNavigation from "./DatavisualisationAbout/DatavisualisationNavigation";
 import Datavisualisationsupersection from "./DatavisualisationAbout/Datavisualisationsupersection";
 const Datavisualisation = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

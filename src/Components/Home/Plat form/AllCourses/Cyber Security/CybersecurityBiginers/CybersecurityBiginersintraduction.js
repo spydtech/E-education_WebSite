@@ -97,7 +97,7 @@ function CybersecurityBeginnersIntroduction() {
             </div>
             <div>
               <p className="text-xl text-gray-500">
-                Brief about Automation Testing
+                Brief about Cyber Security
               </p>
             </div>
           </div>
