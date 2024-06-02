@@ -210,7 +210,7 @@ function FooterPart() {
         </div>
         <div className="mt-4 mx-auto text-center">
           <p className="text-xs text-white">
-            &copy; {new Date().getFullYear()} E-education. All rights reserved.
+            &copy; {new Date().getFullYear()} SPY D Technology . All rights reserved.
           </p>
         </div>
       </footer>

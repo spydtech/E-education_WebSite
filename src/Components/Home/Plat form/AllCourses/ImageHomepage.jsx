@@ -2,6 +2,7 @@ import React from "react";
 import img1 from "../../../../assets/imgstudents.png";
 import img2 from "../../../../assets/img2students.png";
 import img3 from "../../../../assets/img3students.png";
+import { Link } from "react-router-dom";
 const ImageHomePage = () => {
   return (
     <div className="flex flex-col font-lora">
@@ -65,7 +66,9 @@ const ImageHomePage = () => {
       {/* Button */}
       <div className="flex justify-center my-8">
         <button className="bg-blue-500 w-72 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <Link to = "/pricing">
           I want to Code
+        </Link>
         </button>
       </div>
     </div>

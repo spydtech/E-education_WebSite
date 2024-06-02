@@ -6,53 +6,62 @@ import { Link } from "react-router-dom";
 const courses = [
   {
     title: "Generative AI in Practice",
+    description: "Practical generative AI applications",
     bgColor: "bg-blue-300",
     icon: <FaBrain className="text-blue-800" />,
     link: "/data_Science/machine-Learning"
   },
   {
     title: "Web Development",
+    description: "Build dynamic, responsive websites",
     bgColor: "bg-green-300",
     icon: <FaCode className="text-green-800" />,
     link: "/fullStack_WebDevelopment"
   },
   {
     title: "Data Science Fundamentals",
+    description: "Introduction to data science concepts",
     bgColor: "bg-purple-300",
     icon: <FaDatabase className="text-purple-800" />,
     link: "/data_Science/introduction-to-data-science"
   },
   {
     title: "React.js Mastery",
+    description: "Master React.js for web development",
     bgColor: "bg-yellow-300",
     icon: <FaReact className="text-yellow-800" />,
     link: "/reactjs"
   },
   {
     title: "Python Programming",
+    description: "Learn Python for various applications",
     bgColor: "bg-red-300",
     icon: <FaPython className="text-red-800" />,
     link: "/fullStack_WebDevelopment/fullStack-Python-Development"
   },
   {
     title: "JavaScript Essentials",
+    description: "Essential JavaScript programming skills",
     bgColor: "bg-indigo-300",
     icon: <FaJs className="text-indigo-800" />,
     link: "/fullStack_WebDevelopment/full-stack-javascript"
   },
   {
     title: "Machine Learning Algorithms",
+    description: "Study machine learning algorithms",
     bgColor: "bg-pink-300",
     icon: <FaBrain className="text-pink-800" />,
     link: "/data_Science/machine-Learning"
   },
   {
     title: "Software Testing",
+    description: "Techniques for effective software testing",
     bgColor: "bg-orange-300",
     icon: <FaDatabase className="text-orange-800" />,
     link: "/software_testing"
   },
 ];
+
 
 
 export default function EducationCarousel() {
@@ -103,7 +112,7 @@ export default function EducationCarousel() {
           </div>
             <h2 className="text-xl font-semibold mb-2">{course.title}</h2>
             <p className="text-gray-800">
-              Learn and master {course.title.toLowerCase()}!
+             {course.description}!
             </p>
           </Link>
         ))}
