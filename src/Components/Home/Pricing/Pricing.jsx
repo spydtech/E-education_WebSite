@@ -19,7 +19,7 @@ function Pricing() {
           </p>
           <div class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {/* <!-- First Course --> */}
-            <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10 hover:shadow-2xl hover:border hover:border-green-800">
+            <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10 hover:shadow-xl hover:ring-2 hover:ring-indigo-500 hover:scale-105 duration-100">
               <div class="flex items-center justify-between gap-x-4">
                 <h2
                   id="Course1"
@@ -151,7 +151,7 @@ function Pricing() {
             </div>
 
             {/* <!-- Second Course --> */}
-            <div class="bg-white/5 ring-2 ring-indigo-500 rounded-3xl p-8 xl:p-10">
+            <div class="bg-white/5 ring-2 ring-indigo-500 rounded-3xl p-8 xl:p-10 hover:scale-105 duration-100">
               <div class="flex items-baseline justify-between gap-x-4">
                 <h2
                   id="Course2"
@@ -352,7 +352,7 @@ function Pricing() {
             </div>
 
             {/* <!-- Third Course --> */}
-            <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10">
+            <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10 hover:ring-2 hover:ring-indigo-500 hover:scale-105 duration-100">
               <div class="flex items-center justify-between gap-x-4">
                 <h2
                   id="Course3"

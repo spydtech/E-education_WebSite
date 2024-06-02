@@ -6,7 +6,7 @@ const Card = ({id,data,currentId,setCurrentId}) => {
   const changeId = (id)=>{
     let out = 'h-[250px] lg:w-[500px] w-[340px] rounded-md shadow-lg ';
     if(id===currentId){
-      out += 'bg-blue-500 text-white absolute md:-top-[50px] md:scale-[1.12] -top-[25px] left-[50%] -translate-x-[50%] z-20 ';
+      out += 'bg-[#4cc9f0] text-white absolute md:-top-[50px] md:scale-[1.12] -top-[25px] left-[50%] -translate-x-[50%] z-20 ';
     }else if(id<(currentId)){
       out += 'bg-white absolute top-0 left-[25%] -translate-x-[50%] ';
       if(id===(currentId-1)){

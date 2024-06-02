@@ -1,133 +1,66 @@
-// export const newdata = [
-//   {
-//     name: "Alice Johnson",
-//     rating: 4.5,
-//     occupation: "Software Developer",
-//     comment:
-//       "The E-education platform offers an extensive range of programming courses. It's transformed my learning experience, enhancing my skills and productivity. Well done to the E-education team!",
-//     image_url: "https://randomuser.me/api/portraits/women/1.jpg",
-//   },
-//   {
-//     name: "Bob Smith",
-//     rating: 5,
-//     occupation: "Graphic Designer",
-//     comment:
-//       "I'm impressed with the E-education courses in graphic design. The content is engaging and practical, fueling my creativity. I highly recommend this platform for designers!",
-//     image_url: "https://randomuser.me/api/portraits/men/2.jpg",
-//   },
-//   {
-//     name: "Charlie Brown",
-//     rating: 4,
-//     occupation: "Marketing Specialist",
-//     comment:
-//       "E-education's marketing courses are invaluable for our campaigns. The insights gained have simplified our strategies and boosted our results. Keep up the great work!",
-//     image_url: "https://randomuser.me/api/portraits/men/3.jpg",
-//   },
-//   {
-//     name: "Diana Martinez",
-//     rating: 4.8,
-//     occupation: "Fitness Instructor",
-//     comment:
-//       "As a fitness instructor, I rely on E-education's courses for tailored fitness programs. The platform helps me track progress and offer personalized workouts to my clients. A fantastic resource for health and wellness!",
-//     image_url: "https://randomuser.me/api/portraits/women/4.jpg",
-//   },
-//   {
-//     name: "Emily Wilson",
-//     rating: 4.2,
-//     occupation: "Data Scientist",
-//     comment:
-//       "E-education simplifies complex data analysis with its comprehensive courses. It's indispensable for data scientists and analysts. The intuitive learning interface is a huge plus!",
-//     image_url: "https://randomuser.me/api/portraits/women/5.jpg",
-//   },
-//   {
-//     name: "George Turner",
-//     rating: 3.7,
-//     occupation: "Product Manager",
-//     comment:
-//       "The versatility of E-education's courses caters perfectly to my project management needs. It's an essential asset for streamlining workflows and enhancing productivity. Excellent job!",
-//     image_url: "https://randomuser.me/api/portraits/men/6.jpg",
-//   },
-//   {
-//     name: "Isabel Garcia",
-//     rating: 4.9,
-//     occupation: "UX Designer",
-//     comment:
-//       "The E-education platform embodies outstanding user experience principles. It's evident that the courses are crafted with a deep understanding of design principles. A pleasure to learn from!",
-//     image_url: "https://randomuser.me/api/portraits/women/7.jpg",
-//   },
-//   {
-//     name: "Jake Miller",
-//     rating: 4.1,
-//     occupation: "Entrepreneur",
-//     comment:
-//       "E-education's courses are indispensable for efficient project management in my business. It's a valuable addition to my entrepreneurial toolkit. Highly recommended!",
-//     image_url: "https://randomuser.me/api/portraits/men/8.jpg",
-//   },
-// ];
-
 export const newdata = [
   {
-    name: "Ananya Gupta",
+    name: "Ashwini Sharma",
     rating: 4.5,
     occupation: "Software Developer",
     comment:
-      "The E-education platform offers an extensive range of programming courses. It's transformed my learning experience, enhancing my skills and productivity. Well done to the E-education team!",
+      "The E-education platform offers an extensive range of programming courses. It's transformed my coding skills and boosted my productivity. Well done to the E-education team!",
     image_url: "https://randomuser.me/api/portraits/women/1.jpg",
   },
   {
-    name: "Aarav Patel",
+    name: "Ratna Priya",
     rating: 5,
-    occupation: "Graphic Designer",
+    occupation: "Web Developer",
     comment:
-      "I'm impressed with the E-education courses in graphic design. The content is engaging and practical, fueling my creativity. I highly recommend this platform for designers!",
-    image_url: "https://randomuser.me/api/portraits/men/2.jpg",
+      "I'm impressed with the E-education courses in web design and development. The content is engaging and practical, fueling my creativity and improving my projects. I highly recommend this platform for web developers!",
+    image_url: "https://randomuser.me/api/portraits/women/2.jpg",
   },
   {
-    name: "Aditi Sharma",
+    name: "Raghavendra Kommula",
     rating: 4,
-    occupation: "Marketing Specialist",
+    occupation: "Reactjs Developer",
     comment:
-      "E-education's marketing courses are invaluable for our campaigns. The insights gained have simplified our strategies and boosted our results. Keep up the great work!",
+      "E-education's courses on React.js have been invaluable for my projects. The insights gained have simplified my coding strategies and improved my development efficiency. Keep up the great work!",
     image_url: "https://randomuser.me/api/portraits/men/3.jpg",
   },
   {
-    name: "Devesh Singh",
+    name: "Ganesh Nitta",
     rating: 4.8,
-    occupation: "Fitness Instructor",
+    occupation: "Full Stack Developer",
     comment:
-      "As a fitness instructor, I rely on E-education's courses for tailored fitness programs. The platform helps me track progress and offer personalized workouts to my clients. A fantastic resource for health and wellness!",
-    image_url: "https://randomuser.me/api/portraits/women/4.jpg",
+      "As a Full Stack Developer, I rely on E-education's courses for comprehensive learning in both front-end and back-end technologies. The platform helps me stay updated and improve my skills. A fantastic resource for developers!",
+    image_url: "https://randomuser.me/api/portraits/men/4.jpg",
   },
   {
-    name: "Esha Gupta",
+    name: "Shyam Chiluveru",
     rating: 4.2,
-    occupation: "Data Scientist",
+    occupation: "MERN Stack Developer",
     comment:
-      "E-education simplifies complex data analysis with its comprehensive courses. It's indispensable for data scientists and analysts. The intuitive learning interface is a huge plus!",
-    image_url: "https://randomuser.me/api/portraits/women/5.jpg",
+      "E-education simplifies complex concepts in MERN stack development with its comprehensive courses. It's indispensable for developers working with MongoDB, Express, React, and Node.js. The intuitive learning interface is a huge plus!",
+    image_url: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
-    name: "Girish Kumar",
+    name: "PavanKumar Velagana",
     rating: 3.7,
-    occupation: "Product Manager",
+    occupation: "Java Developer",
     comment:
-      "The versatility of E-education's courses caters perfectly to my project management needs. It's an essential asset for streamlining workflows and enhancing productivity. Excellent job!",
+      "The versatility of E-education's courses in Java programming caters perfectly to my development needs. It's an essential asset for streamlining my coding workflow and enhancing productivity. Excellent job!",
     image_url: "https://randomuser.me/api/portraits/men/6.jpg",
   },
   {
-    name: "Ishita Desai",
+    name: "Pandi Manipriya",
     rating: 4.9,
-    occupation: "UX Designer",
+    occupation: "UI/UX Designer",
     comment:
-      "The E-education platform embodies outstanding user experience principles. It's evident that the courses are crafted with a deep understanding of design principles. A pleasure to learn from!",
+      "The E-education platform embodies outstanding user experience principles. The design courses are crafted with a deep understanding of UX/UI principles, making it a pleasure to learn and apply these concepts!",
     image_url: "https://randomuser.me/api/portraits/women/7.jpg",
   },
   {
-    name: "Jay Shah",
+    name: "Tharun Mendi",
     rating: 4.1,
-    occupation: "Entrepreneur",
+    occupation: "Ethical Hacker",
     comment:
-      "E-education's courses are indispensable for efficient project management in my business. It's a valuable addition to my entrepreneurial toolkit. Highly recommended!",
+      "E-education's cybersecurity courses are indispensable for enhancing my ethical hacking skills. It's a valuable addition to my toolkit, providing practical insights and strategies for effective cybersecurity practices. Highly recommended!",
     image_url: "https://randomuser.me/api/portraits/men/8.jpg",
   },
 ];
