@@ -1,14 +1,13 @@
-
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import CybersecurityNavigation from "./CyberSecurityBiginersNavigation"
+import CybersecurityNavigation from "./CyberSecurityBiginersNavigation";
 import Navbar from "../../../../../Navbar";
 import FooterPart from "../../../../footer/Footer";
 
 const CybersecurityBeginners = () => {
   const [courseName] = useState("Cyber Security for Beginners"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(34999);
 
   const navigate = useNavigate();
   const handleEnroll = () => {

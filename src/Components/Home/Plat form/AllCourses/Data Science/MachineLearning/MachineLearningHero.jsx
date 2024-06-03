@@ -3,8 +3,8 @@ import React, { useState } from "react";
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const MachineLearningHero = () => {
-  const [courseName] = useState("Machine Learning"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [courseName] = useState("Machine Learning With AI"); // Placeholder for course name
+  const [coursePrice] = useState(34999);
   const navigate = useNavigate();
 
   const handleEnroll = () => {
