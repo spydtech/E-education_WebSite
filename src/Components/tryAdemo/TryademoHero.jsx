@@ -17,7 +17,7 @@ const TryademoHero = () => {
           />
         </div>
         <div className="video-content space-y-2 z-10 flex justify-center items-center flex-col">
-          <div className="font-bold text-6xl">Discover Your Future in Tech</div>
+          <div className="font-bold text-xl md:text-6xl">Discover Your Future in E-education</div>
           <div className="font-light text-3xl">Join Our Interactive Demo</div>
           <div className="font-light text-xl w-[600px]">
             Step into the world of technology with our hands-on demo. Explore the
