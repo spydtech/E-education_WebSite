@@ -9,7 +9,7 @@ function Explore() {
       <div className="flex flex-col md:flex-row gap-5 pt-5 md:p-5 overflow-y-scroll">
         <div className=" w-[250px]">
           <h1 className="shyam cursor-pointer relative font-extrabold uppercase transition-colors duration-400 ease-cubic">
-       Course
+            Course
           </h1>
           <div className="pt-6 text-xs">
             <Link
@@ -32,7 +32,7 @@ function Explore() {
               to="/php"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Basic Php
+              Php
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -40,7 +40,7 @@ function Explore() {
               to="/java"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Basic Java
+              Java
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -56,7 +56,7 @@ function Explore() {
               to="/javaScript"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Basic JavaScript
+              JavaScript
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -64,7 +64,7 @@ function Explore() {
               to="/c_c++"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Basic C/C++
+              C/C++
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -143,18 +143,18 @@ function Explore() {
           </div>
           <div className="pt-6 text-xs">
             <Link
-              to="/erp-software-development"
+              to="/erp"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-             ERP-Software-Development
+              ERP-Software-Development
             </Link>
           </div>
           <div className="pt-6 text-xs">
             <Link
-              to="/power-bi-development"
+              to="/power-bi"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-            Power BI Development
+              Power BI Development
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -219,7 +219,7 @@ function Explore() {
               to="/ethical_Hacking"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-             Ethical Hacking
+              Ethical Hacking
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -230,13 +230,13 @@ function Explore() {
               Blockchain Development
             </Link>
           </div>
-      
+
           <div className="pt-6 text-xs">
             <Link
               to="/cyber_security"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-            Cyber Security
+              Cyber Security
             </Link>
           </div>
           <style jsx>{`

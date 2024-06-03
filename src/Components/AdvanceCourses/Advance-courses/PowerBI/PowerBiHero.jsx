@@ -1,11 +1,9 @@
-// import React from "react";
 import React, { useState } from "react";
-// import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const CloudComputingHero = () => {
-  const [courseName] = useState("Cloud with AWS"); // Placeholder for course name
-  const [coursePrice] = useState(34999);
+const PowerBiHero = () => {
+  const [courseName] = useState("Master Power BI"); // Placeholder for course name
+  const [coursePrice] = useState(14999);
 
   const navigate = useNavigate();
   const handleEnroll = () => {
@@ -16,13 +14,11 @@ const CloudComputingHero = () => {
   return (
     <>
       {/* First Part */}
-
       <div>
         <img
-          // src="https://media.licdn.com/dms/image/D5612AQGVaF1lK4mV-Q/article-cover_image-shrink_720_1280/0/1681193711231?e=2147483647&v=beta&t=1ZBlS59zaFVhdt5uL-vJvg6p21J8Wg5FHDA3dT4eOuo"
-          src="https://cdn.wallpapersafari.com/16/90/ZAQ7sP.png"
+          src="https://www.igmguru.com/blog/wp-content/uploads/2023/05/Power-BI.jpg"
           className="w-full object-cover md:h-[500px]"
-          alt="Cloud Computing with AWS"
+          alt="Master Power BI"
         />
       </div>
 
@@ -33,14 +29,14 @@ const CloudComputingHero = () => {
       >
         <div className="pr-2 md:mb-14 py-14 font-lora md:py-0">
           <h1 className="text-3xl font-semibold text-[#072ac8] xl:text-5xl lg:text-3xl">
-            <span className="block w-full">Master Cloud Computing</span> with
-            AWS!
+            <span className="block w-full">Master Data Visualization</span> with
+            Power BI!
           </h1>
           <p className="py-4 text-lg text-gray-500 2xl:py-8 md:py-6 2xl:pr-5">
-            Learn how to leverage the power of Amazon Web Services to build
-            scalable, reliable, and secure cloud solutions. Our comprehensive
-            course will guide you through the essential services and best
-            practices for cloud computing with AWS...
+            Learn how to leverage the power of Power BI to create stunning data
+            visualizations and insightful reports. Our comprehensive course will
+            guide you through the essential features and best practices for data
+            analysis and visualization with Power BI...
           </p>
 
           <div className="mt-4">
@@ -56,8 +52,8 @@ const CloudComputingHero = () => {
           <img
             id="heroImg1"
             className="transition-all duration-300 ease-in-out hover:scale-105 lg:w-full sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0"
-            src="https://img.freepik.com/premium-vector/flat-concept-isometric-illustration-web-server-cloud-security_18660-3186.jpg?w=740"
-            alt="Cloud Computing with AWS"
+            src="https://img.freepik.com/premium-vector/business-analysis-composition_98292-11507.jpg?w=900"
+            alt="Master Power BI"
             width={500}
             height={488}
           />
@@ -69,4 +65,4 @@ const CloudComputingHero = () => {
   );
 };
 
-export default CloudComputingHero;
+export default PowerBiHero;

@@ -94,6 +94,17 @@ import PreAdvancePhp from "./Components/PremiumCourses/Premium-Courses/pre-Advan
 import PreWordPress from "./Components/PremiumCourses/Premium-Courses/pre-Wordpress/AdvancewordpressFundamentals";
 import Pricing2 from "./Components/Home/Pricing/Pricing2";
 import Java from "./Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava";
+import PowerBi from "./Components/AdvanceCourses/Advance-courses/PowerBI/PowerBi";
+import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ERP";
+// import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
+// import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
+// import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
+// import C_Cplus from "./Components/BasicCourse/BasicAllCourses/Basic_C&C++/BasicC_Cplus";
+// import GoogleCalender from "./Components/Profile/Calendar Sync/GoogleCalendar";
+// import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
+// import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
+// import CourseDetails from "./Components/CourseDetails/CourseDetails";
+
 function App() {
   return (
     <div>
@@ -342,6 +353,8 @@ function App() {
           <Route path="/advance-php" element={<AdvancePhp />} />
           <Route path="/blockchain" element={<BlockChain />} />
           <Route path="/cloud-computing" element={<CloudComputing />} />
+          <Route path="/power-bi" element={<PowerBi />} />
+          <Route path="/erp" element={<ERP />} />
           {/* Premium Courses */}
           <Route path="/premium-courses" element={<PremiumCourses />} />
           <Route

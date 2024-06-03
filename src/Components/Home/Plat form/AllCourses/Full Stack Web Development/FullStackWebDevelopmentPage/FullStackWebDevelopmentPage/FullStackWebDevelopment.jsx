@@ -70,7 +70,7 @@ const ParticularFullStack = () => {
             onClick={handleEnroll}
             className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95"
           >
-            Eroll Now
+            Enroll Now
           </button>
           <div className="py-4">11,095 already enrolled</div>
         </div>
