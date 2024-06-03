@@ -16,7 +16,7 @@ const PowerBiHero = () => {
       {/* First Part */}
       <div>
         <img
-          src="https://www.igmguru.com/blog/wp-content/uploads/2023/05/Power-BI.jpg"
+          src="https://www.ignitho.com/wp-content/uploads/2023/07/Power-BI_blog.jpg"
           className="w-full object-cover md:h-[500px]"
           alt="Master Power BI"
         />
