@@ -178,7 +178,7 @@ const TryADemoCard = () => {
                 <div className="mt-8">
                   <Link
                     to="/advance-courses"
-                    className="inline-block w-full rounded-lg bg-gray-900 px-4 py-4 text-center text-sm font-semibold leading-5 text-black shadow-md hover:bg-black hover:text-gray-900 hover:ring-gray-900 hover:ring"
+                    className="inline-block w-full rounded-lg bg-gray-900 px-4 py-4 text-center text-sm font-semibold leading-5 text-white shadow-md hover:bg-black hover:text-gray-900 hover:ring-gray-900 hover:ring"
                     aria-describedby="tier-team"
                   >
                     Get started today
@@ -376,7 +376,7 @@ const TryADemoCard = () => {
                 <div className="mt-8">
                   <Link
                     to="/premium-courses"
-                    className="inline-block w-full rounded-lg bg-gray-900 px-4 py-4 text-center text-sm font-semibold leading-5 text-black shadow-md hover:bg-black hover:text-gray-900 hover:ring-gray-900 hover:ring"
+                    className="inline-block w-full rounded-lg bg-gray-900 px-4 py-4 text-center text-sm font-semibold leading-5 text-white shadow-md hover:bg-black hover:text-gray-900 hover:ring-gray-900 hover:ring"
                     aria-describedby="tier-team"
                   >
                     Get started today
