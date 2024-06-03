@@ -25,11 +25,9 @@ const SignUp = () => {
   });
   const inputRefs = useRef([]); // State for showing OTP modal
 
-
-
-
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
   const [error, setError] = useState('');
+  const [otpSent, setOtpSent] = useState(false);
   // const [showOtpModal, setShowOtpModal] = useState(false); // State for showing OTP modal
   useEffect(() => {
     if (jwt) {
@@ -49,6 +47,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(register(userData));
+    setOtpSent(true);
   };
 
   const handleOTPEnter = (e, index) => {
@@ -165,12 +164,8 @@ const SignUp = () => {
                   {registrationStatus === 'failure' && registrationError && (
                     <div className="mt-6 text-center text-red-500">{registrationError}</div>
                   )}
-                  {/* <Modal
-                    isOpen={showOtpModal}
-                    onRequestClose={() => setShowOtpModal(false)}
-                    className="modal"
-                    overlayClassName="modal-overlay"
-                  > */}
+                </form>
+                {otpSent && (
                   <div className="modal-content">
                     <div className="mt-4">
                       <p>Enter OTP:</p>
@@ -183,12 +178,9 @@ const SignUp = () => {
                           value={otp[index] || ''}
                           onChange={(e) => handleOTPEnter(e, index)}
                           ref={(el) => (inputRefs.current[index] = el)}
-                        // Limit to 6 characters
-
                         />
                       ))}
                     </div>
-
                     <button
                       onClick={handleOtpVerification}
                       className="w-full bg-blue-500 text-white p-2 mt-4 rounded"
@@ -198,12 +190,7 @@ const SignUp = () => {
                     {/* OTP verification error */}
                     {error && <div className="mt-2 text-red-500">{error}</div>}
                   </div>
-                  {/* </Modal> */}
-                  {/* Error message */}
-                  {registrationStatus === 'failure' && registrationError && (
-                    <div className="mt-6 text-center text-red-500">{registrationError}</div>
-                  )}
-                </form>
+                )}
 
 
                 <div className='flex flex-col mt-4 items-center justify-center text-sm'>
