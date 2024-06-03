@@ -96,6 +96,7 @@ import Pricing2 from "./Components/Home/Pricing/Pricing2";
 import Java from "./Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava";
 import PowerBi from "./Components/AdvanceCourses/Advance-courses/PowerBI/PowerBi";
 import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ERP";
+import TryADemo from './Components/tryAdemo/TryADemo'
 // import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 // import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 // import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
@@ -112,6 +113,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about_us" element={<AboutUs />} />
+          <Route path="/try-a-demo" element={<TryADemo />} />
           <Route path="/pricing" element={<Pricing2 />} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
