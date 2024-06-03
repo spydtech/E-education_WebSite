@@ -4,8 +4,8 @@ import React, { useState } from "react";
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
 function AdvancePhpFoot() {
-  const [courseName] = useState("Advance Php"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [courseName] = useState("Master Advance Php"); // Placeholder for course name
+  const [coursePrice] = useState(34999);
 
   const navigate = useNavigate();
   const handleEnroll = () => {
