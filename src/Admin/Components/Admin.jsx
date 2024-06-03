@@ -34,7 +34,7 @@ const Admin = () => {
                 flexDirection: "column",
                 justifyContent: "space-between",
                 height: "100vh",
-                width: "280px", // Increase the width of the sidebar
+                width: "280px", // Width for large screens
             }}
             className="bg-gray-800 text-white"
         >
@@ -70,7 +70,7 @@ const Admin = () => {
     return (
         <div className="flex h-screen">
             <CssBaseline />
-            <div className={`bg-gray-900 text-white ${drawerVariant === 'temporary' && !sideBarVisible ? '-ml-64' : 'w-64'}`}>
+            <div className={`bg-gray-900 text-white ${drawerVariant === 'temporary' && !sideBarVisible ? '-left-64' : 'w-64'}`}>
                 {drawer}
             </div>
             <div className="flex-grow h-screen overflow-auto">
