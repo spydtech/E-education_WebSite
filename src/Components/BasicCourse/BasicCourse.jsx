@@ -37,33 +37,27 @@ const BasicCourseArray = () => {
     {
       id: 1,
       title: " Web Development",
-      description: "Learn how to build web applications from front to back",
       image:
         "https://media.geeksforgeeks.org/wp-content/uploads/20231205165904/web-development-image.webp",
       link: "/fullStack_WebDevelopment/fullStack-Web-Development",
     },
     {
       id: 2,
-      title: "Unit Testing",
-      description:
-        "Master JavaScript for both front-end and back-end development",
+      title: "Software Testing",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw3wuCZOCBggFb3RK8AGPGGQagsocutNezBfghSNLrdg&s",
-      link: "/software-testing/unit-testing",
+      link: "/software-testing",
     },
     {
       id: 3,
-      title: "Basic Php",
-      description:
-        "Explore MongoDB, Express.js, Angular, and Node.js for full-stack development",
+      title: " Php",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUlEZMH3R-k_ZreGPfhhNKcNisvEIJ1cJW4S5iBz0bbg&s",
       link: "/php",
     },
     {
       id: 4,
-      title: "Basic Java",
-      description: "Master Python for both front-end and back-end development",
+      title: " Java",
       image:
         "https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2023_01_Untitled-design-1.jpg",
       link: "/java",
@@ -71,24 +65,20 @@ const BasicCourseArray = () => {
     {
       id: 5,
       title: "Wordpress",
-      description: "Explore Java for building full-stack applications",
       image:
         "https://i.ytimg.com/vi/71EZb94AS1k/maxresdefault.jpg",
       link: "/wordpress",
     },
     {
       id: 8,
-      title: "Basic JavaScript",
-      description: "Explore the .NET framework for full-stack development",
+      title: " JavaScript",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYmpKizkiZ4vR50ndoXJZnBi2l2O7yj2NGw-YdjX2Jfg&s",
       link: "/javaScript",
     },
     {
       id: 9,
-      title: "Basic C/C++",
-      description:
-        "Learn DevOps practices for full-stack development environments",
+      title: " C/C++",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvhwX49W-oHzQ9SNKqBuslHTLFfoCuhXGDhZXBzxpcUg&s",
       link: "/c_c++",
@@ -96,7 +86,6 @@ const BasicCourseArray = () => {
     {
       id: 10,
       title: "UI/UX Design",
-      description: "Master the art of UI/UX Design",
       image: "https://miro.medium.com/v2/resize:fit:1100/1*4Fl8H1Q_ZvhDoSSRBFmPhw.png",
       link: "/ui_ux_design",
     }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Boy1 from "./Home/Boy1";
-
+import { Link } from "react-router-dom";
 function Main() {
   return (
     <>
@@ -24,20 +24,20 @@ function Main() {
               {/* <!-- Button Section --> */}
               <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div class="rounded-md shadow">
-                  <a
-                    href="#"
+                  <Link
+                    to="/pricing"
                     class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#2A063D] hover:bg-gray-600 md:py-4 md:text-lg md:px-10"
                   >
                     Get started
-                  </a>
+                  </Link>
                 </div>
                 <div class="mt-3 sm:mt-0 sm:ml-3">
-                  <a
-                    href="#"
+                  <Link
+                    to="/tryDemo"
                     class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-800 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
                   >
-                    Live demo
-                  </a>
+                    Try demo
+                  </Link>
                 </div>
               </div>
               {/* <!-- End of Button Section --> */}

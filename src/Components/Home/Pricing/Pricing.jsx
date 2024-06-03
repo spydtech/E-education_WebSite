@@ -19,7 +19,7 @@ function Pricing() {
           </p>
           <div class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {/* <!-- First Course --> */}
-            <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10">
+            <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10 hover:shadow-xl hover:ring-2 hover:ring-indigo-500 hover:scale-105 duration-100">
               <div class="flex items-center justify-between gap-x-4">
                 <h2
                   id="Course1"
@@ -121,6 +121,22 @@ function Pricing() {
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     aria-hidden="true"
+                    class="h-6 w-5 flex-none text-white"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Resume preparation
+                </li>
+                <li class="flex gap-x-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
                     class="h-6 w-lex-none text-white"
                   >
                     <path
@@ -135,7 +151,7 @@ function Pricing() {
             </div>
 
             {/* <!-- Second Course --> */}
-            <div class="bg-white/5 ring-2 ring-indigo-500 rounded-3xl p-8 xl:p-10">
+            <div class="bg-white/5 ring-2 ring-indigo-500 rounded-3xl p-8 xl:p-10 hover:scale-105 duration-100">
               <div class="flex items-baseline justify-between gap-x-4">
                 <h2
                   id="Course2"
@@ -336,7 +352,7 @@ function Pricing() {
             </div>
 
             {/* <!-- Third Course --> */}
-            <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10">
+            <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10 hover:ring-2 hover:ring-indigo-500 hover:scale-105 duration-100">
               <div class="flex items-center justify-between gap-x-4">
                 <h2
                   id="Course3"

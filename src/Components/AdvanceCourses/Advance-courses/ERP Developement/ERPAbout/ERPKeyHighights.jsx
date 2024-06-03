@@ -127,7 +127,7 @@ function ERPKeyHighights() {
     <>
       <div
         id="main"
-        className=" md:lg:xl:px-20  bg-gradient-to-br  from-[#04e761] to-[#00916e]"
+        className=" md:lg:xl:px-20  bg-gradient-to-br to-[#0a0908] from-[#272640]"
       >
         <div id="subdiv1" className="pt-4 font-lora">
           <div id="h1" className="">
@@ -139,7 +139,7 @@ function ERPKeyHighights() {
             id="h2"
             className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
           >
-            <p className="text-5xl font-bold ">What does this</p>
+            <p className="text-5xl font-bold text-white ">What does this</p>
             <p className="text-5xl font-bold text-[#072ac8] inline">
               Course have to offer?
             </p>

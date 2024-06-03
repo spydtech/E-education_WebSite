@@ -37,66 +37,69 @@ const Advance_Courses = () => {
     {
       id: 1,
       title: " MERN Stack",
-      description: "Learn how to build web applications from front to back",
+
       image:
         "https://i0.wp.com/blog.apitier.com/wp-content/uploads/2023/02/MERN_Stack.jpg?fit=560%2C315&ssl=1",
       link: "/fullStack_WebDevelopment/mean-Stack-Developer",
     },
     {
-      id: 2,
-      title: "Advance Java",
-      description:
-        "Master JavaScript for both front-end and back-end development",
+      id: 5,
+      title: "Mastering WordPress Development",
+
       image:
-        "https://media.geeksforgeeks.org/wp-content/uploads/20230823152056/What-is-Advance-JAVA.png",
-      link: "/fullStack_WebDevelopment/fullStack-Java-Development",
+        "https://magicminds.io/wp-content/uploads/2023/12/guide-to-mastering-wordpress-development.png",
+      link: "/masteringWordPressDevelopment",
     },
     {
       id: 3,
-      title: "Advance Php",
-      description:
-        "Explore MongoDB, Express.js, Angular, and Node.js for full-stack development",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM_-_y91ofGI7yjop5oRlM1uL1hA5r1hJ40Ld6oyN1bw&s",
-      link: "/advance-php",
+      title: "Advanced PHP Programming",
+      image: "https://solman.in/wp-content/uploads/2018/12/php.jpg",
+      link: "/advancedPhpProgramming",
     },
     {
       id: 4,
-      title: "Machine Learning with AI",
-      description: "Master Python for both front-end and back-end development",
-      image:
-        "https://www.simplilearn.com/ice9/free_resources_article_thumb/Deep-Learning-vs-Machine-Learning.jpg",
-      link: "/data_Science/machine-Learning",
+      title: "Java Programming Mastery",
+
+      image: "https://img-c.udemycdn.com/course/750x422/5638204_76bd.jpg",
+      link: "/fullStack_WebDevelopment/fullStack-Java-Development",
     },
     {
-        id: 5,
-        title: "DevOps Mastery",
-        description: "Learn advanced DevOps practices and tools for automating and streamlining development workflows.",
-        image: "https://s3.amazonaws.com/tf-nightingale/2023/04/How-DevOps-Mastery-Optimizes-Development-and-Operations-for-Business-Success--2.jpg",
-        link: "/fullStack_WebDevelopment/fullStack-Devops",
-      },
-  
-      {
-        id: 6,
-        title: "Cloud Computing with AWS",
-        description: "Advanced AWS cloud computing course, focusing on architecture and deployment.",
-        image: "https://images.squarespace-cdn.com/content/v1/60cfd646701da4034512a1c5/1654217981309-RTSZMBJWA9YJ5V32UN8R/AWS-Cloud.png",
-        link: "/cloud-computing",
-      },
-      {
-        id: 7,
-        title: "Cybersecurity Advanced Practices",
-        description: "Learn advanced techniques and tools for protecting systems and networks from cyber threats.",
-        image: "https://www.ggoffice.com/wp-content/uploads/2024/03/Golden-Gate-March-2024-Blog-Image-Cybersecurity.jpg",
-        link: "/Cybersecurity/cybersecurity_essentials",
-      },
-      {
-        id: 8,
-        title: "Blockchain Development",
-        description: "Advanced blockchain development course covering smart contracts, Ethereum, and decentralized applications.",
-        image: "https://ideausher.com/wp-content/uploads/2022/12/Blockchain-Developer-Hire_-A-Complete-Guide-1.webp",
-        link: "/blockchain",
-      }
+      id: 6,
+      title: "JavaScript for Advanced Developers",
+
+      image:
+        "https://www.bluejaywebsolutions.com/sites/default/files/2021-08/javascript.jpg",
+      link: "/fullStack_WebDevelopment/full-stack-javascript",
+    },
+
+    {
+      id: 7,
+      title: "Network Security",
+      image:
+        "https://www.logsign.com/uploads/ensuring_network_security_e34d6ce4bb.png",
+      link: "/network_security",
+    },
+    {
+      id: 8,
+      title: "Full Stack Mobile App Development",
+      image:
+        "https://qph.cf2.quoracdn.net/main-qimg-73b9c74a99ce21c0ba7b760b8828172b",
+      link: "/fullStackMobileAppDevelopment",
+    },
+    {
+      id: 9,
+      title: "ERP-Software-Development",
+      image:
+        "https://www.tatvasoft.com/outsourcing/wp-content/uploads/2023/10/What-is-ERP-Software-Development.jpg",
+      link: "/erp",
+    },
+    {
+      id: 10,
+      title: "Power BI Development",
+      image:
+        "https://3852769.fs1.hubspotusercontent-na1.net/hubfs/3852769/Power%20BI%20Developer%20Roles%20and%20Responsibilities%20%20Skills%20Scope%20and%20More%20Thumbnail.jpg",
+      link: "/power-bi",
+    },
   ];
 
   const filteredCourses = courses.filter((course) =>
@@ -105,7 +108,7 @@ const Advance_Courses = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <img
         src="https://www.advancecharity.org.uk/wp-content/uploads/2020/04/advance-Trimmed.png"
         className="object-cover w-full md:h-[450px]"
@@ -143,7 +146,7 @@ const Advance_Courses = () => {
 };
 
 const CourseCard = ({ course, handleWishList, setShow }) => {
-  const { id, title, description, image,link } = course;
+  const { id, title, description, image, link } = course;
   const [liked, setLiked] = useState(false);
 
   const handleDataTransfer = () => {
@@ -154,33 +157,31 @@ const CourseCard = ({ course, handleWishList, setShow }) => {
 
   return (
     <div className="mx-auto relative mb-12 cursor-pointer">
-      <Link to = {link}>
-      
-   
-      <img
-        src={image}
-        alt={title}
-        className="h-[240px] w-full hover:scale-105 transition-all duration-500 shadow-2xl"
-      />
-      <div
-        className="text-center px-4 py-8 bg-white shadow-lg rounded-md
+      <Link to={link}>
+        <img
+          src={image}
+          alt={title}
+          className="h-[240px] w-full hover:scale-105 transition-all duration-500 shadow-2xl"
+        />
+        <div
+          className="text-center px-4 py-8 bg-white shadow-lg rounded-md
                 md:w-3/4 mx-auto absolute left-0 right-0 -bottom-12 hover:-translate-y-4 transition-all duration-300"
-      >
-       
-       <p> <span className="font-bold" >{title}</span></p>
-      </div>
+        >
+          <p>
+            {" "}
+            <span className="font-bold">{title}</span>
+          </p>
+        </div>
       </Link>
       <Link>
-
-      <button id="wishlist" onClick={handleDataTransfer}>
-        {liked ? (
-          <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
-        ) : (
-          <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
-        )}
-      </button>
+        <button id="wishlist" onClick={handleDataTransfer}>
+          {liked ? (
+            <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
+          ) : (
+            <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
+          )}
+        </button>
       </Link>
-   
     </div>
   );
 };

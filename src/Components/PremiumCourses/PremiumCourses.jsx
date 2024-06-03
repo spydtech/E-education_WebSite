@@ -34,61 +34,80 @@ const PremiumCourses = () => {
   };
 
   const courses = [
-      {
-        id: 1,
-        title: "Advanced Full Stack Web Development",
-        description: "Learn to build full-fledged web applications using the latest technologies and frameworks.",
-        image: "https://media.licdn.com/dms/image/D4E12AQHPfeaf61ARlw/article-cover_image-shrink_720_1280/0/1707956393334?e=2147483647&v=beta&t=GYpFx7NlLhBWpF2Ow0tzdwoqWrF78PvPmI-wVFuO3B8",
-        link: "/fullStack_WebDevelopment/fullStack-Web-Development",
-      },
-      {
-        id: 2,
-        title: "Comprehensive Software Testing",
-        description: "Master advanced software testing techniques and tools to ensure high-quality software delivery.",
-        image: "https://www.buildoffshoreteam.com/blog/wp-content/uploads/2024/03/type-of-testing.jpg",
-        link: "/software_testing",
-      },
-      {
-        id: 3,
-        title: "Advanced PHP Programming",
-        description: "Explore advanced PHP programming concepts and frameworks for robust web development.",
-        image: "https://solman.in/wp-content/uploads/2018/12/php.jpg",
-        link: "/advancedPhpProgramming",
-      },
-      {
-        id: 4,
-        title: "Java Programming Mastery",
-        description: "Become proficient in advanced Java programming for enterprise-level applications.",
-        image: "https://img-c.udemycdn.com/course/750x422/5638204_76bd.jpg",
-        link: "/fullStack_WebDevelopment/fullStack-Java-Development",
-      },
-      {
-        id: 5,
-        title: "Mastering WordPress Development",
-        description: "Gain expertise in WordPress development, from theme creation to advanced plugin development.",
-        image: "https://magicminds.io/wp-content/uploads/2023/12/guide-to-mastering-wordpress-development.png",
-        link: "/masteringWordPressDevelopment",
-      },
-      {
-        id: 6,
-        title: "JavaScript for Advanced Developers",
-        description: "Enhance your JavaScript skills with advanced programming techniques for front-end and back-end development.",
-        image: "https://www.bluejaywebsolutions.com/sites/default/files/2021-08/javascript.jpg",
-        link: "/fullStack_WebDevelopment/full-stack-javascript",
-      }, {
-        id: 7,
-        title: "Advanced Data Science Techniques",
-        description: "Master advanced data science techniques including data mining, predictive modeling, and big data analytics.",
-        image: "https://cdn.hackr.io/uploads/posts/large/1573232636UxdizR1FyX.png",
-        link: "/data_Science",
-      },
-      {
-        id: 8,
-        title: "Full Stack Mobile App Development",
-        description: "Learn to develop advanced mobile applications for both iOS and Android platforms.",
-        image: "https://qph.cf2.quoracdn.net/main-qimg-73b9c74a99ce21c0ba7b760b8828172b",
-        link: "/fullStackMobileAppDevelopment",
-      }
+    {
+      id: 1,
+      title: "Full Stack Development",
+
+      image:
+        "https://media.licdn.com/dms/image/D4E12AQHPfeaf61ARlw/article-cover_image-shrink_720_1280/0/1707956393334?e=2147483647&v=beta&t=GYpFx7NlLhBWpF2Ow0tzdwoqWrF78PvPmI-wVFuO3B8",
+      link: "/fullStack_WebDevelopment/fullStack-Web-Development",
+    },
+    {
+      id: 2,
+      title: "Software Testing",
+
+      image:
+        "https://www.buildoffshoreteam.com/blog/wp-content/uploads/2024/03/type-of-testing.jpg",
+      link: "/software_testing",
+    },
+
+    {
+      id: 3,
+      title: "Machine Learning with AI",
+
+      image:
+        "https://www.simplilearn.com/ice9/free_resources_article_thumb/Deep-Learning-vs-Machine-Learning.jpg",
+      link: "/data_Science/machine-Learning",
+    },
+    {
+      id: 4,
+      title: "DevOps Mastery",
+
+      image:
+        "https://s3.amazonaws.com/tf-nightingale/2023/04/How-DevOps-Mastery-Optimizes-Development-and-Operations-for-Business-Success--2.jpg",
+      link: "/fullStack_WebDevelopment/fullStack-Devops",
+    },
+    {
+      id: 5,
+      title: "Blockchain Development",
+
+      image:
+        "https://ideausher.com/wp-content/uploads/2022/12/Blockchain-Developer-Hire_-A-Complete-Guide-1.webp",
+      link: "/blockchain",
+    },
+    {
+      id: 6,
+      title: "Cloud with AWS",
+
+      image:
+        "https://images.squarespace-cdn.com/content/v1/60cfd646701da4034512a1c5/1654217981309-RTSZMBJWA9YJ5V32UN8R/AWS-Cloud.png",
+      link: "/cloud-computing",
+    },
+
+    {
+      id: 7,
+      title: "Data Science Techniques",
+
+      image:
+        "https://cdn.hackr.io/uploads/posts/large/1573232636UxdizR1FyX.png",
+      link: "/data_Science",
+    },
+    {
+      id: 8,
+      title: "Ethical Hacking",
+
+      image:
+        "https://www.bugcrowd.com/wp-content/uploads/2022/05/ethical-hackers-1.jpg",
+      link: "/ethical_Hacking",
+    },
+    {
+      id: 9,
+      title: "Cyber Security",
+
+      image:
+        "https://www.neit.edu/wp-content/uploads/2022/10/Cyber-Security-Icon-Concept-2-1.jpeg",
+      link: "/cyber_security",
+    },
   ];
 
   const filteredCourses = courses.filter((course) =>
@@ -97,7 +116,7 @@ const PremiumCourses = () => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <img
         src="https://st4.depositphotos.com/1350793/23721/i/450/depositphotos_237213214-stock-photo-next-level-concept-with-woman.jpg"
         className="object-cover w-full md:h-[450px]"
@@ -135,7 +154,7 @@ const PremiumCourses = () => {
 };
 
 const CourseCard = ({ course, handleWishList, setShow }) => {
-  const { id, title, description, image,link } = course;
+  const { id, title, description, image, link } = course;
   const [liked, setLiked] = useState(false);
 
   const handleDataTransfer = () => {
@@ -146,33 +165,31 @@ const CourseCard = ({ course, handleWishList, setShow }) => {
 
   return (
     <div className="mx-auto relative mb-12 cursor-pointer">
-      <Link to = {link}>
-      
-   
-      <img
-        src={image}
-        alt={title}
-        className="h-[240px] w-full hover:scale-105 transition-all duration-500 shadow-2xl"
-      />
-      <div
-        className="text-center px-4 py-8 bg-white shadow-lg rounded-md
+      <Link to={link}>
+        <img
+          src={image}
+          alt={title}
+          className="h-[240px] w-full hover:scale-105 transition-all duration-500 shadow-2xl"
+        />
+        <div
+          className="text-center px-4 py-8 bg-white shadow-lg rounded-md
                 md:w-3/4 mx-auto absolute left-0 right-0 -bottom-12 hover:-translate-y-4 transition-all duration-300"
-      >
-       
-       <p> <span className="font-bold" >{title}</span></p>
-      </div>
+        >
+          <p>
+            {" "}
+            <span className="font-bold">{title}</span>
+          </p>
+        </div>
       </Link>
       <Link>
-
-      <button id="wishlist" onClick={handleDataTransfer}>
-        {liked ? (
-          <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
-        ) : (
-          <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
-        )}
-      </button>
+        <button id="wishlist" onClick={handleDataTransfer}>
+          {liked ? (
+            <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
+          ) : (
+            <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
+          )}
+        </button>
       </Link>
-   
     </div>
   );
 };

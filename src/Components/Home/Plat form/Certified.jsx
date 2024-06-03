@@ -42,7 +42,8 @@ function Certified() {
               </h5>
             </div>
             <div className="p-6 pt-0">
-              <Link to="/features">
+              {/* <Link to="/features"> */}
+              <Link to="/pricing">
                 <button
                   onClick={() => expandCard(index)}
                   data-ripple-light="true"

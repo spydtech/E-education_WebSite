@@ -5,7 +5,7 @@ const CybersecurityAbout = () => {
     <div className="mx-auto w-full p-8 bg-gradient-to-br from-blue-300 via-teal-500 to-green-600">
       <div className="text-center mb-6">
         <h1 className="text-gray-800 text-3xl font-bold">
-          About The Cybersecurity Course
+          About The Cybersecurity Cours
         </h1>
       </div>
       <div className="py-4 text-center">

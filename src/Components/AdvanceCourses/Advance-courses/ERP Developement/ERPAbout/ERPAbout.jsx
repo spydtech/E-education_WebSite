@@ -5,14 +5,14 @@ import assistance from "../../../../../assets/dataAnalatics/assistance.jpg";
 
 const ERPAbout = () => {
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br  from-[#04e761] to-[#00916e]">
+    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br to-[#0a0908] from-[#272640]">
       <div className="pt-0">
         <p className="text-[#072ac8] text-xl font-medium">
           About Enterprise resource planning Course
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="text-6xl font-lora text-white">
           Discover the
           <p className="text-[#072ac8] my-2">
             Enterprise resource planning program

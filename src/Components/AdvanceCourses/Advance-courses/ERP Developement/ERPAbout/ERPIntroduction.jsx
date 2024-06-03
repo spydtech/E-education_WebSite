@@ -66,14 +66,14 @@ function ERPIntroduction() {
 
   return (
     <>
-      <div className="grid grid-cols-1 w-fit md:grid-cols-2 h-full bg-gradient-to-br from-[#04e761] to-[#00916e]">
+      <div className="grid grid-cols-1 w-fit md:grid-cols-2 h-full bg-gradient-to-br to-[#0a0908] from-[#272640]">
         <div className="flex items-center justify-center xl:w-auto">
           <div className="grid grid-cols-1 text-start px-10 font-lora">
             <div>
               <p className="text-[#072ac8] text-xl font-medium">Introduction</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora">
+              <p className="text-6xl font-lor text-white">
                 So what is
                 <span className="text-[#072ac8] inline pl-2">ERP?</span>
               </p>

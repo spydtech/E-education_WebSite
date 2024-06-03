@@ -92,6 +92,7 @@ import UiUx from "./Components/BasicCourse/BasicAllCourses/UI_UX/Ui_Ux";
 import FullStackMobileApp from "./Components/PremiumCourses/Premium-Courses/Fullstackmobileapp/mobileappFundamentals";
 import PreAdvancePhp from "./Components/PremiumCourses/Premium-Courses/pre-AdvancePhp/AdvancePhp";
 import PreWordPress from "./Components/PremiumCourses/Premium-Courses/pre-Wordpress/AdvancewordpressFundamentals";
+import Pricing2 from "./Components/Home/Pricing/Pricing2";
 import Java from "./Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava";
 import PowerBi from "./Components/AdvanceCourses/Advance-courses/PowerBI/PowerBi";
 import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ERP";
@@ -111,6 +112,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about_us" element={<AboutUs />} />
+          <Route path="/pricing" element={<Pricing2 />} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />

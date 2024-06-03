@@ -10,7 +10,7 @@ function ERPCareersOutcomes() {
     <>
       <div
         id="main"
-        className=" md:lg:xl:pl-20  bg-gradient-to-br from-[#04e761] to-[#00916e]"
+        className=" md:lg:xl:pl-20  bg-gradient-to-br to-[#0a0908] from-[#272640]"
       >
         <div id="headings" className="grid grid-cols-1 text-start ">
           <div>
@@ -19,7 +19,7 @@ function ERPCareersOutcomes() {
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora">
+            <p className="text-6xl font-lora text-white">
               Discover What our{" "}
               <p className="text-[#072ac8]">Learners Have Achieved</p>
             </p>

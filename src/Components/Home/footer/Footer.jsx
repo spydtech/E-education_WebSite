@@ -35,12 +35,10 @@ function FooterPart() {
       ],
     },
     {
-      title: "Professional Courses",
+      title: "Advanced Courses",
       links: [
         { label: "Ethical Hacking", Link: "/Ethical_Hacking/advance_Ethical_Hacking" },
         { label: "Network Security", Link: "/network_security/advance-network-secuity" },
-        { label: "Data Visualization", Link: "/data_Science/data-visualization" },
-        { label: "Cyber Security", Link: "/Cybersecurity/Cybersecurity_fundamentals" },
         { label: "Mobile App Development", Link: "/fullStackMobileAppDevelopment" },
         { label: "Data Base Management", Link: "/database" },
         { label: "UI/Ux Design", Link: "/ui_ux_design" },
@@ -49,10 +47,12 @@ function FooterPart() {
       ],
     },
     {
-      title: "Advanced Courses",
+      title: "Professional Courses",
       links: [
         { label: "Machine Learning", Link: "/data_Science/machine-Learning" },
-        { label: "Ai", Link: "/data_Science/machine-Learning" },
+        { label: "Ethical Hacking", Link: "/Ethical_Hacking/advance_Ethical_Hacking" },
+        { label: "Data Visualization", Link: "/data_Science/data-visualization" },
+        { label: "Cyber Security", Link: "/Cybersecurity/Cybersecurity_fundamentals" },
         { label: "Cloud Computing", Link: "/cloud-testing" },
         { label: "It and Networking", Link: "/network_security/advance-network-secuity" },
         { label: "Big Data", Link: "/data_Science/big-data-analysis" },
@@ -210,7 +210,7 @@ function FooterPart() {
         </div>
         <div className="mt-4 mx-auto text-center">
           <p className="text-xs text-white">
-            &copy; {new Date().getFullYear()} E-education. All rights reserved.
+            &copy; {new Date().getFullYear()} SPY D Technology . All rights reserved.
           </p>
         </div>
       </footer>

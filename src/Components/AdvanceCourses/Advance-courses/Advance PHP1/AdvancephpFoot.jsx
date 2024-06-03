@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
 function AdvancephpFoot() {
-  const [courseName] = useState("Master Full Stack Web Development"); // Placeholder for course name
+  const [courseName] = useState("Advance Php"); // Placeholder for course name
   const [coursePrice] = useState(199);
 
   const navigate = useNavigate();

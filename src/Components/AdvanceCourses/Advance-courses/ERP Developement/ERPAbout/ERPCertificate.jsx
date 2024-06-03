@@ -6,14 +6,14 @@ function ERPCertificate() {
     <>
       <div
         id="main"
-        className="grid  grid-cols-1 md:lg:grid-cols-2 pb-16 bg-gradient-to-br  from-[#04e761] to-[#00916e]"
+        className="grid  grid-cols-1 md:lg:grid-cols-2 pb-16 bg-gradient-to-br to-[#0a0908] from-[#272640]"
       >
         <div id="content" className="flex justify-center items-center">
           <div className="p-5 space-y-5 w-[450px] h-96">
             <p className="text-[#072ac8] text-xl font-medium">
               ERP Certification
             </p>
-            <p className="text-6xl font-lora">
+            <p className="text-6xl font-lora text-white">
               Achieve{" "}
               <p className="text-[#072ac8]">Credentials and Recognition</p>
             </p>

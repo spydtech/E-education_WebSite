@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 function CloudComputing() {
   const [courseName] = useState("Cloud With AWS"); // Placeholder for course name
-  const [coursePrice] = useState(14999);
+  const [coursePrice] = useState(34999);
 
   const navigate = useNavigate();
   const handleEnroll = () => {

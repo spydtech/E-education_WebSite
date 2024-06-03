@@ -9,7 +9,7 @@ function Explore() {
       <div className="flex flex-col md:flex-row gap-5 pt-5 md:p-5 overflow-y-scroll">
         <div className=" w-[250px]">
           <h1 className="shyam cursor-pointer relative font-extrabold uppercase transition-colors duration-400 ease-cubic">
-            Basic Course
+            Course
           </h1>
           <div className="pt-6 text-xs">
             <Link
@@ -21,10 +21,10 @@ function Explore() {
           </div>
           <div className="pt-6 text-xs">
             <Link
-              to="/software-testing/unit-testing"
+              to="/software-testing"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Unit Testing
+              Software Testing
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -32,7 +32,7 @@ function Explore() {
               to="/php"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Basic Php
+              Php
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -40,7 +40,7 @@ function Explore() {
               to="/java"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Basic Java
+              Java
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -56,7 +56,7 @@ function Explore() {
               to="/javaScript"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Basic JavaScript
+              JavaScript
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -64,7 +64,7 @@ function Explore() {
               to="/c_c++"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Basic C/C++
+              C/C++
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -97,7 +97,7 @@ function Explore() {
               to="/fullStack_WebDevelopment/fullStack-Java-Development"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Advance Java
+              Java Programming Mastery
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -105,7 +105,89 @@ function Explore() {
               to="/advance-php"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Advance Php
+              Advanced PHP Programming
+            </Link>
+          </div>
+          <div className="pt-6 text-xs">
+            <Link
+              to="/masteringWordPressDevelopment"
+              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
+            >
+              Mastering WordPress Development
+            </Link>
+          </div>
+
+          <div className="pt-6 text-xs">
+            <Link
+              to="/fullStack_WebDevelopment/full-stack-javascript"
+              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
+            >
+              JavaScript for Advanced Developers
+            </Link>
+          </div>
+          <div className="pt-6 text-xs">
+            <Link
+              to="/data_Science"
+              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
+            >
+              Data Science Techniques
+            </Link>
+          </div>
+          <div className="pt-6 text-xs">
+            <Link
+              to="/network_security"
+              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
+            >
+              Network Security
+            </Link>
+          </div>
+          <div className="pt-6 text-xs">
+            <Link
+              to="/erp"
+              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
+            >
+              ERP-Software-Development
+            </Link>
+          </div>
+          <div className="pt-6 text-xs">
+            <Link
+              to="/power-bi"
+              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
+            >
+              Power BI Development
+            </Link>
+          </div>
+          <div className="pt-6 text-xs">
+            <Link
+              to="/fullStackMobileAppDevelopment"
+              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
+            >
+              Full Stack Mobile App Development
+            </Link>
+          </div>
+        </div>
+        <div class="md:flex md:h-48 md:items-center ">
+          <div class="h-full border-l-2 border-[#64748b] hidden"></div>
+        </div>
+
+        <div className=" w-[250px]">
+          <h1 className="shyam cursor-pointer relative font-extrabold uppercase transition-colors duration-400 ease-cubic">
+            Premium Course
+          </h1>
+          <div className="pt-6 text-xs">
+            <Link
+              to="/fullStack_WebDevelopment/fullStack-Web-Development"
+              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
+            >
+              Full Stack Development
+            </Link>
+          </div>
+          <div className="pt-6 text-xs">
+            <Link
+              to="/software_testing"
+              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
+            >
+              Software Testing
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -129,15 +211,15 @@ function Explore() {
               to="/cloud-computing"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Cloud Computing with AWS
+              Cloud with AWS
             </Link>
           </div>
           <div className="pt-6 text-xs">
             <Link
-              to="/Cybersecurity/cybersecurity_essentials"
+              to="/ethical_Hacking"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Cybersecurity Advanced Practices
+              Ethical Hacking
             </Link>
           </div>
           <div className="pt-6 text-xs">
@@ -148,80 +230,15 @@ function Explore() {
               Blockchain Development
             </Link>
           </div>
-        </div>
-        <div class="md:flex md:h-48 md:items-center ">
-          <div class="h-full border-l-2 border-[#64748b] hidden"></div>
-        </div>
 
-        <div className=" w-[250px]">
-          <h1 className="shyam cursor-pointer relative font-extrabold uppercase transition-colors duration-400 ease-cubic">
-            Premium Course
-          </h1>
           <div className="pt-6 text-xs">
             <Link
-              to="/fullStack_WebDevelopment/fullStack-Web-Development"
+              to="/cyber_security"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              Advanced Full Stack Web Development
+              Cyber Security
             </Link>
           </div>
-          <div className="pt-6 text-xs">
-            <Link
-              to="/software_testing"
-              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
-            >
-              Comprehensive Software Testing
-            </Link>
-          </div>
-          <div className="pt-6 text-xs">
-            <Link
-              to="/advancedPhpProgramming"
-              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
-            >
-              Advanced PHP Programming
-            </Link>
-          </div>
-          <div className="pt-6 text-xs">
-            <Link
-              to="/fullStack_WebDevelopment/fullStack-Java-Development"
-              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
-            >
-              Java Programming Mastery
-            </Link>
-          </div>
-          <div className="pt-6 text-xs">
-            <Link
-              to="/masteringWordPressDevelopment"
-              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
-            >
-              Mastering WordPress Development
-            </Link>
-          </div>
-          <div className="pt-6 text-xs">
-            <Link
-              to="/fullStack_WebDevelopment/full-stack-javascript"
-              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
-            >
-              JavaScript for Advanced Developers
-            </Link>
-          </div>
-          <div className="pt-6 text-xs">
-            <Link
-              to="/data_Science"
-              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
-            >
-              Advanced Data Science Techniques
-            </Link>
-          </div>
-          <div className="pt-6 text-xs">
-            <Link
-              to="/fullStackMobileAppDevelopment"
-              class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
-            >
-              Full Stack Mobile App Development
-            </Link>
-          </div>
-
           <style jsx>{`
             .shyam {
               font-size: 18px;
