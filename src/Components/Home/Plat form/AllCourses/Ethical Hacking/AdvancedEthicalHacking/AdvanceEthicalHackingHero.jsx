@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const AdvanceEthicalHackingHero = () => {
   const [courseName] = useState("Advanced Ethical Hacking"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(34999);
   const navigate = useNavigate();
 
   const handleEnroll = () => {

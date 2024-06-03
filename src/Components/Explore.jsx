@@ -19,7 +19,7 @@ function Explore() {
               Web Development
             </Link>
           </div>
-         
+
           <div className="pt-6 text-xs">
             <Link
               to="/php"
@@ -82,7 +82,7 @@ function Explore() {
               to="/fullStack_WebDevelopment/mean-Stack-Developer"
               class="bg-gray-100  text-black border-l-8 border-green-500 rounded-md px-3 py-2 w-full md:w-5/12 lg:w-3/12"
             >
-              MERN Stack
+              MEAN Stack
             </Link>
           </div>
           <div className="pt-6 text-xs">

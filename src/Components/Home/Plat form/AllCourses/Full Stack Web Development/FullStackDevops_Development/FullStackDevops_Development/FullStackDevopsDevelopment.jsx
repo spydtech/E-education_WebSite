@@ -10,7 +10,7 @@ import Footer from "../../../../../footer/Footer";
 
 const FullStackDevopsDevelopment = () => {
   const [courseName] = useState("Master Full Stack Devops Development"); // Moved inside component
-  const [coursePrice] = useState(199); // Moved inside component
+  const [coursePrice] = useState(34999); // Moved inside component
   const [currentSlide, setCurrentSlide] = useState(0);
   const navigate = useNavigate(); // useNavigate hook for navigation
 
