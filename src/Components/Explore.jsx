@@ -19,7 +19,7 @@ function Explore() {
               Web Development
             </Link>
           </div>
-         
+
           <div className="pt-6 text-xs">
             <Link
               to="/php"
