@@ -156,16 +156,16 @@ function StressTestingKeyHighlights() {
       >
         <div id="subdiv1" className="pt-4">
           <div id="h1" className="">
-            <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#f9ac13]">
+            <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#f9ac13] pl-4">
               Stress Testing Course Highlights
             </p>
           </div>
           <div
             id="h2"
-            className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96 h-auto"
+            className="md:lg:flex space-x-3 md:lg:w-auto lg:md:h-auto w-96 h-auto"
           >
-            <p className="text-5xl font-bold">What does this</p>
-            <p className="text-5xl font-bold text-[#f9ac13] inline">
+            <p className="md:text-5xl text-2xl font-bold pl-4">What does this</p>
+            <p className="md:text-5xl text-2xl font-bold text-[#f9ac13] inline">
               Course have to offer?
             </p>
           </div>
