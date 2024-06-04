@@ -39,8 +39,8 @@ function Community() {
   ];
 
   return (
-    <div className="  bg-radial-gradient bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500  min-h-screen flex items-center justify-center mt-8">
-      <div className="container mx-auto px-4 py-8 text-center relative mt-16">
+    <div className="  bg-radial-gradient bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500  min-h-screen flex items-center justify-center pt-20">
+      <div className="container mx-auto px-4 py-8 text-center relative ">
         <div className="relative mb-8 ">
           <div className="images-container absolute inset-0 flex justify-between items-center pointer-events-none">
             {/* Place the techimage in the center */}

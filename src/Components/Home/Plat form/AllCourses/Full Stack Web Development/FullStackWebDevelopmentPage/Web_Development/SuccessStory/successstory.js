@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-// import successImage from "../../../../../../../assets/Assests_MeanStack/successstoryimages/studentsitting.jpg";
-// import company from "../../../../../../../assets/Assests_MeanStack/successstoryimages/company.png";
-// import webcertificate from "../../../../../../../assets/Assests_MeanStack/successstoryimages/webcertificate.png";
-import successImage from "../../../../../../../../assets/Assests_MeanStack/successstoryimages/studentsitting.jpg";
-import company from "../../../../../../../../assets/Assests_MeanStack/successstoryimages/company.png";
-import webcertificate from "../../../../../../../../assets/Assests_MeanStack/successstoryimages/webcertificate.png";
+
+import successImage from "../../../../../../../../assets/success.png";
+import company from "../../../../../../../../assets/company.png";
+import webcertificate from "../../../../../../../../assets/webcertificate.png";
 import { ImQuotesLeft } from "react-icons/im";
 
 function SuccessStory() {
@@ -26,8 +24,8 @@ function SuccessStory() {
       <div
         className="relative bg-cover bg-center w-96 h-96 mb-4 mt-4 sm:w-80 sm:h-80 md:w-96 md:h-96"
         style={{
-          backgroundImage: `url(${successImage})`,
-          backgroundPosition: "center",
+          backgroundImage: `url(https://media.istockphoto.com/id/1473711199/photo/face-portrait-student-and-man-in-university-ready-for-back-to-school-learning-goals-or.jpg?s=612x612&w=0&k=20&c=Xrwp5ePvm6RjixgAjJo-OAw9oXkLt_HcmT3bdlLZUdw=)`,
+          backgroundPosition: "top",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
@@ -90,7 +88,7 @@ function SuccessStory() {
                 }}
               />
               <p style={{ marginLeft: "0px", fontSize: "10px" }}>
-                MEAN stack developer
+                full stack web developer
                 <br /> certificate
               </p>
             </div>
@@ -134,19 +132,20 @@ function SuccessStory() {
         >
           The Success Story of{" "}
           <span className="text-blue-600" style={{ fontFamily: "Arial" }}>
-            Ryan
+            Alex
           </span>
         </h1>
 
         <p className="text-black mb-4 mx-4 text-justify">
-          Ryan embarked on their path with a vision and resolve.
-          <br /> They encountered obstacles but remained steadfast.
-          <br /> Through diligence and resilience, they reached their goals.
-          <br /> Ryan's journey motivates us to chase our ambitions.
-          <br /> Ryan started their journey with a dream and determination.
-          <br /> They faced challenges but never gave up. <br />
-          With hard work and perseverance, they achieved success.
-          <br /> Ryan's story inspires us all to pursue our dreams relentlessly.
+          Alex embarked on their journey with a clear vision and unyielding
+          determination.
+          <br /> Despite facing countless hurdles, they remained resolute.
+          <br /> Through persistent effort and resilience, they surmounted every
+          obstacle.
+          <br /> Alex's unwavering commitment inspires us all to pursue our
+          aspirations.
+          <br /> They commenced their adventure with a dream and fierce resolve.
+          <br /> Confronted by adversity, they stood firm and persevered.
         </p>
         <button className="bg-blue-600 text-white py-2 px-4 rounded-md">
           Start your success story

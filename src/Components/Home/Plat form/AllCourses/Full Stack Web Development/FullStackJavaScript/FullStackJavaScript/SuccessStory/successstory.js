@@ -166,8 +166,8 @@ function SuccessStory() {
       <div
         className="relative bg-cover bg-center w-96 h-96 mb-4 mt-4 sm:w-80 sm:h-80 md:w-96 md:h-96"
         style={{
-          backgroundImage: `url(${successImage})`,
-          backgroundPosition: "center",
+          backgroundImage: `url(https://media.istockphoto.com/id/1322844568/photo/education-concept-positive-young-man-with-backpack-headphones-and-notebooks-posing-on-orange.jpg?s=612x612&w=0&k=20&c=5pSZkkzIGQYBNlkSh95lJdC75ZixcziIEMAEacHpWmM=)`,
+          backgroundPosition: "top",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
@@ -230,7 +230,7 @@ function SuccessStory() {
                 }}
               />
               <p style={{ marginLeft: "0px", fontSize: "10px" }}>
-                MEAN stack developer
+                full stack javascript developer
                 <br /> certificate
               </p>
             </div>
@@ -274,19 +274,20 @@ function SuccessStory() {
         >
           The Success Story of{" "}
           <span className="text-blue-600" style={{ fontFamily: "Arial" }}>
-            Ryan
+            James
           </span>
         </h1>
 
         <p className="text-black mb-4 mx-4 text-justify">
-          Ryan embarked on their path with a vision and resolve.
-          <br /> They encountered obstacles but remained steadfast.
-          <br /> Through diligence and resilience, they reached their goals.
-          <br /> Ryan's journey motivates us to chase our ambitions.
-          <br /> Ryan started their journey with a dream and determination.
-          <br /> They faced challenges but never gave up. <br />
-          With hard work and perseverance, they achieved success.
-          <br /> Ryan's story inspires us all to pursue our dreams relentlessly.
+          James embarked on his journey with a clear vision and indomitable
+          determination.
+          <br /> Despite facing myriad challenges, he remained unwavering.
+          <br /> Through relentless perseverance and resilience, he overcame
+          every obstacle.
+          <br /> James's unwavering commitment inspires us all to pursue our
+          dreams.
+          <br /> He commenced his odyssey with a dream and unwavering resolve.
+          <br /> Confronted by adversity, he stood firm and persisted.
         </p>
         <button className="bg-blue-600 text-white py-2 px-4 rounded-md">
           Start your success story
