@@ -25,7 +25,7 @@ function DataScienceWithPythonCareersOutcomes() {
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora">
+            <p className="md:text-5xl text-2xl font-lora">
               Discover What our{" "}
               <p className="text-[#750e5c]">Learners Have Achieved</p>
             </p>
