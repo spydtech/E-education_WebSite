@@ -14,18 +14,18 @@ function CompatabilityCareersOutcomes() {
       >
         <div id="headings" className="grid grid-cols-1 text-start ">
           <div>
-            <p className="text-[#f9ac13] text-xl font-medium">
+            <p className="text-[#f9ac13] text-xl font-medium pl-4">
               Career Outcomes in Network Security Program
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora">
+            <p className="md:text-5xl text-2xl font-lora pl-4">
               Discover What our{" "}
               <p className="text-[#f9ac13]">Learners Have Achieved</p>
             </p>
           </div>
           <div>
-            <p className="text-xl text-gray-500">
+            <p className="text-xl text-gray-500 pl-4">
               Snapshot of Alumni Placement Support
             </p>
           </div>
