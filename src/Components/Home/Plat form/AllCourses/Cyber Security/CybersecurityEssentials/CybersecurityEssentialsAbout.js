@@ -4,14 +4,14 @@ import assistance from "../../../../../../assets/dataAnalatics/assistance.jpg";
 
 const CybersecurityAbout = () => {
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br from-[#89fc00] to-[#12862b]">
+    <div className="mx-auto pl-4 w-full md:lg:xl:px-10 p-1 bg-gradient-to-br from-[#89fc00] to-[#12862b]">
       <div className="pt-0">
         <p className="text-[#7400b8] text-xl font-medium">
           About The Cyber Security Essentials Course
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="md:text-5xl text-2xl font-lora">
           Discover the
           <p className="text-[#7400b8] my-2">
             Cyber Security Essentials Program
@@ -19,7 +19,7 @@ const CybersecurityAbout = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap -mx-4 items-center pb-6">
+      <div className="flex flex-wrap -mx-4 items-center pb-6 pl-4">
         <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <img

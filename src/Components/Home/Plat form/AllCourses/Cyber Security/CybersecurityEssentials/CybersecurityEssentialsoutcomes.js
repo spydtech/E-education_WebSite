@@ -9,7 +9,7 @@ function CybersecurityCareersOutcomes() {
     <>
       <div
         id="main"
-        className=" md:lg:xl:pl-20  bg-gradient-to-br from-[#89fc00] to-[#12862b]"
+        className=" md:lg:xl:pl-20 pl-4  bg-gradient-to-br from-[#89fc00] to-[#12862b]"
       >
         <div id="headings" className="grid grid-cols-1 text-start ">
           <div>
@@ -18,7 +18,7 @@ function CybersecurityCareersOutcomes() {
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora">
+            <p className="md:text-5xl text-2xl font-lora">
               Discover What our{" "}
               <p className="text-[#7400b8]">Learners Have Achieved</p>
             </p>

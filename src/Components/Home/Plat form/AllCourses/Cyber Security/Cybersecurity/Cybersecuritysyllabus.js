@@ -35,12 +35,12 @@ function CybersecuritySyllabus() {
         id="div1"
         className="flex items-center justify-center xl:lg:md:w-auto"
       >
-        <div id="headings" className="grid grid-cols-1 text-start px-20">
+        <div id="headings" className="grid grid-cols-1 text-start md:px-20 pl-4">
           <div>
             <p className="text-white text-2xl font-bold">Syllabus</p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora text-white">
+            <p className="md:text-5xl text-2xl font-lora text-white">
               Discover What You
               <span className="text-[#7400b8] inline pl-2">Will Learn</span>
             </p>

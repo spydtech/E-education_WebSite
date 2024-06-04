@@ -27,14 +27,14 @@ const Cybersecurity = () => {
         />
         {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
       </div>
-      <div className="lg:container lg:mx-auto">
+      <div className="lg:container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Section */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-3xl lg:text-4xl text-blue-600  mb-6 font-lura font-bold pl-8 pt-4">
+          <div className="text-left pl-4">
+            <h1 className="text-2xl lg:text-4xl text-blue-600  mb-6 font-lora font-bold  pt-4">
               Your Digital World with Cybersecurity
             </h1>
-            <p className="text-lg text-gray-600 leading-relaxed pl-8 font-lura">
+            <p className="text-lg text-gray-600 leading-relaxed font-lora">
               In today's interconnected world, cybersecurity stands as the first
               line of defense against an array of digital threats. With cyber
               attacks becoming increasingly sophisticated, protecting sensitive
@@ -51,7 +51,7 @@ const Cybersecurity = () => {
           </div>
 
           {/* Right Section */}
-          <div className="text-center lg:text-right mr-8">
+          <div className=" text-right px-2">
             <img
               src={Cybersecurityimg}
               alt="cybersecurity"
@@ -61,20 +61,20 @@ const Cybersecurity = () => {
         </div>
 
         {/* Course Highlights Section */}
-        <div className="flex flex-col lg:flex-row items-center lg:w-full flex justify-between px-8 lg:px-0 mt-12">
-          <div className="text-center lg:text-right ml-8">
+        <div className="flex flex-col lg:flex-row items-center lg:w-full justify-center md:justify-between px-8 lg:px-0 mt-12">
+          <div className="text-center lg:text-right">
             <img
               src="https://online.sbu.edu/sites/default/files/field/image/sbu-cybersecurity-job-outlook-feature.jpg"
               alt="learning"
-              className="w-80 lg:w-96 h-80 lg:h-96 mx-auto lg:mx-0 ml-8"
+              className="w-80 lg:w-96 h-80 lg:h-96 mx-auto lg:mx-0 md:ml-8"
             />
           </div>
           <div className="lg:w-1/2 lg:ml-12 lg:mt-0 mt-8">
-            <div className="ml-8 lg:ml-0">
-              <h2 className="text-3xl lg:text-4xl text-blue-600 font-bold mb-6 font-lura">
+            <div className=" lg:ml-0">
+              <h2 className="text-xl lg:text-4xl text-blue-600 font-bold mb-6 font-lora">
                 Introduction to Advanced Cybersecurity Course with E-Education
               </h2>
-              <h3 className="text-lg lg:text-xl text-green-600 font-semibold mb-6 font-lura">
+              <h3 className="text-lg lg:text-xl text-green-600 font-semibold mb-6 font-lora">
                 Course Highlights
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

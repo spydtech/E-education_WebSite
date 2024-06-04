@@ -90,7 +90,7 @@ function CybersecurityEssentialsIntroduction() {
               <p className="text-[#7400b8] text-xl font-medium">Introduction</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora">
+              <p className="md:text-5xl text-2xl font-lora">
                 So what is{" "}
                 <p className="text-[#7400b8] inline ">
                   Cyber Security Essentials ?
@@ -104,7 +104,7 @@ function CybersecurityEssentialsIntroduction() {
             </div>
           </div>
         </div>
-        <div id="div2" className="px-10">
+        <div id="div2" className="md:px-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
             <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
               <div className="relative w-full overflow-hidden">
