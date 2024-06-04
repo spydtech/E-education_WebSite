@@ -12,6 +12,9 @@ const CyberSecurityArray = () => {
   const [sh, setShow] = useState(false);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const handleWishList = (course) => {
     const index = wishlist.findIndex((item) => item.id === course.id);
     if (index !== -1) {

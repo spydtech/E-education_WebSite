@@ -3,9 +3,8 @@ import { useNavigate } from "react-router-dom"; // Add this import for navigatio
 import Navbar from "../../../../../../../Navbar";
 import AboutCourses from "./AboutCourses";
 import Community from "../Community/community";
-import SuccessStory from "../SuccessStory/successstory";
+import SuccessStory from "../../SuccessStory/successstory"
 import Footer from "../../../../../../footer/Footer";
-
 import Delivery_Methods from "../deliverymethods/Delivery_Methods";
 import JavascriptDeveloperSkills from "../Developer/JavascriptDeveloperSkills";
 
@@ -21,6 +20,10 @@ const JavascriptDevelopment = () => {
   const [courseName] = useState("Master Full Stack Java Development"); // Moved inside component
   const [coursePrice] = useState(199); // Moved inside component
   const navigate = useNavigate(); // useNavigate hook for navigation
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
