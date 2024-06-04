@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Navbar from '../Navbar'
 import WaterDropGrid from './WaterDropGrid'
 import Counter from './Counter'
@@ -7,6 +7,9 @@ import StartLearning from './StartLearning';
 import MostPopular from './MostPopular'
 import Footer from '../Home/footer/Footer'
 const MyCourse = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

@@ -116,7 +116,7 @@ function App() {
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
           <Route path="/pricing" element={<Pricing2 />} />
-          <Route path="/contectus" element={<ContectUS />} />
+          <Route path="/contect-us" element={<ContectUS />} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />

@@ -32,14 +32,15 @@ const TryaDemoCard2 = () => {
 
             </div>
             </Link>
-            <Link to = "/pricing">
+            <Link to = "/contect-us">
 
             <div className="bg-white rounded-lg shadow-lg p-8 ring-2 ring-blue/10">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">Explore</h2>
-              <p className="text-gray-700">
-    Welcome to our platform! We invite you to explore our extensive collection of courses, carefully curated to cover a diverse range of subjects and proficiency levels. Whether you're a beginner looking to dive into a new field or an expert seeking to deepen your knowledge, our courses cater to learners of all backgrounds and interests. Take your time to browse through our offerings and embark on a journey of discovery and learning with us.
-</p>
-            </div>
+    <h2 className="text-xl font-bold text-gray-800 mb-4">Contact Us</h2>
+    <p className="text-gray-700">
+        Thank you for visiting our platform! We are here to assist you with any inquiries or support you may need. Our dedicated team is available to answer your questions and provide the guidance you require. Whether you need help with course selection, technical support, or general information, feel free to reach out to us. We are committed to ensuring your experience with us is smooth and enriching. 
+    </p>
+</div>
+
             </Link>
           </div>
         </div>

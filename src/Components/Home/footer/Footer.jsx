@@ -63,8 +63,8 @@ function FooterPart() {
     {
       title: "Community",
       links: [
-        { label: "Discuss", Link: "/" },
-        { label: "Code Bits", Link: "/" },
+        // { label: "Discuss", Link: "/" },
+        // { label: "Code Bits", Link: "/" },
         { label: "Feeds", Link: "/PostFeeds" },
         { label: "Ask me!", Link: "/QuestionForm" },
       ],

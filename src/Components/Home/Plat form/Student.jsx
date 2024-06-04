@@ -13,7 +13,9 @@ const images = [
 
 const Student = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -56,12 +58,12 @@ const Student = () => {
             Find Your Course
           </button>
         </div>
-        <div className="    mr-32 ">
+        <div className=" ">
           {/* <img src={HeroStudent} alt="Hero Student" /> */}
-          <div class="lg:inset-y-0 lg:right-0 lg:w-[500px] w-96  border-1  border-gray-500 relative">
+          <div class="lg:inset-y-0 lg:right-0 lg:w-[500px]  border-1  border-gray-500 relative">
             <div className="overflow-hidden">
               <img
-                className="md:w-[550px] md:h-[450px] py-10"
+                className="md:w-[550px] md:h-[450px] w-[300] h-[300] py-10"
                 // src={images[currentSlide]}
                 src="https://www.shutterstock.com/image-vector/3d-web-vector-illustrations-online-600nw-2152289507.jpg"
                
