@@ -19,7 +19,7 @@ const images = [
 
 const FullStackJavaDevelopment = () => {
   const [courseName] = useState(" Testing"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 

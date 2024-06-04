@@ -22,9 +22,9 @@ const images = [
 
 const FullStackPythonDevelopment = () => {
   const [courseName] = useState("full stack python developmwnt"); // Placeholder for course name
-  // const [coursePrice] = useState(199);
+  // const [coursePrice] = useState(14999);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
   const navigate = useNavigate(); // useNavigate hook for navigation
 
   useEffect(() => {

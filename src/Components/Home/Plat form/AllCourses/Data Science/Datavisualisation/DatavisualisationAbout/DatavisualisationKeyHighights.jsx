@@ -134,15 +134,17 @@ function DatavisualisationKeyHighights() {
         <div id="subdiv1" className="pt-4">
           <div id="h1" className="">
             <p className="md:lg:w-auto w-96 font-semibold font-lora text-xl p-2 text-pink-900">
-              Data Visualization Course Highlights
+              Data Visualization Course 
+              <br />
+               Highlights
             </p>
           </div>
           <div
             id="h2"
             className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
           >
-            <p className="text-5xl font-bold  font-lora ">What does this</p>
-            <p className="text-5xl font-bold text-yellow-700 font-lora inline">
+            <p className="md:text-5xl text-xl font-bold  font-lora ">What does this</p>
+            <p className="md:text-5xl text-xl font-bold text-yellow-700 font-lora inline">
               Course have to offer?
             </p>
           </div>
@@ -157,7 +159,7 @@ function DatavisualisationKeyHighights() {
               <div
                 key={index}
                 onClick={() => handleClick(index)}
-                className={`hover:text-violet-700 p-5 text-start hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-80 lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden shadow-lg shadow-gray-400 transition-transform duration-300 transform hover:scale-105 ${
+                className={`hover:text-violet-700 p-5 text-start hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-52 lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden shadow-lg shadow-gray-400 transition-transform duration-300 transform hover:scale-105 ${
                   selectedItem === index
                     ? "bg-cyan-600  text-white hover:text-white border-none"
                     : ""

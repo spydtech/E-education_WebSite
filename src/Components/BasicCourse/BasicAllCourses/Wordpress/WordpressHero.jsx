@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const WordpressHero = () => {
   const [courseName] = useState("Basic WordPress"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters
     navigate("/course-details", { state: { courseName, coursePrice } });

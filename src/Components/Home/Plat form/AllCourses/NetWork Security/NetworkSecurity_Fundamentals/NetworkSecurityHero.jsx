@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const NetworkSecurityHero = () => {
   const [courseName] = useState("Network Security Fundamentals"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
 
   const navigate = useNavigate();
   const handleEnroll = () => {

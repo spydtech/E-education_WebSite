@@ -21,7 +21,7 @@ const ParticularFullStack = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const [courseName] = useState("Master Full Stack Web Development"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
 
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters

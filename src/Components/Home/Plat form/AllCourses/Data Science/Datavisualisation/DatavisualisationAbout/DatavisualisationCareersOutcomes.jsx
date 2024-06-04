@@ -10,7 +10,7 @@ const DatavisualisationOutcomes = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="md:text-6xl text-xl font-lora">
           Explore the
           <p className="text-violet-800 my-2">Data Visualization Program</p>
         </p>

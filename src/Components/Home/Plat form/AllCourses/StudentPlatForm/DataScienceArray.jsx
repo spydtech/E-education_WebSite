@@ -51,7 +51,7 @@ const DataScienceArray = () => {
       title: "Data Science with Python",
       description:
         "Master data science concepts and techniques using Python, including libraries like NumPy, Pandas, and Matplotlib.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqXD4t6RsUw-DI-72VKpe7DfmqARUJePZ2oOFrRSsKg&s",
+      image: "https://www.softwaretechnologyconsultants.com/wp-content/uploads/2022/07/python-data-yand.jpg",
       link: "/data_Science/data-science-with-python",
     },
     {
@@ -59,7 +59,7 @@ const DataScienceArray = () => {
       title: "Machine Learning",
       description:
         "Dive deep into machine learning algorithms, model evaluation, and real-world applications.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp29onQyD0OWe3CebFWRXojKYMnrd1kYvMi2E26RdbLA&s",
+      image: "https://media.licdn.com/dms/image/D5612AQGmShKxO7LjFg/article-cover_image-shrink_720_1280/0/1685687818834?e=2147483647&v=beta&t=-eTltvFtKqAeqteVzDYJP9qKQSC8NB9bgJkQmVcOqME",
       link: "/data_Science/machine-Learning",
     },
     {
@@ -67,7 +67,7 @@ const DataScienceArray = () => {
       title: "Data Visualization",
       description:
         "Learn how to create compelling visualizations and communicate data insights effectively.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbP6OsiwOE84EbESpngmC6vXl9TlvFrzI9zVdR5hfLtQ&s",
+      image: "https://visme.co/blog/wp-content/uploads/2021/08/Data-Visualization-thumbnail.jpg",
       link: "/data_Science/data-visualization",
     },
     {
@@ -75,7 +75,7 @@ const DataScienceArray = () => {
       title: "Big Data Analytics",
       description:
         "Understand the principles and tools for processing and analyzing large datasets, including Hadoop and Spark.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSSwWQgP37V68ba2IRUb-evTUJ9yInu5E74bJwW7LRow&s",
+      image: "https://esomar.org/uploads/attachments/ckwc7d0xl0rfm343vroi414xo-untitled-design-1.full.png",
       link: "/data_Science/big-data-analysis",
     },
     {
@@ -83,33 +83,10 @@ const DataScienceArray = () => {
       title: "Data Analytics",
       description:
         "Gain a solid foundation in statistical methods and their applications in data science.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbbm2jd1osOphRA5Qjf93Utd0GYYbtjTDp6BQE6R-K7g&s",
+      image: "https://cerebra-consulting.com/wp-content/uploads/2019/10/Big-Data-Background.jpg",
       link: "/data_Science/data-Analatics",
     },
-    // {
-    //   id: 7,
-    //   title: "Deep Learning",
-    //   description:
-    //     "Explore deep learning techniques, neural networks, and their applications in various domains.",
-    //   image: "https://example.com/images/deep-learning.jpg",
-    //   link: "/deep-learning",
-    // },
-    // {
-    //   id: 8,
-    //   title: "Natural Language Processing",
-    //   description:
-    //     "Learn about natural language processing (NLP) techniques for text analysis and language generation.",
-    //   image: "https://example.com/images/natural-language-processing.jpg",
-    //   link: "/natural-language-processing",
-    // },
-    // {
-    //   id: 9,
-    //   title: "Data Science Capstone Project",
-    //   description:
-    //     "Apply your data science skills to a real-world project and showcase your expertise.",
-    //   image: "https://example.com/images/data-science-capstone.jpg",
-    //   link: "/data-science-capstone",
-    // },
+  
   ];
 
   const filteredCourses = dataScienceCourses.filter((course) =>
@@ -171,26 +148,27 @@ const CourseCard = ({ course, handleWishList, setShow }) => {
         <img
           src={image}
           alt={title}
-          className="h-[240px] w-full hover:scale-105 transition-all duration-500 shadow-2xl"
+          className="h-auto md:h-[200px] lg:h-[250px] w-full object-cover hover:scale-105 transition-all duration-500 shadow-2xl"
         />
         <div
           className="text-center px-4 py-8 bg-white shadow-lg rounded-md
-                md:w-3/4 mx-auto absolute left-0 right-0 -bottom-12 hover:-translate-y-4 transition-all duration-300"
+                md:w-[] mx-auto absolute left-0 right-0 -bottom-12 hover:-translate-y-4 transition-all duration-300"
         >
           <p>
             {description} <span className="font-bold">with {title}</span>
           </p>
         </div>
       </Link>
-        <button id="wishlist" onClick={handleDataTransfer}>
-          {liked ? (
-            <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
-          ) : (
-            <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
-          )}
-        </button>
+      <button id="wishlist" onClick={handleDataTransfer}>
+        {liked ? (
+          <FcLike className="w-8 transition-transform duration-300 transform hover:scale-125 rounded h-8 text-white top-3 left-3 absolute" />
+        ) : (
+          <FcLikePlaceholder className="w-8 rounded text-red-800 h-8 transition-transform duration-300 transform hover:scale-125 top-3 left-3 absolute" />
+        )}
+      </button>
     </div>
   );
 };
+
 
 export default DataScienceArray;

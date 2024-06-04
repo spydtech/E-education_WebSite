@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const CloudFoot = () => {
   const [courseName] = useState("Cloud Computing"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
 
   const navigate = useNavigate();
   const handleEnroll = () => {

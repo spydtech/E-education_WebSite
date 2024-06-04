@@ -10,7 +10,7 @@ import MeanStackDeveloper from "../Developer/MeanStackDeveloper";
 
 const MeanStackDevelopment = () => {
   const [courseName] = useState("Master MEAN Stack Development"); // Moved inside component
-  const [coursePrice] = useState(199); // Moved inside component
+  const [coursePrice] = useState(14999); // Moved inside component
   const [currentSlide, setCurrentSlide] = useState(0);
   const navigate = useNavigate(); // useNavigate hook for navigation
 

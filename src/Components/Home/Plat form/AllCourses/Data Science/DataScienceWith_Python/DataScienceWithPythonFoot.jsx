@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function DataScienceWithPythonFoot() {
   const [courseName] = useState("Data Science With Python"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
 
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters

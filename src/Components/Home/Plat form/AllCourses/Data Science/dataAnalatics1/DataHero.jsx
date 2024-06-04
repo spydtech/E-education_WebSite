@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { IoMdShare } from "react-icons/io";
 const DataHero = () => {
   const [courseName] = useState("Data Analytics"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
 
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters
