@@ -7,19 +7,11 @@ import Community from "./community";
 import SuccessStory from "./successstory";
 import Delivery_Methods from "./Delivery_Methods";
 import DotnetDeveloperSkills from "./DotnetDeveloperSkills";
-const images = [
-  "https://media.istockphoto.com/id/1446316252/vector/professional-developer-working-in-the-office.jpg?s=612x612&w=0&k=20&c=Fz5rcLEtCyNWtpzf-bttOVrSkqCb8OHhieqYHy-8QRg=",
-  "https://media.istockphoto.com/id/1500380376/vector/developers-working.jpg?s=612x612&w=0&k=20&c=7UFwRLVrvJEN7EpLu_-jUU8KYAoB8xc8pyNlprtc9i8=",
-  "https://media.istockphoto.com/id/1291641959/vector/hackathon-banner-cartoon-people-at-work-project-writing-code.jpg?s=612x612&w=0&k=20&c=HISYu901-9_AhqFB-5QeeDbH2vZfYmRZInGmrCz5isw=",
-  "https://media.istockphoto.com/id/1446316252/vector/professional-developer-working-in-the-office.jpg?s=612x612&w=0&k=20&c=Fz5rcLEtCyNWtpzf-bttOVrSkqCb8OHhieqYHy-8QRg=",
-];
+
 const DotNetDevelopment = () => {
   const [courseName] = useState("Master Full Stack .Net Development"); // Placeholder for course name
   const [coursePrice] = useState(14999);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const navigate = useNavigate();
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters
@@ -27,21 +19,6 @@ const DotNetDevelopment = () => {
   };
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 3000); // Change the time interval here (in milliseconds) for auto-sliding
-
-    return () => clearInterval(interval);
-  }, [currentSlide]);
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
 
   return (
     <>
@@ -75,25 +52,9 @@ const DotNetDevelopment = () => {
         </div>
         <div className="relative pl-12">
           <img
-            className="h-[300px] w-[500px]"
-            src={images[currentSlide]}
-            alt={`Slide ${currentSlide + 1}`}
+            src="https://www.interviewbit.com/blog/wp-content/uploads/2021/08/web-development.jpg"
+            className="pr-4 h-[350px]"
           />
-
-          <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-8">
-            <button
-              onClick={prevSlide}
-              className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
-            >
-              &larr;
-            </button>
-            <button
-              onClick={nextSlide}
-              className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
-            >
-              &rarr;
-            </button>
-          </div>
         </div>
       </div>
       <DotnetDeveloperSkills />

@@ -10,26 +10,26 @@ import { MdModelTraining } from "react-icons/md";
 function Delivery_Methods() {
   return (
     <div className="mb-32">
-      <div id="heading" className=" py-10 space-y-2 px-32  ">
-        <h1 className="text-center font-bold text-5xl md:lg:sm:w-auto w-96 text-violet-800 font-lora">
+      <div id="heading" className="py-10 space-y-2 px-8 md:px-32">
+        <h1 className="text-center font-bold text-5xl w-auto md:text-lg lg:text-xl sm:text-2xl text-violet-800 font-lora">
           Our Available Delivery Methods
         </h1>
-        <h1 className=" flex justify-center md:lg:sm:w-auto w-96 text-cyan-500">
+        <h1 className="flex justify-center w-auto text-cyan-500">
           <IoRemoveOutline className="text-[40px]" />
           <IoReorderThreeOutline className="text-[40px]" />{" "}
           <IoRemoveOutline className="text-[40px]" />
         </h1>
-        <p className="text-center text-xl md:lg:sm:w-full w-[400px] font-lora">
+        <p className="text-center text-xl w-auto md:text-lg lg:text-base sm:text-xl font-lora">
           The E-Education is World's Leading Organisation for training
-          professionals.The E-Education provides training is 490+ location is
-          around 221+ countries,covering 3000 subjects with the following
+          professionals. The E-Education provides training in 490+ locations
+          around 221+ countries, covering 3000 subjects with the following
           delivery methods
         </p>
       </div>
-      <div className="flex md:flex-row justify-center items-center gap-24">
+      <div className="flex md:flex-row justify-center items-center">
         <div
           id="submain"
-          className="grid  lg:grid-cols-4  md:grid-cols-2 md:lg:sm:px-0  grid-cols-1  lg:md:xl:gap-16 mx-20 items-center justify-center"
+          className="grid gap-8 gap-y-24 lg:gap-x-24 lg:grid-cols-4   md:grid-cols-2 md:lg:sm:px-0  grid-cols-1  lg:md:xl:gap-20 mx-20 items-center justify-center"
         >
           <div id="1" className=" relative">
             <div className=" relative" id="mainone">

@@ -3,43 +3,18 @@ import { useNavigate } from "react-router-dom"; // Add this import for navigatio
 import Navbar from "../../../../../../../Navbar";
 import AboutCourses from "./AboutCourses";
 import Community from "../Community/community";
-import SuccessStory from "../../SuccessStory/successstory"
+import SuccessStory from "../SuccessStory/successstory";
 import Footer from "../../../../../../footer/Footer";
+
 import Delivery_Methods from "../deliverymethods/Delivery_Methods";
 import JavascriptDeveloperSkills from "../Developer/JavascriptDeveloperSkills";
-
-const images = [
-  "https://media.istockphoto.com/id/1446316252/vector/professional-developer-working-in-the-office.jpg?s=612x612&w=0&k=20&c=Fz5rcLEtCyNWtpzf-bttOVrSkqCb8OHhieqYHy-8QRg=",
-  "https://media.istockphoto.com/id/1500380376/vector/developers-working.jpg?s=612x612&w=0&k=20&c=7UFwRLVrvJEN7EpLu_-jUU8KYAoB8xc8pyNlprtc9i8=",
-  "https://media.istockphoto.com/id/1291641959/vector/hackathon-banner-cartoon-people-at-work-project-writing-code.jpg?s=612x612&w=0&k=20&c=HISYu901-9_AhqFB-5QeeDbH2vZfYmRZInGmrCz5isw=",
-  "https://media.istockphoto.com/id/1446316252/vector/professional-developer-working-in-the-office.jpg?s=612x612&w=0&k=20&c=Fz5rcLEtCyNWtpzf-bttOVrSkqCb8OHhieqYHy-8QRg=",
-];
 
 const JavascriptDevelopment = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [courseName] = useState("Master Full Stack Java Development"); // Moved inside component
-  const [coursePrice] = useState(14999); // Moved inside component
+  const [coursePrice] = useState(199); // Moved inside component
   const navigate = useNavigate(); // useNavigate hook for navigation
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 3000); // Change the time interval here (in milliseconds) for auto-sliding
-
-    return () => clearInterval(interval);
-  }, [currentSlide]);
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters
     navigate("/course-details", { state: { courseName, coursePrice } });
@@ -78,25 +53,9 @@ const JavascriptDevelopment = () => {
         </div>
         <div className="relative pl-12">
           <img
-            className="h-[300px] w-[500px] object-cover object-center"
-            src={images[currentSlide]}
-            alt={`Slide ${currentSlide + 1}`}
+            src="https://miro.medium.com/v2/resize:fit:960/1*YfEOtukQSNXUOBcgZjuKLg.png"
+            className="pr-4 h-[350px]"
           />
-
-          <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-8">
-            <button
-              onClick={prevSlide}
-              className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
-            >
-              &larr;
-            </button>
-            <button
-              onClick={nextSlide}
-              className="bg-black text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
-            >
-              &rarr;
-            </button>
-          </div>
         </div>
       </div>
       <JavascriptDeveloperSkills />

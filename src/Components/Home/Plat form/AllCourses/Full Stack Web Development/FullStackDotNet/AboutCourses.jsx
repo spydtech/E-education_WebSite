@@ -3,10 +3,12 @@ import About from "./About";
 import Outcomes from "./Outcomes";
 // import MeanStackDevFQACourses from "./MeanStackDevFQACourses";
 import MeanStackDev from "./DotnetDevFQACourses";
+import { IoMenu } from "react-icons/io5";
 import DotnetDevelopmentTestimonioals from "./DotnetDevelopmentTestimonioals";
 
 const AboutCourses = () => {
   const [activeTab, setActiveTab] = useState("tab1");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     // Initialize the first tab
@@ -20,11 +22,25 @@ const AboutCourses = () => {
 
   return (
     <>
-      <div className="w-full px-16  "></div>
+      <div className="w-full px-24"></div>
       <div className="w-full mt-10 px-16">
+        {/* Menu Icon */}
+        <div className="block lg:hidden mb-4">
+          <button
+            className="px-4 py-2 font-semibold border rounded-lg hover:bg-blue-800 hover:text-white focus:outline-none"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <IoMenu />
+          </button>
+        </div>
+
         {/* Tab Buttons */}
-        <div className="p-2 rounded-t-lg overflow-x-auto">
-          <div className="flex space-x-4">
+        <div
+          className={`p-2 rounded-t-lg overflow-x-auto lg:flex lg:space-x-4 ${
+            menuOpen ? "block" : "hidden"
+          }`}
+        >
+          <div className="flex flex-col space-y-2 lg:space-y-0 lg:flex-row lg:space-x-4">
             <button
               className={`px-4 py-2 font-semibold border-b-4 border-blue-800 rounded-lg hover:bg-blue-800 hover:text-white focus:outline-none tab-button ${
                 activeTab === "tab1" ? "active" : ""
@@ -77,7 +93,7 @@ const AboutCourses = () => {
         </div>
 
         {/* Tab Content */}
-        <div className=" rounded-lg  pb-5">
+        <div className="rounded-lg pb-5">
           <div
             id="tab1"
             className={`p-4 tab-content bg-white rounded-lg ${

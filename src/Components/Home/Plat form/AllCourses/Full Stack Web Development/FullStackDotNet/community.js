@@ -38,8 +38,8 @@ function Community() {
   ];
 
   return (
-    <div className="h-120  bg-gradient-to-r from-pink-600 to-amber-300">
-      <div className="container mx-auto px-4 py-8 text-center relative mt-16">
+    <div className="h-120  bg-gradient-to-r from-pink-600 to-amber-300 pt-20">
+      <div className="container mx-auto px-4 py-8 text-center relative ">
         <div className="relative mt-16  ">
           <div className=" mt-16 images-container absolute inset-0 flex justify-between items-center pointer-events-none">
             {/* Place the techimage in the center */}

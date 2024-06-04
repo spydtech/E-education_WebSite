@@ -1,16 +1,15 @@
 import React from "react";
-import techimage from "../../../../../../../../assets/Assests_MeanStack/communityimages/techimage.png";
-// import techimage from "../../../../../../../assets/Assests_MeanStack/communityimages/techimage.png";
-import kid1 from "../../../../../../../../assets/Assests_MeanStack/communityimages/kid1.png";
-import kid2 from "../../../../../../../../assets/Assests_MeanStack/communityimages/kid2.png";
-import women1 from "../../../../../../../../assets/Assests_MeanStack/communityimages/women1.png";
-import women2 from "../../../../../../../../assets/Assests_MeanStack/communityimages/women2.png";
-import artificialigence from "../../../../../../../../assets/Assests_MeanStack/communityimages/artificialinteligence.png";
-import discussion from "../../../../../../../../assets/Assests_MeanStack/communityimages/discussion.png";
-import gathering from "../../../../../../../../assets/Assests_MeanStack/communityimages/gathering.png";
-import internationalimage from "../../../../../../../../assets/Assests_MeanStack/communityimages/internationalimage.png";
-import success from "../../../../../../../../assets/Assests_MeanStack/communityimages/success.png";
-import thinking from "../../../../../../../../assets/Assests_MeanStack/communityimages/thinking.png";
+import techimage from "../../../../../../../../assets/techimage.png";
+import kid1 from "../../../../../../../../assets/kid1.png";
+import kid2 from "../../../../../../../../assets/kid2.png";
+import women1 from "../../../../../../../../assets/women1.png";
+import women2 from "../../../../../../../../assets/women2.png";
+import artificialigence from "../../../../../../../../assets/artificialinteligence.png";
+import discussion from "../../../../../../../../assets/discussion.png";
+import gathering from "../../../../../../../../assets/gathering.png";
+import internationalimage from "../../../../../../../../assets/internationalimage.png";
+import success from "../../../../../../../../assets/success.png";
+import thinking from "../../../../../../../../assets/thinking.png";
 
 function Community() {
   const calculatePosition = (total, index) => {
@@ -37,7 +36,7 @@ function Community() {
   ];
 
   return (
-    <div className="bg-[#b8b8ff] min-h-screen flex items-center justify-center mt-8">
+    <div className="bg-[#b8b8ff] min-h-screen flex items-center justify-center pt-20">
       <div className="container mx-auto px-4 py-8 text-center relative">
         <div className="relative mb-8">
           <div className="images-container absolute inset-0 flex justify-between items-center pointer-events-none">

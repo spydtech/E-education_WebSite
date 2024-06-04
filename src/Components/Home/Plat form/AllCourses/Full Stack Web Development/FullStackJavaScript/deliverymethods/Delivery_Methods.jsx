@@ -28,7 +28,7 @@ function Delivery_Methods() {
       <div className="flex md:flex-row justify-center items-center gap-24">
         <div
           id="submain"
-          className="grid gap-8 md:gap-24 lg:grid-cols-4 md:grid-cols-2 md:lg:sm:px-0 grid-cols-1 lg:md:xl:gap-16 mx-20 items-center justify-center"
+          className="grid gap-8 gap-y-32 lg:gap-x-24   lg:grid-cols-4 md:grid-cols-2 md:lg:sm:px-0 grid-cols-1 lg:md:xl:gap-16 mx-20 items-center justify-center"
         >
           <div id="1" className=" relative">
             <div className=" relative" id="mainone">

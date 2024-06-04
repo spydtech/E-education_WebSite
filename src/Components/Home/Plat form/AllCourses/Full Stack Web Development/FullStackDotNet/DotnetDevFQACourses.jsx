@@ -1,32 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Faq from "react-faq-component";
 
 const data = {
   title: (
     <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
-      Courses Covered in this MEAN Stack Development Program
+      Courses Covered in this .NET Development Program
     </div>
   ),
   rows: [
     {
       title: (
         <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
-          Front-end Development with Angular
+          C# Programming Fundamentals
         </div>
       ),
       content: (
         <div>
           <p className="text-base text-gray-600 text-md font-lora">
-            Learn the essentials of Angular for building dynamic user
-            interfaces.
+            Learn the basics of C# programming language.
           </p>
           <p className="text-base text-gray-600 text-md font-lora">
-            Explore TypeScript and how it integrates with Angular for robust
-            development.
+            Understand object-oriented programming (OOP) concepts in C#.
           </p>
           <p className="text-base text-gray-600 text-md font-lora">
-            Implement responsive design principles to ensure your applications
-            look great on any device.
+            Explore data types, control structures, and functions in C#.
           </p>
         </div>
       ),
@@ -34,20 +31,19 @@ const data = {
     {
       title: (
         <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
-          JavaScript Programming with Node.js
+          ASP.NET Web Development
         </div>
       ),
       content: (
         <div>
           <p className="text-base text-gray-600 text-md font-lora">
-            Master the fundamentals of JavaScript programming.
+            Build dynamic web applications using ASP.NET framework.
           </p>
           <p className="text-base text-gray-600 text-md font-lora">
-            Delve into server-side development using Node.js.
+            Understand the MVC (Model-View-Controller) architecture in ASP.NET.
           </p>
           <p className="text-base text-gray-600 text-md font-lora">
-            Learn to build scalable network applications using Node.js and
-            Express.
+            Implement server-side logic and data validation in ASP.NET.
           </p>
         </div>
       ),
@@ -55,20 +51,19 @@ const data = {
     {
       title: (
         <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
-          Database Management with MongoDB
+          Database Management with Entity Framework
         </div>
       ),
       content: (
         <div>
           <p className="text-base text-gray-600 text-md font-lora">
-            Get introduced to NoSQL databases with MongoDB.
+            Learn to interact with databases using Entity Framework.
           </p>
           <p className="text-base text-gray-600 text-md font-lora">
-            Learn to design and manage databases using MongoDB.
+            Understand ORM (Object-Relational Mapping) concepts.
           </p>
           <p className="text-base text-gray-600 text-md font-lora">
-            Explore data modeling, schema design, and CRUD operations in
-            MongoDB.
+            Perform CRUD operations using Entity Framework.
           </p>
         </div>
       ),
@@ -76,20 +71,19 @@ const data = {
     {
       title: (
         <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
-          Full Stack Application Development
+          Web API Development with .NET Core
         </div>
       ),
       content: (
         <div>
           <p className="text-base text-gray-600 text-md font-lora">
-            Integrate Angular, Node.js, and MongoDB to build full stack
-            applications.
+            Build RESTful APIs using .NET Core framework.
           </p>
           <p className="text-base text-gray-600 text-md font-lora">
-            Implement RESTful APIs to connect front-end and back-end components.
+            Implement authentication and authorization in Web APIs.
           </p>
           <p className="text-base text-gray-600 text-md font-lora">
-            Develop, test, and deploy MEAN stack applications.
+            Handle HTTP requests and responses in .NET Core.
           </p>
         </div>
       ),
@@ -117,20 +111,19 @@ const data = {
     {
       title: (
         <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
-          Project Management and Collaboration Tools
+          Software Development Life Cycle (SDLC)
         </div>
       ),
       content: (
         <div>
           <p className="text-base text-gray-600 text-md font-lora">
-            Get introduced to project management methodologies and tools.
+            Understand the phases of the software development life cycle.
           </p>
           <p className="text-base text-gray-600 text-md font-lora">
-            Learn to use tools like JIRA, Trello, and Slack for effective team
-            collaboration.
+            Learn about Agile and Waterfall methodologies.
           </p>
           <p className="text-base text-gray-600 text-md font-lora">
-            Manage project timelines, tasks, and communication efficiently.
+            Implement best practices for software development.
           </p>
         </div>
       ),
@@ -147,6 +140,14 @@ const config = {
   animate: true,
   tabFocus: true,
 };
+
+// export default function DotNetDev() {
+//   return (
+//     <div>
+//       <Faq data={data} styles={styles} config={config} />
+//     </div>
+//   );
+// }
 
 export default function MeanStackDev() {
   return (
