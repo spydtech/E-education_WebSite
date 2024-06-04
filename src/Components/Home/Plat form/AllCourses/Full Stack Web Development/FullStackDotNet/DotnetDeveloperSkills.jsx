@@ -100,8 +100,8 @@ import { IoRemoveOutline } from "react-icons/io5";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import DotnetDevelopmentCard from "./DotnetDevelopmentCard";
 // import skills from "../Assests_MeanStack/WebDeveloper/skills.png";
-import skills from "../../../../../../../assets/WebDeveloper/skills.png";
-import requirements from "../../../../../../../assets/WebDeveloper/requirements.png";
+import skills from "../../../../../../assets/WebDeveloper/skills.png";
+import requirements from "../../../../../../assets/WebDeveloper/requirements.png";
 const softSkills = [
   { name: "Problem Solving" },
   { name: "Teamwork" },

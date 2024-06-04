@@ -49,7 +49,7 @@ import FullStackWebDevelopment from "./Components/Home/Plat form/AllCourses/Full
 import FullStackDevops from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackDevops_Development/FullStackDevops_Development/FullStackDevopsDevelopment";
 import FullStackPythonDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/fullStackPython/fullStackPython/Main/FullStackPythonDevelopment";
 import FullStackJava from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackJava_Development/FullStackJava_Development/FullStackJavaDevelopment";
-import DotnetDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackDotNet/FullStackDotNet/DotnetDevelopment";
+import DotnetDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackDotNet/DotnetDevelopment";
 import FullStackJavaScript from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackJavaScript/FullStackJavaScript/Main/JavascriptDevelopment";
 import BasicCourses from "./Components/BasicCourse/BasicCourse";
 import AdvanceCourses from "./Components/AdvanceCourses/Advance_Courses";

@@ -20,11 +20,12 @@ const images = [
 const FullStackJavaDevelopment = () => {
   const [courseName] = useState(" Testing"); // Placeholder for course name
   const [coursePrice] = useState(199);
-
   const navigate = useNavigate();
-
-  // const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));

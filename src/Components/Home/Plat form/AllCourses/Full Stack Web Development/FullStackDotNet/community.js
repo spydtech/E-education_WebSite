@@ -1,17 +1,17 @@
 import React from "react";
 
 // import techimage from "../../../../../../../assets/Assests_FullStackDevops/communityimages/techimage.png";
-import techimage from "../../../../../../../assets/techimage.png";
-import kid1 from "../../../../../../../assets/kid1.png";
-import kid2 from "../../../../../../../assets/kid2.png";
-import women1 from "../../../../../../../assets/women1.png";
-import women2 from "../../../../../../../assets/women2.png";
-import artificialigence from "../../../../../../../assets/artificialinteligence.png";
-import discussion from "../../../../../../../assets/discussion.png";
-import gathering from "../../../../../../../assets/gathering.png";
-import internationalimage from "../../../../../../../assets/internationalimage.png";
-import success from "../../../../../../../assets/success.png";
-import thinking from "../../../../../../../assets/thinking.png";
+import techimage from "../../../../../../assets/techimage.png";
+import kid1 from "../../../../../../assets/kid1.png";
+import kid2 from "../../../../../../assets/kid2.png";
+import women1 from "../../../../../../assets/women1.png";
+import women2 from "../../../../../../assets/women2.png";
+import artificialigence from "../../../../../../assets/artificialinteligence.png";
+import discussion from "../../../../../../assets/discussion.png";
+import gathering from "../../../../../../assets/gathering.png";
+import internationalimage from "../../../../../../assets/internationalimage.png";
+import success from "../../../../../../assets/success.png";
+import thinking from "../../../../../../assets/thinking.png";
 
 function Community() {
   const calculatePosition = (total, index) => {

@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from "react";
-// import React, { useState } from "react";
-// import axios from "axios";
 import { useNavigate } from "react-router-dom";
-// import Navbar from "../../../../Navbar";
-import Navbar from "../../../../../../Navbar";
-import Footer from "../../../../../footer/Footer";
+import Navbar from "../../../../../Navbar";
+import Footer from "../../../../footer/Footer";
 import AboutCourses from "./AboutCourses";
 import Community from "./community";
 import SuccessStory from "./successstory";
-// import Award from "../Award/Award";
-
 import Delivery_Methods from "./Delivery_Methods";
-// import MeanStackDeveloper from "../Developer/MeanStackDeveloper";
 import DotnetDeveloperSkills from "./DotnetDeveloperSkills";
 const images = [
   "https://media.istockphoto.com/id/1446316252/vector/professional-developer-working-in-the-office.jpg?s=612x612&w=0&k=20&c=Fz5rcLEtCyNWtpzf-bttOVrSkqCb8OHhieqYHy-8QRg=",
@@ -21,8 +15,11 @@ const images = [
 ];
 const DotNetDevelopment = () => {
   const [courseName] = useState("Master Full Stack .Net Development"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate();
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters

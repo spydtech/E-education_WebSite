@@ -21,6 +21,9 @@ const FullStackDevopsDevelopment = () => {
     "https://media.istockphoto.com/id/1490316279/vector/software-development-programming-coding-people-write-code-settings-and-testing-developing.jpg?s=612x612&w=0&k=20&c=2fQW1Iz3Di-TpuVYo2_6izYHkYgDMrqEwZWf1Fn5pz4=",
     "https://media.istockphoto.com/id/1369014405/vector/programmer-working-modern-flat-concept-for-web-banner-design-developer-creates-software-and.jpg?s=612x612&w=0&k=20&c=plT6sJxmljrSNO3D_mwcyWemBtisgK9iEFtLBNJ_6-0=",
   ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
