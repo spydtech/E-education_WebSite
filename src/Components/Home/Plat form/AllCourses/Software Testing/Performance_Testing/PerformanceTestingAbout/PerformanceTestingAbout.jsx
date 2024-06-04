@@ -7,13 +7,13 @@ import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg
 const PerformanceTestingAbout = () => {
   return (
     <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br  from-[#474973] to-[#0d0c1d]">
-      <div className="pt-0">
+      <div className="pt-0 pl-4">
         <p className="text-[#30c5ff] text-xl font-medium">
           About The Performance Testing Course
         </p>
       </div>
-      <div className="py-2">
-        <p className="text-6xl font-lora">
+      <div className="py-2 pl-4">
+        <p className="md:text-5xl text-2xl font-lora">
           Discover the
           <p className="text-[#30c5ff] my-2">Performance Testing Program</p>
         </p>
