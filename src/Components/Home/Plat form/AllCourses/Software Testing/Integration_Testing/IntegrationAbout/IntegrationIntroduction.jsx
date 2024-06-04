@@ -8,7 +8,7 @@ function IntegrationIntroduction() {
       <div className="w-full flex-shrink-0 px-4 py-8">
         <div className="h-[400px] flex justify-center">
           <div>
-            <h2 className="text-3xl font-medium mb-4 text-[#f9ac13] font-lora">
+            <h2 className="text-2xl font-medium mb-4 text-[#f9ac13] font-lora">
               {heading}
             </h2>
             <ul className="list-disc list-inside text-xl font-lora">
@@ -91,7 +91,7 @@ function IntegrationIntroduction() {
               <p className="text-[#f9ac13] text-xl font-medium">Introduction</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora">
+              <p className="md:text-5xl text-2xl font-lora">
                 So what is
                 <p className="text-[#f9ac13] inline pl-2">
                   Integration Testing?
@@ -105,7 +105,7 @@ function IntegrationIntroduction() {
             </div>
           </div>
         </div>
-        <div id="div2" className="px-10">
+        <div id="div2" className="">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
             <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
               <div className="relative w-full overflow-hidden">

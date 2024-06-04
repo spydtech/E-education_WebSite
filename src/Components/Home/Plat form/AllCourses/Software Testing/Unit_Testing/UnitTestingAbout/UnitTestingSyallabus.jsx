@@ -35,12 +35,12 @@ function UnitTestingSyllabus() {
           id="div1"
           className="flex items-center justify-center xl:lg:md:w-auto"
         >
-          <div id="headings" className="grid grid-cols-1 text-start px-20">
+          <div id="headings" className="grid grid-cols-1 text-start pl-4">
             <div>
               <p className="text-[#f9ac13] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora">
+              <p className="md:text-5xl text-2xl font-lora">
                 Discover What You
                 <p className="text-[#f9ac13] inline pl-2">Will Learn</p>
               </p>
@@ -60,10 +60,10 @@ function UnitTestingSyllabus() {
           <div className="container mx-auto">
             {data.map((category, index) => (
               <div key={index} className="mb-6">
-                <h2 className="text-4xl font-semibold mb-2 text-[#f9ac13]">
+                <h2 className="md:text-4xl text-2xl font-semibold mb-2 text-[#f9ac13]">
                   {category.heading}
                 </h2>
-                <h3 className="text-2xl font-medium mb-2">
+                <h3 className="md:text-2xl text-xl font-medium mb-2">
                   {category.subheading}
                 </h3>
                 <ul className="list-disc ml-6 text-[16px]">

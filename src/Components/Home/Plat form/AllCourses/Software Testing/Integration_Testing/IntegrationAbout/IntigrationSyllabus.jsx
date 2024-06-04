@@ -32,12 +32,12 @@ function IntegrationSyllabus() {
           id="div1"
           className="flex items-center justify-center xl:lg:md:w-auto"
         >
-          <div id="headings" className="grid grid-cols-1 text-start px-20">
+          <div id="headings" className="grid grid-cols-1 text-start pl-4">
             <div>
               <p className="text-[#f9ac13] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora">
+              <p className="md:text-5xl text-2xl font-lora">
                 Discover What You
                 <span className="text-[#f9ac13] inline pl-2">Will Learn</span>
               </p>

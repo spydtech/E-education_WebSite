@@ -7,8 +7,8 @@ const SoftwareTestingCard = () => {
     <>
       <section id="portfolio" className="portfolio-section py-16 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold">
+          <div className="pl-4 mb-12">
+            <h2 className="md:text-4xl text-2xl font-bold">
               Mastering Software Testing: Enhance Your Expertise
             </h2>
             <p className="text-lg text-[#f9ac13] font-semibold mt-2">
@@ -19,7 +19,7 @@ const SoftwareTestingCard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-1">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/software-testing-abstract-concept-illustration_335657-3857.jpg?w=740"
@@ -39,7 +39,7 @@ const SoftwareTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-2">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/software-development-testing-abstract-concept-illustration_335657-3741.jpg?w=740"
@@ -59,7 +59,7 @@ const SoftwareTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-3">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/software-testing-quality-assurance-abstract-concept-illustration_335657-3844.jpg?w=740"
@@ -80,7 +80,7 @@ const SoftwareTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-4">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/software-quality-assurance-abstract-concept-illustration_335657-3722.jpg?w=740"
@@ -101,7 +101,7 @@ const SoftwareTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-5">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/software-testing-engineer-abstract-concept-illustration_335657-3779.jpg?w=740"
@@ -123,7 +123,7 @@ const SoftwareTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-6">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/quality-assurance-abstract-concept-illustration_335657-3790.jpg?w=740"
