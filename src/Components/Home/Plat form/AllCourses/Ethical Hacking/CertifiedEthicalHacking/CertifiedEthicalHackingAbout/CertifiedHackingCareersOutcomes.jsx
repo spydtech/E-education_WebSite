@@ -36,30 +36,30 @@ function CertifiedEthicalHackingCareersOutcomes() {
             id="a"
             className="grid grid-rows-2 grid-cols-2 gap-4 p-3 hover:cursor-pointer text-xl font-medium my-6 items-center border-2 border-opacity-15 rounded-md overflow-hidden shadow-lg shadow-gray-400"
           >
-            <div id="x" className="flex items-center space-x-4">
-              <BsGraphUpArrow className="w-10 h-10 text-green-700" />
+            <div id="x" className="flex items-center flex-col md:flex-row space-x-4 gap-2">
+              <BsGraphUpArrow className="w-10 h-10 text-green-700 mr-6" />
               <div>
                 <p>57%</p>
                 <p className="text-gray-500 text-[16px]">Average salary hike</p>
               </div>
             </div>
-            <div id="y" className="flex items-center space-x-4">
+            <div id="y" className="flex items-center flex-col md:flex-row space-x-4 gap-2">
               <FaPeopleGroup className="w-10 h-10 text-blue-700" />
               <div>
                 <p>100+</p>
                 <p className="text-gray-500 text-[16px]">Hiring partners</p>
               </div>
             </div>
-            <div id="z" className="flex items-center space-x-4">
-              <FcPositiveDynamic className="w-10 h-10 text-green-700" />
+            <div id="z" className="flex items-center flex-col md:flex-row space-x-4 gap-2">
+              <FcPositiveDynamic className="w-10 h-10 text-green-700 mr-6" />
               <div>
                 <p>5/6</p>
                 <p className="text-gray-500 text-[16px]">
-                  Learners saw positive career growth
+                   career growth
                 </p>
               </div>
             </div>
-            <div id="w" className="flex items-center space-x-4">
+            <div id="w" className="flex items-center flex-col md:flex-row space-x-4 gap-2">
               <GrTransaction className="w-10 h-10 text-red-800" />
               <div>
                 <p>300+</p>

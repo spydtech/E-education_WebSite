@@ -61,12 +61,13 @@ const Student = () => {
           <div class="lg:inset-y-0 lg:right-0 lg:w-[500px] w-96  border-1  border-gray-500 relative">
             <div className="overflow-hidden">
               <img
-                className="w-[550px] h-[450px] py-10"
-                src={images[currentSlide]}
-                alt={`Slide ${currentSlide + 1}`}
+                className="md:w-[550px] md:h-[450px] py-10"
+                // src={images[currentSlide]}
+                src="https://www.shutterstock.com/image-vector/3d-web-vector-illustrations-online-600nw-2152289507.jpg"
+               
               />
             </div>
-            <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-4">
+            {/* <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-4">
               <button
                 onClick={prevSlide}
                 className=" text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
@@ -79,7 +80,7 @@ const Student = () => {
               >
                 &rarr;
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

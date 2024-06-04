@@ -73,14 +73,7 @@ const CertifiedEthicalHackingNavigation = () => {
               </button>
             </li>
           ))}
-          <li className="mt-2 sm:mt-0">
-            <button
-              className="text-black text-2xl hover:text-violet-700 transition duration-300"
-              onClick={() => handleNextSection("next")}
-            >
-              <TbPlayerTrackNextFilled />
-            </button>
-          </li>
+       
         </ul>
       </nav>
       <div className="px-4 sm:px-6">
