@@ -31,11 +31,11 @@ const CybersecurityBeginners = () => {
       <div className="lg:container lg:mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12">
           {/* Left Section */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-3xl lg:text-5xl font-lora text-blue-600 mb-6 font-bold font-lora pl-8 pt-4">
+          <div className="text-left">
+            <h1 className="text-xl lg:text-5xl  text-blue-600 mb-6 font-bold font-lora  pt-4">
               Cybersecurity for Beginners: Safeguard Your Digital World
             </h1>
-            <p className="text-lg text-gray-700 leading-relaxed pl-8 font-lora">
+            <p className="text-lg text-gray-700 leading-relaxed  font-lora">
               In today's interconnected world, cybersecurity stands as the first
               line of defense against an array of digital threats. With cyber
               attacks becoming increasingly sophisticated, protecting sensitive
@@ -45,16 +45,16 @@ const CybersecurityBeginners = () => {
             </p>
             <button
               onClick={handleEnroll}
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded inline-block mt-6 lg:ml-8 shadow-lg transition-transform transform hover:-translate-y-1"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded inline-block mt-6  shadow-lg transition-transform transform hover:-translate-y-1"
             >
               Enroll now
             </button>
           </div>
 
           {/* Right Section */}
-          <div className="text-center lg:text-right">
+          <div className="text-right">
             <img
-              src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2023-12-22/cyber-security-certifications-thumbnail.jpg"
+              src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-01/10/full/1704901824-8672.jpg?im=FitAndFill=(826,465)"
               alt="cybersecurity"
               className="mx-auto lg:mx-0 mt-8 rounded-lg shadow-lg"
               style={{ height: "370px", width: "800px" }}
@@ -63,16 +63,16 @@ const CybersecurityBeginners = () => {
         </div>
 
         {/* Course Highlights Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-0 mt-12">
-          <div className="text-center lg:text-right">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 mt-8">
+          <div className="text-right">
             <img
               src="https://d2ds8yldqp7gxv.cloudfront.net/Blog+Explanatory+Images/Which+Certification+is+best+for+Cybersecurity+1.webp"
               alt="learning"
-              className="w-80  lg:w-[450px] h-80 lg:h-96 mx-auto lg:mx-0 "
+              className="w-[450px] h-80 lg:h-96 mx-auto lg:mx-0 "
             />
           </div>
-          <div className="lg:w-1/2 lg:ml-12 mt-8 lg:mt-0">
-            <h2 className="text-3xl lg:text-4xl text-blue-600 font-bold mb-6 font-lora">
+          <div className="lg:w-1/2 lg:ml-12 w-full">
+            <h2 className="text-xl lg:text-4xl text-blue-600 font-bold mb-6 font-lora">
               Introduction to Advanced Cybersecurity Course with E-Education
             </h2>
             <h3 className="text-lg lg:text-xl text-green-600 font-semibold mb-6 font-lora">

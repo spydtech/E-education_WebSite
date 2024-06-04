@@ -167,7 +167,7 @@ function CybersecurityKeyHighlights() {
           </div>
           <div
             id="content2"
-            className="md:lg:w-auto md:lg:h-auto md:lg:xl:w-[400px] h-auto pt-4 md:lg:xl:pl-4 text-xl"
+            className="md:lg:w-auto md:lg:h-auto w-[400px] h-auto pt-4 md:lg:xl:pl-4 text-xl"
           >
             {renderContent()}
           </div>

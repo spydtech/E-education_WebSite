@@ -5,14 +5,14 @@ import React from "react";
 
 const EthicalHackingAbout = () => {
   return (
-    <div className=" mx-auto w-full pl-20 p-1 bg-gradient-to-br mb-16 from-purple-300 via-pink-500 to-red-600">
+    <div className=" w-full pl-4 bg-gradient-to-br mb-16 from-purple-300 via-pink-500 to-red-600">
       <div className="pt-0">
         <p className="text-orange-600 text-xl font-medium">
           About The Ethical Hacking Course
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="md:text-5xl text-2xl font-lora">
           Discover the
           <p className="text-violet-800 my-2">Ethical Hacking Program</p>
         </p>

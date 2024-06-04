@@ -5,11 +5,11 @@ const AdvanceEthicalHackingCard = () => {
     <>
       <section id="portfolio" className="portfolio-section py-16 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
+          <div className=" mb-12">
             <h2 className="text-4xl font-bold font-lora text-violet-800">
               Mastering Ethical Hacking: Transform Your Skills
             </h2>
-            <p className="text-lg text-orange-600 font-semibold px-28 mt-2">
+            <p className="text-lg text-orange-600 font-semibold md:px-28 mt-2">
               Elevate your skills with our Ethical Hacking courses. Dive deep
               into principles and gain hands-on experience. Whether novice or
               pro, unlock your potential.
@@ -19,7 +19,7 @@ const AdvanceEthicalHackingCard = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {[
               {
-                href: "/project-1",
+             
                 src: "https://spacema-dev.com/elevate/assets/images/portfolio-1.png",
                 title: "Explore Course Catalog",
                 description:
@@ -28,7 +28,7 @@ const AdvanceEthicalHackingCard = () => {
                 gradientTo: "to-blue-500",
               },
               {
-                href: "/project-2",
+
                 src: "https://spacema-dev.com/elevate/assets/images/portfolio-2.png",
                 title: "Enroll in Foundational Courses",
                 description:
@@ -37,7 +37,7 @@ const AdvanceEthicalHackingCard = () => {
                 gradientTo: "to-red-500",
               },
               {
-                href: "/project-3",
+
                 src: "https://spacema-dev.com/elevate/assets/images/portfolio-3.png",
                 title: "Practice with Real-world Projects",
                 description:
@@ -46,7 +46,7 @@ const AdvanceEthicalHackingCard = () => {
                 gradientTo: "to-purple-500",
               },
               {
-                href: "/project-4",
+              
                 src: "https://spacema-dev.com/elevate/assets/images/portfolio-4.png",
                 title: "Track Your Progress",
                 description:
@@ -55,7 +55,7 @@ const AdvanceEthicalHackingCard = () => {
                 gradientTo: "to-indigo-500",
               },
               {
-                href: "/project-5",
+           
                 src: "https://spacema-dev.com/elevate/assets/images/portfolio-5.png",
                 title: "Specialize and Advance",
                 description:
@@ -64,7 +64,7 @@ const AdvanceEthicalHackingCard = () => {
                 gradientTo: "to-yellow-500",
               },
               {
-                href: "/project-6",
+             
                 src: "https://spacema-dev.com/elevate/assets/images/portfolio-6.png",
                 title: "Earn Recognized Certifications",
                 description:
@@ -77,7 +77,7 @@ const AdvanceEthicalHackingCard = () => {
                 key={index}
                 className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden"
               >
-                <a href={item.href}>
+                <a>
                   <img
                     className="w-full h-60 object-cover"
                     src={item.src}
