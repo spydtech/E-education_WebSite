@@ -11,7 +11,7 @@ function DataAnalyticsIntroduction() {
             <h2 className="text-3xl font-medium mb-4 text-sky-500">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-xl">
+            <ul className="list-disc list-inside md:text-xl text-lg ">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -83,13 +83,13 @@ function DataAnalyticsIntroduction() {
           id="div1"
           className="  flex items-center justify-center   xl:lg:md:w-auto "
         >
-          <div id="headings" className="grid grid-cols-1 text-start px-20">
+          <div id="headings" className="grid grid-cols-1 text-start pl-4">
             <div>
               {" "}
               <p className="text-sky-500 text-xl font-medium">Introduction</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora ">
+              <p className="md:text-5xl text-2xl font-lora ">
                 So what is
                 <p className="text-sky-500 inline pl-2">Data Analytics</p>
               </p>
@@ -101,11 +101,11 @@ function DataAnalyticsIntroduction() {
             </div>
           </div>
         </div>
-        <div id="div2" className=" px-10   ">
+        <div id="div2" className=" md:px-10   ">
           {/*  */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 ">
             <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
-              <div className="relative w-full overflow-hidden">
+              <div className="relative w-full overflow-hidden ">
                 <div className="flex">
                   <Slide
                     heading={slidesData[currentSlide].heading}

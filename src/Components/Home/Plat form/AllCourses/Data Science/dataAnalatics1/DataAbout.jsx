@@ -11,7 +11,7 @@ function DataAbout() {
     <>
       <div
         id="main"
-        className="grid py-6 grid-cols-1 md:grid-cols-2  min-w-screen min-h-screen"
+        className="grid py-6 grid-cols-1 md:grid-cols-2  min-w-screen min-h-screen pl-4"
       >
         <div
           id="div2"

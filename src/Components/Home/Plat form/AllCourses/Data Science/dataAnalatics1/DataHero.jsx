@@ -32,7 +32,7 @@ const DataHero = () => {
           <div>
             <div className="rounded-r-3xl p-8 z-10 md:w-[700px]">
               <h1 className="text-3xl font-bold mb-4 font-lora">
-                <span className="text-blue-500">EonlineCourse</span>{" "}
+                <span className="text-blue-500">E-education</span>{" "}
                 <span className="text-purple-700">Advanced Certificate</span>{" "}
                 <span className="text-pink-500">in</span>{" "}
                 <span className="text-orange-700">Data Analytics</span>{" "}
