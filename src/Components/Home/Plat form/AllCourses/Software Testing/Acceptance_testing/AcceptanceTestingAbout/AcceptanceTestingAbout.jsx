@@ -6,14 +6,14 @@ import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg
 
 const AcceptanceTestingAbout = () => {
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br  from-[#560bad] to-[#3a0ca3]">
+    <div className="mx-auto w-full md:lg:xl:px-10 pl-4 bg-gradient-to-br  from-[#560bad] to-[#3a0ca3]">
       <div className="pt-0">
         <p className="text-[#31cb00] text-xl font-medium">
           About The Acceptance Testing Course
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="md:text-5xl text-2xl font-lora">
           Discover the
           <p className="text-[#31cb00] my-2">Acceptance Testing Program</p>
         </p>

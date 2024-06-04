@@ -5,14 +5,14 @@ import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg
 
 const AutomationTestingAbout = () => {
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br from-[#89fc00] to-[#12862b]">
-      <div className="pt-0">
+    <div className="mx-auto w-full md:lg:xl:px-10 bg-gradient-to-br from-[#89fc00] to-[#12862b]">
+      <div className="pt-0 pl-4">
         <p className="text-[#7400b8] text-xl font-medium">
           About The Automation Testing Course
         </p>
       </div>
-      <div className="py-2">
-        <p className="text-6xl font-lora">
+      <div className="py-2 pl-4">
+        <p className="md:text-5xl text-2xl font-lora">
           Discover the
           <p className="text-[#7400b8] my-2">Automation Testing Program</p>
         </p>

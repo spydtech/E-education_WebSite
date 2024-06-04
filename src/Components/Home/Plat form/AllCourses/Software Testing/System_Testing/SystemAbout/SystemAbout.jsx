@@ -4,14 +4,14 @@ import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg
 
 const SystemTestingAbout = () => {
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-r from-rose-500 to-red-500">
+    <div className="mx-auto w-full pl-4 md:lg:xl:px-10 p-1 bg-gradient-to-r from-rose-500 to-red-500">
       <div className="pt-0">
         <p className="text-[#f9ac13] text-xl font-medium">
           About The Compatibility Testing Course
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="md:text-5xl text-2xl font-lora">
           Discover the
           <p className="text-[#f9ac13] my-2">Compatibility Testing Program</p>
         </p>
