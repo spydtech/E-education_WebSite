@@ -6,7 +6,7 @@ import { debounce } from "lodash";
 // import EthicalHackingScroller from "./EthicalHackingScroller";
 const EthicalHackingHero = () => {
   const [courseName] = useState("Ethical Hacking Basics"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(34999);
 
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters

@@ -1,5 +1,4 @@
-
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../../../../Navbar";
 import FooterPart from "../../../../footer/Footer";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +6,7 @@ import CybersecurityNavigation from "./CyberSecurityEssentialsNavigation";
 
 const CybersecurityEssentials = () => {
   const [courseName] = useState("Cyber Security Essentials"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(34999);
   const navigate = useNavigate();
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters

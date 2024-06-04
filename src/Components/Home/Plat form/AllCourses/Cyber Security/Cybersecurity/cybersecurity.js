@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import Navbar from "../../../../../Navbar";
 import Footer from "../../../../../Home/footer/Footer";
@@ -7,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import CybersecurityNavigation from "./CyberSecurityNavigation";
 const Cybersecurity = () => {
   const [courseName] = useState("Introduction To CyberSecurity"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(34999);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
