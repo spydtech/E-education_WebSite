@@ -4,7 +4,10 @@ const About = () => {
   return (
     <>
       <div>
-        <div className="pt-4 font-lora">
+        <div className="fone-bold md:text-5xl font-lora text-2xl font-bold">
+          About this Course
+        </div>
+        <div className="pt-4 w-full font-lora">
           Mastering MEAN Stack Development involves becoming proficient in all
           aspects of the MEAN stack, which includes MongoDB, Express.js,
           Angular, and Node.js. This comprehensive skill set allows developers

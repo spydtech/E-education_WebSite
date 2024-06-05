@@ -26,9 +26,9 @@ function Delivery_Methods() {
           <IoReorderThreeOutline className="text-[40px]" />{" "}
           <IoRemoveOutline className="text-[40px]" />
         </div>
-        <div className="text-center text-base md:lg:sm:w-full md:w-[400px] font-lora pb-8">
-          The E-Education is World's Leading Organisation for training
-          professionals. The E-Education provides training in 490+ locations
+        <div className="text-center px-4 text-base md:lg:sm:w-full md:w-[400px] font-lora pb-8">
+          The E-education is World's Leading Organisation for training
+          professionals. The E-education provides training in 490+ locations
           around 221+ countries, covering 3000 subjects with the following
           delivery methods
         </div>
@@ -64,7 +64,7 @@ function Delivery_Methods() {
                 </Link>
               </div>
               <div
-                className="bg-gray-300 bottom-[25px] left-8 w-16 flex items-center justify-center h-16 rounded-full absolute z-20"
+                className="bg-gray-300  px-3 bottom-[25px] left-8 w-16 flex items-center justify-center h-16 rounded-full absolute z-20"
                 id="icon"
               >
                 <SiGoogleclassroom className="text-[40px] " />
@@ -87,10 +87,10 @@ function Delivery_Methods() {
                 ></div>
               </div>
               <div
-                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row  gap-8 shadow-2xl absolute text-black -bottom-11 left-4 z-10 md:w-[288px] w-[200px] h-24"
+                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row  gap-8 shadow-2xl absolute text-black -bottom-11 left-4 z-10 md:w-[288px] w-full h-24"
                 id="card"
               >
-                <p className=" font-bold pt-2 text-[17px]">Instructor-Led</p>
+                <p className=" font-bold pt-2 text-[17px]">Guided</p>
                 <Link>
                   <p className="font-medium pt-2  bg-blue-300 hover:text-white hover:bg-blue-600 rounded p-2">
                     Enquire Now
@@ -121,10 +121,10 @@ function Delivery_Methods() {
                 ></div>
               </div>
               <div
-                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row gap-8 shadow-2xl absolute text-black -bottom-11 left-4 z-10 md:w-[288px] w-[200px] h-24"
+                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row gap-4 shadow-2xl absolute text-black -bottom-11 left-4 z-10 md:w-[288px] w-full h-24"
                 id="card"
               >
-                <p className=" font-bold pt-2 text-[17px]">Self-Paced</p>
+                <p className=" font-bold pt-2 text-[17px]">Autodidactic</p>
                 <Link>
                   <p className="font-medium pt-2  hover:text-white bg-blue-300 hover:bg-blue-600 rounded p-2">
                     Enquire Now
@@ -155,13 +155,13 @@ function Delivery_Methods() {
                 ></div>
               </div>
               <div
-                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row  gap-8 shadow-2xl absolute text-black -bottom-11 left-4 z-10 md:w-[288px] w-[200px] h-24"
+                className="bg-white px-3 rounded-lg flex justify-center items-center md:flex-row  gap-4 shadow-2xl absolute text-black -bottom-11 left-4 z-10 md:w-[288px] w-full h-24"
                 id="card"
               >
                 {/* <div className="flex justify-center items-center flex-row h-24 gap-8"> */}
 
                 <div className=" font-bold pt-2 text-[17px]">
-                  Onsite Training
+                Clarification
                 </div>
                 <Link>
                   <div className="font-medium  bg-blue-300 hover:text-white hover:bg-blue-600 rounded p-2">

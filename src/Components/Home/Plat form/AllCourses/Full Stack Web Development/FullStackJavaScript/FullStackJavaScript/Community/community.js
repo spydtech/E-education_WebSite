@@ -1,7 +1,5 @@
 import React from "react";
-// import techimage from "../../../../../../../assets/Assests_MeanStack/communityimages/kid1.png";
-
-// Assests_MeanStack/communityimages/techimage.png";
+// import techimage from "../../../../../../assets/techimage.png";
 import techimage from "../../../../../../../../assets/techimage.png";
 import kid1 from "../../../../../../../../assets/kid1.png";
 import kid2 from "../../../../../../../../assets/kid2.png";
@@ -17,7 +15,7 @@ import thinking from "../../../../../../../../assets/thinking.png";
 function Community() {
   const calculatePosition = (total, index) => {
     const angle = (index / total) * Math.PI * 2;
-    const radius = 150; // adjust the radius as needed
+    const radius = 120; // adjust the radius as needed
     const centerX = 0;
     const centerY = 0;
     const x = centerX + radius * Math.cos(angle);
@@ -39,9 +37,9 @@ function Community() {
   ];
 
   return (
-    <div className="  bg-radial-gradient bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500  min-h-screen flex items-center justify-center pt-20">
-      <div className="container mx-auto px-4 py-8 text-center relative ">
-        <div className="relative mb-8 ">
+    <div className="bg-[#b8b8ff] min-h-screen flex items-center justify-center pt-20">
+      <div className="container mx-auto px-4 py-8 text-center relative">
+        <div className="relative mb-8">
           <div className="images-container absolute inset-0 flex justify-between items-center pointer-events-none">
             {/* Place the techimage in the center */}
             <img
@@ -78,8 +76,8 @@ function Community() {
           </div>
         </div>
         <h1
-          className="text-4xl font-bold font-lora text-gray-800  "
-          style={{ marginTop: "270px" }}
+          className="text-4xl font-bold font-lora text-gray-800 "
+          style={{ marginTop: "250px" }}
         >
           Join Our Thriving Community
         </h1>
@@ -88,7 +86,7 @@ function Community() {
           Share your code today and design beautiful, responsive, and dynamic
           websites.
         </p>
-        <button className="bg-pink-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition duration-300">
+        <button className="bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition duration-300">
           Join Today
         </button>
       </div>

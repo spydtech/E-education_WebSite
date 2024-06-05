@@ -7,19 +7,19 @@ import devopsSkills from "../../../../../../../assets/Assests_FullStackDevops/De
 import devopsRequirements from "../../../../../../../assets/WebDeveloper/requirements.png";
 
 const softSkills = [
-  { name: "Team Collaboration" },
-  { name: "Problem-Solving Skills" },
-  { name: "Effective Communication" },
-  { name: "Adaptability" },
-  { name: "Project Planning" },
+  { name: "Coordination" },
+  { name: "Empathy" },
+  { name: "Articulation" },
+  { name: "Analysis" },
+  { name: "Initialization" },
 ];
 
 const technicalSkills = [
+  { name: "IaC" },
+  { name: "Cloud " },
   { name: "CI/CD Pipelines" },
-  { name: "Containerization with Docker" },
-  { name: "Orchestration with Kubernetes" },
-  { name: "Infrastructure as Code (IaC)" },
-  { name: "Cloud Platforms (AWS, Azure, GCP)" },
+  { name: "Containerization " },
+  { name: "Orchestration " },
 ];
 
 const FullStackDevopsDeveloper = () => {
@@ -80,13 +80,13 @@ const FullStackDevopsDeveloper = () => {
         </div>
         <div
           id="3"
-          className="max-w-sm w-full h-40 rounded-lg items-center flex mx-auto mb-4"
+          className="max-w-sm w-full h-40 rounded-lg items-center flex mx-auto mb-2"
         >
-          <div className="p-4 rounded-lg text-center">
+          <div className="p-4 rounded-lg ">
             <h2 className="text-base font-extrabold text-[#25a244] sm:text-xl lg:text-lg xl:text-3xl font-lora mb-2">
               Full Stack DevOps Developer Skills{" "}
             </h2>
-            <div className="flex text-[#25a244] justify-center items-center mb-4">
+            <div className="flex text-[#25a244] justify-center items-center mb-2">
               <IoRemoveOutline className="text-[40px]" />
               <IoReorderThreeOutline className="text-[40px]" />
               <IoRemoveOutline className="text-[40px]" />
@@ -94,8 +94,7 @@ const FullStackDevopsDeveloper = () => {
             <p className="text-base text-gray-600 font-lora">
               Full Stack DevOps Developers are expected to possess a broad range
               of skills, from continuous integration and delivery to managing
-              scalable infrastructure, enabling them to ensure efficient and
-              reliable software deployment.
+              scalable infrastructure.
             </p>
           </div>
         </div>

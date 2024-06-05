@@ -26,7 +26,7 @@ function SuccessStory() {
         className="relative bg-cover bg-center w-96 h-96 mb-4 mt-4 sm:w-80 sm:h-80 md:w-96 md:h-96"
         style={{
           backgroundImage: `url(https://media.istockphoto.com/id/1310896133/photo/happy-smiling-afro-businessman-using-laptop-at-the-desk-in-office.jpg?s=612x612&w=0&k=20&c=QUQpwqaaPswBIJB6_lk5xU6HY_RevWNSwcqAErPZsOc=)`,
-          backgroundPosition: "top",
+          backgroundPosition: "top ",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
@@ -89,7 +89,7 @@ function SuccessStory() {
                 }}
               />
               <p style={{ marginLeft: "0px", fontSize: "10px" }}>
-                full stack .net developer
+                full stack .net
                 <br /> certificate
               </p>
             </div>

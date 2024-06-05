@@ -6,7 +6,7 @@ import Community from "../Community/community";
 import SuccessStory from "../SuccessStory/successstory";
 import Footer from "../../../../../../footer/Footer";
 
-import Delivery_Methods from "../deliverymethods/Delivery_Methods";
+import Delivery_Methods from "../../deliverymethods/Delivery_Methods";
 import JavascriptDeveloperSkills from "../Developer/JavascriptDeveloperSkills";
 
 const JavascriptDevelopment = () => {

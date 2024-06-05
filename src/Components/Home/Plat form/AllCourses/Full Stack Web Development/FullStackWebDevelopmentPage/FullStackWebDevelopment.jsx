@@ -27,7 +27,7 @@ const ParticularFullStack = () => {
     <>
       <Navbar />
       <div className="w-full md:pl-28 py-12 flex md:flex-row flex-col items-center justify-center gap-8 max-w-8xl mx-auto">
-        <div className="md:w-[600px] pl-8 ">
+        <div className="md:w-[600px] pl-4 ">
           <span className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base">
             Explore Full Stack Web Development
           </span>
@@ -53,10 +53,10 @@ const ParticularFullStack = () => {
           </button>
           <div className="py-4">11,095 already enrolled</div>
         </div>
-        <div className="relative pl-12">
+        <div className="relative">
           <img
             src="https://miro.medium.com/v2/resize:fit:750/1*-hL6ZeXl_Kt0O-b82UQo9A.png"
-            className="pr-4 h-[350px]"
+            className=" h-[300px] p-4"
           />
         </div>
       </div>

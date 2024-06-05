@@ -10,7 +10,7 @@ import FullStackJavaDeveloper from "./Developer/FullStackJavaDeveloper";
 import Footer from "../../../../footer/Footer";
 
 const FullStackJavaDevelopment = () => {
-  const [courseName] = useState("Master Full Stack Java Development"); // Placeholder for course name
+  const [courseName] = useState(" Testing"); // Placeholder for course name
   const [coursePrice] = useState(199);
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -59,7 +59,6 @@ const FullStackJavaDevelopment = () => {
           />
         </div>
       </div>
-
       <FullStackJavaDeveloper />
       <AboutCourses />
       <Delivery_Methods />

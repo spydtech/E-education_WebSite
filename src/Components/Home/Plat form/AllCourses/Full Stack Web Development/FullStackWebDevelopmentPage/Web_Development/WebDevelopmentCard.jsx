@@ -65,7 +65,7 @@ const WebDevelopmentCard = () => {
               </div>
             </div>
           </div>
-          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left pl-8">
+          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left pl-4">
             <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base font-lora">
               Full Stack Web Development
             </div>

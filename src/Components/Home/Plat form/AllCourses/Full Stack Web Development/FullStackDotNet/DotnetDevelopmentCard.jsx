@@ -75,8 +75,8 @@ const DotnetDevelopmentCard = () => {
             <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base font-lora">
               .NET Full Stack Development
             </div>
-            <h2 className="mt-1 text-base font-extrabold leading-10 tracking-tight text-violet-800 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl font-lora">
-              .NET Full Stack Development
+            <h2 className="mt-1 text-3xl font-extrabold leading-10 tracking-tight text-violet-800 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl font-lora">
+              Full Stack .Net Development
             </h2>
             <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
               Elevate your web development skills with our robust .NET
