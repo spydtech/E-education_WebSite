@@ -10,7 +10,7 @@ import FullStackJavaDeveloper from "./Developer/FullStackJavaDeveloper";
 import Footer from "../../../../footer/Footer";
 
 const FullStackJavaDevelopment = () => {
-  const [courseName] = useState(" Testing"); // Placeholder for course name
+  const [courseName] = useState("Master Full Stack Java Development"); // Placeholder for course name
   const [coursePrice] = useState(199);
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -23,15 +23,15 @@ const FullStackJavaDevelopment = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full bg-gradient-to-r to-[#8b008b] from-[#9340da] md:pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
-        <div className="font-l text-center md:text-left">
-          <span className="text-sm font-semibold tracking-wide text-black uppercase sm:text-base lg:text-sm xl:text-base">
+      <div className="w-full md:pl-28 py-12 flex md:flex-row flex-col items-center justify-center gap-8 max-w-8xl mx-auto">
+        <div className="md:w-[600px] pl-8 ">
+          <span className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base">
             Explore Full Stack Java Course
           </span>
-          <h3 className="mt-1 text-4xl md:text-5xl lg:text-6xl text-[#f3a916] font-lora font-extrabold leading-10 tracking-tight">
+          <h3 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
             Master Full Stack Java Development
           </h3>
-          <p className="mt-3 text-base md:text-lg lg:text-base xl:text-lg text-black">
+          <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
             Elevate your technical skills with comprehensive courses focused on
             full stack Java development. Master Java, Spring Boot, Hibernate,
             RESTful APIs, and more, covering both front-end and back-end
@@ -39,26 +39,27 @@ const FullStackJavaDevelopment = () => {
             enterprise-grade applications and position yourself for success as a
             full stack Java developer.
           </p>
-          <p className="text-base md:text-lg text-black my-4 md:my-6 ">
+          <p className="text-base md:text-lg text-slate-700 my-4 md:my-6 ">
             Our courses empower you to dive deep into Fulll stack java
             technologies. Develop practical skills and stand out in a
             competitive job market. Start your full stack Java journey today.
           </p>
           <button
             onClick={handleEnroll}
-            className="bg-yellow-400 text-white font-medium py-2 px-4 rounded transition-all hover:bg-[#f3a916] active:scale-95"
+            className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95"
           >
             Enroll Now
           </button>
-          <div className="py-4">10,299 already enrolled</div>
+          <div className="py-4">11,095 already enrolled</div>
         </div>
-        <div className="relative pl-0 md:pl-12">
+        <div className="relative pl-12">
           <img
             src="https://assets-global.website-files.com/6344c9cef89d6f2270a38908/63862296680a877e33cb39f9_c4.webp"
             className="pr-4 h-[350px]"
           />
         </div>
       </div>
+
       <FullStackJavaDeveloper />
       <AboutCourses />
       <Delivery_Methods />
