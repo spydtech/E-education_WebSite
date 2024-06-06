@@ -19,7 +19,7 @@ const StartNewCarrer = () => {
         <div className="ml-6 ">
           <div className="flex  flex-col items-start justify-start md:min-w-[400px] gap-8">
             <div className="font-lora font-bold  text-xl md:text-3xl text-[#2A063D] ">
-              Unlocking Career Horizons: Navigating New Paths with E-education
+              Unlocking Career Horizons: Navigating New Paths With E-education
             </div>
             <div className="font-lora md:text-md text-base mb-8 ">
               Embracing E-education for a new career path offers flexible

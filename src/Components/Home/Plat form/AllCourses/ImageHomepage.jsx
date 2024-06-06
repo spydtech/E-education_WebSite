@@ -36,10 +36,9 @@ const ImageHomePage = () => {
                 it's promising
               </div>
               <p className="text-gray-700 text-base">
-                Unlock your earning potential Entry-level programmers in the
-                U.S. earn on
-                <p className="font-bold">average over $78,000 in salary</p>
-              </p>
+    Unlock your potential as a programmer. Entry-level developers start with
+    <span className="font-bold"> a strong foundation in their careers</span>.
+  </p>
             </div>
           </div>
           {/* two end */}

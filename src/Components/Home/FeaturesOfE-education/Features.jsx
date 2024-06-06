@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Features2 from './Features2'
 import Navbar from '../../Navbar'
 import Footer from '../footer/Footer'
@@ -6,6 +6,9 @@ import HeroSection from './HeroSection'
 
 
 function Features() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <div>
         <Navbar />
