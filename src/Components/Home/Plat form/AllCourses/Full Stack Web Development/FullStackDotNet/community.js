@@ -1,7 +1,6 @@
 import React from "react";
-
-// import techimage from "../../../../../../../assets/Assests_FullStackDevops/communityimages/techimage.png";
 import techimage from "../../../../../../assets/techimage.png";
+// import techimage from "../../../../../../../../assets/techimage.png";
 import kid1 from "../../../../../../assets/kid1.png";
 import kid2 from "../../../../../../assets/kid2.png";
 import women1 from "../../../../../../assets/women1.png";
@@ -16,7 +15,7 @@ import thinking from "../../../../../../assets/thinking.png";
 function Community() {
   const calculatePosition = (total, index) => {
     const angle = (index / total) * Math.PI * 2;
-    const radius = 150; // adjust the radius as needed
+    const radius = 120; // adjust the radius as needed
     const centerX = 0;
     const centerY = 0;
     const x = centerX + radius * Math.cos(angle);
@@ -38,10 +37,10 @@ function Community() {
   ];
 
   return (
-    <div className="h-120  bg-gradient-to-r from-pink-600 to-amber-300 pt-20">
-      <div className="container mx-auto px-4 py-8 text-center relative ">
-        <div className="relative mt-16  ">
-          <div className=" mt-16 images-container absolute inset-0 flex justify-between items-center pointer-events-none">
+    <div className="bg-[#b8b8ff] min-h-screen flex items-center justify-center pt-20">
+      <div className="container mx-auto px-4 py-8 text-center relative">
+        <div className="relative mb-8">
+          <div className="images-container absolute inset-0 flex justify-between items-center pointer-events-none">
             {/* Place the techimage in the center */}
             <img
               src={techimage}
@@ -78,7 +77,7 @@ function Community() {
         </div>
         <h1
           className="text-4xl font-bold font-lora text-gray-800 "
-          style={{ marginTop: "400px" }}
+          style={{ marginTop: "250px" }}
         >
           Join Our Thriving Community
         </h1>

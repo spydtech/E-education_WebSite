@@ -7,17 +7,17 @@ import DotnetDevelopmentCard from "./DotnetDevelopmentCard";
 import skills from "../../../../../../assets/WebDeveloper/skills.png";
 import requirements from "../../../../../../assets/WebDeveloper/requirements.png";
 const softSkills = [
-  { name: "Problem Solving" },
-  { name: "Teamwork" },
-  { name: "Communication" },
-  { name: "Time Management" },
-  { name: "Adaptability" },
+  { name: "Coordination" },
+  { name: "Empathy" },
+  { name: "Articulation" },
+  { name: "Analysis" },
+  { name: "Initialization" },
 ];
 
 const technicalSkills = [
   { name: ".NET Core" },
   { name: "ASP.NET" },
-  { name: "Entity Framework" },
+  { name: "Framework" },
   { name: "RESTful APIs" },
   { name: "C#" },
 ];
@@ -79,7 +79,7 @@ const DotnetDeveloperSkills = () => {
           id="3"
           className="max-w-sm w-full h-40 rounded-lg items-center flex mx-auto mb-4"
         >
-          <div className="p-4 rounded-lg text-center">
+          <div className="p-4 rounded-lg ">
             <h2 className="text-base font-extrabold text-[#25a244] sm:text-xl lg:text-lg xl:text-3xl font-lora mb-2">
               Full Stack.NET Developer Skills{" "}
             </h2>

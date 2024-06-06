@@ -21,12 +21,12 @@ const MeanStackDevelopment = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full bg-[#b8b8ff] md:pl-28 py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl mx-auto">
-        <div className="font-l">
+      <div className="w-full md:pl-28 py-12 flex md:flex-row flex-col items-center justify-center gap-8 max-w-8xl mx-auto">
+        <div className="md:w-[600px] pl-8 ">
           <span className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base">
-            Explore MEAN Stack Development
+            Explore MEAN Stack Development{" "}
           </span>
-          <h3 className="mt-1 text-4xl font-lora font-extrabold leading-10 tracking-tight text-violet-800 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
+          <h3 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
             Master MEAN Stack Development
           </h3>
           <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
@@ -49,7 +49,7 @@ const MeanStackDevelopment = () => {
           </button>
           <div className="py-4">11,095 already enrolled</div>
         </div>
-        <div className="relative pl-6">
+        <div className="relative pl-12">
           <img
             src="https://www.logicraysacademy.com/blog/wp-content/uploads/2023/05/MVM2.png"
             className="pr-4 h-[350px]"

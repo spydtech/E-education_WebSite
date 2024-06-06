@@ -8,19 +8,19 @@ import skills from "../../../../../../../assets/WebDeveloper/skills.png";
 import requirements from "../../../../../../../assets/WebDeveloper/requirements.png";
 
 const softSkills = [
-  { name: "Team Collaboration" },
-  { name: "Problem-Solving Skills" },
-  { name: "Effective Communication" },
-  { name: "Adaptability" },
-  { name: "Project Planning" },
+  { name: "Coordination" },
+  { name: "Empathy" },
+  { name: "Articulation" },
+  { name: "Analysis" },
+  { name: "Initialization" },
 ];
 
 const technicalSkills = [
   { name: "Java" },
-  { name: "Spring Framework" },
+  { name: " Framework" },
   { name: "Hibernate" },
   { name: "RESTful APIs" },
-  { name: "Database Management" },
+  { name: "Database" },
 ];
 
 const FullStackJavaDeveloper = () => {
@@ -80,7 +80,7 @@ const FullStackJavaDeveloper = () => {
           id="3"
           className="max-w-sm w-full h-40 rounded-lg items-center flex mx-auto mb-4"
         >
-          <div className="p-4 rounded-lg text-center">
+          <div className="p-4 rounded-lg ">
             <h2 className="text-base font-extrabold text-violet-600 sm:text-xl lg:text-lg xl:text-3xl font-lora mb-2">
               Full Stack Java Developer Skills{" "}
             </h2>

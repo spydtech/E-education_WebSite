@@ -20,8 +20,8 @@ const AboutCourses = () => {
 
   return (
     <>
-      <div className="w-full px-24"></div>
-      <div className="w-full mt-10 px-16">
+      <div className="w-full pl-4"></div>
+      <div className="w-full  px-8">
         {/* Menu Icon */}
         <div className="block lg:hidden mb-4">
           <button

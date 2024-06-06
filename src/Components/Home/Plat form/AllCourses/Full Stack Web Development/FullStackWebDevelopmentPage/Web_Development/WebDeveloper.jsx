@@ -79,7 +79,7 @@ const WebDeveloper = () => {
           id="3"
           className="max-w-sm w-full h-32 rounded-lg items-center flex mx-auto mb-4"
         >
-          <div className="p-4 rounded-lg text-center">
+          <div className="p-4 rounded-lg ">
             <h2 className="text-base font-extrabold text-[#25a244] sm:text-xl lg:text-lg xl:text-3xl font-lora mb-2">
               full Stack Web Developer Skills{" "}
             </h2>
