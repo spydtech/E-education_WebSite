@@ -3,8 +3,9 @@ import React from 'react'
 import Achivements from './Achivements'
 import MonthlyOverview from './MonthlyOverview'
 // import CoursesTable from './CourseTable'
-import OrderTable from './OrderTable'
-import CourseTableView from '../Views/CourseTableView'
+import Orders from '../Views/Orders'
+import Users from '../Views/Users'
+// import Courses from '../Views/Courses'
 
 const AdminDashBoard = () => {
     return (
@@ -23,15 +24,21 @@ const AdminDashBoard = () => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <div className='shadow-lg shadow-gray-600'>
-                        <OrderTable />
+                        <Orders />
                     </div>
 
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <div className='shadow-lg shadow-gray-600'>
-                        <CourseTableView />
+                        <Users />
                     </div>
+
                 </Grid>
+                {/* <Grid item xs={12} md={6}>
+                    <div className='shadow-lg shadow-gray-600'>
+                        <Courses />
+                    </div>
+                </Grid> */}
 
             </Grid>
         </div>
@@ -39,3 +46,38 @@ const AdminDashBoard = () => {
 }
 
 export default AdminDashBoard
+
+// AdminDashboard.js
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+// import { Grid, Paper, Typography, Button } from '@mui/material';
+// import AdminSidebar from './AdminSidebar';
+// import Dashboard from './Dashboard';
+
+// const AdminDashboard = () => {
+//     return (
+//         <div className="container mx-auto mt-10">
+//             <Grid container spacing={3}>
+//                 <Grid item xs={3}>
+//                     <AdminSidebar />
+//                 </Grid>
+//                 <Grid item xs={9}>
+//                     <Paper className="p-4" elevation={3}>
+//                         <Typography variant="h5" gutterBottom className="mb-4">
+//                             Admin Dashboard
+//                         </Typography>
+
+//                         <Typography variant="subtitle1" gutterBottom>
+//                             Welcome to the Admin Dashboard!
+//                         </Typography>
+//                         <Dashboard />
+//                         {/* Add more content as needed */}
+//                     </Paper>
+//                 </Grid>
+//             </Grid>
+//         </div>
+//     );
+// };
+
+// export default AdminDashboard;
+

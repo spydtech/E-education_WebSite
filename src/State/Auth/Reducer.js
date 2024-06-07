@@ -9,6 +9,7 @@ import {
   GET_USER_REQUEST,
   GET_USER_SUCCESS,
   LOGOUT,
+  GET_ALL_CUSTOMERS_SUCCESS,
 } from './ActionType';
 
 const initialState = {
@@ -24,6 +25,12 @@ export const authReducer = (state = initialState, action) => {
     case LOGIN_REQUEST:
     case GET_USER_REQUEST:
       return { ...state, isLoading: true, error: null };
+    case GET_ALL_CUSTOMERS_SUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+        customers: action.payload,
+      };
     case REGISTER_SUCCESS:
     case LOGIN_SUCCESS:
       return { ...state, isLoading: false, error: null, jwt: action.payload };

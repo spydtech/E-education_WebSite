@@ -14,8 +14,10 @@ import {
   VERIFY_OTP_FAILURE,
   VERIFY_OTP_REQUEST,
   VERIFY_OTP_SUCCESS,
-  EMAIL_EXISTS
-
+  EMAIL_EXISTS,
+  GET_ALL_CUSTOMERS_REQUEST,
+  GET_ALL_CUSTOMERS_SUCCESS,
+  GET_ALL_CUSTOMERS_FAILURE
 } from './ActionType';
 
 const token = localStorage.getItem('jwt');
@@ -81,6 +83,26 @@ export const login = (userData) => async (dispatch) => {
   } catch (error) {
     dispatch(loginFailure(error.message));
   }
+};
+
+export const getAllCustomers = (token) => {
+  return async (dispatch) => {
+    dispatch({ type: GET_ALL_CUSTOMERS_REQUEST });
+    try {
+      const response = await axios.get(`${API_BASE_URL}/api/admin/users`, {
+        headers: {
+          "Authorization": `Bearer ${token}`
+        }
+      });
+      const users = response.data;
+      dispatch({ type: GET_ALL_CUSTOMERS_SUCCESS, payload: users });
+      console.log("All Customers", users)
+    } catch (error) {
+      const errorMessage = error.message;
+      console.log(error)
+      dispatch({ type: GET_ALL_CUSTOMERS_FAILURE, payload: errorMessage });
+    }
+  };
 };
 
 const getUserRequest = () => ({ type: GET_USER_REQUEST });
