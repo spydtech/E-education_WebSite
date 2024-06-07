@@ -154,7 +154,7 @@ function SystemTestingKeyHighlights() {
         id="main"
         className="md:lg:xl:px-20 bg-gradient-to-r from-rose-500 to-red-500 mb-12"
       >
-        <div id="subdiv1" className="pt-4">
+        <div id="subdiv1" className="pt-4 pl-4">
           <div id="h1" className="">
             <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#f9ac13]">
               System Testing Course Highlights
@@ -162,10 +162,10 @@ function SystemTestingKeyHighlights() {
           </div>
           <div
             id="h2"
-            className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96 h-auto"
+            className="md:lg:flex space-x-3 md:lg:w-auto lg:md:h-auto w-96 h-auto"
           >
-            <p className="text-5xl font-bold">What does this</p>
-            <p className="text-5xl font-bold text-[#f9ac13] inline">
+            <p className="md:text-5xl text-2xl font-bold pl-4">What does this</p>
+            <p className="md:text-5xl text-2xl font-bold text-[#f9ac13] inline">
               Course have to offer?
             </p>
           </div>
@@ -179,7 +179,7 @@ function SystemTestingKeyHighlights() {
               <div
                 key={index}
                 onClick={() => handleClick(index)}
-                className={`hover:text-yellow-500 p-5 text-start hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-80 lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden transition-transform duration-300 transform hover:scale-105 ${
+                className={`hover:text-yellow-500 p-5 text-start hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-64 lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden transition-transform duration-300 transform hover:scale-105 ${
                   selectedItem === index
                     ? "bg-[#f9ac13] text-white hover:text-white border-none"
                     : ""

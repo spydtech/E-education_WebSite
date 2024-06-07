@@ -1,6 +1,6 @@
 import React from "react";
 
-const JavascriptDevelopmentCard = () => {
+const DotnetDevelopmentCard = () => {
   return (
     <>
       <div className="max-w-screen-xl px-4 mx-auto mt-8 sm:mt-12 sm:px-6 md:mt-16">
@@ -75,16 +75,36 @@ const JavascriptDevelopmentCard = () => {
             <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base font-lora">
               .NET Full Stack Development
             </div>
-            <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-violet-800 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl font-lora">
-              .NET Full Stack Development
+            <h2 className="mt-1 text-3xl font-extrabold leading-10 tracking-tight text-violet-800 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl font-lora">
+              Full Stack .Net Development
             </h2>
             <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
               Elevate your web development skills with our robust .NET
               full-stack solutions. From powerful backend services with ASP.NET
               Core to dynamic front-end experiences with Blazor, we provide the
               tools and technologies you need to build scalable and efficient
-              applications.
+              applications .NET supports the following cross-platform scenarios:
+              ASP.NET Core web apps, command-lineconsole apps, libraries and
+              Universal Windows Platform apps.
             </p>
+            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <div className="rounded-md shadow font-lora">
+                <a
+                  href="/"
+                  className="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10"
+                >
+                  Explore Now
+                </a>
+              </div>
+              {/* <div className="mt-3 sm:mt-0 sm:ml-3">
+                <a
+                  href=""
+                  className="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-indigo-700 transition duration-150 ease-in-out bg-indigo-100 border border-transparent rounded-md hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline focus:border-indigo-300 md:py-4 md:text-lg md:px-10"
+                >
+                  Tutorial
+                </a>
+              </div> */}
+            </div>
 
             {/* <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow font-lora">
@@ -111,4 +131,4 @@ const JavascriptDevelopmentCard = () => {
   );
 };
 
-export default JavascriptDevelopmentCard;
+export default DotnetDevelopmentCard;

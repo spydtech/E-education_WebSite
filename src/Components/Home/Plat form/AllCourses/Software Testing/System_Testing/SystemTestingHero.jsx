@@ -25,12 +25,12 @@ const SystemTestingHero = () => {
       </div>
 
       <div
-        className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
+        className="w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
         data-aos="fade-right"
         data-aos-duration={800}
       >
         <div className="pr-2 md:mb-14 py-14 font-lora md:py-0">
-          <h1 className="text-3xl font-semibold text-[#f9ac13] xl:text-5xl lg:text-3xl">
+          <h1 className="text-2xl font-semibold text-[#f9ac13] xl:text-5xl lg:text-3xl">
             <span className="block w-full">
               Master the Art of System Testing
             </span>{" "}

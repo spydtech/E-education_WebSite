@@ -12,14 +12,14 @@ function StressTestingCareersOutcomes() {
         id="main"
         className=" md:lg:xl:pl-20  bg-gradient-to-r from-indigo-500 to-indigo-500  mb-12"
       >
-        <div id="headings" className="grid grid-cols-1 text-start ">
+        <div id="headings" className="grid grid-cols-1 text-start pl-4">
           <div>
             <p className="text-[#f9ac13] text-xl font-medium">
               Career Outcomes in Network Security Program
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora">
+            <p className="md:text-5xl text-2xl font-lora">
               Discover What our{" "}
               <p className="text-[#f9ac13]">Learners Have Achieved</p>
             </p>

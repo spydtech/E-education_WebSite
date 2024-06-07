@@ -13,136 +13,137 @@ function EditModal({ userData, onSave, onClose }) {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setEditedData(prevData => ({
-      ...prevData,
-      [name]: value
-    }));
-  };
+      setEditedData(prevData => ({
+        ...prevData,
+        [name]: value
+      }));
+};
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    onSave(editedData);
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  onSave(editedData);
+};
 
-  return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-      <div className="bg-white p-4 rounded shadow-lg w-[60%] sm:w-[50%] md:w-[40%] lg:w-[30%]">
-        <h2 className="text-xl font-bold mb-4">Edit Profile</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex gap-2">
-            <div className="w-1/2 space-y-4">
-              <div>
-                <label className="block text-sm font-medium">First Name</label>
-                <input
-                  type="text"
-                  name="firstName"
-                  value={editedData.firstName}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 p-2 rounded"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Last Name</label>
-                <input
-                  type="text"
-                  name="lastName"
-                  value={editedData.lastName}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 p-2 rounded"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Bio</label>
-                <textarea
-                  name="bio"
-                  value={editedData.bio}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 p-2 rounded"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Date Of Birth</label>
-                <input
-                  type="text"
-                  name="dateOfBirth" // Changed from DateOfBirth
-                  value={editedData.dateOfBirth} // Changed from DateOfBirth
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 p-2 rounded"
-                  placeholder="year/month/date"
-                />
-              </div>
+return (
+  <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+    <div className="bg-white p-4 rounded shadow-lg w-[60%] sm:w-[50%] md:w-[40%] lg:w-[30%]">
+      <h2 className="text-xl font-bold mb-4">Edit Profile</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex gap-2">
+          <div className="w-1/2 space-y-4">
+            <div>
+              <label className="block text-sm font-medium">First Name</label>
+              <input
+                type="text"
+                name="firstName"
+                value={editedData.firstName}
+                onChange={handleInputChange}
+                className="w-full border border-gray-300 p-2 rounded"
+              />
             </div>
-            <div className="w-1/2 space-y-4">
-              <div>
-                <label className="block text-sm font-medium">Gender</label>
-                <input
-                  type="text"
-                  name="gender"
-                  value={editedData.gender}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 p-2 rounded"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Location</label>
-                <input
-                  type="text"
-                  name="location"
-                  value={editedData.location}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 p-2 rounded"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Phone Number</label>
-                <input
-                  type="text"
-                  name="phoneNumber" // Changed from mobileNumber
-                  value={editedData.phoneNumber} // Changed from mobileNumber
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 p-2 rounded"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={editedData.email}
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 p-2 rounded"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Website</label>
-                <input
-                  type="text"
-                  name="website" // Changed from Website
-                  value={editedData.website} // Changed from Website
-                  onChange={handleInputChange}
-                  className="w-full border border-gray-300 p-2 rounded"
-                />
-              </div>
+            <div>
+              <label className="block text-sm font-medium">Last Name</label>
+              <input
+                type="text"
+                name="lastName"
+                value={editedData.lastName}
+                onChange={handleInputChange}
+                className="w-full border border-gray-300 p-2 rounded"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Bio</label>
+              <textarea
+                name="bio"
+                value={editedData.bio}
+                onChange={handleInputChange}
+                className="w-full border border-gray-300 p-2 rounded"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Date Of Birth</label>
+              <input
+                type="text"
+                name="dateOfBirth" // Changed from DateOfBirth
+                value={editedData.dateOfBirth} // Changed from DateOfBirth
+                onChange={handleInputChange}
+                className="w-full border border-gray-300 p-2 rounded"
+                placeholder="year/month/date"
+              />
             </div>
           </div>
-          <div className="flex justify-end gap-2">
-            <button
-              type="button"
-              onClick={onClose}
-              className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded-md"
-            >
-              Save
-            </button>
+          <div className="w-1/2 space-y-4">
+            <div>
+              <label className="block text-sm font-medium">Gender</label>
+              <input
+                type="text"
+                name="gender"
+                value={editedData.gender}
+                onChange={handleInputChange}
+                className="w-full border border-gray-300 p-2 rounded"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Location</label>
+              <input
+                type="text"
+                name="location"
+                value={editedData.location}
+                onChange={handleInputChange}
+                className="w-full border border-gray-300 p-2 rounded"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Phone Number</label>
+              <input
+                type="text"
+                name="phoneNumber" // Changed from mobileNumber
+                value={editedData.phoneNumber} // Changed from mobileNumber
+                onChange={handleInputChange}
+                className="w-full border border-gray-300 p-2 rounded"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Email</label>
+              <input
+                type="email"
+                name="email"
+                value={editedData.email}
+                onChange={handleInputChange}
+                className="w-full border border-gray-300 p-2 rounded"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Website</label>
+              <input
+                type="text"
+                name="website" // Changed from Website
+                value={editedData.website} // Changed from Website
+                onChange={handleInputChange}
+                className="w-full border border-gray-300 p-2 rounded"
+              />
+            </div>
           </div>
-        </form>
-      </div>
+        </div>
+        <div className="flex justify-end gap-2">
+          <button
+            type="button"
+            onClick={onClose}
+            className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md"
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            className="bg-blue-500 text-white px-4 py-2 rounded-md"
+          >
+            Save
+          </button>
+        </div>
+      </form>
     </div>
-  );
+  </div>
+);
 }
 
 function Profile() {
@@ -253,6 +254,7 @@ function Profile() {
                 className="rounded-md lg:w-[12rem] lg:h-[12rem] md:w-[10rem] md:h-[10rem] sm:w-[8rem] sm:h-[8rem] xs:w-[7rem] xs:h-[7rem] outline outline-2 outline-offset-2 outline-blue-500 relative lg:bottom-[5rem] sm:bottom-[4rem] xs:bottom-[3rem]"
                 onClick={() => document.getElementById('profile-image-input').click()}
               />
+
             </label>
             <input type="file" id="profile-image-input" className="hidden" onChange={handleProfileImageChange} accept="image/*" />
             <div className="h-20 w-full bg-gray-300">
@@ -317,6 +319,7 @@ function Profile() {
       </section>
       <Footer />
     </div>
+
   );
 }
 

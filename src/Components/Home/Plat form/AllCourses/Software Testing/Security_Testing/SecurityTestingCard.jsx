@@ -5,7 +5,7 @@ const SecurityTestingCard = () => {
     <>
       <section id="portfolio" className="portfolio-section py-16 px-4 ">
         <div className="container mx-auto ">
-          <div className="text-center mb-12">
+          <div className=" mb-12">
             <h2 className="text-4xl font-bold">
               Mastering Security Testing: Protect Your Applications
             </h2>
@@ -17,7 +17,7 @@ const SecurityTestingCard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-1">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/man-sitting-desk-unlocking-computer-computer-settings-login-flat-illustration_74855-20645.jpg?t=st=1716801266~exp=1716804866~hmac=a175f1b6402416844d43b31f4223a4af11769cf0f2b0f15a2c17aeef35458484&w=740"
@@ -37,7 +37,7 @@ const SecurityTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-2">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/hand-drawn-vpn-illustration_23-2149229491.jpg?t=st=1716800702~exp=1716804302~hmac=75eb52de17103c6a02fcdb34c3682c3d816f1e354e6f741b90210e5e98935d80&w=740"
@@ -56,7 +56,7 @@ const SecurityTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-3">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/premium-vector/digital-media-data-concept-with-character-people-working-with-multimedia-files-database-upload-play-music-video-film_269730-293.jpg?w=740"
@@ -77,7 +77,7 @@ const SecurityTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-4">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/premium-vector/cloud-computing-technology-concept-with-character-data-storage-protection-computing-science-disk-services-connection-innovations_269730-308.jpg?w=740"
@@ -98,7 +98,7 @@ const SecurityTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-5">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/digital-designers-team-drawing-with-pen-computer-monitor_74855-10586.jpg?t=st=1716801403~exp=1716805003~hmac=83292bbbed4dd8e277f7371cb532153cfd2a240c3befe9df113c41a7d9a689c8&w=826"
@@ -120,7 +120,7 @@ const SecurityTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-6">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/colleagues-working-together-project_74855-6308.jpg?t=st=1716801419~exp=1716805019~hmac=7bc82bca82870cbfb7eb42f0c2379263f0d286f69044e64652e03f6c5d008db3&w=900"

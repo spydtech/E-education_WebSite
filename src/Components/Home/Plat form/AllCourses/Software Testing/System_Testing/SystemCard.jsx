@@ -5,7 +5,7 @@ const SystemTestingCard = () => {
     <>
       <section id="portfolio" className="portfolio-section py-16 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <h2 className="text-4xl font-bold">
               Mastering Software Testing: Enhance Your Expertise
             </h2>

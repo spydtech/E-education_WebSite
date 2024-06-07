@@ -5,7 +5,7 @@ const PerformanceTestingCard = () => {
     <>
       <section id="portfolio" className="portfolio-section py-16 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
+          <div className=" mb-12">
             <h2 className="text-4xl font-bold">
               Mastering Performance Testing: Elevate Your Skills
             </h2>
@@ -37,7 +37,7 @@ const PerformanceTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-2">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/hand-drawn-illustrated-gathering-data-concept_23-2149139706.jpg?t=st=1716794719~exp=1716798319~hmac=b388d6e4c7c249c033cff77233befa49f34c164041a9c9c87a0e8fb37957ffee&w=826"
@@ -56,7 +56,7 @@ const PerformanceTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-3">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/team-work-concept-illustration_114360-506.jpg"
@@ -77,7 +77,7 @@ const PerformanceTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-4">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/internet-security-abstract-concept-illustration_335657-3702.jpg?w=740"
@@ -98,7 +98,7 @@ const PerformanceTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-5">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/security-safeguard-abstract-concept-illustration_335657-3700.jpg?w=740"
@@ -120,7 +120,7 @@ const PerformanceTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-6">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/young-people-using-mobile-smartphone-texting_81522-1701.jpg?t=st=1716794840~exp=1716798440~hmac=9cafaf10302294a7f540bdc74d1dabea3f0bf44fec595173196d0156a2492ed7&w=996"

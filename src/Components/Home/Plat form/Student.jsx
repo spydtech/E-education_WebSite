@@ -36,7 +36,7 @@ const Student = () => {
     <>
       <Navbar />
       <div className="w-full  py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl px-4">
-        <div>
+        <div className="md:pl-20">
           <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
             Kickstart Your Journey
           </span>

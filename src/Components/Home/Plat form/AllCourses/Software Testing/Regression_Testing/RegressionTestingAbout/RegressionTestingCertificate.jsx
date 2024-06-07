@@ -13,7 +13,7 @@ function RegressionTestingCertificate() {
             <p className="text-[#00a8e8] text-xl font-medium">
               Regression Testing Certification
             </p>
-            <p className="text-6xl font-lora">
+            <p className="md:text-5xl text-2xl font-lora">
               Achieve{" "}
               <p className="text-[#00a8e8]">Credentials and Recognition</p>
             </p>
@@ -26,7 +26,7 @@ function RegressionTestingCertificate() {
         </div>
         <div
           id="certificate"
-          className="flex justify-center items-center p-10 pt-32"
+          className="flex justify-center items-center p-10 pt-4"
         >
           <img src={certificate} alt="certificate" className="bg-transparent" />
         </div>

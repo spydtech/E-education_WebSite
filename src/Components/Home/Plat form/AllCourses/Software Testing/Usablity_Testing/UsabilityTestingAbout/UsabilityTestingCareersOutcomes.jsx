@@ -14,12 +14,12 @@ function UsabilityTestingCareersOutcomes() {
       >
         <div id="headings" className="grid grid-cols-1 text-start ">
           <div>
-            <p className="text-[#00509d] text-xl font-medium">
+            <p className="text-[#00509d] text-xl font-medium pl-4">
               Career Outcomes in Security Testing Program
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora">
+            <p className="md:text-5xl text-2xl font-lora pl-4">
               Discover What our{" "}
               <p className="text-[#00509d]">Learners Have Achieved</p>
             </p>

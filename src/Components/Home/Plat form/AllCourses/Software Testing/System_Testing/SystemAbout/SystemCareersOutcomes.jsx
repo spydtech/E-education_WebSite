@@ -10,7 +10,7 @@ function SystemTestingCareersOutcomes() {
     <>
       <div
         id="main"
-        className=" md:lg:xl:pl-20  bg-gradient-to-r from-rose-500 to-red-500  mb-12"
+        className=" md:lg:xl:pl-20 pl-4  bg-gradient-to-r from-rose-500 to-red-500  mb-12"
       >
         <div id="headings" className="grid grid-cols-1 text-start ">
           <div>
@@ -19,7 +19,7 @@ function SystemTestingCareersOutcomes() {
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora">
+            <p className="md:text-5xl text-2xl font-lora">
               Discover What our{" "}
               <p className="text-[#f9ac13]">Learners Have Achieved</p>
             </p>

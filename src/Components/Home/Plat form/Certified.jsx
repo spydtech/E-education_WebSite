@@ -36,14 +36,14 @@ function Certified() {
             </div>
             <div className="p-6">
               <h5 className="mb-2 block font-lora text-xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased ">
-                {index === 1 && "Get Start Learning with E-education"}
-                {index === 2 && "Improve Your Skills with E-education"}
-                {index === 3 && "Get Certified with E-education Courses"}
+                {index === 1 && "Get Started Learning Quickly With E-education"}
+                {index === 2 && "Enhance Your Professional Skills With E-education"}
+                {index === 3 && "Get Professionally Certified With E-education Courses"}
               </h5>
             </div>
             <div className="p-6 pt-0">
-              {/* <Link to="/features"> */}
-              <Link to="/pricing">
+              <Link to="/features">
+              {/* <Link to="/pricing"> */}
                 <button
                   onClick={() => expandCard(index)}
                   data-ripple-light="true"
