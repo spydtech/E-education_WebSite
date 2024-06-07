@@ -10,7 +10,7 @@ function Main() {
           <div class="my-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 flex gap-3 lg:flex-justify lg:flex flex-col lg:flex-row">
             <div class="sm:text-center lg:text-left">
               <h1 class="font-lora text-4xl tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl">
-                <span class="block xl:inline">Learn Without Limits</span>
+                <span class="block xl:inline">Learn without limits</span>
                 <span class="block text-[#0077b6] xl:inline">
                   {" "}
                   online courses
@@ -33,7 +33,7 @@ function Main() {
                 </div>
                 <div class="mt-3 sm:mt-0 sm:ml-3">
                   <Link
-                    to="/tryDemo"
+                    to="/try-a-demo"
                     class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-800 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
                   >
                     Try demo

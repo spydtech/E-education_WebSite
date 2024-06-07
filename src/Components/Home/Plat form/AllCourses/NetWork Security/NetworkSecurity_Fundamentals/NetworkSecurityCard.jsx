@@ -5,8 +5,8 @@ const NetworkSecurityCard = () => {
     <>
       <section id="portfolio" className="portfolio-section py-16 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold">
+          <div className=" mb-12">
+            <h2 className="text-2xl font-bold">
               Mastering Network Security: Enhance Your Expertise
             </h2>
             <p className="text-lg text-[#f9ac13] font-semibold mt-2">
@@ -17,7 +17,7 @@ const NetworkSecurityCard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-1">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/network-security-abstract-concept-illustration_335657-3704.jpg?w=740"
@@ -37,7 +37,7 @@ const NetworkSecurityCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-2">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/network-protection-abstract-concept-illustration_335657-2097.jpg?w=740"
@@ -56,7 +56,7 @@ const NetworkSecurityCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-3">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/network-administrator-abstract-concept-illustration_335657-2049.jpg?w=740"
@@ -77,7 +77,7 @@ const NetworkSecurityCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-4">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/online-security-abstract-concept-illustration_335657-2074.jpg?w=740"
@@ -98,7 +98,7 @@ const NetworkSecurityCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-5">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/security-safeguard-abstract-concept-illustration_335657-3700.jpg?w=740"
@@ -120,7 +120,7 @@ const NetworkSecurityCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-6">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/internet-security-abstract-concept-illustration_335657-3702.jpg?w=740"

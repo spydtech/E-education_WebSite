@@ -8,16 +8,16 @@ function AdvancedEthicalHackingCareersOutcomes() {
     <>
       <div
         id="main"
-        className=" mb-16 bg-gradient-to-br from-purple-300 via-pink-500 to-red-600"
+        className=" mb-16 bg-gradient-to-br from-purple-300 via-pink-500 to-red-600 pl-4"
       >
-        <div id="headings" className="grid grid-cols-1 text-start px-20">
+        <div id="headings" className="grid grid-cols-1 text-start md:px-20">
           <div>
             <p className="text-orange-600 text-xl font-medium">
               Career Outcomes in Ethical Hacking Program
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora">
+            <p className="md:text-5xl text-2xl font-lora">
               Discover What our{" "}
               <p className="text-violet-800">Learners Have Achieved</p>
             </p>
@@ -30,11 +30,11 @@ function AdvancedEthicalHackingCareersOutcomes() {
         </div>
         <div
           id="subdiv"
-          className="grid grid-cols-1 md:grid-cols-2 gap-x-6 pl-20"
+          className="grid grid-cols-1 md:grid-cols-2 gap-x-6 "
         >
           <div
             id="a"
-            className="grid grid-rows-2 grid-cols-2 gap-8 p-3 pl-20 hover:cursor-pointer text-xl font-medium my-6 items-center border-2 border-opacity-15 rounded-md overflow-hidden shadow-lg shadow-gray-400"
+            className="grid grid-rows-2 grid-cols-2 gap-8 p-3  hover:cursor-pointer text-xl font-medium my-6 items-center border-2 border-opacity-15 rounded-md overflow-hidden shadow-lg shadow-gray-400"
           >
             <div id="x">
               <p>

@@ -5,14 +5,14 @@ import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg
 
 const RegressionTestingAbout = () => {
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br from-[#6f1d1b] to-[#432818]">
+    <div className="mx-auto w-full md:lg:xl:px-10 pl-4 bg-gradient-to-br from-[#6f1d1b] to-[#432818]">
       <div className="pt-0">
         <p className="text-[#00a8e8] text-xl font-medium">
           About The Regression Testing Course
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="md:text-5xl text-2xl font-lora">
           Discover the
           <p className="text-[#00a8e8] my-2">Regression Testing Program</p>
         </p>

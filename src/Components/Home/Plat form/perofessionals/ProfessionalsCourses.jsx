@@ -146,6 +146,7 @@ const courses = [
 ];
 
 function ProfessionalsCourses() {
+  
   return (
     <>
       <div

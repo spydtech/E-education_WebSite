@@ -1,12 +1,3 @@
-// import React from 'react'
-
-// const SoftwareTestingArray = () => {
-//   return (
-//     <div>SoftwareTestingArray</div>
-//   )
-// }
-
-// export default SoftwareTestingArray
 
 import React, { useEffect, useState } from "react";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
@@ -21,6 +12,9 @@ const SoftwareTestingArray = () => {
   const [sh, setShow] = useState(false);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const handleWishList = (course) => {
     const index = wishlist.findIndex((item) => item.id === course.id);
     if (index !== -1) {

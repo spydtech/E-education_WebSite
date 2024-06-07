@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const Ui_UxHero = () => {
   const [courseName] = useState("Basic UI/UX"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
 
   const navigate = useNavigate();
   const handleEnroll = () => {

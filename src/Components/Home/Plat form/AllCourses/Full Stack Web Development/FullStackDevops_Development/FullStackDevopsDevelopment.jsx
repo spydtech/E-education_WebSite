@@ -19,6 +19,9 @@ const FullStackDevopsDevelopment = () => {
     navigate("/course-details", { state: { courseName, coursePrice } });
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

@@ -7,12 +7,12 @@ const ManualTestingAbout = () => {
   return (
     <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br  from-[#0077b6] to-[#00b4d8]">
       <div className="pt-0">
-        <p className="text-[#fca311] text-xl font-medium">
+        <p className="text-[#fca311] text-xl font-medium pl-4">
           About The Manual Testing Course
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="md:text-5xl text-2xl font-lora pl-4">
           Discover the
           <p className="text-[#fca311] my-2">Manual Testing Program</p>
         </p>

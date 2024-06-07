@@ -30,11 +30,11 @@ const CybersecurityEssentials = () => {
       <div className="lg:container lg:mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12">
           {/* Left Section */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-3xl lg:text-5xl font-lora text-blue-600 mb-6 font-bold font-lura pl-8 pt-4">
+          <div className="text-left">
+            <h1 className="text-2xl lg:text-5xl  text-blue-600 mb-6 font-bold font-lora  pt-4">
               Cybersecurity Essentials: Safeguard Your Digital World
             </h1>
-            <p className="text-lg text-gray-700 leading-relaxed pl-8 font-lura">
+            <p className="text-lg text-gray-700 leading-relaxed  font-lora">
               In today's interconnected world, cybersecurity stands as the first
               line of defense against an array of digital threats. With cyber
               attacks becoming increasingly sophisticated, protecting sensitive
@@ -51,7 +51,7 @@ const CybersecurityEssentials = () => {
           </div>
 
           {/* Right Section */}
-          <div className="text-center lg:text-right">
+          <div className="text-right">
             <img
               src="https://img.freepik.com/free-vector/cyber-security-concept_23-2148543851.jpg?t=st=1716451490~exp=1716455090~hmac=b392d3e164adc4a9ec51c168cba8b3590b839448efe5dc4373ce03d4b2a94005&w=740"
               alt="cybersecurity"
@@ -62,19 +62,19 @@ const CybersecurityEssentials = () => {
         </div>
 
         {/* Course Highlights Section */}
-        <div className="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-0 mt-12">
-          <div className="text-center lg:text-right">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between   lg:px-0 mt-8">
+          <div className="text-right">
             <img
               src="https://researchforyou.co.uk/wp-content/uploads/2020/06/Cyber-Essentials-Certification.png"
               alt="learning"
-              className="w-80   lg:w-[500px] h-80 lg:h-96 mx-auto lg:mx-0 rounded-lg"
+              className="w-[500px] h-80 lg:h-96 mx-auto lg:mx-0 rounded-lg"
             />
           </div>
           <div className="lg:w-1/2 lg:ml-12 mt-8 lg:mt-0">
-            <h2 className="text-3xl lg:text-4xl text-blue-600 font-bold mb-6 font-lura">
+            <h2 className="text-xl lg:text-4xl text-blue-600 font-bold mb-6 font-lora">
               Introduction to Advanced Cybersecurity Course with E-Education
             </h2>
-            <h3 className="text-lg lg:text-xl text-green-600 font-semibold mb-6 font-lura">
+            <h3 className="text-lg lg:text-xl text-green-600 font-semibold mb-6 font-lora">
               Course Highlights
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

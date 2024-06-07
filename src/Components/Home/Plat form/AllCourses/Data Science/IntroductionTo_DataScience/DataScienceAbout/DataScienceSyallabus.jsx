@@ -36,12 +36,12 @@ function DataScienceSyllabus() {
           id="div1"
           className="flex items-center justify-center xl:lg:md:w-auto"
         >
-          <div id="headings" className="grid grid-cols-1 text-start px-20">
+          <div id="headings" className="grid grid-cols-1 text-start pl-4">
             <div>
               <p className="text-[#ff206e] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora">
+              <p className="md:text-5xl text-2xl font-lora">
                 Discover What You
                 <p className="text-[#ff206e] inline pl-2">Will Learn</p>
               </p>

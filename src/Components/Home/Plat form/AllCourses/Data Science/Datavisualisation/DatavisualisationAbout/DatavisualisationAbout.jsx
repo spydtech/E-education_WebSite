@@ -11,7 +11,7 @@ const DatavisualisationAbout = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="md:text-5xl text-2xl font-lora">
           Discover the
           <p className="text-violet-800 my-2">Data Visualization Program</p>
         </p>
@@ -38,10 +38,10 @@ const DatavisualisationAbout = () => {
         </div>
 
         <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden mr-16">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <img
               className="w-full h-52 object-cover "
-              src="https://media.istockphoto.com/id/1036906810/video/african-business-man-giving-a-presentation-in-a-glass-conference-room.jpg?s=640x640&k=20&c=hL4dB98tSpRVkQAQavjV099yOGX7AOW8PODqIZwVwcI="
+              src="https://cdn.fordhamram.com/wp-content/uploads/Online-Data-Analytics-Courses.png"
               alt="data-visualization2"
             />
             <div className="p-4">

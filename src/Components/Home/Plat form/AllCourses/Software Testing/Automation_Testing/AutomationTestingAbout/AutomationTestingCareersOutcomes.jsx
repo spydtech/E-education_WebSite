@@ -12,14 +12,14 @@ function AutomationTestingCareersOutcomes() {
         id="main"
         className=" md:lg:xl:pl-20  bg-gradient-to-br from-[#89fc00] to-[#12862b]"
       >
-        <div id="headings" className="grid grid-cols-1 text-start ">
+        <div id="headings" className="grid grid-cols-1 pl-4 text-start ">
           <div>
             <p className="text-[#7400b8] text-xl font-medium">
               Career Outcomes in Automation Testing Program
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora">
+            <p className="md:text-5xl text-2xl font-lora">
               Discover What our{" "}
               <p className="text-[#7400b8]">Learners Have Achieved</p>
             </p>

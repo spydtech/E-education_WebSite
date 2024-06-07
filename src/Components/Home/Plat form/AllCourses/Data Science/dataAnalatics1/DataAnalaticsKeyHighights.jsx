@@ -134,8 +134,8 @@ function DataAnalaticsKeyHighights() {
             id="h2"
             className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
           >
-            <p className="text-5xl font-bold ">What does this</p>
-            <p className="text-5xl font-bold text-[#30c5ff] inline">
+            <p className="md:md:text-5xl text-2xl text-2xl font-bold ">What does this</p>
+            <p className="md:md:text-5xl text-2xl text-2xl font-bold text-[#30c5ff] inline">
               Course have to offer?
             </p>
           </div>

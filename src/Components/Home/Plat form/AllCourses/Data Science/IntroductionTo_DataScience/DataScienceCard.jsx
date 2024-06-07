@@ -17,7 +17,7 @@ const DataScienceCard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-1">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/pair-programming-concept-illustration_114360-2170.jpg?t=st=1716451287~exp=1716454887~hmac=cc991f9dacafb486a88efc45f1b6ab6d8d04e77495c9a8d56c3b1bc97ef7884d&w=740"
@@ -37,7 +37,7 @@ const DataScienceCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-2">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/web-development-concept-with-programmer-ar_107791-17049.jpg?t=st=1716451383~exp=1716454983~hmac=02ea07b92b250c3bb681aaff29754fee3a4f75af789e5ba0a13b3fbd5ac0cdfc&w=826"
@@ -56,7 +56,7 @@ const DataScienceCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-3">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://t3.ftcdn.net/jpg/04/57/66/56/240_F_457665662_ap8MydjBqBekFsieXX6HRgUAWcSM4Kl4.jpg"
@@ -77,7 +77,7 @@ const DataScienceCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-4">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/gradient-data-driven-concept-illustration_23-2149525002.jpg?t=st=1716451440~exp=1716455040~hmac=1d42424bd8241fa0f99758312693f9a8c5aaf7c2b1e20f231ff72fc5667e5f4c&w=740"
@@ -98,7 +98,7 @@ const DataScienceCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-5">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866843.jpg?t=st=1716451464~exp=1716455064~hmac=b20bffd75cbf6f3c20c1d05348247ca261db387eb06c386f823603a08a890fd1&w=826"
@@ -120,7 +120,7 @@ const DataScienceCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-6">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/3d-modeling-concept-illustration_114360-2971.jpg?t=st=1716451513~exp=1716455113~hmac=f53075acf6f8e69b191cbdd1db9ccd6dc17aab991a06dd2719d319773e0b2c8a&w=740"

@@ -20,7 +20,7 @@ function SecurityTestingKeyHighights() {
       case 0:
         return (
           <>
-            <ul className="space-y-2 pt-4 font-normal text-[16px] list-disc pl-16  bg-gray-200 shadow-2xl">
+            <ul className="space-y-2 pt-4 font-normal text-[16px] list-disc  bg-gray-200 shadow-2xl">
               <p className="text-2xl font-medium text-green-500 py-4">
                 Overview
               </p>
@@ -130,17 +130,17 @@ function SecurityTestingKeyHighights() {
         className=" md:lg:xl:px-20  bg-gradient-to-br  from-[#560bad] to-[#3a0ca3]"
       >
         <div id="subdiv1" className="pt-4 font-lora">
-          <div id="h1" className="">
+          <div id="h1" className="pl-4">
             <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#31cb00]">
               E-education Course Highlights
             </p>
           </div>
           <div
             id="h2"
-            className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
+            className="md:lg:flex pl-4 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
           >
-            <p className="text-5xl font-bold ">What does this</p>
-            <p className="text-5xl font-bold text-[#31cb00] inline">
+            <p className="md:text-5xl text-2xl font-bold pl-4">What does this</p>
+            <p className="md:text-5xl text-2xl font-bold text-[#31cb00] inline">
               Course have to offer?
             </p>
           </div>

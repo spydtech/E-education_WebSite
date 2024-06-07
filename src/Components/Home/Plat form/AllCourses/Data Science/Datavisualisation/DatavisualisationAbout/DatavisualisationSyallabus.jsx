@@ -27,12 +27,12 @@ function DatavisualisationSyallabus() {
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 md:mb-20 bg-gradient-to-br from-blue-300 via-purple-500 to-pink-600">
         <div className="flex items-center justify-center xl:lg:md:w-auto">
-          <div className="grid grid-cols-1 text-start px-20">
+          <div className="grid grid-cols-1 text-start pl-4">
             <div>
               <p className="text-orange-800 text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora">
+              <p className="md:text-5xl text-2xl font-lora">
                 Discover What You
                 <p className="text-violet-800 inline pl-2">Will Learn</p>
               </p>

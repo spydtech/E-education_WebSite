@@ -19,7 +19,9 @@ const JavascriptDevelopment = () => {
     // Navigate to the card details page with course details as parameters
     navigate("/course-details", { state: { courseName, coursePrice } });
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

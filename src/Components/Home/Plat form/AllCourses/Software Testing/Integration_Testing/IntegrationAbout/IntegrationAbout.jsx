@@ -6,14 +6,14 @@ import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg
 
 const IntigrationAbout = () => {
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-r from-blue-600 to-blue-600">
-      <div className="pt-0">
+    <div className="mx-auto w-full md:lg:xl:px-10 pl-4 bg-gradient-to-r from-blue-600 to-blue-600">
+      <div className="pt-0 ">
         <p className="text-[#f9ac13] text-xl font-medium">
           About The Compatibility Testing Course
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="md:text-5xl text-2xl font-lora">
           Discover the
           <p className="text-[#f9ac13] my-2">Intigration Testing Program</p>
         </p>

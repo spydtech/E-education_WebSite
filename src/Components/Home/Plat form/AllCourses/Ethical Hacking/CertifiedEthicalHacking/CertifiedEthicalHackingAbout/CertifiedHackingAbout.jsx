@@ -11,7 +11,7 @@ const CertifiedEthicalHackingAbout = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="md:text-5xl text-2xl font-lora">
           Discover the
           <p className="text-violet-800 my-2">Ethicalhacking Program</p>
         </p>

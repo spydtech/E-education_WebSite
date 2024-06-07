@@ -8,7 +8,7 @@ function DataScienceCareersOutcomes() {
     <>
       <div
         id="main"
-        className="md:lg:xl:pl-20 bg-gradient-to-br from-[#4e148c] to-[#613dc1]"
+        className="md:lg:xl:pl-20 bg-gradient-to-br from-[#4e148c] to-[#613dc1] pl-4"
       >
         <div id="headings" className="grid grid-cols-1 text-start ">
           <div>
@@ -17,7 +17,7 @@ function DataScienceCareersOutcomes() {
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora">
+            <p className="md:text-5xl text-2xl font-lora">
               Discover What our{" "}
               <p className="text-[#ff206e]">Learners Have Achieved</p>
             </p>

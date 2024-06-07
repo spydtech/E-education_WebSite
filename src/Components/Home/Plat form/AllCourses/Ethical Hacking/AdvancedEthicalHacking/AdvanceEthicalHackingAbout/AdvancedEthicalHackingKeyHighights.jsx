@@ -20,7 +20,7 @@ function AdvancedEthicalHackingKeyHighights() {
       case 0:
         return (
           <>
-            <ul className="space-y-3  font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl md:my-8">
+            <ul className="space-y-3  font-normal text-[16px] list-disc  bg-gray-200 shadow-2xl">
               <p className="text-2xl font-medium text-orange-600 ">Overview</p>
               <li>Advanced modules with Generative AI fusion</li>
               <li>E-education certificate via upGrad collaboration</li>
@@ -40,7 +40,7 @@ function AdvancedEthicalHackingKeyHighights() {
       case 1:
         return (
           <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl md:my-16">
+            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc  bg-gray-200 shadow-2xl ">
               <p className="text-2xl font-medium text-orange-600 py-4">
                 Key Concepts
               </p>
@@ -58,7 +58,7 @@ function AdvancedEthicalHackingKeyHighights() {
         return (
           <>
             {" "}
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl md:my-16">
+            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc  bg-gray-200 shadow-2xl">
               <p className="text-2xl font-medium  text-orange-600">
                 Applications
               </p>
@@ -76,7 +76,7 @@ function AdvancedEthicalHackingKeyHighights() {
       case 3:
         return (
           <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl md:my-20">
+            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc  bg-gray-200 shadow-2xl">
               <p className="text-2xl font-medium  text-orange-600">
                 Skills Developed
               </p>
@@ -101,7 +101,7 @@ function AdvancedEthicalHackingKeyHighights() {
         return (
           <>
             {" "}
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl md:my-10">
+            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc  bg-gray-200 shadow-2xl md:my-10">
               <p className="text-2xl font-medium  text-orange-600">
                 Target Audience
               </p>
@@ -125,7 +125,7 @@ function AdvancedEthicalHackingKeyHighights() {
     <>
       <div
         id="main"
-        className=" px-20 bg-gradient-to-br from-purple-300 via-pink-500 to-red-600 mb-16"
+        className="bg-gradient-to-br from-purple-300 via-pink-500 to-red-600 mb-16"
       >
         <div id="subdiv1" className="pt-4">
           <div id="h1" className="">
@@ -137,8 +137,8 @@ function AdvancedEthicalHackingKeyHighights() {
             id="h2"
             className="md:lg:flex pl-2 font-lora space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
           >
-            <p className="text-6xl ">What does this</p>
-            <p className="text-6xl  text-violet-800 inline">
+            <p className="md:text-5xl text-2xl ">What does this</p>
+            <p className="md:text-5xl text-2xl  text-violet-800 inline">
               Course have to offer?
             </p>
           </div>
@@ -153,7 +153,7 @@ function AdvancedEthicalHackingKeyHighights() {
               <div
                 key={index}
                 onClick={() => handleClick(index)}
-                className={`hover:text-violet-700 p-5 text-start hover:cursor-pointer text-xl font-medium my-6 h-16 w-96 lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden shadow-lg shadow-gray-400 transition-transform duration-300 transform hover:scale-105 ${
+                className={`hover:text-violet-700 p-5 text-start hover:cursor-pointer text-xl font-medium my-6 h-16 w-[300px] lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden shadow-lg shadow-gray-400 transition-transform duration-300 transform hover:scale-105 ${
                   selectedItem === index
                     ? "bg-cyan-600  text-white hover:text-white border-none"
                     : "bg-white"
@@ -165,7 +165,7 @@ function AdvancedEthicalHackingKeyHighights() {
           </div>
           <div
             id="content2"
-            className="md:lg:w-auto md:lg:h-auto w-[400px] h-auto pt-4 pl-4 text-xl"
+            className="md:lg:w-auto md:lg:h-auto w-[300px] h-auto pt-4 pl-4 text-xl"
           >
             {renderContent()}
           </div>

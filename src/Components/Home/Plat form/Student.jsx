@@ -13,7 +13,9 @@ const images = [
 
 const Student = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -34,7 +36,7 @@ const Student = () => {
     <>
       <Navbar />
       <div className="w-full  py-12 grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-8 max-w-8xl px-4">
-        <div>
+        <div className="md:pl-20">
           <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
             Kickstart Your Journey
           </span>
@@ -56,17 +58,18 @@ const Student = () => {
             Find Your Course
           </button>
         </div>
-        <div className="    mr-32 ">
+        <div className=" ">
           {/* <img src={HeroStudent} alt="Hero Student" /> */}
-          <div class="lg:inset-y-0 lg:right-0 lg:w-[500px] w-96  border-1  border-gray-500 relative">
+          <div class="lg:inset-y-0 lg:right-0 lg:w-[500px]  border-1  border-gray-500 relative">
             <div className="overflow-hidden">
               <img
-                className="w-[550px] h-[450px] py-10"
-                src={images[currentSlide]}
-                alt={`Slide ${currentSlide + 1}`}
+                className="md:w-[550px] md:h-[450px] w-[300] h-[300] py-10"
+                // src={images[currentSlide]}
+                src="https://www.shutterstock.com/image-vector/3d-web-vector-illustrations-online-600nw-2152289507.jpg"
+               
               />
             </div>
-            <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-4">
+            {/* <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-4">
               <button
                 onClick={prevSlide}
                 className=" text-white rounded-full w-10 h-10 flex items-center justify-center focus:outline-none"
@@ -79,7 +82,7 @@ const Student = () => {
               >
                 &rarr;
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

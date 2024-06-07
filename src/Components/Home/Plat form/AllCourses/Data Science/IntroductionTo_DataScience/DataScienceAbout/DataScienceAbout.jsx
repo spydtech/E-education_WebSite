@@ -4,14 +4,14 @@ import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg
 
 const DataScienceAbout = () => {
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br from-[#4e148c] to-[#613dc1]">
+    <div className="mx-auto w-full md:lg:xl:px-10 pl-4 bg-gradient-to-br from-[#4e148c] to-[#613dc1]">
       <div className="pt-0">
         <p className="text-[#ff206e] text-xl font-medium">
           About The Data Science Course
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="md:text-5xl text-2xl font-lora">
           Discover the
           <p className="text-[#ff206e] my-2">Data Science Program</p>
         </p>

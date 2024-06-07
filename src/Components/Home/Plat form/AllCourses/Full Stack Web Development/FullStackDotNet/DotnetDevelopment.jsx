@@ -18,7 +18,9 @@ const DotNetDevelopment = () => {
     navigate("/course-details", { state: { courseName, coursePrice } });
   };
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

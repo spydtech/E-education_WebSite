@@ -13,7 +13,7 @@ function DatavisualisationCertificate() {
             <p className="text-pink-800 text-xl font-medium font-lora">
               Machine Learning Certification
             </p>
-            <p className="text-6xl font-lora">
+            <p className="md:text-5xl text-2xl font-lora">
               Achieve{" "}
               <p className="text-violet-800 font-lora">
                 Credentials and Recognition
@@ -28,7 +28,7 @@ function DatavisualisationCertificate() {
         </div>
         <div
           id="certificate"
-          className="flex justify-center items-center p-10 pt-32"
+          className="flex justify-center items-center p-10 pt-4"
         >
           <img src={certificate} alt="certificate" className="bg-transparent" />
         </div>

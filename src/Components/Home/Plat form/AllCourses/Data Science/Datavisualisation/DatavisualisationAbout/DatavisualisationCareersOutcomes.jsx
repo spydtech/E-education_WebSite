@@ -10,7 +10,7 @@ const DatavisualisationOutcomes = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="md:text-6xl text-xl font-lora">
           Explore the
           <p className="text-violet-800 my-2">Data Visualization Program</p>
         </p>
@@ -37,7 +37,7 @@ const DatavisualisationOutcomes = () => {
         </div>
 
         <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden mr-16">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <img
               className="w-full h-52 object-cover"
               src="https://img.freepik.com/free-vector/dashboard-element-set-template_23-2148370472.jpg?t=st=1716440083~exp=1716443683~hmac=468bb9ab25b5519e38146f3b8658a5792073336452a5ac6e8e1cdc2d9cad63e6&w=740"

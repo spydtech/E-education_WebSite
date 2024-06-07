@@ -63,8 +63,8 @@ function FooterPart() {
     {
       title: "Community",
       links: [
-        { label: "Discuss", Link: "/" },
-        { label: "Code Bits", Link: "/" },
+        // { label: "Discuss", Link: "/" },
+        // { label: "Code Bits", Link: "/" },
         { label: "Feeds", Link: "/PostFeeds" },
         { label: "Ask me!", Link: "/QuestionForm" },
       ],
@@ -130,8 +130,8 @@ function FooterPart() {
         <div className="container mx-auto flex justify-center items-center  px-8 py-6 bg-gray-900  text-white ">
           <div className="grid gap-6 md:ml-10 md:grid-cols-3 md:px-10 lg:grid-cols-5  grid-cols-2">
             <div>
-              <a
-                href="https://twitter.com/"
+              <Link
+                to="https://www.linkedin.com/company/e-edu/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mr-2 flex items-center font-medium w-36"
@@ -141,13 +141,13 @@ function FooterPart() {
                   alt="LinkedIn"
                 />
                 Follow us on LinkedIn
-              </a>
+              </Link>
             </div>
 
             <div>
               {" "}
               <a
-                href="https://twitter.com/"
+                href=" https://www.facebook.com/profile.php?id=61558814622409"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mr-4 flex items-center font-medium w-40"
@@ -163,7 +163,7 @@ function FooterPart() {
             <div>
               {" "}
               <a
-                href="https://twitter.com/"
+                href=" https://x.com/eeducatione07"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mr-4 flex items-center font-medium w-36"
@@ -179,7 +179,7 @@ function FooterPart() {
             <div>
               {" "}
               <a
-                href="https://twitter.com/"
+                href=" https://www.instagram.com/eeducatione07/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mr-4 flex items-center font-medium w-36"
@@ -194,7 +194,7 @@ function FooterPart() {
 
             <div>
               <a
-                href="https://twitter.com/"
+                href="https://www.youtube.com/@EEducationOnline"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mr-4 flex items-center font-medium w-36"
