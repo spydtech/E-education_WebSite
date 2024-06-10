@@ -102,8 +102,8 @@
 //         <Link to="/Profile">
 //         <button className='hover:underline'>Visit Profile</button>
 //         </Link>
-       
-       
+
+
 //         <button className='' onClick={handleFeedsClick}>Feeds</button>
 //       </div>
 //       {showFeeds && (
@@ -128,66 +128,68 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Post from './Post';
+import { useSelector } from 'react-redux';
 
 function ProfileCard({ posts = [] }) {
   const [showFeeds, setShowFeeds] = useState(false);
+  const { auth } = useSelector(state => state)
 
   const handleFeedsClick = () => {
     setShowFeeds(!showFeeds);
   };
 
-    const userData = [
-        {
-          id: 1,
-          image: 'https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
-          name: 'Anna Wilson',
-          role: 'Developer',
-          phone: '+123-458-784',
-          email: 'smkys@gmail.com',
-        },
-        // Add more users if needed
-      ];
+  const userData = [
+    {
+      id: 1,
+      image: 'https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg',
+      name: 'Anna Wilson',
+      role: 'Developer',
+      phone: '+123-458-784',
+      email: 'smkys@gmail.com',
+    },
+    // Add more users if needed
+  ];
 
-//       const [userData, setUserData] = useState([]);
+  //       const [userData, setUserData] = useState([]);
 
-//   useEffect(() => {
-//     fetchData();
-//   }, []);
+  //   useEffect(() => {
+  //     fetchData();
+  //   }, []);
 
-//   const fetchData = async () => {
-//     try {
-//       const response = await fetch('https://api.example.com/users');
-//       if (!response.ok) {
-//         throw new Error('Network response was not ok');
-//       }
-//       const data = await response.json();
-//       setUserData(data);
-//     } catch (error) {
-//       console.error('Error fetching data:', error);
-//     }
-//   };
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch('https://api.example.com/users');
+  //       if (!response.ok) {
+  //         throw new Error('Network response was not ok');
+  //       }
+  //       const data = await response.json();
+  //       setUserData(data);
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
 
   return (
     <div className='p-5'>
-       
+
       {userData.map(user => (
         <div
           key={user.id}
           className="profile-card border-2 shadow-lg md:w-[300px] pt-5 rounded-md   cursor-pointer snap-start shrink-0 bg-[#e0afa0] flex flex-col items-center justify-center gap-3 transition-all duration-300 group"
         >
-         <h1 className='text-xl text-white'>Profile</h1>
+          <h1 className='text-xl text-white'>Profile</h1>
           {/* Avatar and other profile info */}
-          <img 
-             src={user.image}
-             alt='user'
-             className='w-[100px] h-[100px] rounded-full'
-             />
+          <img
+            src={user.image}
+            alt='user'
+            className='w-[100px] h-[100px] rounded-full'
+          />
           <div className="headings text-center leading-4">
             <p className="text-xl font-serif font-semibold text-[#434955]">
-              {user.name}
+              {auth.user.firstName} {auth.user.lastName}
             </p>
             <p className="text-sm font-semibold text-[#434955]">
-              {user.role}
+              {auth.user.bio}
             </p>
           </div>
           <div className="w-full items-center justify-center flex">
@@ -204,7 +206,7 @@ function ProfileCard({ posts = [] }) {
                 >
                   {/* Phone icon SVG */}
                 </svg>
-                <p>{user.phone}</p>
+                <p>{auth.user.phoneNumber}</p>
               </li>
               <li>
                 <svg
@@ -217,7 +219,7 @@ function ProfileCard({ posts = [] }) {
                 >
                   {/* Mail icon SVG */}
                 </svg>
-                <p>{user.email}</p>
+                <p>{auth.user.email}</p>
               </li>
             </ul>
           </div>
@@ -228,16 +230,16 @@ function ProfileCard({ posts = [] }) {
       ))}
       <div className='flex p-2 gap-10 md:w-[300px]  justify-center bg-white border-2 shadow-lg'>
         <Link to="/Profile">
-        <button className='hover:underline'>Visit Profile</button>
+          <button className='hover:underline'>Visit Profile</button>
         </Link>
-       
-       
+
+
         <button className='hover:underline' onClick={handleFeedsClick}>Feeds</button>
       </div>
       {showFeeds && (
         <div className='p-5 mt-5 bg-gray-100 rounded-md shadow-md'>
           <h2 className='text-lg font-semibold'>Feeds</h2>
-          
+
           <ul className='list-disc list-inside'>
             <div style={{ overflowY: 'scroll', maxHeight: '500px' }}>
               {posts.map((post, index) => (

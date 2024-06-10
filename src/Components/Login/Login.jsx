@@ -56,18 +56,18 @@ function Login() {
                   />
                   <h1 className="py-2 text-lg   cursor-pointer">
                     {" "}
-                    <a
-                      href="/#"
+                    <Link
+                      to="/forgotPassword"
                       className="text-sm  hover:underline  cursor-pointer"
                     >
                       Forgot Password ?
-                    </a>
-                    <a
-                      href="/Signup"
+                    </Link>
+                    <Link
+                      to="/Signup"
                       className="text-sm mx-2 hover:underline text-blue-500 cursor-pointer"
                     >
                       Sign Up
-                    </a>
+                    </Link>
                   </h1>
                   <button
                     type="submit"

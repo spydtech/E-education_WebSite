@@ -2,18 +2,24 @@ import React, { useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Box, CssBaseline, Toolbar, useMediaQuery, useTheme } from '@mui/material';
 import AdminDashBoard from './AdminDashBoard';
-import CreateCourseForm from './CreateCourseForm';
-import CourseTable from './CourseTable';
-import OrderTable from './OrderTable';
-import CustomerTable from './CustomersTable';
+// import Courses from '../Views/Courses'
+import Orders from '../Views/Orders';
+import Users from '../Views/Users';
 import { AccountCircle, Dashboard, ShoppingCart, People, ListAlt, AddCircle } from '@mui/icons-material';
+import {
+    Dashboard as DashboardIcon,
+    // School as CoursesIcon,
+    People as UsersIcon,
+    ShoppingCart as OrdersIcon,
+    Settings as SettingsIcon
+} from '@mui/icons-material';
 
 const menu = [
-    { name: "Dashboard", path: "/admin", icon: <Dashboard /> },
-    { name: "Courses", path: "/admin/courses", icon: <ListAlt /> },
-    { name: "Customers", path: "/admin/customers", icon: <People /> },
-    { name: "Orders", path: "/admin/orders", icon: <ShoppingCart /> },
-    { name: "Add Product", path: "/admin/course/create", icon: <AddCircle /> },
+    { name: "Dashboard", path: "/admin", icon: <DashboardIcon /> },
+    // { name: "Courses", path: "/admin/courses", icon: <CoursesIcon /> },
+    { name: "Users", path: "/admin/users", icon: <UsersIcon /> },
+    { name: "Orders", path: "/admin/orders", icon: <OrdersIcon /> },
+    { name: "Settings", path: "/admin/settings", icon: <SettingsIcon /> },
 ];
 
 const Admin = () => {
@@ -26,6 +32,8 @@ const Admin = () => {
         setSideBarVisible(false);
     };
 
+    const drawerWidth = isLargeScreen ? 250 : '50vw'; // Adjust the width for large and small screens
+
     const drawer = (
         <Box
             sx={{
@@ -34,7 +42,7 @@ const Admin = () => {
                 flexDirection: "column",
                 justifyContent: "space-between",
                 height: "100vh",
-                width: "280px", // Width for large screens
+                width: drawerWidth,
             }}
             className="bg-gray-800 text-white"
         >
@@ -70,17 +78,16 @@ const Admin = () => {
     return (
         <div className="flex h-screen">
             <CssBaseline />
-            <div className={`bg-gray-900 text-white ${drawerVariant === 'temporary' && !sideBarVisible ? '-left-64' : 'w-64'}`}>
+            <div className={`bg-gray-900 text-white ${drawerVariant === 'temporary' && !sideBarVisible ? '-left-64' : `w-${drawerWidth}`}`}>
                 {drawer}
             </div>
             <div className="flex-grow h-screen overflow-auto">
                 <Box component="main" className="p-4">
                     <Routes>
                         <Route path='/' element={<AdminDashBoard />} />
-                        <Route path='/course/create' element={<CreateCourseForm />} />
-                        <Route path='/courses' element={<CourseTable />} />
-                        <Route path='/orders' element={<OrderTable />} />
-                        <Route path='/customers' element={<CustomerTable />} />
+                        {/* <Route path='/courses' element={<Courses />} /> */}
+                        <Route path='/orders' element={<Orders />} />
+                        <Route path='/users' element={<Users />} />
                     </Routes>
                 </Box>
             </div>

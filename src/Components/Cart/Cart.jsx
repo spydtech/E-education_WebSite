@@ -16,21 +16,26 @@ const Cart = ({ history }) => {
     const dispatch = useDispatch();
     const { auth } = useSelector((state) => state)
     const navigate = useNavigate();
+    const { cart } = useSelector(store => store);
 
 
     // Calculate total price and discount price
     const totalPrice = cartItems.reduce((total, item) => total + item.coursePrice, 0);
 
-    const discountPrice = cartItems.length > 0 ? 30 : 0;
+    const discountPrice = 0;
 
     // Calculate total amount after discount
-    const totalAmount = totalPrice - discountPrice;
+    let totalAmount = (totalPrice - discountPrice);
+    // Add GST of 18%
+    const gstAmount = (totalAmount * 0.18).toFixed(2); // Calculate GST amount (18% of totalAmount)
+    totalAmount = (parseFloat(totalAmount) + parseFloat(gstAmount)).toFixed(2); // Add GST to totalAmount
+    console.log(totalAmount)
 
     // Initialize Razorpay
     const initializeRazorpay = async (orderId) => {
         const rzp = new window.Razorpay({
-            key: 'rzp_live_DWJacXxphWC6Zg',
-            amount: totalAmount.toString() * 100, // Replace with your actual API key
+            key: 'rzp_live_DWJacXxphWC6Zg',// Replace with your actual API key
+            amount: totalAmount * 100,
             order_id: orderId,
             currency: 'INR',
             name: 'SPY D Tech',
@@ -85,7 +90,7 @@ const Cart = ({ history }) => {
             const response = await axios.post(
                 'http://localhost:8080/create-order', // Backend API endpoint for creating Razorpay order
                 {
-                    amount: totalAmount, // Amount in paisa (convert to integer)
+                    amount: totalAmount * 100, // Amount in paisa (convert to integer)
                     currency: 'INR',
                     receipt: 'receipt_order_12345', // Replace with your logic for receipt ID
                 },
@@ -125,8 +130,8 @@ const Cart = ({ history }) => {
                                     <span>₹{totalPrice}</span>
                                 </div>
                                 <div className='flex justify-between pt-3 '>
-                                    <span>Discount Price</span>
-                                    <span className='text-green-600'>₹{discountPrice}</span>
+                                    <span>GST 18%</span>
+                                    <span className='text-green-600'>₹{gstAmount}</span>
                                 </div>
                                 <div className='flex justify-between pt-3 text-black'>
                                     <span>Total Amount</span>
