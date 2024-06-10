@@ -140,7 +140,7 @@
 // }
 
 // export default Payment;
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { FaRobot } from "react-icons/fa";
 
 function Payment() {
@@ -160,6 +160,10 @@ function Payment() {
     // You can add your submission logic here
     console.log("Form submitted!");
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="flex justify-center items-center min-h-screen ">
