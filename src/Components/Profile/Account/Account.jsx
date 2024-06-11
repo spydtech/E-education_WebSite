@@ -7,6 +7,9 @@ function Account() {
   const { auth } = useSelector((state) => state);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
     if (auth.user) {
       const { firstName, lastName, email, phoneNumber, location } = auth.user;
       const fullName = `${firstName}` + `${lastName}`;

@@ -1,6 +1,9 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 function Calendar() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <div className="bg-white md:-mt-5 border   rounded-lg shadow relative mx-auto w-full md:h-[17rem] h-full ">
@@ -12,14 +15,14 @@ function Calendar() {
         <h2 className="px-10 pt-2 font-semibold ">Add to my calendar</h2>
         <div className="px-10 md:space-x-10 md:pb-0 pb-5  space-y-2 md:space-y-0 text-sm pt-2 flex flex-col md:flex-row">
           <a className="border border-2 p-2 border-blue-600 rounded hover:bg-blue-100 cursor-pointer">
-            Google Calendar
+            Calendar
           </a>
-          <a className="border border-2 p-2 border-blue-600 rounded hover:bg-blue-100 cursor-pointer">
+          {/* <a className="border border-2 p-2 border-blue-600 rounded hover:bg-blue-100 cursor-pointer">
             Apple Calendar
           </a>
           <a className="border border-2 p-2 border-blue-600 rounded hover:bg-blue-100 cursor-pointer">
             Other Calendar
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

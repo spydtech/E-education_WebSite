@@ -1,6 +1,9 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 function Notes() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <div className="bg-white p-10  md:-mt-5 border   rounded-lg shadow relative mx-auto w-full ">
