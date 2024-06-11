@@ -174,11 +174,10 @@ function ForgotPassword() {
                   )}
                   <button
                     onClick={handleSendOtp}
-                    className={`p-2 w-auto rounded ${
-                      email
+                    className={`p-2 w-auto rounded ${email
                         ? "bg-blue-500 text-white"
                         : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                    }`}
+                      }`}
                     disabled={!email}
                   >
                     Send OTP
@@ -202,11 +201,10 @@ function ForgotPassword() {
                   </div>
                   <button
                     onClick={handleVerifyOtp}
-                    className={`p-2 w-auto rounded ${
-                      otp.join("").length === 6
+                    className={`p-2 w-auto rounded ${otp.join("").length === 6
                         ? "bg-blue-500 text-white"
                         : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                    }`}
+                      }`}
                     disabled={otp.join("").length !== 6}
                   >
                     Verify OTP
@@ -225,13 +223,22 @@ function ForgotPassword() {
                     {errors.password && (
                       <p className="text-red-500">{errors.password}</p>
                     )}
+                    <input
+                      type="password"
+                      value={password}
+                      onChange={handlePasswordChange}
+                      className="p-4 border border-gray-400 rounded w-full mb-3"
+                      placeholder="Conform password"
+                    />
+                    {errors.password && (
+                      <p className="text-red-500">{errors.password}</p>
+                    )}
                     <button
                       onClick={handleUpdatePassword}
-                      className={`p-2 w-auto rounded ${
-                        password
+                      className={`p-2 w-auto rounded ${password
                           ? "bg-blue-500 text-white"
                           : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                      }`}
+                        }`}
                       disabled={!password}
                     >
                       <Link to="/login">Update Password</Link>

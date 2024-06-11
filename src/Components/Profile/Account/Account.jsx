@@ -11,12 +11,12 @@ function Account() {
   }, []);
   useEffect(() => {
     if (auth.user) {
-      const { userName, email, mobileNumber, location } = auth.user;
-      const fullName = `${userName}`;
+      const { firstName, lastName, email, phoneNumber, location } = auth.user;
+      const fullName = `${firstName}` + `${lastName}`;
       setFormData({
         fullName,
         emailAddress: email,
-        mobileNumber: mobileNumber || "",
+        phoneNumber: phoneNumber || "",
         location: location || "",
       });
     }
@@ -127,7 +127,7 @@ function Account() {
                   type="text"
                   name="mobileNumber"
                   id="mobileNumber"
-                  value={formData.mobileNumber}
+                  value={formData.phoneNumber}
                   onChange={handleInputChange}
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
                   placeholder=""

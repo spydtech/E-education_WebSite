@@ -40,6 +40,7 @@ import CybersecurityBiginers from "./Components/Home/Plat form/AllCourses/Cyber 
 import CybersecurityEssentials from "./Components/Home/Plat form/AllCourses/Cyber Security/CybersecurityEssentials/cybersecurityEssentials";
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
 // import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
+import TryADemo from "./Components/tryAdemo/TryADemo";
 import Cart from "./Components/Cart/Cart";
 import EthicalHackingStudentArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/EthicalHackingStudentArray";
 import CyberSecurityArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/CyberSecurityArray";
@@ -80,7 +81,7 @@ import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpr
 import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
 import C_Cplus from "./Components/BasicCourse/BasicAllCourses/Basic_C&C++/BasicC_Cplus";
-import GoogleCalender from "./Components/Profile/Calendar Sync/GoogleCalendar";
+// import GoogleCalender from "./Components/Profile/Calendar Sync/GoogleCalendar";
 import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
 import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 import CourseDetails from "./Components/CourseDetails/CourseDetails";
@@ -113,6 +114,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/pricing" element={<Pricing2 />} />
+          <Route path="/try-a-demo" element={<TryADemo />} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
@@ -132,7 +134,7 @@ function App() {
           <Route path="/Purchases" element={<Purchases />} />
           <Route path="/mycourse" element={<MyCourse />} />
           <Route path="/student" element={<Student />} />
-          <Route path="/googlecalender" element={<GoogleCalender />} />
+          {/* <Route path="/googlecalender" element={<GoogleCalender />} /> */}
           {/*  */}
           <Route path="/artsandHumanities" element={<ArtsandHumanities />} />
           <Route path="/business" element={<Business />} />
