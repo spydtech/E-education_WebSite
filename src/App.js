@@ -80,7 +80,7 @@ import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpr
 import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
 import C_Cplus from "./Components/BasicCourse/BasicAllCourses/Basic_C&C++/BasicC_Cplus";
-import GoogleCalender from "./Components/Profile/Calendar Sync/GoogleCalendar";
+// import GoogleCalender from "./Components/Profile/Calendar Sync/GoogleCalendar";
 import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
 import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 import CourseDetails from "./Components/CourseDetails/CourseDetails";
@@ -132,7 +132,7 @@ function App() {
           <Route path="/Purchases" element={<Purchases />} />
           <Route path="/mycourse" element={<MyCourse />} />
           <Route path="/student" element={<Student />} />
-          <Route path="/googlecalender" element={<GoogleCalender />} />
+          {/* <Route path="/googlecalender" element={<GoogleCalender />} /> */}
           {/*  */}
           <Route path="/artsandHumanities" element={<ArtsandHumanities />} />
           <Route path="/business" element={<Business />} />

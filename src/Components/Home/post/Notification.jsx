@@ -205,7 +205,7 @@ function Notification({ notifications }) {
     <div>
       <div className='p-5 flex flex-col gap-3 bg-[#e0afa0] border-2 shadow-lg rounded-lg w-[450px]' style={{ overflowY: 'scroll', maxHeight: '330px' }}>
         <h1 className='text-xl'>Updates</h1>
-        {notifications.map(notification => (
+        { notifications.map(notification => (
           <div key={notification.id} className="relative">
             <button onClick={() => console.log("Notification removed")} className="absolute p-1 bg-gray-100 border border-gray-300 rounded-full -top-1 -right-1">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3" viewBox="0 0 20 20" fill="currentColor">
