@@ -40,6 +40,7 @@ import CybersecurityBiginers from "./Components/Home/Plat form/AllCourses/Cyber 
 import CybersecurityEssentials from "./Components/Home/Plat form/AllCourses/Cyber Security/CybersecurityEssentials/cybersecurityEssentials";
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
 // import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
+import TryADemo from "./Components/tryAdemo/TryADemo";
 import Cart from "./Components/Cart/Cart";
 import EthicalHackingStudentArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/EthicalHackingStudentArray";
 import CyberSecurityArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/CyberSecurityArray";
@@ -113,6 +114,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/pricing" element={<Pricing2 />} />
+          <Route path="/try-a-demo" element={<TryADemo />} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
