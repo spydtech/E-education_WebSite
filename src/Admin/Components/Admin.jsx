@@ -5,7 +5,7 @@ import AdminDashBoard from './AdminDashBoard';
 // import Courses from '../Views/Courses'
 import Orders from '../Views/Orders';
 import Users from '../Views/Users';
-import { AccountCircle, Dashboard, ShoppingCart, People, ListAlt, AddCircle } from '@mui/icons-material';
+import { AccountCircle } from '@mui/icons-material';
 import {
     Dashboard as DashboardIcon,
     // School as CoursesIcon,
