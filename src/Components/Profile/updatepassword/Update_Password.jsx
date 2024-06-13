@@ -91,11 +91,12 @@ import { API_BASE_URL } from '../../../Config/api';
 import { useSelector } from 'react-redux';
 
 const UpdatePassword = () => {
-  const [currentPassword, setCurrentPassword] = useState('');
+  const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
   const { auth } = useSelector(state => state)
+  const jwt = localStorage.getItem("jwt")
 
   
   const handleSubmit = async (e) => {
@@ -108,12 +109,15 @@ const UpdatePassword = () => {
     try {
       // Replace with your API endpoint
       const email = auth.user.email  // You should get the user's email dynamically
-      console.log(email)
-      const response = await axios.put("http://localhost:8080/api/users/password/nittaganeshkumar@gmail.com", {
-        oldPassword: currentPassword,
-        newPassword: newPassword,
-        confirmPassword: confirmPassword,
-      });
+      const response = await axios.put(`http://localhost:8080/api/users/password/${email}`,  {
+        oldPassword,
+        newPassword,
+        confirmPassword,
+      },{
+        headers: {
+          Authorization: `Bearer ${jwt}`, // Pass the JWT token in the Authorization header
+        },
+      },);
       if (response.data === "password updated successfully") {
         alert(response.data);
         setMessage('');
@@ -139,8 +143,8 @@ const UpdatePassword = () => {
             <label className="block mb-2 text-sm font-medium text-gray-600">Current Password</label>
             <input
               type="password"
-              value={currentPassword}
-              onChange={(e) => setCurrentPassword(e.target.value)}
+              value={oldPassword}
+              onChange={(e) => setOldPassword(e.target.value)}
               className="w-full px-3 py-2 border rounded"
               required
             />
