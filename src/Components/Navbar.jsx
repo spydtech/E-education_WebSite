@@ -240,7 +240,7 @@ const Navbar = () => {
                           Help Center
                         </a>
                         <a
-                          href="#"
+                          href="/login"
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                           onClick={handleLogout}
                         >
@@ -265,6 +265,11 @@ const Navbar = () => {
 
               {!auth.user && (
                 <div className="flex items-center space-x-4">
+                  <Menu as="div" className="relative">
+                    <Link to="#">
+                      <div className="text-white">Traniee</div>
+                    </Link>
+                  </Menu>
                   <Menu as="div" className="relative">
                     <Link to="/login">
                       <div className="text-white">Log In</div>
