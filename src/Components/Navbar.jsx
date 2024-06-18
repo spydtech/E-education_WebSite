@@ -266,7 +266,7 @@ const Navbar = () => {
               {!auth.user && (
                 <div className="flex items-center space-x-4">
                   <Menu as="div" className="relative">
-                    <Link to="#">
+                    <Link to="/trainee">
                       <div className="text-white">Traniee</div>
                     </Link>
                   </Menu>
