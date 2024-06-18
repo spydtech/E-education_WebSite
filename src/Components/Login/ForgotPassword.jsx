@@ -1,51 +1,8 @@
-// import { useState } from 'react';
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// const ForgotPassword = () => {
-//     const [email, setEmail] = useState('');
-
-//     const handleForgotPassword = (e) => {
-//         e.preventDefault();
-//         // Send password reset email logic
-//         console.log('Sending password reset email to:', email);
-//     };
-
-//     return (
-//         <div className="bg-cover min-h-screen flex items-center justify-center relative">
-//             <div className="absolute inset-0 bg-gradient-to-b from-gray-200 to-transparent opacity-50"></div>
-//             <div className="container mx-auto text-center relative z-10">
-//                 <h2 className="text-3xl font-bold text-gray-500 mb-4">Forgot Password</h2>
-//                 <form onSubmit={handleForgotPassword} className="mt-4 max-w-md mx-auto">
-//                     <div className="mb-4">
-//                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-//                         <input
-//                             type="email"
-//                             id="email"
-//                             name="email"
-//                             value={email}
-//                             onChange={(e) => setEmail(e.target.value)}
-//                             className="mt-1 block w-full rounded-md p-4 border-gray-800 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-//                             required placeholder='Enter your mail'
-//                         />
-//                     </div>
-//                     <button type="submit" className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
-//                         Reset Password
-//                     </button>
-//                 </form>
-//                 <p className="mt-4 text-sm text-gray-600">
-//                     Remember your password? <Link to="/login" className="text-blue-500 hover:underline">Login here</Link>.
-//                 </p>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default ForgotPassword;
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import IMG from "../../assets/E- education logo .png";
+import { Link, useNavigate } from "react-router-dom";
+import IMG from '../../assets/logo/E-eLogo.png'
 import forgotpassword from "../../assets/undraw_Forgotpassword.png";
+import { sendOtp, updatePassword, verifyOtp } from "../../Config/api"; // Import API functions
 import "animate.css";
 
 function ForgotPassword() {
@@ -55,12 +12,16 @@ function ForgotPassword() {
   const [otpSent, setOtpSent] = useState(false);
   const [otpVerified, setOtpVerified] = useState(false);
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     setEmail("");
     setOtp(["", "", "", "", "", ""]);
     setPassword("");
+    setConfirmPassword("");
 
     localStorage.clear();
   }, []);
@@ -80,19 +41,31 @@ function ForgotPassword() {
     }
   };
 
-  const handleSendOtp = () => {
-    if (validateEmail()) {
+  const handleSendOtp = async () => {
+
+    try {
+      const response = await sendOtp(email);
+      setMessage(response.data);
       setOtpSent(true);
       localStorage.setItem("email", email);
       setEmail("");
+    } catch (error) {
+      setMessage(error.response.data);
     }
+
   };
 
-  const handleVerifyOtp = () => {
+  const handleVerifyOtp = async () => {
     if (otp.join("").length === 6) {
-      setOtpVerified(true);
-      localStorage.setItem("otp", otp.join(""));
-      setOtp(["", "", "", "", "", ""]);
+      try {
+        const response = await verifyOtp(otp.join(""));
+        setMessage(response.data);
+        setOtpVerified(true);
+        localStorage.setItem("otp", otp.join(""));
+        setOtp(["", "", "", "", "", ""]);
+      } catch (error) {
+        setMessage(error.response.data);
+      }
     }
   };
 
@@ -100,41 +73,32 @@ function ForgotPassword() {
     setPassword(e.target.value);
   };
 
-  const handleUpdatePassword = () => {
-    if (validatePassword()) {
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleUpdatePassword = async () => {
+    if (password !== confirmPassword) {
+      alert("Password and Confirm Password do not match");
+      return;
+    }
+    const email = localStorage.getItem("email");
+
+    try {
+      const response = await updatePassword(email, password, confirmPassword);
+      setMessage(response.data);
       localStorage.setItem("password", password);
       alert("Password updated successfully!");
       setPassword("");
+      setConfirmPassword("");
+      navigate("/login")
+    } catch (error) {
+      setMessage(error.response.data);
     }
+
+
   };
 
-  const validateEmail = () => {
-    const newErrors = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      newErrors.email = "Invalid email address.";
-    }
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const validatePassword = () => {
-    const newErrors = {};
-    if (!password) {
-      newErrors.password = "Password is required.";
-    } else if (password.length < 8) {
-      newErrors.password = "Password must be at least 8 characters long.";
-    } else if (
-      !/[A-Z]/.test(password) ||
-      !/[0-9]/.test(password) ||
-      !/[!@#$%^&*]/.test(password)
-    ) {
-      newErrors.password =
-        "Password must include letters, numbers, and special characters.";
-    }
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
 
   return (
     <>
@@ -153,10 +117,10 @@ function ForgotPassword() {
           <div className="text-center">
             <img
               src={IMG}
-              className="flex  justify-center items-center w-56 mx-auto "
+              className="flex justify-center items-center w-56 mx-auto "
               alt="Logo"
             />
-            <div className="p-2 animate__animated animate__backInDown  mb-10 text-8xl text-start font-lora font-bold  text-sky-600">
+            <div className="p-2 animate__animated animate__backInDown mb-10 text-8xl text-start font-lora font-bold text-sky-600">
               Forgot Your Password?
             </div>
             <div id="email-here">
@@ -175,8 +139,8 @@ function ForgotPassword() {
                   <button
                     onClick={handleSendOtp}
                     className={`p-2 w-auto rounded ${email
-                        ? "bg-blue-500 text-white"
-                        : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                      ? "bg-blue-500 text-white"
+                      : "bg-gray-300 text-gray-500 cursor-not-allowed"
                       }`}
                     disabled={!email}
                   >
@@ -202,8 +166,8 @@ function ForgotPassword() {
                   <button
                     onClick={handleVerifyOtp}
                     className={`p-2 w-auto rounded ${otp.join("").length === 6
-                        ? "bg-blue-500 text-white"
-                        : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                      ? "bg-blue-500 text-white"
+                      : "bg-gray-300 text-gray-500 cursor-not-allowed"
                       }`}
                     disabled={otp.join("").length !== 6}
                   >
@@ -225,27 +189,28 @@ function ForgotPassword() {
                     )}
                     <input
                       type="password"
-                      value={password}
-                      onChange={handlePasswordChange}
+                      value={confirmPassword}
+                      onChange={handleConfirmPasswordChange}
                       className="p-4 border border-gray-400 rounded w-full mb-3"
-                      placeholder="Conform password"
+                      placeholder="Confirm password"
                     />
-                    {errors.password && (
-                      <p className="text-red-500">{errors.password}</p>
+                    {errors.confirmPassword && (
+                      <p className="text-red-500">{errors.confirmPassword}</p>
                     )}
                     <button
                       onClick={handleUpdatePassword}
-                      className={`p-2 w-auto rounded ${password
-                          ? "bg-blue-500 text-white"
-                          : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                      className={`p-2 w-auto rounded ${password && confirmPassword
+                        ? "bg-blue-500 text-white"
+                        : "bg-gray-300 text-gray-500 cursor-not-allowed"
                         }`}
-                      disabled={!password}
+                      disabled={!password || !confirmPassword}
                     >
-                      <Link to="/login">Update Password</Link>
+                      Update Password
                     </button>
                   </div>
                 </>
               )}
+              {message && <p className="text-green-500">{message}</p>}
             </div>
           </div>
         </div>

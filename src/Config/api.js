@@ -8,6 +8,17 @@ export const API_BASE_URL = LOCALHOST
 const api = axios.create({
     baseURL: API_BASE_URL,
 });
+export const sendOtp = async (email) => {
+    return axios.post(`${API_BASE_URL}/auth/forget`, { email });
+};
+
+export const verifyOtp = async (otp) => {
+    return axios.post(`${API_BASE_URL}/auth/validating-otp`, { otp });
+};
+
+export const updatePassword = async (email, password, confirmPassword) => {
+    return axios.post(`${API_BASE_URL}/auth/confirmpwd/${email}`, { password, confirmPassword });
+};
 
 const token = localStorage.getItem('jwt');
 
