@@ -98,6 +98,7 @@ import Java from "./Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava"
 import PowerBi from "./Components/AdvanceCourses/Advance-courses/PowerBI/PowerBi";
 import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ERP";
 import Options from './Components/optionsPages/Options'
+import AdminLogin from "./Admin/Components/AdminLogin";
 // import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 // import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 // import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
@@ -113,6 +114,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/admin_login" element={<AdminLogin />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/options" element={<Options />} />
           <Route path="/pricing" element={<Pricing2 />} />
