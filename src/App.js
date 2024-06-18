@@ -99,6 +99,7 @@ import PowerBi from "./Components/AdvanceCourses/Advance-courses/PowerBI/PowerBi
 import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ERP";
 import Options from './Components/optionsPages/Options'
 import AdminLogin from "./Admin/Components/AdminLogin";
+import Trainee from './Components/trainee/Trainee'
 // import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 // import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 // import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
@@ -107,7 +108,7 @@ import AdminLogin from "./Admin/Components/AdminLogin";
 // import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
 // import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 // import CourseDetails from "./Components/CourseDetails/CourseDetails";
-
+import Traine_Login from "./Components/trainee/Traine_Login"
 function App() {
   return (
     <div>
@@ -119,6 +120,9 @@ function App() {
           <Route path="/options" element={<Options />} />
           <Route path="/pricing" element={<Pricing2 />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
+          {/* traine Login */}
+          <Route path="/trainelogin" element={<Traine_Login />} />
+          <Route path="/trainee" element={<Trainee />} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
