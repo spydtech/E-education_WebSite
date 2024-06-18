@@ -22,18 +22,18 @@ const AdminDashBoard = () => {
                     </div>
 
                 </Grid>
-                <Grid item xs={12} md={6}>
+                {/* <Grid item xs={12} md={6}>
                     <div className='shadow-lg shadow-gray-600'>
                         <Orders />
                     </div>
 
-                </Grid>
-                <Grid item xs={12} md={6}>
+                </Grid> */}
+                {/* <Grid item xs={12} md={6}>
                     <div className='shadow-lg shadow-gray-600'>
                         <Users />
                     </div>
 
-                </Grid>
+                </Grid> */}
 
             </Grid>
         </div>

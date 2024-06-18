@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Box, CssBaseline, Toolbar, useMediaQuery, useTheme } from '@mui/material';
 import AdminDashBoard from './AdminDashBoard';
-// import Courses from '../Views/Courses'
 import Orders from '../Views/Orders';
 import Users from '../Views/Users';
 import { AccountCircle } from '@mui/icons-material';
+import AccessField from './AccessField';
+import RegisterEmployee from './Register/RegisterEmployee';
+import RegisterTrainee from './Register/RegisterTraniee';
 import {
     Dashboard as DashboardIcon,
     // School as CoursesIcon,
@@ -13,10 +15,11 @@ import {
     ShoppingCart as OrdersIcon,
     Settings as SettingsIcon
 } from '@mui/icons-material';
+import Navbar from './Navbar';
 
 const menu = [
     { name: "Dashboard", path: "/admin", icon: <DashboardIcon /> },
-    // { name: "Courses", path: "/admin/courses", icon: <CoursesIcon /> },
+    { name: "Access Field", path: "/admin/accessField", icon: <DashboardIcon /> },
     { name: "Users", path: "/admin/users", icon: <UsersIcon /> },
     { name: "Orders", path: "/admin/orders", icon: <OrdersIcon /> },
     { name: "Settings", path: "/admin/settings", icon: <SettingsIcon /> },
@@ -27,10 +30,6 @@ const Admin = () => {
     const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
     const [sideBarVisible, setSideBarVisible] = useState(false);
     const navigate = useNavigate();
-
-    const handleCloseSideBar = () => {
-        setSideBarVisible(false);
-    };
 
     const drawerWidth = isLargeScreen ? 250 : '50vw'; // Adjust the width for large and small screens
 
@@ -82,12 +81,14 @@ const Admin = () => {
                 {drawer}
             </div>
             <div className="flex-grow h-screen overflow-auto">
-                <Box component="main" className="p-4">
+                <Box component="main" className="p-0">
                     <Routes>
                         <Route path='/' element={<AdminDashBoard />} />
-                        {/* <Route path='/courses' element={<Courses />} /> */}
                         <Route path='/orders' element={<Orders />} />
                         <Route path='/users' element={<Users />} />
+                        <Route path="/accessField" element={<AccessField/>}/>
+                        <Route path="/register-trainee" element={<RegisterTrainee />} />
+                        <Route path="/register-employee" element={<RegisterEmployee />} />
                     </Routes>
                 </Box>
             </div>
