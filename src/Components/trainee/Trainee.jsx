@@ -17,9 +17,9 @@ const Trainee = () => {
         <div>
           <Link to = "/trainelogin">
           
-          <button >
-            <span className="text">Login now</span>
-          </button>
+          <div className='btn'>
+            <span className="btn">Login now</span>
+          </div>
           </Link>
         </div>
       </div>
