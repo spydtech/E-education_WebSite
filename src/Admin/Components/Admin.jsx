@@ -21,6 +21,7 @@ const menu = [
     { name: "Dashboard", path: "/admin", icon: <DashboardIcon /> },
     { name: "Access Field", path: "/admin/accessField", icon: <DashboardIcon /> },
     { name: "Users", path: "/admin/users", icon: <UsersIcon /> },
+    { name: "Sales Report", path: "/admin/sales-report", icon: <UsersIcon /> },
     { name: "Orders", path: "/admin/orders", icon: <OrdersIcon /> },
     { name: "Settings", path: "/admin/settings", icon: <SettingsIcon /> },
 ];
