@@ -100,6 +100,8 @@ import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ER
 import Options from './Components/optionsPages/Options'
 import AdminLogin from "./Admin/Components/AdminLogin";
 import Trainee from './Components/trainee/Trainee'
+import TraineeDashboard from './Components/trainee/TraineeDashboard/TraineeDashboard'
+import Meeting from "./Components/Meeting/Meeting";
 // import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 // import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 // import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
@@ -123,6 +125,8 @@ function App() {
           {/* traine Login */}
           <Route path="/trainelogin" element={<Traine_Login />} />
           <Route path="/trainee" element={<Trainee />} />
+          <Route path="/traineedashboard" element={<TraineeDashboard />} />
+          <Route path="/meeting" element={<Meeting />} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
