@@ -110,7 +110,8 @@ import Meeting from "./Components/Meeting/Meeting";
 // import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
 // import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 // import CourseDetails from "./Components/CourseDetails/CourseDetails";
-import Traine_Login from "./Components/trainee/Traine_Login"
+import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login"
+import Traine_Home from "./Components/trainee/home/Home"
 function App() {
   return (
     <div>
@@ -127,6 +128,7 @@ function App() {
           <Route path="/trainee" element={<Trainee />} />
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
           <Route path="/meeting" element={<Meeting />} />
+          <Route path="/traine-home" element={<Traine_Home />} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />

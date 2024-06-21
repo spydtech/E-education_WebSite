@@ -80,7 +80,7 @@ const NetworkSecurityArray = () => {
       {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-4 text-center text-purple-600 underline">
-          Explore Data Science Courses
+          Explore Network Security Courses
         </h1>
 
         <div className="mb-4 flex justify-center">
