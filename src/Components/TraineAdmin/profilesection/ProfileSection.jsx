@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { RiCheckLine, RiPencilFill } from "react-icons/ri";
-import Accounts from "./accounts";
+// import Accounts from "./accounts";
 import Skills from "./skills";
 import DetailsPage from "./detailespage";
 
@@ -118,7 +118,7 @@ const ProfileSection = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
           {/* Accounts and Skills section */}
-          <Accounts />
+          {/* <Accounts /> */}
           <Skills />
         </div>
       </div>

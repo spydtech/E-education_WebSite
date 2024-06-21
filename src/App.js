@@ -17,7 +17,6 @@ import MyCourse from "./Components/mycourse/MyCourse";
 import PremiumCourses from "./Components/PremiumCourses/PremiumCourses";
 import DataAnalytics from "./Components/Profile/BrowseProject/dataAnalytics/DataAnalytics";
 import FullStackWebDevelopmentArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/FullStackWebDevelopmentArray";
-// import DataAnalatics from "./Components/Home/Plat form/AllCourses/StudentPlatForm/DataAnalatics";
 import Student from "./Components/Home/Plat form/Student";
 import Professional from "./Components/Home/Plat form/perofessionals/Professionals";
 import ArtsandHumanities from "./Components/Home/Plat form/AllCourses/ArtsandHumanities";
@@ -25,7 +24,6 @@ import Business from "./Components/Home/Plat form/AllCourses/Business";
 import ComputerScience from "./Components/Home/Plat form/AllCourses/ComputerScience";
 import DataScienceArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/DataScienceArray";
 import Health from "./Components/Home/Plat form/AllCourses/Health";
-// import FullStackWebDev from "./Components/Home/Plat form/perofessionals/PerofessionalsParticularPage/FullStackWebDevelopment";
 import Features from "./Components/Home/FeaturesOfE-education/Features";
 import PersonalDevelopment from "./Components/Home/Plat form/AllCourses/PersonalDevelopment";
 import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience";
@@ -39,7 +37,6 @@ import Cybersecurity from "./Components/Home/Plat form/AllCourses/Cyber Security
 import CybersecurityBiginers from "./Components/Home/Plat form/AllCourses/Cyber Security/CybersecurityBiginers/cybersecurityBiginersEssentials";
 import CybersecurityEssentials from "./Components/Home/Plat form/AllCourses/Cyber Security/CybersecurityEssentials/cybersecurityEssentials";
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
-// import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
 import TryADemo from "./Components/tryAdemo/TryADemo";
 import Cart from "./Components/Cart/Cart";
 import EthicalHackingStudentArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/EthicalHackingStudentArray";
@@ -75,13 +72,10 @@ import AutomationTesting from "./Components/Home/Plat form/AllCourses/Software T
 import AcceptanceTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Acceptance_testing/AcceptanceTesting";
 import StressTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Stress_Testing/StressTestingFundamentals";
 import RegressionTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Regression_Testing/RegressionTesting";
-
-// import Java from "./Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava";
 import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
 import C_Cplus from "./Components/BasicCourse/BasicAllCourses/Basic_C&C++/BasicC_Cplus";
-// import GoogleCalender from "./Components/Profile/Calendar Sync/GoogleCalendar";
 import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
 import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 import CourseDetails from "./Components/CourseDetails/CourseDetails";
@@ -118,6 +112,9 @@ import ProfileSection from "./Components/TraineAdmin/profilesection/ProfileSecti
 import TraineeUpdatePassword from "./Components/TraineAdmin/UpdatePassword/updatepassword";
 import TraineForgotPassword from "./Components/TraineAdmin/ForgotPassword/forgotpassword";
 import TraineeNavigation from "./Components/TraineAdmin/navigation/navigation";
+import UserNavigation from "./Components/UsersSection/usernavigation/navigation";
+import ActiveUsers from "./Components/UsersSection/users/Activeusers";
+import InactiveUsers from "./Components/UsersSection/users/Inactiveusers";
 function App() {
   return (
     <div>
@@ -125,6 +122,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/charts" element={<Charts />} />
+          <Route path="/usernavigation" element={<UserNavigation />} />
+          <Route path="/activeusers" element={<ActiveUsers />} />
+          <Route path="/inactiveusers" element={<InactiveUsers />} />
           <Route path="/traineenavigation" element={<TraineeNavigation />} />
           <Route
             path="/traineforgotpassword"
