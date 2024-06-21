@@ -100,6 +100,9 @@ import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ER
 import Options from "./Components/optionsPages/Options";
 import AdminLogin from "./Admin/Components/AdminLogin";
 import Trainee from "./Components/trainee/Trainee";
+import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
+import Meeting from "./Components/Meeting/Meeting";
+import TraineeCourses from "./Components/trainee/TraineeCourses";
 // import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 // import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 // import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
@@ -110,13 +113,14 @@ import Trainee from "./Components/trainee/Trainee";
 // import CourseDetails from "./Components/CourseDetails/CourseDetails";
 import Traine_Login from "./Components/trainee/Traine_Login";
 import HomeTrainee from "./Components/trainee/Home";
+import TraineeUploads from "./Components/trainee/TraineeUploads";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/HomeTrainee" element={<HomeTrainee />} />
+
           <Route path="/admin_login" element={<AdminLogin />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/options" element={<Options />} />
@@ -125,6 +129,12 @@ function App() {
           {/* traine Login */}
           <Route path="/trainelogin" element={<Traine_Login />} />
           <Route path="/trainee" element={<Trainee />} />
+          <Route path="/traineedashboard" element={<TraineeDashboard />} />
+          <Route path="/meeting" element={<Meeting />} />
+          <Route path="/HomeTrainee" element={<HomeTrainee />} />
+          <Route path="/traineecourses" element={<TraineeCourses />} />
+          <Route path="/traineeuploads" element={<TraineeUploads />} />
+
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
