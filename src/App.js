@@ -97,9 +97,9 @@ import Pricing2 from "./Components/Home/Pricing/Pricing2";
 import Java from "./Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava";
 import PowerBi from "./Components/AdvanceCourses/Advance-courses/PowerBI/PowerBi";
 import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ERP";
-import Options from './Components/optionsPages/Options'
+import Options from "./Components/optionsPages/Options";
 import AdminLogin from "./Admin/Components/AdminLogin";
-import Trainee from './Components/trainee/Trainee'
+import Trainee from "./Components/trainee/Trainee";
 // import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 // import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 // import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
@@ -108,13 +108,37 @@ import Trainee from './Components/trainee/Trainee'
 // import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
 // import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 // import CourseDetails from "./Components/CourseDetails/CourseDetails";
-import Traine_Login from "./Components/trainee/Traine_Login"
+import Traine_Login from "./Components/trainee/Traine_Login";
+import Charts from "./Components/Charts/chart";
+import Sidebar from "./Components/Sidebar/sidebar";
+// import AccountSettings from "./Components/profilesection/ProfileSection";
+import Header from "./Components/Header/header";
+// import TraineeUpdatePassword from "./Components/TraineAdmin/UpdatePassword/updatepassword";
+import ProfileSection from "./Components/TraineAdmin/profilesection/ProfileSection";
+import TraineeUpdatePassword from "./Components/TraineAdmin/UpdatePassword/updatepassword";
+import TraineForgotPassword from "./Components/TraineAdmin/ForgotPassword/forgotpassword";
+import TraineeNavigation from "./Components/TraineAdmin/navigation/navigation";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/charts" element={<Charts />} />
+          <Route path="/traineenavigation" element={<TraineeNavigation />} />
+          <Route
+            path="/traineforgotpassword"
+            element={<TraineForgotPassword />}
+          />
+          <Route
+            path="/traineupdatepassword"
+            element={<TraineeUpdatePassword />}
+          />
+          <Route path="/profilesection" element={<ProfileSection />} />
+          <Route path="/sidebar" element={<Sidebar />} />
+
+          {/* <Route path="/accountsettings" element={<AccountSettings />} /> */}
+          <Route path="/header" element={<Header />} />
           <Route path="/admin_login" element={<AdminLogin />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/options" element={<Options />} />
