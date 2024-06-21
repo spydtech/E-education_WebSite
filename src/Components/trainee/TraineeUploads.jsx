@@ -40,7 +40,7 @@ function FileUploadForm() {
   };
 
   return (
-    <div className="grid md:lg:xl:grid-cols-2 grid-cols-1 my-4 ">
+    <div className="grid md:lg:xl:grid-cols-2 grid-cols-1 py-4 ">
       <div className="mx-auto w-full max-w-[550px] bg-gray-100">
         <form className="py-4 px-9" onSubmit={handleSubmit}>
           <div className="mb-5">

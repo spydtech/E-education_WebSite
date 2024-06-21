@@ -103,6 +103,7 @@ import Trainee from "./Components/trainee/Trainee";
 import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
 import Meeting from "./Components/Meeting/Meeting";
 import TraineeCourses from "./Components/trainee/TraineeCourses";
+import TraineeUpload from "./Components/trainee/TraineeUploads";
 // import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 // import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 // import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
@@ -111,10 +112,7 @@ import TraineeCourses from "./Components/trainee/TraineeCourses";
 // import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
 // import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 // import CourseDetails from "./Components/CourseDetails/CourseDetails";
-import Traine_Login from "./Components/trainee/Traine_Login";
-import HomeTrainee from "./Components/trainee/Home";
-import TraineeUploads from "./Components/trainee/TraineeUploads";
-import FilesFromUser from "./Components/trainee/FilesFromUser";
+import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login";
 function App() {
   return (
     <div>
@@ -132,10 +130,8 @@ function App() {
           <Route path="/trainee" element={<Trainee />} />
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
           <Route path="/meeting" element={<Meeting />} />
-          <Route path="/HomeTrainee" element={<HomeTrainee />} />
           <Route path="/traineecourses" element={<TraineeCourses />} />
-          <Route path="/traineeuploads" element={<TraineeUploads />} />
-          <Route path="/filesfromuser" element={<FilesFromUser />} />
+          <Route path="/traineeuploads" element={<TraineeUpload />} />
 
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
