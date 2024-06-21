@@ -102,7 +102,7 @@ import AdminLogin from "./Admin/Components/AdminLogin";
 import Trainee from "./Components/trainee/Trainee";
 import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
 import Meeting from "./Components/Meeting/Meeting";
-import TraineeCourses from "./Components/trainee/TraineeCourses";
+import TraineeCourses from "./Components/trainee/TraineeCourses/TraineeCourses";
 import TraineeUpload from "./Components/trainee/TraineeUploads";
 // import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 // import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
