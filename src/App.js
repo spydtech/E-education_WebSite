@@ -114,6 +114,7 @@ import TraineeCourses from "./Components/trainee/TraineeCourses";
 import Traine_Login from "./Components/trainee/Traine_Login";
 import HomeTrainee from "./Components/trainee/Home";
 import TraineeUploads from "./Components/trainee/TraineeUploads";
+import FilesFromUser from "./Components/trainee/FilesFromUser";
 function App() {
   return (
     <div>
@@ -134,6 +135,7 @@ function App() {
           <Route path="/HomeTrainee" element={<HomeTrainee />} />
           <Route path="/traineecourses" element={<TraineeCourses />} />
           <Route path="/traineeuploads" element={<TraineeUploads />} />
+          <Route path="/filesfromuser" element={<FilesFromUser />} />
 
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
