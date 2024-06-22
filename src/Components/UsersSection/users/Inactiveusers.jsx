@@ -1,31 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const InactiveUsers = () => {
-  const initialUsers = [
-    { name: "Emily Moore" },
-    { name: "George Taylor" },
-    { name: "Hannah Anderson" },
-    { name: "Isaac Martinez" },
-    { name: "Jessica Garcia" },
-    { name: "Kevin Thomas" },
-    { name: "Lily Hernandez" },
-    { name: "Michael Young" },
-    { name: "Natalie King" },
-    { name: "Oscar Davis" },
-    { name: "Penelope White" },
-    { name: "Quentin Wilson" },
-    { name: "Rose Brown" },
-    { name: "Simon Lopez" },
-    { name: "Tiffany Green" },
-    { name: "Ulysses Clark" },
-    { name: "Victoria Baker" },
-    { name: "William Adams" },
-    { name: "Xavier Moore" },
-    { name: "Yasmine Scott" },
-  ];
-
+const InactiveUsers = ({ initialUsers }) => {
   const [search, setSearch] = useState("");
-  const [users, setUsers] = useState(initialUsers);
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    setUsers(initialUsers);
+  }, [initialUsers]);
 
   const handleSearch = (e) => {
     const value = e.target.value.toLowerCase();

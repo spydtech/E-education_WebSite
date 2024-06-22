@@ -8,6 +8,7 @@ import { AccountCircle } from '@mui/icons-material';
 import AccessField from './AccessField';
 import RegisterEmployee from './Register/RegisterEmployee';
 import RegisterTrainee from './Register/RegisterTraniee';
+import SalesReport from './SalesReport';
 import {
     Dashboard as DashboardIcon,
     // School as CoursesIcon,
@@ -15,7 +16,6 @@ import {
     ShoppingCart as OrdersIcon,
     Settings as SettingsIcon
 } from '@mui/icons-material';
-import Navbar from './Navbar';
 
 const menu = [
     { name: "Dashboard", path: "/admin", icon: <DashboardIcon /> },
@@ -87,9 +87,10 @@ const Admin = () => {
                         <Route path='/' element={<AdminDashBoard />} />
                         <Route path='/orders' element={<Orders />} />
                         <Route path='/users' element={<Users />} />
-                        <Route path="/accessField" element={<AccessField/>}/>
+                        <Route path="/accessField" element={<AccessField />} />
                         <Route path="/register-trainee" element={<RegisterTrainee />} />
                         <Route path="/register-employee" element={<RegisterEmployee />} />
+                        <Route path='/sales-report' element={<SalesReport />} />
                     </Routes>
                 </Box>
             </div>

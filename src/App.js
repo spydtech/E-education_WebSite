@@ -102,28 +102,34 @@ import Trainee from "./Components/trainee/Trainee";
 // import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
 // import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 // import CourseDetails from "./Components/CourseDetails/CourseDetails";
-import Traine_Login from "./Components/trainee/Traine_Login";
-import Charts from "./Components/Charts/chart";
-import Sidebar from "./Components/Sidebar/sidebar";
-// import AccountSettings from "./Components/profilesection/ProfileSection";
-import Header from "./Components/Header/header";
-// import TraineeUpdatePassword from "./Components/TraineAdmin/UpdatePassword/updatepassword";
-import ProfileSection from "./Components/TraineAdmin/profilesection/ProfileSection";
-import TraineeUpdatePassword from "./Components/TraineAdmin/UpdatePassword/updatepassword";
-import TraineForgotPassword from "./Components/TraineAdmin/ForgotPassword/forgotpassword";
-import TraineeNavigation from "./Components/TraineAdmin/navigation/navigation";
+// import Traine_Login from "./Components/trainee/Traine_Login";
 import UserNavigation from "./Components/UsersSection/usernavigation/navigation";
+import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login";
 import ActiveUsers from "./Components/UsersSection/users/Activeusers";
 import InactiveUsers from "./Components/UsersSection/users/Inactiveusers";
+import TraineeNavigation from "./Components/trainee/TraineAdmin/navigation/navigation";
+import TraineForgotPassword from "./Components/trainee/TraineAdmin/ForgotPassword/forgotpassword";
+import TraineeUpdatePassword from "./Components/trainee/TraineAdmin/UpdatePassword/updatepassword";
+import ProfileSection from "./Components/trainee/TraineAdmin/profilesection/ProfileSection";
+import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
+import Meeting from "./Components/Meeting/Meeting";
+import HomeTrainee from "./Components/trainee/home/Home";
+// import Traine_Home from
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/charts" element={<Charts />} />
+          {/* <Route path="/charts" element={<Charts />} /> */}
           <Route path="/usernavigation" element={<UserNavigation />} />
+          <Route path="/hometrainee" element={<HomeTrainee />} />
           <Route path="/activeusers" element={<ActiveUsers />} />
+          {/* <ActiveUsers
+            updateUsersCount={(active, inactive) =>
+              console.log(`Active: ${active}, Inactive: ${inactive}`)
+            }
+          /> */}
           <Route path="/inactiveusers" element={<InactiveUsers />} />
           <Route path="/traineenavigation" element={<TraineeNavigation />} />
           <Route
@@ -135,10 +141,10 @@ function App() {
             element={<TraineeUpdatePassword />}
           />
           <Route path="/profilesection" element={<ProfileSection />} />
-          <Route path="/sidebar" element={<Sidebar />} />
+          {/* <Route path="/sidebar" element={<Sidebar />} /> */}
 
           {/* <Route path="/accountsettings" element={<AccountSettings />} /> */}
-          <Route path="/header" element={<Header />} />
+          {/* <Route path="/header" element={<Header />} /> */}
           <Route path="/admin_login" element={<AdminLogin />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/options" element={<Options />} />
@@ -147,6 +153,9 @@ function App() {
           {/* traine Login */}
           <Route path="/trainelogin" element={<Traine_Login />} />
           <Route path="/trainee" element={<Trainee />} />
+          <Route path="/traineedashboard" element={<TraineeDashboard />} />
+          <Route path="/meeting" element={<Meeting />} />
+          {/* <Route path="/traine-home" element={<Traine_Home />} /> */}
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />

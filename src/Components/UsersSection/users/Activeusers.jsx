@@ -1,104 +1,333 @@
+// import React from "react";
+// import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/solid";
+
+// const data = [
+//   {
+//     avatar:
+//       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+//     name: "Robert Wolfkisser",
+//     job: "Engineer",
+//     email: "rob_wolf@gmail.com",
+//     role: "Collaborator",
+//     lastActive: "2 days ago",
+//     active: true,
+//   },
+//   {
+//     avatar:
+//       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-6.png",
+//     name: "Jill Jailbreaker",
+//     job: "Engineer",
+//     email: "jj@breaker.com",
+//     role: "Collaborator",
+//     lastActive: "6 days ago",
+//     active: true,
+//   },
+//   {
+//     avatar:
+//       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
+//     name: "Henry Silkeater",
+//     job: "Designer",
+//     email: "henry@silkeater.io",
+//     role: "Contractor",
+//     lastActive: "2 days ago",
+//     active: false,
+//   },
+//   {
+//     avatar:
+//       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
+//     name: "Bill Horsefighter",
+//     job: "Designer",
+//     email: "bhorsefighter@gmail.com",
+//     role: "Contractor",
+//     lastActive: "5 days ago",
+//     active: true,
+//   },
+//   {
+//     avatar:
+//       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png",
+//     name: "Jeremy Footviewer",
+//     job: "Manager",
+//     email: "jeremy@foot.dev",
+//     role: "Manager",
+//     lastActive: "3 days ago",
+//     active: false,
+//   },
+// ];
+
+// const rolesData = ["Manager", "Collaborator", "Contractor"];
+
+// function ActiveUsers() {
+//   const rows = data.map((item) => (
+//     <tr key={item.name} className="border-b hover:bg-gray-100  ">
+//       <td className="px-6 py-4 whitespace-nowrap">
+//         <div className="flex items-center">
+//           <img
+//             className="h-10 w-10 rounded-full"
+//             src={item.avatar}
+//             alt={`Avatar of ${item.name}`}
+//           />
+//           <div className="ml-4">
+//             <div className="text-sm font-medium text-gray-900">{item.name}</div>
+//             <div className="text-sm text-gray-500">{item.email}</div>
+//           </div>
+//         </div>
+//       </td>
+//       <td className="px-6 py-4 whitespace-nowrap">
+//         <select
+//           defaultValue={item.role}
+//           className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+//         >
+//           {rolesData.map((role) => (
+//             <option key={role}>{role}</option>
+//           ))}
+//         </select>
+//       </td>
+//       <td className="px-6 py-4 whitespace-nowrap">{item.lastActive}</td>
+//       <td className="px-6 py-4 whitespace-nowrap">
+//         {item.active ? (
+//           <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
+//             <CheckCircleIcon className="h-5 w-5 mr-1.5" aria-hidden="true" />
+//             Active
+//           </span>
+//         ) : (
+//           <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800">
+//             <XCircleIcon className="h-5 w-5 mr-1.5" aria-hidden="true" />
+//             Disabled
+//           </span>
+//         )}
+//       </td>
+//     </tr>
+//   ));
+
+//   return (
+//     <div className="overflow-x-auto mt-10 ml-10 mr-10 ">
+//       <div className="min-w-full overflow-hidden rounded-lg">
+//         <h1 className="text-center text-2xl font-semibold">Active Users</h1>
+//         <table className="min-w-full divide-y divide-gray-200">
+//           <thead className="bg-gray-50">
+//             <tr>
+//               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+//                 Employee
+//               </th>
+//               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+//                 Role
+//               </th>
+//               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+//                 Last active
+//               </th>
+//               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+//                 Status
+//               </th>
+//             </tr>
+//           </thead>
+//           <tbody className="bg-white divide-y divide-gray-200">{rows}</tbody>
+//         </table>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default ActiveUsers;
+
 import React, { useState } from "react";
+import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/solid";
 
-const ActiveUsers = () => {
-  const initialUsers = [
-    { name: "Ratnapriya", isActive: true },
-    { name: "Raghavendra", isActive: true },
-    { name: "Ashwini", isActive: false },
-    { name: "David Wilson", isActive: true },
-    { name: "Ella Davis", isActive: false },
-    { name: "Frank Harris", isActive: true },
-    { name: "Grace Clark", isActive: false },
-    { name: "Hank Lewis", isActive: true },
-    { name: "Ivy Walker", isActive: false },
-    { name: "Jack Hall", isActive: true },
-    { name: "Kara Young", isActive: false },
-    { name: "Leo King", isActive: true },
-    { name: "Mia Wright", isActive: false },
-    { name: "Noah Lopez", isActive: true },
-    { name: "Olivia Scott", isActive: false },
-    { name: "Paul Green", isActive: true },
-    { name: "Quinn Adams", isActive: false },
-    { name: "Rachel Baker", isActive: true },
-    { name: "Sam Mitchell", isActive: false },
-    { name: "Tina Perez", isActive: true },
-  ];
+const data = [
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+    name: "Robert Wolfkisser",
+    job: "Engineer",
+    email: "rob_wolf@gmail.com",
+    role: "Collaborator",
+    lastActive: "2 days ago",
+    active: true,
+  },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+    name: "Raghavendra",
+    job: "Engineer",
+    email: "rob_wolf@gmail.com",
+    role: "Collaborator",
+    lastActive: "2 days ago",
+    active: true,
+  },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+    name: "Ratnapriya",
+    job: "Engineer",
+    email: "rob_wolf@gmail.com",
+    role: "Collaborator",
+    lastActive: "2 days ago",
+    active: true,
+  },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+    name: "ashwini",
+    job: "Engineer",
+    email: "rob_wolf@gmail.com",
+    role: "Collaborator",
+    lastActive: "2 days ago",
+    active: true,
+  },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+    name: "Robert Wolfkisser",
+    job: "Engineer",
+    email: "rob_wolf@gmail.com",
+    role: "Collaborator",
+    lastActive: "2 days ago",
+    active: true,
+  },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-6.png",
+    name: "Jill Jailbreaker",
+    job: "Engineer",
+    email: "jj@breaker.com",
+    role: "Collaborator",
+    lastActive: "6 days ago",
+    active: true,
+  },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
+    name: "Henry Silkeater",
+    job: "Designer",
+    email: "henry@silkeater.io",
+    role: "Contractor",
+    lastActive: "2 days ago",
+    active: false,
+  },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
+    name: "Bill Horsefighter",
+    job: "Designer",
+    email: "bhorsefighter@gmail.com",
+    role: "Contractor",
+    lastActive: "5 days ago",
+    active: true,
+  },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png",
+    name: "Jeremy Footviewer",
+    job: "Manager",
+    email: "jeremy@foot.dev",
+    role: "Manager",
+    lastActive: "3 days ago",
+    active: false,
+  },
+];
 
-  const [search, setSearch] = useState("");
-  const [users, setUsers] = useState(initialUsers);
+const rolesData = ["Manager", "Collaborator", "Contractor"];
 
-  const handleSearch = (e) => {
-    const value = e.target.value.toLowerCase();
-    setSearch(value);
-    const filteredUsers = initialUsers.filter((user) =>
-      user.name.toLowerCase().includes(value)
-    );
-    setUsers(filteredUsers);
+function ActiveUsers({ updateUsersCount }) {
+  const [searchTerm, setSearchTerm] = useState(""); // State for search term
+
+  const handleRoleChange = (event, name) => {
+    const newRole = event.target.value;
+    // Update role in data (this would typically involve API call or state management)
+    console.log(`Updating role for ${name} to ${newRole}`);
   };
 
-  const handleClearSearch = () => {
-    setSearch("");
-    setUsers(initialUsers);
+  // Calculate active and inactive user counts
+  const activeCount = data.filter((user) => user.active).length;
+  const inactiveCount = data.filter((user) => !user.active).length;
+
+  // Function to handle search input change
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
   };
 
-  const toggleUserActiveState = (index) => {
-    const updatedUsers = [...users];
-    updatedUsers[index].isActive = !updatedUsers[index].isActive;
-    setUsers(updatedUsers);
-  };
+  // Filter data based on search term
+  const filteredData = data.filter((user) =>
+    user.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const rows = filteredData.map((item) => (
+    <tr key={item.name} className="border-b hover:bg-gray-100">
+      <td className="px-6 py-4 whitespace-nowrap">
+        <div className="flex items-center">
+          <img
+            className="h-10 w-10 rounded-full"
+            src={item.avatar}
+            alt={`Avatar of ${item.name}`}
+          />
+          <div className="ml-4">
+            <div className="text-sm font-medium text-gray-900">{item.name}</div>
+            <div className="text-sm text-gray-500">{item.email}</div>
+          </div>
+        </div>
+      </td>
+      <td className="px-6 py-4 whitespace-nowrap">
+        <select
+          defaultValue={item.role}
+          onChange={(e) => handleRoleChange(e, item.name)}
+          className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        >
+          {rolesData.map((role) => (
+            <option key={role}>{role}</option>
+          ))}
+        </select>
+      </td>
+      <td className="px-6 py-4 whitespace-nowrap">{item.lastActive}</td>
+      <td className="px-6 py-4 whitespace-nowrap">
+        {item.active ? (
+          <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
+            <CheckCircleIcon className="h-5 w-5 mr-1.5" aria-hidden="true" />
+            Active
+          </span>
+        ) : (
+          <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800">
+            <XCircleIcon className="h-5 w-5 mr-1.5" aria-hidden="true" />
+            Disabled
+          </span>
+        )}
+      </td>
+    </tr>
+  ));
 
   return (
-    <div className="container mx-auto p-4 bg-[#0077b6] min-h-screen flex flex-col justify-center items-center">
-      <h1 className="text-3xl font-bold mb-4 text-white">Active Users</h1>
-      <div className="mb-4 flex flex-col sm:flex-row justify-center items-center w-full sm:max-w-md">
+    <div className="overflow-x-auto mt-10 ml-10 mr-10 ">
+      <div className="min-w-full overflow-hidden rounded-lg">
+        <h1 className="text-center text-2xl font-semibold">Active Users</h1>
         <input
-          type="text"
-          placeholder="Search users..."
-          value={search}
-          onChange={handleSearch}
-          className="p-2 mb-2 sm:mb-0 sm:mr-2 w-full sm:w-auto border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          aria-label="Search users"
+          type="search"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          placeholder="Search by name..."
+          className="w-[200px] px-3 py-2 mb-3 mx-auto bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          style={{ marginLeft: "500px" }}
         />
-        {search && (
-          <button
-            className="w-full sm:w-auto px-4 py-2 bg-gray-300 text-gray-800 rounded-lg focus:outline-none"
-            onClick={handleClearSearch}
-          >
-            Clear
-          </button>
-        )}
-      </div>
-      <div className="w-full max-w-md overflow-x-auto">
-        <table className="w-full bg-white shadow-md rounded-lg overflow-hidden">
-          <thead className="bg-gray-800 text-white">
+
+        <table className="min-w-full divide-y divide-gray-200">
+          <thead className="bg-gray-50">
             <tr>
-              <th className="py-3 px-6 text-center">Name</th>
-              <th className="py-3 px-6 text-center">Status</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Employee
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Role
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Last active
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Status
+              </th>
             </tr>
           </thead>
-          <tbody>
-            {users.map((user, index) => (
-              <tr
-                key={index}
-                className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
-                onClick={() => toggleUserActiveState(index)}
-                style={{ cursor: "pointer" }}
-              >
-                <td className="py-3 px-6 text-center">{user.name}</td>
-                <td className="py-3 px-6 text-center">
-                  {user.isActive ? (
-                    <span className="text-green-600 font-semibold">Active</span>
-                  ) : (
-                    <span className="text-red-600 font-semibold">Inactive</span>
-                  )}
-                </td>
-              </tr>
-            ))}
-          </tbody>
+          <tbody className="bg-white divide-y divide-gray-200">{rows}</tbody>
         </table>
       </div>
     </div>
   );
-};
+}
 
 export default ActiveUsers;
