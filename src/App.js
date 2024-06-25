@@ -113,6 +113,10 @@ import TraineeUpload from "./Components/trainee/TraineeUploads";
 // import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 // import CourseDetails from "./Components/CourseDetails/CourseDetails";
 import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login";
+import FilterUsers from "./Components/trainee/FilterUsers";
+// import GroupTable from "./Components/trainee/GroupTable";
+// import TraineeCourseTable1 from "./Components/trainee/TraineeCourses/TraineeCourseTable1";
+
 function App() {
   return (
     <div>
@@ -132,6 +136,8 @@ function App() {
           <Route path="/meeting" element={<Meeting />} />
           <Route path="/traineecourses" element={<TraineeCourses />} />
           <Route path="/traineeuploads" element={<TraineeUpload />} />
+          <Route path="/filterusers" element={<FilterUsers />} />
+          {/* <Route path="/grouptable" element={<GroupTable />} /> */}
 
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />

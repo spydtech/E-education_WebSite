@@ -11,18 +11,6 @@ function HomeTrainee() {
       title: "Courses",
       value: "1",
     },
-    {
-      title: "Documents",
-      value: "2",
-    },
-    {
-      title: "Eforms",
-      value: "3",
-    },
-    {
-      title: "Acks",
-      value: "5",
-    },
   ];
   const users = [
     {
@@ -64,7 +52,7 @@ function HomeTrainee() {
                     </li>
                   ))}
                 </ul>
-                <div className="text-xl bg-white font-lora font-bold text-green-600 w-24 h-24 border-4 border-green-400 rounded-full relative bottom-24 left-3/4 transform -translate-x-1/2 flex items-center justify-center">
+                <div className="text-xl bg-white font-lora font-bold text-green-600 w-24 h-24 border-4 border-green-400 rounded-full relative bottom-6 left-3/4 transform -translate-x-1/2 flex items-center justify-center">
                   {total}
                 </div>
               </div>

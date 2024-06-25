@@ -12,14 +12,14 @@ const FileList = () => {
   const handleDownload = (url) => {
     const link = document.createElement("a");
     link.href = url;
-    link.download = url.split("/").pop(); // Use the file name from the URL
+    link.download = url.split("/").pop();
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   return (
-    <div className="flex bg-gray-100  w-auto h-auto flex-col lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2 p-4">
+    <div className="flex   w-auto h-auto flex-col lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2 p-4">
       <p className="mb-5 block text-xl font-semibold text-[#07074D]">
         Files Received
       </p>
