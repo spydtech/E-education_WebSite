@@ -114,6 +114,7 @@ import TraineeUpload from "./Components/trainee/TraineeUploads";
 // import CourseDetails from "./Components/CourseDetails/CourseDetails";
 import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login";
 import FilterUsers from "./Components/trainee/FilterUsers";
+import TraineeTabs from "./Components/trainee/TraineeSideCourses/Tabs";
 // import GroupTable from "./Components/trainee/GroupTable";
 // import TraineeCourseTable1 from "./Components/trainee/TraineeCourses/TraineeCourseTable1";
 
@@ -137,6 +138,7 @@ function App() {
           <Route path="/traineecourses" element={<TraineeCourses />} />
           <Route path="/traineeuploads" element={<TraineeUpload />} />
           <Route path="/filterusers" element={<FilterUsers />} />
+          <Route path="/tabs" element={<TraineeTabs />} />
           {/* <Route path="/grouptable" element={<GroupTable />} /> */}
 
           {/* WSpace */}

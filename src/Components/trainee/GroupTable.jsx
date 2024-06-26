@@ -8,11 +8,9 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
     course: "",
     avatar: "",
   });
-  const [showAddUserForm, setShowAddUserForm] = useState(false);
-
-  const filteredUsers = users.filter((user) =>
-    user.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const [showTraineeDetails, setShowTraineeDetails] = useState(false);
+  const [selectedTrainee, setSelectedTrainee] = useState(null);
+  const [showAddUserModal, setShowAddUserModal] = useState(false);
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
@@ -27,16 +25,97 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
     setNewUser({ ...newUser, [name]: value });
   };
 
-  const handleAddUser = (event) => {
-    event.preventDefault();
+  const handleAddUser = () => {
     if (newUser.name && newUser.email && newUser.course && newUser.avatar) {
       onAddUser(newUser);
       setNewUser({ name: "", email: "", course: "", avatar: "" });
-      setShowAddUserForm(false);
+      setShowAddUserModal(false);
+    } else {
+      alert("Please fill in all fields.");
     }
   };
 
-  const rows = filteredUsers.map((user) => (
+  const showTraineeDetailsModal = () => {
+    setShowTraineeDetails(true);
+  };
+
+  const closeTraineeDetailsModal = () => {
+    setShowTraineeDetails(false);
+  };
+
+  const traineeName = trainees.map((trainee) => (
+    <tr key={trainee.name} className="border-b hover:bg-gray-100">
+      <td className=" whitespace-nowrap">
+        <div className="flex items-center">
+          <div className="ml-4 flex">
+            <span className="px-2 py-1 bg-gray-100 rounded-md">
+              {trainee.name}
+            </span>
+          </div>
+        </div>
+      </td>
+    </tr>
+  ));
+
+  const setTrainee = (trainee) => {
+    setSelectedTrainee(trainee.name);
+    setShowTraineeDetails(false);
+    console.log(`Setting trainee: ${trainee.name}`);
+  };
+
+  const traineeData = [
+    {
+      avatar:
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-4.png",
+      name: "Alice Wonderland",
+      designation: "trainee",
+      email: "alice@wonderland.com",
+    },
+    {
+      avatar:
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-5.png",
+      name: "Garry Builder",
+      designation: "trainee",
+      email: "gar@builder.com",
+    },
+    {
+      avatar:
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png",
+      name: "Jonny Dawn",
+      designation: "trainee",
+      email: "johnny@dawn.com",
+    },
+  ];
+
+  const traineeRows = traineeData.map((trainee) => (
+    <tr key={trainee.name} className="border-b hover:bg-gray-100">
+      <td className="px-6 py-4 whitespace-nowrap">
+        <div className="flex items-center">
+          <img
+            className="h-10 w-10 rounded-full"
+            src={trainee.avatar}
+            alt={`Avatar of ${trainee.name}`}
+          />
+          <div className="ml-4">
+            <div className="text-sm font-medium text-gray-900">
+              {trainee.name}
+            </div>
+            <div className="text-sm text-gray-500">{trainee.email}</div>
+          </div>
+        </div>
+      </td>
+      <td className="px-6 py-4 whitespace-nowrap">
+        <button
+          className="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600"
+          onClick={() => setTrainee(trainee)}
+        >
+          Set as Trainee
+        </button>
+      </td>
+    </tr>
+  ));
+
+  const rows = users.map((user) => (
     <tr key={user.name} className="border-b hover:bg-gray-100">
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
@@ -64,20 +143,6 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
       </td>
     </tr>
   ));
-  const traineeName = trainees.map((trainee) => (
-    <tr key={trainee.name} className="border-b hover:bg-gray-100">
-      <td className=" whitespace-nowrap">
-        <div className="flex items-center">
-          <div className="ml-4 flex">
-            Trainee Name:
-            <div className="text-xl uppercase font-medium  text-violet-600">
-              {trainee.name}
-            </div>
-          </div>
-        </div>
-      </td>
-    </tr>
-  ));
 
   return (
     <div className="overflow-x-auto">
@@ -90,114 +155,179 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
             onChange={handleSearchChange}
             className="px-4 py-2 border border-gray-300 rounded-md"
           />
-          <p className="">{traineeName}</p>
+
+          <div className="flex items-center space-x-2">
+            <span className="text-gray-500">Selected Trainee:</span>
+            <span className="px-2 py-1 bg-gray-100 rounded-md">
+              {selectedTrainee ? selectedTrainee : traineeName}
+            </span>
+          </div>
           <button
             className="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"
-            onClick={() => setShowAddUserForm(!showAddUserForm)}
+            onClick={showTraineeDetailsModal}
           >
-            {showAddUserForm ? "Cancel" : "Add User"}
+            Update Trainee
+          </button>
+          <button
+            className="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600"
+            onClick={() => setShowAddUserModal(true)}
+          >
+            Add User
           </button>
         </div>
-        {showAddUserForm && (
-          <form
-            className="m-3 p-3 border border-gray-300 rounded-md"
-            onSubmit={handleAddUser}
-          >
-            <div className="flex flex-col mb-4">
-              <label
-                className="mb-2 font-bold text-lg text-gray-900"
-                htmlFor="name"
+
+        {/* Trainee Details Modal */}
+        {showTraineeDetails && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white p-6 rounded-lg max-w-md">
+              <button
+                className=" px-4 py-2 float-end text-white bg-red-500 rounded-md hover:bg-red-600"
+                onClick={closeTraineeDetailsModal}
               >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={newUser.name}
-                onChange={handleInputChange}
-                className="px-4 py-2 border border-gray-300 rounded-md"
-                required
-              />
+                close
+              </button>
+              <h2 className="text-xl font-bold mb-4">Trainee Details</h2>
+
+              <table className="min-w-full divide-y divide-gray-200 overflow-x-auto">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Trainee
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {traineeRows}
+                </tbody>
+              </table>
             </div>
-            <div className="flex flex-col mb-4">
-              <label
-                className="mb-2 font-bold text-lg text-gray-900"
-                htmlFor="email"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={newUser.email}
-                onChange={handleInputChange}
-                className="px-4 py-2 border border-gray-300 rounded-md"
-                required
-              />
-            </div>
-            <div className="flex flex-col mb-4">
-              <label
-                className="mb-2 font-bold text-lg text-gray-900"
-                htmlFor="course"
-              >
-                Course
-              </label>
-              <input
-                type="text"
-                id="course"
-                name="course"
-                value={newUser.course}
-                onChange={handleInputChange}
-                className="px-4 py-2 border border-gray-300 rounded-md"
-                required
-              />
-            </div>
-            <div className="flex flex-col mb-4">
-              <label
-                className="mb-2 font-bold text-lg text-gray-900"
-                htmlFor="avatar"
-              >
-                Avatar URL
-              </label>
-              <input
-                type="text"
-                id="avatar"
-                name="avatar"
-                value={newUser.avatar}
-                onChange={handleInputChange}
-                className="px-4 py-2 border border-gray-300 rounded-md"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              className="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600"
-            >
-              Add User
-            </button>
-          </form>
+          </div>
         )}
-        <table className="min-w-full divide-y divide-gray-200 overflow-x-auto">
-          <thead className="bg-gray-50">
-            <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                User
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Course
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Action
-              </th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">{rows}</tbody>
-        </table>
+
+        {/* Add User Modal */}
+
+        {showAddUserModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white p-6 rounded-lg max-w-md">
+              <button
+                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+                onClick={() => setShowAddUserModal(false)}
+              >
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+              <h2 className="text-xl font-bold mb-4">Add New User</h2>
+              <form onSubmit={handleAddUser} className="space-y-4">
+                <div className="flex flex-col space-y-4">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={newUser.name}
+                    onChange={handleInputChange}
+                    className="px-4 py-2 border border-gray-300 rounded-md"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={newUser.email}
+                    onChange={handleInputChange}
+                    className="px-4 py-2 border border-gray-300 rounded-md"
+                  />
+                  <input
+                    type="text"
+                    name="course"
+                    placeholder="Course"
+                    value={newUser.course}
+                    onChange={handleInputChange}
+                    className="px-4 py-2 border border-gray-300 rounded-md"
+                  />
+                  <input
+                    type="url"
+                    name="avatar"
+                    placeholder="Avatar URL"
+                    value={newUser.avatar}
+                    onChange={handleInputChange}
+                    className="px-4 py-2 border border-gray-300 rounded-md"
+                  />
+                </div>
+                <div className="flex justify-between">
+                  <button
+                    type="button"
+                    className="px-4 py-2 text-white bg-red-500 rounded-md hover:bg-red-600"
+                    onClick={() => setShowAddUserModal(false)}
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="submit"
+                    className="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"
+                  >
+                    Save User
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
+
+        {/* User Table */}
+        <div className="overflow-x-auto">
+          <div className="min-w-full overflow-hidden rounded-lg">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    User
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Course
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {rows}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
 
 export default GroupTable;
+
+// by default first this as trainee name :   <div className="flex items-center space-x-2">
+//             <span className="text-gray-500">Selected Trainee:</span>
+//             <span className="px-2 py-1 bg-gray-100 rounded-md">
+//               {traineeName}
+//             </span>
+//           </div> but then i set trainee then new trainee name should be replaced with default trainee name

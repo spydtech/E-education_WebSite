@@ -6,10 +6,11 @@ import { RxDoubleArrowRight } from "react-icons/rx";
 import CourseCompletionTable from "./CourseCompletionTable";
 
 function HomeTrainee() {
+  const numberOfCourses = localStorage.getItem("numberOfCourses") || 0;
   const firstdata = [
     {
       title: "Courses",
-      value: "1",
+      value: numberOfCourses.toString(),
     },
   ];
   const users = [
@@ -42,7 +43,7 @@ function HomeTrainee() {
             id="4cards"
             className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-x-40"
           >
-            <Link to="/traineecourses">
+            <Link to="/tabs">
               <div className="card1 w-72 h-44 border p-4 bg-white rounded-lg">
                 <p className="text-black font-bold">Completed last 30 days</p>
                 <ul className="list-disc pl-4">

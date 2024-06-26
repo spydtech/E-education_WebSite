@@ -68,6 +68,13 @@ const traineeData = [
     designation: "trainee",
     email: "gar@builder.com",
   },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png",
+    name: "Jonny Dawn",
+    designation: "trainee",
+    email: "johnny@dawn.com",
+  },
 ];
 
 function UsersRolesTable() {

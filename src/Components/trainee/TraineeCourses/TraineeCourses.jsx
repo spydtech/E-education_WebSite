@@ -13,7 +13,6 @@ function Tabs() {
   const [currentEditedGroupId, setCurrentEditedGroupId] = useState(null);
 
   useEffect(() => {
-    // Fetch groups from localStorage on component mount
     const storedGroups = JSON.parse(localStorage.getItem("groups")) || [];
     setGroups(storedGroups.map((group) => ({ ...group, editMode: false })));
   }, []);
@@ -23,7 +22,6 @@ function Tabs() {
   };
 
   const handleRemoveUser = (groupName, userToRemove) => {
-    // Remove user from the specified group
     const updatedGroups = groups.map((group) => {
       if (group.groupName === groupName) {
         const updatedUsers = group.users.filter(
