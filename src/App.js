@@ -102,6 +102,7 @@ import AdminLogin from "./Admin/Components/AdminLogin";
 import Trainee from './Components/trainee/Trainee'
 import TraineeDashboard from './Components/trainee/TraineeDashboard/TraineeDashboard'
 import Meeting from "./Components/Meeting/Meeting";
+import Tabs from "./Components/trainee/TraineAdmin/TraineComplateCourses/Tabs"
 // import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 // import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 // import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
@@ -129,6 +130,7 @@ function App() {
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
           <Route path="/meeting" element={<Meeting />} />
           <Route path="/traine-home" element={<Traine_Home />} />
+          <Route path="/tabs" element={<Tabs/>} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />

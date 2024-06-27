@@ -1,4 +1,5 @@
 import React from "react";
+import Tabs from "../TraineAdmin/TraineComplateCourses/Tabs";
 // import { FaLocationArrow } from "react-icons/fa";
 import { TfiArrowTopRight } from "react-icons/tfi";
 import { Link } from "react-router-dom";
