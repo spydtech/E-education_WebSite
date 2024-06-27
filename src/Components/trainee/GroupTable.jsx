@@ -2,15 +2,9 @@ import React, { useState } from "react";
 
 function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [newUser, setNewUser] = useState({
-    name: "",
-    email: "",
-    course: "",
-    avatar: "",
-  });
   const [showTraineeDetails, setShowTraineeDetails] = useState(false);
+  const [showUserDetails, setShowUserDetails] = useState(false);
   const [selectedTrainee, setSelectedTrainee] = useState(null);
-  const [showAddUserModal, setShowAddUserModal] = useState(false);
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
@@ -20,27 +14,20 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
     onRemoveUser(user);
   };
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setNewUser({ ...newUser, [name]: value });
-  };
-
-  const handleAddUser = () => {
-    if (newUser.name && newUser.email && newUser.course && newUser.avatar) {
-      onAddUser(newUser);
-      setNewUser({ name: "", email: "", course: "", avatar: "" });
-      setShowAddUserModal(false);
-    } else {
-      alert("Please fill in all fields.");
-    }
-  };
-
   const showTraineeDetailsModal = () => {
     setShowTraineeDetails(true);
   };
 
   const closeTraineeDetailsModal = () => {
     setShowTraineeDetails(false);
+  };
+
+  const showUserDetailsModal = () => {
+    setShowUserDetails(true);
+  };
+
+  const closeUserDetailsModal = () => {
+    setShowUserDetails(false);
   };
 
   const traineeName = trainees.map((trainee) => (
@@ -60,8 +47,45 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
   const setTrainee = (trainee) => {
     setSelectedTrainee(trainee.name);
     setShowTraineeDetails(false);
-    console.log(`Setting trainee: ${trainee.name}`);
   };
+
+  const userData = [
+    {
+      avatar:
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
+      name: "garry fighter",
+      course: "Full Stack Java",
+      email: "garry@gmail.com",
+    },
+    {
+      avatar:
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png",
+      name: "Halen plantviewer",
+      course: "Full Stack Java",
+      email: "halen@foot.dev",
+    },
+    {
+      avatar:
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+      name: "Robert Wolfkisser",
+      course: "Full Stack Python",
+      email: "rob_wolf@gmail.com",
+    },
+    {
+      avatar:
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-6.png",
+      name: "Jill Jailbreaker",
+      course: "Full Stack Python",
+      email: "jj@breaker.com",
+    },
+    {
+      avatar:
+        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
+      name: "Bill Horsefighter",
+      course: "Full Stack Java",
+      email: "bhorsefighter@gmail.com",
+    },
+  ];
 
   const traineeData = [
     {
@@ -115,7 +139,43 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
     </tr>
   ));
 
-  const rows = users.map((user) => (
+  const userRows = userData.map((user) => (
+    <tr key={user.name} className="border-b hover:bg-gray-100 ">
+      <td className="px-6 py-4 whitespace-nowrap">
+        <div className="flex items-center">
+          <img
+            className="h-10 w-10 rounded-full"
+            src={user.avatar}
+            alt={`Avatar of ${user.name}`}
+          />
+          <div className="ml-4">
+            <div className="text-sm font-medium text-gray-900">{user.name}</div>
+            <div className="text-sm text-gray-500">{user.email}</div>
+          </div>
+        </div>
+      </td>
+      <td className="px-6 py-4 whitespace-nowrap">{user.course}</td>
+      <td className="px-6 py-4 whitespace-nowrap">
+        <button
+          className="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600"
+          onClick={() => handleAddUser(user)}
+        >
+          Add user to group
+        </button>
+      </td>
+    </tr>
+  ));
+
+  const handleAddUser = (user) => {
+    onAddUser(user);
+    closeUserDetailsModal();
+  };
+
+  const filteredUsers = users.filter((user) =>
+    user.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const rows = filteredUsers.map((user) => (
     <tr key={user.name} className="border-b hover:bg-gray-100 ">
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
@@ -170,7 +230,7 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
           </button>
           <button
             className="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600"
-            onClick={() => setShowAddUserModal(true)}
+            onClick={showUserDetailsModal}
           >
             Add User
           </button>
@@ -178,146 +238,85 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
 
         {/* Trainee Details Modal */}
         {showTraineeDetails && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-6 rounded-lg max-w-md">
-              <button
-                className=" px-4 py-2 float-end text-white bg-red-500 rounded-md hover:bg-red-600"
-                onClick={closeTraineeDetailsModal}
-              >
-                close
-              </button>
-              <h2 className="text-xl font-bold mb-4">Trainee Details</h2>
-
-              <table className="min-w-full divide-y divide-gray-200 overflow-x-auto">
-                <thead className="bg-gray-50">
+          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-500 bg-opacity-50">
+            <div className="bg-white rounded-lg p-6 w-full max-w-3xl">
+              <h2 className="text-lg font-medium text-gray-800 mb-4">
+                Select Trainee
+              </h2>
+              <table className="min-w-full bg-white divide-y divide-gray-200">
+                <thead>
                   <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Trainee
+                    <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Name
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Actions
-                    </th>
+                    <th className="px-6 py-3 bg-gray-50"></th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {traineeRows}
                 </tbody>
               </table>
+              <div className="mt-4 flex justify-end">
+                <button
+                  className="px-4 py-2 text-white bg-gray-500 rounded-md hover:bg-gray-600"
+                  onClick={closeTraineeDetailsModal}
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         )}
 
         {/* Add User Modal */}
-
-        {showAddUserModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-6 rounded-lg max-w-md">
-              <button
-                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-                onClick={() => setShowAddUserModal(false)}
-              >
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+        {showUserDetails && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-500 bg-opacity-50">
+            <div className="bg-white rounded-lg p-6 w-full max-w-3xl">
+              <h2 className="text-lg font-medium text-gray-800 mb-4">
+                Select User to Add
+              </h2>
+              <table className="min-w-full bg-white divide-y divide-gray-200">
+                <thead>
+                  <tr>
+                    <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Name
+                    </th>
+                    <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Course
+                    </th>
+                    <th className="px-6 py-3 bg-gray-50"></th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {userRows}
+                </tbody>
+              </table>
+              <div className="mt-4 flex justify-end">
+                <button
+                  className="px-4 py-2 text-white bg-gray-500 rounded-md hover:bg-gray-600"
+                  onClick={closeUserDetailsModal}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-              <h2 className="text-xl font-bold mb-4">Add New User</h2>
-              <form onSubmit={handleAddUser} className="space-y-4">
-                <div className="flex flex-col space-y-4">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    value={newUser.name}
-                    onChange={handleInputChange}
-                    className="px-4 py-2 border border-gray-300 rounded-md"
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={newUser.email}
-                    onChange={handleInputChange}
-                    className="px-4 py-2 border border-gray-300 rounded-md"
-                  />
-                  <input
-                    type="text"
-                    name="course"
-                    placeholder="Course"
-                    value={newUser.course}
-                    onChange={handleInputChange}
-                    className="px-4 py-2 border border-gray-300 rounded-md"
-                  />
-                  <input
-                    type="url"
-                    name="avatar"
-                    placeholder="Avatar URL"
-                    value={newUser.avatar}
-                    onChange={handleInputChange}
-                    className="px-4 py-2 border border-gray-300 rounded-md"
-                  />
-                </div>
-                <div className="flex justify-between">
-                  <button
-                    type="button"
-                    className="px-4 py-2 text-white bg-red-500 rounded-md hover:bg-red-600"
-                    onClick={() => setShowAddUserModal(false)}
-                  >
-                    Close
-                  </button>
-                  <button
-                    type="submit"
-                    className="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"
-                  >
-                    Save User
-                  </button>
-                </div>
-              </form>
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         )}
 
-        {/* User Table */}
-        <div className="overflow-x-auto">
-          <div className="min-w-full overflow-hidden rounded-lg">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  >
-                    User
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  >
-                    Course
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  >
-                    Actions
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                {rows}
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <table className="min-w-full bg-white divide-y divide-gray-200">
+          <thead>
+            <tr>
+              <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Name
+              </th>
+              <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Course
+              </th>
+              <th className="px-6 py-3 bg-gray-50"></th>
+            </tr>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">{rows}</tbody>
+        </table>
       </div>
     </div>
   );

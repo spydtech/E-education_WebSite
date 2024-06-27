@@ -117,6 +117,7 @@ import FilterUsers from "./Components/trainee/FilterUsers";
 import TraineeTabs from "./Components/trainee/TraineeSideCourses/Tabs";
 // import GroupTable from "./Components/trainee/GroupTable";
 // import TraineeCourseTable1 from "./Components/trainee/TraineeCourses/TraineeCourseTable1";
+import Todo from "./Components/trainee/Todo";
 
 function App() {
   return (
@@ -139,6 +140,7 @@ function App() {
           <Route path="/traineeuploads" element={<TraineeUpload />} />
           <Route path="/filterusers" element={<FilterUsers />} />
           <Route path="/tabs" element={<TraineeTabs />} />
+          <Route path="/todo" element={<Todo />} />
           {/* <Route path="/grouptable" element={<GroupTable />} /> */}
 
           {/* WSpace */}
