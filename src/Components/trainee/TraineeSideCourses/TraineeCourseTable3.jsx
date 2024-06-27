@@ -66,12 +66,12 @@ const data = [
   {
     avatar:
       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
-    name: "Jeremy Footviewer",
+    name: "Robin Huion",
     course: course,
   },
 ];
 
-const courseColor = "bg-yellow-100 text-yellow-600"; // Example color for courses
+const courseColor = "bg-yellow-100 text-yellow-600";
 
 function TraineeCourseTable3() {
   const [search, setSearch] = useState("");

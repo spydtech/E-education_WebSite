@@ -157,7 +157,7 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
           />
 
           <div className="flex items-center space-x-2">
-            <span className="text-gray-500">Selected Trainee:</span>
+            <span className="text-gray-500">Trainee:</span>
             <span className="px-2 py-1 bg-gray-100 rounded-md">
               {selectedTrainee ? selectedTrainee : traineeName}
             </span>
@@ -324,10 +324,3 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
 }
 
 export default GroupTable;
-
-// by default first this as trainee name :   <div className="flex items-center space-x-2">
-//             <span className="text-gray-500">Selected Trainee:</span>
-//             <span className="px-2 py-1 bg-gray-100 rounded-md">
-//               {traineeName}
-//             </span>
-//           </div> but then i set trainee then new trainee name should be replaced with default trainee name

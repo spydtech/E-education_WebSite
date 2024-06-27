@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const trainee = [
   {
-    name: "Anna Donker",
+    name: "Robin Huion",
   },
 ];
 
