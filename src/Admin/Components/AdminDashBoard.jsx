@@ -2,9 +2,7 @@ import { Grid } from '@mui/material'
 import React from 'react'
 import Achivements from './Achivements'
 import MonthlyOverview from './MonthlyOverview'
-// import CoursesTable from './CourseTable'
-import Orders from '../Views/Orders'
-import Users from '../Views/Users'
+
 // import Courses from '../Views/Courses'
 
 const AdminDashBoard = () => {
