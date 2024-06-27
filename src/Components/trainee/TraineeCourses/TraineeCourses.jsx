@@ -138,7 +138,7 @@ function Tabs() {
   return (
     <div className="p-6">
       <div className="overflow-x-auto">
-        <ul className="flex border-b">
+        <ul className="flex border-b ">
           {courses.map((course) => (
             <li
               key={course.id}

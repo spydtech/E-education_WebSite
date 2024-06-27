@@ -88,7 +88,7 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
   ];
 
   const traineeRows = traineeData.map((trainee) => (
-    <tr key={trainee.name} className="border-b hover:bg-gray-100">
+    <tr key={trainee.name} className="border-b hover:bg-gray-100 ">
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
           <img
@@ -116,7 +116,7 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
   ));
 
   const rows = users.map((user) => (
-    <tr key={user.name} className="border-b hover:bg-gray-100">
+    <tr key={user.name} className="border-b hover:bg-gray-100 ">
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
           <img
@@ -147,7 +147,7 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
   return (
     <div className="overflow-x-auto">
       <div className="min-w-full overflow-hidden rounded-lg">
-        <div className="flex justify-between m-3">
+        <div className="flex flex-col md:flex-row justify-between m-3 space-y-3 md:space-y-0">
           <input
             type="text"
             placeholder="Search by name"

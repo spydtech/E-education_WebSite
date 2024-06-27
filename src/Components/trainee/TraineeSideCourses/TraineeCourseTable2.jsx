@@ -109,7 +109,7 @@ function TraineeCourseTable2() {
   return (
     <div className="overflow-x-auto">
       <div className="min-w-full shadow-md overflow-hidden rounded-lg">
-        <div className="p-4 flex ">
+        <div className="p-3 flex flex-col md:flex-row justify-between m-3 space-y-3 md:space-y-0">
           <input
             type="text"
             placeholder="Search by name"

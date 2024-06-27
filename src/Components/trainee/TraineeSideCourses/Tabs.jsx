@@ -10,7 +10,6 @@ const Tabs = () => {
     { id: 1, name: "React js" },
     { id: 2, name: "Java" },
     { id: 3, name: "Python" },
-    { id: 4, name: "SQL" },
   ];
 
   const numberOfCourses = courses.length;
