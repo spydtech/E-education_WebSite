@@ -105,6 +105,7 @@ import Trainee from "./Components/trainee/Trainee";
 // import Traine_Login from "./Components/trainee/Traine_Login";
 import UserNavigation from "./Components/UsersSection/usernavigation/navigation";
 import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login";
+// import ActiveUsers from "./Components/UsersSection/users/Activeusers";
 import ActiveUsers from "./Components/UsersSection/users/Activeusers";
 import InactiveUsers from "./Components/UsersSection/users/Inactiveusers";
 import TraineeNavigation from "./Components/trainee/TraineAdmin/navigation/navigation";
@@ -114,22 +115,20 @@ import ProfileSection from "./Components/trainee/TraineAdmin/profilesection/Prof
 import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
 import Meeting from "./Components/Meeting/Meeting";
 import HomeTrainee from "./Components/trainee/home/Home";
-import FileUploadForm from "./Components/UserTask/traineuploads";
+import TraineeTable from "./Components/UserTask/TraineeTable";
+import FileList from "./Components/UserTask/FilesFromUser";
 import WSpace from "./Components/UserTask/WSpace";
-
-// import Traine_Home from
+import FileUploadForm from "./Components/UserTask/traineuploads";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/WSpace" element={<WSpace />} />
-
-          <Route path="/traineeuploads" element={<FileUploadForm />} />
-
+          <Route path="/traineetable" element={<TraineeTable />} />
           {/* <Route path="/charts" element={<Charts />} /> */}
           <Route path="/usernavigation" element={<UserNavigation />} />
+          {/* <Route path="/parent" element={<ParentComponent />} /> */}
           <Route path="/hometrainee" element={<HomeTrainee />} />
           <Route path="/activeusers" element={<ActiveUsers />} />
           {/* <ActiveUsers
@@ -162,8 +161,8 @@ function App() {
           <Route path="/trainee" element={<Trainee />} />
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
           <Route path="/meeting" element={<Meeting />} />
-          {/* <Route path="/traine-home" element={<Traine_Home />} /> */}
-          {/* WSpace */}
+          <Route path="/traineeuploads" element={<FileUploadForm />} />
+
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
           <Route path="/mylearning" element={<MyLearning />} />

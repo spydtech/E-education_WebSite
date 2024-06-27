@@ -100,25 +100,25 @@ function HomeTrainee() {
                 </Link>
               </div>
             </div>
-            <div className="card4 w-72 h-44 border p-4 bg-white rounded-lg">
-              <div className="flex justify-between">
-                <p className="text-black font-bold">Scheduled Reports</p>
-                <Link>
+            <Link>
+              <div className="card4 w-72 h-44 border p-4 bg-white rounded-lg">
+                <div className="flex justify-between">
+                  <p className="text-black font-bold">Scheduled Reports</p>
+
                   <p className="text-blue-700">
                     <RxDoubleArrowRight className="float-start w-6 h-6" />
                     Manage
                   </p>
-                </Link>
-              </div>
-              <div className="mt-4 text-violet-600">
-                <Link>
+                </div>
+
+                <div className="mt-4 text-violet-600">
                   <p className="underline-offset-2 underline">
                     <RxDoubleArrowRight className="float-start w-6 h-6" />
                     Monthly Expiring Tasks within 30 days
                   </p>
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
           <Link to="/traineeuploads">
             <div
