@@ -138,47 +138,42 @@ const data = [
       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
     name: "Robert Wolfkisser",
     job: "Engineer",
-    email: "rob_wolf@gmail.com",
     role: "Collaborator",
     lastActive: "2 days ago",
-    active: true,
+    active: false,
   },
   {
     avatar:
       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
     name: "Raghavendra",
     job: "Engineer",
-    email: "rob_wolf@gmail.com",
     role: "Collaborator",
     lastActive: "2 days ago",
-    active: true,
+    active: false,
   },
   {
     avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtJuUw4ajfA54wQ0kCRhPB3DvakpxYA0-yew&s",
     name: "Ratnapriya",
     job: "Engineer",
-    email: "rob_wolf@gmail.com",
     role: "Collaborator",
     lastActive: "2 days ago",
     active: true,
   },
   {
     avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7YhzBEZnt8CapqZWwUK6SRRfZC0Hj5PPSbw&s",
     name: "ashwini",
     job: "Engineer",
-    email: "rob_wolf@gmail.com",
     role: "Collaborator",
     lastActive: "2 days ago",
-    active: true,
+    active: false,
   },
   {
     avatar:
       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
     name: "Robert Wolfkisser",
     job: "Engineer",
-    email: "rob_wolf@gmail.com",
     role: "Collaborator",
     lastActive: "2 days ago",
     active: true,
@@ -188,17 +183,15 @@ const data = [
       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-6.png",
     name: "Jill Jailbreaker",
     job: "Engineer",
-    email: "jj@breaker.com",
     role: "Collaborator",
     lastActive: "6 days ago",
-    active: true,
+    active: false,
   },
   {
     avatar:
       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
     name: "Henry Silkeater",
     job: "Designer",
-    email: "henry@silkeater.io",
     role: "Contractor",
     lastActive: "2 days ago",
     active: false,
@@ -208,7 +201,6 @@ const data = [
       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
     name: "Bill Horsefighter",
     job: "Designer",
-    email: "bhorsefighter@gmail.com",
     role: "Contractor",
     lastActive: "5 days ago",
     active: true,
@@ -218,7 +210,6 @@ const data = [
       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png",
     name: "Jeremy Footviewer",
     job: "Manager",
-    email: "jeremy@foot.dev",
     role: "Manager",
     lastActive: "3 days ago",
     active: false,
@@ -239,6 +230,9 @@ function ActiveUsers({ updateUsersCount }) {
   // Calculate active and inactive user counts
   const activeCount = data.filter((user) => user.active).length;
   const inactiveCount = data.filter((user) => !user.active).length;
+
+  localStorage.setItem("activeCount", activeCount);
+  localStorage.setItem("inactiveCount", inactiveCount);
 
   // Function to handle search input change
   const handleSearchChange = (event) => {
@@ -261,7 +255,6 @@ function ActiveUsers({ updateUsersCount }) {
           />
           <div className="ml-4">
             <div className="text-sm font-medium text-gray-900">{item.name}</div>
-            <div className="text-sm text-gray-500">{item.email}</div>
           </div>
         </div>
       </td>
@@ -286,7 +279,7 @@ function ActiveUsers({ updateUsersCount }) {
         ) : (
           <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-800">
             <XCircleIcon className="h-5 w-5 mr-1.5" aria-hidden="true" />
-            Disabled
+            inactive
           </span>
         )}
       </td>

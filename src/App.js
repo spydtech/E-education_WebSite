@@ -6,7 +6,7 @@ import SignUp from "./Components/Login/SignUp";
 import Certificates from "./Components/Home/Professional Certificates/Certificates";
 import Profile from "./Components/Profile/Profile";
 import AdminRouter from "./Routers/AdminRouter";
-import WSpace from "./Components/Profile/WorkSpace1/WSpace";
+// import WSpace from "./Components/Profile/WorkSpace1/WSpace";
 import Settings from "./Components/Profile/Settings";
 import PostFeeds from "./Components/Home/post/PostFeeds";
 import QuestionForm from "./Components/Home/AskMe/QuestionForm";
@@ -114,6 +114,9 @@ import ProfileSection from "./Components/trainee/TraineAdmin/profilesection/Prof
 import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
 import Meeting from "./Components/Meeting/Meeting";
 import HomeTrainee from "./Components/trainee/home/Home";
+import FileUploadForm from "./Components/UserTask/traineuploads";
+import WSpace from "./Components/UserTask/WSpace";
+
 // import Traine_Home from
 function App() {
   return (
@@ -121,6 +124,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/WSpace" element={<WSpace />} />
+
+          <Route path="/traineeuploads" element={<FileUploadForm />} />
+
           {/* <Route path="/charts" element={<Charts />} /> */}
           <Route path="/usernavigation" element={<UserNavigation />} />
           <Route path="/hometrainee" element={<HomeTrainee />} />
