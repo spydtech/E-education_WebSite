@@ -59,6 +59,8 @@ function HomeTrainee() {
                 </div>
               </div>
             </Link>
+            <Link to = "/user-accounts">
+            
             <div className="card2 w-72 h-44 border p-4 bg-white rounded-lg">
               <p className="text-black font-bold">User Accounts</p>
               <ul className="list-disc pl-4">
@@ -72,6 +74,7 @@ function HomeTrainee() {
                 {usertotal}
               </div>
             </div>
+            </Link>
             <div className="card3 w-72 h-44 border p-4 bg-white rounded-lg">
               <div className="flex justify-between">
                 <p className="text-black font-bold">Saved Reports</p>

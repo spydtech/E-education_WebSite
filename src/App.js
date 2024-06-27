@@ -103,14 +103,9 @@ import Trainee from './Components/trainee/Trainee'
 import TraineeDashboard from './Components/trainee/TraineeDashboard/TraineeDashboard'
 import Meeting from "./Components/Meeting/Meeting";
 import Tabs from "./Components/trainee/TraineAdmin/TraineComplateCourses/Tabs"
-// import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
-// import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
-// import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
-// import C_Cplus from "./Components/BasicCourse/BasicAllCourses/Basic_C&C++/BasicC_Cplus";
-// import GoogleCalender from "./Components/Profile/Calendar Sync/GoogleCalendar";
-// import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
-// import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
-// import CourseDetails from "./Components/CourseDetails/CourseDetails";
+import UserAccounts from "./Components/trainee/UsersSection/usernavigation/navigation"
+
+
 import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login"
 import Traine_Home from "./Components/trainee/home/Home"
 function App() {
@@ -131,6 +126,7 @@ function App() {
           <Route path="/meeting" element={<Meeting />} />
           <Route path="/traine-home" element={<Traine_Home />} />
           <Route path="/tabs" element={<Tabs/>} />
+          <Route path="/user-accounts" element={<UserAccounts/>} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
