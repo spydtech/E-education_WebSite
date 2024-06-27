@@ -261,9 +261,9 @@ const TraineeDashboard = () => {
       case 'approvals':
         return <div>Approvals Content</div>;
       case 'user':
-        return <Navigation />;
+        return<div>User Content</div>;
       case 'settings':
-        return <div>Settings Content</div>;
+        return <Navigation />;
       default:
         return null;
     }

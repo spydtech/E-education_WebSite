@@ -42,7 +42,7 @@ const ProfileSection = () => {
       <div className="w-full max-w-6xl space-y-8">
         <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
           {/* Profile and Details section */}
-          <div className="bg-white shadow-lg w-full md:w-[400px] lg:w-[450px] xl:w-[500px] mx-auto rounded-lg p-6 flex flex-col items-center">
+          <div className="bg-white shadow-lg w-full sm:w-[300px] md:w-[350px] lg:w-[400px] mx-auto rounded-lg p-6 flex flex-col items-center">
             <div className="relative mb-6 justify-center items-center">
               <img
                 className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md cursor-pointer hover:opacity-80 transition-opacity duration-300"
@@ -112,13 +112,13 @@ const ProfileSection = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white shadow-lg w-80 md:w-[500px] lg:w-[600px] xl:w-[600px] mx-auto rounded-lg py-6 px-2 flex flex-col items-center">
+          <div className="bg-white mr-32 shadow-lg w-full sm:w-[300px] md:w-[350px] lg:w-[400px] mx-auto rounded-lg py-6 px-2 flex flex-col items-center">
             <DetailsPage />
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
           {/* Accounts and Skills section */}
-          <Accounts />
+          {/* <Accounts /> */}
           <Skills />
         </div>
       </div>
@@ -126,4 +126,4 @@ const ProfileSection = () => {
   );
 };
 
-export default ProfileSection;
+export default ProfileSection;

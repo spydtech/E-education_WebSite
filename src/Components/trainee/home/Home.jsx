@@ -1,4 +1,3 @@
-
 import React from "react";
 // import { FaLocationArrow } from "react-icons/fa";
 import { TfiArrowTopRight } from "react-icons/tfi";
@@ -7,22 +6,11 @@ import { RxDoubleArrowRight } from "react-icons/rx";
 import CourseCompletionTable from "./CourseCompletionTable";
 
 function HomeTrainee() {
+  const numberOfCourses = localStorage.getItem("numberOfCourses") || 0;
   const firstdata = [
     {
       title: "Courses",
-      value: "1",
-    },
-    {
-      title: "Documents",
-      value: "2",
-    },
-    {
-      title: "Eforms",
-      value: "3",
-    },
-    {
-      title: "Acks",
-      value: "5",
+      value: numberOfCourses.toString(),
     },
   ];
   const users = [
@@ -51,20 +39,25 @@ function HomeTrainee() {
           <p className="text-black font-bold pt-4 text-xl">DASHBOARD</p>
         </div>
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
-          <div id="4cards" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="card1 w-72 h-44 border p-4 bg-white rounded-lg">
-              <p className="text-black font-bold">Completed last 30 days</p>
-              <ul className="list-disc pl-4">
-                {firstdata.map((data, index) => (
-                  <li key={index}>
-                    {data.title}: {data.value}
-                  </li>
-                ))}
-              </ul>
-              <div className="text-xl bg-white font-lora font-bold text-green-600 w-24 h-24 border-4 border-green-400 rounded-full relative bottom-24 left-3/4 transform -translate-x-1/2 flex items-center justify-center">
-                {total}
+          <div
+            id="4cards"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-x-40"
+          >
+            <Link to="/tabs">
+              <div className="card1 w-72 h-44 border p-4 bg-white rounded-lg">
+                <p className="text-black font-bold">Completed last 30 days</p>
+                <ul className="list-disc pl-4">
+                  {firstdata.map((data, index) => (
+                    <li key={index}>
+                      {data.title}: {data.value}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-xl bg-white font-lora font-bold text-green-600 w-24 h-24 border-4 border-green-400 rounded-full relative bottom-6 left-3/4 transform -translate-x-1/2 flex items-center justify-center">
+                  {total}
+                </div>
               </div>
-            </div>
+            </Link>
             <div className="card2 w-72 h-44 border p-4 bg-white rounded-lg">
               <p className="text-black font-bold">User Accounts</p>
               <ul className="list-disc pl-4">
@@ -123,7 +116,10 @@ function HomeTrainee() {
               </div>
             </div>
           </div>
-          <div id="right-card" className="border bg-white p-4 rounded-lg">
+          <div
+            id="right-card"
+            className="border bg-white p-4 w-80 sm:ml-36 rounded-lg"
+          >
             <p className="text-black font-bold">Submissions to Approve</p>
             <div className="p-4 flex gap-2 flex-wrap">
               <TfiArrowTopRight className="text-green-600 w-8 h-8" />
