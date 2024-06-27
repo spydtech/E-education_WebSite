@@ -75,6 +75,8 @@ function HomeTrainee() {
               </div>
             </div>
             </Link>
+            <Link>
+            
             <div className="card3 w-72 h-44 border p-4 bg-white rounded-lg">
               <div className="flex justify-between">
                 <p className="text-black font-bold">Saved Reports</p>
@@ -100,6 +102,7 @@ function HomeTrainee() {
                 </Link>
               </div>
             </div>
+            </Link>
             <div className="card4 w-72 h-44 border p-4 bg-white rounded-lg">
               <div className="flex justify-between">
                 <p className="text-black font-bold">Scheduled Reports</p>
@@ -120,9 +123,11 @@ function HomeTrainee() {
               </div>
             </div>
           </div>
+          <Link to = "/traine-upload">
+          
           <div
             id="right-card"
-            className="border bg-white p-4 w-80 sm:ml-36 rounded-lg"
+            className="border bg-white p-4 w-80 sm:ml-36 rounded-lg "
           >
             <p className="text-black font-bold">Submissions to Approve</p>
             <div className="p-4 flex gap-2 flex-wrap">
@@ -135,6 +140,7 @@ function HomeTrainee() {
               ))}
             </div>
           </div>
+          </Link>
         </div>
         <div id="table-card" className="border bg-white p-4 my-4 rounded-lg">
           <CourseCompletionTable />
