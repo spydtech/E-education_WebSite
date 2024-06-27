@@ -3,7 +3,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Box, CssBaseline, Toolbar, useMediaQuery, useTheme } from '@mui/material';
 import AdminDashBoard from './AdminDashBoard';
 import Orders from '../Views/Orders';
-import Users from '../Views/Users';
+import Users from "../Views/FilterUsers"
 import { AccountCircle } from '@mui/icons-material';
 import AccessField from './AccessField';
 import RegisterEmployee from './Register/RegisterEmployee';

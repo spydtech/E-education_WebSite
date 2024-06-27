@@ -105,7 +105,7 @@ import Meeting from "./Components/Meeting/Meeting";
 import Tabs from "./Components/trainee/TraineAdmin/TraineComplateCourses/Tabs"
 import UserAccounts from "./Components/trainee/UsersSection/usernavigation/navigation"
 import TraineUpload from "./Components/trainee/UserTask/traineuploads"
-
+import TraineeCourses from "./Admin/Views/TraineeCourses"
 import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login"
 import Traine_Home from "./Components/trainee/home/Home"
 function App() {
@@ -128,6 +128,11 @@ function App() {
           <Route path="/tabs" element={<Tabs/>} />
           <Route path="/user-accounts" element={<UserAccounts/>} />
           <Route path="/traine-upload" element={<TraineUpload/>} />
+{/* admin */}
+<Route path="/admin/*" element={<AdminRouter />} />
+<Route path="/trainee-courses" element={<TraineeCourses />} />
+
+
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
@@ -346,7 +351,7 @@ function App() {
             element={<PersonalDevelopment />}
           />
           <Route path="/socialscience" element={<SocialScience />} />
-          <Route path="/admin/*" element={<AdminRouter />} />
+       
 
           {/* Basic Advance Preminum Cousrses here */}
           {/* Basic Courses */}
