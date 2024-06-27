@@ -9,6 +9,7 @@ import AccessField from './AccessField';
 import RegisterEmployee from './Register/RegisterEmployee';
 import RegisterTrainee from './Register/RegisterTraniee';
 import SalesReport from './SalesReport';
+import Meeting from "./Meet/Meeting"
 import {
     Dashboard as DashboardIcon,
     // School as CoursesIcon,
@@ -24,6 +25,7 @@ const menu = [
     { name: "Sales Report", path: "/admin/sales-report", icon: <UsersIcon /> },
     { name: "Orders", path: "/admin/orders", icon: <OrdersIcon /> },
     { name: "Settings", path: "/admin/settings", icon: <SettingsIcon /> },
+    { name: "Meet", "path": "/admin/meeting", "icon": <SettingsIcon /> }
 ];
 
 const Admin = () => {
@@ -91,6 +93,7 @@ const Admin = () => {
                         <Route path="/register-trainee" element={<RegisterTrainee />} />
                         <Route path="/register-employee" element={<RegisterEmployee />} />
                         <Route path='/sales-report' element={<SalesReport />} />
+                        <Route path='/meeting' element={<Meeting />} />
                     </Routes>
                 </Box>
             </div>
