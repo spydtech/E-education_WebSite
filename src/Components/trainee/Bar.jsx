@@ -1,38 +1,38 @@
 import React, { useState, useEffect } from "react";
 
 const CountdownTimer = () => {
-  const initialSeconds = 60; // Set initial countdown time here
-  const [seconds, setSeconds] = useState(initialSeconds);
+  const initialDays = 30;
+  const [days, setDays] = useState(initialDays);
 
   useEffect(() => {
-    if (seconds > 0) {
+    if (days > 0) {
       const timer = setInterval(() => {
-        setSeconds((prevSeconds) => prevSeconds - 1);
-      }, 1000);
+        setDays((prevDays) => prevDays - 1);
+      }, 1000 * 60 * 60 * 24);
 
       return () => clearInterval(timer);
     }
-  }, [seconds]);
+  }, [days]);
 
-  const calculateDegree = () => (seconds / initialSeconds) * 360;
+  const calculateDegree = () => (days / initialDays) * 360;
 
   const getGradientColor = () => {
-    if (seconds > 30) return "#007f5f";
-    if (seconds > 15) return "yellow";
+    if (days > 20) return "#007f5f";
+    if (days > 10) return "yellow";
     return "red";
   };
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="relative flex justify-center items-center w-96 h-96">
+      <div className="relative flex justify-center items-center w-80 h-80 ">
         <div
           className="absolute w-full h-full rounded-full"
           style={{
             background: `conic-gradient(${getGradientColor()} ${calculateDegree()}deg, white 0deg 360deg)`,
           }}
         ></div>
-        <div className="absolute flex justify-center items-center w-40 h-40 bg-white rounded-full">
-          <span className="text-2xl font-bold">{seconds}s</span>
+        <div className="absolute flex justify-center items-center w-32 h-32 bg-white rounded-full">
+          <span className="text-2xl font-bold">{days} Days</span>
         </div>
       </div>
     </div>
