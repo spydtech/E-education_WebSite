@@ -118,6 +118,7 @@ import TraineeTabs from "./Components/trainee/TraineeSideCourses/Tabs";
 // import GroupTable from "./Components/trainee/GroupTable";
 // import TraineeCourseTable1 from "./Components/trainee/TraineeCourses/TraineeCourseTable1";
 import Todo from "./Components/trainee/Todo";
+import Bar from "./Components/trainee/Bar";
 
 function App() {
   return (
@@ -141,6 +142,7 @@ function App() {
           <Route path="/filterusers" element={<FilterUsers />} />
           <Route path="/tabs" element={<TraineeTabs />} />
           <Route path="/todo" element={<Todo />} />
+          <Route path="/bar" element={<Bar />} />
           {/* <Route path="/grouptable" element={<GroupTable />} /> */}
 
           {/* WSpace */}
