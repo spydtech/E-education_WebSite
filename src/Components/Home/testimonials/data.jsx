@@ -40,7 +40,7 @@ export const newdata = [
     image_url: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
-    name: "PavanKumar Velagana",
+    name: "Pavan Velagana",
     rating: 3.7,
     occupation: "Java Developer",
     comment:

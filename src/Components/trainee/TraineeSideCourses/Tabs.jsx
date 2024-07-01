@@ -50,6 +50,7 @@ const Tabs = () => {
         {openTab === 1 && <TraineeCourseTable1 />}
         {openTab === 2 && <TraineeCourseTable2 />}
         {openTab === 3 && <TraineeCourseTable3 />}
+
         {/* Add more conditions for additional tabs */}
       </div>
     </div>
