@@ -189,9 +189,9 @@ function TraineeTable({ updateUsersCount }) {
   ));
 
   return (
-    <div className="overflow-x-auto mt-10 ml-10 mr-10 w-[1100px]">
+    <div className=" mt-10 ml-20 mr-10     p-6 bg-white  shadow-lg border border-gray-200 h-[900px] w-[1100px]  pt-12 rounded-lg shadow-md">
       <div className="min-w-[1000px] overflow-hidden rounded-lg">
-        <div className="flex justify-center mb-3">
+        <div className="flex justify-center ">
           <input
             type="search"
             value={searchTerm}

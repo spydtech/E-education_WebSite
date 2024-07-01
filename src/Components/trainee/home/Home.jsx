@@ -100,7 +100,7 @@ function HomeTrainee() {
                 </Link>
               </div>
             </div>
-            <Link>
+            <Link to="/status">
               <div className="card4 w-72 h-44 border p-4 bg-white rounded-lg">
                 <div className="flex justify-between">
                   <p className="text-black font-bold">Scheduled Reports</p>
@@ -120,6 +120,7 @@ function HomeTrainee() {
               </div>
             </Link>
           </div>
+
           <Link to="/traineeuploads">
             <div
               id="right-card"

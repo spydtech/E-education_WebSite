@@ -119,13 +119,16 @@ import TraineeTable from "./Components/UserTask/TraineeTable";
 import FileList from "./Components/UserTask/FilesFromUser";
 import WSpace from "./Components/UserTask/WSpace";
 import FileUploadForm from "./Components/UserTask/traineuploads";
+import StatusPage from "./Components/UserTask/StatusPage";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/filelist" element={<FileList />} />
           <Route path="/traineetable" element={<TraineeTable />} />
+          <Route path="/status" element={<StatusPage />} />
           {/* <Route path="/charts" element={<Charts />} /> */}
           <Route path="/usernavigation" element={<UserNavigation />} />
           {/* <Route path="/parent" element={<ParentComponent />} /> */}

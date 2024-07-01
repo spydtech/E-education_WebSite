@@ -1,6 +1,158 @@
+// import React, { useState } from "react";
+// import FileList from "./FilesFromUser";
+// import TraineeTable from "./TraineeTable";
+
+// function FileUploadForm() {
+//   const [description, setDescription] = useState("");
+//   const [selectedFile, setSelectedFile] = useState(null);
+//   const [isDragging, setIsDragging] = useState(false);
+
+//   const handleFileChange = (e) => {
+//     setSelectedFile(e.target.files[0]);
+//   };
+
+//   const handleDragOver = (e) => {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     setIsDragging(true);
+//   };
+
+//   const handleDragLeave = (e) => {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     setIsDragging(false);
+//   };
+
+//   const handleDrop = (e) => {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     setIsDragging(false);
+//     const files = e.dataTransfer.files;
+//     if (files && files.length > 0) {
+//       setSelectedFile(files[0]);
+//     }
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     // Handle the file upload logic here
+//     console.log("Description:", description);
+//     console.log("Selected file:", selectedFile);
+//   };
+
+//   return (
+//     <div className="grid md:grid-cols-2 grid-cols-1 py-4 gap-4">
+//       <div className="mx-auto w-full max-w-md p-6 bg-white  shadow-lg border border-gray-200 h-[500px]  pt-12 rounded-lg shadow-md">
+//         <h1 className="text-2xl font-bold text-[#07074D] mb-6 ml-32">
+//           Upload files
+//         </h1>
+//         <form className="space-y-6" onSubmit={handleSubmit}>
+//           <div>
+//             <label
+//               htmlFor="description"
+//               className="block text-sm font-medium text-gray-700"
+//             >
+//               File Description:
+//             </label>
+//             <input
+//               type="text"
+//               name="description"
+//               id="description"
+//               placeholder="Enter file description"
+//               value={description}
+//               onChange={(e) => setDescription(e.target.value)}
+//               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+//             />
+//           </div>
+
+//           <div>
+//             <label className="block text-sm font-medium text-gray-700">
+//               Upload File
+//             </label>
+//             <div
+//               className={`relative mt-1 flex items-center justify-center p-6 border-2 ${
+//                 isDragging ? "border-indigo-500" : "border-gray-300"
+//               } border-dashed rounded-md transition-all duration-200`}
+//               onDragOver={handleDragOver}
+//               onDragLeave={handleDragLeave}
+//               onDrop={handleDrop}
+//             >
+//               <input
+//                 type="file"
+//                 name="file"
+//                 id="file"
+//                 className="sr-only"
+//                 onChange={handleFileChange}
+//               />
+//               <label
+//                 htmlFor="file"
+//                 className="flex flex-col items-center justify-center cursor-pointer space-y-2"
+//               >
+//                 <span className="block text-sm font-medium text-gray-500">
+//                   {isDragging ? "Drop files here" : "Drag & drop files here"}
+//                 </span>
+//                 <span className="block text-sm font-medium text-gray-500">
+//                   or
+//                 </span>
+//                 <span className="px-4 py-2 bg-indigo-600 text-white rounded-md">
+//                   Browse
+//                 </span>
+//               </label>
+//             </div>
+
+//             {selectedFile && (
+//               <div className="mt-4 flex items-center justify-between p-2 bg-gray-100 rounded-md">
+//                 <span className="text-sm font-medium text-gray-700">
+//                   {selectedFile.name}
+//                 </span>
+//                 <button
+//                   type="button"
+//                   className="text-gray-700"
+//                   onClick={() => setSelectedFile(null)}
+//                 >
+//                   <svg
+//                     width="16"
+//                     height="16"
+//                     fill="currentColor"
+//                     className="bi bi-x"
+//                     viewBox="0 0 16 16"
+//                   >
+//                     <path
+//                       fillRule="evenodd"
+//                       d="M4.646 4.646a.5.5 0 011.707-.707L8 6.293l1.646-1.646a.5.5 0 111 .707L9 7.707l1.646 1.646a.5.5 0 01-.707.707L8 8.707l-1.646 1.646a.5.5 0 01-.707-.707L7.293 8l-1.646-1.646a.5.5 0 010-.707z"
+//                     />
+//                   </svg>
+//                 </button>
+//               </div>
+//             )}
+//           </div>
+
+//           <div>
+//             <button
+//               type="submit"
+//               className="w-full py-2 px-4 bg-indigo-600 text-white rounded-md shadow-sm hover:bg-indigo-700"
+//             >
+//               Send File
+//             </button>
+//           </div>
+//         </form>
+//       </div>
+//       <div>
+//         <FileList />
+//       </div>
+//       <div className="mt-10">
+//         <TraineeTable />
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default FileUploadForm;
+
 import React, { useState } from "react";
 import FileList from "./FilesFromUser";
 import TraineeTable from "./TraineeTable";
+
 function FileUploadForm() {
   const [description, setDescription] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
@@ -40,15 +192,18 @@ function FileUploadForm() {
   };
 
   return (
-    <div className="grid md:lg:xl:grid-cols-2 grid-cols-1 py-4 ">
-      <div className="mx-auto w-full h-[490px] max-w-[450px] bg-gray-100">
-        <form className="py-4 px-9" onSubmit={handleSubmit}>
-          <div className="mb-5">
+    <div className="grid md:grid-cols-2 grid-cols-1 py-4 gap-4">
+      <div className="mx-auto w-full max-w-md p-6 bg-white shadow-lg border border-gray-200 rounded-lg">
+        <h1 className="text-2xl font-bold text-[#07074D] mb-6 text-center">
+          Upload files
+        </h1>
+        <form className="space-y-6" onSubmit={handleSubmit}>
+          <div>
             <label
               htmlFor="description"
-              className="mb-3 block text-base font-medium text-[#07074D]"
+              className="block text-sm font-medium text-gray-700"
             >
-              Description of file:
+              File Description:
             </label>
             <input
               type="text"
@@ -57,21 +212,18 @@ function FileUploadForm() {
               placeholder="Enter file description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
             />
           </div>
 
-          <div className="mb-6 pt-4">
-            <label className="mb-5 block text-xl font-semibold text-[#07074D]">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
               Upload File
             </label>
-
             <div
-              className={`relative bg-white flex min-h-[200px] items-center justify-center rounded-md border ${
-                isDragging
-                  ? "border-solid border-[#6A64F1]"
-                  : "border-dashed border-[#e0e0e0]"
-              } p-12 text-center`}
+              className={`relative mt-1 flex items-center justify-center p-6 border-2 ${
+                isDragging ? "border-indigo-500" : "border-gray-300"
+              } border-dashed rounded-md transition-all duration-200`}
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
               onDrop={handleDrop}
@@ -85,55 +237,43 @@ function FileUploadForm() {
               />
               <label
                 htmlFor="file"
-                className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer"
+                className="flex flex-col items-center justify-center cursor-pointer space-y-2"
               >
-                <div>
-                  <span className="mb-2 block text-xl font-semibold text-[#07074D]">
-                    {isDragging ? "Drop files here" : "Drag & drop files here"}
-                  </span>
-                  <span className="mb-2 block text-base font-medium text-[#6B7280]">
-                    Or
-                  </span>
-                  <span className="inline-flex rounded border border-[#e0e0e0] py-2 px-7 text-base font-medium text-[#07074D]">
-                    Browse
-                  </span>
-                </div>
+                <span className="block text-sm font-medium text-gray-500">
+                  {isDragging ? "Drop files here" : "Drag & drop files here"}
+                </span>
+                <span className="block text-sm font-medium text-gray-500">
+                  or
+                </span>
+                <span className="px-4 py-2 bg-indigo-600 text-white rounded-md">
+                  Browse
+                </span>
               </label>
             </div>
 
             {selectedFile && (
-              <div className="mt-5 rounded-md bg-[#F5F7FB] py-4 px-8">
-                <div className="flex items-center justify-between">
-                  <span className="truncate pr-3 text-base font-medium text-[#07074D]">
-                    {selectedFile.name}
-                  </span>
-                  <button
-                    type="button"
-                    className="text-[#07074D]"
-                    onClick={() => setSelectedFile(null)}
+              <div className="mt-4 flex items-center justify-between p-2 bg-gray-100 rounded-md">
+                <span className="text-sm font-medium text-gray-700">
+                  {selectedFile.name}
+                </span>
+                <button
+                  type="button"
+                  className="text-gray-700"
+                  onClick={() => setSelectedFile(null)}
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    className="bi bi-x"
+                    viewBox="0 0 16 16"
                   >
-                    <svg
-                      width="10"
-                      height="10"
-                      viewBox="0 0 10 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M0.279337 0.279338C0.651787 -0.0931121 1.25565 -0.0931121 1.6281 0.279338L9.72066 8.3719C10.0931 8.74435 10.0931 9.34821 9.72066 9.72066C9.34821 10.0931 8.74435 10.0931 8.3719 9.72066L0.279337 1.6281C-0.0931125 1.25565 -0.0931125 0.651788 0.279337 0.279338Z"
-                        fill="currentColor"
-                      />
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M0.279337 9.72066C-0.0931125 9.34821 -0.0931125 8.74435 0.279337 8.3719L8.3719 0.279338C8.74435 -0.0931127 9.34821 -0.0931123 9.72066 0.279338C10.0931 0.651787 10.0931 1.25565 9.72066 1.6281L1.6281 9.72066C1.25565 10.0931 0.651787 10.0931 0.279337 9.72066Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </button>
-                </div>
+                    <path
+                      fillRule="evenodd"
+                      d="M4.646 4.646a.5.5 0 011.707-.707L8 6.293l1.646-1.646a.5.5 0 111 .707L9 7.707l1.646 1.646a.5.5 0 01-.707.707L8 8.707l-1.646 1.646a.5.5 0 01-.707-.707L7.293 8l-1.646-1.646a.5.5 0 010-.707z"
+                    />
+                  </svg>
+                </button>
               </div>
             )}
           </div>
@@ -141,17 +281,17 @@ function FileUploadForm() {
           <div>
             <button
               type="submit"
-              className="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+              className="w-full py-2 px-4 bg-indigo-600 text-white rounded-md shadow-sm hover:bg-indigo-700"
             >
               Send File
             </button>
           </div>
         </form>
       </div>
-      <div>
+      <div className="mt-4 md:mt-0">
         <FileList />
       </div>
-      <div className=" mt-10 ml-14">
+      <div className="mt-10">
         <TraineeTable />
       </div>
     </div>
