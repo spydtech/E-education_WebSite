@@ -13,8 +13,6 @@ const TraineeUpdatePassword = () => {
       return;
     }
 
-    // Simulate successful password update (Replace with actual backend integration)
-    // For demonstration purposes, alert a success message
     alert("Password updated successfully!");
     setOldPassword("");
     setNewPassword("");
@@ -23,8 +21,8 @@ const TraineeUpdatePassword = () => {
   };
 
   return (
-    <div className="bg-[#425df5] min-h-screen flex items-center justify-center p-4">
-      <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl w-full mx-auto">
+    <div className="bg-[#425df5] min-h-screen flex items-center justify-center">
+      <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg max-w-4xl w-full">
         {/* Left Side - Image */}
         <div className="md:w-1/2">
           <img

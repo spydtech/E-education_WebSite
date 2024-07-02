@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import ProfileSection from "../profilesection/ProfileSection";
-import TraineForgotPassword from "../ForgotPassword/forgotpassword";
-import TraineeUpdatePassword from "../UpdatePassword/updatepassword";
+import ActiveUsers from "../users/Activeusers";
+// import InactiveUsers from "../users/Inactiveusers";
 
-const TraineeNavigation = () => {
-  const sections = ["Profile", "Forgot Password", "Update Password"];
+const UserNavigation = () => {
+  const sections = ["Active Users"];
   const [currentSection, setCurrentSection] = useState(0);
 
   const handleSectionChange = (index) => {
@@ -13,7 +12,7 @@ const TraineeNavigation = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center min-h-screen mt-4">
+      <div className="flex flex-col items-center min-h-screen pt-4">
         <nav className="flex flex-col sm:flex-row w-full sm:w-auto max-w-full md:max-w-xl mx-4 rounded-lg shadow-lg bg-white overflow-hidden">
           {sections.map((section, index) => (
             <button
@@ -36,13 +35,12 @@ const TraineeNavigation = () => {
           ))}
         </nav>
         <div className="container mx-auto p-4 mt-4 bg-white shadow-lg rounded-lg">
-          {currentSection === 0 && <ProfileSection />}
-          {currentSection === 1 && <TraineForgotPassword />}
-          {currentSection === 2 && <TraineeUpdatePassword />}
+          {currentSection === 0 && <ActiveUsers />}
+          {/* {currentSection === 1 && <InactiveUsers />} */}
         </div>
       </div>
     </>
   );
 };
 
-export default TraineeNavigation;
+export default UserNavigation;

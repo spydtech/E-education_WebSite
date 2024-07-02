@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-// import IMG from "../../assets/E- education logo .png";
-// import IMG from "../../../assets/E- education logo .png";
 import forgotpassword from "../../../../assets/forgotpassword1.png";
 import "animate.css";
 

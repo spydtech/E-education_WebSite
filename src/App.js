@@ -102,8 +102,6 @@ import AdminLogin from "./Admin/Components/AdminLogin";
 import Trainee from "./Components/trainee/Trainee";
 import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
 import Meeting from "./Components/Meeting/Meeting";
-import TraineeCourses from "./Components/trainee/TraineeCourses/TraineeCourses";
-import TraineeUpload from "./Components/trainee/TraineeUploads";
 // import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 // import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 // import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
@@ -113,20 +111,20 @@ import TraineeUpload from "./Components/trainee/TraineeUploads";
 // import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 // import CourseDetails from "./Components/CourseDetails/CourseDetails";
 import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login";
-import FilterUsers from "./Components/trainee/FilterUsers";
-import TraineeTabs from "./Components/trainee/TraineeSideCourses/Tabs";
-// import GroupTable from "./Components/trainee/GroupTable";
-// import TraineeCourseTable1 from "./Components/trainee/TraineeCourses/TraineeCourseTable1";
-import Todo from "./Components/trainee/Todo";
-import Bar from "./Components/trainee/Bar";
-
+import Traine_Home from "./Components/trainee/home/Home";
+// import PaymentofUser from "./Components/trainee/Payment";
+import PaymentDetails from "./Components/trainee/UserTask/Module/MainDashBoard";
+import Tabs from "./Components/trainee/TraineeSideCourses/Tabs";
+import FilterUsers from "./Components/trainee/FilesFromUser";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
+          {/* <Route path="/paymentdetails" element={<PaymentofUser />} /> */}
+          <Route path="/paymentshistory" element={<PaymentDetails />} />
           <Route path="/" element={<Home />} />
-
+          <Route path="/admin" element={<AdminRouter />} />
           <Route path="/admin_login" element={<AdminLogin />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/options" element={<Options />} />
@@ -134,17 +132,12 @@ function App() {
           <Route path="/try-a-demo" element={<TryADemo />} />
           {/* traine Login */}
           <Route path="/trainelogin" element={<Traine_Login />} />
+          <Route path="/tabs" element={<Tabs />} />
+          <Route path="/filterusers" element={<FilterUsers />} />
           <Route path="/trainee" element={<Trainee />} />
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
           <Route path="/meeting" element={<Meeting />} />
-          <Route path="/traineecourses" element={<TraineeCourses />} />
-          <Route path="/traineeuploads" element={<TraineeUpload />} />
-          <Route path="/filterusers" element={<FilterUsers />} />
-          <Route path="/tabs" element={<TraineeTabs />} />
-          <Route path="/todo" element={<Todo />} />
-          <Route path="/bar" element={<Bar />} />
-          {/* <Route path="/grouptable" element={<GroupTable />} /> */}
-
+          <Route path="/traine-home" element={<Traine_Home />} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
@@ -363,7 +356,6 @@ function App() {
             element={<PersonalDevelopment />}
           />
           <Route path="/socialscience" element={<SocialScience />} />
-          <Route path="/admin/*" element={<AdminRouter />} />
 
           {/* Basic Advance Preminum Cousrses here */}
           {/* Basic Courses */}
