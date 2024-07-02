@@ -2,20 +2,24 @@ import React from "react";
 
 const completedData = [
   {
-    userName: "John Doe",
+    fullName: "John Doe",
     userId: "123",
-    rozarpayId: "rzp_1",
+    transactionId: "rzp_1",
     totalAmount: "500",
     status: "Completed",
     Date: "24/june/2024",
+    email: "john.doe@example.com",
+    paymentMethod: "Credit Card",
   },
   {
-    userName: "Bob Brown",
+    fullName: "Bob Brown",
     userId: "126",
-    rozarpayId: "rzp_4",
+    transactionId: "rzp_4",
     totalAmount: "450",
     status: "Completed",
     Date: "24/june/2024",
+    email: "bob.brown@example.com",
+    paymentMethod: "Net Banking",
   },
 ];
 
@@ -27,8 +31,10 @@ const CompletedPaymentsTable = () => {
           <tr className="h-16">
             <th className="px-4 py-2 text-left">Date</th>
             <th className="px-4 py-2 text-left">UserId</th>
-            <th className="px-4 py-2 text-left">UserName</th>
-            <th className="px-4 py-2 text-left">RozarpayID</th>
+            <th className="px-4 py-2 text-left">FullName</th>
+            <th className="px-4 py-2 text-left">Email</th>
+            <th className="px-4 py-2 text-left">PaymentMethod</th>
+            <th className="px-4 py-2 text-left">TransactionId</th>
             <th className="px-4 py-2 text-left">TotalAmount</th>
             <th className="px-4 py-2 text-left">Status</th>
           </tr>
@@ -38,8 +44,10 @@ const CompletedPaymentsTable = () => {
             <tr key={index} className="hover:bg-gray-300">
               <td className="px-4 py-2">{item.Date}</td>
               <td className="px-4 py-2">{item.userId}</td>
-              <td className="px-4 py-2">{item.userName}</td>
-              <td className="px-4 py-2">{item.rozarpayId}</td>
+              <td className="px-4 py-2">{item.fullName}</td>
+              <td className="px-4 py-2">{item.email}</td>
+              <td className="px-4 py-2">{item.paymentMethod}</td>
+              <td className="px-4 py-2">{item.transactionId}</td>
               <td className="px-4 py-2">{item.totalAmount}</td>
               <td className="px-4 py-2 text-green-500">{item.status}</td>
             </tr>

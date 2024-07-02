@@ -2,12 +2,14 @@ import React from "react";
 
 const rejectedData = [
   {
-    userName: "Jane Smith",
+    fullName: "Jane Smith",
     userId: "124",
-    rozarpayId: "rzp_2",
+    transactionId: "rzp_2",
     totalAmount: "200",
     status: "Rejected",
     Date: "24/june/2024",
+    email: "jane.smith@example.com",
+    paymentMethod: "PayPal",
   },
 ];
 
@@ -19,8 +21,10 @@ const RejectedPaymentsTable = () => {
           <tr className="h-16">
             <th className="px-4 py-2 text-left">Date</th>
             <th className="px-4 py-2 text-left">UserId</th>
-            <th className="px-4 py-2 text-left">UserName</th>
-            <th className="px-4 py-2 text-left">RozarpayID</th>
+            <th className="px-4 py-2 text-left">FullName</th>
+            <th className="px-4 py-2 text-left">Email</th>
+            <th className="px-4 py-2 text-left">PaymentMethod</th>
+            <th className="px-4 py-2 text-left">TransactionId</th>
             <th className="px-4 py-2 text-left">TotalAmount</th>
             <th className="px-4 py-2 text-left">Status</th>
           </tr>
@@ -30,8 +34,10 @@ const RejectedPaymentsTable = () => {
             <tr key={index} className="hover:bg-gray-300">
               <td className="px-4 py-2">{item.Date}</td>
               <td className="px-4 py-2">{item.userId}</td>
-              <td className="px-4 py-2">{item.userName}</td>
-              <td className="px-4 py-2">{item.rozarpayId}</td>
+              <td className="px-4 py-2">{item.fullName}</td>
+              <td className="px-4 py-2">{item.email}</td>
+              <td className="px-4 py-2">{item.paymentMethod}</td>
+              <td className="px-4 py-2">{item.transactionId}</td>
               <td className="px-4 py-2">{item.totalAmount}</td>
               <td className="px-4 py-2 text-red-600">{item.status}</td>
             </tr>

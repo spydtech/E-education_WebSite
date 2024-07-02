@@ -1,19 +1,19 @@
 import React from "react";
 
-const pendingData = [
+const processingData = [
   {
-    fullName: "Alice Johnson",
-    userId: "125",
-    transactionId: "rzp_3",
+    fullName: "Robert Johnson",
+    userId: "134",
+    transactionId: "rzp_7",
     totalAmount: "300",
-    status: "Pending",
+    status: "Processing",
     Date: "24/june/2024",
-    email: "alice.johnson@example.com",
-    paymentMethod: "Bank Transfer",
+    email: "robert.johnson@example.com",
+    paymentMethod: "UPI",
   },
 ];
 
-const PendingPaymentsTable = () => {
+const ProcessingPaymentsTable = () => {
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full">
@@ -30,7 +30,7 @@ const PendingPaymentsTable = () => {
           </tr>
         </thead>
         <tbody>
-          {pendingData.map((item, index) => (
+          {processingData.map((item, index) => (
             <tr key={index} className="hover:bg-gray-300">
               <td className="px-4 py-2">{item.Date}</td>
               <td className="px-4 py-2">{item.userId}</td>
@@ -48,4 +48,4 @@ const PendingPaymentsTable = () => {
   );
 };
 
-export default PendingPaymentsTable;
+export default ProcessingPaymentsTable;

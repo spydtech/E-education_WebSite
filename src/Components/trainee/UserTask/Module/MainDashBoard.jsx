@@ -3,6 +3,7 @@ import AllPaymentsTable from "./TotalPayments";
 import CompletedPaymentsTable from "./CompletedPaymentsTable";
 import RejectedPaymentsTable from "./RejectedPaymentsTable";
 import PendingPaymentsTable from "./PendingPaymentsTable";
+import ProcessingPaymentsTable from "./ProcessingPaymentTable";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("All");
@@ -17,6 +18,8 @@ const Dashboard = () => {
         return <RejectedPaymentsTable />;
       case "Pending":
         return <PendingPaymentsTable />;
+      case "Processing":
+        return <ProcessingPaymentsTable />;
       default:
         return <AllPaymentsTable />;
     }
@@ -42,7 +45,7 @@ const Dashboard = () => {
       amount: "Acc No: 1736738373",
       textColor: "text-black",
       bgColor: "bg-[#3f88c5]",
-      // isAccount: true,
+      isAccount: true,
     },
   ];
 
@@ -92,16 +95,7 @@ const Dashboard = () => {
           Completed
         </button>
       </div>
-      <div className="col-span-1 md:col-span-1">
-        <button
-          onClick={() => setActiveTab("Rejected")}
-          className={`w-full md:w-auto p-2 border-red-500 border-2 text-black rounded-full ${
-            activeTab === "Rejected" ? "bg-red-600 text-white" : ""
-          }`}
-        >
-          Rejected
-        </button>
-      </div>
+
       <div className="col-span-1 md:col-span-1">
         <button
           onClick={() => setActiveTab("Pending")}
@@ -110,6 +104,26 @@ const Dashboard = () => {
           }`}
         >
           Pending
+        </button>
+      </div>
+      <div className="col-span-1 md:col-span-1">
+        <button
+          onClick={() => setActiveTab("Processing")}
+          className={`w-full md:w-auto p-2 border-yellow-500 border-2 text-black rounded-full ${
+            activeTab === "Processing" ? "bg-yellow-500 text-white" : ""
+          }`}
+        >
+          Processing
+        </button>
+      </div>
+      <div className="col-span-1 md:col-span-1">
+        <button
+          onClick={() => setActiveTab("Rejected")}
+          className={`w-full md:w-auto p-2 border-red-500 border-2 text-black rounded-full ${
+            activeTab === "Rejected" ? "bg-red-600 text-white" : ""
+          }`}
+        >
+          Rejected
         </button>
       </div>
       <div className="col-span-1 md:col-span-6 row-span-auto bg-gray-100 p-4 overflow-x-auto">

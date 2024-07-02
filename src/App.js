@@ -116,6 +116,8 @@ import Traine_Home from "./Components/trainee/home/Home";
 import PaymentDetails from "./Components/trainee/UserTask/Module/MainDashBoard";
 import Tabs from "./Components/trainee/TraineeSideCourses/Tabs";
 import FilterUsers from "./Components/trainee/FilesFromUser";
+import Charts from "./Components/trainee/Charts";
+import LineChartComponent from "./Components/trainee/Sales";
 function App() {
   return (
     <div>
@@ -138,6 +140,9 @@ function App() {
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
           <Route path="/meeting" element={<Meeting />} />
           <Route path="/traine-home" element={<Traine_Home />} />
+
+          <Route path="/line" element={<LineChartComponent />} />
+          <Route path="/charts" element={<Charts />} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
