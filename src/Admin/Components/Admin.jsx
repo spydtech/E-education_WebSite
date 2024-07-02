@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Box, CssBaseline, Toolbar, useMediaQuery, useTheme } from '@mui/material';
 import PaymentDashboard from "./pymentData/MainDashBoard"
+import SealsReports from "./sealsRepotes2/coursestable"
 import AdminDashBoard from './AdminDashBoard';
 import Orders from '../Views/Orders';
 import Users from "../Views/FilterUsers"
@@ -96,7 +97,8 @@ const Admin = () => {
                         <Route path="/accessField" element={<AccessField />} />
                         <Route path="/register-trainee" element={<RegisterTrainee />} />
                         <Route path="/register-employee" element={<RegisterEmployee />} />
-                        <Route path='/sales-report' element={<SalesReport />} />
+                        {/* <Route path='/sales-report' element={<SalesReport />} /> */}
+                        <Route path='/sales-report' element={<SealsReports />} />
                         <Route path='/meeting' element={<Meeting />} />
                         <Route path="/payment-data" element={<PaymentDashboard />} />
                         {/* <Route path='/total-sales' element={<TotalSales />} /> */}

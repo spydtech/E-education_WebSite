@@ -107,7 +107,10 @@ import UserAccounts from "./Components/trainee/UsersSection/usernavigation/navig
 import TraineUpload from "./Components/trainee/UserTask/traineuploads"
 import TraineeCourses from "./Admin/Views/TraineeCourses"
 import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login"
-import Traine_Home from "./Components/trainee/home/Home"
+import Traine_Home from "./Components/trainee/home/Home";
+import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales"
+import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile"
+import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers"
 function App() {
   return (
     <div>
@@ -125,12 +128,16 @@ function App() {
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
           <Route path="/meeting" element={<Meeting />} />
           <Route path="/traine-home" element={<Traine_Home />} />
-          <Route path="/tabs" element={<Tabs/>} />
-          <Route path="/user-accounts" element={<UserAccounts/>} />
-          <Route path="/traine-upload" element={<TraineUpload/>} />
-{/* admin */}
-<Route path="/admin/*" element={<AdminRouter />} />
-<Route path="/trainee-courses" element={<TraineeCourses />} />
+          <Route path="/tabs" element={<Tabs />} />
+          <Route path="/user-accounts" element={<UserAccounts />} />
+          <Route path="/traine-upload" element={<TraineUpload />} />
+          {/* admin */}
+          <Route path="/admin/*" element={<AdminRouter />} />
+          <Route path="/trainee-courses" element={<TraineeCourses />} />
+          <Route path="/linechart" element={<CountOfSeals />} />
+          <Route path="/countofproducts" element={<CountOfProduct />} />
+          <Route path="/countofcustomers" element={<CountOfCustomers />} />
+
 
 
           {/* WSpace */}
@@ -351,7 +358,7 @@ function App() {
             element={<PersonalDevelopment />}
           />
           <Route path="/socialscience" element={<SocialScience />} />
-       
+
 
           {/* Basic Advance Preminum Cousrses here */}
           {/* Basic Courses */}
