@@ -111,6 +111,7 @@ import Traine_Home from "./Components/trainee/home/Home";
 import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales"
 import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile"
 import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers"
+import StatusPage from "./Components/trainee/UserTask/StatusPage";
 function App() {
   return (
     <div>
@@ -131,6 +132,7 @@ function App() {
           <Route path="/tabs" element={<Tabs />} />
           <Route path="/user-accounts" element={<UserAccounts />} />
           <Route path="/traine-upload" element={<TraineUpload />} />
+          <Route path="/status-page" element={<StatusPage />} />
           {/* admin */}
           <Route path="/admin/*" element={<AdminRouter />} />
           <Route path="/trainee-courses" element={<TraineeCourses />} />
