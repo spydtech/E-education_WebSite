@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Box, CssBaseline, Toolbar, useMediaQuery, useTheme } from '@mui/material';
+import PaymentDashboard from "./pymentData/MainDashBoard"
 import AdminDashBoard from './AdminDashBoard';
 import Orders from '../Views/Orders';
 import Users from "../Views/FilterUsers"
@@ -28,7 +29,7 @@ const menu = [
     { name: "Sales Report", path: "/admin/sales-report", icon: <UsersIcon /> },
     { name: "Settings", path: "/admin/settings", icon: <SettingsIcon /> },
     { name: "Meet", "path": "/admin/meeting", "icon": <SettingsIcon /> },
-    { name: "Total Sales", "path": "/admin/total-sales", "icon": <SettingsIcon /> }
+    // { name: "Total Sales", "path": "/admin/total-sales", "icon": <SettingsIcon /> }
 ];
 
 const Admin = () => {
@@ -97,8 +98,8 @@ const Admin = () => {
                         <Route path="/register-employee" element={<RegisterEmployee />} />
                         <Route path='/sales-report' element={<SalesReport />} />
                         <Route path='/meeting' element={<Meeting />} />
-                        <Route path="/payment-data" element={<PaymentData />} />
-                        <Route path='/total-sales' element={<TotalSales />} />
+                        <Route path="/payment-data" element={<PaymentDashboard />} />
+                        {/* <Route path='/total-sales' element={<TotalSales />} /> */}
                     </Routes>
                 </Box>
             </div>
