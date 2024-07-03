@@ -102,31 +102,23 @@ import AdminLogin from "./Admin/Components/AdminLogin";
 import Trainee from "./Components/trainee/Trainee";
 import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
 import Meeting from "./Components/Meeting/Meeting";
-// import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
-// import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
-// import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
-// import C_Cplus from "./Components/BasicCourse/BasicAllCourses/Basic_C&C++/BasicC_Cplus";
-// import GoogleCalender from "./Components/Profile/Calendar Sync/GoogleCalendar";
-// import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
-// import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
-// import CourseDetails from "./Components/CourseDetails/CourseDetails";
+import Tabs from "./Components/trainee/TraineAdmin/TraineComplateCourses/Tabs";
+import UserAccounts from "./Components/trainee/UsersSection/usernavigation/navigation";
+import TraineUpload from "./Components/trainee/UserTask/traineuploads";
+import TraineeCourses from "./Admin/Views/TraineeCourses";
 import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login";
 import Traine_Home from "./Components/trainee/home/Home";
-// import PaymentofUser from "./Components/trainee/Payment";
-import PaymentDetails from "./Components/trainee/UserTask/Module/MainDashBoard";
-import Tabs from "./Components/trainee/TraineeSideCourses/Tabs";
-import FilterUsers from "./Components/trainee/FilesFromUser";
-import Charts from "./Components/trainee/Charts";
-import LineChartComponent from "./Components/trainee/Sales";
+import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales";
+import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile";
+import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers";
+import StatusPage from "./Components/trainee/UserTask/StatusPage";
+import Todo from "./Components/trainee/Todo";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/paymentdetails" element={<PaymentofUser />} /> */}
-          <Route path="/paymentshistory" element={<PaymentDetails />} />
           <Route path="/" element={<Home />} />
-          <Route path="/admin" element={<AdminRouter />} />
           <Route path="/admin_login" element={<AdminLogin />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/options" element={<Options />} />
@@ -134,15 +126,22 @@ function App() {
           <Route path="/try-a-demo" element={<TryADemo />} />
           {/* traine Login */}
           <Route path="/trainelogin" element={<Traine_Login />} />
-          <Route path="/tabs" element={<Tabs />} />
-          <Route path="/filterusers" element={<FilterUsers />} />
           <Route path="/trainee" element={<Trainee />} />
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
           <Route path="/meeting" element={<Meeting />} />
           <Route path="/traine-home" element={<Traine_Home />} />
+          <Route path="/tabs" element={<Tabs />} />
+          <Route path="/user-accounts" element={<UserAccounts />} />
+          <Route path="/traine-upload" element={<TraineUpload />} />
+          <Route path="/status-page" element={<StatusPage />} />
+          <Route path="/todo" element={<Todo />} />
+          {/* admin */}
+          <Route path="/admin/*" element={<AdminRouter />} />
+          <Route path="/trainee-courses" element={<TraineeCourses />} />
+          <Route path="/linechart" element={<CountOfSeals />} />
+          <Route path="/countofproducts" element={<CountOfProduct />} />
+          <Route path="/countofcustomers" element={<CountOfCustomers />} />
 
-          <Route path="/line" element={<LineChartComponent />} />
-          <Route path="/charts" element={<Charts />} />
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />

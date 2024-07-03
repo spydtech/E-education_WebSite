@@ -10,7 +10,9 @@ import { FaUserAlt } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
 import Trainee_Home from "../home/Home";
 import Navigation from "../TraineAdmin/navigation/navigation";
-
+import TraineUpload from "../UserTask/traineuploads";
+import COursesGroup from "../TraineAdmin/CoursesGroup/Tabs";
+import Calendar from "../Calendar/Calendar";
 const TraineeDashboard = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("home"); // State to manage active tab
@@ -28,16 +30,16 @@ const TraineeDashboard = () => {
       case "home":
         return <Trainee_Home />;
       case "courses":
-        return <div>Courses Group Content</div>;
+        return <COursesGroup />;
       case "calendar":
-        return <div>Calendar Content</div>;
+        return <Calendar />;
       case "reports":
         return <div>Reports Content</div>;
       case "approvals":
-        return <div>Approvals Content</div>;
-      case 'user':
-        return<div>User Content</div>;
-      case 'settings':
+        return <TraineUpload />;
+      case "user":
+        return <div>User Content</div>;
+      case "settings":
         return <Navigation />;
       default:
         return null;
