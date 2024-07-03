@@ -174,8 +174,8 @@ function CourseCompletionTable() {
   );
 
   return (
-    <div className="p-4 bg-white">
-      <h2 className="text-xl font-bold mb-4">
+    <div className="p-4 bg-gray-200">
+      <h2 className="text-xl text-black font-bold mb-4">
         Course Completion Within 30 Days
       </h2>
       <div className="mb-4 flex flex-col md:flex-row justify-between items-center gap-2">

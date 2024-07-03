@@ -41,12 +41,12 @@ function FileUploadForm() {
 
   return (
     <div className="grid md:lg:xl:grid-cols-2 grid-cols-1 py-4 ">
-      <div className="mx-auto w-full h-[490px] max-w-[450px] bg-gray-100">
+      <div className="mx-auto w-full h-[490px] max-w-[450px] bg-gray-200 rounded-lg">
         <form className="py-4 px-9" onSubmit={handleSubmit}>
           <div className="mb-5">
             <label
               htmlFor="description"
-              className="mb-3 block text-base font-medium text-[#07074D]"
+              className="mb-3 block text-base font-medium text-black"
             >
               Description of file:
             </label>
@@ -62,7 +62,7 @@ function FileUploadForm() {
           </div>
 
           <div className="mb-6 pt-4">
-            <label className="mb-5 block text-xl font-semibold text-[#07074D]">
+            <label className="mb-5 block text-xl font-semibold text-black">
               Upload File
             </label>
 
@@ -141,14 +141,14 @@ function FileUploadForm() {
           <div>
             <button
               type="submit"
-              className="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+              className="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-black outline-none"
             >
               Send File
             </button>
           </div>
         </form>
       </div>
-      <div>
+      <div className="bg-gray-200 rounded-lg">
         <FileList />
       </div>
       <div className=" mt-10 ml-14">

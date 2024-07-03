@@ -19,7 +19,7 @@ const Tabs = () => {
   }, [numberOfCourses]);
 
   const activeClasses = "border-l border-t border-r rounded-t text-blue-700";
-  const inactiveClasses = "text-blue-500 hover:text-blue-700";
+  const inactiveClasses = "text-black-500 hover:text-blue-700";
 
   const handleTabClick = (tabNumber) => {
     setOpenTab(tabNumber);

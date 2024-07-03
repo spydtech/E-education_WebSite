@@ -36,19 +36,19 @@ function HomeTrainee() {
   const usertotal = users.reduce((acc, item) => acc + parseInt(item.value), 0);
   return (
     <>
-      <div id="container" className="px-2 bg-gray-100">
-        <div className="ml-4 md:ml-10">
+      <div id="container" className="px-2 bg-white">
+        {/* <div className="ml-4 md:ml-10">
           <p className="text-black font-bold pt-4 text-xl">DASHBOARD</p>
-        </div>
+        </div> */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
           <div
             id="4cards"
             className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-x-40"
           >
             <Link to="/tabs">
-              <div className="card1 w-72 h-44 border p-4 bg-white rounded-lg">
+              <div className="card1 w-72 h-44 border p-4 bg-gray-200 rounded-lg">
                 <p className="text-black font-bold">Completed last 30 days</p>
-                <ul className="list-disc pl-4">
+                <ul className="list-disc text-black pl-4">
                   {firstdata.map((data, index) => (
                     <li key={index}>
                       {data.title}: {data.value}
@@ -61,9 +61,9 @@ function HomeTrainee() {
               </div>
             </Link>
             <Link to="/user-accounts">
-              <div className="card2 w-72 h-44 border p-4 bg-white rounded-lg">
+              <div className="card2 w-72 h-44 border p-4 bg-gray-200 rounded-lg">
                 <p className="text-black font-bold">User Accounts</p>
-                <ul className="list-disc pl-4">
+                <ul className="list-disc text-black pl-4">
                   {users.map((data, index) => (
                     <li key={index}>
                       {data.title}: {data.value}
@@ -75,17 +75,17 @@ function HomeTrainee() {
                 </div>
               </div>
             </Link>
-            <div className="card3 w-72 h-44 border p-4 bg-white rounded-lg">
+            <div className="card3 w-72 h-44 border p-4 bg-gray-200 rounded-lg">
               <div className="flex justify-between">
                 <p className="text-black font-bold">Saved Reports</p>
                 <Link>
-                  <p className="text-blue-700">
+                  <p className="text-blue-500">
                     <RxDoubleArrowRight className="float-start w-6 h-6" />
                     View All
                   </p>
                 </Link>
               </div>
-              <div className="mt-4 text-violet-600">
+              <div className="mt-4 text-blue-500 ">
                 <Link>
                   <p className="underline-offset-2 underline">
                     <RxDoubleArrowRight className="float-start w-6 h-6" />
@@ -93,24 +93,24 @@ function HomeTrainee() {
                   </p>
                 </Link>
                 <Link>
-                  <p className="underline-offset-2 underline">
+                  <p className="underline-offset-2 underline pt-2">
                     <RxDoubleArrowRight className="float-start w-6 h-6" />
                     General Induction Status
                   </p>
                 </Link>
               </div>
             </div>
-            <div className="card4 w-72 h-44 border p-4 bg-white rounded-lg">
+            <div className="card4 w-72 h-44 border p-4 bg-gray-200 rounded-lg">
               <div className="flex justify-between">
                 <p className="text-black font-bold">Scheduled Reports</p>
                 <Link>
-                  <p className="text-blue-700">
+                  <p className="text-blue-500">
                     <RxDoubleArrowRight className="float-start w-6 h-6" />
                     Manage
                   </p>
                 </Link>
               </div>
-              <div className="mt-4 text-violet-600">
+              <div className="mt-4 text-blue-500">
                 <Link>
                   <p className="underline-offset-2 underline">
                     <RxDoubleArrowRight className="float-start w-6 h-6" />
@@ -123,14 +123,14 @@ function HomeTrainee() {
           <Link to="/traine-upload">
             <div
               id="right-card"
-              className="border bg-white p-4 w-80 sm:ml-36 rounded-lg"
+              className="border bg-gray-200 p-4 w-80 h-[370px] sm:ml-36 rounded-lg"
             >
               <p className="text-black font-bold">Submissions to Approve</p>
               <div className="p-4 flex gap-2 flex-wrap">
                 <TfiArrowTopRight className="text-green-600 w-8 h-8" />
-                <p className="font-bold">User Tasks</p>
+                <p className="font-bold text-black">User Tasks</p>
                 {userTasks.map((data, index) => (
-                  <p className="pl-10 w-full" key={index}>
+                  <p className="pl-10 w-full text-black" key={index}>
                     {data.value} - Submissions to Approve
                   </p>
                 ))}
@@ -138,7 +138,10 @@ function HomeTrainee() {
             </div>
           </Link>
         </div>
-        <div id="table-card" className="border bg-white p-4 my-4 rounded-lg">
+        <div
+          id="table-card"
+          className="border  p-4 my-4 bg-gray-200 rounded-lg"
+        >
           <CourseCompletionTable />
         </div>
       </div>

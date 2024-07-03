@@ -107,7 +107,7 @@ function TraineeCourseTable1() {
   ));
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto  bg-gray-200 rounded-lg ">
       <div className="min-w-full shadow-md overflow-hidden rounded-lg">
         <div className="p-3 flex flex-col md:flex-row justify-between m-3 space-y-3 md:space-y-0">
           <input
@@ -118,7 +118,7 @@ function TraineeCourseTable1() {
             className="inline-block  px-4 py-2 border border-gray-300 rounded-md"
           />
           <div className="flex items-center space-x-2 mx-2">
-            <span className="text-gray-500"> Trainee:</span>
+            <span className="text-black"> Trainee:</span>
             {trainee.map((traineeItem, index) => (
               <span key={index} className="px-2 py-1 bg-gray-100 rounded-md">
                 {traineeItem.name}

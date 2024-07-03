@@ -189,9 +189,9 @@ function TraineeTable({ updateUsersCount }) {
   ));
 
   return (
-    <div className="overflow-x-auto mt-10 ml-10 mr-10 w-[1100px]">
-      <div className="min-w-[1000px] overflow-hidden rounded-lg">
-        <div className="flex justify-center mb-3">
+    <div className="overflow-x-auto mt-10 w-[900px] bg-gray-200 p-4 rounded-lg">
+      <div className="min-w-full overflow-x-auto rounded-lg">
+        <div className="flex justify-start m-3">
           <input
             type="search"
             value={searchTerm}
@@ -200,7 +200,7 @@ function TraineeTable({ updateUsersCount }) {
             className="w-[200px] px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
         </div>
-        <div className="flex justify-end mb-4 mr-24">
+        <div className="flex justify-end mb-4 ">
           <button
             className="px-4 py-2 bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
             onClick={handleSelectAllUsers}
@@ -209,7 +209,7 @@ function TraineeTable({ updateUsersCount }) {
           </button>
         </div>
 
-        <table className="min-w-[1000px] divide-y divide-gray-200 w-[900px]">
+        <table className="min-w-full overflow-x-auto divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">

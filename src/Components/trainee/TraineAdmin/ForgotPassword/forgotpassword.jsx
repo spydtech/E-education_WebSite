@@ -93,7 +93,7 @@ function TraineForgotPassword() {
 
   return (
     <>
-      <div className="bg-[#4287f5]">
+      <div className="bg-white m-10 rounded-lg">
         <div
           id="main"
           className=" grid md:lg:xl:grid-cols-2 grid-cols-1 justify-center items-center"
@@ -101,7 +101,7 @@ function TraineForgotPassword() {
           <div className="flex justify-center items-center" id="image">
             <img
               src={forgotpassword}
-              className="w-auto mx-auto"
+              className="w-auto mx-auto rounded-lg"
               alt="Forgot Password"
             />
           </div>
@@ -112,7 +112,7 @@ function TraineForgotPassword() {
                 className="flex  justify-center items-center w-56 mx-auto "
                 alt="Logo"
               /> */}
-              <div className="p-2 animate_animated animate_backInDown mb-10 text-4xl text-center font-lora font-bold text-white">
+              <div className="p-2 animate_animated animate_backInDown mb-10 text-4xl text-center font-lora font-bold text-[#1F2937]">
                 Forgot Your Password?
               </div>
 

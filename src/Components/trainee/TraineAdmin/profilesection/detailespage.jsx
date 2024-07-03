@@ -32,7 +32,7 @@ const DetailsPage = () => {
 
   return (
     <div className="flex justify-center items-center h-[370px] md:xl:lg:sm:w-96 w-80 bg-white ">
-      <div className="w-full max-w-lg p-8  rounded-lg shadow-lg">
+      <div className="w-full max-w-lg p-8  rounded-lg ">
         <div className="space-y-4">
           {Object.keys(details).map((key) => (
             <div
