@@ -120,7 +120,10 @@ function TraineeCourseTable2() {
           <div className="flex items-center space-x-2 mx-2">
             <span className="text-black"> Trainee:</span>
             {trainee.map((traineeItem, index) => (
-              <span key={index} className="px-2 py-1 bg-gray-100 rounded-md">
+              <span
+                key={index}
+                className="px-2 py-1 bg-[#1F2937] text-white rounded-md"
+              >
                 {traineeItem.name}
               </span>
             ))}

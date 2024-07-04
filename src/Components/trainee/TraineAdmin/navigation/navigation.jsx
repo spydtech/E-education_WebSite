@@ -4,7 +4,7 @@ import TraineForgotPassword from "../ForgotPassword/forgotpassword";
 import TraineeUpdatePassword from "../UpdatePassword/updatepassword";
 
 const TraineeNavigation = () => {
-  const sections = ["Profile", "Forgot Password", "Update Password"];
+  const sections = ["Profile", "Update Password"];
   const [currentSection, setCurrentSection] = useState(0);
 
   const handleSectionChange = (index) => {
@@ -39,8 +39,8 @@ const TraineeNavigation = () => {
         </div>
         <div className="container mx-auto p-4 mt-4 bg-gray-200 shadow-lg rounded-lg">
           {currentSection === 0 && <ProfileSection />}
-          {currentSection === 1 && <TraineForgotPassword />}
-          {currentSection === 2 && <TraineeUpdatePassword />}
+          {/* {currentSection === 1 && <TraineForgotPassword />} */}
+          {currentSection === 1 && <TraineeUpdatePassword />}
         </div>
       </div>
     </>

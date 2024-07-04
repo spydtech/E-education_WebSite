@@ -18,8 +18,8 @@ const Tabs = () => {
     localStorage.setItem("numberOfCourses", numberOfCourses);
   }, [numberOfCourses]);
 
-  const activeClasses = "border-l border-t border-r rounded-t text-blue-700";
-  const inactiveClasses = "text-black-500 hover:text-blue-700";
+  const activeClasses = "border-l  border-t border-r rounded-lg text-blue-600";
+  const inactiveClasses = "text-white hover:text-blue-700";
 
   const handleTabClick = (tabNumber) => {
     setOpenTab(tabNumber);
@@ -28,7 +28,7 @@ const Tabs = () => {
   return (
     <div className="p-6 overflow-x-auto">
       <p className="float-end">Number of Courses: {numberOfCourses}</p>
-      <ul className="flex flex-wrap border-b">
+      <ul className="flex flex-wrap  border-b">
         {courses.map((course) => (
           <li
             key={course.id}
@@ -37,7 +37,7 @@ const Tabs = () => {
           >
             <a
               href="#"
-              className={`bg-white inline-block py-2 px-4 font-semibold ${
+              className={`bg-[#1F2937] rounded-lg w-auto inline-block py-2 px-4 font-semibold ${
                 openTab === course.id ? activeClasses : inactiveClasses
               }`}
             >
