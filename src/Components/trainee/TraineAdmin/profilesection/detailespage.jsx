@@ -6,7 +6,7 @@ const DetailsPage = () => {
     fullName: "John Doe",
     email: "john.doe@example.com",
     phone: "+1 234 567 8901",
-    address: "1234 Street Name, City, Country",
+    ad̥dress: "1234 Street Name, City, Country",
   });
 
   const [editMode, setEditMode] = useState(false);

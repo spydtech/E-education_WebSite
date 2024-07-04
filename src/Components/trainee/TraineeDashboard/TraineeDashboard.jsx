@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { SiGooglemeet } from "react-icons/si";
 import MeetSlider from "../../Meeting/MeetSlider";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
@@ -13,9 +14,15 @@ import Navigation from "../TraineAdmin/navigation/navigation";
 import TraineUpload from "../UserTask/traineuploads";
 import COursesGroup from "../TraineAdmin/CoursesGroup/Tabs";
 import Calendar from "../Calendar/Calendar";
+import { RiArrowRightSLine } from "react-icons/ri";
+import { IoMdLogOut } from "react-icons/io";
 const TraineeDashboard = () => {
+  const trainee = {
+    name: "Robin Huion", // Assuming one trainee for now
+  };
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("home"); // State to manage active tab
+  const [isLogoutOpen, setLogoutOpen] = useState(false); // State to manage logout options visibility
 
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
@@ -23,6 +30,10 @@ const TraineeDashboard = () => {
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
+  };
+
+  const toggleLogoutOptions = () => {
+    setLogoutOpen(!isLogoutOpen);
   };
 
   const renderContent = () => {
@@ -52,8 +63,8 @@ const TraineeDashboard = () => {
         {/* sidebar */}
         <div className="hidden md:flex flex-col w-64 bg-gray-800">
           <div className="flex items-center justify-center h-16 bg-gray-900">
-            <span className="text-white font-bold uppercase">
-              Trainee Dashboard
+            <span className="px-2 flex py-1 text-xl text-white font-bold rounded-md">
+              Trainee DashBoard
             </span>
           </div>
           <div className="flex flex-col flex-1 overflow-y-auto">
@@ -130,7 +141,34 @@ const TraineeDashboard = () => {
               </a>
             </nav>
           </div>
+          {isLogoutOpen && (
+            <div className="w-auto h-14 mx-2 px-2 float-end  relative z-10">
+              <div className="flex items-end justify-end space-x-1 mt-2">
+                <IoMdLogOut className="h-8 w-8 mb-1  text-gray-300" />
+                <Link to="/trainelogin">
+                  {" "}
+                  <button className=" p-2 bg-gray-800 text-white  rounded-md hover:bg-gray-700">
+                    Logout
+                  </button>
+                </Link>
+              </div>
+            </div>
+          )}
+
+          <div className=" flex mb-4 mx-2">
+            <div className="rounded-full text-white font-bold text-xl border-2 w-12 h-12  flex justify-center items-center ">
+              {trainee.name.charAt(0)}
+            </div>
+            <span className="px-2 mx-1 mt-3 flex  text-white font-bold ">
+              {trainee.name}
+            </span>
+            <RiArrowRightSLine
+              className=" w-6 h-6 text-white mt-[13px] cursor-pointer"
+              onClick={toggleLogoutOptions}
+            />
+          </div>
         </div>
+
         {/* Main content */}
         <div className="flex flex-col flex-1 overflow-y-auto">
           <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200">
@@ -154,7 +192,7 @@ const TraineeDashboard = () => {
             </div>
             <div className="flex-1 bg-[#111827] flex items-center justify-center px-4 h-16">
               <h1 className="text-xl text-white font-semibold">
-                Trainee Dashboard
+                {/* Trainee Dashboard */}
               </h1>
             </div>
             <div className="flex items-center bg-[#111827] h-16 px-4">
