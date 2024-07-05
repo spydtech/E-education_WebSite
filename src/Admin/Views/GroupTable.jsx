@@ -1,13 +1,45 @@
+// ok;
+
 // import React, { useState } from "react";
+// import { userData, traineeData } from "./FilterUsers";
 
 // function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
 //   const [searchQuery, setSearchQuery] = useState("");
 //   const [showTraineeDetails, setShowTraineeDetails] = useState(false);
 //   const [showUserDetails, setShowUserDetails] = useState(false);
 //   const [selectedTrainee, setSelectedTrainee] = useState(null);
+//   const [traineeSearchQuery, setTraineeSearchQuery] = useState("");
+//   const [userSearchQuery, setUserSearchQuery] = useState("");
+//   const [userSearchQueryByCourse, setUserSearchQueryByCourse] = useState("");
+
+//   const traineeName = trainees.map((trainee) => (
+//     <tr key={trainee.name} className="border-b hover:bg-gray-100">
+//       <td className="whitespace-nowrap">
+//         <div className="flex items-center">
+//           <div className="ml-4 flex">
+//             <span className="px-2 py-1 bg-gray-100 rounded-md">
+//               {trainee.name}
+//             </span>
+//           </div>
+//         </div>
+//       </td>
+//     </tr>
+//   ));
 
 //   const handleSearchChange = (event) => {
 //     setSearchQuery(event.target.value);
+//   };
+
+//   const handleTraineeSearchChange = (event) => {
+//     setTraineeSearchQuery(event.target.value);
+//   };
+
+//   const handleUserSearchChange = (event) => {
+//     setUserSearchQuery(event.target.value);
+//   };
+
+//   const handleUserSearchChangeByCourse = (event) => {
+//     setUserSearchQueryByCourse(event.target.value);
 //   };
 
 //   const handleRemoveUser = (user) => {
@@ -30,88 +62,40 @@
 //     setShowUserDetails(false);
 //   };
 
-//   const traineeName = trainees.map((trainee) => (
-//     <tr key={trainee.name} className="border-b hover:bg-gray-100">
-//       <td className=" whitespace-nowrap">
-//         <div className="flex items-center">
-//           <div className="ml-4 flex">
-//             <span className="px-2 py-1 bg-gray-100 rounded-md">
-//               {trainee.name}
-//             </span>
-//           </div>
-//         </div>
-//       </td>
-//     </tr>
-//   ));
-
 //   const setTrainee = (trainee) => {
 //     setSelectedTrainee(trainee.name);
 //     setShowTraineeDetails(false);
 //   };
 
-//   const userData = [
-//     {
-//       avatar:
-//         "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
-//       name: "garry fighter",
-//       course: "Full Stack Java",
-//       email: "garry@gmail.com",
-//     },
-//     {
-//       avatar:
-//         "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png",
-//       name: "Halen plantviewer",
-//       course: "Full Stack Java",
-//       email: "halen@foot.dev",
-//     },
-//     {
-//       avatar:
-//         "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
-//       name: "Robert Wolfkisser",
-//       course: "Full Stack Python",
-//       email: "rob_wolf@gmail.com",
-//     },
-//     {
-//       avatar:
-//         "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-6.png",
-//       name: "Jill Jailbreaker",
-//       course: "Full Stack Python",
-//       email: "jj@breaker.com",
-//     },
-//     {
-//       avatar:
-//         "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
-//       name: "Bill Horsefighter",
-//       course: "Full Stack Java",
-//       email: "bhorsefighter@gmail.com",
-//     },
-//   ];
+//   const handleAddUser = (user) => {
+//     onAddUser(user);
+//     closeUserDetailsModal();
+//   };
 
-//   const traineeData = [
-//     {
-//       avatar:
-//         "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-4.png",
-//       name: "Alice Wonderland",
-//       designation: "trainee",
-//       email: "alice@wonderland.com",
-//     },
-//     {
-//       avatar:
-//         "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-5.png",
-//       name: "Garry Builder",
-//       designation: "trainee",
-//       email: "gar@builder.com",
-//     },
-//     {
-//       avatar:
-//         "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png",
-//       name: "Jonny Dawn",
-//       designation: "trainee",
-//       email: "johnny@dawn.com",
-//     },
-//   ];
+//   const filteredUsers = users.filter((user) =>
+//     user.name.toLowerCase().includes(searchQuery.toLowerCase())
+//   );
 
-//   const traineeRows = traineeData.map((trainee) => (
+//   const filteredTrainees = traineeData
+//     .filter((trainee) =>
+//       trainee.name.toLowerCase().includes(traineeSearchQuery.toLowerCase())
+//     )
+//     .filter(
+//       (trainee) =>
+//         !trainees.some((groupTrainee) => groupTrainee.name === trainee.name)
+//     );
+
+//   const filteredAddUsers = userData
+//     .filter(
+//       (user) =>
+//         user.name.toLowerCase().includes(userSearchQuery.toLowerCase()) &&
+//         user.course
+//           .toLowerCase()
+//           .includes(userSearchQueryByCourse.toLowerCase())
+//     )
+//     .filter((user) => !users.some((groupUser) => groupUser.name === user.name));
+
+//   const traineeRows = filteredTrainees.map((trainee) => (
 //     <tr key={trainee.name} className="border-b hover:bg-gray-100 ">
 //       <td className="px-6 py-4 whitespace-nowrap">
 //         <div className="flex items-center">
@@ -139,7 +123,7 @@
 //     </tr>
 //   ));
 
-//   const userRows = userData.map((user) => (
+//   const userRows = filteredAddUsers.map((user) => (
 //     <tr key={user.name} className="border-b hover:bg-gray-100 ">
 //       <td className="px-6 py-4 whitespace-nowrap">
 //         <div className="flex items-center">
@@ -165,15 +149,6 @@
 //       </td>
 //     </tr>
 //   ));
-
-//   const handleAddUser = (user) => {
-//     onAddUser(user);
-//     closeUserDetailsModal();
-//   };
-
-//   const filteredUsers = users.filter((user) =>
-//     user.name.toLowerCase().includes(searchQuery.toLowerCase())
-//   );
 
 //   const rows = filteredUsers.map((user) => (
 //     <tr key={user.name} className="border-b hover:bg-gray-100 ">
@@ -236,13 +211,20 @@
 //           </button>
 //         </div>
 
-//         {/* update trainee Modal */}
+//         {/* Update Trainee Modal */}
 //         {showTraineeDetails && (
 //           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-500 bg-opacity-50">
-//             <div className="bg-white rounded-lg p-6 w-full max-w-3xl">
+//             <div className="bg-white rounded-lg p-6 w-full max-w-3xl max-h-screen overflow-y-auto">
 //               <h2 className="text-lg font-medium text-gray-800 mb-4">
 //                 Select Trainee
 //               </h2>
+//               <input
+//                 type="text"
+//                 placeholder="Search Trainee by name"
+//                 value={traineeSearchQuery}
+//                 onChange={handleTraineeSearchChange}
+//                 className="px-4 py-2 border border-gray-300 rounded-md mb-4"
+//               />
 //               <table className="min-w-full bg-white divide-y divide-gray-200">
 //                 <thead>
 //                   <tr>
@@ -271,10 +253,24 @@
 //         {/* Add User Modal */}
 //         {showUserDetails && (
 //           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-500 bg-opacity-50">
-//             <div className="bg-white rounded-lg p-6 w-full max-w-3xl">
+//             <div className="bg-white rounded-lg p-6 w-full max-w-3xl max-h-screen overflow-y-auto">
 //               <h2 className="text-lg font-medium text-gray-800 mb-4">
 //                 Select User to Add
 //               </h2>
+//               <input
+//                 type="text"
+//                 placeholder="Search User by name"
+//                 value={userSearchQuery}
+//                 onChange={handleUserSearchChange}
+//                 className="px-4 py-2 border border-gray-300 rounded-md mb-4"
+//               />
+//               <input
+//                 type="text"
+//                 placeholder="Search User by Course"
+//                 value={userSearchQueryByCourse}
+//                 onChange={handleUserSearchChangeByCourse}
+//                 className="px-4 float-end py-2 border border-gray-300 rounded-md mb-4"
+//               />
 //               <table className="min-w-full bg-white divide-y divide-gray-200">
 //                 <thead>
 //                   <tr>
@@ -324,7 +320,10 @@
 
 // export default GroupTable;
 
+////////////////////////////////////////
+
 import React, { useState } from "react";
+import { userData, traineeData } from "./FilterUsers";
 
 function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -335,6 +334,19 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
   const [userSearchQuery, setUserSearchQuery] = useState("");
   const [userSearchQueryByCourse, setUserSearchQueryByCourse] = useState("");
 
+  const traineeName = trainees.map((trainee) => (
+    <tr key={trainee.name} className="border-b hover:bg-gray-100">
+      <td className="whitespace-nowrap">
+        <div className="flex items-center">
+          <div className="ml-4 flex">
+            <span className="px-2 py-1 bg-gray-100 rounded-md">
+              {trainee.name}
+            </span>
+          </div>
+        </div>
+      </td>
+    </tr>
+  ));
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -381,94 +393,28 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
     closeUserDetailsModal();
   };
 
-  const traineeName = trainees.map((trainee) => (
-    <tr key={trainee.name} className="border-b hover:bg-gray-100">
-      <td className=" whitespace-nowrap">
-        <div className="flex items-center">
-          <div className="ml-4 flex">
-            <span className="px-2 py-1 bg-gray-100 rounded-md">
-              {trainee.name}
-            </span>
-          </div>
-        </div>
-      </td>
-    </tr>
-  ));
-  const userData = [
-    {
-      avatar:
-        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
-      name: "garry fighter",
-      course: "Full Stack Java",
-      email: "garry@gmail.com",
-    },
-    {
-      avatar:
-        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png",
-      name: "Halen plantviewer",
-      course: "Full Stack Java",
-      email: "halen@foot.dev",
-    },
-    {
-      avatar:
-        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
-      name: "Robert Wolfkisser",
-      course: "Full Stack Python",
-      email: "rob_wolf@gmail.com",
-    },
-    {
-      avatar:
-        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-6.png",
-      name: "Jill Jailbreaker",
-      course: "Full Stack Python",
-      email: "jj@breaker.com",
-    },
-    {
-      avatar:
-        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
-      name: "Bill Horsefighter",
-      course: "Full Stack Java",
-      email: "bhorsefighter@gmail.com",
-    },
-  ];
-
-  const traineeData = [
-    {
-      avatar:
-        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-4.png",
-      name: "Alice Wonderland",
-      designation: "trainee",
-      email: "alice@wonderland.com",
-    },
-    {
-      avatar:
-        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-5.png",
-      name: "Garry Builder",
-      designation: "trainee",
-      email: "gar@builder.com",
-    },
-    {
-      avatar:
-        "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png",
-      name: "Jonny Dawn",
-      designation: "trainee",
-      email: "johnny@dawn.com",
-    },
-  ];
-
   const filteredUsers = users.filter((user) =>
     user.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const filteredTrainees = traineeData.filter((trainee) =>
-    trainee.name.toLowerCase().includes(traineeSearchQuery.toLowerCase())
-  );
+  const filteredTrainees = traineeData
+    .filter((trainee) =>
+      trainee.name.toLowerCase().includes(traineeSearchQuery.toLowerCase())
+    )
+    .filter(
+      (trainee) =>
+        !trainees.some((groupTrainee) => groupTrainee.name === trainee.name)
+    );
 
-  const filteredAddUsers = userData.filter(
-    (user) =>
-      user.name.toLowerCase().includes(userSearchQuery.toLowerCase()) &&
-      user.course.toLowerCase().includes(userSearchQueryByCourse.toLowerCase())
-  );
+  const filteredAddUsers = userData
+    .filter(
+      (user) =>
+        user.name.toLowerCase().includes(userSearchQuery.toLowerCase()) &&
+        user.course
+          .toLowerCase()
+          .includes(userSearchQueryByCourse.toLowerCase())
+    )
+    .filter((user) => !users.some((groupUser) => groupUser.name === user.name));
 
   const traineeRows = filteredTrainees.map((trainee) => (
     <tr key={trainee.name} className="border-b hover:bg-gray-100 ">
@@ -589,7 +535,7 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
         {/* Update Trainee Modal */}
         {showTraineeDetails && (
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-500 bg-opacity-50">
-            <div className="bg-white rounded-lg p-6 w-full max-w-3xl">
+            <div className="bg-white rounded-lg p-6 w-full max-w-3xl max-h-screen overflow-y-auto">
               <h2 className="text-lg font-medium text-gray-800 mb-4">
                 Select Trainee
               </h2>
@@ -628,7 +574,7 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
         {/* Add User Modal */}
         {showUserDetails && (
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-500 bg-opacity-50">
-            <div className="bg-white rounded-lg p-6 w-full max-w-3xl">
+            <div className="bg-white rounded-lg p-6 w-full max-w-3xl max-h-screen overflow-y-auto">
               <h2 className="text-lg font-medium text-gray-800 mb-4">
                 Select User to Add
               </h2>

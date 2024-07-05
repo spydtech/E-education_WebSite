@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const userData = [
+export const userData = [
   {
     avatar:
       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
@@ -47,13 +47,34 @@ const userData = [
   {
     avatar:
       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png",
-    name: "Jeremy Footviewer",
-    course: "DBMS",
-    email: "jeremy@foot.dev",
+    name: "Rever Dale ",
+    course: "React Js",
+    email: "dale@foot.dev",
+  },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
+    name: "henry highter",
+    course: "React Js",
+    email: "hen@gmail.com",
+  },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png",
+    name: "Clver plantviewer",
+    course: "React Js",
+    email: "clver@foot.dev",
+  },
+  {
+    avatar:
+      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+    name: "Wobert HollyWood",
+    course: "Full Stack Python",
+    email: "hollyf@gmail.com",
   },
 ];
 
-const traineeData = [
+export const traineeData = [
   {
     avatar:
       "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-4.png",

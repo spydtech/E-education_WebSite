@@ -113,6 +113,12 @@ import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile";
 import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers";
 import StatusPage from "./Components/trainee/UserTask/StatusPage";
 import Todo from "./Components/trainee/Todo";
+import Sam from "./Admin/Components/Sample";
+import BarGraph from "./Admin/Components/BarGraph";
+import LineGraph from "./Admin/Components/LineGraph";
+import SalesLineGraph from "./Admin/Components/SalesLineGraph";
+import CustomerCount from "./Admin/Components/CustomerCount";
+
 function App() {
   return (
     <div>
@@ -124,6 +130,12 @@ function App() {
           <Route path="/options" element={<Options />} />
           <Route path="/pricing" element={<Pricing2 />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
+          <Route path="/table" element={<Sam />} />
+          <Route path="/bargraph" element={<BarGraph />} />
+          <Route path="/linegraph" element={<LineGraph />} />
+          <Route path="/saleslinegraph" element={<SalesLineGraph />} />
+          <Route path="/customercount" element={<CustomerCount />} />
+
           {/* traine Login */}
           <Route path="/trainelogin" element={<Traine_Login />} />
           <Route path="/trainee" element={<Trainee />} />
