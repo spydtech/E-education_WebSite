@@ -112,6 +112,7 @@ import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales"
 import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile"
 import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers"
 import StatusPage from "./Components/trainee/UserTask/StatusPage";
+// import TraineeRoutes from "./TraineRoutes/Routes"
 function App() {
   return (
     <div>
@@ -124,14 +125,15 @@ function App() {
           <Route path="/pricing" element={<Pricing2 />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
           {/* traine Login */}
+        
           <Route path="/trainelogin" element={<Traine_Login />} />
           <Route path="/trainee" element={<Trainee />} />
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
           <Route path="/meeting" element={<Meeting />} />
           <Route path="/traine-home" element={<Traine_Home />} />
-          <Route path="/tabs" element={<Tabs />} />
-          <Route path="/user-accounts" element={<UserAccounts />} />
-          <Route path="/traine-upload" element={<TraineUpload />} />
+          {/* <Route path="/tabs" element={<Tabs />} /> */}
+          {/* <Route path="/user-accounts" element={<UserAccounts />} /> */}
+          {/* <Route path="/traine-upload" element={<TraineUpload />} /> */}
           <Route path="/status-page" element={<StatusPage />} />
           {/* admin */}
           <Route path="/admin/*" element={<AdminRouter />} />

@@ -45,7 +45,8 @@ function HomeTrainee() {
             id="4cards"
             className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-x-40"
           >
-            <Link to="/tabs">
+            {/* <Link to="/tabs"> */}
+            <Link to="/traineedashboard" state={{redirect: "courses"}}>
               <div className="card1 w-72 h-44 border p-4 bg-white rounded-lg">
                 <p className="text-black font-bold">Completed last 30 days</p>
                 <ul className="list-disc pl-4">
@@ -60,7 +61,7 @@ function HomeTrainee() {
                 </div>
               </div>
             </Link>
-            <Link to="/user-accounts">
+            <Link to="/traineedashboard" state={{redirect: "user"}}>
               <div className="card2 w-72 h-44 border p-4 bg-white rounded-lg">
                 <p className="text-black font-bold">User Accounts</p>
                 <ul className="list-disc pl-4">
@@ -120,7 +121,7 @@ function HomeTrainee() {
               </div>
             </div>
           </div>
-          <Link to="/traine-upload">
+          <Link to="/traineedashboard" state={{redirect: "approvals"}} >
             <div
               id="right-card"
               className="border bg-white p-4 w-80 sm:ml-36 rounded-lg"
