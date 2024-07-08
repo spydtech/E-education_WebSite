@@ -222,7 +222,8 @@
 // export default TraineeDashboard
 
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from "react-router-dom"
 import { SiGooglemeet } from 'react-icons/si';
 import MeetSlider from '../../Meeting/MeetSlider';
 import { MdOutlineDashboardCustomize } from 'react-icons/md';
@@ -236,10 +237,13 @@ import Trainee_Home from '../home/Home';
 import Navigation from "../TraineAdmin/navigation/navigation"
 import TraineUpload from "../UserTask/traineuploads"
 import COursesGroup from "../TraineAdmin/CoursesGroup/Tabs"
+import UserAccount from "../UsersSection/usernavigation/navigation"
 import Calendar from '../Calendar/Calendar';
 const TraineeDashboard = () => {
+  const location = useLocation();
+  const redirect = location?.state?.redirect;
   const [isDrawerOpen, setDrawerOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState('home'); // State to manage active tab
+  const [activeTab, setActiveTab] = useState(redirect?redirect:"home"); // State to manage active tab
 
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
@@ -249,6 +253,9 @@ const TraineeDashboard = () => {
     setActiveTab(tabName);
   };
 
+  useEffect(()=>{
+    if(redirect) setActiveTab(redirect);
+  }, [redirect]);
  
   const renderContent = () => {
     switch (activeTab) {
@@ -263,7 +270,7 @@ const TraineeDashboard = () => {
       case 'approvals':
         return <TraineUpload />;
       case 'user':
-        return<div>User Content</div>;
+        return <UserAccount />;
       case 'settings':
         return <Navigation />;
       default:
@@ -370,7 +377,7 @@ const TraineeDashboard = () => {
                 </svg>
               </button>
             </div>
-            <div className="flex-1 flex items-center justify-center px-4">
+            <div className="flex-1 flex items-center justify-center px-4 h-16">
               <h1 className="text-xl font-semibold">Trainee Dashboard</h1>
             </div>
             <div className="flex items-center px-4">
