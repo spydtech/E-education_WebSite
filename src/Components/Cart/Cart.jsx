@@ -28,7 +28,8 @@ const Cart = ({ history }) => {
     let totalAmount = (totalPrice - discountPrice);
     // Add GST of 18%
     const gstAmount = (totalAmount * 0.18).toFixed(2); // Calculate GST amount (18% of totalAmount)
-    totalAmount = (parseFloat(totalAmount) + parseFloat(gstAmount)).toFixed(2); // Add GST to totalAmount
+    // totalAmount = (parseFloat(totalAmount) + parseFloat(gstAmount)).toFixed(2); // Add GST to totalAmount
+    totalAmount = 1
     console.log(totalAmount)
 
     // Initialize Razorpay
@@ -53,13 +54,15 @@ const Cart = ({ history }) => {
 
                 // Store payment response in the backend
                 try {
+                    const courseNames = cartItems.map(item => item.courseName);
+                    const coursePrices = cartItems.map(item => item.coursePrice);
                     const paymentResponse = {
                         userId: auth.user.id, // Implement a function to extract user ID from JWT
-                        courses: cartItems.map(item => ({
-                            courseId: item.courseId,
-                            courseName: item.courseName,
-                            coursePrice: item.coursePrice,
-                        })),
+                        firstName: auth.user.firstName,
+                        lastName: auth.user.lastName,
+                        userEmail: auth.user.email,
+                        courseNames: courseNames,
+                        coursePrices: coursePrices,
                         totalAmount: totalAmount,
                         // orderId: response.razorpay_payment_id,
                         razorpayPaymentId: response.razorpay_payment_id,

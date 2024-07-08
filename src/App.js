@@ -112,6 +112,7 @@ import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales"
 import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile"
 import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers"
 import StatusPage from "./Components/trainee/UserTask/StatusPage";
+import TraineForgotPassword from "./Components/trainee/TraineAdmin/ForgotPassword/forgotpassword";
 function App() {
   return (
     <div>
@@ -133,6 +134,7 @@ function App() {
           <Route path="/user-accounts" element={<UserAccounts />} />
           <Route path="/traine-upload" element={<TraineUpload />} />
           <Route path="/status-page" element={<StatusPage />} />
+          <Route path="/forgotPassword" element={<TraineForgotPassword />} />
           {/* admin */}
           <Route path="/admin/*" element={<AdminRouter />} />
           <Route path="/trainee-courses" element={<TraineeCourses />} />
