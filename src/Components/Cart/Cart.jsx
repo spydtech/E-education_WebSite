@@ -28,8 +28,7 @@ const Cart = ({ history }) => {
     let totalAmount = (totalPrice - discountPrice);
     // Add GST of 18%
     const gstAmount = (totalAmount * 0.18).toFixed(2); // Calculate GST amount (18% of totalAmount)
-    // totalAmount = (parseFloat(totalAmount) + parseFloat(gstAmount)).toFixed(2); // Add GST to totalAmount
-    totalAmount = 1
+    totalAmount = (parseFloat(totalAmount) + parseFloat(gstAmount)).toFixed(2); // Add GST to totalAmount
     console.log(totalAmount)
 
     // Initialize Razorpay

@@ -134,7 +134,7 @@ function App() {
           {/* <Route path="/user-accounts" element={<UserAccounts />} /> */}
           {/* <Route path="/traine-upload" element={<TraineUpload />} /> */}
           <Route path="/status-page" element={<StatusPage />} />
-          <Route path="/forgotPassword" element={<TraineForgotPassword />} />
+
           {/* admin */}
           <Route path="/admin/*" element={<AdminRouter />} />
           <Route path="/trainee-courses" element={<TraineeCourses />} />
