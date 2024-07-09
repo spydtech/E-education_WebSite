@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
-import { sampleData } from "./Sample"; // Adjust the path as per your project structure
+import { sampleData } from "./Sample";
 
 const TraineeTable = () => {
   const [selectedYear, setSelectedYear] = useState("2021");
   const [selectedMonth, setSelectedMonth] = useState("All Months");
   const [data, setData] = useState(sampleData);
-  const chartRef = useRef(null); // Ref to hold the chart instance
+  const chartRef = useRef(null);
 
   useEffect(() => {
     const storedData = localStorage.getItem("traineeData");
@@ -48,11 +48,19 @@ const TraineeTable = () => {
   const dataToDisplay = getDataToDisplay();
   const groupedData = groupDataByCourse(dataToDisplay);
 
+  const totalCoursesYear = Object.values(data[selectedYear])
+    .flat()
+    .reduce((acc, curr) => acc + 1, 0);
+
+  const totalCoursesMonth =
+    selectedMonth === "All Months"
+      ? totalCoursesYear
+      : data[selectedYear][selectedMonth].length;
+
   useEffect(() => {
     if (chartRef && chartRef.current) {
       const ctx = chartRef.current.getContext("2d");
 
-      // Check if chart instance exists and destroy it
       if (chartRef.current.chart) {
         chartRef.current.chart.destroy();
       }
@@ -68,7 +76,6 @@ const TraineeTable = () => {
             {
               label: "Course Count",
               data: counts,
-
               backgroundColor: [
                 "rgba(255, 99, 132, 0.8)",
                 "rgba(54, 162, 235, 0.8)",
@@ -86,9 +93,9 @@ const TraineeTable = () => {
                 "rgba(255, 159, 64, 1)",
               ],
               borderWidth: 1,
-              borderRadius: 8, // Rounded corners for bars
-              barPercentage: 0.5, // Space between bars
-              categoryPercentage: 0.6, // Space between bar groups
+              borderRadius: 8,
+              barPercentage: 0.5,
+              categoryPercentage: 0.6,
             },
           ],
         },
@@ -117,7 +124,7 @@ const TraineeTable = () => {
           },
           animation: {
             duration: 1000,
-            easing: "easeOutQuart", // Smooth animation effect
+            easing: "easeOutQuart",
           },
         },
       });
@@ -137,7 +144,7 @@ const TraineeTable = () => {
           id="year-select"
           value={selectedYear}
           onChange={handleYearChange}
-          className="mt-1 block w-52 pl-3  py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 block w-52 pl-3 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
         >
           {Object.keys(data).map((year) => (
             <option key={year} value={year}>
@@ -158,7 +165,7 @@ const TraineeTable = () => {
           id="month-select"
           value={selectedMonth}
           onChange={handleMonthChange}
-          className="mt-1 block w-52 pl-3  py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 block w-52 pl-3 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
         >
           <option value="All Months">All Months</option>
           {Object.keys(data[selectedYear]).map((month) => (
@@ -168,11 +175,18 @@ const TraineeTable = () => {
           ))}
         </select>
       </div>
-      <div className=" text-center text-black text-2xl  font-bold">
-        {" "}
-        Count of Courses Purchased
+
+      <div className="text-center text-black text-2xl font-bold">
+        Count of Courses Purchased - Total: {totalCoursesYear}
+        {selectedMonth !== "All Months" && (
+          <span>
+            {" "}
+            (for {selectedMonth}: {totalCoursesMonth})
+          </span>
+        )}
       </div>
-      <div className="mb-4  text-white w-auto h-[400px] flex justify-center items-center">
+
+      <div className="mb-4 text-white w-auto h-[400px] flex justify-center items-center">
         <canvas
           ref={chartRef}
           id="courseChart"

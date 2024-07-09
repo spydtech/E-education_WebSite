@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
-import { sampleData } from "./Sample"; // Ensure correct import path
+import { sampleData } from "./Sample";
 
 const SalesLineChart = () => {
   const [selectedYear, setSelectedYear] = useState("2021");
   const [selectedMonth, setSelectedMonth] = useState("All Months");
 
-  // Calculate monthly sales data
   const calculateMonthlySales = (year, month) => {
     const data = sampleData[year][month];
     const monthlySales = {};
 
-    // Initialize sales for each course
     data.forEach(({ course, price }) => {
       if (!monthlySales[course]) {
         monthlySales[course] = 0;
       }
     });
 
-    // Calculate aggregate sales
     data.forEach(({ course, price }) => {
       monthlySales[course] += price;
     });
@@ -29,12 +26,10 @@ const SalesLineChart = () => {
     }));
   };
 
-  // Calculate yearly sales data
   const calculateYearlySales = (year) => {
     const data = sampleData[year];
     const yearlySales = {};
 
-    // Initialize sales for each course
     Object.keys(data).forEach((month) => {
       data[month].forEach(({ course, price }) => {
         if (!yearlySales[course]) {
@@ -43,7 +38,6 @@ const SalesLineChart = () => {
       });
     });
 
-    // Calculate aggregate sales
     Object.keys(data).forEach((month) => {
       data[month].forEach(({ course, price }) => {
         yearlySales[course] += price;
@@ -56,7 +50,6 @@ const SalesLineChart = () => {
     }));
   };
 
-  // Get sales data based on selected year and month
   const getChartData = () => {
     if (selectedMonth === "All Months") {
       return calculateYearlySales(selectedYear);
@@ -71,27 +64,24 @@ const SalesLineChart = () => {
     setChartData(getChartData());
   }, [selectedYear, selectedMonth]);
 
-  // Options for chart display
   const chartOptions = {
     scales: {
       y: {
         beginAtZero: true,
         ticks: {
           callback: function (value) {
-            return `₹${value}`; // Format y-axis labels with ₹ symbol
+            return `₹${value}`;
           },
         },
       },
     },
   };
 
-  // Handle year change
   const handleYearChange = (event) => {
     setSelectedYear(event.target.value);
     setSelectedMonth("All Months");
   };
 
-  // Handle month change
   const handleMonthChange = (event) => {
     setSelectedMonth(event.target.value);
   };

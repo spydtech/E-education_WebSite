@@ -113,11 +113,13 @@ import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile";
 import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers";
 import StatusPage from "./Components/trainee/UserTask/StatusPage";
 import Todo from "./Components/trainee/Todo";
-import Sam from "./Admin/Components/Sample";
-import BarGraph from "./Admin/Components/BarGraph";
-import LineGraph from "./Admin/Components/LineGraph";
-import SalesLineGraph from "./Admin/Components/SalesLineGraph";
-import CustomerCount from "./Admin/Components/CustomerCount";
+import Sam from "./Admin/Components/Reports/Sample";
+import BarGraph from "./Admin/Components/Reports/BarGraph";
+import LineGraph from "./Admin/Components/Reports/LineGraph";
+import SalesLineGraph from "./Admin/Components/Reports/SalesLineGraph";
+import CustomerCount from "./Admin/Components/Reports/CustomerCount";
+import TableforAdmin from "./Admin/Components/Reports/TableforAdmin";
+import ProductsCount from "./Admin/Components/Reports/CountofProducts";
 
 function App() {
   return (
@@ -135,6 +137,7 @@ function App() {
           <Route path="/linegraph" element={<LineGraph />} />
           <Route path="/saleslinegraph" element={<SalesLineGraph />} />
           <Route path="/customercount" element={<CustomerCount />} />
+          <Route path="/productscount" element={<ProductsCount />} />
 
           {/* traine Login */}
           <Route path="/trainelogin" element={<Traine_Login />} />
@@ -153,6 +156,7 @@ function App() {
           <Route path="/linechart" element={<CountOfSeals />} />
           <Route path="/countofproducts" element={<CountOfProduct />} />
           <Route path="/countofcustomers" element={<CountOfCustomers />} />
+          <Route path="/tableforadmin" element={<TableforAdmin />} />
 
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />

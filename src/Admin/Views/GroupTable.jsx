@@ -1,9 +1,7 @@
-// ok;
-
 // import React, { useState } from "react";
 // import { userData, traineeData } from "./FilterUsers";
 
-// function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
+// function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
 //   const [searchQuery, setSearchQuery] = useState("");
 //   const [showTraineeDetails, setShowTraineeDetails] = useState(false);
 //   const [showUserDetails, setShowUserDetails] = useState(false);
@@ -76,14 +74,13 @@
 //     user.name.toLowerCase().includes(searchQuery.toLowerCase())
 //   );
 
-//   const filteredTrainees = traineeData
-//     .filter((trainee) =>
-//       trainee.name.toLowerCase().includes(traineeSearchQuery.toLowerCase())
-//     )
-//     .filter(
-//       (trainee) =>
-//         !trainees.some((groupTrainee) => groupTrainee.name === trainee.name)
-//     );
+//   const filteredTrainees = traineeData.filter((trainee) =>
+//     trainee.name.toLowerCase().includes(traineeSearchQuery.toLowerCase())
+//   );
+//   // .filter(
+//   //   (trainee) =>
+//   //     !trainees.some((groupTrainee) => groupTrainee.name === trainee.name)
+//   // );
 
 //   const filteredAddUsers = userData
 //     .filter(
@@ -319,13 +316,10 @@
 // }
 
 // export default GroupTable;
-
-////////////////////////////////////////
-
 import React, { useState } from "react";
 import { userData, traineeData } from "./FilterUsers";
 
-function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
+function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [showTraineeDetails, setShowTraineeDetails] = useState(false);
   const [showUserDetails, setShowUserDetails] = useState(false);
@@ -333,6 +327,7 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
   const [traineeSearchQuery, setTraineeSearchQuery] = useState("");
   const [userSearchQuery, setUserSearchQuery] = useState("");
   const [userSearchQueryByCourse, setUserSearchQueryByCourse] = useState("");
+  const [showWarning, setShowWarning] = useState(false);
 
   const traineeName = trainees.map((trainee) => (
     <tr key={trainee.name} className="border-b hover:bg-gray-100">
@@ -347,6 +342,7 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
       </td>
     </tr>
   ));
+
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -373,6 +369,7 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
 
   const closeTraineeDetailsModal = () => {
     setShowTraineeDetails(false);
+    setShowWarning(false);
   };
 
   const showUserDetailsModal = () => {
@@ -384,8 +381,16 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
   };
 
   const setTrainee = (trainee) => {
-    setSelectedTrainee(trainee.name);
-    setShowTraineeDetails(false);
+    const traineeExists = trainees.some(
+      (existingTrainee) => existingTrainee.name === trainee.name
+    );
+    if (traineeExists) {
+      setShowWarning(true);
+    } else {
+      setSelectedTrainee(trainee.name);
+      setShowTraineeDetails(false);
+      setShowWarning(false);
+    }
   };
 
   const handleAddUser = (user) => {
@@ -397,14 +402,9 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
     user.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const filteredTrainees = traineeData
-    .filter((trainee) =>
-      trainee.name.toLowerCase().includes(traineeSearchQuery.toLowerCase())
-    )
-    .filter(
-      (trainee) =>
-        !trainees.some((groupTrainee) => groupTrainee.name === trainee.name)
-    );
+  const filteredTrainees = traineeData.filter((trainee) =>
+    trainee.name.toLowerCase().includes(traineeSearchQuery.toLowerCase())
+  );
 
   const filteredAddUsers = userData
     .filter(
@@ -546,6 +546,11 @@ function GroupTable({ groupName, users, onRemoveUser, onAddUser, trainees }) {
                 onChange={handleTraineeSearchChange}
                 className="px-4 py-2 border border-gray-300 rounded-md mb-4"
               />
+              {showWarning && (
+                <div className="mb-4 text-red-500">
+                  Warning: This trainee is already present.
+                </div>
+              )}
               <table className="min-w-full bg-white divide-y divide-gray-200">
                 <thead>
                   <tr>

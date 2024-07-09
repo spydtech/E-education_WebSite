@@ -41,6 +41,9 @@ const MonthlyCustomerBarGraph = () => {
 
   const { months, customerCounts } = getDataForYear();
 
+  // Calculate the total number of customers for the selected year
+  const totalCustomers = customerCounts.reduce((acc, curr) => acc + curr, 0);
+
   // Prepare data for the bar chart
   const data = {
     labels: months,
@@ -69,13 +72,13 @@ const MonthlyCustomerBarGraph = () => {
       x: {
         title: {
           display: true,
-          text: "Number of Customers",
+          text: "Months",
         },
       },
       y: {
         title: {
           display: true,
-          text: "Months",
+          text: "Number of Customers",
         },
         beginAtZero: true,
       },
@@ -104,9 +107,8 @@ const MonthlyCustomerBarGraph = () => {
           ))}
         </select>
       </div>
-      <div className=" text-center text-black text-2xl  font-bold">
-        {" "}
-        Customer Growth
+      <div className="text-center text-black text-2xl font-bold">
+        Customer Growth - Total: {totalCustomers}
       </div>
 
       <div className="my-4 h-[500px] w-auto justify-center items-center flex">

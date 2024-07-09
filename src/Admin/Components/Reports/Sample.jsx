@@ -26,7 +26,7 @@ export const sampleData = {
       { username: "alex", userid: "009", course: "React js", price: 100 },
       { username: "sara", userid: "010", course: "Node js", price: 200 },
     ],
-    // Add data for other months...
+
     March: [
       { username: "kelly", userid: "011", course: "React js", price: 100 },
       { username: "nathan", userid: "012", course: "Node js", price: 200 },
@@ -103,7 +103,7 @@ export const sampleData = {
       { username: "alex", userid: "009", course: "React js", price: 100 },
       { username: "sara", userid: "010", course: "Node js", price: 200 },
     ],
-    // Add data for other months...
+
     March: [
       { username: "kelly", userid: "011", course: "React js", price: 100 },
       { username: "nathan", userid: "012", course: "Node js", price: 200 },
@@ -180,7 +180,7 @@ export const sampleData = {
       { username: "alex", userid: "009", course: "React js", price: 100 },
       { username: "sara", userid: "010", course: "Node js", price: 200 },
     ],
-    // Add data for other months...
+
     March: [
       { username: "kelly", userid: "011", course: "React js", price: 100 },
       { username: "nathan", userid: "012", course: "Node js", price: 200 },
@@ -230,6 +230,8 @@ export const sampleData = {
       { username: "mia", userid: "038", course: "Angular", price: 250 },
       { username: "noah", userid: "039", course: "React js", price: 100 },
       { username: "oliver", userid: "040", course: "Node js", price: 200 },
+      { username: "karenKb", userid: "089", course: "Node js", price: 200 },
+      { username: "karenioi", userid: "080", course: "Node js", price: 200 },
     ],
   },
 };
@@ -248,18 +250,15 @@ const TraineeTable = () => {
     }
   }, []);
 
-  // Handle year change
   const handleYearChange = (event) => {
     setSelectedYear(event.target.value);
     setSelectedMonth("All Months");
   };
 
-  // Handle month change
   const handleMonthChange = (event) => {
     setSelectedMonth(event.target.value);
   };
 
-  // Get data to display
   const getDataToDisplay = () => {
     if (selectedMonth === "All Months") {
       return Object.values(data[selectedYear]).flat();
@@ -268,7 +267,6 @@ const TraineeTable = () => {
     }
   };
 
-  // Group data by course
   const groupDataByCourse = (data) => {
     const groupedData = {};
     data.forEach((record) => {
@@ -280,7 +278,6 @@ const TraineeTable = () => {
     return groupedData;
   };
 
-  // Calculate aggregate total (sum of prices) for each course
   const calculateAggregateTotal = (courseData) => {
     return courseData.reduce((total, record) => total + record.price, 0);
   };
@@ -290,10 +287,13 @@ const TraineeTable = () => {
 
   return (
     <div className="container mx-auto p-4">
+      <h1 className="text-3xl text-center font-bold text-white">
+        User Information{" "}
+      </h1>
       <div className="mb-4">
         <label
           htmlFor="year-select"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-white"
         >
           Select Year:
         </label>
@@ -314,7 +314,7 @@ const TraineeTable = () => {
       <div className="mb-4">
         <label
           htmlFor="month-select"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-white"
         >
           Select Month:
         </label>
@@ -335,24 +335,24 @@ const TraineeTable = () => {
 
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
-          <thead>
-            <tr>
-              <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+          <thead className="bg-green-500">
+            <tr className="">
+              <th className="px-6 py-3 bg-green-500 text-left text-xs font-medium text-black uppercase tracking-wider">
                 Username
               </th>
-              <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 bg-green-500 text-left text-xs font-medium text-black uppercase tracking-wider">
                 UserID
               </th>
-              <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 bg-green-500 text-left text-xs font-medium text-black uppercase tracking-wider">
                 Course
               </th>
-              <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 bg-green-500 text-left text-xs font-medium text-black uppercase tracking-wider">
                 Price
               </th>
-              <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 bg-green-500 text-left text-xs font-medium text-black uppercase tracking-wider">
                 Course Count
               </th>
-              <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-3 bg-green-500 text-left text-xs font-medium text-black uppercase tracking-wider">
                 Aggregate Total
               </th>
             </tr>
@@ -363,7 +363,7 @@ const TraineeTable = () => {
                 <tr className="bg-gray-100">
                   <td
                     colSpan="6"
-                    className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    className="px-6 py-3 text-xs font-bold text-green-500 uppercase tracking-wider"
                   >
                     {course}
                   </td>
@@ -386,13 +386,13 @@ const TraineeTable = () => {
                       <React.Fragment>
                         <td
                           rowSpan={groupedData[course].length}
-                          className="px-6 py-4 whitespace-nowrap"
+                          className="px-6 py-4 whitespace-nowrap font-bold"
                         >
                           {groupedData[course].length}
                         </td>
                         <td
                           rowSpan={groupedData[course].length}
-                          className="px-6 py-4 whitespace-nowrap"
+                          className="px-6 py-4 whitespace-nowrap font-bold"
                         >
                           {calculateAggregateTotal(groupedData[course])}
                         </td>
