@@ -21,20 +21,20 @@ const TraineeUpdatePassword = () => {
   };
 
   return (
-    <div className="bg-[#425df5] min-h-screen flex items-center justify-center">
+    <div className="bg-gray-200 mx-10  min-h-screen flex items-center justify-center">
       <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-lg max-w-4xl w-full">
         {/* Left Side - Image */}
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 rounded-lg">
           <img
             src="https://img.freepik.com/premium-vector/account-login-flat-illustration_203633-1807.jpg?w=740"
             alt="Security Illustration"
-            className="object-cover w-full h-full"
+            className="object-cover rounded-lg w-full h-full"
           />
         </div>
 
         {/* Right Side - Form */}
-        <div className="w-full md:w-[330px] p-6 md:ml-14 md:mt-10">
-          <h2 className="text-3xl font-bold text-center text-blue-600">
+        <div className="w-full md:w-[330px]  p-6 md:ml-14 md:mt-10">
+          <h2 className="text-3xl font-bold pb-4 text-center text-[#1F2937]">
             Update Password
           </h2>
           {message && <p className="text-center text-red-500">{message}</p>}
