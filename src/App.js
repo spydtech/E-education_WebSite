@@ -119,7 +119,6 @@ import SalesLineGraph from "./Admin/Components/Reports/SalesLineGraph";
 import CustomerCount from "./Admin/Components/Reports/CustomerCount";
 import TableforAdmin from "./Admin/Components/Reports/TableforAdmin";
 import ProductsCount from "./Admin/Components/Reports/CountofProducts";
-// import TraineeRoutes from "./TraineRoutes/Routes"
 function App() {
   return (
     <div>
@@ -142,7 +141,7 @@ function App() {
           <Route path="/productscount" element={<ProductsCount />} />
           <Route path="/tableforadmin" element={<TableforAdmin />} />
           {/* traine Login */}
-        
+
           <Route path="/trainelogin" element={<Traine_Login />} />
           <Route path="/trainee" element={<Trainee />} />
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
@@ -152,6 +151,7 @@ function App() {
           {/* <Route path="/user-accounts" element={<UserAccounts />} /> */}
           {/* <Route path="/traine-upload" element={<TraineUpload />} /> */}
           <Route path="/status-page" element={<StatusPage />} />
+
           {/* admin */}
           <Route path="/admin/*" element={<AdminRouter />} />
           <Route path="/trainee-courses" element={<TraineeCourses />} />

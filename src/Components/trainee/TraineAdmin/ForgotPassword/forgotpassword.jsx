@@ -131,11 +131,10 @@ function TraineForgotPassword() {
                     )}
                     <button
                       onClick={handleSendOtp}
-                      className={`p-2 w-auto rounded ${
-                        email
+                      className={`p-2 w-auto rounded ${email
                           ? "bg-blue-500 text-white"
                           : "bg-white text-gray-500 cursor-not-allowed"
-                      }`}
+                        }`}
                       disabled={!email}
                     >
                       Send OTP
@@ -159,11 +158,10 @@ function TraineForgotPassword() {
                     </div>
                     <button
                       onClick={handleVerifyOtp}
-                      className={`p-2 w-auto rounded ${
-                        otp.join("").length === 6
+                      className={`p-2 w-auto rounded ${otp.join("").length === 6
                           ? "bg-blue-500 text-white"
                           : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                      }`}
+                        }`}
                       disabled={otp.join("").length !== 6}
                     >
                       Verify OTP
@@ -184,11 +182,10 @@ function TraineForgotPassword() {
                       )}
                       <button
                         onClick={handleUpdatePassword}
-                        className={`p-2 w-auto rounded ${
-                          password
+                        className={`p-2 w-auto rounded ${password
                             ? "bg-blue-500 text-white"
                             : "bg-gray-300 text-gray-500 cursor-not-allowed"
-                        }`}
+                          }`}
                         disabled={!password}
                       >
                         <Link to="/login">Update Password</Link>

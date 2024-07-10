@@ -53,13 +53,15 @@ const Cart = ({ history }) => {
 
                 // Store payment response in the backend
                 try {
+                    const courseNames = cartItems.map(item => item.courseName);
+                    const coursePrices = cartItems.map(item => item.coursePrice);
                     const paymentResponse = {
                         userId: auth.user.id, // Implement a function to extract user ID from JWT
-                        courses: cartItems.map(item => ({
-                            courseId: item.courseId,
-                            courseName: item.courseName,
-                            coursePrice: item.coursePrice,
-                        })),
+                        firstName: auth.user.firstName,
+                        lastName: auth.user.lastName,
+                        userEmail: auth.user.email,
+                        courseNames: courseNames,
+                        coursePrices: coursePrices,
                         totalAmount: totalAmount,
                         // orderId: response.razorpay_payment_id,
                         razorpayPaymentId: response.razorpay_payment_id,
