@@ -119,6 +119,7 @@ import SalesLineGraph from "./Admin/Components/Reports/SalesLineGraph";
 import CustomerCount from "./Admin/Components/Reports/CustomerCount";
 import TableforAdmin from "./Admin/Components/Reports/TableforAdmin";
 import ProductsCount from "./Admin/Components/Reports/CountofProducts";
+import Todo from "./Components/trainee/SheduledReports/Todo";
 function App() {
   return (
     <div>
@@ -151,6 +152,8 @@ function App() {
           {/* <Route path="/user-accounts" element={<UserAccounts />} /> */}
           {/* <Route path="/traine-upload" element={<TraineUpload />} /> */}
           <Route path="/status-page" element={<StatusPage />} />
+
+          <Route path="/todo" element={<Todo />} />
 
           {/* admin */}
           <Route path="/admin/*" element={<AdminRouter />} />
