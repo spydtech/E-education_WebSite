@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Box, CssBaseline, Toolbar, useMediaQuery, useTheme } from '@mui/material';
 import PaymentDashboard from "./pymentData/MainDashBoard"
-import SealsReports from "./sealsRepotes2/coursestable"
+import SealsReports from "./Reports/TableforAdmin"
 import AdminDashBoard from './AdminDashBoard';
 import Orders from '../Views/Orders';
 import Users from "../Views/FilterUsers"

@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { RiPencilFill, RiCheckLine } from "react-icons/ri";
 
@@ -6,7 +7,7 @@ const DetailsPage = () => {
     fullName: "John Doe",
     email: "john.doe@example.com",
     phone: "+1 234 567 8901",
-    address: "1234 Street Name, City, Country",
+    ad̥dress: "1234 Street Name, City, Country",
   });
 
   const [editMode, setEditMode] = useState(false);
@@ -32,7 +33,7 @@ const DetailsPage = () => {
 
   return (
     <div className="flex justify-center items-center h-[370px] md:xl:lg:sm:w-96 w-80 bg-white ">
-      <div className="w-full max-w-lg p-8  rounded-lg shadow-lg">
+      <div className="w-full max-w-lg p-8  rounded-lg ">
         <div className="space-y-4">
           {Object.keys(details).map((key) => (
             <div

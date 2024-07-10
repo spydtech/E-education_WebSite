@@ -196,6 +196,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Calender from "../../../assets/Calender/calender.png"
+import MeetSlider from "../../Meeting/MeetSlider"
 const localizer = momentLocalizer(moment);
 
 const eventData = [
@@ -215,7 +216,7 @@ const eventData = [
     },
 ];
 
-const GoogleCalendar = () => {
+const GoogleCalendar = ({ eventsdata}) => {
     const [events, setEvents] = useState(eventData);
     const [selectedDate, setSelectedDate] = useState(null);
     const [showAddModal, setShowAddModal] = useState(false);
@@ -369,6 +370,8 @@ const GoogleCalendar = () => {
                             <p>Type: {selectedEventDetails.type}</p>
                         </div>
                     )}
+{/* passing data */}
+{/* <MeetSlider events={eventsdata} /> */}
 
                     <ToastContainer />
                 </div>

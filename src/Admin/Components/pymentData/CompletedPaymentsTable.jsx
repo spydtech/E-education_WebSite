@@ -28,7 +28,7 @@ const CompletedPaymentsTable = () => {
     <div className="overflow-x-auto">
       <table className="min-w-full">
         <thead className="bg-green-400">
-          <tr className="h-16">
+          <tr className="h-12">
             <th className="px-4 py-2 text-left">Date</th>
             <th className="px-4 py-2 text-left">UserId</th>
             <th className="px-4 py-2 text-left">FullName</th>
@@ -44,7 +44,7 @@ const CompletedPaymentsTable = () => {
             <tr key={index} className="hover:bg-gray-300">
               <td className="px-4 py-2">{item.Date}</td>
               <td className="px-4 py-2">{item.userId}</td>
-              <td className="px-4 py-2">{item.fullName}</td>
+              <td className="px-4 text-nowrap  py-2">{item.fullName}</td>
               <td className="px-4 py-2">{item.email}</td>
               <td className="px-4 py-2">{item.paymentMethod}</td>
               <td className="px-4 py-2">{item.transactionId}</td>
