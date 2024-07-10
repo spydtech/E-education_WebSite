@@ -10,7 +10,7 @@ import WSpace from "./Components/Profile/WorkSpace1/WSpace";
 import Settings from "./Components/Profile/Settings";
 import PostFeeds from "./Components/Home/post/PostFeeds";
 import QuestionForm from "./Components/Home/AskMe/QuestionForm";
-import ForgotPassword from "./Components/Login/ForgotPassword";
+import ForgotPassword from "./Components/trainee/TraineAdmin/ForgotPassword/forgotpassword";
 import Purchases from "./Components/Profile/Purchases/Purchases";
 import Payment from "./Components/Profile/Payment/Payment";
 import MyCourse from "./Components/mycourse/MyCourse";
@@ -171,7 +171,7 @@ function App() {
           <Route path="/Certificates" element={<Certificates />} />
           <Route path="/features" element={<Features />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/ForgotPassword" element={<ForgotPassword />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/signUp" element={<SignUp />} />
           {/*  */}
           <Route path="/Profile" element={<Profile />} />

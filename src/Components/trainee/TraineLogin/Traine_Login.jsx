@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Traine_Login = () => {
   const [userId, setUserId] = useState('');
@@ -62,9 +62,9 @@ const Traine_Login = () => {
           <div className="mt-4">
             <div className="flex justify-between">
               <label className="block text-gray-700 text-sm font-bold mb-2" >Password</label>
-              <a href="/forgotPassword" className="text-xs text-gray-500">
-                Forget Password?
-              </a>
+              <Link to="/forgot-password" className="text-xs text-gray-500">
+                  Forget Password?
+                </Link>
             </div>
             <input
               className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
