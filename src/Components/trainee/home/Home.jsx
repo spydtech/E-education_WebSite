@@ -111,10 +111,10 @@ function HomeTrainee() {
                 </Link>
               </div>
               <div className="mt-4 text-blue-500">
-                <Link>
+                <Link to="/todo">
                   <p className="underline-offset-2 underline">
                     <RxDoubleArrowRight className="float-start w-6 h-6" />
-                    Monthly Expiring Tasks within 30 days
+                    Sheduled Monthly Tasks
                   </p>
                 </Link>
               </div>

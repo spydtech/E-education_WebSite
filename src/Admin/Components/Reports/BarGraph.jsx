@@ -133,13 +133,20 @@ const TraineeTable = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="mb-4">
+      <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
+        Count of Courses Purchased - Total: {totalCoursesYear}
+        {selectedMonth !== "All Months" && (
+          <span>
+            {" "}
+            (for {selectedMonth}: {totalCoursesMonth})
+          </span>
+        )}
+      </h1>
+      <div className="mb-4 flex justify-center">
         <label
           htmlFor="year-select"
           className="block text-sm font-medium text-gray-700"
-        >
-          Select Year:
-        </label>
+        ></label>
         <select
           id="year-select"
           value={selectedYear}
@@ -154,13 +161,11 @@ const TraineeTable = () => {
         </select>
       </div>
 
-      <div className="mb-4">
+      <div className="flex justify-center">
         <label
           htmlFor="month-select"
           className="block text-sm font-medium text-gray-700"
-        >
-          Select Month:
-        </label>
+        ></label>
         <select
           id="month-select"
           value={selectedMonth}
@@ -176,7 +181,7 @@ const TraineeTable = () => {
         </select>
       </div>
 
-      <div className="text-center text-black text-2xl font-bold">
+      {/* <div className="text-center text-black text-2xl font-bold">
         Count of Courses Purchased - Total: {totalCoursesYear}
         {selectedMonth !== "All Months" && (
           <span>
@@ -184,7 +189,7 @@ const TraineeTable = () => {
             (for {selectedMonth}: {totalCoursesMonth})
           </span>
         )}
-      </div>
+      </div> */}
 
       <div className="mb-4 text-white w-auto h-[400px] flex justify-center items-center">
         <canvas

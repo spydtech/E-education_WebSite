@@ -151,7 +151,7 @@ function FileUploadForm() {
       <div className="bg-gray-200 rounded-lg">
         <FileList />
       </div>
-      <div className=" mt-10 ml-14">
+      <div className=" mt-10 ml-10">
         <TraineeTable />
       </div>
     </div>

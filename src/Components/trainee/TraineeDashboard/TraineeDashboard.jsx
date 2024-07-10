@@ -18,11 +18,11 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import { IoMdLogOut } from "react-icons/io";
 const TraineeDashboard = () => {
   const trainee = {
-    name: "Robin Huion", // Assuming one trainee for now
+    name: "Robin Huion",
   };
   const [isDrawerOpen, setDrawerOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("home"); // State to manage active tab
-  const [isLogoutOpen, setLogoutOpen] = useState(false); // State to manage logout options visibility
+  const [activeTab, setActiveTab] = useState("home");
+  const [isLogoutOpen, setLogoutOpen] = useState(false);
 
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);

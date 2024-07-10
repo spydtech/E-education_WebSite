@@ -112,7 +112,7 @@ import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales";
 import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile";
 import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers";
 import StatusPage from "./Components/trainee/UserTask/StatusPage";
-import Todo from "./Components/trainee/Todo";
+import Todo from "./Components/trainee/SheduledReports/Todo";
 import Sam from "./Admin/Components/Reports/Sample";
 import BarGraph from "./Admin/Components/Reports/BarGraph";
 import LineGraph from "./Admin/Components/Reports/LineGraph";
@@ -132,12 +132,14 @@ function App() {
           <Route path="/options" element={<Options />} />
           <Route path="/pricing" element={<Pricing2 />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
+
           <Route path="/table" element={<Sam />} />
           <Route path="/bargraph" element={<BarGraph />} />
           <Route path="/linegraph" element={<LineGraph />} />
           <Route path="/saleslinegraph" element={<SalesLineGraph />} />
           <Route path="/customercount" element={<CustomerCount />} />
           <Route path="/productscount" element={<ProductsCount />} />
+          <Route path="/tableforadmin" element={<TableforAdmin />} />
 
           {/* traine Login */}
           <Route path="/trainelogin" element={<Traine_Login />} />
@@ -156,7 +158,6 @@ function App() {
           <Route path="/linechart" element={<CountOfSeals />} />
           <Route path="/countofproducts" element={<CountOfProduct />} />
           <Route path="/countofcustomers" element={<CountOfCustomers />} />
-          <Route path="/tableforadmin" element={<TableforAdmin />} />
 
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />

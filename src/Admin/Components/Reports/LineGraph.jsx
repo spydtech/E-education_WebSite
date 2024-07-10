@@ -88,13 +88,14 @@ const SalesLineChart = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="mb-4">
+      <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
+        Sales of Each Course
+      </h1>
+      <div className="flex justify-center mb-4">
         <label
           htmlFor="year-select"
           className="block text-sm font-medium text-gray-700"
-        >
-          Select Year:
-        </label>
+        ></label>
         <select
           id="year-select"
           value={selectedYear}
@@ -109,13 +110,11 @@ const SalesLineChart = () => {
         </select>
       </div>
 
-      <div className="mb-4">
+      <div className="flex justify-center mb-4">
         <label
           htmlFor="month-select"
           className="block text-sm font-medium text-gray-700"
-        >
-          Select Month:
-        </label>
+        ></label>
         <select
           id="month-select"
           value={selectedMonth}
@@ -130,10 +129,10 @@ const SalesLineChart = () => {
           ))}
         </select>
       </div>
-      <div className=" text-center text-black text-2xl  font-bold">
+      {/* <div className=" text-center text-black text-2xl  font-bold">
         {" "}
         Sales of Each Course
-      </div>
+      </div> */}
 
       <div className="my-4 h-[500px] w-auto justify-center items-center flex">
         <Line
@@ -147,9 +146,10 @@ const SalesLineChart = () => {
                 data: chartData.map((data) => data.sales),
                 backgroundColor: "rgba(75,192,192,0.2)",
                 borderColor: "rgba(75,192,192,1)",
-                borderWidth: 1,
+                borderWidth: 3, // Increase the border width for a thicker line
                 hoverBackgroundColor: "rgba(75,192,192,0.4)",
                 hoverBorderColor: "rgba(75,192,192,1)",
+                lineTension: 0.1, // Optional: smooths the line
               },
             ],
           }}

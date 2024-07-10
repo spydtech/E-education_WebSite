@@ -10,6 +10,7 @@ import {
   Legend,
 } from "chart.js";
 import { sampleData } from "./Sample";
+
 ChartJS.register(
   BarElement,
   CategoryScale,
@@ -79,7 +80,8 @@ const CourseBarGraph = () => {
     responsive: true,
     plugins: {
       legend: {
-        display: false,
+        display: true,
+        position: "top",
       },
       tooltip: {
         callbacks: {
@@ -88,12 +90,24 @@ const CourseBarGraph = () => {
           },
         },
       },
+      title: {
+        display: true,
+        text: "Courses Added Each Month",
+      },
     },
     scales: {
       x: {
+        title: {
+          display: true,
+          text: "Months",
+        },
         stacked: true,
       },
       y: {
+        title: {
+          display: true,
+          text: "Number of Courses",
+        },
         stacked: true,
         min: 0,
         max: Math.max(...data.datasets[0].data, 0) + 1,
@@ -106,7 +120,7 @@ const CourseBarGraph = () => {
   };
 
   return (
-    <div className="bg-white ">
+    <div className=" ">
       <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
         Courses Added in Each Month by Admin
       </h1>

@@ -75,13 +75,14 @@ const AnnualSalesLineGraph = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="mb-4">
+      <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
+        Annual Sales - Total: ₹{totalSales}
+      </h1>
+      <div className="flex justify-center mb-4">
         <label
           htmlFor="year-select"
           className="block text-sm font-medium text-gray-700"
-        >
-          Select Year:
-        </label>
+        ></label>
         <select
           id="year-select"
           value={selectedYear}
@@ -95,9 +96,9 @@ const AnnualSalesLineGraph = () => {
           ))}
         </select>
       </div>
-      <div className="text-center text-black text-2xl font-bold">
+      {/* <div className="text-center text-black text-2xl font-bold">
         Annual Sales - Total: ₹{totalSales}
-      </div>
+      </div> */}
 
       <div className="my-4 h-[400px] w-auto justify-center items-center flex">
         {data && (

@@ -335,24 +335,24 @@ const TraineeTable = () => {
 
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-green-500">
+          <thead className="bg-pink-600">
             <tr className="">
-              <th className="px-6 py-3 bg-green-500 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-6 py-3 bg-pink-600 text-left text-xs font-medium text-black uppercase tracking-wider">
                 Username
               </th>
-              <th className="px-6 py-3 bg-green-500 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-6 py-3 bg-pink-600 text-left text-xs font-medium text-black uppercase tracking-wider">
                 UserID
               </th>
-              <th className="px-6 py-3 bg-green-500 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-6 py-3 bg-pink-600 text-left text-xs font-medium text-black uppercase tracking-wider">
                 Course
               </th>
-              <th className="px-6 py-3 bg-green-500 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-6 py-3 bg-pink-600 text-left text-xs font-medium text-black uppercase tracking-wider">
                 Price
               </th>
-              <th className="px-6 py-3 bg-green-500 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-6 py-3 bg-pink-600 text-left text-xs font-medium text-black uppercase tracking-wider">
                 Course Count
               </th>
-              <th className="px-6 py-3 bg-green-500 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-6 py-3 bg-pink-600 text-left text-xs font-medium text-black uppercase tracking-wider">
                 Aggregate Total
               </th>
             </tr>
@@ -363,7 +363,7 @@ const TraineeTable = () => {
                 <tr className="bg-gray-100">
                   <td
                     colSpan="6"
-                    className="px-6 py-3 text-xs font-bold text-green-500 uppercase tracking-wider"
+                    className="px-6 py-3 text-xs font-bold text-pink-600 uppercase tracking-wider"
                   >
                     {course}
                   </td>
