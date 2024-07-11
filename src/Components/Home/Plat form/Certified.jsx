@@ -96,7 +96,9 @@ function Certified() {
           Get Started Learning Quickly with E-education
         </h1>
         <p className="flex items-center text-white group-hover:text-[#0098F1]  text-lg font-medium">
+        <Link to="/features">
           <span>Enroll Now</span>
+          </Link>
           <FaGreaterThan className="ml-2" />
         </p>
       </div>
@@ -109,7 +111,9 @@ function Certified() {
           Get Started Learning Quickly with E-education
         </h1>
         <p className="flex items-center text-[#0098F1] group-hover:text-white text-lg font-medium">
+        <Link to="/features">
           <span>Enroll Now</span>
+          </Link>
           <FaGreaterThan className="ml-2" />
         </p>
       </div>
@@ -121,7 +125,9 @@ function Certified() {
           Get Started Learning Quickly with E-education
         </h1>
         <p className="flex items-center text-[#0098F1] group-hover:text-white text-lg font-medium">
+        <Link to="/features">
           <span>Enroll Now</span>
+          </Link>
           <FaGreaterThan className="ml-2" />
         </p>
       </div>
