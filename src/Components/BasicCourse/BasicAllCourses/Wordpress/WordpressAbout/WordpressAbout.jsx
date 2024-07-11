@@ -13,7 +13,7 @@ const WordpressAbout = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="text-6xl font">
           Discover the
           <p className="text-[#31cb00] my-2">Wordpress Program</p>
         </p>

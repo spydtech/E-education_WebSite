@@ -13,7 +13,7 @@ function DataScienceCertificate() {
             <p className="text-[#ff206e] text-xl font-medium">
               Data Science Certification
             </p>
-            <p className="md:text-5xl text-2xl font-lora">
+            <p className="md:text-5xl text-2xl font">
               Achieve{" "}
               <p className="text-[#ff206e]">Credentials and Recognition</p>
             </p>

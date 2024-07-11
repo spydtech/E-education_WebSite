@@ -9,7 +9,7 @@ const CybersecurityAbout = () => {
         </h1>
       </div>
       <div className="py-4 text-center">
-        <h2 className="md:text-5xl text-2xl font-lora font-semibold text-white">
+        <h2 className="md:text-5xl text-2xl font font-semibold text-white">
           Discover the
           <span className="block text-violet-800 my-2">
             Cybersecurity Program

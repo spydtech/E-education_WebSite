@@ -11,7 +11,7 @@ const AdvancedNetworkSecurityAbout = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="text-6xl font">
           Discover the
           <p className="text-[#07beb8] my-2">
             Advanced Network Security Program

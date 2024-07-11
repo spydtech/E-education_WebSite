@@ -7,10 +7,10 @@ function BlockChainIntroduction() {
       <div className="w-full flex-shrink-0 px-4 py-8">
         <div className="h-[400px] flex justify-center">
           <div>
-            <h2 className="text-3xl font-medium mb-4 text-[#ff7000] font-lora">
+            <h2 className="text-3xl font-medium mb-4 text-[#ff7000] font">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-xl font-lora">
+            <ul className="list-disc list-inside text-xl font">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -81,12 +81,12 @@ function BlockChainIntroduction() {
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 bg-gradient-to-br to-[#0a0908] from-[#272640]">
         <div className="flex items-center justify-center xl:lg:md:w-auto">
-          <div className="grid grid-cols-1 text-start px-10 font-lora">
+          <div className="grid grid-cols-1 text-start px-10 font">
             <div>
               <p className="text-[#ff7000] text-xl font-medium">Introduction</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora text-white">
+              <p className="text-6xl font text-white">
                 Discover
                 <p className="text-[#ff7000] inline pl-2">Blockchain</p>
               </p>

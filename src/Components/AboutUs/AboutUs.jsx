@@ -9,10 +9,10 @@ const AboutUs = () => {
     <>
       <Navbar />
       <div className="bg-white">
-        <header className="bg-gray-700 text-white text-center py-12 font-lora">
+        <header className="bg-gray-700 text-white text-center py-12 font">
           <h1 className="text-4xl font-bold mt-16">About Us</h1>
         </header>
-        <section className="text-center py-12 px-4 font-lora">
+        <section className="text-center py-12 px-4 font">
           <h2 className="text-2xl font-bold ">Mission And Values</h2>
           <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
             Our mission is to provide exceptional educational services with a
@@ -29,7 +29,7 @@ const AboutUs = () => {
             </div>
           </div>
         </section>
-        <section className="bg-gray-700 text-white py-12 px-4 font-lora">
+        <section className="bg-gray-700 text-white py-12 px-4 font">
           <h2 className="text-2xl font-bold text-center">Our Vision</h2>
           <p className="mt-4 text-center max-w-2xl mx-auto">
             Education anytime, anywhere. We aim to revolutionize the education
@@ -278,60 +278,60 @@ const AboutUs = () => {
         </div>
 
         <section className="text-center py-12 px-4">
-          <h2 className="text-2xl font-bold font-lora">
+          <h2 className="text-2xl font-bold font">
             Our Education Specialties
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-8">
             <div className="p-4 shadow-2xl rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors">
-              <h3 className="text-xl font-bold font-lora">Computer Science</h3>
+              <h3 className="text-xl font-bold font">Computer Science</h3>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors">
-              <h3 className="text-xl font-bold font-lora">
+              <h3 className="text-xl font-bold font">
                 Business Administration
               </h3>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors">
-              <h3 className="text-xl font-bold font-lora">Creative Arts</h3>
+              <h3 className="text-xl font-bold font">Creative Arts</h3>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors">
-              <h3 className="text-xl font-bold font-lora">Health Sciences</h3>
+              <h3 className="text-xl font-bold font">Health Sciences</h3>
             </div>
           </div>
         </section>
 
         <section className="bg-gray-100 py-12 px-4">
-          <h2 className="text-2xl font-bold text-center  font-lora">
+          <h2 className="text-2xl font-bold text-center  font">
             State-Of-The-Art Education Technology
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-5xl mx-auto">
             <div className="p-4 shadow-2xl rounded-lg bg-white hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold font-lora">
+              <h3 className="text-xl font-bold font">
                 Virtual Classrooms
               </h3>
-              <p className="text-gray-700 mt-2 font-lora">
+              <p className="text-gray-700 mt-2 font">
                 Experience interactive and engaging virtual learning
                 environments.
               </p>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-white hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold font-lora">
+              <h3 className="text-xl font-bold font">
                 AI-Powered Learning
               </h3>
-              <p className="text-gray-700 mt-2 font-lora">
+              <p className="text-gray-700 mt-2 font">
                 Personalized learning paths and intelligent tutoring systems.
               </p>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-white hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold font-lora">
+              <h3 className="text-xl font-bold font">
                 Collaborative Tools
               </h3>
-              <p className="text-gray-700 mt-2 font-lora">
+              <p className="text-gray-700 mt-2 font">
                 Seamless collaboration with peers and instructors in real-time.
               </p>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-white hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold font-lora">Digital Resources</h3>
-              <p className="text-gray-700 mt-2 font-lora">
+              <h3 className="text-xl font-bold font">Digital Resources</h3>
+              <p className="text-gray-700 mt-2 font">
                 Access a vast library of digital textbooks, articles, and
                 multimedia.
               </p>
@@ -340,25 +340,25 @@ const AboutUs = () => {
         </section>
 
         <section className="text-center py-12 px-4">
-          <h2 className="text-2xl font-bold font-lora">
+          <h2 className="text-2xl font-bold font">
             Committed To Your Learning And Success
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-8">
             <div className="p-4 shadow-2xl rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors">
-              <h3 className="text-xl font-bold font-lora">Enroll Now</h3>
+              <h3 className="text-xl font-bold font">Enroll Now</h3>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors">
-              <h3 className="text-xl font-bold font-lora">
+              <h3 className="text-xl font-bold font">
                 Expert Instructors
               </h3>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors">
-              <h3 className="text-xl font-bold font-lora">
+              <h3 className="text-xl font-bold font">
                 Comprehensive Courses
               </h3>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors">
-              <h3 className="text-xl font-bold font-lora">Student Support</h3>
+              <h3 className="text-xl font-bold font">Student Support</h3>
             </div>
           </div>
         </section>

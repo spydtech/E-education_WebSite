@@ -6,27 +6,27 @@ const Outcomes = () => {
     <>
       <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4">
         <div className="w-full md:w-1/2">
-          <div className="mt-3 font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font-lora">
+          <div className="mt-3 font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font">
             Elevate your career with sought-after skills in DevOps development
           </div>
           <div className="pl-4">
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Acquire DevOps skills. Industry-recognized certification. Excel
                 in tech.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Master infrastructure as code, automation, and collaboration.
                 Real-world projects. Career-ready in DevOps.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Elevate career with DevOps expertise. Industry-endorsed. Prepare
                 for industry. Success awaits.
               </div>
@@ -51,26 +51,26 @@ const Outcomes = () => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <div className="mt-3 font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font-lora pl-0 md:pl-12">
+          <div className="mt-3 font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font pl-0 md:pl-12">
             Master DevOps Practices for Career Advancement
           </div>
           <div className="pl-4 md:pl-16">
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Acquire comprehensive DevOps skills for industry recognition.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Excel in infrastructure automation, continuous integration, and
                 deployment with real-world projects.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Elevate your career with industry-endorsed training, preparing
                 you for industry success.
               </div>
@@ -81,27 +81,27 @@ const Outcomes = () => {
 
       <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4 mt-8">
         <div className="w-full md:w-1/2">
-          <div className="text-base font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font-lora">
+          <div className="text-base font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font">
             Unlock Career Opportunities with DevOps Expertise
           </div>
           <div className="pl-4">
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Master infrastructure as code, continuous integration and
                 delivery, and cloud technologies for diverse job roles.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Gain hands-on experience through real-world projects and case
                 studies.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Prepare for success with industry-recognized certification and
                 endorsed training.
               </div>

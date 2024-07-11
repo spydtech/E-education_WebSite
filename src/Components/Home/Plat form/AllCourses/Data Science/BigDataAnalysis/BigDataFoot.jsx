@@ -14,7 +14,7 @@ function BigDataFoot() {
 
   return (
     <>
-      <div className="flex flex-1 font-lora w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-green-100  to-green-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
+      <div className="flex flex-1 font w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-green-100  to-green-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
         <h1 className="mx-auto max-w-4xl font-display text-2xl font-bold tracking-normal text-white-300 dark:text-gray-300 md:text-7xl">
           Transforming Business Decisions with &nbsp;
           <span className="relative  text-white-600 dark:text-gray-300">

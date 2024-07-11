@@ -13,7 +13,7 @@ function CloudComputingCertificate() {
             <p className="text-[#072ac8] text-xl font-medium">
               CloudComputing with AWS Certification
             </p>
-            <p className="text-6xl font-lora">
+            <p className="text-6xl font">
               Achieve{" "}
               <p className="text-[#072ac8]">Credentials and Recognition</p>
             </p>

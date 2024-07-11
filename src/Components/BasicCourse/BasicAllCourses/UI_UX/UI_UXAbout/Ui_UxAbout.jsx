@@ -12,7 +12,7 @@ const Ui_UxAbout = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora text-white">
+        <p className="text-6xl font text-white">
           Discover the
           <p className="text-[#0070f3] my-2">Ui and Ux Development Program</p>
         </p>

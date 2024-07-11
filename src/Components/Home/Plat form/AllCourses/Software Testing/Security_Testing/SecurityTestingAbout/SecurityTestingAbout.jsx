@@ -12,7 +12,7 @@ const SecurityTestingAbout = () => {
         </p>
       </div>
       <div className="py-2 pl-4">
-        <p className="md:text-5xl text-2xl font-lora">
+        <p className="md:text-5xl text-2xl font">
           Discover the
           <p className="text-[#31cb00] my-2">Security Testing Program</p>
         </p>

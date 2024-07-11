@@ -36,13 +36,13 @@ const DotnetDeveloperSkills = () => {
         >
           <div className="p-4 rounded-lg shadow-2xl border-orange-700 border-2 relative">
             <img src={skills} className="w-24 h-24 absolute top-4 right-4" />
-            <h2 className="text-base font-extrabold text-[#25a244] sm:text-xl lg:text-lg xl:text-3xl font-lora mb-4">
+            <h2 className="text-base font-extrabold text-[#25a244] sm:text-xl lg:text-lg xl:text-3xl font mb-4">
               Soft Skills
             </h2>
             <div>
               {softSkills.map((skill, index) => (
                 <div key={index} className="flex items-center mb-2">
-                  <p className="text-base text-gray-600 font-lora">
+                  <p className="text-base text-gray-600 font">
                     <FaArrowAltCircleRight className="text-[#25a244] inline mx-2" />
                     {skill.name}
                   </p>
@@ -60,13 +60,13 @@ const DotnetDeveloperSkills = () => {
               src={requirements}
               className="w-24 h-24 absolute top-4 right-4"
             />
-            <h2 className="text-base font-extrabold text-[#25a244] sm:text-xl lg:text-lg xl:text-3xl font-lora mb-4">
+            <h2 className="text-base font-extrabold text-[#25a244] sm:text-xl lg:text-lg xl:text-3xl font mb-4">
               Technical Skills
             </h2>
             <div>
               {technicalSkills.map((skill, index) => (
                 <div key={index} className="flex items-center mb-2">
-                  <p className="text-base text-gray-600 font-lora">
+                  <p className="text-base text-gray-600 font">
                     <FaArrowAltCircleRight className="text-[#25a244] inline mx-2" />
                     {skill.name}
                   </p>
@@ -80,7 +80,7 @@ const DotnetDeveloperSkills = () => {
           className="max-w-sm w-full h-40 rounded-lg items-center flex mx-auto mb-4"
         >
           <div className="p-4 rounded-lg ">
-            <h2 className="text-base font-extrabold text-[#25a244] sm:text-xl lg:text-lg xl:text-3xl font-lora mb-2">
+            <h2 className="text-base font-extrabold text-[#25a244] sm:text-xl lg:text-lg xl:text-3xl font mb-2">
               Full Stack.NET Developer Skills{" "}
             </h2>
             <div className="flex text-[#25a244] justify-center items-center mb-4">
@@ -88,7 +88,7 @@ const DotnetDeveloperSkills = () => {
               <IoReorderThreeOutline className="text-[40px]" />
               <IoRemoveOutline className="text-[40px]" />
             </div>
-            <p className="text-base text-gray-600 font-lora">
+            <p className="text-base text-gray-600 font">
               In today's tech landscape, Full Stack .NET developers are expected
               to have a diverse set of skills, ranging from front-end
               technologies to backend frameworks and services.{" "}

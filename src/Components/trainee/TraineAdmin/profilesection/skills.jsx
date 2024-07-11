@@ -10,7 +10,7 @@ const skills = [
 const Skills = () => {
   return (
     <div className="bg-white p-4 rounded-lg shadow-lg w-full md:w-[500px] lg:w-[600px] xl:w-[700px] mx-auto mt-8">
-      <h3 className="text-black font-lora pl-2 text-xl pb-2 font-semibold">
+      <h3 className="text-black font pl-2 text-xl pb-2 font-semibold">
         Skills
       </h3>
       <div className="grid grid-cols-2 md:grid-cols-2 gap-6">

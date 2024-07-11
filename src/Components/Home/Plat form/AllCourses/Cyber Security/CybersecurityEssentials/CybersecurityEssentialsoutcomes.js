@@ -18,7 +18,7 @@ function CybersecurityCareersOutcomes() {
             </p>
           </div>
           <div className="py-5">
-            <p className="md:text-5xl text-2xl font-lora">
+            <p className="md:text-5xl text-2xl font">
               Discover What our{" "}
               <p className="text-[#7400b8]">Learners Have Achieved</p>
             </p>

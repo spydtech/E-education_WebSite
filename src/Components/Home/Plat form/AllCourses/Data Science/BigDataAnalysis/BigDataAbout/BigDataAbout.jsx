@@ -12,7 +12,7 @@ const BigDataAbout = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="md:text-5xl text-2xl font-lora">
+        <p className="md:text-5xl text-2xl font">
           Discover the
           <p className="text-[#38b000] my-2">Big Data Analysis Program</p>
         </p>

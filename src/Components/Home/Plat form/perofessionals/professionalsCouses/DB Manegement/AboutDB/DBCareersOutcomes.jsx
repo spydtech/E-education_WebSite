@@ -28,7 +28,7 @@ const DBCareersOutcomes = () => {
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora">
+            <p className="text-6xl font">
               Discover What our{" "}
               <p className="text-[#00509d]">Learners Have Achieved</p>
             </p>

@@ -93,12 +93,12 @@ export default function EducationCarousel() {
   return (
     <>
       <div className="my-8 ">
-      <div className="text-xl lg:text-5xl font-semibold pb-4 text-center font-lora">
+      <div className="text-xl lg:text-5xl font-semibold pb-4 text-center font">
   <span className="">Choose a course for you</span>
 </div>
        
       </div>
-      <div className="glide-01 relative  mb-12 font-lora">
+      <div className="glide-01 relative  mb-12 font">
         <div className="overflow-hidden" data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap relative flex   overflow-hidden p-0">
           {courses.map((course, index) => (

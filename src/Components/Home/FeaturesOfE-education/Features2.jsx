@@ -106,7 +106,7 @@ function Features2() {
        
        `}</style>
        <div>
-       <h1 class="text-2xl md:text-3xl pl-2 my-2 border-l-4  font-lora  border-teal-400  dark:text-gray-200">
+       <h1 class="text-2xl md:text-3xl pl-2 my-2 border-l-4  font  border-teal-400  dark:text-gray-200">
        Join the E-education Revolution
 </h1>
 

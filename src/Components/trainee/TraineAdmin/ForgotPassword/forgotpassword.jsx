@@ -112,7 +112,7 @@
 //                 className="flex  justify-center items-center w-56 mx-auto "
 //                 alt="Logo"
 //               /> */}
-//               <div className="p-2 animate_animated animate_backInDown mb-10 text-4xl text-center font-lora font-bold text-white">
+//               <div className="p-2 animate_animated animate_backInDown mb-10 text-4xl text-center font font-bold text-white">
 //                 Forgot Your Password?
 //               </div>
 
@@ -253,7 +253,7 @@ function TraineForgotPassword() {
           </div>
           <div className="p-5" id="forgot-password">
             <div className="text-center">
-              <div className="p-2 animate__animated animate__backInDown mb-10 text-4xl text-center font-lora font-bold text-white">
+              <div className="p-2 animate__animated animate__backInDown mb-10 text-4xl text-center font font-bold text-white">
                 Forgot Your Password?
               </div>
               <div id="email-here">

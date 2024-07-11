@@ -82,7 +82,7 @@ function HeroSection() {
    
 
 </div>
-<h1 className='text-4xl font-lora text-center py-10'>We Introduce The Advanced Features </h1>
+<h1 className='text-4xl font text-center py-10'>We Introduce The Advanced Features </h1>
 <div className='flex gap-10 justify-center'> 
 <div class="notification">
     <div class="notiglow"></div>

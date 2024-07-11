@@ -37,7 +37,7 @@ function AdvancePhpSyllabus() {
               <p className="text-[#ffbc42] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora">
+              <p className="text-6xl font">
                 Explore What You
                 <p className="text-[#ffbc42] inline pl-2">Will Learn</p>
               </p>

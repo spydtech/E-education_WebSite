@@ -23,7 +23,7 @@ const Options = () => {
           className="flex justify-center items-center flex-col shadow-2xl p-8 rounded-md border border-gray-200"
           onClick={handleAdminClick}
         >
-          <div className="text-[100px] font-semibold font-lora text-gray-400">
+          <div className="text-[100px] font-semibold font text-gray-400">
             <MdOutlineSettingsSuggest />
           </div>
           <div className="text-[30px] text-gray-300">Admin</div>
@@ -32,7 +32,7 @@ const Options = () => {
           className="flex justify-center items-center flex-col shadow-2xl p-8 rounded-md border border-gray-200"
           onClick={handleUserClick}
         >
-          <div className="text-[100px] font-semibold font-lora text-gray-400">
+          <div className="text-[100px] font-semibold font text-gray-400">
             <FaUserAlt />
           </div>
           <div className="text-[30px] text-gray-300">User Managment</div>

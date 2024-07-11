@@ -26,7 +26,7 @@ const CertifiedEthicalHackingHero = () => {
         data-aos="fade-right"
         data-aos-duration={800}
       >
-        <div className="pr-2 md:mb-14 py-14 md:py-0 font-lora">
+        <div className="pr-2 md:mb-14 py-14 md:py-0 font">
           <h1 className="text-3xl font-semibold text-violet-800 xl:text-5xl lg:text-3xl">
             <span className="block w-full">
               Master the Art of Ethical Hacking

@@ -7,7 +7,7 @@ const DatavisualisationCard = () => {
       <section id="portfolio" className="portfolio-section py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold font-lora ">
+            <h2 className="text-4xl font-bold font ">
               Mastering Data Visualization: Enhance Your Insights
             </h2>
             <p className="text-lg text-indigo-500 font-semibold mt-2">
@@ -26,7 +26,7 @@ const DatavisualisationCard = () => {
                 />
                 <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-blue-500 to-green-500 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
                 <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg  text-blue-500  font-medium  font-lora text-txt group-hover:text-gray-dark">
+                  <h3 className="text-lg  text-blue-500  font-medium  font text-txt group-hover:text-gray-dark">
                     Explore Course Catalog
                   </h3>
                   <span className="text-sm font-bold text-[#219ebc] group-hover:text-white pt-4">
@@ -46,7 +46,7 @@ const DatavisualisationCard = () => {
                 />
                 <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-blue-500 to-green-500 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
                 <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-lora  text-blue-500  font-medium text-txt group-hover:text-gray-dark">
+                  <h3 className="text-lg font  text-blue-500  font-medium text-txt group-hover:text-gray-dark">
                     Enroll in Foundational Courses
                   </h3>
                   <span className="text-sm font-bold text-[#219ebc] group-hover:text-white pt-4">
@@ -65,7 +65,7 @@ const DatavisualisationCard = () => {
                 />
                 <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-blue-500 to-green-500 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
                 <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-blue-500  font-lora text-txt group-hover:text-gray-dark">
+                  <h3 className="text-lg font-medium text-blue-500  font text-txt group-hover:text-gray-dark">
                     Practice with Real-world Projects
                   </h3>
                   <span className="text-sm font-bold text-[#219ebc] group-hover:text-white pt-4">
@@ -86,7 +86,7 @@ const DatavisualisationCard = () => {
                 />
                 <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-blue-500 to-green-500 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
                 <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg  font-lora text-blue-500  font-lorafont-medium text-txt group-hover:text-gray-dark">
+                  <h3 className="text-lg  font text-blue-500  fontfont-medium text-txt group-hover:text-gray-dark">
                     Track Your Progress
                   </h3>
                   <span className="text-sm font-bold text-[#219ebc] group-hover:text-white pt-4">
@@ -107,7 +107,7 @@ const DatavisualisationCard = () => {
                 />
                 <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-blue-500 to-green-500 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
                 <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg  text-blue-500  font-lora font-medium text-txt group-hover:text-gray-dark">
+                  <h3 className="text-lg  text-blue-500  font font-medium text-txt group-hover:text-gray-dark">
                     Specialize and Advance
                   </h3>
                   <span className="text-sm font-bold text-[#219ebc] group-hover:text-white pt-4">
@@ -129,7 +129,7 @@ const DatavisualisationCard = () => {
                 />
                 <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-blue-500 to-green-500 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
                 <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg  text-blue-500  font-lora font-medium text-txt group-hover:text-gray-dark">
+                  <h3 className="text-lg  text-blue-500  font font-medium text-txt group-hover:text-gray-dark">
                     Earn Recognized Certifications
                   </h3>
                   <span className="text-sm font-bold text-[#219ebc] group-hover:text-white pt-4">

@@ -20,7 +20,7 @@ function Certified() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-10 gap-y-16 place-items-center bg-white py-8 font-lora">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-10 gap-y-16 place-items-center bg-white py-8 font">
         {[1, 2, 3].map((index) => (
           <div
             key={index}
@@ -35,7 +35,7 @@ function Certified() {
               />
             </div>
             <div className="p-6">
-              <h5 className="mb-2 block font-lora text-xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased ">
+              <h5 className="mb-2 block font text-xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased ">
                 {index === 1 && "Get Started Learning Quickly With E-education"}
                 {index === 2 && "Enhance Your Professional Skills With E-education"}
                 {index === 3 && "Get Professionally Certified With E-education Courses"}
@@ -48,7 +48,7 @@ function Certified() {
                   onClick={() => expandCard(index)}
                   data-ripple-light="true"
                   type="button"
-                  className=" font-lora select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle  text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  className=" font select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle  text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 >
                   Enroll Now
                 </button>

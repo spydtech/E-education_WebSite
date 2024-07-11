@@ -8,10 +8,10 @@ function DatavisualisationIntroduction() {
       <div className="w-full flex-shrink-0 px-4 py-8 ">
         <div className="h-[400px] flex justify-center">
           <div>
-            <h2 className="text-3xl font-medium mb-4 text-blue-600 font-lora">
+            <h2 className="text-3xl font-medium mb-4 text-blue-600 font">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-xl font-lora">
+            <ul className="list-disc list-inside text-xl font">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -79,14 +79,14 @@ function DatavisualisationIntroduction() {
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 h-full md:mb-20 bg-gradient-to-br from-blue-300 via-purple-500 to-pink-600">
         <div className="flex items-center justify-center pl-4 ">
-          <div className="grid grid-cols-1 text-start px-10 font-lora">
+          <div className="grid grid-cols-1 text-start px-10 font">
             <div>
-              <p className="text-blue-800 text-xl font-lora font-medium">
+              <p className="text-blue-800 text-xl font font-medium">
                 Introduction
               </p>
             </div>
             <div className="py-5">
-              <p className="md:md:text-5xl text-2xl  font-lora">
+              <p className="md:md:text-5xl text-2xl  font">
                 So what is
                 <span className="text-blue-800 inline pl-2">
                   Data Visualization?

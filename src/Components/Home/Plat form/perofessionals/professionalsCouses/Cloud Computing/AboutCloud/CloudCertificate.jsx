@@ -13,7 +13,7 @@ const CloudCertificate = () => {
         <p className="text-[#00509d] text-xl font-medium">
           Cloud Computing Essentials Certification
         </p>
-        <p className="text-6xl font-lora">
+        <p className="text-6xl font">
           Master{" "}
           <p className="text-[#00509d]">Fundamental Concepts</p>
         </p>

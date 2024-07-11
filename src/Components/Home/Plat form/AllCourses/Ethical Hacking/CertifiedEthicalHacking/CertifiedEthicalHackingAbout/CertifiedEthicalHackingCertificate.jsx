@@ -18,7 +18,7 @@ function CertifiedEthicalHackingCertificate() {
             <p className="text-orange-600 text-lg md:text-xl font-medium">
               Ethical Hacking Certification
             </p>
-            <p className="md:md:text-5xl text-2xl font-lora">
+            <p className="md:md:text-5xl text-2xl font">
               Achieve{" "}
               <span className="text-violet-800 block md:inline">
                 Credentials and Recognition

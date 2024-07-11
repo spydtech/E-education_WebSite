@@ -12,7 +12,7 @@ const DataAnalyticsProgram = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="md:text-5xl text-2xl font-lora">
+        <p className="md:text-5xl text-2xl font">
           Discover the
           <p className="text-[#30c5ff] my-2"> Data Analytics Program</p>
         </p>

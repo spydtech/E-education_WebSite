@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Pricing() {
   return (
     <div>
-      <div class="pt-5 bg-gray-900 font-lora" id="pricing">
+      <div class="pt-5 bg-gray-900 font" id="pricing">
         <div class="mx-auto pb-20 mt-4 max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-4xl text-center">
             <h1 class="text-base font-semibold leading-7 text-indigo-400">

@@ -12,7 +12,7 @@ const AutomationTestingAbout = () => {
         </p>
       </div>
       <div className="py-2 pl-4">
-        <p className="md:text-5xl text-2xl font-lora">
+        <p className="md:text-5xl text-2xl font">
           Discover the
           <p className="text-[#7400b8] my-2">Automation Testing Program</p>
         </p>

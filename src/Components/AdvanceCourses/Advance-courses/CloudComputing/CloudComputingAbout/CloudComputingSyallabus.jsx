@@ -31,7 +31,7 @@ function CloudComputingSyllabus() {
               <p className="text-[#072ac8] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora">
+              <p className="text-6xl font">
                 Discover What You
                 <span className="text-[#072ac8] inline pl-2">Will Learn</span>
               </p>

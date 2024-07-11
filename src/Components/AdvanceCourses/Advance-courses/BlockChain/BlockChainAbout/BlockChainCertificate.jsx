@@ -13,7 +13,7 @@ function BlockChainCertificate() {
             <p className="text-[#ff7000] text-xl font-medium">
               BlockChain Certification
             </p>
-            <p className="text-6xl font-lora text-white">
+            <p className="text-6xl font text-white">
               Achieve{" "}
               <p className="text-[#ff7000]">Credentials and Recognition</p>
             </p>

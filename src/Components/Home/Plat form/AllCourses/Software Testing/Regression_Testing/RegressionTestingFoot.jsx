@@ -16,7 +16,7 @@ function RegressionTestingFoot() {
 
   return (
     <>
-      <div className="md:my-16 flex flex-1 font-lora w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-blue-200 to-blue-200 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
+      <div className="md:my-16 flex flex-1 font w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-blue-200 to-blue-200 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
         <h1 className="mx-auto max-w-4xl font-display text-2xl font-bold tracking-normal text-white-300 dark:text-gray-300 md:text-7xl">
           Maintain Stability with &nbsp;
           <span className="relative text-white-600 dark:text-gray-300">

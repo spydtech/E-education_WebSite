@@ -10,7 +10,7 @@ const BasicPhpAbout = () => {
         <p className="text-[#04e762] text-xl font-medium">About Php Course</p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora">
+        <p className="text-6xl font">
           Discover the
           <p className="text-[#04e762] my-2">BasicPhpProgram</p>
         </p>

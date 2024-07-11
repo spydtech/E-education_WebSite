@@ -25,7 +25,7 @@ const MachineLearningHero = () => {
       </div>
 
       <div
-        className="items-center font-lora w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
+        className="items-center font w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
         data-aos="fade-right"
         data-aos-duration={800}
       >

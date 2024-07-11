@@ -5,7 +5,7 @@ import img3 from "../../../../assets/img3students.png";
 import { Link } from "react-router-dom";
 const ImageHomePage = () => {
   return (
-    <div className="flex flex-col font-lora">
+    <div className="flex flex-col font">
       <div className="container mx-auto px-4   ">
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-4 h-auto relative bottom-10 ">
           <div className="max-w-full  rounded overflow-y-visible  flex flex-col  ">

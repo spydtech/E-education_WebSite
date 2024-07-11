@@ -7,10 +7,10 @@ function RegressionTestingIntroduction() {
       <div className="w-full flex-shrink-0 px-4 py-8">
         <div className="h-[400px] flex justify-center">
           <div>
-            <h2 className="text-3xl font-medium mb-4 text-[#00a8e8] font-lora">
+            <h2 className="text-3xl font-medium mb-4 text-[#00a8e8] font">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-xl font-lora">
+            <ul className="list-disc list-inside text-xl font">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -83,13 +83,13 @@ function RegressionTestingIntroduction() {
         >
           <div
             id="headings"
-            className="grid grid-cols-1 text-start font-lora pl-4"
+            className="grid grid-cols-1 text-start font pl-4"
           >
             <div>
               <p className="text-[#00a8e8] text-xl font-medium">Introduction</p>
             </div>
             <div className="py-5">
-              <p className="md:text-5xl text-2xl font-lora">
+              <p className="md:text-5xl text-2xl font">
                 So what is
                 <p className="text-[#00a8e8] inline pl-2">
                   Regression Testing?

@@ -15,7 +15,7 @@ import Pricing from "./Pricing/Pricing";
 import SlideInTimer from "./Timer/SlideInTimer";
 import ImageHomePage from "../Home/Plat form/AllCourses/ImageHomepage";
 import SingupHome from "../Home/SingUpHome/SignUpHome";
-import StartNewCarrer from "./StartNewCarrer/StartNewCarrer";
+import StartNewCarrer from "./StartNewCarrer/Carrer";
 import { useSelector } from "react-redux";
 function Home() {
   // const [activeTab, setActiveTab] = useState("tab1");

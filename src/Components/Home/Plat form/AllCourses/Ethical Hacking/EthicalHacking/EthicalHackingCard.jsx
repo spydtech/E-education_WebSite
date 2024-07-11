@@ -6,7 +6,7 @@ const EthicalHackingCard = () => {
       <section id="portfolio" className="portfolio-section py-16 px-4 ">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold font-lora text-violet-800">
+            <h2 className="text-4xl font-bold font text-violet-800">
               Mastering Ethical Hacking: Transform Your Skills
             </h2>
             <p className="text-lg text-orange-600 font-semibold  mt-2 ">

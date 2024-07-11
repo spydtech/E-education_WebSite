@@ -11,7 +11,7 @@ const CybersecurityBiginersAbout = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="md:text-5xl text-2xl font-lora">
+        <p className="md:text-5xl text-2xl font">
           Discover the
           <p className="text-[#7400b8] my-2">Cyber Security Program</p>
         </p>

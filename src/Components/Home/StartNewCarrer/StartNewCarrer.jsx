@@ -8,7 +8,7 @@ const StartNewCarrer = () => {
   return (
     <>
       <div class="w-full md:px-16 pl-4  pb-16">
-        <span class="md:text-5xl text-2xl font-bold text-[#2A063D]  font-lora">
+        <span class="md:text-5xl text-2xl font-bold text-[#2A063D]  font">
           Start a new career with E-education &#8594;
         </span>
       </div>
@@ -18,10 +18,10 @@ const StartNewCarrer = () => {
         </div>
         <div className="ml-6 ">
           <div className="flex  flex-col items-start justify-start md:min-w-[400px] gap-8">
-            <div className="font-lora font-bold  text-xl md:text-3xl text-[#2A063D] ">
+            <div className="font font-bold  text-xl md:text-3xl text-[#2A063D] ">
               Unlocking Career Horizons: Navigating New Paths With E-education
             </div>
-            <div className="font-lora md:text-md text-base mb-8 ">
+            <div className="font md:text-md text-base mb-8 ">
               Embracing E-education for a new career path offers flexible
               learning opportunities accessible anytime, anywhere. In today's
               digital era, online platforms provide vast resources for skill

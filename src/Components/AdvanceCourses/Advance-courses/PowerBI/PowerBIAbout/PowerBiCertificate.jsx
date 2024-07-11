@@ -13,7 +13,7 @@ function PowerBiCertificate() {
             <p className="text-[#072ac8] text-xl font-medium">
               PowerBi Certification
             </p>
-            <p className="text-6xl font-lora text-white">
+            <p className="text-6xl font text-white">
               Achieve{" "}
               <p className="text-[#072ac8]">Credentials and Recognition</p>
             </p>

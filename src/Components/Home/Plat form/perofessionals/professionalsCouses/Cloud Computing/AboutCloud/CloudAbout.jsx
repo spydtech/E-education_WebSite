@@ -11,7 +11,7 @@ const CloudAbout = () => {
     </p>
   </div>
   <div className="py-2">
-    <p className="text-6xl font-lora">
+    <p className="text-6xl font">
       Explore the
       <p className="text-[#f9ac13] my-2">Cloud Computing Essentials Program</p>
     </p>

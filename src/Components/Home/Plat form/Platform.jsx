@@ -9,17 +9,17 @@ function Platform() {
     <>
       <Certified />
       <EducationCarousel />
-      <div className="bg-blue-200 font-lora">
+      <div className="bg-blue-200 font">
         <div className="md:lg:ml-96 md:h-92 md:w-96  -mb-16">
           <img src={IMG1} className=" " />
         </div>
 
-        <h1 className="md:lg:xl:text-7xl text-2xl  font-bold text-center p-[5%] font-lora">
+        <h1 className="md:lg:xl:text-7xl text-2xl  font-bold text-center p-[5%] font">
           The perfect platform to boost your technical skills
         </h1>
         <div className="grid grid-cols-1 md:lg:grid-cols-2 md:p-20 gap-8 ">
           <Link to="/student">
-            <div className="shyam text-center shadow-2xl p-4 font-lora transform hover:-translate-y-2 transition-transform ">
+            <div className="shyam text-center shadow-2xl p-4 font transform hover:-translate-y-2 transition-transform ">
               <div className=" flex justify-center items-center ">
                 <img src={IMG} className="h-[360px] w-[360px]" />
               </div>
@@ -69,7 +69,7 @@ function Platform() {
             `}
           </style>
           <Link to="/professional">
-            <div className="shyam text-center shadow-2xl p-4 font-lora transform hover:-translate-y-2 transition-transform">
+            <div className="shyam text-center shadow-2xl p-4 font transform hover:-translate-y-2 transition-transform">
               <div className="flex justify-center items-center ">
                 <img src="https://png.pngtree.com/png-vector/20240201/ourmid/pngtree-man-seated-using-laptop-character-png-image_11581009.png" />
               </div>

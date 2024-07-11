@@ -124,7 +124,7 @@ function DataAnalaticsKeyHighights() {
         id="main"
         className=" md:lg:xl:px-20  bg-gradient-to-br  from-[#474973] to-[#0d0c1d]"
       >
-        <div id="subdiv1" className="pt-4 font-lora">
+        <div id="subdiv1" className="pt-4 font">
           <div id="h1" className="">
             <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#30c5ff]">
               E-education Course Highlights

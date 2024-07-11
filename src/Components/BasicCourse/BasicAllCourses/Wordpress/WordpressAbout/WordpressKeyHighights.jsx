@@ -114,7 +114,7 @@ function WordpressKeyHighlights() {
   return (
     <>
       <div id="main" className=" md:lg:xl:px-20  bg-[#9e0059]">
-        <div id="subdiv1" className="pt-4 font-lora">
+        <div id="subdiv1" className="pt-4 font">
           <div id="h1" className="">
             <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#31cb00]">
               WordPress Course Highlights

@@ -9,12 +9,20 @@ function Main() {
         <section class="sm:mt-6 lg:mt-8  mx-auto px-4 sm:px-6 lg:px-8">
           <div class="my-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 flex gap-3 lg:flex-justify lg:flex flex-col lg:flex-row">
             <div class="sm:text-center lg:text-left">
-              <h1 class="font-lora text-4xl tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl">
-                <span class="block xl:inline">Learn without limits</span>
-                <span class="block text-[#0077b6] xl:inline">
+              <h1 class="font text-4xl tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl">
+                <h1 class="block xl:inline">Learn   {" "}
+                <span class="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] inline-block text-transparent bg-clip-text">
                   {" "}
-                  online courses
+                  without
                 </span>
+                   
+                {" "} 
+                  limits online   {" "} 
+                <span class="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] inline-block text-transparent bg-clip-text">
+                  {" "}
+                   courses
+                </span>
+                </h1>
               </h1>
               <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 Start, switch, or advance your career with more than 6,900
@@ -26,7 +34,7 @@ function Main() {
                 <div class="rounded-md shadow">
                   <Link
                     to="/pricing"
-                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#2A063D] hover:bg-gray-600 md:py-4 md:text-lg md:px-10"
+                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#0098F1] hover:bg-gray-600 md:py-4 md:text-lg md:px-10"
                   >
                     Get started
                   </Link>
@@ -34,7 +42,7 @@ function Main() {
                 <div class="mt-3 sm:mt-0 sm:ml-3">
                   <Link
                     to="/try-a-demo"
-                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-800 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+                    class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#0098F1] bg-[#0098F11A] hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
                   >
                     Try demo
                   </Link>

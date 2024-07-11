@@ -13,7 +13,7 @@ function AutomationTestingCertificate() {
             <p className="text-[#7400b8] text-xl font-medium">
               Automation Testing Certification
             </p>
-            <p className="md:text-5xl text-2xl font-lora">
+            <p className="md:text-5xl text-2xl font">
               Achieve{" "}
               <p className="text-[#7400b8]">Credentials and Recognition</p>
             </p>

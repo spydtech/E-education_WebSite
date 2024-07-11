@@ -129,7 +129,7 @@ function BlockChainKeyHighights() {
         id="main"
         className=" md:lg:xl:px-20  bg-gradient-to-br  to-[#0a0908] from-[#272640]"
       >
-        <div id="subdiv1" className="pt-4 font-lora">
+        <div id="subdiv1" className="pt-4 font">
           <div id="h1" className="">
             <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#ff7000]">
               E-education Course Highlights

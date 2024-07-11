@@ -6,28 +6,28 @@ const Outcomes = () => {
     <>
       <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4">
         <div className="w-full md:w-1/2">
-          <div className="mt-3 font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font-lora">
+          <div className="mt-3 font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font">
             Elevate your career with sought-after skills in full stack Java
             development
           </div>
           <div className="pl-4">
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Acquire full stack Java skills. Industry-recognized
                 certification. Excel in tech.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Master front-end, back-end. Real-world projects. Career-ready in
                 web development.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Elevate career with full stack Java. Google-endorsed. Prepare
                 for industry. Success awaits.
               </div>
@@ -52,27 +52,27 @@ const Outcomes = () => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <div className="mt-3 font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font-lora pl-0 md:pl-12">
+          <div className="mt-3 font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font pl-0 md:pl-12">
             Master Full Stack Java Development for Career Advancement
           </div>
           <div className="pl-4 md:pl-16">
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Acquire comprehensive full stack Java skills for industry
                 recognition.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Excel in both front-end and back-end development with real-world
                 projects.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Elevate your career with Google-endorsed training, preparing you
                 for industry success.
               </div>
@@ -83,27 +83,27 @@ const Outcomes = () => {
 
       <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4 mt-8">
         <div className="w-full md:w-1/2">
-          <div className="text-base font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font-lora">
+          <div className="text-base font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font">
             Unlock Career Opportunities with Full Stack Java Development
           </div>
           <div className="pl-4">
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Master both front-end and back-end technologies for diverse job
                 roles.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Gain hands-on experience through real-world projects and case
                 studies.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">
+              <div className="text-base text-gray-600 font">
                 Prepare for success with industry-recognized certification and
                 Google-endorsed training.
               </div>

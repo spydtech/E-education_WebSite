@@ -3,28 +3,28 @@ import Faq from "react-faq-component";
 
 const data = {
   title: (
-    <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
+    <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font">
       Courses Covered in this Full Stack Java Development Program
     </div>
   ),
   rows: [
     {
       title: (
-        <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
+        <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font">
           Front-end Development with Angular
         </div>
       ),
       content: (
         <div>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Learn the essentials of Angular for building dynamic user
             interfaces.
           </p>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Explore component-based architecture and state management in
             Angular.
           </p>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Implement modern web development techniques using Angular.
           </p>
         </div>
@@ -32,20 +32,20 @@ const data = {
     },
     {
       title: (
-        <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
+        <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font">
           Back-end Development with Spring Boot
         </div>
       ),
       content: (
         <div>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Master the fundamentals of Spring Boot for building robust web
             applications.
           </p>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Learn to create RESTful APIs using Spring Boot.
           </p>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Explore Spring Boot's ORM for database interactions and
             authentication mechanisms.
           </p>
@@ -54,19 +54,19 @@ const data = {
     },
     {
       title: (
-        <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
+        <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font">
           Database Management with MySQL
         </div>
       ),
       content: (
         <div>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Get introduced to relational databases with MySQL.
           </p>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Learn to design and manage databases using SQL and MySQL.
           </p>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Explore data modeling, transactions, and queries in MySQL.
           </p>
         </div>
@@ -74,20 +74,20 @@ const data = {
     },
     {
       title: (
-        <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
+        <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font">
           Full Stack Application Development
         </div>
       ),
       content: (
         <div>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Integrate Angular, Spring Boot, and MySQL to build full stack
             applications.
           </p>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Implement RESTful APIs to connect front-end and back-end components.
           </p>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Develop, test, and deploy Java stack applications.
           </p>
         </div>
@@ -95,19 +95,19 @@ const data = {
     },
     {
       title: (
-        <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
+        <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font">
           Version Control with Git
         </div>
       ),
       content: (
         <div>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Understand the basics of version control with Git.
           </p>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Learn to manage your codebase with Git and GitHub.
           </p>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Collaborate on projects using branching and merging techniques.
           </p>
         </div>
@@ -115,20 +115,20 @@ const data = {
     },
     {
       title: (
-        <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
+        <div className="mt-3 font-extrabold text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font">
           Project Management and Collaboration Tools
         </div>
       ),
       content: (
         <div>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Get introduced to project management methodologies and tools.
           </p>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Learn to use tools like JIRA, Trello, and Slack for effective team
             collaboration.
           </p>
-          <p className="text-base text-gray-600 text-md font-lora">
+          <p className="text-base text-gray-600 text-md font">
             Manage project timelines, tasks, and communication efficiently.
           </p>
         </div>

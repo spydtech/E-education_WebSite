@@ -12,7 +12,7 @@ const BlockChainAbout = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora text-white">
+        <p className="text-6xl font text-white">
           Discover the
           <p className="text-[#ff7000] my-2">Block Chain Development Program</p>
         </p>

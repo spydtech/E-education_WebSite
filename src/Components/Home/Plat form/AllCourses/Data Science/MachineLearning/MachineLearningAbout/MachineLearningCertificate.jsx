@@ -13,7 +13,7 @@ function MachineLearningCertificate() {
             <p className="text-pink-800 text-xl font-medium">
               Machine Learning Certification
             </p>
-            <p className="md:text-5xl text-2xl font-lora">
+            <p className="md:text-5xl text-2xl font">
               Achieve{" "}
               <p className="text-violet-800">Credentials and Recognition</p>
             </p>

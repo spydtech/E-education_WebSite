@@ -56,7 +56,7 @@ function HomeTrainee() {
                     </li>
                   ))}
                 </ul>
-                <div className="text-xl bg-gray-200 font-lora font-bold text-green-600 w-24 h-24 border-4 border-green-400 rounded-full relative bottom-6 left-3/4 transform -translate-x-1/2 flex items-center justify-center">
+                <div className="text-xl bg-gray-200 font font-bold text-green-600 w-24 h-24 border-4 border-green-400 rounded-full relative bottom-6 left-3/4 transform -translate-x-1/2 flex items-center justify-center">
                   {total}
                 </div>
               </div>
@@ -71,7 +71,7 @@ function HomeTrainee() {
                     </li>
                   ))}
                 </ul>
-                <div className="text-xl bg-gray-200 font-lora font-bold text-blue-600 w-24 h-24 border-4 border-blue-600 rounded-full relative bottom-12 left-3/4 transform -translate-x-1/2 flex items-center justify-center">
+                <div className="text-xl bg-gray-200 font font-bold text-blue-600 w-24 h-24 border-4 border-blue-600 rounded-full relative bottom-12 left-3/4 transform -translate-x-1/2 flex items-center justify-center">
                   {usertotal}
                 </div>
               </div>

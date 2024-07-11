@@ -14,7 +14,7 @@ function PerformanceTestingCertificate() {
             <p className="text-[#30c5ff] text-xl font-medium">
               Performance Testing Certification
             </p>
-            <p className="md:text-5xl text-2xl font-lora">
+            <p className="md:text-5xl text-2xl font">
               Achieve{" "}
               <p className="text-[#30c5ff]">Credentials and Recognition</p>
             </p>

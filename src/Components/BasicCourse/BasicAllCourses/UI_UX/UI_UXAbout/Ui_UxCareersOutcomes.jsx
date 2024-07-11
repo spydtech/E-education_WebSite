@@ -19,7 +19,7 @@ function Ui_UxCareersOutcomes() {
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora text-white">
+            <p className="text-6xl font text-white">
               Discover What our{" "}
               <p className="text-[#0070f3]">Learners Have Achieved</p>
             </p>

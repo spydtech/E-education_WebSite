@@ -20,8 +20,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'anton': ['Anton', 'sans-serif'], // Example font family
-        'lora': ['Lora', 'serif'], // Example font family
+        // 'anton': ['Anton', 'sans-serif'], // Example font family
+        // 'lora': ['Lora', 'serif'], // Example font family
+        'font': ['Inter', 'sans-serif']
       },
       animation: {
         'spin-slow': 'spin 5s linear infinite', // Adjust the duration (5s) to control the speed
