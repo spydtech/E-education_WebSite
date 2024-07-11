@@ -5,11 +5,8 @@ import { FaCamera } from "react-icons/fa";
 import { FaUserEdit } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import axios from 'axios';
-
-
 function EditModal({ userData, onSave, onClose }) {
   const [editedData, setEditedData] = useState(userData);
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setEditedData(prevData => ({
@@ -17,12 +14,10 @@ function EditModal({ userData, onSave, onClose }) {
       [name]: value
     }));
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     onSave(editedData);
   };
-
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
       <div className="bg-white p-4 rounded shadow-lg w-[60%] sm:w-[50%] md:w-[40%] lg:w-[30%]">
@@ -151,7 +146,6 @@ function Profile() {
   const { auth } = useSelector((state) => state);
   const dispatch = useDispatch();
   const jwt = localStorage.getItem("jwt");
-
   useEffect(() => {
     if (auth.user) {
       const { firstName, lastName, email, phoneNumber, location, bio, gender, dateOfBirth, website, profileImage, coverImage } = auth.user;
@@ -172,11 +166,9 @@ function Profile() {
       });
     }
   }, [auth]);
-
   const handleEdit = () => {
     setShowEditModal(true);
   };
-
   const handleSave = async (editedData) => {
     try {
       const response = await axios.put(`http://localhost:8080/api/users/${auth.user.id}`, editedData, {
@@ -193,12 +185,9 @@ function Profile() {
     }
     setShowEditModal(false);
   };
-
-
   const handleCloseModal = () => {
     setShowEditModal(false);
   };
-
   const handleProfileImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -240,11 +229,9 @@ function Profile() {
               alt="User Cover"
               onClick={() => document.getElementById('cover-image-input').click()}
               className="w-full xl:h-[20rem] lg:h-[18rem] md:h-[16rem] sm:h-[14rem] xs:h-[11rem]"
-
             />
           </label>
           <input type="file" id="cover-image-input" className="hidden" onChange={handleCoverImageChange} accept="image/*" />
-
           <div className="sm:w-[80%] xs:w-[90%] mx-auto flex ">
             <label htmlFor="profile-image-input" className="cursor-pointer">
               <img
@@ -253,7 +240,6 @@ function Profile() {
                 className="rounded-md lg:w-[12rem] lg:h-[12rem] md:w-[10rem] md:h-[10rem] sm:w-[8rem] sm:h-[8rem] xs:w-[7rem] xs:h-[7rem] outline outline-2 outline-offset-2 outline-blue-500 relative lg:bottom-[5rem] sm:bottom-[4rem] xs:bottom-[3rem]"
                 onClick={() => document.getElementById('profile-image-input').click()}
               />
-
             </label>
             <input type="file" id="profile-image-input" className="hidden" onChange={handleProfileImageChange} accept="image/*" />
             <div className="h-20 w-full bg-gray-300">
@@ -318,8 +304,6 @@ function Profile() {
       </section>
       <Footer />
     </div>
-
   );
 }
-
 export default Profile;
