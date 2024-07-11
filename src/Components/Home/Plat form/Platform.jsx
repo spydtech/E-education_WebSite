@@ -102,7 +102,7 @@ function Platform() {
     <>
       <Certified />
       <EducationCarousel />
-      <div className="bg-[#ffdf9f] font-sans h-auto md:h-[625px] justify-center items-center flex py-10 md:py-0">
+      <div className=" font-sans h-auto md:h-[625px] justify-center items-center flex py-10 md:py-0">
         <div>
           <h1 className="md:lg:xl:text-4xl text-2xl font-bold text-center px-6 md:px-[5%] pt-10 font-sans">
             The perfect Platform{" "}

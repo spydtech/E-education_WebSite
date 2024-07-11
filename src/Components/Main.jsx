@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Boy1 from "./Home/Boy1";
+import Girl from "../assetss/Home/girl.png"
 import { Link } from "react-router-dom";
 function Main() {
   return (
@@ -52,9 +53,21 @@ function Main() {
             </div>
 
             {/* <!--   Image Section     --> */}
-            <div class="lg:inset-y-0 lg:right-0 lg:w-1/2 md:flex md:justify-center md:items-center  relative ">
-              <Boy1 />
-            </div>
+            <div className="lg:inset-y-0 lg:right-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+      <div className="relative ">
+        <div className="absolute inset-0 rounded-full border border-blue-600 w-[400px] h-[400px]"></div>
+        <div className="absolute inset-0 rounded-full bg-blue-500 w-[400px] h-[400px]"></div>
+        <div className="relative z-10 flex flex-col items-center justify-center">
+          <div>
+            <img
+              src={Girl}
+              alt="Woman with Laptop"
+              className="w-[350px] h-[350px] object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
 
             {/* <!--   End of Image Section     --> */}
           </div>

@@ -156,7 +156,6 @@ function Home() {
         </div>
       </div> */}
       <Platform />
-
       <ImageHomePage />
       <Aurora />
 
