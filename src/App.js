@@ -10,7 +10,7 @@ import WSpace from "./Components/Profile/WorkSpace1/WSpace";
 import Settings from "./Components/Profile/Settings";
 import PostFeeds from "./Components/Home/post/PostFeeds";
 import QuestionForm from "./Components/Home/AskMe/QuestionForm";
-import ForgotPassword from "./Components/Login/ForgotPassword";
+import ForgotPassword from "./Components/trainee/TraineAdmin/ForgotPassword/forgotpassword";
 import Purchases from "./Components/Profile/Purchases/Purchases";
 import Payment from "./Components/Profile/Payment/Payment";
 import MyCourse from "./Components/mycourse/MyCourse";
@@ -112,7 +112,6 @@ import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales";
 import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile";
 import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers";
 import StatusPage from "./Components/trainee/UserTask/StatusPage";
-import Todo from "./Components/trainee/SheduledReports/Todo";
 import Sam from "./Admin/Components/Reports/Sample";
 import BarGraph from "./Admin/Components/Reports/BarGraph";
 import LineGraph from "./Admin/Components/Reports/LineGraph";
@@ -120,7 +119,8 @@ import SalesLineGraph from "./Admin/Components/Reports/SalesLineGraph";
 import CustomerCount from "./Admin/Components/Reports/CustomerCount";
 import TableforAdmin from "./Admin/Components/Reports/TableforAdmin";
 import ProductsCount from "./Admin/Components/Reports/CountofProducts";
-
+import Todo from "./Components/trainee/SheduledReports/Todo";
+import Slider from "./Components/FinalTestimonials";
 function App() {
   return (
     <div>
@@ -132,7 +132,9 @@ function App() {
           <Route path="/options" element={<Options />} />
           <Route path="/pricing" element={<Pricing2 />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
+          <Route path="/slider" element={<Slider />} />
 
+          {/* Graph  */}
           <Route path="/table" element={<Sam />} />
           <Route path="/bargraph" element={<BarGraph />} />
           <Route path="/linegraph" element={<LineGraph />} />
@@ -140,18 +142,20 @@ function App() {
           <Route path="/customercount" element={<CustomerCount />} />
           <Route path="/productscount" element={<ProductsCount />} />
           <Route path="/tableforadmin" element={<TableforAdmin />} />
-
           {/* traine Login */}
+
           <Route path="/trainelogin" element={<Traine_Login />} />
           <Route path="/trainee" element={<Trainee />} />
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
           <Route path="/meeting" element={<Meeting />} />
           <Route path="/traine-home" element={<Traine_Home />} />
-          <Route path="/tabs" element={<Tabs />} />
-          <Route path="/user-accounts" element={<UserAccounts />} />
-          <Route path="/traine-upload" element={<TraineUpload />} />
+          {/* <Route path="/tabs" element={<Tabs />} /> */}
+          {/* <Route path="/user-accounts" element={<UserAccounts />} /> */}
+          {/* <Route path="/traine-upload" element={<TraineUpload />} /> */}
           <Route path="/status-page" element={<StatusPage />} />
+
           <Route path="/todo" element={<Todo />} />
+
           {/* admin */}
           <Route path="/admin/*" element={<AdminRouter />} />
           <Route path="/trainee-courses" element={<TraineeCourses />} />
@@ -166,7 +170,7 @@ function App() {
           <Route path="/Certificates" element={<Certificates />} />
           <Route path="/features" element={<Features />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/ForgotPassword" element={<ForgotPassword />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/signUp" element={<SignUp />} />
           {/*  */}
           <Route path="/Profile" element={<Profile />} />

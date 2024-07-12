@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useLocation, Link } from "react-router-dom";
 import { SiGooglemeet } from "react-icons/si";
 import MeetSlider from "../../Meeting/MeetSlider";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
@@ -13,17 +13,19 @@ import Trainee_Home from "../home/Home";
 import Navigation from "../TraineAdmin/navigation/navigation";
 import TraineUpload from "../UserTask/traineuploads";
 import COursesGroup from "../TraineAdmin/CoursesGroup/Tabs";
+import UserAccount from "../UsersSection/usernavigation/navigation";
 import Calendar from "../Calendar/Calendar";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { IoMdLogOut } from "react-icons/io";
 const TraineeDashboard = () => {
-  const trainee = {
-    name: "Robin Huion",
-  };
+  const location = useLocation();
+  const redirect = location?.state?.redirect;
   const [isDrawerOpen, setDrawerOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("home");
-  const [isLogoutOpen, setLogoutOpen] = useState(false);
-
+  const [isLogoutOpen, setLogoutOpen] = useState(false); // State to manage logout options visibility
+  const [activeTab, setActiveTab] = useState(redirect ? redirect : "home"); // State to manage active tab
+  const trainee = {
+    name: "Robin Huion", // Assuming one trainee for now
+  };
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
   };
@@ -31,10 +33,12 @@ const TraineeDashboard = () => {
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
-
   const toggleLogoutOptions = () => {
     setLogoutOpen(!isLogoutOpen);
   };
+  useEffect(() => {
+    if (redirect) setActiveTab(redirect);
+  }, [redirect]);
 
   const renderContent = () => {
     switch (activeTab) {
@@ -49,7 +53,7 @@ const TraineeDashboard = () => {
       case "approvals":
         return <TraineUpload />;
       case "user":
-        return <div>User Content</div>;
+        return <UserAccount />;
       case "settings":
         return <Navigation />;
       default:
@@ -190,10 +194,8 @@ const TraineeDashboard = () => {
                 </svg>
               </button>
             </div>
-            <div className="flex-1 bg-[#111827] flex items-center justify-center px-4 h-16">
-              <h1 className="text-xl text-white font-semibold">
-                {/* Trainee Dashboard */}
-              </h1>
+            <div className="flex-1 flex items-center justify-center px-4 h-16">
+              <h1 className="text-xl font-semibold">Trainee Dashboard</h1>
             </div>
             <div className="flex items-center bg-[#111827] h-16 px-4">
               <button

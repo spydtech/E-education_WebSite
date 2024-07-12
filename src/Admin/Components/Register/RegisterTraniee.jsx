@@ -1,5 +1,6 @@
 // src/components/RegisterTrainee.js
 import React, { useState } from 'react';
+import axios from 'axios'
 
 function generateUsername() {
     return Math.floor(100000 + Math.random() * 900000).toString();
@@ -19,17 +20,40 @@ const RegisterTrainee = () => {
     const [employee, setEmployee] = useState(null);
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [mobilenumber, setMobileNumber] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
+    const [error, setError] = useState('')
 
-    const handleAddEmployee = () => {
+    const handleAddEmployee = async () => {
         const username = generateUsername();
         const password = generatePassword();
         setEmployee({ username, password });
-        setFirstName('');
-        setLastName('');
-        setMobileNumber('');
-        setEmail('');
+
+        try {
+            const response = await axios.post('http://localhost:8080/trainee/register', {
+                userId: username,
+                password: password,
+                firstName,
+                lastName,
+                email,
+                phoneNumber
+            });
+
+            if (response.status === 200) {
+                setEmployee(response.data);
+                setFirstName('');
+                setLastName('');
+                setPhoneNumber('');
+                setEmail('');
+                setError('');
+                alert("Registered Successfully")
+            }
+
+
+        } catch (error) {
+            setError('Registration failed. Please try again.');
+            console.error('Error registering trainee:', error);
+        }
     };
 
     return (
@@ -55,8 +79,8 @@ const RegisterTrainee = () => {
                         <input
                             type="number"
                             placeholder="Mobile Number"
-                            value={mobilenumber}
-                            onChange={(e) => setMobileNumber(e.target.value)}
+                            value={phoneNumber}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
                             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-3"
                         />
                         <input

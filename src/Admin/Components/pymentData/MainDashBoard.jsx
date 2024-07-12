@@ -68,7 +68,7 @@ const Dashboard = () => {
             {card.amount}
           </p>
 
-          <p className="text-sm top-10 relative  ml-3">{card.Date}</p>
+          <p className="text-sm top-10 relative  ml-3 mb-8">{card.Date}</p>
         </div>
       ))}
 
@@ -84,7 +84,7 @@ const Dashboard = () => {
             {card.amount}
           </p>
 
-          <p className="text-sm top-10 relative  ml-3">{card.Date}</p>
+          <p className="text-sm top-10 relative  ml-3 mb-4">{card.Date}</p>
         </div>
       ))}
 

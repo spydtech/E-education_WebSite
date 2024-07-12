@@ -7,10 +7,24 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import PaymentDashboard from "./pymentData/MainDashBoard";
-import SealsReports from "./sealsRepotes2/coursestable";
+// import PaymentDashboard from "./pymentData/MainDashBoard";
+// import SealsReports from "./Reports/TableforAdmin";
 import AdminDashBoard from "./AdminDashBoard";
 import Orders from "../Views/Orders";
+import Users from "../Views/FilterUsers";
+// import { AccountCircle } from "@mui/icons-material";
+// import AccessField from "./AccessField";
+// import RegisterEmployee from "./Register/RegisterEmployee";
+// import RegisterTrainee from "./Register/RegisterTraniee";
+// import SalesReport from "./SalesReport";
+// import Meeting from "./Meet/Meeting";
+// import PaymentData from "./PaymentData";
+// import TotalSales from "./TotalSales";
+
+import PaymentDashboard from "./pymentData/MainDashBoard";
+import SealsReports from "./sealsRepotes2/coursestable";
+// import AdminDashBoard from "./AdminDashBoard";
+// import Orders from "../Views/Orders";
 import CreateGroup from "../Views/FilterUsers";
 import ExistingGroup from "../Views/GroupTable";
 import { AccountCircle, ExpandLess, ExpandMore } from "@mui/icons-material";

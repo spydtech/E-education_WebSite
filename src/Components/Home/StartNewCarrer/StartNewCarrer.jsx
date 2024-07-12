@@ -7,9 +7,10 @@ import { Link } from "react-router-dom";
 const StartNewCarrer = () => {
   return (
     <>
-      <div class="w-full md:px-16 pl-4  pb-16">
-        <span class="md:text-5xl text-2xl font-bold text-[#2A063D]  font-lora">
-          Start a new career with E-education &#8594;
+      <div class="w-full text-center  pb-16">
+        <span class="md:text-5xl text-2xl text-center font-bold text-[#2A063D]  font-lora">
+          Start a new <span className="text-[#f6ac14]">career</span> with
+          E-education
         </span>
       </div>
       <div className="flex md:flex-row flex-col justify-center items-center md:px-16 md:mb-24 md:gap-x-8 md:mx-16">
@@ -31,12 +32,8 @@ const StartNewCarrer = () => {
             </div>
           </div>
           <div className="mb-10">
-            <motion.button className=" group relative flex w-fit items-center gap-1.5 bg-[#2A063D] px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50">
-
-            <Link to="/pricing">
-
-              Start Now
-            </Link>
+            <motion.button className=" group relative flex w-fit items-center gap-1.5 bg-[#0098f1] px-4 py-2 text-white transition-colors ">
+              <Link to="/pricing">Start Now</Link>
               <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
             </motion.button>
           </div>

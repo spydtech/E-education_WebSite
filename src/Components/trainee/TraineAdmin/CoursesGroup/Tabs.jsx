@@ -18,8 +18,9 @@ const Tabs = () => {
     localStorage.setItem("numberOfCourses", numberOfCourses);
   }, [numberOfCourses]);
 
-  const activeClasses = "border-l  border-t border-r rounded-lg text-blue-600";
-  const inactiveClasses = "text-white hover:text-blue-700";
+  const activeClasses =
+    "bg-blue-500 text-white border-l border-t border-r rounded-t"; // Updated
+  const inactiveClasses = "text-blue-500 hover:text-blue-700";
 
   const handleTabClick = (tabNumber) => {
     setOpenTab(tabNumber);
@@ -37,7 +38,7 @@ const Tabs = () => {
           >
             <a
               href="#"
-              className={`bg-[#1F2937] rounded-lg w-auto inline-block py-2 px-4 font-semibold ${
+              className={`inline-block py-2 px-4 font-semibold ${
                 openTab === course.id ? activeClasses : inactiveClasses
               }`}
             >

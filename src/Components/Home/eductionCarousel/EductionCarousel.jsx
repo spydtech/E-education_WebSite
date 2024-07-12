@@ -1,6 +1,13 @@
 import React, { useEffect } from "react";
 import Glide from "@glidejs/glide";
-import { FaBrain, FaCode, FaDatabase, FaReact, FaPython, FaJs } from 'react-icons/fa';
+import {
+  FaBrain,
+  FaCode,
+  FaDatabase,
+  FaReact,
+  FaPython,
+  FaJs,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const courses = [
@@ -9,60 +16,58 @@ const courses = [
     description: "Practical generative AI applications",
     bgColor: "bg-blue-300",
     icon: <FaBrain className="text-blue-800" />,
-    link: "/data_Science/machine-Learning"
+    link: "/data_Science/machine-Learning",
   },
   {
     title: "Web Development",
     description: "Build dynamic, responsive websites",
     bgColor: "bg-green-300",
     icon: <FaCode className="text-green-800" />,
-    link: "/fullStack_WebDevelopment"
+    link: "/fullStack_WebDevelopment",
   },
   {
     title: "Data Science Fundamentals",
     description: "Introduction to data science concepts",
     bgColor: "bg-purple-300",
     icon: <FaDatabase className="text-purple-800" />,
-    link: "/data_Science/introduction-to-data-science"
+    link: "/data_Science/introduction-to-data-science",
   },
   {
     title: "React.js Mastery",
     description: "Master React.js for web development",
     bgColor: "bg-yellow-300",
     icon: <FaReact className="text-yellow-800" />,
-    link: "/reactjs"
+    link: "/reactjs",
   },
   {
     title: "Python Programming",
     description: "Learn Python for various applications",
     bgColor: "bg-red-300",
     icon: <FaPython className="text-red-800" />,
-    link: "/fullStack_WebDevelopment/fullStack-Python-Development"
+    link: "/fullStack_WebDevelopment/fullStack-Python-Development",
   },
   {
     title: "JavaScript Essentials",
     description: "Essential JavaScript programming skills",
     bgColor: "bg-indigo-300",
     icon: <FaJs className="text-indigo-800" />,
-    link: "/fullStack_WebDevelopment/full-stack-javascript"
+    link: "/fullStack_WebDevelopment/full-stack-javascript",
   },
   {
     title: "Machine Learning Algorithms",
     description: "Study machine learning algorithms",
     bgColor: "bg-pink-300",
     icon: <FaBrain className="text-pink-800" />,
-    link: "/data_Science/machine-Learning"
+    link: "/data_Science/machine-Learning",
   },
   {
     title: "Software Testing",
     description: "Techniques for effective software testing",
     bgColor: "bg-orange-300",
     icon: <FaDatabase className="text-orange-800" />,
-    link: "/software_testing"
+    link: "/software_testing",
   },
 ];
-
-
 
 export default function EducationCarousel() {
   useEffect(() => {
@@ -93,29 +98,26 @@ export default function EducationCarousel() {
   return (
     <>
       <div className="my-8 ">
-      <div className="text-xl lg:text-5xl font-semibold pb-4 text-center font-lora">
-  <span className="">Choose a course for you</span>
-</div>
-       
+        <div className="text-xl lg:text-5xl font-semibold pb-4 text-center font-lora">
+          <span className="">Choose a course for you</span>
+        </div>
       </div>
       <div className="glide-01 relative  mb-12 font-lora">
         <div className="overflow-hidden" data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap relative flex   overflow-hidden p-0">
-          {courses.map((course, index) => (
-          <Link
-          to = {`${course.link}`}
-            key={index}
-            className={`p-4 rounded-lg  ${course.bgColor} text-center cursor hover:shadow-2xl transform hover:-translate-y-2 transition-transform`}
-          >
-          <div className="flex justify-center items-center">
-          <div className="text-4xl mb-4">{course.icon}</div>
-          </div>
-            <h2 className="text-xl font-semibold mb-2">{course.title}</h2>
-            <p className="text-gray-800">
-             {course.description}!
-            </p>
-          </Link>
-        ))}
+            {courses.map((course, index) => (
+              <Link
+                to={`${course.link}`}
+                key={index}
+                className={`p-4 rounded-lg  ${course.bgColor} text-center cursor hover:shadow-2xl transform hover:-translate-y-2 transition-transform`}
+              >
+                <div className="flex justify-center items-center">
+                  <div className="text-4xl mb-4">{course.icon}</div>
+                </div>
+                <h2 className="text-xl font-semibold mb-2">{course.title}</h2>
+                <p className="text-gray-800">{course.description}!</p>
+              </Link>
+            ))}
           </ul>
         </div>
         <div

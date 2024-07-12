@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { RiCheckLine, RiPencilFill } from "react-icons/ri";
-import Accounts from "./accounts";
+// import Accounts from "./accounts";
 import Skills from "./skills";
 import DetailsPage from "./detailespage";
 
