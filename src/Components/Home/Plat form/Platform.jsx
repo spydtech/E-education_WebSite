@@ -109,9 +109,9 @@ function Platform() {
             <span className="inline-block text-[#F6AC14]">To Boost</span> Your
             Technical Skills
           </h1>
-          <div className="grid grid-cols-1 md:lg:grid-cols-2 md:p-20 gap-8 p-4">
+          <div className="grid grid-cols-1 md:lg:grid-cols-2 md:p-20 gap-8 p-4 ">
             <Link to="/student">
-              <div className="shyam w-full md:w-[438px] h-[406px] bg-white text-center p-4 font-sans transform hover:-translate-y-2 transition-transform">
+              <div className="shyam w-full md:w-[438px] h-[406px] shadow-2xl bg-white text-center p-4 font-sans transform hover:-translate-y-2 transition-transform">
                 <div className="flex justify-center items-center">
                   <img
                     src={IMG}
@@ -132,7 +132,7 @@ function Platform() {
             </Link>
 
             <Link to="/professional">
-              <div className="shyam w-full md:w-[438px] h-[406px] bg-white text-center p-4 font-sans transform hover:-translate-y-2 transition-transform">
+              <div className="shyam w-full md:w-[438px] h-[406px] shadow-2xl text-center p-4 font-sans transform hover:-translate-y-2 transition-transform">
                 <div className="flex justify-center items-center">
                   <img
                     className="h-[200px] w-[200px]"
