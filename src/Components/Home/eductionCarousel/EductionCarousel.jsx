@@ -169,6 +169,9 @@
 //     </>
 //   );
 // }
+
+
+
 import React, { useEffect } from "react";
 import Glide from "@glidejs/glide";
 import {
@@ -185,7 +188,7 @@ import "@glidejs/glide/dist/css/glide.theme.min.css";
 
 const courses = [
   {
-    title: "Generative AI ",
+    title: "Generative AI",
     description: "Practical generative AI applications",
     bgColor: "bg-blue-300",
     icon: <FaBrain className="text-[#18181b]" />,
@@ -199,7 +202,7 @@ const courses = [
     link: "/fullStack_WebDevelopment",
   },
   {
-    title: "Data Science ",
+    title: "Data Science",
     description: "Introduction to data science concepts",
     bgColor: "bg-purple-300",
     icon: <FaDatabase className="text-[#881337]" />,
@@ -220,14 +223,14 @@ const courses = [
     link: "/fullStack_WebDevelopment/fullStack-Python-Development",
   },
   {
-    title: "JavaScript ",
-    description: " JavaScript programming skills",
+    title: "JavaScript",
+    description: "JavaScript programming skills",
     bgColor: "bg-indigo-300",
     icon: <FaJs className="text-[#65a30d]" />,
     link: "/fullStack_WebDevelopment/full-stack-javascript",
   },
   {
-    title: "Machine Learning ",
+    title: "Machine Learning",
     description: "Study machine learning algorithms",
     bgColor: "bg-pink-300",
     icon: <FaBrain className="text-[#dc2626]" />,
@@ -244,20 +247,24 @@ const courses = [
 
 export default function EducationCarousel() {
   useEffect(() => {
-    const slider = new Glide(".glide-01", {
+    const slider = new Glide(".glide", {
       type: "carousel",
       focusAt: "center",
-      perView: 5, // Show 5 cards on large screens
+      perView: 5,
       autoplay: 3000,
       animationDuration: 700,
-      gap: 5,
+      gap:5,
       breakpoints: {
         1024: {
-          perView: 2, // Show 2 cards on medium screens
+          perView: 3,
         },
         768: {
-          perView: 1, // Show 1 card on small screens
+          perView: 2,
         },
+        640: {
+          perView: 1,
+        },
+
       },
     });
 
@@ -273,7 +280,7 @@ export default function EducationCarousel() {
       <style>
         {`
           .glide__bullet {
-            background-color: #2563eb; /* Orange 400 */
+            background-color: #2563eb;
             width: 12px;
             height: 12px;
             border-radius: 50%;
@@ -281,40 +288,34 @@ export default function EducationCarousel() {
             transition: all 0.1s;
           }
           .glide__bullet--active {
-            width: 30px; /* Increase width when active */
-            height: 10px; /* Keep height the same */
-            border-radius: 5px; /* Make it more of an oval when active */
-            background-color: #ff8c00; /* Darker shade of orange */
+            width: 30px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: #ff8c00;
           }
         `}
       </style>
       <div className="my-8">
-        <div className="text-xl text-gray-700 lg:text-4xl font-semibold pb-4 items-center text-center font-lora">
-          <div>Choose a {" "}
-            <span class="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] inline-block text-transparent bg-clip-text">
-
-            course
-            </span>
-            
-            {" "} for you</div>
+        <div className="text-xl text-gray-700 lg:text-5xl font-semibold pb-4 items-center text-center font-lora">
+          <span>Choose a course for you</span>
         </div>
       </div>
-      <div className="glide-01 relative  mb-12 font-lora">
-        <div className="overflow-hidden" data-glide-el="track">
-          <ul className="glide__slides  flex p-0 justify-center">
+      <div className="glide relative mb-12 font-lora">
+        <div className="glide__track overflow-hidden md:pl-80 sm:pl-64 lg:pl-80  pl-8" data-glide-el="track">
+          <ul className="glide__slides  flex p-0  justify-center">
             {courses.map((course, index) => (
-              <li key={index} className="glide__slide  flex-none pt-10">
+              <li key={index} className="glide__slide   flex-none pt-10">
                 <Link
                   to={course.link}
-                  className="group shadow-sm relative w-[268px] h-[168px] m-4 bg-blue-600  hover:ring duration-400 hover:scale-105 flex flex-col items-center justify-center p-4 rounded-lg text-center cursor-pointer hover:shadow-md transform hover:-translate-y-2 transition-transform"
+                  className="group shadow-sm relative w-[268px]  h-[168px] m-4 bg-blue-600 hover:ring duration-400 hover:scale-105 flex flex-col items-center justify-center p-4 rounded-lg text-center cursor-pointer hover:shadow-md transform hover:-translate-y-2 transition-transform"
                 >
-                  <div className="flex justify-center  items-center w-[87px] h-[87px] rounded-full absolute top-[-40px] border-2 border-blue-500 bg-white group-hover:shadow-md transform duration-300">
+                  <div className="flex justify-center items-center w-[87px] h-[87px] rounded-full absolute top-[-40px] border-2 border-blue-500 bg-white group-hover:shadow-md transform duration-300">
                     <span className="text-3xl md:text-5xl transform duration-500">
                       {course.icon}
                     </span>
                   </div>
                   <div className="flex flex-col text-white items-center justify-center mt-8 p-4">
-                    <h2 className="text-xl capitalize font-bold text-shadesOfBlue dark:text-slate-800 pt-[] my-4">
+                    <h2 className="text-xl capitalize font-bold text-shadesOfBlue dark:text-slate-800 my-4">
                       {course.title}
                     </h2>
                     <p className="text-center dark:text-white">
@@ -327,10 +328,19 @@ export default function EducationCarousel() {
           </ul>
         </div>
         <div className="pt-20">
-          <div className="glide__bullets flex justify-center mt-4" data-glide-el="controls[nav]">
-            {Array(3).fill().map((_, index) => (
-              <button key={index} className="glide__bullet mx-1" data-glide-dir={`=${index}`}></button>
-            ))}
+          <div
+            className="glide__bullets flex justify-center mt-4"
+            data-glide-el="controls[nav]"
+          >
+            {Array(3)
+              .fill()
+              .map((_, index) => (
+                <button
+                  key={index}
+                  className="glide__bullet mx-1"
+                  data-glide-dir={`=${index}`}
+                ></button>
+              ))}
           </div>
         </div>
       </div>

@@ -1,60 +1,47 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import homeimage from "../../assetss/tryademo/demo.png";
+import { FaArrowUp } from "react-icons/fa";
+
 const TryademoHero = () => {
   return (
-    <>
-      
-      <section className="relative h-screen flex flex-col items-center justify-center text-center text-white">
-        <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
-          <video
-            className="min-w-full min-h-full absolute object-cover"
-            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-            // src="https://youtu.be/92JRcqcd-Pw?si=9ZO3XhQnFiN90O0c"
-            type="video/mp4"
-            autoPlay
-            muted
-            loop
+    <div className="bg-white w-full h-full">
+      <div className="relative min-h-screen flex flex-col md:flex-row items-center justify-center px-4 md:px-8 py-12">
+        {/* Left Side: Image */}
+        <div className="flex-shrink-0 md:w-1/2 flex items-center justify-center mb-8 md:mb-0 relative">
+          <img
+            src={homeimage}
+            alt="Home"
+            className="object-cover w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] max-w-full"
           />
         </div>
-        <div className="video-content space-y-2 z-10 flex justify-center items-center flex-col">
-          <div className="font-bold text-xl md:text-6xl">Discover Your Future in E-education</div>
-          <div className="font-light text-3xl">Join Our Interactive Demo</div>
-          <div className="font-light text-xl w-[600px]">
-            Step into the world of technology with our hands-on demo. Explore the
-            fundamentals of coding, web development, and more. Perfect for
-            beginners and aspiring tech professionals!
-          </div>
-          <button className="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded">
-         <Link to = "/pricing">
 
-            Eroll Now
-         </Link>
+        {/* Right Side: Content */}
+        <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6 z-10">
+          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-4xl font-extrabold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            Explore our{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-radial from-yellow-700 via-yellow-500 to-yellow-300">
+              E-education
+            </span>{" "}
+            <span className="bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+              Courses
+            </span>
+          </h1>
+
+          <div className="text-lg sm:text-xl text-yellow-300 md:text-2xl font-medium">
+            Join Our Interactive Demo
+          </div>
+
+          <p className="text-md sm:text-lg md:text-xl font-semibold text-gray-800">
+            Step into the world-class Technology
+          </p>
+
+          <button className="flex items-center mt-6 px-4 py-2 sm:px-6 sm:py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-transform transform hover:scale-105">
+            Explore now <FaArrowUp className="ml-2 text-xl" />
           </button>
         </div>
-      </section>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-            .video-docker video {
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-            }
-            .video-docker::after {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              top: 0;
-              left: 0;
-              background: rgba(0, 0, 0, 0.6);
-              z-index: 1;
-            }
-          `
-        }}
-      />
-    </>
+      </div>
+    </div>
   );
-}
+};
 
 export default TryademoHero;

@@ -9,7 +9,7 @@ import Cybersecurity from "./StartNew Car/Cybersecurity/Cybersecurity";
 import UiUx from "./StartNew Car/Ui-Ux/UiUx";
 import Aurora from "./aurora/Aurora";
 import Footer from "./footer/Footer";
-import FinalTestimonials from "./testimonials/FinalTestimonials";
+import FinalTestimonials from "./testimonials/Testimonialss";
 import Platform from "./Plat form/Platform";
 import Pricing from "./Pricing/Pricing";
 import SlideInTimer from "./Timer/SlideInTimer";
@@ -161,7 +161,7 @@ function Home() {
 
       <Pricing />
       <SlideInTimer />
-      {!auth.user && <SingupHome />}
+      {/* {!auth.user && <SingupHome />} */}
       <FinalTestimonials />
       <Footer />
     </>
