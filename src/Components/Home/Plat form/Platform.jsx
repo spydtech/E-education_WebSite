@@ -9,16 +9,16 @@ function Platform() {
     <>
       <Certified />
       <EducationCarousel />
-      <div className="bg-[#ffdf9f] font-sans h-auto md:h-[625px] justify-center items-center flex py-10 md:py-0">
+      <div className="bg-[#ffdf9f] font-sans h-auto md:h-[625px] flex justify-center items-center py-10 md:py-0">
         <div>
-          <h1 className="md:lg:xl:text-4xl text-2xl font-bold text-center   pt-10 font-sans">
+          <h1 className="text-2xl md:text-4xl font-bold text-center pt-10">
             The perfect Platform{" "}
             <span className="inline-block text-[#F6AC14]">To Boost</span> Your
             Technical Skills
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 p-4 md:p-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 md:p-10 justify-center items-center">
             <Link to="/student">
-              <div className="shyam overflow-hidden w-full md:w-[420px] h-[385px] bg-white text-center p-4 font-sans transform hover:-translate-y-2 transition-transform">
+              <div className="shyam overflow-hidden w-full lg:w-[420px] h-[385px] bg-white text-center p-4 transform hover:-translate-y-2 transition-transform">
                 <div className="flex justify-center items-center">
                   <img
                     src={IMG}
@@ -39,7 +39,7 @@ function Platform() {
             </Link>
 
             <Link to="/professional">
-              <div className="shyam overflow-hidden w-full md:w-[420px] h-[385px] bg-white text-center p-4 font-sans transform hover:-translate-y-2 transition-transform">
+              <div className="shyam overflow-hidden w-full lg:w-[420px] h-[385px] bg-white text-center p-4 transform hover:-translate-y-2 transition-transform">
                 <div className="flex justify-center items-center">
                   <img
                     className="h-[180px] w-[180px]"
@@ -51,7 +51,7 @@ function Platform() {
                   Stay ahead of the curve by mastering emerging technologies and
                   techniques that drive innovation.
                 </p>
-                <div className="bar  hover:bg-[#f6ac14] ">
+                <div className="bar hover:bg-[#f6ac14]">
                   <div className="emptybar"></div>
                   <div className="filledbar"></div>
                   <span className="bar-text">Professionals</span>
@@ -67,7 +67,6 @@ function Platform() {
           position: relative;
           left: -16px;
           height: 60px;
-
           width: 259px;
           border-radius: 0px 22px 22px 0px;
           overflow: hidden;
