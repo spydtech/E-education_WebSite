@@ -727,10 +727,6 @@
 
 // export default UsersRolesTable;
 
-
-
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -899,7 +895,7 @@ function UsersRolesTable() {
     groups.push(newGroup);
     localStorage.setItem("groups", JSON.stringify(groups));
 
-    navigate("/trainee-courses");
+    navigate("/admin/users/existing-group");
   };
 
   const filteredUserData = userData.filter(
@@ -958,11 +954,11 @@ function UsersRolesTable() {
 
   return (
     <div className="overflow-x-auto">
-      <h1 className="text-center text-black text-xl font-bold py-2">
+      {/* <h1 className="text-center text-black text-xl font-bold py-2">
         Create New Group
-      </h1>
+      </h1> */}
       {!showGroupForm && (
-        <div className="text-center">
+        <div className="text-center pt-10">
           <button
             className="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600"
             onClick={() => setShowGroupForm(true)}

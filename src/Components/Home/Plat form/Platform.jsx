@@ -18,7 +18,7 @@ function Platform() {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 p-4 md:p-10">
             <Link to="/student">
-              <div className="shyam w-full md:w-[420px] h-[385px] bg-white text-center p-4 font-sans transform hover:-translate-y-2 transition-transform">
+              <div className="shyam overflow-hidden w-full md:w-[420px] h-[385px] bg-white text-center p-4 font-sans transform hover:-translate-y-2 transition-transform">
                 <div className="flex justify-center items-center">
                   <img
                     src={IMG}
@@ -39,7 +39,7 @@ function Platform() {
             </Link>
 
             <Link to="/professional">
-              <div className="shyam w-full md:w-[420px] h-[385px] bg-white text-center p-4 font-sans transform hover:-translate-y-2 transition-transform">
+              <div className="shyam overflow-hidden w-full md:w-[420px] h-[385px] bg-white text-center p-4 font-sans transform hover:-translate-y-2 transition-transform">
                 <div className="flex justify-center items-center">
                   <img
                     className="h-[180px] w-[180px]"

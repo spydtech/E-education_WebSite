@@ -158,7 +158,7 @@ function App() {
 
           {/* admin */}
           <Route path="/admin/*" element={<AdminRouter />} />
-          <Route path="/trainee-courses" element={<TraineeCourses />} />
+          {/* <Route path="/trainee-courses" element={<TraineeCourses />} /> */}
           <Route path="/linechart" element={<CountOfSeals />} />
           <Route path="/countofproducts" element={<CountOfProduct />} />
           <Route path="/countofcustomers" element={<CountOfCustomers />} />
