@@ -1,110 +1,115 @@
-  import React from "react";
-  import { BiBarChartSquare } from "react-icons/bi";
-  import { Link } from "react-router-dom";
-  import { SiPaloaltosoftware } from "react-icons/si";
-  import {
-    IoLogoElectron,
-    IoCodeWorking,
-    IoFlask,
-    IoGameController,
-    IoLockClosed,
-    IoAnalyticsSharp,
-    IoCloudSharp,
-    IoCodeSlash,
-    IoConstructSharp,
-    IoHardwareChipSharp,
-    IoShieldCheckmark,
-    IoArrowUndoCircleSharp,
-    IoWifiSharp,
-  } from "react-icons/io5";
+import React from "react";
 
-  const StudentCourses = () => {
-    const courseData = [
-      {
-        title: "Full Stack Web Development",
-        icon: <IoLogoElectron />,
-        description:
-          "Build dynamic websites & applications with front-end & back-end skills.",
-        link: "/fullStack_WebDevelopment",
-      },
-      {
-        title: "Data Science",
-        icon: <BiBarChartSquare />,
-        description:
-          "Master data analytics essentials for informed decisions & success.",
-        link: "/data_Science",
-      },
-    
-      {
-        title: "Cyber Security",
-        icon: <IoLockClosed />,
-        description:
-          "Gain understanding of cybersecurity concepts & best practices.",
-        link: "/cyber_security",
-      },
-      {
-        title: "Ethical Hacking",
-        icon: <IoShieldCheckmark />,
-        description:
-          "Learn ethical hacking: identify vulnerabilities & strengthen systems.",
-        link: "/ethical_Hacking",
-      },
-      {
-        title: "Network Security",
-        icon: <IoWifiSharp />,
-        description:
-          "Discover principles of network security: encryption, firewalls, IDS.",
-        link: "/network_security",
-      }, {
-        title: "Software Testing",
-        icon: <SiPaloaltosoftware />,
-        description:
-          "software application functions correctly and meets specified requirements.",
-        link: "/software_Testing",
-      },
-    
-    ];
+import fullstack from "../../../assetss/studentCourses/full stack.png";
+import science from "../../../assetss/studentCourses/data-science.png";
+import cyber from "../../../assetss/studentCourses/cyber-security (1).png";
+import ethical from "../../../assetss/studentCourses/hacker.png";
+import testing from "../../../assetss/studentCourses/testing.png";
+import security from "../../../assetss/studentCourses/cyber-security.png";
+import { Link } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi";
+import { motion } from "framer-motion";
 
-    return (
-      <>
-        <div className="text-center mb-24">
-          <span className="block  text-xs md:text-sm text-indigo-500 font-medium">
-            Top Courses in Demand in India
+const StudentCourses = () => {
+  const courseData = [
+    {
+      title: "Full Stack Web Development",
+      image: fullstack,
+      description:
+        "Build dynamic websites & applications with front-end & back-end skills.",
+      link: "/fullStack_WebDevelopment",
+    },
+    {
+      title: "Data Science",
+      image: science,
+      description:
+        "Master data analytics essentials for informed decisions & success.",
+      link: "/data_Science",
+    },
+    {
+      title: "Cyber Security",
+      image: cyber,
+      description:
+        "Gain understanding of cybersecurity concepts & best practices.",
+      link: "/cyber_security",
+    },
+    {
+      title: "Ethical Hacking",
+      image: ethical,
+      description:
+        "Learn ethical hacking: identify vulnerabilities & strengthen systems.",
+      link: "/ethical_Hacking",
+    },
+    {
+      title: "Network Security",
+      image: security,
+      description:
+        "Discover principles of network security: encryption, firewalls, IDS.",
+      link: "/network_security",
+    },
+    {
+      title: "Software Testing",
+      image: testing,
+      description:
+        "Ensure software application functions correctly and meets specified requirements.",
+      link: "/software_Testing",
+    },
+  ];
+
+  return (
+    <>
+      <div className="my-10 mb-16">
+        <div className="text-center text-black text-3xl font-bold m-4 my-10">
+          <span className="text-black">Popular Skill </span>
+          <span className="bg-gradient-to-r from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
+            Enhancement
           </span>
-          <h3 className="text-2xl md:text-4xl font-semibold text-gradient">
-            Popular Skill Enhancement Programs
-          </h3>
+          <span> Programs</span>
         </div>
-        <div className="flex flex-wrap justify-center items-start gap-12">
+        <div
+          id="maindiv"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-8 justify-center items-center"
+        >
           {courseData.map((course, index) => (
             <div
               key={index}
-              className="flex relative flex-col w-80 rounded-xl bg-white shadow-2xl mx-4 my-4 group-hover:translate-x-full duration-500  transition  hover:bg-[#48cae4] hover:text-white"
+              id="card"
+              className="w-full sm:w-[357px] lg:w-[380px] mx-2 h-[417px] lg:h-[400px] bg-[#0098f1] hover:bg-[#f6ac14] rounded-lg p-4 group"
             >
-              <div class="relative mx-4 -mt-12 flex justify-center items-center w-24 h-24 overflow-hidden rounded-lg bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-[#006d77]">
-                <div className="text-4xl"> {course.icon}</div>
+              <div className="rounded-full w-[80px] h-[80px] bg-[#d2efff] relative flex justify-center items-center mb-4">
+                <img
+                  src={course.image}
+                  alt={course.title}
+                  className="w-[48px] h-[48px]"
+                />
               </div>
-              <div className="p-6">
-                <h5 className="mb-2 font-sans text-xl font-semibold text-blue-gray-900">
+              <div>
+                <p className="text-white text-2xl font-bold mt-4">
                   {course.title}
-                </h5>
-                <p className="font-sans text-base font-light  ">
-                  {course.description}
                 </p>
+                <p className="text-white mt-4">{course.description}</p>
               </div>
-              <div className="p-6 pt-0">
-                
-                <Link to={course.link}>
-                  <button className="select-none rounded-lg bg-[#006d77] py-3 px-6 text-xs font-bold uppercase text-white shadow-md transition duration-300 hover:bg-blue-600 focus:opacity-85">
-                  Start Learning
-                  </button>
-                </Link>
+              <div className="flex justify-center items-center mt-20 relative rounded-lg">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="rounded-lg w-[265px] bg-[#d2efff] group-hover:bg-[#fed19c] h-[70px] px-4 text-2xl group flex justify-center items-center gap-1.5 text-[#0098f1] py-2 transition-colors"
+                >
+                  <Link
+                    to={course.link}
+                    className="flex items-center gap-1.5  group-hover:text-white"
+                  >
+                    Start Learning
+                    <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+                  </Link>
+                </motion.button>
               </div>
             </div>
           ))}
         </div>
-      </>
-    );
-  };
+      </div>
+    </>
+  );
+};
 
-  export default StudentCourses;
+export default StudentCourses;
