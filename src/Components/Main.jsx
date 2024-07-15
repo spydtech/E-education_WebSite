@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Boy1 from "./Home/Boy1";
 import Girl from "../assetss/Home/girl.png"
+import Vector1 from "../assetss/Home/Vector1.png"
+import Vector2 from "../assetss/Home/Vector2.png"
+import thumbup from "../assetss/Home/thumbup.png"
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+// import "./main.css"
 function Main() {
   return (
     <>
@@ -53,10 +58,11 @@ function Main() {
             </div>
 
             {/* <!--   Image Section     --> */}
-            <div className="lg:inset-y-0 lg:right-0 lg:w-1/2 md:flex md:justify-center md:items-center">
+            {/* <div className="lg:inset-y-0 lg:right-0 lg:w-1/2 md:flex md:justify-center md:items-center">
       <div className="relative ">
-        <div className="absolute inset-0 rounded-full border border-blue-600 w-[400px] h-[400px]"></div>
+        <div className="absolute rounded-full border border-blue-600 w-[400px] h-[400px] right-[5px] bottom-[5px]"></div>
         <div className="absolute inset-0 rounded-full bg-blue-500 w-[400px] h-[400px]"></div>
+       
         <div className="relative z-10 flex flex-col items-center justify-center">
           <div>
             <img
@@ -66,10 +72,21 @@ function Main() {
             />
           </div>
         </div>
+        <div className="absolute inset-2 rounded-full bg-[#F6AC14] w-[80px] h-[80px] right-[8px] bottom-[30px]"></div>
       </div>
-    </div>
+    </div> */}
 
-            {/* <!--   End of Image Section     --> */}
+<div className="relative lg:inset-y-0 lg:right-0 lg:h-full  lg:w-1/2 md:flex md:justify-center md:items-center rounded-full">
+  <div className="absolute inset-0 bg-cover bg-no-repeat " style={{ backgroundImage: `url(${Vector2})` }}></div>
+  <div className="absolute inset-0 bg-cover bg-no-repeat" style={{ backgroundImage: `url(${Vector1})` }}></div>
+  
+  <div className="relative flex justify-center items-center w-full h-full">
+    <img src={Girl} alt="" className="relative z-20" />
+  </div>
+</div>
+
+
+
           </div>
         </section>
       </div>
