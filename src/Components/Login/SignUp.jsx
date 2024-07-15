@@ -1,45 +1,160 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import {
-  register,
-  verifyOtp,
-  getUser,
-  checkEmail,
-} from "../../State/Auth/Action"; // Import the Redux action creators
-import { useNavigate } from "react-router-dom";
-import Modal from "react-modal"; // Import react-modal
-import Navbar from "../Navbar";
-import student from "../../assets/singup1.svg";
+// import React, { useState } from "react";
+// import { Link, useNavigate } from "react-router-dom";
+// import { useDispatch } from "react-redux";
+// import Navbar from "../Navbar";
+// import IMG from "../../assets/E- education logo .png";
+// import { login } from "../../State/Auth/Action";
+
+// function SignUp() {
+//   const dispatch = useDispatch();
+//   const navigate = useNavigate();
+//   const [userData, setUserData] = useState({
+//     firstName: "",
+//     lastName: "",
+//     email: "",
+//     password: "",
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setUserData((prevState) => ({
+//       ...prevState,
+//       [name]: value,
+//     }));
+//   };
+
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+//     const data = new FormData(event.currentTarget);
+//     const userData = {
+//       firstName: data.get("firstName"),
+//       lastName: data.get("lastName"),
+//       email: data.get("email"),
+//       password: data.get("password"),
+//     };
+
+//     // Store credentials in local storage
+//     localStorage.setItem("userCredentials", JSON.stringify(userData));
+
+//     dispatch(login(userData));
+//     navigate("/");
+//   };
+
+//   return (
+//     <div>
+//       <div className=" text-gray-900 flex justify-center">
+//         <div className="bg-white w-[1000px] sm:w-[1200px] md:w-[1400px] lg:w-[1600px] xl:w-[1800px] shadow sm:rounded-lg flex justify-start flex-1">
+//           <div>
+//             <div className=" flex flex-col items-start ml-10">
+//               <div>
+//                 <img src={IMG} className="w-[400px] " alt="Logo" />
+//               </div>
+//               <div className="flex items-start justify-start mb-2">
+//                 <span className="bg-gradient-to-r text-4xl font-bold pb-2 from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
+//                   Sign Up now
+//                 </span>
+//               </div>
+//               <span className="mb-3">Hi, Welcome</span>
+
+//               <form onSubmit={handleSubmit} className="w-full flex-1 mt-5">
+//                 <div className="flex flex-col items-center">
+//                   <label className="text-[#F6AC14] font-bold  w-[500px] text-left mb-1">
+//                     First Name
+//                   </label>
+//                   <input
+//                     id="firstName"
+//                     label="firstName"
+//                     name="firstName"
+//                     type="text"
+//                     placeholder="FirstName"
+//                     className="w-[500px] mb-4 mr-4 px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+//                     value={userData.firstName}
+//                     onChange={handleChange}
+//                   />
+//                   <label className="text-[#F6AC14] font-bold  w-[500px] text-left mb-1">
+//                     LastName
+//                   </label>
+//                   <input
+//                     id="lastName"
+//                     label="lastName"
+//                     name="lastName"
+//                     type="text"
+//                     placeholder="LastName"
+//                     className="w-[500px] mb-4 mr-4 px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+//                     value={userData.lastName}
+//                     onChange={handleChange}
+//                   />
+//                   <label className="text-[#F6AC14] font-bold  w-[500px] text-left mb-1">
+//                     Email
+//                   </label>
+//                   <input
+//                     id="email"
+//                     label="Email"
+//                     name="email"
+//                     type="email"
+//                     placeholder="email"
+//                     className="w-[500px] mb-4 mr-4 px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+//                     value={userData.email}
+//                     onChange={handleChange}
+//                   />
+//                   <label className="text-[#F6AC14] font-bold  w-[500px] text-left mb-1">
+//                     Password
+//                   </label>
+//                   <input
+//                     type="password"
+//                     id="password"
+//                     name="password"
+//                     label="Password"
+//                     placeholder="password"
+//                     className="w-[500px] mb-4 mr-4 px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+//                     value={userData.password}
+//                     onChange={handleChange}
+//                   />
+
+//                   <button
+//                     type="submit"
+//                     className="mt-5 mr-4 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+//                   >
+//                     <span className="ml-3">Send OTP</span>
+//                   </button>
+//                 </div>
+//               </form>
+
+//               <button className="w-full max-w-xs font-bold shadow-sm rounded-lg bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline mt-5"></button>
+//             </div>
+//           </div>
+//           <div className="flex-1 mt-40  text-center hidden lg:flex">
+//             <div
+//               className="  w-full  bg-center bg-no-repeat"
+//               style={{
+//                 backgroundImage:
+//                   "url('https://s3-alpha-sig.figma.com/img/0ba4/acc9/22ae30233428f93ea97ee61bed1f1368?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FCbWPiAaKxLjj3vrmZV1zupjmK~2HmElPQywLV9jfz5deFv6mRXEiuFp15TKa4Mlek3c3ctsL9pW~BTsISI5cgjmhN0oatAc3cXcSO5uvTEGxoIcGwbGyOGiTGP9IrnWiMBb~wAZq1P-NB9RsD0IRihA0tCkF~iasBUhxumSJ-QA5Ao0~BfPb8FUp2c2avzIAJO9VkWWStuIbp2C9-4y8t11E9QXJayELfz6MrQhaYdod3W~udjHAFqa-D5Rqp05p9ADjZgDH6FlQE-hTT6y5laBkhisUwEvttRx9cWT9dmBRKB350XtHYq3DsWWE6b0KrYvaBgUNRjLL6X6bT2A0g__')",
+//               }}
+//             ></div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default SignUp;
+
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import IMG from "../../assets/E- education logo .png";
+import { login } from "../../State/Auth/Action";
 
-Modal.setAppElement("#root"); // Set the root element for react-modal
-
-const SignUp = () => {
+function SignUp() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const jwt = localStorage.getItem("jwt");
-  const { auth } = useSelector((store) => store);
-  const registrationStatus = useSelector(
-    (state) => state?.registration?.status
-  ); // Use optional chaining to handle undefined state
-  const registrationError = useSelector((state) => state?.registration?.error); // Get registration error from Redux state
   const [userData, setUserData] = useState({
-    userName: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
   });
-  const inputRefs = useRef([]); // State for showing OTP modal
-
-  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
-  const [error, setError] = useState("");
-  const [otpSent, setOtpSent] = useState(false);
-  // const [showOtpModal, setShowOtpModal] = useState(false); // State for showing OTP modal
-  useEffect(() => {
-    if (jwt) {
-      dispatch(getUser(jwt));
-    }
-  }, [jwt, auth.jwt, dispatch]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -49,233 +164,122 @@ const SignUp = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    dispatch(register(userData));
-    setOtpSent(true);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const userData = {
+      firstName: data.get("firstName"),
+      lastName: data.get("lastName"),
+      email: data.get("email"),
+      password: data.get("password"),
+    };
+
+    // Store credentials in local storage
+    localStorage.setItem("userCredentials", JSON.stringify(userData));
+
+    dispatch(login(userData));
+    navigate("/");
   };
 
-  const handleOTPEnter = (e, index) => {
-    const value = e.target.value;
-    const newOtp = [...otp];
-    newOtp[index] = value;
-    setOtp(newOtp.join("").slice(0, 6));
-
-    // Auto focus next input
-    if (index < 5 && value) {
-      inputRefs.current[index + 1].focus(); // Focus on the next input box
-    }
-  };
-
-  const handleOtpVerification = async () => {
-    dispatch(verifyOtp({ email: userData.email, otp })) // Dispatch the verifyOtp action
-      .then(() => {
-        // Redirect to home page upon successful OTP verification
-        navigate("/");
-      })
-      .catch((err) => {
-        setError(err.message || "OTP verification failed.");
-      });
-  };
   return (
-    <>
-      <Navbar />
-      <div className="grid  grid-cols-1 md:grid-cols-2 font-poppins min-w-screen min-h-screen dark:bg-gray-900">
-        <div className=" py-2   flex justify-center ">
-          <img
-            src={student}
-            className=" md:w-auto md:h-auto lg:w-auto lg:h-auto w-96 h-96"
-            alt="Student"
-          />
-        </div>
-
-        <div className="flex justify-center ">
-          <div className="max-w-md  ">
-            {/*  */}
-            <div id="back-div" className=" rounded-lg ">
-              <div className="bg-white  border-[20px] border-transparent rounded-[20px] dark:bg-gray-900  shadow-lg xl:p-10 2xl:p-10 lg:px-10 lg:py-0  md:p-10 sm:p-0 ">
-                <div className=" ">
-                  <img src={IMG} className="w-56 mx-auto " alt="Logo" />
-                </div>
-                <h1 className="font-Calistoga  pb-6 text-violet-600  text-4xl dark:text-gray-400 text-center cursor-default">
-                  Sign Up
-                </h1>
-                <form onSubmit={handleSubmit}>
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="mb-2 dark:text-gray-400 text-lg font-NotoSans"
-                    >
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      label="LastName"
-                      name="firstName"
-                      placeholder="Lastname"
-                      value={userData.firstName}
-                      onChange={handleChange}
-                      id="firstName"
-                      className="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="mb-2 dark:text-gray-400 text-lg font-NotoSans"
-                    >
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      label="LastName"
-                      name="lastName"
-                      placeholder="Lastname"
-                      value={userData.lastName}
-                      onChange={handleChange}
-                      id="lastName"
-                      className="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="mb-2 dark:text-gray-400 text-lg font-NotoSans"
-                    >
-                      Email
-                    </label>
-                    <input
-                      id="email"
-                      className="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      value={userData.email}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="password"
-                      className="mb-2 dark:text-gray-400 text-lg font-NotoSans"
-                    >
-                      Password
-                    </label>
-                    <input
-                      id="password"
-                      className="border dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 p-3 shadow-md placeholder:text-base border-gray-300 rounded-lg w-full focus:scale-105 ease-in-out duration-300"
-                      type="password"
-                      name="password"
-                      placeholder="Password"
-                      value={userData.password}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <button
-                    className="font-Calistoga bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg mt-6 p-2 text-white rounded-lg w-full hover:scale-105 hover:from-purple-500 hover:to-blue-500 transition duration-300 ease-in-out"
-                    type="submit"
-                  >
-                    Send OTP
-                  </button>
-                  {registrationStatus === "failure" && registrationError && (
-                    <div className="mt-6 text-center text-red-500">
-                      {registrationError}
-                    </div>
-                  )}
-                </form>
-                {otpSent && (
-                  <div className="modal-content">
-                    <div className="mt-4">
-                      <p>Enter OTP:</p>
-                      {Array.from({ length: 6 }).map((_, index) => (
-                        <input
-                          key={index}
-                          type="text"
-                          maxLength="1"
-                          className="w-12 h-12 text-2xl border border-gray-300 rounded-md shadow-sm text-center"
-                          value={otp[index] || ""}
-                          onChange={(e) => handleOTPEnter(e, index)}
-                          ref={(el) => (inputRefs.current[index] = el)}
-                        />
-                      ))}
-                    </div>
-                    <button
-                      onClick={handleOtpVerification}
-                      className="w-full bg-blue-500 text-white p-2 mt-4 rounded"
-                    >
-                      Verify OTP & Register
-                    </button>
-                    {/* OTP verification error */}
-                    {error && <div className="mt-2 text-red-500">{error}</div>}
-                  </div>
-                )}
-
-                <div className="flex flex-col mt-4 items-center justify-center text-sm">
-                  <h3>
-                    <span className="cursor-default dark:text-gray-300">
-                      Have an account?
-                    </span>
-                    <Link
-                      className="group text-blue-400 transition-all duration-100 ease-in-out"
-                      to="/Login"
-                    >
-                      <span className="bg-left-bottom ml-1 bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                        Log In
-                      </span>
-                    </Link>
-                  </h3>
-                </div>
-
-                <div
-                  id="third-party-auth"
-                  className="flex items-center justify-center mt-5 flex-wrap"
-                >
-                  <button
-                    href="#"
-                    className="hover:scale-105 ease-in-out duration-300 shadow-lg p-2 rounded-lg m-1"
-                  >
-                    <img
-                      className="max-w-[25px]"
-                      src="https://ucarecdn.com/8f25a2ba-bdcf-4ff1-b596-088f330416ef/"
-                      alt="Google"
-                    />
-                  </button>
-                </div>
-
-                <div className="text-gray-500 flex text-center flex-col mt-4 items-center text-sm">
-                  <p className="cursor-default">
-                    By signing in, you agree to our
-                    <a
-                      className="group text-blue-400 transition-all duration-100 ease-in-out"
-                      href="#"
-                    >
-                      <span className="mx-1 cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                        Terms
-                      </span>
-                    </a>
-                    and
-                    <a
-                      className="group text-blue-400 transition-all duration-100 ease-in-out"
-                      href="#"
-                    >
-                      <span className="ml-1 cursor-pointer bg-left-bottom bg-gradient-to-r from-blue-400 to-blue-400 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                        Privacy Policy
-                      </span>
-                    </a>
-                  </p>
-                </div>
+    <div className="relative min-h-screen flex items-center justify-center ">
+      <div className="text-gray-900 flex justify-center w-full">
+        <div className="bg-white w-full max-w-[1000px] sm:max-w-[1200px] md:max-w-[1400px] lg:max-w-[1600px] xl:max-w-[1800px] shadow sm:rounded-lg flex flex-col lg:flex-row lg:gap-8">
+          <div className="p-4 sm:p-6 lg:p-8 flex-1">
+            <img
+              src={IMG}
+              className="w-[300px] sm:w-[350px] md:w-[400px]"
+              alt="Logo"
+            />
+            <div className="flex flex-col items-start mt-4">
+              <div className="mb-2">
+                <span className="bg-gradient-to-r text-3xl md:text-4xl font-bold pb-2 from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
+                  Sign Up now
+                </span>
               </div>
+              <span className="mb-6 text-sm md:text-base">Hi, Welcome 👋</span>
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col items-center"
+              >
+                <div className="flex flex-col items-start mb-4 w-full sm:w-[400px] md:w-[500px]">
+                  <label className="text-[#F6AC14] font-bold text-left mb-1 text-sm md:text-base">
+                    First Name
+                  </label>
+                  <input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    placeholder="First Name"
+                    className="w-full px-4 py-2  h-[50px] rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    value={userData.firstName}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="flex flex-col items-start mb-4 w-full sm:w-[400px] md:w-[500px]">
+                  <label className="text-[#F6AC14] font-bold text-left mb-1 text-sm md:text-base">
+                    Last Name
+                  </label>
+                  <input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    placeholder="Last Name"
+                    className="w-full px-4  h-[50px] py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    value={userData.lastName}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="flex flex-col items-start mb-4 w-full sm:w-[400px] md:w-[500px]">
+                  <label className="text-[#F6AC14] font-bold text-left mb-1 text-sm md:text-base">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    className="w-full px-4 h-[50px] py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    value={userData.email}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="flex flex-col items-start mb-4 w-full sm:w-[400px] md:w-[500px]">
+                  <label className="text-[#F6AC14] font-bold text-left mb-1 text-sm md:text-base">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                    className="w-full px-4 py-2 h-[50px] rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                    value={userData.password}
+                    onChange={handleChange}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="mt-5 w-full sm:w-[400px] md:w-[500px] tracking-wide font-semibold bg-[#0098F1] text-gray-100 py-3 rounded-lg hover:bg-[#007acc] transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                >
+                  <span className="ml-3">Send OTP</span>
+                </button>
+              </form>
             </div>
-            {/* end */}
+          </div>
+          <div className="flex-1 mt-32 lg:mt-0 text-center hidden lg:flex">
+            <div
+              className="w-full bg-center bg-no-repeat"
+              style={{
+                backgroundImage:
+                  "url('https://s3-alpha-sig.figma.com/img/0ba4/acc9/22ae30233428f93ea97ee61bed1f1368?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FCbWPiAaKxLjj3vrmZV1zupjmK~2HmElPQywLV9jfz5deFv6mRXEiuFp15TKa4Mlek3c3ctsL9pW~BTsISI5cgjmhN0oatAc3cXcSO5uvTEGxoIcGwbGyOGiTGP9IrnWiMBb~wAZq1P-NB9RsD0IRihA0tCkF~iasBUhxumSJ-QA5Ao0~BfPb8FUp2c2avzIAJO9VkWWStuIbp2C9-4y8t11E9QXJayELfz6MrQhaYdod3W~udjHAFqa-D5Rqp05p9ADjZgDH6FlQE-hTT6y5laBkhisUwEvttRx9cWT9dmBRKB350XtHYq3DsWWE6b0KrYvaBgUNRjLL6X6bT2A0g__')",
+              }}
+            ></div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-};
+}
 
 export default SignUp;
