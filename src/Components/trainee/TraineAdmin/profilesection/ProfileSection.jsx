@@ -130,7 +130,7 @@
 
 import React, { useRef, useState } from "react";
 import { RiCheckLine, RiPencilFill } from "react-icons/ri";
-import Accounts from "./accounts";
+// import Accounts from "./accounts";
 import Skills from "./skills";
 import DetailsPage from "./detailespage";
 
@@ -168,11 +168,15 @@ const ProfileSection = () => {
   };
 
   return (
-    <div className="bg-[#4257f5] min-h-screen flex flex-col items-center justify-start py-10 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-200 min-h-screen flex flex-col items-center justify-start py-10  sm:px-6 lg:px-8">
       <div className="w-full max-w-6xl space-y-8">
-        <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
+        <div className="flex flex-col md:flex-row  justify-between space-y-8 md:space-y-0 md:space-x-8">
           {/* Profile and Details section */}
+<<<<<<< HEAD
           <div className="bg-white shadow-lg w-full sm:w-[300px] md:w-[350px] lg:w-[400px] mx-auto rounded-lg p-6 flex flex-col items-center">
+=======
+          <div className="bg-white ml-0 shadow-lg w-full sm:w-[300px] md:w-[350px] lg:w-[400px] mx-auto rounded-lg p-6 flex flex-col items-center">
+>>>>>>> ff50f0323e7a675ebb0de5e6cc5f1fb04c65935f
             <div className="relative mb-6 justify-center items-center">
               <img
                 className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md cursor-pointer hover:opacity-80 transition-opacity duration-300"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useState } from "react";
 // import { RiPencilFill, RiCheckLine } from "react-icons/ri";
 
@@ -83,6 +84,8 @@
 // };
 
 // export default DetailsPage;
+=======
+>>>>>>> ff50f0323e7a675ebb0de5e6cc5f1fb04c65935f
 
 import React, { useState } from "react";
 import { RiPencilFill, RiCheckLine } from "react-icons/ri";
@@ -92,7 +95,7 @@ const DetailsPage = () => {
     fullName: "John Doe",
     email: "john.doe@example.com",
     phone: "+1 234 567 8901",
-    address: "1234 Street Name, City, Country",
+    ad̥dress: "1234 Street Name, City, Country",
   });
 
   const [editMode, setEditMode] = useState(false);
@@ -117,6 +120,7 @@ const DetailsPage = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="flex justify-center items-center  h-auto w-full max-w-lg bg-white p-4 md:p-8 rounded-lg shadow-lg">
       <div className="w-full space-y-4">
         {Object.keys(details).map((key) => (
@@ -139,6 +143,32 @@ const DetailsPage = () => {
                   {details[key]}
                 </span>
               )}
+=======
+    <div className="flex justify-center items-center h-[370px] md:xl:lg:sm:w-96 w-80 bg-white ">
+      <div className="w-full max-w-lg p-8  rounded-lg ">
+        <div className="space-y-4">
+          {Object.keys(details).map((key) => (
+            <div
+              key={key}
+              className="bg-gray-50 rounded-lg overflow-hidden shadow-md"
+            >
+              <div className="px-4 py-3 flex items-center justify-between">
+                <span className="text-gray-600">{key}</span>
+                {editMode ? (
+                  <input
+                    type="text"
+                    name={key}
+                    value={editedDetails[key]}
+                    onChange={handleChange}
+                    className="text-gray-800  font-medium border-b border-gray-300 outline-none focus:border-blue-500 ml-4 px-2 py-1 rounded"
+                  />
+                ) : (
+                  <span className="text-gray-800 w-72 text-right font-medium">
+                    {details[key]}
+                  </span>
+                )}
+              </div>
+>>>>>>> ff50f0323e7a675ebb0de5e6cc5f1fb04c65935f
             </div>
           </div>
         ))}

@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Box, CssBaseline, Toolbar, useMediaQuery, useTheme } from '@mui/material';
+import PaymentDashboard from "./pymentData/MainDashBoard"
+import SealsReports from "./Reports/TableforAdmin"
 import AdminDashBoard from './AdminDashBoard';
 import Orders from '../Views/Orders';
-import Users from '../Views/Users';
+import Users from "../Views/FilterUsers"
 import { AccountCircle } from '@mui/icons-material';
 import AccessField from './AccessField';
 import RegisterEmployee from './Register/RegisterEmployee';
 import RegisterTrainee from './Register/RegisterTraniee';
 import SalesReport from './SalesReport';
+import Meeting from "./Meet/Meeting"
+import PaymentData from './PaymentData';
+import TotalSales from './TotalSales';
 import {
     Dashboard as DashboardIcon,
     // School as CoursesIcon,
@@ -21,9 +26,11 @@ const menu = [
     { name: "Dashboard", path: "/admin", icon: <DashboardIcon /> },
     { name: "Access Field", path: "/admin/accessField", icon: <DashboardIcon /> },
     { name: "Users", path: "/admin/users", icon: <UsersIcon /> },
+    { name: "payment Data", path: "/admin/payment-data", icon: <DashboardIcon /> },
     { name: "Sales Report", path: "/admin/sales-report", icon: <UsersIcon /> },
-    { name: "Orders", path: "/admin/orders", icon: <OrdersIcon /> },
     { name: "Settings", path: "/admin/settings", icon: <SettingsIcon /> },
+    { name: "Meet", "path": "/admin/meeting", "icon": <SettingsIcon /> },
+    // { name: "Total Sales", "path": "/admin/total-sales", "icon": <SettingsIcon /> }
 ];
 
 const Admin = () => {
@@ -90,7 +97,11 @@ const Admin = () => {
                         <Route path="/accessField" element={<AccessField />} />
                         <Route path="/register-trainee" element={<RegisterTrainee />} />
                         <Route path="/register-employee" element={<RegisterEmployee />} />
-                        <Route path='/sales-report' element={<SalesReport />} />
+                        {/* <Route path='/sales-report' element={<SalesReport />} /> */}
+                        <Route path='/sales-report' element={<SealsReports />} />
+                        <Route path='/meeting' element={<Meeting />} />
+                        <Route path="/payment-data" element={<PaymentDashboard />} />
+                        {/* <Route path='/total-sales' element={<TotalSales />} /> */}
                     </Routes>
                 </Box>
             </div>

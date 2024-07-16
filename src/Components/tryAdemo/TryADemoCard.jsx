@@ -1,14 +1,14 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 const TryADemoCard = () => {
   return (
     <>
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 my-12">
         <div className="mx-auto grid max-w-md grid-cols-1 gap-8 lg:max-w-5xl lg:grid-cols-2 lg:gap-8">
-          <div className="flex flex-col rounded-3xl bg-white shadow-xl ring-2 ring-blue/10">
+          <div className="flex flex-col rounded-3xl bg-yellow-300 shadow-xl">
             <div className="p-8 sm:p-10">
               <h3
-                className="text-lg font-semibold leading-8 tracking-tight text-blue-600"
+                className="text-lg font-semibold leading-8 tracking-tight text-black"
                 id="tier-hobby"
               >
                 Advance Courses
@@ -24,7 +24,10 @@ const TryADemoCard = () => {
               </p>
             </div>
             <div className="flex flex-1 flex-col p-2">
-              <div className="flex flex-1 flex-col justify-between rounded-2xl bg-gray-100 p-6 sm:p-8">
+              <div
+                className="flex flex-1 flex-col justify-between rounded-2xl
+               p-6 sm:p-8"
+              >
                 <ul
                   role="list"
                   class="mt-8 space-y-3 text-sm leading-6 text-black xl:mt-10"
@@ -178,7 +181,7 @@ const TryADemoCard = () => {
                 <div className="mt-8">
                   <Link
                     to="/advance-courses"
-                    className="inline-block w-full rounded-lg bg-gray-900 px-4 py-4 text-center text-sm font-semibold leading-5 text-white shadow-md hover:bg-black hover:text-gray-900 hover:ring-gray-900 hover:ring"
+                    className="inline-block w-full rounded-lg bg-[#0098f1] px-4 py-4 text-center text-sm font-semibold leading-5 text-white shadow-md hover:bg-black hover:text-gray-900 hover:ring-gray-900 hover:ring"
                     aria-describedby="tier-team"
                   >
                     Get started today
@@ -187,10 +190,10 @@ const TryADemoCard = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col rounded-3xl bg-white shadow-xl ring-2 ring-blue/10">
+          <div className="flex flex-col rounded-3xl bg-yellow-300 shadow-xl ">
             <div className="p-8 sm:p-10">
               <h3
-                className="text-lg font-semibold leading-8 tracking-tight text-blue-600"
+                className="text-lg font-semibold leading-8 tracking-tight text-black"
                 id="tier-team"
               >
                 Premium Courses
@@ -206,7 +209,7 @@ const TryADemoCard = () => {
               </p>
             </div>
             <div className="flex flex-1 flex-col p-2">
-              <div className="flex flex-1 flex-col justify-between rounded-2xl bg-gray-200 p-6 sm:p-8">
+              <div className="flex flex-1 flex-col justify-between rounded-2xl  p-6 sm:p-8">
                 <ul
                   role="list"
                   class="mt-8 space-y-3 text-sm leading-6 text-black xl:mt-10"
@@ -376,7 +379,7 @@ const TryADemoCard = () => {
                 <div className="mt-8">
                   <Link
                     to="/premium-courses"
-                    className="inline-block w-full rounded-lg bg-gray-900 px-4 py-4 text-center text-sm font-semibold leading-5 text-white shadow-md hover:bg-black hover:text-gray-900 hover:ring-gray-900 hover:ring"
+                    className="inline-block w-full rounded-lg bg-[#0098f1] px-4 py-4 text-center text-sm font-semibold leading-5 text-white shadow-md hover:bg-black hover:text-gray-900 hover:ring-gray-900 hover:ring"
                     aria-describedby="tier-team"
                   >
                     Get started today

@@ -10,7 +10,7 @@ import AdminRouter from "./Routers/AdminRouter";
 import Settings from "./Components/Profile/Settings";
 import PostFeeds from "./Components/Home/post/PostFeeds";
 import QuestionForm from "./Components/Home/AskMe/QuestionForm";
-import ForgotPassword from "./Components/Login/ForgotPassword";
+import ForgotPassword from "./Components/trainee/TraineAdmin/ForgotPassword/forgotpassword";
 import Purchases from "./Components/Profile/Purchases/Purchases";
 import Payment from "./Components/Profile/Payment/Payment";
 import MyCourse from "./Components/mycourse/MyCourse";
@@ -93,6 +93,7 @@ import PowerBi from "./Components/AdvanceCourses/Advance-courses/PowerBI/PowerBi
 import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ERP";
 import Options from "./Components/optionsPages/Options";
 import AdminLogin from "./Admin/Components/AdminLogin";
+<<<<<<< HEAD
 import Trainee from "./Components/trainee/Trainee";
 // import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 // import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
@@ -120,6 +121,29 @@ import FileList from "./Components/UserTask/FilesFromUser";
 import WSpace from "./Components/UserTask/WSpace";
 import FileUploadForm from "./Components/UserTask/traineuploads";
 import StatusPage from "./Components/UserTask/StatusPage";
+=======
+import Trainee from './Components/trainee/Trainee'
+import TraineeDashboard from './Components/trainee/TraineeDashboard/TraineeDashboard'
+import Meeting from "./Components/Meeting/Meeting";
+import Tabs from "./Components/trainee/TraineAdmin/TraineComplateCourses/Tabs"
+import UserAccounts from "./Components/trainee/UsersSection/usernavigation/navigation"
+import TraineUpload from "./Components/trainee/UserTask/traineuploads"
+import TraineeCourses from "./Admin/Views/TraineeCourses"
+import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login"
+import Traine_Home from "./Components/trainee/home/Home";
+import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales"
+import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile"
+import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers"
+import StatusPage from "./Components/trainee/UserTask/StatusPage";
+import Sam from "./Admin/Components/Reports/Sample";
+import BarGraph from "./Admin/Components/Reports/BarGraph";
+import LineGraph from "./Admin/Components/Reports/LineGraph";
+import SalesLineGraph from "./Admin/Components/Reports/SalesLineGraph";
+import CustomerCount from "./Admin/Components/Reports/CustomerCount";
+import TableforAdmin from "./Admin/Components/Reports/TableforAdmin";
+import ProductsCount from "./Admin/Components/Reports/CountofProducts";
+import Todo from "./Components/trainee/SheduledReports/Todo";
+>>>>>>> ff50f0323e7a675ebb0de5e6cc5f1fb04c65935f
 function App() {
   return (
     <div>
@@ -159,20 +183,52 @@ function App() {
           <Route path="/options" element={<Options />} />
           <Route path="/pricing" element={<Pricing2 />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
+
+
+          {/* Graph  */}
+          <Route path="/table" element={<Sam />} />
+          <Route path="/bargraph" element={<BarGraph />} />
+          <Route path="/linegraph" element={<LineGraph />} />
+          <Route path="/saleslinegraph" element={<SalesLineGraph />} />
+          <Route path="/customercount" element={<CustomerCount />} />
+          <Route path="/productscount" element={<ProductsCount />} />
+          <Route path="/tableforadmin" element={<TableforAdmin />} />
           {/* traine Login */}
+
           <Route path="/trainelogin" element={<Traine_Login />} />
           <Route path="/trainee" element={<Trainee />} />
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
           <Route path="/meeting" element={<Meeting />} />
+<<<<<<< HEAD
           <Route path="/traineeuploads" element={<FileUploadForm />} />
 
+=======
+          <Route path="/traine-home" element={<Traine_Home />} />
+          {/* <Route path="/tabs" element={<Tabs />} /> */}
+          {/* <Route path="/user-accounts" element={<UserAccounts />} /> */}
+          {/* <Route path="/traine-upload" element={<TraineUpload />} /> */}
+          <Route path="/status-page" element={<StatusPage />} />
+
+          <Route path="/todo" element={<Todo />} />
+
+          {/* admin */}
+          <Route path="/admin/*" element={<AdminRouter />} />
+          <Route path="/trainee-courses" element={<TraineeCourses />} />
+          <Route path="/linechart" element={<CountOfSeals />} />
+          <Route path="/countofproducts" element={<CountOfProduct />} />
+          <Route path="/countofcustomers" element={<CountOfCustomers />} />
+
+
+
+          {/* WSpace */}
+>>>>>>> ff50f0323e7a675ebb0de5e6cc5f1fb04c65935f
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
           <Route path="/mylearning" element={<MyLearning />} />
           <Route path="/Certificates" element={<Certificates />} />
           <Route path="/features" element={<Features />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/ForgotPassword" element={<ForgotPassword />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/signUp" element={<SignUp />} />
           {/*  */}
           <Route path="/Profile" element={<Profile />} />
@@ -383,7 +439,7 @@ function App() {
             element={<PersonalDevelopment />}
           />
           <Route path="/socialscience" element={<SocialScience />} />
-          <Route path="/admin/*" element={<AdminRouter />} />
+
 
           {/* Basic Advance Preminum Cousrses here */}
           {/* Basic Courses */}
