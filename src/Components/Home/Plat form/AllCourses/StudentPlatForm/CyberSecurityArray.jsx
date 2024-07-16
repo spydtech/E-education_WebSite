@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../../Navbar";
 import Footer from "../../../footer/Footer";
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-import { MdArrowOutward } from "react-icons/md";
-import cardImage from "../../../../../assetss/student/cardImg.png";
 
 const CyberSecurityArray = () => {
   const [searchQuery, setSearchQuery] = useState("");

@@ -3,9 +3,6 @@ import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../../Navbar";
 import FooterPart from "../../../footer/Footer";
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-import cardImage from "../../../../../assetss/student/cardImg.png";
-import { MdArrowOutward } from "react-icons/md";
 
 const EthicalHackingStudentArray = () => {
   const [searchQuery, setSearchQuery] = useState("");

@@ -4,10 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Navbar from "../../../../Navbar";
 import Footer from "../../../footer/Footer";
-import cardImage from "../../../../../assetss/student/cardImg.png";
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-import { MdArrowOutward } from "react-icons/md";
-
 const DataScienceArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);

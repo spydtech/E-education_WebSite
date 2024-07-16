@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import FooterPart from "../../../footer/Footer";
+// import FooterPart from "../../../footer/Footer";
 import Navbar from "../../../../Navbar";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
