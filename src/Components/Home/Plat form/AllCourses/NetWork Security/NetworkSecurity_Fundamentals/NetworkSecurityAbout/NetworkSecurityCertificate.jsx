@@ -13,7 +13,7 @@ function NetworkSecurityCertificate() {
             <p className="text-[#f9ac13] text-xl font-medium">
               Network Security Certification
             </p>
-            <p className="md:text-5xl text:2xl font-lora">
+            <p className="md:text-5xl text:2xl font">
               Achieve{" "}
               <p className="text-[#f9ac13]">Credentials and Recognition</p>
             </p>

@@ -72,13 +72,13 @@ const JavascriptDevelopmentCard = () => {
             </div>
           </div>
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-            <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base font-lora">
+            <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base font">
               MEAN Stack Development
             </div>
-            <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-violet-800 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl font-lora">
+            <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-violet-800 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl font">
               Javascript Full Stack Development
             </h2>
-            <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
+            <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font">
               Transform your web development skills with our comprehensive
               JavaScript full-stack solutions. From powerful backend services
               with Node.js and Express.js to interactive front-end experiences
@@ -87,7 +87,7 @@ const JavascriptDevelopmentCard = () => {
             </p>
 
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-              <div className="rounded-md shadow font-lora">
+              <div className="rounded-md shadow font">
                 <a
                   href="/"
                   className="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10"

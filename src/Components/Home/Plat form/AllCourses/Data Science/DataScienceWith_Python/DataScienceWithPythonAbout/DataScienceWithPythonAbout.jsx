@@ -11,7 +11,7 @@ const DataScienceWithPythonAbout = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="md:text-5xl text-2xl font-lora">
+        <p className="md:text-5xl text-2xl font">
           Discover the
           <p className="text-[#750e5c] my-2">
             Data Science with Python Program

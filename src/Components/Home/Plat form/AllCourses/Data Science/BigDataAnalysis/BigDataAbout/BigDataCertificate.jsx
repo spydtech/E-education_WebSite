@@ -13,7 +13,7 @@ function BigDataCertificate() {
             <p className="text-[#38b000] text-xl font-medium">
               Big Data Analysis Certification
             </p>
-            <p className="md:text-5xl text-2xl font-lora">
+            <p className="md:text-5xl text-2xl font">
               Achieve{" "}
               <p className="text-[#38b000]">Credentials and Recognition</p>
             </p>

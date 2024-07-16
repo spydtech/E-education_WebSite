@@ -120,7 +120,7 @@ function ForgotPassword() {
               className="flex justify-center items-center w-56 mx-auto "
               alt="Logo"
             />
-            <div className="p-2 animate__animated animate__backInDown mb-10 text-8xl text-start font-lora font-bold text-sky-600">
+            <div className="p-2 animate__animated animate__backInDown mb-10 text-8xl text-start font font-bold text-sky-600">
               Forgot Your Password?
             </div>
             <div id="email-here">

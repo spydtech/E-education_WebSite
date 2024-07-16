@@ -40,7 +40,7 @@ function CybersecuritySyllabus() {
             <p className="text-white text-2xl font-bold">Syllabus</p>
           </div>
           <div className="py-5">
-            <p className="md:text-5xl text-2xl font-lora text-white">
+            <p className="md:text-5xl text-2xl font text-white">
               Discover What You
               <span className="text-[#7400b8] inline pl-2">Will Learn</span>
             </p>

@@ -13,7 +13,7 @@ function SecurityTestingCertificate() {
             <p className="text-[#31cb00] text-xl font-medium">
               Security Testing Certification
             </p>
-            <p className="md:text-5xl text-2xl font-lora">
+            <p className="md:text-5xl text-2xl font">
               Achieve{" "}
               <p className="text-[#31cb00]">Credentials and Recognition</p>
             </p>

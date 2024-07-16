@@ -11,7 +11,7 @@ const StressTestingAbout = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="md:text-5xl text-2xl font-lora pl-4">
+        <p className="md:text-5xl text-2xl font pl-4">
           Discover the
           <p className="text-[#f9ac13] my-2">Compatibility Testing Program</p>
         </p>

@@ -13,7 +13,7 @@ function EthicalHackingCertificate() {
             <p className="text-[#7400b8] text-xl font-medium">
               Ethical Hacking Certification
             </p>
-            <p className="text-6xl font-lora">
+            <p className="text-6xl font">
               Achieve{" "}
               <p className="text-[#7400b8]">Credentials and Recognition</p>
             </p>

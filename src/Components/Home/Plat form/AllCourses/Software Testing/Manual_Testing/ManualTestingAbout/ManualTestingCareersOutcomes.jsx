@@ -19,7 +19,7 @@ function ManualTestingCareersOutcomes() {
             </p>
           </div>
           <div className="py-5">
-            <p className="md:text-5xl text-2xl font-lora pl-4">
+            <p className="md:text-5xl text-2xl font pl-4">
               Discover What our{" "}
               <p className="text-[#fca311]">Learners Have Achieved</p>
             </p>

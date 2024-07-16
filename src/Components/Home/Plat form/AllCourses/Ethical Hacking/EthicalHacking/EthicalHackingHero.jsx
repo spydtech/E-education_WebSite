@@ -20,7 +20,7 @@ const EthicalHackingHero = () => {
   return (
     <>
       <div className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 py-20 bg-[#00afb9] my-20">
-        <h1 className="mx-auto font-lora max-w-4xl font-display text-2xl font-bold tracking-normal text-white-300 dark:text-gray-300 md:text-7xl">
+        <h1 className="mx-auto font max-w-4xl font-display text-2xl font-bold tracking-normal text-white-300 dark:text-gray-300 md:text-7xl">
           Empower Your Security Strategy with{" "}
           <span className="relative whitespace-nowrap text-white-600 dark:text-gray-300">
             Ethical Hacking Techniques
@@ -58,7 +58,7 @@ const EthicalHackingHero = () => {
         data-aos="fade-right"
         data-aos-duration={800}
       >
-        <div className="pr-2 md:mb-14 py-14 md:py-0 font-lora">
+        <div className="pr-2 md:mb-14 py-14 md:py-0 font">
           <h1 className="text-3xl font-semibold text-violet-800 xl:text-5xl lg:text-3xl">
             <span className="block w-full">
               Master the Art of Ethical Hacking

@@ -125,7 +125,7 @@ function RegressionTestingKeyHighights() {
         id="main"
         className=" md:lg:xl:px-20  bg-gradient-to-br   from-[#6f1d1b] to-[#432818]"
       >
-        <div id="subdiv1" className="pt-4 font-lora">
+        <div id="subdiv1" className="pt-4 font">
           <div id="h1" className="">
             <p className="md:lg:w-auto w-96 font-semibold text-xl pl-4 text-[#00a8e8]">
               E-education Course Highlights

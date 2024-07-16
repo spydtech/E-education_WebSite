@@ -32,10 +32,10 @@ const CybersecurityBeginners = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12">
           {/* Left Section */}
           <div className="text-left">
-            <h1 className="text-xl lg:text-5xl  text-blue-600 mb-6 font-bold font-lora  pt-4">
+            <h1 className="text-xl lg:text-5xl  text-blue-600 mb-6 font-bold font  pt-4">
               Cybersecurity for Beginners: Safeguard Your Digital World
             </h1>
-            <p className="text-lg text-gray-700 leading-relaxed  font-lora">
+            <p className="text-lg text-gray-700 leading-relaxed  font">
               In today's interconnected world, cybersecurity stands as the first
               line of defense against an array of digital threats. With cyber
               attacks becoming increasingly sophisticated, protecting sensitive
@@ -72,10 +72,10 @@ const CybersecurityBeginners = () => {
             />
           </div>
           <div className="lg:w-1/2 lg:ml-12 w-full">
-            <h2 className="text-xl lg:text-4xl text-blue-600 font-bold mb-6 font-lora">
+            <h2 className="text-xl lg:text-4xl text-blue-600 font-bold mb-6 font">
               Introduction to Advanced Cybersecurity Course with E-Education
             </h2>
-            <h3 className="text-lg lg:text-xl text-green-600 font-semibold mb-6 font-lora">
+            <h3 className="text-lg lg:text-xl text-green-600 font-semibold mb-6 font">
               Course Highlights
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

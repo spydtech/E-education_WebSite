@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-
+import LoginImg from "../../assetss/login/login.png"
 import Navbar from "../Navbar";
 import IMG from "../../assets/E- education logo .png";
 import { useDispatch } from "react-redux";
@@ -130,15 +130,13 @@ function Login() {
           </div>
           <div className="flex-1 bg-indigo-100 text-center hidden lg:flex">
             <div
-              className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat"
-              style={{
-                backgroundImage:
-                  "url('https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg')",
-              }}
-            ></div>
+              className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat">
+                <img src={LoginImg} />
+              </div>
           </div>
         </div>
       </div>
+      
     </div>
   );
 }

@@ -129,7 +129,7 @@ function SecurityTestingKeyHighights() {
         id="main"
         className=" md:lg:xl:px-20  bg-gradient-to-br  from-[#560bad] to-[#3a0ca3]"
       >
-        <div id="subdiv1" className="pt-4 font-lora">
+        <div id="subdiv1" className="pt-4 font">
           <div id="h1" className="pl-4">
             <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#31cb00]">
               E-education Course Highlights

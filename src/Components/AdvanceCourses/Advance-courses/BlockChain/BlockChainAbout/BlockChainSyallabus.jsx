@@ -37,7 +37,7 @@ function BlockChainSyllabus() {
               <p className="text-[#ff7000] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora text-white">
+              <p className="text-6xl font text-white">
                 Explore
                 <p className="text-[#ff7000] inline pl-2">Blockchain</p>
               </p>

@@ -37,13 +37,13 @@ const FullStackJavaDeveloper = () => {
         >
           <div className="p-4 rounded-lg shadow-2xl border-orange-700 border-2 relative">
             <img src={skills} className="w-24 h-24 absolute top-4 right-4" />
-            <h2 className="text-base font-extrabold text-violet-600 sm:text-xl lg:text-lg xl:text-3xl font-lora mb-4">
+            <h2 className="text-base font-extrabold text-violet-600 sm:text-xl lg:text-lg xl:text-3xl font mb-4">
               Soft Skills
             </h2>
             <div>
               {softSkills.map((skill, index) => (
                 <div key={index} className="flex items-center mb-2">
-                  <p className="text-base text-gray-600 font-lora">
+                  <p className="text-base text-gray-600 font">
                     <FaArrowAltCircleRight className="text-violet-600 inline mx-2" />
                     {skill.name}
                   </p>
@@ -61,13 +61,13 @@ const FullStackJavaDeveloper = () => {
               src={requirements}
               className="w-24 h-24 absolute top-4 right-4"
             />
-            <h2 className="text-base font-extrabold text-violet-600 sm:text-xl lg:text-lg xl:text-3xl font-lora mb-4">
+            <h2 className="text-base font-extrabold text-violet-600 sm:text-xl lg:text-lg xl:text-3xl font mb-4">
               Technical Skills
             </h2>
             <div>
               {technicalSkills.map((skill, index) => (
                 <div key={index} className="flex items-center mb-2">
-                  <p className="text-base text-gray-600 font-lora">
+                  <p className="text-base text-gray-600 font">
                     <FaArrowAltCircleRight className="text-violet-600 inline mx-2" />
                     {skill.name}
                   </p>
@@ -81,7 +81,7 @@ const FullStackJavaDeveloper = () => {
           className="max-w-sm w-full h-40 rounded-lg items-center flex mx-auto mb-4"
         >
           <div className="p-4 rounded-lg ">
-            <h2 className="text-base font-extrabold text-violet-600 sm:text-xl lg:text-lg xl:text-3xl font-lora mb-2">
+            <h2 className="text-base font-extrabold text-violet-600 sm:text-xl lg:text-lg xl:text-3xl font mb-2">
               Full Stack Java Developer Skills{" "}
             </h2>
             <div className="flex text-violet-600 justify-center items-center mb-4">
@@ -89,7 +89,7 @@ const FullStackJavaDeveloper = () => {
               <IoReorderThreeOutline className="text-[40px]" />
               <IoRemoveOutline className="text-[40px]" />
             </div>
-            <p className="text-base text-gray-600 font-lora">
+            <p className="text-base text-gray-600 font">
               Full Stack Java Developers are expected to possess a diverse set
               of skills, from back-end programming to front-end development,
               enabling them to handle various aspects of modern web

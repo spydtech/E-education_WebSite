@@ -90,13 +90,13 @@ const FullStackJavaDevelopmentCard = () => {
             </div>
           </div>
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-            <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base font-lora">
+            <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base font">
               Full Stack Java Development
             </div>
-            <h2 className="mt-1 text-3xl font-extrabold leading-10 tracking-tight text-[#f3a916] sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl font-lora">
+            <h2 className="mt-1 text-3xl font-extrabold leading-10 tracking-tight text-[#f3a916] sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl font">
               Next-Gen Full Stack Java Development
             </h2>
-            <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-lora">
+            <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font">
               Enhance your web applications with our comprehensive Full Stack
               Java development solutions. From powerful backend logic to
               interactive frontend experiences, we leverage Java's robustness to
@@ -112,7 +112,7 @@ const FullStackJavaDevelopmentCard = () => {
               Form of JVM? Popular Full Forms
             </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-              <div className="rounded-md shadow font-lora">
+              <div className="rounded-md shadow font">
                 <a
                   href="/"
                   className="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-[#6a4c93] border border-transparent rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10"

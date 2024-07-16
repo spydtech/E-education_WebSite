@@ -121,6 +121,8 @@ import TableforAdmin from "./Admin/Components/Reports/TableforAdmin";
 import ProductsCount from "./Admin/Components/Reports/CountofProducts";
 import Todo from "./Components/trainee/SheduledReports/Todo";
 import Slider from "./Components/FinalTestimonials";
+import Sidebar from "./Components/SideBar";
+import RecruitmentTab from "./Components/RecruitmentTab";
 function App() {
   return (
     <div>
@@ -133,6 +135,8 @@ function App() {
           <Route path="/pricing" element={<Pricing2 />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
           <Route path="/slider" element={<Slider />} />
+          <Route path="/sidebar" element={<Sidebar />} />
+          <Route path="/Recruitment" element={<RecruitmentTab />} />
 
           {/* Graph  */}
           <Route path="/table" element={<Sam />} />

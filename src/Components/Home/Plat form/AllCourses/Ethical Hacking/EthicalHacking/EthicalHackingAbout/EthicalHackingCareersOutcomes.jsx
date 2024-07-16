@@ -17,7 +17,7 @@ function EthicalHackingCareersOutcomes() {
             </p>
           </div>
           <div className="py-5">
-            <p className="text-6xl font-lora">
+            <p className="text-6xl font">
               Discover What our{" "}
               <p className="text-[#7400b8]">Learners Have Achieved</p>
             </p>

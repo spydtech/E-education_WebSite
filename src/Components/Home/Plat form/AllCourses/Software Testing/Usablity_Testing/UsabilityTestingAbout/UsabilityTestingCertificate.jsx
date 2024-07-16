@@ -13,7 +13,7 @@ function UsabilityTestingCertificate() {
             <p className="text-[#00509d] text-xl font-medium">
               Usability Testing Certification
             </p>
-            <p className="md:text-5xl text-2xl font-lora">
+            <p className="md:text-5xl text-2xl font">
               Achieve{" "}
               <p className="text-[#00509d]">Credentials and Recognition</p>
             </p>

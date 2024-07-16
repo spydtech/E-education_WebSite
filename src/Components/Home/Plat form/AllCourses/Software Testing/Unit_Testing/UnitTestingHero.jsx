@@ -29,7 +29,7 @@ const UnitTestingHero = () => {
         data-aos="fade-right"
         data-aos-duration={800}
       >
-        <div className="pr-2 md:mb-14 py-14 font-lora md:py-0">
+        <div className="pr-2 md:mb-14 py-14 font md:py-0">
           <h1 className="text-3xl font-semibold text-[#f9ac13] xl:text-5xl lg:text-3xl">
             <span className="block w-full">Master the Art of Unit Testing</span>{" "}
             to Ensure Software Quality!

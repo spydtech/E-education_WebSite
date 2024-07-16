@@ -41,7 +41,7 @@ function SecurityTestingSyllabus() {
               <p className="text-[#31cb00] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
-              <p className="md:text-5xl text-2xl font-lora">
+              <p className="md:text-5xl text-2xl font">
                 Discover What You
                 <p className="text-[#31cb00] inline pl-2">Will Learn</p>
               </p>

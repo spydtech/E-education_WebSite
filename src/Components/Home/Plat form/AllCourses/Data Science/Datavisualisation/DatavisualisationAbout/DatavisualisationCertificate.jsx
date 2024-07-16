@@ -10,12 +10,12 @@ function DatavisualisationCertificate() {
       >
         <div id="content" className="flex justify-center items-center">
           <div className="p-5 space-y-5 w-[450px] h-96">
-            <p className="text-pink-800 text-xl font-medium font-lora">
+            <p className="text-pink-800 text-xl font-medium font">
               Machine Learning Certification
             </p>
-            <p className="md:text-5xl text-2xl font-lora">
+            <p className="md:text-5xl text-2xl font">
               Achieve{" "}
-              <p className="text-violet-800 font-lora">
+              <p className="text-violet-800 font">
                 Credentials and Recognition
               </p>
             </p>

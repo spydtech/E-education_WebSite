@@ -89,7 +89,7 @@ function DataAnalyticsIntroduction() {
               <p className="text-sky-500 text-xl font-medium">Introduction</p>
             </div>
             <div className="py-5">
-              <p className="md:text-5xl text-2xl font-lora ">
+              <p className="md:text-5xl text-2xl font ">
                 So what is
                 <p className="text-sky-500 inline pl-2">Data Analytics</p>
               </p>

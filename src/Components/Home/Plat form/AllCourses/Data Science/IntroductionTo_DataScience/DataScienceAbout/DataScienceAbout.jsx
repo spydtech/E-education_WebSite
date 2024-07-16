@@ -11,7 +11,7 @@ const DataScienceAbout = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="md:text-5xl text-2xl font-lora">
+        <p className="md:text-5xl text-2xl font">
           Discover the
           <p className="text-[#ff206e] my-2">Data Science Program</p>
         </p>

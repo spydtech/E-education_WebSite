@@ -13,7 +13,7 @@ function MachineLearningFoot() {
 
   return (
     <>
-      <div className="flex font-lora flex-1 w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-orange-100  to-orange-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 md:my-28">
+      <div className="flex font flex-1 w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-orange-100  to-orange-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 md:my-28">
         <h1 className="mx-auto max-w-4xl font-display text-2xl font-bold tracking-normal text-white-300 dark:text-gray-300 md:text-7xl">
           Transforming Insurance &nbsp;
           <span className="relative  text-white-600 dark:text-gray-300">

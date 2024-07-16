@@ -8,10 +8,10 @@ function DataScienceIntroduction() {
       <div className="w-full flex-shrink-0 px-4 py-8">
         <div className="h-[400px] flex justify-center">
           <div>
-            <h2 className="text-3xl font-medium mb-4 text-[#ff206e] font-lora">
+            <h2 className="text-3xl font-medium mb-4 text-[#ff206e] font">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-xl font-lora">
+            <ul className="list-disc list-inside text-xl font">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -84,13 +84,13 @@ function DataScienceIntroduction() {
         >
           <div
             id="headings"
-            className="grid grid-cols-1 text-start px-10 font-lora"
+            className="grid grid-cols-1 text-start px-10 font"
           >
             <div>
               <p className="text-[#ff206e] text-xl font-medium">Introduction</p>
             </div>
             <div className="py-5">
-              <p className="md:text-5xl text-2xl font-lora">
+              <p className="md:text-5xl text-2xl font">
                 So what is
                 <p className="text-[#ff206e] inline pl-2">Data Science</p>
               </p>

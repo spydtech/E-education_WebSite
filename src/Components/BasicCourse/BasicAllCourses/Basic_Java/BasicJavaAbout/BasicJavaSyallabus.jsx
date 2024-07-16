@@ -41,7 +41,7 @@ function BasicJavaSyllabus() {
               <p className="text-[#d90429] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora text-white">
+              <p className="text-6xl font text-white">
                 Discover What You
                 <p className="text-[#d90429] inline pl-2">Will Learn</p>
               </p>

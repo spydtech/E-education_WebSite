@@ -31,7 +31,7 @@ function ERPSyllabus() {
               <p className="text-[#072ac8] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora text-white">
+              <p className="text-6xl font text-white">
                 Discover What You
                 <span className="text-[#072ac8] inline pl-2">Will Learn</span>
               </p>

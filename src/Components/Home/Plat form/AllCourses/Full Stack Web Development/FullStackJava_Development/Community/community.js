@@ -75,7 +75,7 @@ function Community() {
           </div>
         </div>
         <h1
-          className="text-4xl font-bold font-lora  text-[#f3a916]  "
+          className="text-4xl font-bold font  text-[#f3a916]  "
           style={{ marginTop: "250px" }}
         >
           Join Our Thriving Community

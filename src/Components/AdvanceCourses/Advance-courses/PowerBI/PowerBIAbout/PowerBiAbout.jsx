@@ -12,7 +12,7 @@ const PowerBiAbout = () => {
         </p>
       </div>
       <div className="py-2">
-        <p className="text-6xl font-lora text-white">
+        <p className="text-6xl font text-white">
           Discover the
           <p className="text-[#072ac8] my-2">PowerBi program</p>
         </p>

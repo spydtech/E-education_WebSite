@@ -13,7 +13,7 @@ const PerformanceTestingAbout = () => {
         </p>
       </div>
       <div className="py-2 pl-4">
-        <p className="md:text-5xl text-2xl font-lora">
+        <p className="md:text-5xl text-2xl font">
           Discover the
           <p className="text-[#30c5ff] my-2">Performance Testing Program</p>
         </p>

@@ -19,7 +19,7 @@ function PerformanceTestingCareersOutcomes() {
             </p>
           </div>
           <div className="py-5">
-            <p className="md:text-5xl text-2xl font-lora">
+            <p className="md:text-5xl text-2xl font">
               Discover What our{" "}
               <p className="text-[#30c5ff]">Learners Have Achieved</p>
             </p>

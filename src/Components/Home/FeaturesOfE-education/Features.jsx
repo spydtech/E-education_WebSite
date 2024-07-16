@@ -13,7 +13,7 @@ function Features() {
     <div>
         <Navbar />
         <HeroSection />
-        <h1 className='text-4xl font-lora text-center py-24 '>Why Choose E-education?</h1>
+        <h1 className='text-4xl font text-center py-24 '>Why Choose E-education?</h1>
         <h2 className='text-xl text-center font-semibold text-[#16a34a] hover:underline cursor-pointer' >Feature of E-education</h2>
         <div className="flex flex-col md:flex-row md:gap-10 gap-10 px-32 md:justify-center justify-center py-10">
         <div class="card border-2  border-[#16a34a]">
@@ -209,7 +209,7 @@ function Features() {
             </style>
 
             <div className='py-10 px-10'>
-                <h1 className='text-4xl border-l-8 md:ml-72   font-lora '>Start Your Learning Journey Today</h1>
+                <h1 className='text-4xl border-l-8 md:ml-72   font '>Start Your Learning Journey Today</h1>
            <Features2 />
             </div>
           

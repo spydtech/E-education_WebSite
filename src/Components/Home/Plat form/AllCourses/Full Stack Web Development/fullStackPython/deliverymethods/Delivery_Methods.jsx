@@ -18,7 +18,7 @@ function Delivery_Methods() {
         id="heading"
         className=" md:py-10 space-y-2 lg:px-32 flex justify-center items-center flex-col "
       >
-        <div className="text-center font-bold text-xl lg:text-5xl md:lg:sm:w-auto md:w-96 text-violet-800 font-lora">
+        <div className="text-center font-bold text-xl lg:text-5xl md:lg:sm:w-auto md:w-96 text-violet-800 font">
           Our Available Delivery Methods
         </div>
         <div className=" flex justify-center md:lg:sm:w-auto md:w-96 text-cyan-500">
@@ -26,7 +26,7 @@ function Delivery_Methods() {
           <IoReorderThreeOutline className="text-[40px]" />{" "}
           <IoRemoveOutline className="text-[40px]" />
         </div>
-        <div className="text-center px-4 text-base md:lg:sm:w-full md:w-[400px] font-lora pb-8">
+        <div className="text-center px-4 text-base md:lg:sm:w-full md:w-[400px] font pb-8">
           The E-education is World's Leading Organisation for training
           professionals. The E-education provides training in 490+ locations
           around 221+ countries, covering 3000 subjects with the following

@@ -13,7 +13,7 @@ function AdvancePhpCertificate() {
             <p className="text-[#ffbc42] text-xl font-medium">
               Advance Php Certification
             </p>
-            <p className="text-6xl font-lora">
+            <p className="text-6xl font">
               Achieve{" "}
               <p className="text-[#ffbc42]">Credentials and Recognition</p>
             </p>
