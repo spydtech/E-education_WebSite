@@ -6,7 +6,7 @@ import SignUp from "./Components/Login/SignUp";
 import Certificates from "./Components/Home/Professional Certificates/Certificates";
 import Profile from "./Components/Profile/Profile";
 import AdminRouter from "./Routers/AdminRouter";
-// import WSpace from "./Components/Profile/WorkSpace1/WSpace";
+import WSpace from "./Components/Profile/WorkSpace1/WSpace";
 import Settings from "./Components/Profile/Settings";
 import PostFeeds from "./Components/Home/post/PostFeeds";
 import QuestionForm from "./Components/Home/AskMe/QuestionForm";
@@ -17,6 +17,7 @@ import MyCourse from "./Components/mycourse/MyCourse";
 import PremiumCourses from "./Components/PremiumCourses/PremiumCourses";
 import DataAnalytics from "./Components/Profile/BrowseProject/dataAnalytics/DataAnalytics";
 import FullStackWebDevelopmentArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/FullStackWebDevelopmentArray";
+// import DataAnalatics from "./Components/Home/Plat form/AllCourses/StudentPlatForm/DataAnalatics";
 import Student from "./Components/Home/Plat form/Student";
 import Professional from "./Components/Home/Plat form/perofessionals/Professionals";
 import ArtsandHumanities from "./Components/Home/Plat form/AllCourses/ArtsandHumanities";
@@ -24,6 +25,7 @@ import Business from "./Components/Home/Plat form/AllCourses/Business";
 import ComputerScience from "./Components/Home/Plat form/AllCourses/ComputerScience";
 import DataScienceArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/DataScienceArray";
 import Health from "./Components/Home/Plat form/AllCourses/Health";
+// import FullStackWebDev from "./Components/Home/Plat form/perofessionals/PerofessionalsParticularPage/FullStackWebDevelopment";
 import Features from "./Components/Home/FeaturesOfE-education/Features";
 import PersonalDevelopment from "./Components/Home/Plat form/AllCourses/PersonalDevelopment";
 import SocialScience from "./Components/Home/Plat form/AllCourses/SocialScience";
@@ -37,6 +39,7 @@ import Cybersecurity from "./Components/Home/Plat form/AllCourses/Cyber Security
 import CybersecurityBiginers from "./Components/Home/Plat form/AllCourses/Cyber Security/CybersecurityBiginers/cybersecurityBiginersEssentials";
 import CybersecurityEssentials from "./Components/Home/Plat form/AllCourses/Cyber Security/CybersecurityEssentials/cybersecurityEssentials";
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
+// import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
 import TryADemo from "./Components/tryAdemo/TryADemo";
 import Cart from "./Components/Cart/Cart";
 import EthicalHackingStudentArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/EthicalHackingStudentArray";
@@ -72,10 +75,13 @@ import AutomationTesting from "./Components/Home/Plat form/AllCourses/Software T
 import AcceptanceTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Acceptance_testing/AcceptanceTesting";
 import StressTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Stress_Testing/StressTestingFundamentals";
 import RegressionTesting from "./Components/Home/Plat form/AllCourses/Software Testing/Regression_Testing/RegressionTesting";
+
+// import Java from "./Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava";
 import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
 import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
 import C_Cplus from "./Components/BasicCourse/BasicAllCourses/Basic_C&C++/BasicC_Cplus";
+// import GoogleCalender from "./Components/Profile/Calendar Sync/GoogleCalendar";
 import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
 import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 import CourseDetails from "./Components/CourseDetails/CourseDetails";
@@ -93,47 +99,18 @@ import PowerBi from "./Components/AdvanceCourses/Advance-courses/PowerBI/PowerBi
 import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ERP";
 import Options from "./Components/optionsPages/Options";
 import AdminLogin from "./Admin/Components/AdminLogin";
-<<<<<<< HEAD
 import Trainee from "./Components/trainee/Trainee";
-// import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpress";
-// import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
-// import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
-// import C_Cplus from "./Components/BasicCourse/BasicAllCourses/Basic_C&C++/BasicC_Cplus";
-// import GoogleCalender from "./Components/Profile/Calendar Sync/GoogleCalendar";
-// import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
-// import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
-// import CourseDetails from "./Components/CourseDetails/CourseDetails";
-// import Traine_Login from "./Components/trainee/Traine_Login";
-import UserNavigation from "./Components/UsersSection/usernavigation/navigation";
-import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login";
-// import ActiveUsers from "./Components/UsersSection/users/Activeusers";
-import ActiveUsers from "./Components/UsersSection/users/Activeusers";
-import InactiveUsers from "./Components/UsersSection/users/Inactiveusers";
-import TraineeNavigation from "./Components/trainee/TraineAdmin/navigation/navigation";
-import TraineForgotPassword from "./Components/trainee/TraineAdmin/ForgotPassword/forgotpassword";
-import TraineeUpdatePassword from "./Components/trainee/TraineAdmin/UpdatePassword/updatepassword";
-import ProfileSection from "./Components/trainee/TraineAdmin/profilesection/ProfileSection";
 import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
 import Meeting from "./Components/Meeting/Meeting";
-import HomeTrainee from "./Components/trainee/home/Home";
-import TraineeTable from "./Components/UserTask/TraineeTable";
-import FileList from "./Components/UserTask/FilesFromUser";
-import WSpace from "./Components/UserTask/WSpace";
-import FileUploadForm from "./Components/UserTask/traineuploads";
-import StatusPage from "./Components/UserTask/StatusPage";
-=======
-import Trainee from './Components/trainee/Trainee'
-import TraineeDashboard from './Components/trainee/TraineeDashboard/TraineeDashboard'
-import Meeting from "./Components/Meeting/Meeting";
-import Tabs from "./Components/trainee/TraineAdmin/TraineComplateCourses/Tabs"
-import UserAccounts from "./Components/trainee/UsersSection/usernavigation/navigation"
-import TraineUpload from "./Components/trainee/UserTask/traineuploads"
-import TraineeCourses from "./Admin/Views/TraineeCourses"
-import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login"
+import Tabs from "./Components/trainee/TraineAdmin/TraineComplateCourses/Tabs";
+import UserAccounts from "./Components/trainee/UsersSection/usernavigation/navigation";
+import TraineUpload from "./Components/trainee/UserTask/traineuploads";
+import TraineeCourses from "./Admin/Views/TraineeCourses";
+import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login";
 import Traine_Home from "./Components/trainee/home/Home";
-import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales"
-import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile"
-import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers"
+import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales";
+import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile";
+import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers";
 import StatusPage from "./Components/trainee/UserTask/StatusPage";
 import Sam from "./Admin/Components/Reports/Sample";
 import BarGraph from "./Admin/Components/Reports/BarGraph";
@@ -143,47 +120,19 @@ import CustomerCount from "./Admin/Components/Reports/CustomerCount";
 import TableforAdmin from "./Admin/Components/Reports/TableforAdmin";
 import ProductsCount from "./Admin/Components/Reports/CountofProducts";
 import Todo from "./Components/trainee/SheduledReports/Todo";
->>>>>>> ff50f0323e7a675ebb0de5e6cc5f1fb04c65935f
+// import Slider from "./Components/FinalTestimonials";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/filelist" element={<FileList />} />
-          <Route path="/traineetable" element={<TraineeTable />} />
-          <Route path="/status" element={<StatusPage />} />
-          {/* <Route path="/charts" element={<Charts />} /> */}
-          <Route path="/usernavigation" element={<UserNavigation />} />
-          {/* <Route path="/parent" element={<ParentComponent />} /> */}
-          <Route path="/hometrainee" element={<HomeTrainee />} />
-          <Route path="/activeusers" element={<ActiveUsers />} />
-          {/* <ActiveUsers
-            updateUsersCount={(active, inactive) =>
-              console.log(`Active: ${active}, Inactive: ${inactive}`)
-            }
-          /> */}
-          <Route path="/inactiveusers" element={<InactiveUsers />} />
-          <Route path="/traineenavigation" element={<TraineeNavigation />} />
-          <Route
-            path="/traineforgotpassword"
-            element={<TraineForgotPassword />}
-          />
-          <Route
-            path="/traineupdatepassword"
-            element={<TraineeUpdatePassword />}
-          />
-          <Route path="/profilesection" element={<ProfileSection />} />
-          {/* <Route path="/sidebar" element={<Sidebar />} /> */}
-
-          {/* <Route path="/accountsettings" element={<AccountSettings />} /> */}
-          {/* <Route path="/header" element={<Header />} /> */}
           <Route path="/admin_login" element={<AdminLogin />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/options" element={<Options />} />
           <Route path="/pricing" element={<Pricing2 />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
-
+          {/* <Route path="/slider" element={<Slider />} /> */}
 
           {/* Graph  */}
           <Route path="/table" element={<Sam />} />
@@ -192,36 +141,29 @@ function App() {
           <Route path="/saleslinegraph" element={<SalesLineGraph />} />
           <Route path="/customercount" element={<CustomerCount />} />
           <Route path="/productscount" element={<ProductsCount />} />
-          <Route path="/tableforadmin" element={<TableforAdmin />} />
+          <Route path="/tableforadmin" element={<TableforAdmin />} />
           {/* traine Login */}
 
           <Route path="/trainelogin" element={<Traine_Login />} />
           <Route path="/trainee" element={<Trainee />} />
           <Route path="/traineedashboard" element={<TraineeDashboard />} />
           <Route path="/meeting" element={<Meeting />} />
-<<<<<<< HEAD
-          <Route path="/traineeuploads" element={<FileUploadForm />} />
-
-=======
           <Route path="/traine-home" element={<Traine_Home />} />
           {/* <Route path="/tabs" element={<Tabs />} /> */}
           {/* <Route path="/user-accounts" element={<UserAccounts />} /> */}
           {/* <Route path="/traine-upload" element={<TraineUpload />} /> */}
           <Route path="/status-page" element={<StatusPage />} />
 
-          <Route path="/todo" element={<Todo />} />
+          <Route path="/todo" element={<Todo />} />
 
           {/* admin */}
           <Route path="/admin/*" element={<AdminRouter />} />
-          <Route path="/trainee-courses" element={<TraineeCourses />} />
+          {/* <Route path="/trainee-courses" element={<TraineeCourses />} /> */}
           <Route path="/linechart" element={<CountOfSeals />} />
           <Route path="/countofproducts" element={<CountOfProduct />} />
           <Route path="/countofcustomers" element={<CountOfCustomers />} />
 
-
-
           {/* WSpace */}
->>>>>>> ff50f0323e7a675ebb0de5e6cc5f1fb04c65935f
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
           <Route path="/mylearning" element={<MyLearning />} />
@@ -439,7 +381,6 @@ function App() {
             element={<PersonalDevelopment />}
           />
           <Route path="/socialscience" element={<SocialScience />} />
-
 
           {/* Basic Advance Preminum Cousrses here */}
           {/* Basic Courses */}

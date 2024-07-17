@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-=======
 import React, { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
->>>>>>> ff50f0323e7a675ebb0de5e6cc5f1fb04c65935f
 import { SiGooglemeet } from "react-icons/si";
 import MeetSlider from "../../Meeting/MeetSlider";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
@@ -15,31 +11,21 @@ import { FaUserAlt } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
 import Trainee_Home from "../home/Home";
 import Navigation from "../TraineAdmin/navigation/navigation";
-<<<<<<< HEAD
-
-=======
 import TraineUpload from "../UserTask/traineuploads";
 import COursesGroup from "../TraineAdmin/CoursesGroup/Tabs";
 import UserAccount from "../UsersSection/usernavigation/navigation";
 import Calendar from "../Calendar/Calendar";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { IoMdLogOut } from "react-icons/io";
-import StatusPage from "../UserTask/StatusPage";
->>>>>>> ff50f0323e7a675ebb0de5e6cc5f1fb04c65935f
 const TraineeDashboard = () => {
   const location = useLocation();
   const redirect = location?.state?.redirect;
   const [isDrawerOpen, setDrawerOpen] = useState(false);
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState("home"); // State to manage active tab
-
-=======
   const [isLogoutOpen, setLogoutOpen] = useState(false); // State to manage logout options visibility
   const [activeTab, setActiveTab] = useState(redirect ? redirect : "home"); // State to manage active tab
   const trainee = {
     name: "Robin Huion", // Assuming one trainee for now
   };
->>>>>>> ff50f0323e7a675ebb0de5e6cc5f1fb04c65935f
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
   };
@@ -59,31 +45,17 @@ const TraineeDashboard = () => {
       case "home":
         return <Trainee_Home />;
       case "courses":
-<<<<<<< HEAD
-        return <div>Courses Group Content</div>;
-      case "calendar":
-        return <div>Calendar Content</div>;
-      case "reports":
-        return <div>Reports Content</div>;
-      case "approvals":
-        return <div>Approvals Content</div>;
-      case "user":
-        return <Navigation />;
-      case "settings":
-        return <div>Settings Content</div>;
-=======
         return <COursesGroup />;
       case "calendar":
         return <Calendar />;
       case "reports":
-        return <StatusPage />; // Ensure this line renders StatusPage for the "reports" tab
+        return <div>Reports Content</div>;
       case "approvals":
         return <TraineUpload />;
       case "user":
         return <UserAccount />;
       case "settings":
         return <Navigation />;
->>>>>>> ff50f0323e7a675ebb0de5e6cc5f1fb04c65935f
       default:
         return null;
     }
@@ -95,8 +67,8 @@ const TraineeDashboard = () => {
         {/* sidebar */}
         <div className="hidden md:flex flex-col w-64 bg-gray-800">
           <div className="flex items-center justify-center h-16 bg-gray-900">
-            <span className="text-white font-bold uppercase">
-              Trainee Dashboard
+            <span className="px-2 flex py-1 text-xl text-white font-bold rounded-md">
+              Trainee DashBoard
             </span>
           </div>
           <div className="flex flex-col flex-1 overflow-y-auto">
@@ -141,17 +113,6 @@ const TraineeDashboard = () => {
                 <TbReportAnalytics className="h-6 w-6 mr-2" />
                 Reports
               </a>
-
-              {/* <a
-                href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${
-                  activeTab === "courses" && "bg-gray-700"
-                }`}
-                onClick={() => handleTabClick("reports")}
-              >
-                <FaLayerGroup className="h-6 w-6 mr-2" />
-                Reports
-              </a> */}
               <a
                 href="#"
                 className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${
@@ -184,7 +145,6 @@ const TraineeDashboard = () => {
               </a>
             </nav>
           </div>
-
           {isLogoutOpen && (
             <div className="w-auto h-14 mx-2 px-2 float-end  relative z-10">
               <div className="flex items-end justify-end space-x-1 mt-2">
@@ -212,11 +172,12 @@ const TraineeDashboard = () => {
             />
           </div>
         </div>
+
         {/* Main content */}
         <div className="flex flex-col flex-1 overflow-y-auto">
           <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200">
-            <div className="flex items-center px-4">
-              <button className="text-gray-500 focus:outline-none focus:text-gray-700">
+            <div className="flex items-center bg-[#111827] h-16 text-white px-4">
+              <button className="text-white focus:outline-none focus:text-gray-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -236,9 +197,9 @@ const TraineeDashboard = () => {
             <div className="flex-1 flex items-center justify-center px-4 h-16">
               <h1 className="text-xl font-semibold">Trainee Dashboard</h1>
             </div>
-            <div className="flex items-center px-4">
+            <div className="flex items-center bg-[#111827] h-16 px-4">
               <button
-                className="text-gray-500 hover:text-gray-600"
+                className="text-white  hover:text-gray-600"
                 id="open-sidebar"
                 onClick={toggleDrawer}
               >
