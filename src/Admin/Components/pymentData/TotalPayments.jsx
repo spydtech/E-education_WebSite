@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from 'axios'
 
 const sampleData = [
   {
@@ -56,6 +57,30 @@ const sampleData = [
 const AllPaymentsTable = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchBy, setSearchBy] = useState("userId");
+  const jwt = localStorage.getItem('jwt')
+  const [userData, setUserData] = useState([])
+
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/api/payment/user-courses", {
+        headers: {
+          Authorization: `Bearer ${jwt}`, // Send JWT token to authenticate the request
+        },
+      })
+      .then((response) => {
+        console.log("API response:", response);
+        if (Array.isArray(response.data)) {
+          setUserData(response.data);
+        } else {
+          console.error("API response is not an array:", response.data);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching user data:", error);
+      });
+  }, [jwt]);
+
 
   const getStatusClass = (status) => {
     switch (status) {
@@ -86,8 +111,10 @@ const AllPaymentsTable = () => {
       return item.userId.toLowerCase().includes(lowerCaseSearchTerm);
     } else if (searchBy === "TransactionId") {
       return item.TransactionId.toLowerCase().includes(lowerCaseSearchTerm);
-    } else if (searchBy === "fullName") {
-      return item.fullName.toLowerCase().includes(lowerCaseSearchTerm);
+    } else if (searchBy === "userName") {
+      return item.userName.toLowerCase().includes(lowerCaseSearchTerm);
+    } else if (searchBy === "email") {
+      return item.email.toLowerCase().includes(lowerCaseSearchTerm);
     } else if (searchBy === "Date") {
       return item.Date.toLowerCase().includes(lowerCaseSearchTerm);
     }
@@ -129,15 +156,15 @@ const AllPaymentsTable = () => {
           </tr>
         </thead>
         <tbody>
-          {filteredData.map((item, index) => (
+          {userData.map((item, index) => (
             <tr key={index} className="hover:bg-gray-300 ">
-              <td className="px-4 py-2">{item.Date}</td>
+              <td className="px-4 py-2">{item.date}</td>
               <td className="px-4 py-2">{item.userId}</td>
-              <td className="px-4 text-nowrap py-2">{item.fullName}</td>
+              <td className="px-4 text-nowrap py-2">{item.userName}</td>
               <td className="px-4 py-2">{item.email}</td>
               <td className="px-4 py-2">{item.paymentMethod}</td>
-              <td className="px-4 py-2">{item.TransactionId}</td>
-              <td className="px-4 py-2">{item.totalAmount}</td>
+              <td className="px-4 py-2">{item.payment_id}</td>
+              <td className="px-4 py-2">{item.amount}</td>
               <td className={`px-4 py-2 ${getStatusClass(item.status)}`}>
                 {item.status}
               </td>

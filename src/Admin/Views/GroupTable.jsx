@@ -316,8 +316,10 @@
 // }
 
 // export default GroupTable;
-import React, { useState } from "react";
-import { userData, traineeData } from "./FilterUsers";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from 'axios'
+// import { userData, traineeData } from "./FilterUsers";
 
 function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -328,6 +330,7 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   const [userSearchQuery, setUserSearchQuery] = useState("");
   const [userSearchQueryByCourse, setUserSearchQueryByCourse] = useState("");
   const [showWarning, setShowWarning] = useState(false);
+  const [userData, setUserData] = useState([])
 
   const traineeName = trainees.map((trainee) => (
     <tr key={trainee.name} className="border-b hover:bg-gray-100">
@@ -342,6 +345,17 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
       </td>
     </tr>
   ));
+
+  useEffect(() => {
+    // Fetch user data on component mount
+    axios.get("http://localhost:8080/api/payment/user-courses")
+      .then(response => {
+        setUserData(response.data);
+      })
+      .catch(error => {
+        console.error("There was an error fetching the user data!", error);
+      });
+  }, []);
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
@@ -402,9 +416,9 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
     user.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const filteredTrainees = traineeData.filter((trainee) =>
-    trainee.name.toLowerCase().includes(traineeSearchQuery.toLowerCase())
-  );
+  // const filteredTrainees = userData.filter((trainee) =>
+  //   trainee.name.toLowerCase().includes(traineeSearchQuery.toLowerCase())
+  // );
 
   const filteredAddUsers = userData
     .filter(
@@ -416,33 +430,33 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
     )
     .filter((user) => !users.some((groupUser) => groupUser.name === user.name));
 
-  const traineeRows = filteredTrainees.map((trainee) => (
-    <tr key={trainee.name} className="border-b hover:bg-gray-100 ">
-      <td className="px-6 py-4 whitespace-nowrap">
-        <div className="flex items-center">
-          <img
-            className="h-10 w-10 rounded-full"
-            src={trainee.avatar}
-            alt={`Avatar of ${trainee.name}`}
-          />
-          <div className="ml-4">
-            <div className="text-sm font-medium text-gray-900">
-              {trainee.name}
-            </div>
-            <div className="text-sm text-gray-500">{trainee.email}</div>
-          </div>
-        </div>
-      </td>
-      <td className="px-6 py-4 whitespace-nowrap">
-        <button
-          className="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600"
-          onClick={() => setTrainee(trainee)}
-        >
-          Set as Trainee
-        </button>
-      </td>
-    </tr>
-  ));
+  // const traineeRows = filteredTrainees.map((trainee) => (
+  //   <tr key={trainee.name} className="border-b hover:bg-gray-100 ">
+  //     <td className="px-6 py-4 whitespace-nowrap">
+  //       <div className="flex items-center">
+  //         <img
+  //           className="h-10 w-10 rounded-full"
+  //           src={trainee.avatar}
+  //           alt={`Avatar of ${trainee.name}`}
+  //         />
+  //         <div className="ml-4">
+  //           <div className="text-sm font-medium text-gray-900">
+  //             {trainee.name}
+  //           </div>
+  //           <div className="text-sm text-gray-500">{trainee.email}</div>
+  //         </div>
+  //       </div>
+  //     </td>
+  //     <td className="px-6 py-4 whitespace-nowrap">
+  //       <button
+  //         className="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600"
+  //         onClick={() => setTrainee(trainee)}
+  //       >
+  //         Set as Trainee
+  //       </button>
+  //     </td>
+  //   </tr>
+  // ));
 
   const userRows = filteredAddUsers.map((user) => (
     <tr key={user.name} className="border-b hover:bg-gray-100 ">
@@ -561,7 +575,7 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {traineeRows}
+                  {/* {traineeRows} */}
                 </tbody>
               </table>
               <div className="mt-4 flex justify-end">
