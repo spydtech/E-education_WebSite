@@ -561,6 +561,9 @@ import React, { useState, useEffect } from "react";
 import profilebg from "../../assetss/profile/profilebg.jpg";
 import dp from "../../assets/women2.png";
 import { FaRegEdit } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+
+
 
 const UserProfile = () => {
   const defaultFormData = {
@@ -576,15 +579,38 @@ const UserProfile = () => {
 
   const [formData, setFormData] = useState(defaultFormData);
   const [isEditing, setIsEditing] = useState(false);
-
+  const dispatch = useDispatch();
+  const { auth } = useSelector((state) => state);
+  const jwt = localStorage.getItem("jwt");
   useEffect(() => {
-    const storedData = localStorage.getItem("userProfile");
-    if (storedData) {
-      setFormData(JSON.parse(storedData));
-    } else {
-      setFormData(defaultFormData); // Set default data if no stored data
+    if (auth.user) {
+      const { firstName, lastName, email, phoneNumber, location, bio, gender, dateOfBirth, website, profileImage, coverImage } = auth.user;
+      const fullName = `${firstName} ${lastName}`;
+      setFormData({
+        fullName,
+        firstName,
+        lastName,
+        bio: bio || '',
+        gender: gender || '',
+        email: email,
+        phoneNumber: phoneNumber || '',
+        location: location || '',
+        dateOfBirth: dateOfBirth || '',
+        website: website || '',
+        profileImage: profileImage || '',
+        backgroundImage: profilebg,
+      });
     }
-  }, []);
+  }, [auth]);
+
+  // useEffect(() => {
+  //   const storedData = localStorage.getItem("userProfile");
+  //   if (storedData) {
+  //     setFormData(JSON.parse(storedData));
+  //   } else {
+  //     setFormData(defaultFormData); // Set default data if no stored data
+  //   }
+  // }, []);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -743,15 +769,15 @@ const UserProfile = () => {
             </div>
             <div className="relative">
               <label
-                htmlFor="emailId"
+                htmlFor="email"
                 className="block text-sm mb-3 text-[#f6ac14] font-medium text-muted-foreground"
               >
                 E-mail ID
               </label>
               <input
                 type="email"
-                id="emailId"
-                value={formData.emailId}
+                id="email"
+                value={formData.email}
                 onChange={handleChange}
                 className="mt-1 block w-80 border-gray-400 border-2 rounded-md shadow-sm p-4 focus:ring-primary focus:border-primary lg:w-[445px] lg:h-[47px] md:w-[250px] md:h-[25px]"
                 placeholder="Enter here"
