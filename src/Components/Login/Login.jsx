@@ -179,9 +179,6 @@ function Login() {
       password: data.get("password"),
     };
 
-    // Save user data to local storage
-    localStorage.setItem("userEmail", userData.email);
-    localStorage.setItem("userPassword", userData.password);
 
     navigate("/");
     dispatch(login(userData));
@@ -189,9 +186,6 @@ function Login() {
 
   return (
     <div className="relative">
-      {/* <button className="absolute   top-4 right-24 bg-[#F6AC14] text-white px-2 py-2 rounded-lg shadow-lg hover:bg-[#F8B64C] focus:outline-none focus:ring-2 focus:ring-[#F6AC14] transition-all duration-300 ease-in-out text-sm md:text-base">
-        Sign Up
-      </button> */}
       <button className="hidden md:block absolute top-4 right-24 bg-[#F6AC14] text-white px-2 py-2 rounded-lg shadow-lg hover:bg-[#F8B64C] focus:outline-none focus:ring-2 focus:ring-[#F6AC14] transition-all duration-300 ease-in-out text-sm md:text-base">
         Sign Up
       </button>

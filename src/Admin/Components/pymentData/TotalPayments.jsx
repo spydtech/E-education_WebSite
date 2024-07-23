@@ -63,7 +63,7 @@ const AllPaymentsTable = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/payment/user-courses", {
+      .get("http://localhost:8080/api/payment/all", {
         headers: {
           Authorization: `Bearer ${jwt}`, // Send JWT token to authenticate the request
         },
@@ -149,6 +149,7 @@ const AllPaymentsTable = () => {
             <th className="px-4 py-2 text-left">UserId</th>
             <th className="px-4 py-2 text-left">FullName</th>
             <th className="px-4 py-2 text-left">Email</th>
+            <th className="px-4 py-2 text-left">Course Purchase</th>
             <th className="px-4 py-2 text-left">PaymentMethod</th>
             <th className="px-4 py-2 text-left">TransactionId</th>
             <th className="px-4 py-2 text-left">TotalAmount</th>
@@ -158,13 +159,14 @@ const AllPaymentsTable = () => {
         <tbody>
           {userData.map((item, index) => (
             <tr key={index} className="hover:bg-gray-300 ">
-              <td className="px-4 py-2">{item.date}</td>
+              <td className="px-4 py-2">{item.createdAt}</td>
               <td className="px-4 py-2">{item.userId}</td>
               <td className="px-4 text-nowrap py-2">{item.userName}</td>
-              <td className="px-4 py-2">{item.email}</td>
+              <td className="px-4 py-2">{item.userEmail}</td>
+              <td className="px-4 py-2">{item.courseDetails}</td>
               <td className="px-4 py-2">{item.paymentMethod}</td>
-              <td className="px-4 py-2">{item.payment_id}</td>
-              <td className="px-4 py-2">{item.amount}</td>
+              <td className="px-4 py-2">{item.razorpayPaymentId}</td>
+              <td className="px-4 py-2">{item.totalAmount}</td>
               <td className={`px-4 py-2 ${getStatusClass(item.status)}`}>
                 {item.status}
               </td>

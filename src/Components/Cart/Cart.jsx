@@ -29,12 +29,13 @@ const Cart = ({ history }) => {
     // Add GST of 18%
     const gstAmount = (totalAmount * 0.18).toFixed(2); // Calculate GST amount (18% of totalAmount)
     totalAmount = (parseFloat(totalAmount) + parseFloat(gstAmount)).toFixed(2); // Add GST to totalAmount
+
     console.log(totalAmount)
 
     // Initialize Razorpay
     const initializeRazorpay = async (orderId) => {
         const rzp = new window.Razorpay({
-            key: 'rzp_live_DWJacXxphWC6Zg',// Replace with your actual API key
+            key: 'rzp_test_5wPc5EqQCQkluu',// Replace with your actual API key
             amount: totalAmount * 100,
             order_id: orderId,
             currency: 'INR',
@@ -66,6 +67,7 @@ const Cart = ({ history }) => {
                         // orderId: response.razorpay_payment_id,
                         razorpayPaymentId: response.razorpay_payment_id,
                         paymentStatus: 'success',
+                        paymentMethod: 'Razorpay',
                     };
                     const paymentStoreResponse = await axios.post(
                         'http://localhost:8080/api/payment/store-payment', // Backend API endpoint for storing payment
@@ -87,7 +89,7 @@ const Cart = ({ history }) => {
     };
 
     // Handle checkout button click
-    const handleCheckout = async () => {
+    const handleCheckout = async (paymentMethod) => {
         try {
             const response = await axios.post(
                 'http://localhost:8080/create-order', // Backend API endpoint for creating Razorpay order
@@ -95,6 +97,7 @@ const Cart = ({ history }) => {
                     amount: totalAmount * 100, // Amount in paisa (convert to integer)
                     currency: 'INR',
                     receipt: 'receipt_order_12345', // Replace with your logic for receipt ID
+                    paymentMethod: 'Razorpay',
                 },
                 {
                     headers: {
