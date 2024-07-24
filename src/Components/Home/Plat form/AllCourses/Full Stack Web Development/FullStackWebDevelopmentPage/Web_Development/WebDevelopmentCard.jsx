@@ -1,12 +1,13 @@
 import React from "react";
-
+// import nextgen from "../../../../../../assetss/fullstackwebdev/nextGen.png"
+import Nextgen from "../../../../../../../assetss/fullstackwebdev/nextGen.png"
 const WebDevelopmentCard = () => {
   return (
     <>
       <div className="max-w-screen-xl px-4 mx-auto mt-8 sm:mt-12 sm:px-6 md:mt-16">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="relative mt-12 sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-            <svg
+            {/* <svg
               className="absolute top-0 hidden origin-top transform scale-75 -translate-x-1/2 -translate-y-8 left-1/2 sm:scale-100 lg:hidden"
               width={640}
               height={784}
@@ -63,9 +64,10 @@ const WebDevelopmentCard = () => {
                   dispatch(new SendOrderCreatedMail);
                 </pre>
               </div>
-            </div>
+            </div> */}
+            <img src={Nextgen} className=""/>
           </div>
-          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left pl-4">
+          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left pl-4 mb-8">
             <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base font">
               Full Stack Web Development
             </div>

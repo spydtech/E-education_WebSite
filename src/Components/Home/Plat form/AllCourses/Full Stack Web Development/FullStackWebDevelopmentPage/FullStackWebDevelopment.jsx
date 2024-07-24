@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import AboutCourses from "./AboutCourses";
 
 import Navbar from "../../../../../Navbar";
+import Hero from "../../../../../../assetss/fullstackwebdev/hero.png"
+// import Hero from "../../../../../../assetss/fullstackwebdev/hero.png"
 import Footer from "../../../../footer/Footer";
 // import FullStackCard from "./FullStackCard";
 import WebDeveloper from "./Web_Development/WebDeveloper";
@@ -29,13 +31,18 @@ const ParticularFullStack = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full md:pl-28 py-12 flex md:flex-row flex-col items-center justify-center gap-8 max-w-8xl mx-auto">
-        <div className="md:w-[600px] pl-4 ">
-          <span className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base">
+      <div className="w-full  flex md:flex-row flex-col items-center justify-center gap-8 mx-auto">
+        <div className=" ml-4 md:w-[520px] ">
+          {/* <span className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base">
             Explore Full Stack Web Development
-          </span>
-          <h3 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
-            Master Full Stack Web Development
+          </span> */}
+          <h3 className="mt-1 md:text-6xl font-bold leading-10 tracking-tight text-gray-900 sm:leading-none text-4xl ">
+            Master  {" "}
+            <span className="text-[#F6AC14]">
+
+            Full Stack 
+            </span>
+          {" "} Web Development
           </h3>
           <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
             Accelerate your tech skills with comprehensive courses designed to
@@ -50,7 +57,7 @@ const ParticularFullStack = () => {
           </p>
           <button
             onClick={handleEnroll}
-            className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95"
+            className="bg-[#0098F1] text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95"
           >
             Enroll Now
           </button>
@@ -58,8 +65,8 @@ const ParticularFullStack = () => {
         </div>
         <div className="relative">
           <img
-            src="https://miro.medium.com/v2/resize:fit:750/1*-hL6ZeXl_Kt0O-b82UQo9A.png"
-            className=" h-[300px] p-4"
+            src={Hero}
+            className=" h-[517px]  w-[623px] p-4"
           />
         </div>
       </div>
