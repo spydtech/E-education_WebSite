@@ -1155,11 +1155,10 @@ const Navbar = () => {
                       </Link>
                       <div className="relative inline-block">
                         <button
-                          className={`inline-flex items-center justify-center h-14 px-4 py-2 text-sm font-medium transition-colors rounded-md ${
-                            navigationMenu === "getting-started"
+                          className={`inline-flex items-center justify-center h-14 px-4 py-2 text-sm font-medium transition-colors rounded-md ${navigationMenu === "getting-started"
                               ? "border-2 border-black"
                               : ""
-                          }`}
+                            }`}
                           onClick={() =>
                             toggleNavigationMenu("getting-started")
                           }
@@ -1168,12 +1167,11 @@ const Navbar = () => {
                             {auth.user.firstName[0].toUpperCase()}
                           </span>
                           <svg
-                            className={`relative top-[1px] ml-1 h-5 w-5 ease-out duration-300 ${
-                              navigationMenuOpen &&
-                              navigationMenu === "getting-started"
+                            className={`relative top-[1px] ml-1 h-5 w-5 ease-out duration-300 ${navigationMenuOpen &&
+                                navigationMenu === "getting-started"
                                 ? "-rotate-180"
                                 : ""
-                            }`}
+                              }`}
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
                             fill="none"
@@ -1253,11 +1251,10 @@ const Navbar = () => {
                         onClick={() => setShowSidebar(!showSidebar)}
                       />
                       <div
-                        className={`inset-y-0 right-0 w-64 mt-[5%] bg-gray-800 text-white transition-transform transform ${
-                          showSidebar ? "translate-x-0" : "translate-x-full"
-                        } ease-in-out duration-300`}
+                        className={`inset-y-0 right-0 w-64 mt-[5%] bg-gray-800 text-white transition-transform transform ${showSidebar ? "translate-x-0" : "translate-x-full"
+                          } ease-in-out duration-300`}
                       >
-                        <Notification1 />
+                        {/* <Notification1 /> */}
                       </div>
                     </>
                   ) : (
@@ -1290,11 +1287,10 @@ const Navbar = () => {
                               {({ active }) => (
                                 <a
                                   href="/PostFeeds"
-                                  className={`${
-                                    active
+                                  className={`${active
                                       ? "bg-gray-100 text-gray-900"
                                       : "text-gray-700"
-                                  } block px-4 py-2 text-sm`}
+                                    } block px-4 py-2 text-sm`}
                                 >
                                   Feeds
                                 </a>
@@ -1304,11 +1300,10 @@ const Navbar = () => {
                               {({ active }) => (
                                 <a
                                   href="/QuestionForm"
-                                  className={`${
-                                    active
+                                  className={`${active
                                       ? "bg-gray-100 text-gray-900"
                                       : "text-gray-700"
-                                  } block px-4 py-2 text-sm`}
+                                    } block px-4 py-2 text-sm`}
                                 >
                                   Ask Me Later
                                 </a>

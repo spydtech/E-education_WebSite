@@ -1,33 +1,49 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { trainee } from '../../../State/Auth/Action';
 
 const Traine_Login = () => {
-  const [userId, setUserId] = useState('');
-  const [password, setPassword] = useState('');
+
   const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const traineeData = {
+      userId: data.get("userId"),
+      password: data.get("password"),
+    };
 
 
-  const handleLogin = async () => {
-    try {
-      const response = await axios.post('http://localhost:8080/trainee/signin', {
-        userName: userId,
-        password: password,
-      });
-      const { status, jwt } = response.data;
-
-      if (status) {
-        // Save the JWT token to localStorage or any other secure place
-        localStorage.setItem('jwt', jwt);
-        // Redirect to a different page or perform any other action
-        window.location.href = '/traineedashboard';
-      } else {
-        setErrorMessage('Login failed. Please check your credentials.');
-      }
-    } catch (error) {
-      setErrorMessage('An error occurred. Please try again.');
-    }
+    navigate("/traineedashboard");
+    dispatch(trainee(traineeData));
   };
+
+
+  // const handleLogin = async () => {
+  //   try {
+  //     const response = await axios.post('http://localhost:8080/trainee/signin', {
+  //       userId: userId,
+  //       password: password,
+  //     });
+  //     const { status, jwt } = response.data;
+
+  //     if (status) {
+  //       // Save the JWT token to localStorage or any other secure place
+  //       localStorage.setItem('jwt', jwt);
+  //       // Redirect to a different page or perform any other action
+  //       window.location.href = '/traineedashboard';
+  //     } else {
+  //       setErrorMessage('Login failed. Please check your credentials.');
+  //     }
+  //   } catch (error) {
+  //     setErrorMessage('An error occurred. Please try again.');
+  //   }
+  // };
 
   return (
     <div className="py-16">
@@ -50,42 +66,50 @@ const Traine_Login = () => {
             </a>
             <span className="border-b w-1/5 lg:w-1/4" />
           </div>
-          <div className="mt-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">User ID</label>
-            <input
-              className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
-              type="text"
-              value={userId}
-              onChange={(e) => setUserId(e.target.value)}
-            />
-          </div>
-          <div className="mt-4">
-            <div className="flex justify-between">
-              <label className="block text-gray-700 text-sm font-bold mb-2" >Password</label>
-              <Link to="/forgot-password" className="text-xs text-gray-500">
+          <form
+            onSubmit={handleLogin}
+            className="flex flex-col items-center"
+          >
+            <div className="mt-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2">User ID</label>
+              <input
+                className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-6 mx-4 block w-full appearance-none"
+                id="userId"
+                label="userId"
+                name="userId"
+                type="text"
+                placeholder="user ID"
+              />
+            </div>
+            <div className="mt-4">
+              <div className="flex justify-between">
+                <label className="block text-gray-700 text-sm font-bold mb-2" >Password</label>
+                <Link to="/forgot-password" className="text-xs text-gray-500">
                   Forget Password?
                 </Link>
+              </div>
+              <input
+                className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-6 mx-4 block w-full appearance-none"
+                id="password"
+                label="Password"
+                name="password"
+                type="password"
+                placeholder="password"
+              />
             </div>
-            <input
-              className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          {errorMessage && (
-            <div className="mt-4 text-red-500 text-center">
-              {errorMessage}
+            {errorMessage && (
+              <div className="mt-4 text-red-500 text-center">
+                {errorMessage}
+              </div>
+            )}
+            <div className="mt-8">
+              <button
+                className="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600"
+              >
+                Login
+              </button>
             </div>
-          )}
-          <div className="mt-8">
-            <button
-              className="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600"
-              onClick={handleLogin}
-            >
-              Login
-            </button>
-          </div>
+          </form>
           <div className="mt-4 flex items-center justify-between">
             <span className="border-b w-1/5 md:w-1/4" />
             {/* <a href="#" className="text-xs text-gray-500 uppercase"> or sign up </a> */}
