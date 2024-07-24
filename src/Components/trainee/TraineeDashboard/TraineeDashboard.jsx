@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { SiGooglemeet } from "react-icons/si";
 import MeetSlider from "../../Meeting/MeetSlider";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
@@ -18,11 +19,18 @@ import Calendar from "../Calendar/Calendar";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { IoMdLogOut } from "react-icons/io";
 import StatusPage from "../UserTask/StatusPage";
+import { getTrainee, logout } from "../../../State/Auth/Action";
+import { useDispatch, useSelector } from "react-redux";
+
 const TraineeDashboard = () => {
   const location = useLocation();
   const redirect = location?.state?.redirect;
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [isLogoutOpen, setLogoutOpen] = useState(false); // State to manage logout options visibility
+  const jwt = localStorage.getItem("jwt")
+  const auth = useSelector((state) => state.auth);
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState(redirect ? redirect : "home"); // State to manage active tab
   const trainee = {
     name: "Robin Huion", // Assuming one trainee for now
@@ -61,7 +69,17 @@ const TraineeDashboard = () => {
         return null;
     }
   };
+  useEffect(() => {
+    if (jwt) {
+      dispatch(getTrainee(jwt));
+    }
+  }, [jwt, auth.jwt, dispatch]);
 
+  const handleLogout = () => {
+    dispatch(logout());
+    localStorage.removeItem("jwt");
+    navigate("/trainee");
+  };
   return (
     <>
       <div className="flex h-screen bg-gray-100">
@@ -76,9 +94,8 @@ const TraineeDashboard = () => {
             <nav className="flex-1 px-2 py-4 bg-gray-800">
               <a
                 href="#"
-                className={`flex items-center px-4 py-2 text-gray-100 hover:bg-gray-700 ${
-                  activeTab === "home" && "bg-gray-700"
-                }`}
+                className={`flex items-center px-4 py-2 text-gray-100 hover:bg-gray-700 ${activeTab === "home" && "bg-gray-700"
+                  }`}
                 onClick={() => handleTabClick("home")}
               >
                 <MdOutlineDashboardCustomize className="h-6 w-6 mr-2" />
@@ -86,9 +103,8 @@ const TraineeDashboard = () => {
               </a>
               <a
                 href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${
-                  activeTab === "courses" && "bg-gray-700"
-                }`}
+                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "courses" && "bg-gray-700"
+                  }`}
                 onClick={() => handleTabClick("courses")}
               >
                 <FaLayerGroup className="h-6 w-6 mr-2" />
@@ -96,9 +112,8 @@ const TraineeDashboard = () => {
               </a>
               <a
                 href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${
-                  activeTab === "calendar" && "bg-gray-700"
-                }`}
+                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "calendar" && "bg-gray-700"
+                  }`}
                 onClick={() => handleTabClick("calendar")}
               >
                 <SlCalender className="h-6 w-6 mr-2" />
@@ -106,9 +121,8 @@ const TraineeDashboard = () => {
               </a>
               <a
                 href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${
-                  activeTab === "reports" && "bg-gray-700"
-                }`}
+                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "reports" && "bg-gray-700"
+                  }`}
                 onClick={() => handleTabClick("reports")}
               >
                 <TbReportAnalytics className="h-6 w-6 mr-2" />
@@ -127,9 +141,8 @@ const TraineeDashboard = () => {
               </a> */}
               <a
                 href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${
-                  activeTab === "approvals" && "bg-gray-700"
-                }`}
+                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "approvals" && "bg-gray-700"
+                  }`}
                 onClick={() => handleTabClick("approvals")}
               >
                 <ApprovalIcon className="h-6 w-6 mr-2 " />
@@ -137,9 +150,8 @@ const TraineeDashboard = () => {
               </a>
               <a
                 href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${
-                  activeTab === "user" && "bg-gray-700"
-                }`}
+                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "user" && "bg-gray-700"
+                  }`}
                 onClick={() => handleTabClick("user")}
               >
                 <FaUserAlt className="h-6 w-6 mr-2" />
@@ -147,9 +159,8 @@ const TraineeDashboard = () => {
               </a>
               <a
                 href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${
-                  activeTab === "settings" && "bg-gray-700"
-                }`}
+                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "settings" && "bg-gray-700"
+                  }`}
                 onClick={() => handleTabClick("settings")}
               >
                 <IoSettingsSharp className="h-6 w-6 mr-2" />
@@ -162,23 +173,30 @@ const TraineeDashboard = () => {
             <div className="w-auto h-14 mx-2 px-2 float-end  relative z-10">
               <div className="flex items-end justify-end space-x-1 mt-2">
                 <IoMdLogOut className="h-8 w-8 mb-1  text-gray-300" />
-                <Link to="/trainelogin">
-                  {" "}
-                  <button className=" p-2 bg-gray-800 text-white  rounded-md hover:bg-gray-700">
-                    Logout
-                  </button>
-                </Link>
+                {" "}
+                <button className=" p-2 bg-gray-800 text-white  rounded-md hover:bg-gray-700" onClick={handleLogout}>
+                  Logout
+                </button>
+
               </div>
             </div>
           )}
 
           <div className=" flex mb-4 mx-2">
-            <div className="rounded-full text-white font-bold text-xl border-2 w-12 h-12  flex justify-center items-center ">
-              {trainee.name.charAt(0)}
-            </div>
-            <span className="px-2 mx-1 mt-3 flex  text-white font-bold ">
-              {trainee.name}
-            </span>
+            {auth.trainee && auth.trainee.firstName ? (
+              <>
+                <div className="rounded-full text-white font-bold text-xl border-2 w-12 h-12 flex justify-center items-center ">
+                  {auth.trainee.firstName.charAt(0)}
+                </div>
+                <span className="px-2 mx-1 mt-3 flex text-white font-bold">
+                  {auth.trainee.firstName} {auth.trainee.lastName}
+                </span>
+              </>
+            ) : (
+              <div className="flex items-center">
+                <span className="text-white font-bold">Loading...</span>
+              </div>
+            )}
             <RiArrowRightSLine
               className=" w-6 h-6 text-white mt-[13px] cursor-pointer"
               onClick={toggleLogoutOptions}

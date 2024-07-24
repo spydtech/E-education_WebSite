@@ -25,13 +25,13 @@ const RegisterTrainee = () => {
     const [error, setError] = useState('')
 
     const handleAddEmployee = async () => {
-        const username = generateUsername();
+        const userId = generateUsername();
         const password = generatePassword();
-        setEmployee({ username, password });
+        setEmployee({ userId, password });
 
         try {
             const response = await axios.post('http://localhost:8080/trainee/register', {
-                userId: username,
+                userId: userId,
                 password: password,
                 firstName,
                 lastName,
@@ -105,7 +105,7 @@ const RegisterTrainee = () => {
                         <h2 className="text-2xl font-bold mb-4">Generated Credentials</h2>
                         <ul>
                             <li className="mb-2">
-                                <p><strong>Username:</strong> {employee.username}</p>
+                                <p><strong>UserId:</strong> {employee.userId}</p>
                                 <p><strong>Password:</strong> {employee.password}</p>
                             </li>
                         </ul>

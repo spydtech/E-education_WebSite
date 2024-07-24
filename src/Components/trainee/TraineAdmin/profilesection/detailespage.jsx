@@ -1,17 +1,20 @@
 
 import React, { useState } from "react";
 import { RiPencilFill, RiCheckLine } from "react-icons/ri";
+import { useSelector } from "react-redux";
 
 const DetailsPage = () => {
+  const auth = useSelector((state) => state.auth);
   const [details, setDetails] = useState({
-    fullName: "John Doe",
-    email: "john.doe@example.com",
-    phone: "+1 234 567 8901",
+    fullName: auth.trainee.firstName + " " + auth.trainee.lastName,
+    email: auth.trainee.email,
+    phone: auth.trainee.phoneNumber,
     ad̥dress: "1234 Street Name, City, Country",
   });
 
   const [editMode, setEditMode] = useState(false);
   const [editedDetails, setEditedDetails] = useState({ ...details });
+
 
   const handleEdit = () => {
     setEditMode(true);

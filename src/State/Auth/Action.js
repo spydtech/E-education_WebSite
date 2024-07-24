@@ -10,6 +10,9 @@ import {
   GET_USER_FAILURE,
   GET_USER_REQUEST,
   GET_USER_SUCCESS,
+  GET_TRAINEE_FAILURE,
+  GET_TRAINEE_REQUEST,
+  GET_TRAINEE_SUCCESS,
   LOGOUT,
   VERIFY_OTP_FAILURE,
   VERIFY_OTP_REQUEST,
@@ -17,7 +20,10 @@ import {
   EMAIL_EXISTS,
   GET_ALL_CUSTOMERS_REQUEST,
   GET_ALL_CUSTOMERS_SUCCESS,
-  GET_ALL_CUSTOMERS_FAILURE
+  GET_ALL_CUSTOMERS_FAILURE,
+  TRAINEE_LOGIN_REQUEST,
+  TRAINEE_LOGIN_SUCCESS,
+  TRAINEE_LOGIN_FAILURE
 } from './ActionType';
 
 const token = localStorage.getItem('jwt');
@@ -84,6 +90,25 @@ export const login = (userData) => async (dispatch) => {
   }
 };
 
+const traineeLoginRequest = () => ({ type: TRAINEE_LOGIN_REQUEST });
+const traineeLoginSuccess = (trainee) => ({ type: TRAINEE_LOGIN_SUCCESS, payload: trainee });
+const traineeLoginFailure = (error) => ({ type: TRAINEE_LOGIN_FAILURE, payload: error });
+
+export const trainee = (userData) => async (dispatch) => {
+  dispatch(traineeLoginRequest);
+
+  try {
+    const response = await axios.post(`${API_BASE_URL}/trainee/signin`, userData);
+    const trainee = response.data;
+    if (trainee.jwt) {
+      localStorage.setItem('jwt', trainee.jwt);
+    }
+    dispatch(traineeLoginSuccess(trainee.jwt));
+  } catch (error) {
+    dispatch(traineeLoginFailure(error.message));
+  }
+};
+
 export const getAllCustomers = (token) => {
   return async (dispatch) => {
     dispatch({ type: GET_ALL_CUSTOMERS_REQUEST });
@@ -122,6 +147,27 @@ export const getUser = (jwt) => async (dispatch) => {
     dispatch(getUserSuccess(user));
   } catch (error) {
     dispatch(getUserFailure(error.message));
+  }
+};
+
+const getTraineeRequest = () => ({ type: GET_TRAINEE_REQUEST });
+const getTraineeSuccess = (trainee) => ({ type: GET_TRAINEE_SUCCESS, payload: trainee });
+const getTraineeFailure = (error) => ({ type: GET_TRAINEE_FAILURE, payload: error });
+
+export const getTrainee = (jwt) => async (dispatch) => {
+  dispatch(getTraineeRequest());
+
+  try {
+    const response = await axios.get(`${API_BASE_URL}/trainee/profile`, {
+      headers: {
+        Authorization: `Bearer ${jwt}`,
+      },
+    });
+    const trainee = response.data;
+    localStorage.setItem('trainee', JSON.stringify(trainee));
+    dispatch(getTraineeSuccess(trainee));
+  } catch (error) {
+    dispatch(getTraineeFailure(error.message));
   }
 };
 
