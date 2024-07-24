@@ -137,38 +137,44 @@ function Tabs() {
 
   return (
     <div className="p-6">
-      <div className="overflow-x-auto">
-        <ul className="flex border-b ">
-          {courses.map((course) => (
-            <li
-              key={course.id}
-              onClick={() => handleTabClick(course.id)}
-              className={`mr-1 ${openTab === course.id ? "-mb-px" : ""}`}
-            >
-              <a
-                href="#"
-                className={`bg-white inline-block py-2 px-4 font-semibold ${
-                  openTab === course.id
-                    ? "border-l border-t border-r rounded-t text-blue-700"
-                    : "text-black hover:text-blue-700"
-                }`}
-              >
-                {course.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="w-full">
-        {courses.map((course) => (
-          <div
-            key={course.id}
-            style={{ display: openTab === course.id ? "block" : "none" }}
-          >
-            {course.content}
+      {groups.length > 0 ? (
+        <>
+          <div className="overflow-x-auto">
+            <ul className="flex border-b">
+              {courses.map((course) => (
+                <li
+                  key={course.id}
+                  onClick={() => handleTabClick(course.id)}
+                  className={`mr-1 ${openTab === course.id ? "-mb-px" : ""}`}
+                >
+                  <a
+                    href="#"
+                    className={`bg-white inline-block py-2 px-4 font-semibold ${
+                      openTab === course.id
+                        ? "border-l border-t border-r rounded-t text-blue-700"
+                        : "text-black hover:text-blue-700"
+                    }`}
+                  >
+                    {course.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-        ))}
-      </div>
+          <div className="w-full">
+            {courses.map((course) => (
+              <div
+                key={course.id}
+                style={{ display: openTab === course.id ? "block" : "none" }}
+              >
+                {course.content}
+              </div>
+            ))}
+          </div>
+        </>
+      ) : (
+        <p className="text-center text-gray-500">No existing groups</p>
+      )}
     </div>
   );
 }
