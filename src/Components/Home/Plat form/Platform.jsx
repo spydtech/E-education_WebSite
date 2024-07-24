@@ -51,7 +51,7 @@ function Platform() {
                   Stay ahead of the curve by mastering emerging technologies and
                   techniques that drive innovation.
                 </p>
-                <div className="bar hover:bg-[#f6ac14]">
+                <div className="bar hover:bg-[#f6ac14] ">
                   <div className="emptybar"></div>
                   <div className="filledbar"></div>
                   <span className="bar-text">Professionals</span>
