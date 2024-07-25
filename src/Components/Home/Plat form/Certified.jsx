@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 function Certified() {
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center min-h-screen  px-4 ">
+    <div className="flex flex-col lg:flex-row justify-center items-center my-8  px-4 ">
       <div className="bg-white mb-8 lg:mb-0 lg:mr-8 w-full max-w-xs md:max-w-sm lg:max-w-md h-[250px] shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 hover:bg-blue-600 group">
         <div className="flex items-start justify-start mb-4">
           <MdImportantDevices className="h-[60px] w-[60px] text-[#0098F1] group-hover:bg-white group-hover:text-blue-600 rounded-full p-2 transition-colors" />

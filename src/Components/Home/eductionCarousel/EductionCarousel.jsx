@@ -300,7 +300,7 @@ export default function EducationCarousel() {
           className="glide__track overflow-hidden md:pl-80 sm:pl-64 lg:pl-80  pl-8"
           data-glide-el="track"
         >
-          <ul className="glide__slides  flex p-0  justify-center">
+          <ul className="glide__slides  flex p-0 items-center justify-center">
             {courses.map((course, index) => (
               <li key={index} className="glide__slide   flex-none pt-10">
                 <Link
