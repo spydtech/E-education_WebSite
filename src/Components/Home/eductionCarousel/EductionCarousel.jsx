@@ -62,8 +62,6 @@
 //   },
 // ];
 
-
-
 // export default function EducationCarousel() {
 //   useEffect(() => {
 //     const slider = new Glide(".glide-01", {
@@ -96,7 +94,7 @@
 //       <div className="text-xl lg:text-5xl font-semibold pb-4 text-center font">
 //   <span className="">Choose a course for you</span>
 // </div>
-       
+
 //       </div>
 //       <div className="glide-01 relative  mb-12 font">
 //         <div className="overflow-hidden" data-glide-el="track">
@@ -169,8 +167,6 @@
 //     </>
 //   );
 // }
-
-
 
 import React, { useEffect } from "react";
 import Glide from "@glidejs/glide";
@@ -250,10 +246,10 @@ export default function EducationCarousel() {
     const slider = new Glide(".glide", {
       type: "carousel",
       focusAt: "center",
-      perView: 5,
+      perView: 4,
       autoplay: 3000,
       animationDuration: 700,
-      gap:5,
+      gap: 5,
       breakpoints: {
         1024: {
           perView: 3,
@@ -264,7 +260,6 @@ export default function EducationCarousel() {
         640: {
           perView: 1,
         },
-
       },
     });
 
@@ -301,8 +296,11 @@ export default function EducationCarousel() {
         </div>
       </div>
       <div className="glide relative mb-12 font-lora">
-        <div className="glide__track overflow-hidden md:pl-80 sm:pl-64 lg:pl-80  pl-8" data-glide-el="track">
-          <ul className="glide__slides  flex p-0  justify-center">
+        <div
+          className="glide__track overflow-hidden md:pl-80 sm:pl-64 lg:pl-80  pl-8"
+          data-glide-el="track"
+        >
+          <ul className="glide__slides  flex p-0 items-center justify-center">
             {courses.map((course, index) => (
               <li key={index} className="glide__slide   flex-none pt-10">
                 <Link
