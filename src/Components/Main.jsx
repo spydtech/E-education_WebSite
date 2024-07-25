@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Boy1 from "./Home/Boy1";
-import Girl from "../assetss/Home/girl.png"
-import Vector1 from "../assetss/Home/Vector1.png"
-import Vector2 from "../assetss/Home/Vector2.png"
-import thumbup from "../assetss/Home/thumbup.png"
+import Girl from "../assetss/Home/girl.png";
+import Vector1 from "../assetss/Home/Vector1.png";
+import Vector2 from "../assetss/Home/Vector2.png";
+import thumbup from "../assetss/Home/thumbup.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 // import "./main.css"
@@ -16,18 +16,17 @@ function Main() {
           <div class="my-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28 flex gap-3 lg:flex-justify lg:flex flex-col lg:flex-row">
             <div class="sm:text-center lg:text-left">
               <h1 class="font text-4xl tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl">
-                <h1 class="block xl:inline">Learn   {" "}
-                <span class="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] inline-block text-transparent bg-clip-text">
-                  {" "}
-                  without
-                </span>
-                   
-                {" "} 
-                  limits online   {" "} 
-                <span class="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] inline-block text-transparent bg-clip-text">
-                  {" "}
-                   courses
-                </span>
+                <h1 class="block xl:inline">
+                  Learn{" "}
+                  <span class="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] inline-block text-transparent bg-clip-text">
+                    {" "}
+                    without
+                  </span>{" "}
+                  limits online{" "}
+                  <span class="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] inline-block text-transparent bg-clip-text">
+                    {" "}
+                    courses
+                  </span>
                 </h1>
               </h1>
               <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
@@ -54,39 +53,22 @@ function Main() {
                   </Link>
                 </div>
               </div>
-              {/* <!-- End of Button Section --> */}
             </div>
 
-            {/* <!--   Image Section     --> */}
-            {/* <div className="lg:inset-y-0 lg:right-0 lg:w-1/2 md:flex md:justify-center md:items-center">
-      <div className="relative ">
-        <div className="absolute rounded-full border border-blue-600 w-[400px] h-[400px] right-[5px] bottom-[5px]"></div>
-        <div className="absolute inset-0 rounded-full bg-blue-500 w-[400px] h-[400px]"></div>
-       
-        <div className="relative z-10 flex flex-col items-center justify-center">
-          <div>
-            <img
-              src={Girl}
-              alt="Woman with Laptop"
-              className="w-[350px] h-[350px] object-cover"
-            />
-          </div>
-        </div>
-        <div className="absolute inset-2 rounded-full bg-[#F6AC14] w-[80px] h-[80px] right-[8px] bottom-[30px]"></div>
-      </div>
-    </div> */}
+            <div className="relative lg:inset-y-0 lg:right-0 lg:h-full  lg:w-1/2 md:flex md:justify-center md:items-center rounded-full">
+              <div
+                className="absolute inset-0 bg-cover bg-no-repeat "
+                style={{ backgroundImage: `url(${Vector2})` }}
+              ></div>
+              <div
+                className="absolute inset-0 bg-cover bg-no-repeat"
+                style={{ backgroundImage: `url(${Vector1})` }}
+              ></div>
 
-<div className="relative lg:inset-y-0 lg:right-0 lg:h-full  lg:w-1/2 md:flex md:justify-center md:items-center rounded-full">
-  <div className="absolute inset-0 bg-cover bg-no-repeat " style={{ backgroundImage: `url(${Vector2})` }}></div>
-  <div className="absolute inset-0 bg-cover bg-no-repeat" style={{ backgroundImage: `url(${Vector1})` }}></div>
-  
-  <div className="relative flex justify-center items-center w-full h-full">
-    <img src={Girl} alt="" className="relative z-20" />
-  </div>
-</div>
-
-
-
+              <div className="relative flex justify-center items-center w-auto h-auto">
+                <img src={Girl} alt="" className="relative z-20" />
+              </div>
+            </div>
           </div>
         </section>
       </div>
