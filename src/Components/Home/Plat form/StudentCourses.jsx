@@ -1,5 +1,4 @@
 import React from "react";
-
 import fullstack from "../../../assetss/studentCourses/full stack.png";
 import science from "../../../assetss/studentCourses/data-science.png";
 import cyber from "../../../assetss/studentCourses/cyber-security (1).png";
@@ -61,51 +60,55 @@ const StudentCourses = () => {
       <div className="my-10 mb-16">
         <div className="text-center text-black text-3xl font-bold m-4 my-10">
           <span className="text-black">Popular Skill </span>
-          <span className="bg-gradient-to-r from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r to-[#0098f1] from-[#f6ac14] bg-clip-text text-transparent">
             Enhancement
           </span>
           <span> Programs</span>
         </div>
-        <div
-          id="maindiv"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-8 justify-center items-center"
-        >
-          {courseData.map((course, index) => (
-            <div
-              key={index}
-              id="card"
-              className="w-full sm:w-[357px] lg:w-[380px] mx-2 h-[417px] lg:h-[400px] bg-[#0098f1] hover:bg-[#f6ac14] rounded-lg p-4 group"
-            >
-              <div className="rounded-full w-[80px] h-[80px] bg-[#d2efff] relative flex justify-center items-center mb-4">
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="w-[48px] h-[48px]"
-                />
+        <div className="flex justify-center">
+          <div
+            id="maindiv"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-9 gap-4 justify-center items-center"
+          >
+            {courseData.map((course, index) => (
+              <div
+                key={index}
+                id="card"
+                className="w-full sm:w-[317px] lg:w-[340px] mx-2 h-[360px] lg:h-[360px] bg-[#0098f1] rounded-lg p-4 group transition-all duration-600 ease-out transform  hover:bg-[#f6ac14] "
+              >
+                <div>
+                  <div className="rounded-full w-[80px] h-[80px] bg-[#d2efff] relative flex justify-center items-center mb-4">
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="w-[48px] h-[48px]"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-white text-[20px] font-bold mt-4">
+                      {course.title}
+                    </p>
+                    <p className="text-white mt-4">{course.description}</p>
+                  </div>
+                  <div className="flex justify-center items-center mt-10 relative rounded-lg">
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="rounded-lg w-[265px] bg-[#d2efff] group-hover:bg-[#fed19c] h-[70px] px-4 text-2xl group flex justify-center items-center gap-1.5 text-[#0098f1] py-2 transition-colors"
+                    >
+                      <Link
+                        to={course.link}
+                        className="flex items-center gap-1.5 group-hover:text-white"
+                      >
+                        Start Learning
+                        <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+                      </Link>
+                    </motion.button>
+                  </div>
+                </div>
               </div>
-              <div>
-                <p className="text-white text-2xl font-bold mt-4">
-                  {course.title}
-                </p>
-                <p className="text-white mt-4">{course.description}</p>
-              </div>
-              <div className="flex justify-center items-center mt-20 relative rounded-lg">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="rounded-lg w-[265px] bg-[#d2efff] group-hover:bg-[#fed19c] h-[70px] px-4 text-2xl group flex justify-center items-center gap-1.5 text-[#0098f1] py-2 transition-colors"
-                >
-                  <Link
-                    to={course.link}
-                    className="flex items-center gap-1.5  group-hover:text-white"
-                  >
-                    Start Learning
-                    <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-                  </Link>
-                </motion.button>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </>
