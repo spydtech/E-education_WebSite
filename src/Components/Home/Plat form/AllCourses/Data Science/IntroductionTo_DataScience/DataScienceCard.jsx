@@ -50,13 +50,14 @@ const DataScienceCard = () => {
     <section id="portfolio" className="portfolio-section py-10 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl pb-2 md:text-4xl lg:text-5xl text-[#0098f1] font-medium">
-            {" "}
-            The Future of Learning
+          <h2 className="text-3xl pb-2 md:text-4xl lg:text-5xl font-medium">
+            <span className="text-[#f6ac14]">The</span>
+            <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
+              {" "}
+              Future of{" "}
+            </span>
+            <span className="text-[#0098f1]"> Learning</span>
           </h2>
-          {/* bg-gradient-to-r from-[#F6AC14] to-[#0098F1] text-transparent bg-clip-text"> */}
-
-          {/* </h2> */}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {courseData.map((course, index) => (
