@@ -170,7 +170,7 @@ const Professionals = () => {
               <p className="mt-4 z-10 text-base lg:text-lg">{course.description}</p>
               <div className="flex justify-center z-10 mt-4">
                 <a href={course.link} className="flex bg-white bg-opacity-30 text-white hover:bg-[#0098f1] hover:bg-opacity-80 py-2 px-4 justify-center rounded-md w-full text-lg lg:text-2xl font-medium">
-                  Explore Now <MdArrowOutward className="text-white text-xl lg:text-3xl ml-2" />
+                  Explore Now <MdArrowOutward className="text-white text-2xl  lg:text-3xl ml-2" />
                 </a>
               </div>
             </div>
