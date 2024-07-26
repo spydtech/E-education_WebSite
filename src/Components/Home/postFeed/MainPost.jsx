@@ -4,7 +4,7 @@ import Post from './Post'
 import RightSide from './RightSide'
 const MainPost = () => {
     return (
-        <div className='flex flex-row justify-center items-center gap-24'>
+        <div className='flex flex-row justify-center items-center gap-44'>
             <div>
                 <LeftSide />
             </div>
