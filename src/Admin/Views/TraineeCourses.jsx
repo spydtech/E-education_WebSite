@@ -128,7 +128,7 @@ function Tabs() {
         key={group.id}
         groupName={group.groupName}
         users={group.users}
-        trainees={group.trainees} // Pass trainees array here
+        trainees={group.trainees}
         onRemoveUser={(user) => handleRemoveUser(group.groupName, user)}
         onAddUser={(user) => handleAddUser(group.groupName, user)}
       />

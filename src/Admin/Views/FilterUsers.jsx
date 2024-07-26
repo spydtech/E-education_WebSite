@@ -132,7 +132,7 @@ function UsersRolesTable() {
     if (!selectedTrainees.find((t) => t.name === trainee.name)) {
       setSelectedTrainees([...selectedTrainees, trainee]);
     }
-    setShowTraineeSearch(false); // Close the trainee search after adding
+    setShowTraineeSearch(false);
   };
 
   const handleRemoveFromGroupClick = (user) => {
