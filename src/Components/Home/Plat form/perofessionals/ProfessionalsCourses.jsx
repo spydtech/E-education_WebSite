@@ -175,7 +175,7 @@ function ProfessionalsCourses() {
               key={index}
               className="  group hover:bg-white border-2  rounded "
             >
-              <div className="flex rounded justify-center bg-gray-200  px-16 w-auto h-36 items-center text-4xl cursor-pointer relative before:absolute group-hover:before:bg-[#023047] before:bottom-0 before:left-0 before:h-full before:w-full before:origin-bottom before:scale-y-[0.0] group-hover:before:scale-y-100 before:transition-transform before:ease-in-out before:duration-500">
+              <div className="flex rounded justify-center bg-gray-200  px-16 w-auto h-36 items-center text-4xl cursor-pointer relative before:absolute group-hover:before:bg-[#f6ac14] before:bottom-0 before:left-0 before:h-full before:w-full before:origin-bottom before:scale-y-[0.0] group-hover:before:scale-y-100 before:transition-transform before:ease-in-out before:duration-500">
                 <div className="border-b-2 mx-16 px-8 absolute border-[#023047] bg-white  group-hover:border-none h-[80px] md:w-[350px]  flex items-center justify-between">
                   <div className="font-bold   text-base">{course.title}</div>
                   <div id="logo" className="">
@@ -189,7 +189,7 @@ function ProfessionalsCourses() {
                 </div>
 
                 <Link to={course.link}>
-                  <div className="font-bold gap-4 md:w-[390px] border-none flex justify-center items-center  hover:text-white bg-[#2a9d8f] hover:bg-[#023047] transition duration-500 p-2">
+                  <div className="font-bold gap-4 md:w-[390px] border-none flex justify-center items-center  hover:text-white bg-[#2a9d8f] hover:bg-[#0098f1] transition duration-500 p-2">
                     <div className="">
                       <FaLocationArrow className="w-8 h-8 " />
                     </div>{" "}

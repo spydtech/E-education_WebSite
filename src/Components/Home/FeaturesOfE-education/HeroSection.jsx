@@ -1,21 +1,22 @@
 
 import React from 'react';
+import Navbar from '../../Navbar'
 import ImgUrl from '../../../assetss/Home/FeaturesAssets/image.png'
 
 function HeroSection() {
   return (
 
-    <div className=" pb-10">
+    <div className=" pb-10 ">
       <div
  className="relative h-[572px] text-[#FFFFFF] bg-cover bg-center text-center  mx-auto "
-        style={{ backgroundImage: `url(${ImgUrl})` }}
-      >
+        style={{ backgroundImage: `url(${ImgUrl})` }}>
+        <Navbar/>
         <div className="bg-white bg-opacity-5 p-6 rounded-lg flex flex-col justify-center items-center h-full ">
-          <h2 className="text-2xl absolute top-36  font-medium lg:text-6xl">
-            The Features of Learning
+          <h2 className="  text-3xl absolute top-32  font-medium lg:text-4xl">
+            The features of learning
           </h2>
         
-          <p className="mt-16 max-w-lg pt-20 text-wrap ">
+          <p className="mt-16 max-w-lg pt-20 text-wrap text-opacity-80 ">
             In a world where information is at our fingertips, E-education offers limitless opportunities for personal and professional growth. Embrace the convenience and flexibility of online learning and unlock your potential from anywhere in the world.
           </p>
           <a href="#" className="inline-block w-[300px]  h-[60px] text-lg font-medium text-gray-100 bg-[#0098F1] rounded-lg p-2 mt-20 py-4 hover:bg-[#f6ac14] hover:shadow-md md:w-48"> Join the Courses</a>
@@ -31,7 +32,7 @@ function HeroSection() {
       <div className="relative z-10  ">
         <h1 className="text-2xl font-bold pb-8 h-16 pt-4 pl-4 relative w-60  overflow-hidden "style={{ borderBottomRightRadius: '1.0rem' }}>
           <span className="relative z-10 pt-4 ">Feeds</span>
-          <div className="absolute  top-0 left-0 h-full bg-[#0098f1] transform -translate-x-full group-hover:translate-x-0  transition-transform duration-500 ease-in-out w-full"></div>
+          <div className="absolute  top-0 left-0 h-full bg-[#0098f1] transform -translate-x-full group-hover:translate-x-0 hover:border-l-0  transition-transform duration-500 ease-in-out w-full"></div>
         </h1>
         <p className="mt-2 px-[1.25rem] text-white">
           Stay up-to-date with the latest trends, insights, and updates in the world of E-education through our feeds feature. Explore a curated collection of articles, blog posts, videos, and news related to online learning, educational technology, and more. Whether you're looking for tips on effective study strategies, industry trends, or inspiring success stories, our feeds have you covered. Join the conversation, share your thoughts, and connect with a community of learners passionate about E-education.

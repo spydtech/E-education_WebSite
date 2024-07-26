@@ -1,6 +1,5 @@
 import React from 'react'
 import Features2 from './Features2'
-import Navbar from '../../Navbar'
 import Footer from '../footer/Footer'
 import HeroSection from './HeroSection'
 import image1 from '../../../assetss/Home/FeaturesAssets/Learning.png';
@@ -50,7 +49,7 @@ function Features() {
 
   return (
     <div>
-        <Navbar />
+        
         <HeroSection />
         <div className="bg-opacity-30 bg-[#F6AC14] p-6  ">
       <h1 className="text-4xl font-lora text-center py-12 pt-4">
