@@ -1,24 +1,17 @@
-
-
 import React from "react";
 import Navbar from "../../../Navbar";
 import Footer from "../../footer/Footer";
 import { MdArrowOutward } from "react-icons/md";
 import { SiSemanticweb } from "react-icons/si";
 import { FaMobile } from "react-icons/fa";
-import { FaPython } from "react-icons/fa6";
-import { FaJava } from "react-icons/fa6";
-import { SiAlwaysdata } from "react-icons/si";
+import { FaPython, FaJava, FaDatabase, FaComputer } from "react-icons/fa6";
+import { SiAlwaysdata, SiCyberdefenders, SiNintendonetwork } from "react-icons/si";
 import { GrVirtualMachine } from "react-icons/gr";
 import { AiFillDatabase } from "react-icons/ai";
 import { DiDatabase } from "react-icons/di";
-import { SiCyberdefenders } from "react-icons/si";
 import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineNetworkCheck } from "react-icons/md";
 import { FaMixcloud } from "react-icons/fa";
-import { SiNintendonetwork } from "react-icons/si";
-import { FaDatabase } from "react-icons/fa6";
-import { FaComputer } from "react-icons/fa6";
 import image1 from '../../../../assetss/Home/FeaturesAssets/Professionalimage1.png';
 
 const Professionals = () => {
@@ -27,91 +20,92 @@ const Professionals = () => {
       title: "Full Stack Web Development",
       description: "Master full-stack web development with a comprehensive bootcamp course on E-education.",
       link: "/fullStack_WebDevelopment",
-      icon: <SiSemanticweb className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <SiSemanticweb className="text-[#f6ac14] w-[40px] h-[40px]" />,
+       
     },
     {
       title: "Mobile App Development",
-      description: "Start your journey in iOS app development with expert guidance.Mobile app development is the process of creating software applications that run on mobile devices.",
+      description: "Start your journey in iOS app development with expert guidance.",
       link: "/fullStackMobileAppDevelopment",
-      icon: <FaMobile className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <FaMobile className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "Python Programming",
-      description: "Unlock the power of Python programming with E-education.Python is a versatile, high-level programming language known for its readability and simplicity.",
+      description: "Unlock the power of Python programming with E-education.",
       link: "/fullStack_WebDevelopment/fullStack-Python-Development",
-      icon: <FaPython className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <FaPython className="text-[#f6ac14] w-[50px] h-[50px]" />,
     },
     {
       title: "Java Programming",
       description: "Build a solid foundation in Java programming with an engaging course on E-education.",
       link: "/fullStack_WebDevelopment/fullStack-Java-Development",
-      icon: <FaJava className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <FaJava className="text-[#f6ac14] w-[50px] h-[50px]" />,
     },
     {
       title: "Data Science and Analytics",
       description: "Dive deep into data science and analytics with a specialized course.",
       link: "/data_Science/data-Analatics",
-      icon: <SiAlwaysdata className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <SiAlwaysdata className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "Machine Learning",
       description: "Explore machine learning with hands-on Python & R training.",
       link: "/data_Science/machine-Learning",
-      icon: <GrVirtualMachine className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <GrVirtualMachine className="text-[#f6ac14] w-[50px] h-[50px]" />,
     },
     {
       title: "Data Visualization",
       description: "Master the art of data visualization with Python and Matplotlib in a course.",
       link: "/data_Science/data-visualization",
-      icon: <AiFillDatabase className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <AiFillDatabase className="text-[#f6ac14] w-[50px] h-[50px]" />,
     },
     {
       title: "Big Data",
       description: "Conquer big data challenges with specialized training on E-education.",
       link: "/data_Science/big-data-analysis",
-      icon: <DiDatabase className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <DiDatabase className="text-[#f6ac14] w-[50px] h-[50px]" />,
     },
     {
       title: "Cybersecurity",
       description: "Embark on a journey into cybersecurity fundamentals on E-education.",
       link: "/cyber_security",
-      icon: <SiCyberdefenders className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <SiCyberdefenders className="text-[#f6ac14] w-[50px] h-[50px]" />,
     },
     {
       title: "Ethical Hacking",
       description: "Learn the art of ethical hacking through comprehensive training on E-education.",
       link: "/ethical_Hacking",
-      icon: <GiGraduateCap className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <GiGraduateCap className="text-[#f6ac14] w-[50px] h-[50px]" />,
     },
     {
       title: "Network Security",
       description: "Master network security essentials with a comprehensive course on Pluralsight.",
       link: "/network_security",
-      icon: <MdOutlineNetworkCheck  className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <MdOutlineNetworkCheck className="text-[#f6ac14] w-[50px] h-[50px]" />,
     },
     {
       title: "Cloud Computing",
       description: "Embark on a journey into cloud computing with E-education.",
       link: "/cloud-testing",
-      icon: <FaMixcloud className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <FaMixcloud className="text-[#f6ac14] w-[50px] h-[50px]" />,
     },
     {
       title: "IT and Networking",
       description: "Master IT and networking essentials with courses on E-education.",
       link: "/network_security/advance-network-secuity",
-      icon: <SiNintendonetwork className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <SiNintendonetwork className="text-[#f6ac14] w-[50px] h-[50px]" />,
     },
     {
       title: "Database Management",
       description: "Unlock the potential of database management with E-education.",
       link: "/database",
-      icon: <FaDatabase className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <FaDatabase className="text-[#f6ac14] w-[50px] h-[50px]" />,
     },
     {
       title: "UI/UX Design",
       description: "Master the principles of UI/UX design with courses on E-education.",
       link: "/ui_ux_design",
-      icon: <FaComputer className="text-[#f6ac14] w-[70px] h-[70px]" />,
+      icon: <FaComputer className="text-[#f6ac14] w-[50px] h-[50px]" />,
     },
   ];
 
@@ -119,32 +113,31 @@ const Professionals = () => {
     <>
       <Navbar />
     
-      <div className="bg-gray-50 ">
-        <div className="flex">
-          <div className="grid text-center my-4">
-            <h1 className="text-xl p-6 max-w-[680px] text-wrap text-left">
+      <div className="bg-gray-50 px-4 sm:px-6 lg:px-8 w-screen">
+        <div className="flex flex-col lg:flex-row lg:justify-between">
+          <div className="text-center lg:text-left my-4 lg:w-1/2">
+          <div className="  xl:text-center pb-4">
+            <p className="px-6 md:lg:xl:text-xl text-sm text-left">
               Elevate your career with our curated professional courses designed
               to sharpen your skills and propel you towards success. Embrace the
               flexibility of online learning and seize the opportunity to grow,
               no matter where you are located.
-              <span className=""></span>
-            <p>
-            In today's dynamic job market, staying ahead requires continuous
-              learning. Our professional courses provide targeted skills and
-              knowledge to propel your career forward. Experience the
-              convenience and effectiveness of online learning, tailored to suit
-              your busy schedule and professional goals.
             </p>
-            </h1>
+            <p className="px-6 md:lg:xl:text-xl text-sm text-left">
+              In today's dynamic job market, staying ahead requires continuous
+              learning. Our professional courses provide targeted skills and
+              knowledge to propel your career forward.
+            </p>
+            </div>
 
-            <div className="flex justify-center  mb-6">
-              <button className="bg-[#0098f1] text-white text-2xl font-bold w-[260px] h-[80px] py-2 px-4 rounded-xl hover:shadow-lg mr-4">Discover Course</button>
-              <button className="bg-[#0098f1] text-white text-2xl font-bold w-[260px] h-[80px] py-2 px-4 rounded-xl hover:shadow-lg">Explore Course</button>
+            <div className="flex justify-center lg:justify-start mb-6 px-4">
+              <button className="bg-[#0098f1] text-white md:lg:xl:text-2xl md:lg:xl:font-bold  md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg mr-4 font-medium text-sm ">Discover Course</button>
+              <button className="bg-[#0098f1] text-white md:lg:xl:text-2xl md:lg:xl:font-bold md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg font-medium text-sm">Explore Course</button>
             </div>
           </div>
-
-          <div className="flex justify-center pl-6 mb-6">
-            <img src={image1} alt="People learning" className="w-[800px] h-[482px] shadow-md" />
+        
+          <div className="flex justify-center  mb-6 lg:mb-0">
+            <img src={image1} alt="People learning" className="w-[480px] md:lg:xl:h-96 h-52  xl:w-full xl:h-full  shadow-md" />
           </div>
         </div>
         <div className="text-center pb-2 p-6 mb-6">
@@ -153,33 +146,33 @@ const Professionals = () => {
             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent"> New </span>
             <span className="text-[#0098f1]">Horizons</span>
           </h2> 
-          <p className=" text-xl">
-           Our courses empower tech professionals with specialized knowledge and practical skills, ensuring they excel in their careers.
+          <p className="md:lg:xl:text-xl text-sm">
+            Our courses empower tech professionals with specialized knowledge and practical skills, ensuring they excel in their careers.
           </p>
-          <p className="pb-8 text-xl"> Dive deep into emerging technologies and master industry-relevant tools.</p>
-          <button className="bg-[#0098F1] text-white text-2xl font-bold w-[260px] h-[80px] py-2 px-4 rounded-xl hover:shadow-lg mt-4">Find A Class</button>
+          <p className="pb-8 md:lg:xl:text-xl text-sm"> Dive deep into emerging technologies and master industry-relevant tools.</p>
+          <button className="bg-[#0098F1] text-white text-sm font-medium md:lg:xl:text-2xl md:lg:xl:font-bold md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg mt-4">Find a class</button>
         </div>
 
         <div className="text-center my-6">
           <h2 className="text-4xl pt-4 font-bold">
             <span className="text-[#f6ac14]">Highly</span>
             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent"> Demanded Skill Enhancement </span>
-            <span className="text-[#0098f1]">Course</span>
+            <span className="text-[#0098f1]">Courses</span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-24 py-6 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 py-6">
           {courses.map((course, index) => (
-            <div key={index} className="bg-[#0098f1] text-white  relative   rounded-2xl w-full h-[372px] shadow-md p-6 flex flex-col justify-between  transition-all duration-500 hover:scale-105  before:absolute before:w-1/5 before:h-1/5 before:bg-[#f6ac14] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px]  after:absolute after:w-1/5 after:h-1/5 after:bg-[#f6ac14] after:bg-opacity-0 after:transition-all after:duration-500 after:bottom-0 after:left-0  after:rounded-tl-[100%] after:rounded-br-[15px] hover:after:w-full hover:after:h-full hover:after:rounded-[15px]">
-              <div className="flex z-10 items-center mb-4">
-                <div className="border-2  bg-white bg-opacity-50 rounded-full w-[100px] h-[100px] flex items-center justify-center">{course.icon}</div>
-                <h3 className="text-xl font-semibold ml-4">{course.title}</h3>
+            <div key={index} className="bg-[#0098f1] text-white relative rounded-2xl shadow-md p-6 flex flex-col justify-between transition-transform duration-500 hover:scale-105 before:absolute before:w-1/5 before:h-1/5 before:bg-[#f6ac14] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px] after:absolute after:w-1/5 after:h-1/5 after:bg-[#f6ac14] after:bg-opacity-0 after:transition-all after:duration-500 after:bottom-0 after:left-0 after:rounded-tl-[100%] after:rounded-br-[15px] hover:after:w-full hover:after:h-full hover:after:rounded-[15px]">
+              <div className="flex items-center mb-4 z-10">
+                <div className="border-2 bg-white bg-opacity-50 rounded-full w-[80px] h-[80px] flex items-center justify-center  ">{course.icon}</div>
+                <h3 className="text-lg lg:text-xl font-semibold ml-4">{course.title}</h3>
               </div>
-              <p className="mt-4 z-10 text-lg">{course.description}</p>
-             <div className=" flex z-10 justify-center  ">
-             <a href={course.link} className="flex bg-[#FFFFFF] bg-opacity-30 text-white hover:bg-[#0098f1] hover:bg-opacity-60 py-2 px-4 justify-center rounded-md w-[252px] h-[54px] text-2xl font-medium mt-4">
-                Explore Now <MdArrowOutward className="text-white text-3xl" />
-              </a>
-             </div>
+              <p className="mt-4 z-10 text-base lg:text-lg">{course.description}</p>
+              <div className="flex justify-center z-10 mt-4">
+                <a href={course.link} className="flex bg-white bg-opacity-30 text-white hover:bg-[#0098f1] hover:bg-opacity-80 py-2 px-4 justify-center rounded-md w-full text-lg lg:text-2xl font-medium">
+                  Explore Now <MdArrowOutward className="text-white text-xl lg:text-3xl ml-2" />
+                </a>
+              </div>
             </div>
           ))}
         </div>
@@ -191,6 +184,398 @@ const Professionals = () => {
 };
 
 export default Professionals;
+
+
+
+
+
+// import React from "react";
+// import Navbar from "../../../Navbar";
+// import Footer from "../../footer/Footer";
+// import { MdArrowOutward } from "react-icons/md";
+// import { SiSemanticweb } from "react-icons/si";
+// import { FaMobile } from "react-icons/fa";
+// import { FaPython } from "react-icons/fa6";
+// import { FaJava } from "react-icons/fa6";
+// import { SiAlwaysdata } from "react-icons/si";
+// import { GrVirtualMachine } from "react-icons/gr";
+// import { AiFillDatabase } from "react-icons/ai";
+// import { DiDatabase } from "react-icons/di";
+// import { SiCyberdefenders } from "react-icons/si";
+// import { GiGraduateCap } from "react-icons/gi";
+// import { MdOutlineNetworkCheck } from "react-icons/md";
+// import { FaMixcloud } from "react-icons/fa";
+// import { SiNintendonetwork } from "react-icons/si";
+// import { FaDatabase } from "react-icons/fa6";
+// import { FaComputer } from "react-icons/fa6";
+// import image1 from '../../../../assetss/Home/FeaturesAssets/Professionalimage1.png';
+
+// const Professionals = () => {
+//   const courses = [
+//     {
+//       title: "Full Stack Web Development",
+//       description: "Master full-stack web development with a comprehensive bootcamp course on E-education.",
+//       link: "/fullStack_WebDevelopment",
+//       icon: <SiSemanticweb className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Mobile App Development",
+//       description: "Start your journey in iOS app development with expert guidance.",
+//       link: "/fullStackMobileAppDevelopment",
+//       icon: <FaMobile className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Python Programming",
+//       description: "Unlock the power of Python programming with E-education.",
+//       link: "/fullStack_WebDevelopment/fullStack-Python-Development",
+//       icon: <FaPython className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Java Programming",
+//       description: "Build a solid foundation in Java programming with an engaging course on E-education.",
+//       link: "/fullStack_WebDevelopment/fullStack-Java-Development",
+//       icon: <FaJava className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Data Science and Analytics",
+//       description: "Dive deep into data science and analytics with a specialized course.",
+//       link: "/data_Science/data-Analatics",
+//       icon: <SiAlwaysdata className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Machine Learning",
+//       description: "Explore machine learning with hands-on Python & R training.",
+//       link: "/data_Science/machine-Learning",
+//       icon: <GrVirtualMachine className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Data Visualization",
+//       description: "Master the art of data visualization with Python and Matplotlib in a course.",
+//       link: "/data_Science/data-visualization",
+//       icon: <AiFillDatabase className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Big Data",
+//       description: "Conquer big data challenges with specialized training on E-education.",
+//       link: "/data_Science/big-data-analysis",
+//       icon: <DiDatabase className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Cybersecurity",
+//       description: "Embark on a journey into cybersecurity fundamentals on E-education.",
+//       link: "/cyber_security",
+//       icon: <SiCyberdefenders className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Ethical Hacking",
+//       description: "Learn the art of ethical hacking through comprehensive training on E-education.",
+//       link: "/ethical_Hacking",
+//       icon: <GiGraduateCap className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Network Security",
+//       description: "Master network security essentials with a comprehensive course on Pluralsight.",
+//       link: "/network_security",
+//       icon: <MdOutlineNetworkCheck  className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Cloud Computing",
+//       description: "Embark on a journey into cloud computing with E-education.",
+//       link: "/cloud-testing",
+//       icon: <FaMixcloud className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "IT and Networking",
+//       description: "Master IT and networking essentials with courses on E-education.",
+//       link: "/network_security/advance-network-secuity",
+//       icon: <SiNintendonetwork className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Database Management",
+//       description: "Unlock the potential of database management with E-education.",
+//       link: "/database",
+//       icon: <FaDatabase className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "UI/UX Design",
+//       description: "Master the principles of UI/UX design with courses on E-education.",
+//       link: "/ui_ux_design",
+//       icon: <FaComputer className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//   ];
+
+//   return (
+//     <>
+//       <Navbar />
+    
+//       <div className="bg-gray-100 w-full ">
+//         <div className="flex">
+//           <div className="flex text-center my-4">
+//             <div className="text-xl p-6  min-w-[280px] text-wrap text-left">
+//             <p>
+//               Elevate your career with our curated professional courses designed
+//               to sharpen your skills and propel you towards success. Embrace the
+//               flexibility of online learning and seize the opportunity to grow,
+//               no matter where you are located.
+//               </p>
+//             <p>
+//             In today's dynamic job market, staying ahead requires continuous
+//               learning. Our professional courses provide targeted skills and
+//               knowledge to propel your career forward. Experience the
+//               convenience and effectiveness of online learning, tailored to suit
+//               your busy schedule and professional goals.
+//             </p>
+//             <div className="flex justify-center p-4  mb-6">
+//               <button className="bg-[#0098f1] text-white text-2xl font-bold w-[260px] h-[80px] py-2 px-4 rounded-xl hover:shadow-lg mr-4">Discover Course</button>
+//               <button className="bg-[#0098f1] text-white text-2xl font-bold w-[260px] h-[80px] py-2 px-4 rounded-xl hover:shadow-lg">Explore Course</button>
+//             </div>
+//           </div>
+//           <div className="flex justify-center pl-6 mb-6">
+//             <img src={image1} alt="People learning" className=" min-w-[580px] h-[482px] shadow-md" />
+//           </div>
+//           </div>
+//         </div>
+//         <div className="text-center pb-2 p-6 mb-6">
+//           <h2 className="text-4xl pb-6 font-bold">
+//             <span className="text-[#f6ac14]">Explore</span>
+//             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent"> New </span>
+//             <span className="text-[#0098f1]">Horizons</span>
+//           </h2> 
+//           <p className=" text-xl">
+//            Our courses empower tech professionals with specialized knowledge and practical skills, ensuring they excel in their careers.
+//           </p>
+//           <p className="pb-8 text-xl"> Dive deep into emerging technologies and master industry-relevant tools.</p>
+//           <button className="bg-[#0098F1] text-white text-2xl font-bold w-[260px] h-[80px] py-2 px-4 rounded-xl hover:shadow-lg mt-4">Find A Class</button>
+//         </div>
+
+//         <div className="text-center my-6">
+//           <h2 className="text-4xl pt-4 font-bold">
+//             <span className="text-[#f6ac14]">Highly</span>
+//             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent"> Demanded Skill Enhancement </span>
+//             <span className="text-[#0098f1]">Course</span>
+//           </h2>
+//         </div>
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-24 py-6 gap-8">
+//           {courses.map((course, index) => (
+//             <div key={index} className="bg-[#0098f1] text-white  relative   rounded-2xl w-full h-[372px] shadow-md p-6 flex flex-col justify-between  transition-all duration-500 hover:scale-105  before:absolute before:w-1/5 before:h-1/5 before:bg-[#f6ac14] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px]  after:absolute after:w-1/5 after:h-1/5 after:bg-[#f6ac14] after:bg-opacity-0 after:transition-all after:duration-500 after:bottom-0 after:left-0  after:rounded-tl-[100%] after:rounded-br-[15px] hover:after:w-full hover:after:h-full hover:after:rounded-[15px]">
+//               <div className="flex z-10 items-center mb-4">
+//                 <div className="border-2  bg-white bg-opacity-50 rounded-full w-[100px] h-[100px] flex items-center justify-center">{course.icon}</div>
+//                 <h3 className="text-xl font-semibold ml-4">{course.title}</h3>
+//               </div>
+//               <p className="mt-4 z-10 text-lg">{course.description}</p>
+//              <div className=" flex z-10 justify-center  ">
+//              <a href={course.link} className="flex bg-[#FFFFFF] bg-opacity-30 text-white hover:bg-[#0098f1] hover:bg-opacity-80 py-2 px-4 justify-center rounded-md w-[252px] h-[54px] text-2xl font-medium mt-4">
+//                 Explore Now <MdArrowOutward className="text-white text-3xl" />
+//               </a>
+//              </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+    
+//       <Footer />
+//     </>
+//   );
+// };
+
+// export default Professionals;
+
+
+
+
+
+//main
+// import React from "react";
+// import Navbar from "../../../Navbar";
+// import Footer from "../../footer/Footer";
+// import { MdArrowOutward } from "react-icons/md";
+// import { SiSemanticweb } from "react-icons/si";
+// import { FaMobile } from "react-icons/fa";
+// import { FaPython } from "react-icons/fa6";
+// import { FaJava } from "react-icons/fa6";
+// import { SiAlwaysdata } from "react-icons/si";
+// import { GrVirtualMachine } from "react-icons/gr";
+// import { AiFillDatabase } from "react-icons/ai";
+// import { DiDatabase } from "react-icons/di";
+// import { SiCyberdefenders } from "react-icons/si";
+// import { GiGraduateCap } from "react-icons/gi";
+// import { MdOutlineNetworkCheck } from "react-icons/md";
+// import { FaMixcloud } from "react-icons/fa";
+// import { SiNintendonetwork } from "react-icons/si";
+// import { FaDatabase } from "react-icons/fa6";
+// import { FaComputer } from "react-icons/fa6";
+// import image1 from '../../../../assetss/Home/FeaturesAssets/Professionalimage1.png';
+
+// const Professionals = () => {
+//   const courses = [
+//     {
+//       title: "Full Stack Web Development",
+//       description: "Master full-stack web development with a comprehensive bootcamp course on E-education.",
+//       link: "/fullStack_WebDevelopment",
+//       icon: <SiSemanticweb className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Mobile App Development",
+//       description: "Start your journey in iOS app development with expert guidance.",
+//       link: "/fullStackMobileAppDevelopment",
+//       icon: <FaMobile className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Python Programming",
+//       description: "Unlock the power of Python programming with E-education.",
+//       link: "/fullStack_WebDevelopment/fullStack-Python-Development",
+//       icon: <FaPython className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Java Programming",
+//       description: "Build a solid foundation in Java programming with an engaging course on E-education.",
+//       link: "/fullStack_WebDevelopment/fullStack-Java-Development",
+//       icon: <FaJava className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Data Science and Analytics",
+//       description: "Dive deep into data science and analytics with a specialized course.",
+//       link: "/data_Science/data-Analatics",
+//       icon: <SiAlwaysdata className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Machine Learning",
+//       description: "Explore machine learning with hands-on Python & R training.",
+//       link: "/data_Science/machine-Learning",
+//       icon: <GrVirtualMachine className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Data Visualization",
+//       description: "Master the art of data visualization with Python and Matplotlib in a course.",
+//       link: "/data_Science/data-visualization",
+//       icon: <AiFillDatabase className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Big Data",
+//       description: "Conquer big data challenges with specialized training on E-education.",
+//       link: "/data_Science/big-data-analysis",
+//       icon: <DiDatabase className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Cybersecurity",
+//       description: "Embark on a journey into cybersecurity fundamentals on E-education.",
+//       link: "/cyber_security",
+//       icon: <SiCyberdefenders className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Ethical Hacking",
+//       description: "Learn the art of ethical hacking through comprehensive training on E-education.",
+//       link: "/ethical_Hacking",
+//       icon: <GiGraduateCap className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Network Security",
+//       description: "Master network security essentials with a comprehensive course on Pluralsight.",
+//       link: "/network_security",
+//       icon: <MdOutlineNetworkCheck  className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Cloud Computing",
+//       description: "Embark on a journey into cloud computing with E-education.",
+//       link: "/cloud-testing",
+//       icon: <FaMixcloud className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "IT and Networking",
+//       description: "Master IT and networking essentials with courses on E-education.",
+//       link: "/network_security/advance-network-secuity",
+//       icon: <SiNintendonetwork className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "Database Management",
+//       description: "Unlock the potential of database management with E-education.",
+//       link: "/database",
+//       icon: <FaDatabase className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//     {
+//       title: "UI/UX Design",
+//       description: "Master the principles of UI/UX design with courses on E-education.",
+//       link: "/ui_ux_design",
+//       icon: <FaComputer className="text-[#f6ac14] w-[70px] h-[70px]" />,
+//     },
+//   ];
+
+//   return (
+//     <>
+//       <Navbar />
+    
+//       <div className="bg-gray-50 ">
+//         <div className="flex">
+//           <div className="grid text-center my-4">
+//             <h1 className="text-xl p-6 max-w-[680px] text-wrap text-left">
+//               Elevate your career with our curated professional courses designed
+//               to sharpen your skills and propel you towards success. Embrace the
+//               flexibility of online learning and seize the opportunity to grow,
+//               no matter where you are located.
+//               <span className=""></span>
+//             <p>
+//             In today's dynamic job market, staying ahead requires continuous
+//               learning. Our professional courses provide targeted skills and
+//               knowledge to propel your career forward. Experience the
+//               convenience and effectiveness of online learning, tailored to suit
+//               your busy schedule and professional goals.
+//             </p>
+//             </h1>
+
+//             <div className="flex justify-center  mb-6">
+//               <button className="bg-[#0098f1] text-white text-2xl font-bold w-[260px] h-[80px] py-2 px-4 rounded-xl hover:shadow-lg mr-4">Discover Course</button>
+//               <button className="bg-[#0098f1] text-white text-2xl font-bold w-[260px] h-[80px] py-2 px-4 rounded-xl hover:shadow-lg">Explore Course</button>
+//             </div>
+//           </div>
+
+//           <div className="flex justify-center pl-6 mb-6">
+//             <img src={image1} alt="People learning" className="w-[834px] h-[482px] shadow-md" />
+//           </div>
+//         </div>
+//         <div className="text-center pb-2 p-6 mb-6">
+//           <h2 className="text-4xl pb-6 font-bold">
+//             <span className="text-[#f6ac14]">Explore</span>
+//             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent"> New </span>
+//             <span className="text-[#0098f1]">Horizons</span>
+//           </h2> 
+//           <p className=" text-xl">
+//            Our courses empower tech professionals with specialized knowledge and practical skills, ensuring they excel in their careers.
+//           </p>
+//           <p className="pb-8 text-xl"> Dive deep into emerging technologies and master industry-relevant tools.</p>
+//           <button className="bg-[#0098F1] text-white text-2xl font-bold w-[260px] h-[80px] py-2 px-4 rounded-xl hover:shadow-lg mt-4">Find A Class</button>
+//         </div>
+
+//         <div className="text-center my-6">
+//           <h2 className="text-4xl pt-4 font-bold">
+//             <span className="text-[#f6ac14]">Highly</span>
+//             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent"> Demanded Skill Enhancement </span>
+//             <span className="text-[#0098f1]">Course</span>
+//           </h2>
+//         </div>
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-24 py-6 gap-8">
+//           {courses.map((course, index) => (
+//             <div key={index} className="bg-[#0098f1] text-white  relative   rounded-2xl w-full h-[372px] shadow-md p-6 flex flex-col justify-between  transition-all duration-500 hover:scale-105  before:absolute before:w-1/5 before:h-1/5 before:bg-[#f6ac14] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px]  after:absolute after:w-1/5 after:h-1/5 after:bg-[#f6ac14] after:bg-opacity-0 after:transition-all after:duration-500 after:bottom-0 after:left-0  after:rounded-tl-[100%] after:rounded-br-[15px] hover:after:w-full hover:after:h-full hover:after:rounded-[15px]">
+//               <div className="flex z-10 items-center mb-4">
+//                 <div className="border-2  bg-white bg-opacity-50 rounded-full w-[100px] h-[100px] flex items-center justify-center">{course.icon}</div>
+//                 <h3 className="text-xl font-semibold ml-4">{course.title}</h3>
+//               </div>
+//               <p className="mt-4 z-10 text-lg">{course.description}</p>
+//              <div className=" flex z-10 justify-center  ">
+//              <a href={course.link} className="flex bg-[#FFFFFF] bg-opacity-30 text-white hover:bg-[#0098f1] hover:bg-opacity-80 py-2 px-4 justify-center rounded-md w-[252px] h-[54px] text-2xl font-medium mt-4">
+//                 Explore Now <MdArrowOutward className="text-white text-3xl" />
+//               </a>
+//              </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+    
+//       <Footer />
+//     </>
+//   );
+// };
+
+// export default Professionals;
 
 
 
