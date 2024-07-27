@@ -5,7 +5,7 @@ const UsabilityTestingCard = () => {
     <>
       <section id="portfolio" className="portfolio-section py-16 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
+          <div className=" mb-12">
             <h2 className="text-4xl font-bold">
               Mastering Usability Testing: Enhance User Experience
             </h2>
@@ -17,7 +17,7 @@ const UsabilityTestingCard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-1">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/flat-web-development-concept-cms_23-2148806100.jpg?t=st=1716808376~exp=1716811976~hmac=33d99af9c16d2fb1950dc4ffe4fcca248df75640c1789e115a62248bf650076a&w=826"
@@ -37,7 +37,7 @@ const UsabilityTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-2">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/user-interface-development-isometric-concept-with-young-woman-creating-custom-design-mobile-application-vector-illustration_1284-72341.jpg?t=st=1716808402~exp=1716812002~hmac=ef1bc3361183a549d53ffb181464d1c41c4b1aa5a8ea1bbef02519b746ded771&w=740"
@@ -56,7 +56,7 @@ const UsabilityTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-3">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/kanban-method-concept-illustration_114360-9810.jpg?t=st=1716808425~exp=1716812025~hmac=50e334abe77c4be477f5cf4d2435381e272958d47bc92f9ed56eddc19d608a51&w=740"
@@ -77,7 +77,7 @@ const UsabilityTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-4">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/internet-day-concept-illustration_114360-5303.jpg?t=st=1716808445~exp=1716812045~hmac=225347e9f8c42422dbda63b3271bdf91e3804a4b1d45f59a756d86e38f1146a1&w=740"
@@ -98,7 +98,7 @@ const UsabilityTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-5">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/marketing-concept-illustration_114360-3903.jpg?t=st=1716808460~exp=1716812060~hmac=b9aab589a0c1b5dea0e60314ba921c742af966e4450f989022d48a6ca7833906&w=826"
@@ -120,7 +120,7 @@ const UsabilityTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-6">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/premium-vector/app-development-modern-flat-concept-web-banner-design-male-designer-works-laptop-develops_9209-8179.jpg?w=826"

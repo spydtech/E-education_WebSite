@@ -28,7 +28,7 @@ const SlideInTimer = () => {
   return (
     <>
       {isVisible && (
-        <div className="fixed inset-0 flex items-center  font-lora justify-center bg-gray-800 bg-opacity-50 z-50">
+        <div className="fixed inset-0 flex items-center  font justify-center bg-gray-800 bg-opacity-50 z-50">
           <div className="bg-white rounded-lg p-8 border-4 border-red-500 shadow-lg">
             <h2 className="text-2xl font-semibold mb-4">15% Discount on Coupon</h2>
             <p className="font-bold"> Enroll Now <span className="text-4xl font-anton border-2 border-red-400">E-education</span> </p>

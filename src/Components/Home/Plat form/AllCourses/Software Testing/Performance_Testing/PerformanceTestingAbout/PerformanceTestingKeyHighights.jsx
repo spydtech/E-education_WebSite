@@ -125,7 +125,7 @@ function PerformanceTestingKeyHighights() {
         id="main"
         className=" md:lg:xl:px-20  bg-gradient-to-br  from-[#474973] to-[#0d0c1d]"
       >
-        <div id="subdiv1" className="pt-4 font-lora">
+        <div id="subdiv1" className="pt-4 font">
           <div id="h1" className="">
             <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#30c5ff]">
               E-education Course Highlights
@@ -135,8 +135,8 @@ function PerformanceTestingKeyHighights() {
             id="h2"
             className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
           >
-            <p className="text-5xl font-bold ">What does this</p>
-            <p className="text-5xl font-bold text-[#30c5ff] inline">
+            <p className="md:text-5xl text-2xl font-bold ">What does this</p>
+            <p className="md:text-5xl text-2xl font-bold text-[#30c5ff] inline">
               Course have to offer?
             </p>
           </div>

@@ -44,9 +44,9 @@ export default function CourseDetails({ course }) {
                             </div>
                             <div className='"mt-4 lg:row-span-3 lg:mt-0"'>
                                 <div className="flex space-x-5 items-center text-lg lg:text-xl tracking-tight text-gray-900 mt-6">
-                                    <p className='font-semibold'>{coursePrice}</p>
+                                    <p className='font-semibold'>₹{coursePrice}</p>
 
-                                    <p className='text-green-600 font-semibold'>5% Off</p>
+                                    {/* <p className='text-green-600 font-semibold'>5% Off</p> */}
                                 </div>
                             </div>
 

@@ -8,28 +8,38 @@ import axios from 'axios'; // Import Axios for API calls
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import FooterPart from '../Home/footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = ({ history }) => {
     const { cartItems, setCartItems } = useContext(CartContext);
     const jwt = localStorage.getItem('jwt');
     const dispatch = useDispatch();
     const { auth } = useSelector((state) => state)
+    const navigate = useNavigate();
+    const { cart } = useSelector(store => store);
+
 
     // Calculate total price and discount price
     const totalPrice = cartItems.reduce((total, item) => total + item.coursePrice, 0);
 
-    const discountPrice = cartItems.length > 0 ? 30 : 0;
+    const discountPrice = 0;
 
     // Calculate total amount after discount
-    const totalAmount = totalPrice - discountPrice;
+    let totalAmount = (totalPrice - discountPrice);
+    // Add GST of 18%
+    const gstAmount = (totalAmount * 0.18).toFixed(2); // Calculate GST amount (18% of totalAmount)
+    totalAmount = (parseFloat(totalAmount) + parseFloat(gstAmount)).toFixed(2); // Add GST to totalAmount
+
+    console.log(totalAmount)
 
     // Initialize Razorpay
     const initializeRazorpay = async (orderId) => {
         const rzp = new window.Razorpay({
-            key: 'rzp_test_pGk4bGkuLgOxKA', // Replace with your actual API key
+            key: 'rzp_test_5wPc5EqQCQkluu',// Replace with your actual API key
+            amount: totalAmount * 100,
             order_id: orderId,
             currency: 'INR',
-            name: 'Your Company Name',
+            name: 'SPY D Tech',
             description: 'Payment for Courses',
             handler: async function (response) {
                 toast("Payment Successfully done")
@@ -37,24 +47,30 @@ const Cart = ({ history }) => {
                 console.log(response);
                 // You can redirect to a success page or perform further actions here
                 setCartItems([]);
-
+                navigate({
+                    pathname: '/mylearning',
+                    state: { courseName: cartItems[0].courseName } // Assuming the first item's courseName is used
+                });
 
                 // Store payment response in the backend
                 try {
+                    const courseNames = cartItems.map(item => item.courseName);
+                    const coursePrices = cartItems.map(item => item.coursePrice);
                     const paymentResponse = {
                         userId: auth.user.id, // Implement a function to extract user ID from JWT
-                        courses: cartItems.map(item => ({
-                            courseId: item.courseId,
-                            courseName: item.courseName,
-                            coursePrice: item.coursePrice,
-                        })),
+                        firstName: auth.user.firstName,
+                        lastName: auth.user.lastName,
+                        userEmail: auth.user.email,
+                        courseNames: courseNames,
+                        coursePrices: coursePrices,
                         totalAmount: totalAmount,
                         // orderId: response.razorpay_payment_id,
                         razorpayPaymentId: response.razorpay_payment_id,
                         paymentStatus: 'success',
+                        paymentMethod: 'Razorpay',
                     };
                     const paymentStoreResponse = await axios.post(
-                        'http://localhost:8081/api/payment/store-payment', // Backend API endpoint for storing payment
+                        'http://localhost:8080/api/payment/store-payment', // Backend API endpoint for storing payment
                         paymentResponse,
                         {
                             headers: {
@@ -73,14 +89,15 @@ const Cart = ({ history }) => {
     };
 
     // Handle checkout button click
-    const handleCheckout = async () => {
+    const handleCheckout = async (paymentMethod) => {
         try {
             const response = await axios.post(
-                'http://localhost:8081/create-order', // Backend API endpoint for creating Razorpay order
+                'http://localhost:8080/create-order', // Backend API endpoint for creating Razorpay order
                 {
-                    amount: totalAmount * 100, // Amount in paisa
+                    amount: totalAmount * 100, // Amount in paisa (convert to integer)
                     currency: 'INR',
                     receipt: 'receipt_order_12345', // Replace with your logic for receipt ID
+                    paymentMethod: 'Razorpay',
                 },
                 {
                     headers: {
@@ -118,8 +135,8 @@ const Cart = ({ history }) => {
                                     <span>₹{totalPrice}</span>
                                 </div>
                                 <div className='flex justify-between pt-3 '>
-                                    <span>Discount Price</span>
-                                    <span className='text-green-600'>₹{discountPrice}</span>
+                                    <span>GST 18%</span>
+                                    <span className='text-green-600'>₹{gstAmount}</span>
                                 </div>
                                 <div className='flex justify-between pt-3 text-black'>
                                     <span>Total Amount</span>
@@ -132,7 +149,7 @@ const Cart = ({ history }) => {
                                 sx={{ padding: '.8rem 2rem', marginTop: '2rem', width: '100%' }}
                                 onClick={handleCheckout}
                             >
-                                Check Out
+                                Check Out {totalAmount}
                             </Button>
                         </div>
                     </div>

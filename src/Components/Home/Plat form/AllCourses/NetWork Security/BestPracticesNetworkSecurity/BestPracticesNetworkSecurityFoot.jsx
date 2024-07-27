@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 function NetworkSecurityBestPracticesFoot() {
   const [courseName] = useState("Best Practices of Network Security"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
 
   const navigate = useNavigate();
   const handleEnroll = () => {
@@ -15,7 +15,7 @@ function NetworkSecurityBestPracticesFoot() {
 
   return (
     <>
-      <div className="flex flex-1 font-lora w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-red-100 to-red-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 md:my-20">
+      <div className="flex flex-1 font w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-red-100 to-red-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 md:my-20">
         <h1 className="mx-auto max-w-4xl font-display text-2xl font-bold tracking-normal text-white-300 dark:text-gray-300 md:text-7xl">
           Strengthening Your Security Posture with &nbsp;
           <span className="relative text-white-600 dark:text-gray-300">

@@ -32,7 +32,7 @@ const MachineLearningCard = () => {
     </div> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-1">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://spacema-dev.com/elevate/assets/images/portfolio-1.png"
@@ -52,7 +52,7 @@ const MachineLearningCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-2">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://spacema-dev.com/elevate/assets/images/portfolio-2.png"
@@ -72,7 +72,7 @@ const MachineLearningCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-3">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://spacema-dev.com/elevate/assets/images/portfolio-3.png"
@@ -93,7 +93,7 @@ const MachineLearningCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-4">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://spacema-dev.com/elevate/assets/images/portfolio-4.png"
@@ -114,7 +114,7 @@ const MachineLearningCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-5">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://spacema-dev.com/elevate/assets/images/portfolio-5.png"
@@ -136,7 +136,7 @@ const MachineLearningCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-6">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://spacema-dev.com/elevate/assets/images/portfolio-6.png"

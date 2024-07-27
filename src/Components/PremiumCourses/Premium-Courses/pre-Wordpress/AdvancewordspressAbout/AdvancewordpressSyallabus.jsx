@@ -41,7 +41,7 @@ function AdvancewordpressSyllabus() {
               <p className="text-[#f9ac13] text-xl font-medium">Syllabus</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora">
+              <p className="text-6xl font">
                 Discover What You
                 <p className="text-[#f9ac13] inline pl-2">Will Learn</p>
               </p>

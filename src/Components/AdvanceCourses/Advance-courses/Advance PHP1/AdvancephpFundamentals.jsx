@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 // import Navbar from "../../../../../Navbar";
 import Navbar from "../../../Navbar";
 // import Footer from "../../../../footer/Footer";
@@ -10,6 +10,9 @@ import AdvancephpCard from "./AdvancephpCard";
 import AdvancephpFoot from "./AdvancephpFoot";
 // import AdvancephpCareersOutcomes from "./AdvancephpAbout/AdvancephpCareersOutcomes";
 const Advancephp = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

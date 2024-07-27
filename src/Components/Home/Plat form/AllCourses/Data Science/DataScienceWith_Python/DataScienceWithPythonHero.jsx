@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const DataScienceWithPythonHero = () => {
   const [courseName] = useState("Data Science With Python"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
 
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters
@@ -29,7 +29,7 @@ const DataScienceWithPythonHero = () => {
         data-aos="fade-right"
         data-aos-duration={800}
       >
-        <div className="pr-2 md:mb-14 py-14 font-lora md:py-0">
+        <div className="pr-2 md:mb-14 py-14 font md:py-0">
           <h1 className="text-3xl font-semibold text-[#750e5c] xl:text-5xl lg:text-3xl">
             <span className="block w-full">
               Elevate Your Data Science Skills

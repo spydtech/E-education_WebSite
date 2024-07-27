@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const MobileappHero = () => {
   const [courseName] = useState("Full stack Mobile App"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
 
   const navigate = useNavigate();
   const handleEnroll = () => {
@@ -29,7 +29,7 @@ const MobileappHero = () => {
         data-aos="fade-right"
         data-aos-duration={800}
       >
-        <div className="pr-2 md:mb-14 py-14 font-lora md:py-0">
+        <div className="pr-2 md:mb-14 py-14 font md:py-0">
           <h1 className="text-3xl font-semibold text-[#f9ac13] xl:text-5xl lg:text-3xl">
             <span className="block w-full">Master Mobile App Development</span>{" "}
             and Build Next-Gen Applications!

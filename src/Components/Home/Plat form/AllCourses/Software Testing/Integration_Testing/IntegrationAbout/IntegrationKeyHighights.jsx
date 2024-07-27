@@ -167,8 +167,8 @@ function IntegrationKeyHighlights() {
             id="h2"
             className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96 h-auto"
           >
-            <p className="text-5xl font-bold">What does this</p>
-            <p className="text-5xl font-bold text-[#f9ac13] inline">
+            <p className="md:text-5xl text-2xl font-bold">What does this</p>
+            <p className="md:text-5xl text-2xl font-bold text-[#f9ac13] inline">
               Course have to offer?
             </p>
           </div>

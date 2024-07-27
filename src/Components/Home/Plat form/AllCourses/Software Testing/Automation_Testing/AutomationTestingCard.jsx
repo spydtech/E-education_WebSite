@@ -5,7 +5,7 @@ const AutomationTestingCard = () => {
     <>
       <section id="portfolio" className="portfolio-section py-16 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
+          <div className=" mb-12">
             <h2 className="text-4xl font-bold">
               Mastering AutomationTesting: Ensure Quality and Reliability
             </h2>
@@ -17,7 +17,7 @@ const AutomationTestingCard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/manual-testing-intro">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/premium-vector/programmer-searching-doing-bug-fixing_11197-437.jpg?w=740"
@@ -37,7 +37,7 @@ const AutomationTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/manual-testing-foundations">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/premium-vector/scientists-build-artificial-intelligence-brains_11197-363.jpg?w=740"
@@ -56,7 +56,7 @@ const AutomationTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/manual-testing-projects">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/user-research-abstract-concept-illustration-design-project-online-survey-reports-analytics-user-experience-data-feedback-design-agency-focus-group-testing_335657-3342.jpg?t=st=1716873361~exp=1716876961~hmac=eeb4e85d057220deb4857e626e8fccfdc63ecbc1f59f36e3865deed3332a232e&w=740"
@@ -77,7 +77,7 @@ const AutomationTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/manual-testing-progress">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/premium-vector/open-automation-architecture-abstract-concept-vector-illustration_107173-25839.jpg?w=740"
@@ -98,7 +98,7 @@ const AutomationTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/manual-testing-specialize">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/premium-vector/cms-development-abstract-concept-vector-illustration-cms-program-development-service-online-content-management-system-website-interface-design-ui-element-site-menu-bar-abstract-metaphor_126608-1398.jpg?w=740"
@@ -120,7 +120,7 @@ const AutomationTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/manual-testing-certifications">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/premium-vector/mammography-concept-illustration_126608-1425.jpg?w=826"

@@ -137,10 +137,10 @@ function MachineLearningKeyHighights() {
           </div>
           <div
             id="h2"
-            className="md:lg:flex pl-2 font-lora space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
+            className="md:lg:flex pl-2 font space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
           >
-            <p className="text-5xl font-medium ">What does this</p>
-            <p className="text-5xl font-medium text-violet-800 inline">
+            <p className="md:text-5xl text-2xl font-medium ">What does this</p>
+            <p className="md:text-5xl text-2xl font-medium text-violet-800 inline">
               Course have to offer?
             </p>
           </div>

@@ -8,7 +8,7 @@ const AdminRouter = () => {
             <Routes>
                 <Route path='/*' element={<Admin />}></Route>
             </Routes>
-        </div >
+        </div>
     )
 }
 

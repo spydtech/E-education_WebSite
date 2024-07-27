@@ -13,7 +13,7 @@ function BasicJavaScriptCertificate() {
             <p className="text-[#480ca8] text-xl font-medium">
               JavaScript Certification
             </p>
-            <p className="text-6xl font-lora">
+            <p className="text-6xl font">
               Achieve{" "}
               <p className="text-[#480ca8]">Credentials and Recognition</p>
             </p>

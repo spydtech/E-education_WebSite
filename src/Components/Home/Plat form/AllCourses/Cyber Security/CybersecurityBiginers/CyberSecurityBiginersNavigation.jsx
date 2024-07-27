@@ -72,14 +72,14 @@ const CybersecurityNavigation = () => {
               </button>
             </li>
           ))}
-          <li className="mt-2 sm:mt-0">
+          {/* <li className="mt-2 sm:mt-0">
             <button
               className="text-black text-2xl hover:text-violet-700 transition duration-300"
               onClick={() => handleNextSection("next")}
             >
               <TbPlayerTrackNextFilled />
             </button>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <div>

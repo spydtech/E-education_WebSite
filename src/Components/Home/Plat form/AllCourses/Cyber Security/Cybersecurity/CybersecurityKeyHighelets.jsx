@@ -129,7 +129,7 @@ function CybersecurityKeyHighlights() {
         id="main"
         className=" md:lg:xl:px-20  bg-gradient-to-br from-blue-300 via-teal-500 to-green-600"
       >
-        <div id="subdiv1" className="pt-4 font-lora">
+        <div id="subdiv1" className="pt-4 font">
           <div id="h1" className="">
             <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#7400b8]">
               E-education Course Highlights
@@ -139,8 +139,8 @@ function CybersecurityKeyHighlights() {
             id="h2"
             className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
           >
-            <p className="text-5xl font-bold ">What does this</p>
-            <p className="text-5xl font-bold text-[#7400b8] inline">
+            <p className="md:text-5xl text-2xl font-bold ">What does this</p>
+            <p className="md:text-5xl text-2xl font-bold text-[#7400b8] inline">
               Course have to offer?
             </p>
           </div>
@@ -167,7 +167,7 @@ function CybersecurityKeyHighlights() {
           </div>
           <div
             id="content2"
-            className="md:lg:w-auto md:lg:h-auto md:lg:xl:w-[400px] h-auto pt-4 md:lg:xl:pl-4 text-xl"
+            className="md:lg:w-auto md:lg:h-auto w-[400px] h-auto pt-4 md:lg:xl:pl-4 text-xl"
           >
             {renderContent()}
           </div>

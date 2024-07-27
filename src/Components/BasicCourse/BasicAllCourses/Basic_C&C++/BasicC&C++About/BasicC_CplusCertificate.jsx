@@ -13,7 +13,7 @@ function BasicC_CplusCertificate() {
             <p className="text-[#25a244] text-xl font-medium">
               C and C++ Certification
             </p>
-            <p className="text-6xl font-lora text-white">
+            <p className="text-6xl font text-white">
               Achieve{" "}
               <p className="text-[#25a244]">Credentials and Recognition</p>
             </p>

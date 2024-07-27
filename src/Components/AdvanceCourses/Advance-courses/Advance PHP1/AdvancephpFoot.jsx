@@ -2,8 +2,8 @@ import React, { useState } from "react";
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
 function AdvancephpFoot() {
-  const [courseName] = useState("Master Full Stack Web Development"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [courseName] = useState("Advance Php"); // Placeholder for course name
+  const [coursePrice] = useState(14999);
 
   const navigate = useNavigate();
   const handleEnroll = () => {
@@ -13,7 +13,7 @@ function AdvancephpFoot() {
 
   return (
     <>
-      <div className="flex flex-1 font-lora w-full flex-col items-center justify-center text-center px-4 py-20 bg-[#78290f] mb-8">
+      <div className="flex flex-1 font w-full flex-col items-center justify-center text-center px-4 py-20 bg-[#78290f] mb-8">
         <h1 className="mx-auto max-w-4xl font-display text-2xl font-bold tracking-normal text-white dark:text-gray-300 md:text-7xl">
           Elevating Software Quality with &nbsp;
           <span className="relative text-white dark:text-gray-300">

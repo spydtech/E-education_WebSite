@@ -3,8 +3,8 @@ import React, { useState } from "react";
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
 function CloudComputing() {
-  const [courseName] = useState("Master Full Stack Web Development"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [courseName] = useState("Cloud With AWS"); // Placeholder for course name
+  const [coursePrice] = useState(34999);
 
   const navigate = useNavigate();
   const handleEnroll = () => {
@@ -14,7 +14,7 @@ function CloudComputing() {
 
   return (
     <>
-      <div className="md:my-16 flex flex-1 font-lora w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-blue-100 to-blue-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
+      <div className="md:my-16 flex flex-1 font w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-blue-100 to-blue-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
         <h1 className="mx-auto max-w-4xl font-display text-2xl font-bold tracking-normal text-white-300 dark:text-gray-300 md:text-7xl">
           Building Dynamic Websites with &nbsp;
           <span className="relative text-white-600 dark:text-gray-300">

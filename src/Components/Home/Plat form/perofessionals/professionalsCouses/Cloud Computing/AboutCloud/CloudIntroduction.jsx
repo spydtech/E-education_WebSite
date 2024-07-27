@@ -8,10 +8,10 @@ function CloudIntroduction() {
       <div className="w-full flex-shrink-0 px-4 py-8">
         <div className="h-[400px] flex justify-center">
           <div>
-            <h2 className="text-3xl font-medium mb-4 text-[#00509d] font-lora">
+            <h2 className="text-3xl font-medium mb-4 text-[#00509d] font">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-xl font-lora">
+            <ul className="list-disc list-inside text-xl font">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -73,13 +73,13 @@ function CloudIntroduction() {
         >
           <div
             id="headings"
-            className="grid grid-cols-1 text-start px-10 font-lora"
+            className="grid grid-cols-1 text-start px-10 font"
           >
             <div>
               <p className="text-[#00509d] text-xl font-medium">Introduction</p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora">
+              <p className="text-6xl font">
                 Welcome to
                 <p className="text-[#00509d] inline pl-2">Cloud Computing!</p>
               </p>

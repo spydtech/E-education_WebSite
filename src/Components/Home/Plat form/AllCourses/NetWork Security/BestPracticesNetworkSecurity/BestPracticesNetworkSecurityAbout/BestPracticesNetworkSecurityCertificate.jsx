@@ -13,7 +13,7 @@ function BestPracticesNetworkSecurityCertificate() {
             <p className="text-[#ec3400] text-xl font-medium">
               Network Security Certification
             </p>
-            <p className="text-6xl font-lora">
+            <p className="text-6xl font">
               Achieve{" "}
               <p className="text-[#ec3400]">Credentials and Recognition</p>
             </p>

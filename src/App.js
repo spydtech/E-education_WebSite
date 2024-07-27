@@ -7,10 +7,12 @@ import Certificates from "./Components/Home/Professional Certificates/Certificat
 import Profile from "./Components/Profile/Profile";
 import AdminRouter from "./Routers/AdminRouter";
 import WSpace from "./Components/Profile/WorkSpace1/WSpace";
+// import WSpace from "./Components/trainee/UserTask/WSpace";
 import Settings from "./Components/Profile/Settings";
 import PostFeeds from "./Components/Home/post/PostFeeds";
+import MainPost from "./Components/Home/postFeed/MainPost";
 import QuestionForm from "./Components/Home/AskMe/QuestionForm";
-import ForgotPassword from "./Components/Login/ForgotPassword";
+import ForgotPassword from "./Components/trainee/TraineAdmin/ForgotPassword/forgotpassword";
 import Purchases from "./Components/Profile/Purchases/Purchases";
 import Payment from "./Components/Profile/Payment/Payment";
 import MyCourse from "./Components/mycourse/MyCourse";
@@ -40,16 +42,17 @@ import CybersecurityBiginers from "./Components/Home/Plat form/AllCourses/Cyber 
 import CybersecurityEssentials from "./Components/Home/Plat form/AllCourses/Cyber Security/CybersecurityEssentials/cybersecurityEssentials";
 import WishLists from "./Components/Home/Plat form/AddtoCart/WishLists";
 // import Cart from "./Components/Home/Plat form/AddtoCart/Cart";
+import TryADemo from "./Components/tryAdemo/TryADemo";
 import Cart from "./Components/Cart/Cart";
 import EthicalHackingStudentArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/EthicalHackingStudentArray";
 import CyberSecurityArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/CyberSecurityArray";
 import NetworkSecurityArray from "./Components/Home/Plat form/AllCourses/StudentPlatForm/NetworkSecurityArray";
-import MeanStackDeveloper from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/MernStackDevelopment/MernStackDevelopment/Main/MeanStackDevelopment";
-import FullStackWebDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackWebDevelopmentPage/FullStackWebDevelopmentPage/FullStackWebDevelopment";
-import FullStackDevops from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackDevops_Development/FullStackDevops_Development/FullStackDevopsDevelopment";
-import FullStackPythonDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/fullStackPython/fullStackPython/Main/FullStackPythonDevelopment";
-import FullStackJava from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackJava_Development/FullStackJava_Development/FullStackJavaDevelopment";
-import DotnetDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackDotNet/FullStackDotNet/DotnetDevelopment";
+import MeanStackDeveloper from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/MernStackDevelopment/Main/MeanStackDevelopment";
+import FullStackWebDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackWebDevelopmentPage/FullStackWebDevelopment";
+import FullStackDevops from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackDevops_Development/FullStackDevopsDevelopment";
+import FullStackPythonDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/fullStackPython/Main/FullStackPythonDevelopment";
+import FullStackJava from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackJava_Development/FullStackJavaDevelopment";
+import DotnetDevelopment from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackDotNet/DotnetDevelopment";
 import FullStackJavaScript from "./Components/Home/Plat form/AllCourses/Full Stack Web Development/FullStackJavaScript/FullStackJavaScript/Main/JavascriptDevelopment";
 import BasicCourses from "./Components/BasicCourse/BasicCourse";
 import AdvanceCourses from "./Components/AdvanceCourses/Advance_Courses";
@@ -80,7 +83,7 @@ import Wordpress from "./Components/BasicCourse/BasicAllCourses/Wordpress/Wordpr
 import Php from "./Components/BasicCourse/BasicAllCourses/Basic_Php/BasicPhp";
 import JavaScript from "./Components/BasicCourse/BasicAllCourses/Basic_JavaScript/BasicJavaScript";
 import C_Cplus from "./Components/BasicCourse/BasicAllCourses/Basic_C&C++/BasicC_Cplus";
-import GoogleCalender from "./Components/Profile/Calendar Sync/GoogleCalendar";
+// import GoogleCalender from "./Components/Profile/Calendar Sync/GoogleCalendar";
 import DataBase from "./Components/Home/Plat form/perofessionals/professionalsCouses/DB Manegement/DB";
 import CloudTesting from "./Components/Home/Plat form/perofessionals/professionalsCouses/Cloud Computing/Cloud";
 import CourseDetails from "./Components/CourseDetails/CourseDetails";
@@ -94,14 +97,76 @@ import PreAdvancePhp from "./Components/PremiumCourses/Premium-Courses/pre-Advan
 import PreWordPress from "./Components/PremiumCourses/Premium-Courses/pre-Wordpress/AdvancewordpressFundamentals";
 import Pricing2 from "./Components/Home/Pricing/Pricing2";
 import Java from "./Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava";
+import PowerBi from "./Components/AdvanceCourses/Advance-courses/PowerBI/PowerBi";
+import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ERP";
+import Options from './Components/optionsPages/Options'
+import AdminLogin from "./Admin/Components/AdminLogin";
+import Trainee from './Components/trainee/Trainee'
+import TraineeDashboard from './Components/trainee/TraineeDashboard/TraineeDashboard'
+import Meeting from "./Components/Meeting/Meeting";
+import Tabs from "./Components/trainee/TraineAdmin/TraineComplateCourses/Tabs"
+import UserAccounts from "./Components/trainee/UsersSection/usernavigation/navigation"
+import TraineUpload from "./Components/trainee/UserTask/traineuploads"
+import TraineeCourses from "./Admin/Views/TraineeCourses"
+import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login"
+import Traine_Home from "./Components/trainee/home/Home";
+import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales"
+import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile"
+import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers"
+import StatusPage from "./Components/trainee/UserTask/StatusPage";
+import Sam from "./Admin/Components/Reports/Sample";
+import BarGraph from "./Admin/Components/Reports/BarGraph";
+import LineGraph from "./Admin/Components/Reports/LineGraph";
+import SalesLineGraph from "./Admin/Components/Reports/SalesLineGraph";
+import CustomerCount from "./Admin/Components/Reports/CustomerCount";
+import TableforAdmin from "./Admin/Components/Reports/TableforAdmin";
+import ProductsCount from "./Admin/Components/Reports/CountofProducts";
+import Todo from "./Components/trainee/SheduledReports/Todo";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/admin_login" element={<AdminLogin />} />
           <Route path="/about_us" element={<AboutUs />} />
+          <Route path="/options" element={<Options />} />
           <Route path="/pricing" element={<Pricing2 />} />
+          <Route path="/try-a-demo" element={<TryADemo />} />
+          <Route path="/main-post" element={<MainPost />} />
+
+
+          {/* Graph  */}
+          <Route path="/table" element={<Sam />} />
+          <Route path="/bargraph" element={<BarGraph />} />
+          <Route path="/linegraph" element={<LineGraph />} />
+          <Route path="/saleslinegraph" element={<SalesLineGraph />} />
+          <Route path="/customercount" element={<CustomerCount />} />
+          <Route path="/productscount" element={<ProductsCount />} />
+          <Route path="/tableforadmin" element={<TableforAdmin />} />
+          {/* traine Login */}
+
+          <Route path="/trainelogin" element={<Traine_Login />} />
+          <Route path="/trainee" element={<Trainee />} />
+          <Route path="/traineedashboard" element={<TraineeDashboard />} />
+          <Route path="/meeting" element={<Meeting />} />
+          <Route path="/traine-home" element={<Traine_Home />} />
+          {/* <Route path="/tabs" element={<Tabs />} /> */}
+          {/* <Route path="/user-accounts" element={<UserAccounts />} /> */}
+          {/* <Route path="/traine-upload" element={<TraineUpload />} /> */}
+          <Route path="/status-page" element={<StatusPage />} />
+
+          <Route path="/todo" element={<Todo />} />
+
+          {/* admin */}
+          <Route path="/admin/*" element={<AdminRouter />} />
+          <Route path="/trainee-courses" element={<TraineeCourses />} />
+          <Route path="/linechart" element={<CountOfSeals />} />
+          <Route path="/countofproducts" element={<CountOfProduct />} />
+          <Route path="/countofcustomers" element={<CountOfCustomers />} />
+
+
+
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
           <Route path="/googleCalender" element={<GoogleCalendar />} />
@@ -109,7 +174,7 @@ function App() {
           <Route path="/Certificates" element={<Certificates />} />
           <Route path="/features" element={<Features />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/ForgotPassword" element={<ForgotPassword />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/signUp" element={<SignUp />} />
           {/*  */}
           <Route path="/Profile" element={<Profile />} />
@@ -121,7 +186,7 @@ function App() {
           <Route path="/Purchases" element={<Purchases />} />
           <Route path="/mycourse" element={<MyCourse />} />
           <Route path="/student" element={<Student />} />
-          <Route path="/googlecalender" element={<GoogleCalender />} />
+          {/* <Route path="/googlecalender" element={<GoogleCalender />} /> */}
           {/*  */}
           <Route path="/artsandHumanities" element={<ArtsandHumanities />} />
           <Route path="/business" element={<Business />} />
@@ -320,7 +385,7 @@ function App() {
             element={<PersonalDevelopment />}
           />
           <Route path="/socialscience" element={<SocialScience />} />
-          <Route path="/admin/*" element={<AdminRouter />} />
+
 
           {/* Basic Advance Preminum Cousrses here */}
           {/* Basic Courses */}
@@ -342,6 +407,8 @@ function App() {
           <Route path="/advance-php" element={<AdvancePhp />} />
           <Route path="/blockchain" element={<BlockChain />} />
           <Route path="/cloud-computing" element={<CloudComputing />} />
+          <Route path="/power-bi" element={<PowerBi />} />
+          <Route path="/erp" element={<ERP />} />
           {/* Premium Courses */}
           <Route path="/premium-courses" element={<PremiumCourses />} />
           <Route

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 // import StressTestingNavigation from "./StressTestingNavigation";
 import StressTestingNavigation from "./SystemAbout/StressTestingNavigation";
 import Navbar from "../../../../../Navbar";
@@ -10,6 +10,9 @@ import StressTestingFoot from "./StressTestingFoot";
 // import SystemTestingCareersOutcomes from "./SystemAbout/SystemCareersOutcomes";
 import StressTestingCareersOutcomes from "./SystemAbout/StressTestingCareersOutcomes";
 const StressTestingMain = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

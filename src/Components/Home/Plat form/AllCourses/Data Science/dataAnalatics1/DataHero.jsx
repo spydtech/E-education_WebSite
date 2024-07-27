@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { IoMdShare } from "react-icons/io";
 const DataHero = () => {
   const [courseName] = useState("Data Analytics"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
 
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters
@@ -28,18 +28,18 @@ const DataHero = () => {
       {/* first card */}
 
       <>
-        <div className="flex md:flex-row justify-center items-center font-lora flex-col">
+        <div className="flex md:flex-row justify-center items-center font flex-col">
           <div>
             <div className="rounded-r-3xl p-8 z-10 md:w-[700px]">
-              <h1 className="text-3xl font-bold mb-4 font-lora">
-                <span className="text-blue-500">EonlineCourse</span>{" "}
+              <h1 className="text-3xl font-bold mb-4 font">
+                <span className="text-blue-500">E-education</span>{" "}
                 <span className="text-purple-700">Advanced Certificate</span>{" "}
                 <span className="text-pink-500">in</span>{" "}
                 <span className="text-orange-700">Data Analytics</span>{" "}
                 <span className="text-blue-500">and</span>{" "}
                 <span className="text-purple-700">Communication</span>
               </h1>
-              <p className="mb-8 text-lg font-lora">
+              <p className="mb-8 text-lg font">
                 Dive deep into data analytics, a multifaceted field encompassing
                 data cleaning, visualization, statistical analysis, and
                 predictive modeling. With a focus on practical skills and
@@ -52,12 +52,12 @@ const DataHero = () => {
               <div>
                 <button
                   onClick={handleEnroll}
-                  className="font-lora bg-blue-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mb-4 mr-4"
+                  className="font bg-blue-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mb-4 mr-4"
                 >
                   Enroll Now
                 </button>
 
-                <p className="text-sm text-gray-700 font-lora">
+                <p className="text-sm text-gray-700 font">
                   Enroll now and embark on a journey towards mastering data
                   analytics.
                 </p>
@@ -89,7 +89,7 @@ const DataHero = () => {
           />
         </div>
 
-        <div className="pr-2 md:mb-14 py-14 font-lora md:py-0">
+        <div className="pr-2 md:mb-14 py-14 font md:py-0">
           <h1 className="text-3xl font-semibold text-[#30c5ff] xl:text-5xl lg:text-3xl">
             <span className="block w-full">
               Transform Your Data into Insights

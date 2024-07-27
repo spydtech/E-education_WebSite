@@ -3,8 +3,8 @@ import React, { useState } from "react";
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const MachineLearningHero = () => {
-  const [courseName] = useState("Machine Learning"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [courseName] = useState("Machine Learning With AI"); // Placeholder for course name
+  const [coursePrice] = useState(34999);
   const navigate = useNavigate();
 
   const handleEnroll = () => {
@@ -25,7 +25,7 @@ const MachineLearningHero = () => {
       </div>
 
       <div
-        className="items-center font-lora w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
+        className="items-center font w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
         data-aos="fade-right"
         data-aos-duration={800}
       >

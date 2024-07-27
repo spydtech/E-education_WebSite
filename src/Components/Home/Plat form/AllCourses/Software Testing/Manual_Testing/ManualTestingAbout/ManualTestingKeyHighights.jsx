@@ -129,9 +129,9 @@ function ManualTestingKeyHighights() {
         id="main"
         className=" md:lg:xl:px-20  bg-gradient-to-br   from-[#0077b6] to-[#00b4d8]"
       >
-        <div id="subdiv1" className="pt-4 font-lora">
+        <div id="subdiv1" className="pt-4 font">
           <div id="h1" className="">
-            <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#fca311]">
+            <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#fca311] pl-4">
               E-education Course Highlights
             </p>
           </div>
@@ -139,8 +139,8 @@ function ManualTestingKeyHighights() {
             id="h2"
             className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
           >
-            <p className="text-5xl font-bold ">What does this</p>
-            <p className="text-5xl font-bold text-[#fca311] inline">
+            <p className="md:text-5xl text-2xl font-bold pl-4 ">What does this</p>
+            <p className="md:text-5xl text-2xl font-bold text-[#fca311] inline">
               Course have to offer?
             </p>
           </div>

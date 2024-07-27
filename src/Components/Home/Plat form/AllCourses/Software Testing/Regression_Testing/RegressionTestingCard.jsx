@@ -5,7 +5,7 @@ const RegressionTestingCard = () => {
     <>
       <section id="portfolio" className="portfolio-section py-16 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
+          <div className=" mb-12">
             <h2 className="text-4xl font-bold">
               Mastering Regression Testing: Maintain Stability and Quality
             </h2>
@@ -18,7 +18,7 @@ const RegressionTestingCard = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/regression-testing-intro">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/illustration-friends-videoconferencing-scene_23-2148831742.jpg?t=st=1716955432~exp=1716959032~hmac=c8dc0b31e13fbf40d359cb4ab4883eaa492a0fe37e3ff46284fbaace7cd62ffc&w=826"
@@ -38,7 +38,7 @@ const RegressionTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/regression-testing-foundations">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/free-vector/design-inspiration-concept-illustration_114360-4191.jpg?t=st=1716955482~exp=1716959082~hmac=1a333d32c61cf6e4ef49d679bc0280833bcaeb3f33f69892010e8030501f749c&w=740"
@@ -57,7 +57,7 @@ const RegressionTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/regression-testing-projects">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/premium-vector/flat-illustration-design-analyzing_9206-2760.jpg?w=740"
@@ -78,7 +78,7 @@ const RegressionTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/regression-testing-progress">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/premium-vector/designer-secretary-man-with-laptop-programmer-tester-digital-artist-student-smm-remote-work_909058-1037.jpg?w=740"
@@ -99,7 +99,7 @@ const RegressionTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/regression-testing-specialize">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/premium-vector/it-consultant-quality-control-service-programming-code-testing-software-developer-writing-abstract-metaphor_335657-2263.jpg?w=740"
@@ -121,7 +121,7 @@ const RegressionTestingCard = () => {
               </a>
             </div>
             <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/regression-testing-certifications">
+              <a>
                 <img
                   className="w-full h-60 object-cover"
                   src="https://img.freepik.com/premium-vector/quality-control-concept-illustration_701961-1878.jpg?w=740"

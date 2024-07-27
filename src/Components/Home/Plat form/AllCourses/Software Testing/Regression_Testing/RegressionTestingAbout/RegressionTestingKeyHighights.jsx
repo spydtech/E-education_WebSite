@@ -125,9 +125,9 @@ function RegressionTestingKeyHighights() {
         id="main"
         className=" md:lg:xl:px-20  bg-gradient-to-br   from-[#6f1d1b] to-[#432818]"
       >
-        <div id="subdiv1" className="pt-4 font-lora">
+        <div id="subdiv1" className="pt-4 font">
           <div id="h1" className="">
-            <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#00a8e8]">
+            <p className="md:lg:w-auto w-96 font-semibold text-xl pl-4 text-[#00a8e8]">
               E-education Course Highlights
             </p>
           </div>
@@ -135,8 +135,8 @@ function RegressionTestingKeyHighights() {
             id="h2"
             className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
           >
-            <p className="text-5xl font-bold ">What does this</p>
-            <p className="text-5xl font-bold text-[#00a8e8] inline">
+            <p className="md:text-5xl text-2xl font-bold pl-4">What does this</p>
+            <p className="md:text-5xl text-2xl font-bold text-[#00a8e8] inline">
               Course have to offer?
             </p>
           </div>

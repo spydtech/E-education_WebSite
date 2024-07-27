@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function DataScienceWithPythonFoot() {
   const [courseName] = useState("Data Science With Python"); // Placeholder for course name
-  const [coursePrice] = useState(199);
+  const [coursePrice] = useState(14999);
 
   const handleEnroll = () => {
     // Navigate to the card details page with course details as parameters
@@ -14,7 +14,7 @@ function DataScienceWithPythonFoot() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex flex-1 font-lora w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-pink-100 to-pink-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
+      <div className="flex flex-1 font w-full flex-col items-center justify-center text-center px-4 py-20 bg-gradient-to-r from-pink-100 to-pink-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
         <h1 className="mx-auto max-w-4xl font-display text-2xl font-bold tracking-normal text-gray-800 dark:text-gray-300 md:text-7xl">
           Transforming Business Decisions with&nbsp;
           <span className="relative text-gray-800 dark:text-gray-300">

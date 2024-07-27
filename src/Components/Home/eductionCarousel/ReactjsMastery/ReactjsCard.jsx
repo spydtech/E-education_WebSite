@@ -6,7 +6,7 @@ const ReactjsCard = () => {
     <>
       <div>
         <div id="heading" className=" py-10  ">
-          <h1 className="text-center font-bold text-4xl md:lg:sm:w-auto w-auto text-violet-800 font-lora">
+          <h1 className="text-center font-bold text-4xl md:lg:sm:w-auto w-auto text-violet-800 font">
             Unleash the Power of Dynamic Web Development with ReactJS
           </h1>
           <h1 className=" flex justify-center md:lg:sm:w-auto w-auto text-cyan-500">
@@ -14,7 +14,7 @@ const ReactjsCard = () => {
             <IoReorderThreeOutline className="text-[40px]" />{" "}
             <IoRemoveOutline className="text-[40px]" />
           </h1>
-          <p className="text-center text-lg md:lg:sm:w-full w-auto font-lora">
+          <p className="text-center text-lg md:lg:sm:w-full w-auto font">
             ReactJS: Transforming Web Development. With its declarative and
             component-based structure, ReactJS simplifies UI creation, ensuring
             high performance. Ideal for all developers, it enables the crafting

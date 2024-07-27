@@ -17,13 +17,13 @@ import {
     UPDATE_CART_ITEM_SUCCESS,
 } from "./ActionType";
 
-export const addItemToCart = (reqData, jwt) => async (dispatch) => {
+export const addItemToCart = (Data, jwt) => async (dispatch) => {
     dispatch({ type: ADD_ITEM_TO_CART_REQUEST })
     try {
 
-        const { data } = await axios.put(`${API_BASE_URL}/api/cart/add`, reqData, {
+        const { data } = await axios.put(`${API_BASE_URL}/api/cart/add`, Data, {
             headers: {
-                Authorization: jwt, // Pass the JWT token in the Authorization header
+                Authorization: `Bearer ${jwt}`, // Pass the JWT token in the Authorization header
             },
         })
         dispatch({ type: ADD_ITEM_TO_CART_SUCCESS, payload: data })

@@ -21,7 +21,7 @@ const DBAbout = () => {
           </p>
         </div>
         <div className="py-2">
-          <p className="text-6xl font-lora">
+          <p className="text-6xl font">
             Explore the
             <p className="text-[#00509d] my-2">
               Cloud Computing Essentials Program

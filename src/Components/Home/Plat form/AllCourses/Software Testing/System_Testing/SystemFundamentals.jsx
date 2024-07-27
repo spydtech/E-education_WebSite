@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import SystemTestingNavigation from "./SystemAbout/SystemNavigation";
 import SystemTestingHero from "./SystemTestingHero";
 import Navbar from "../../../../../Navbar";
@@ -9,6 +9,9 @@ import SystemTestingCard from "./SystemCard";
 import SystemTestingFoot from "./SystemFoot";
 import SystemTestingCareersOutcomes from "./SystemAbout/SystemCareersOutcomes";
 const SystemTestingMain = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

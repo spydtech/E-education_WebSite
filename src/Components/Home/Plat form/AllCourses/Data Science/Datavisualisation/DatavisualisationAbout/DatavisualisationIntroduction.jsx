@@ -8,10 +8,10 @@ function DatavisualisationIntroduction() {
       <div className="w-full flex-shrink-0 px-4 py-8 ">
         <div className="h-[400px] flex justify-center">
           <div>
-            <h2 className="text-3xl font-medium mb-4 text-blue-600 font-lora">
+            <h2 className="text-3xl font-medium mb-4 text-blue-600 font">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-xl font-lora">
+            <ul className="list-disc list-inside text-xl font">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -78,15 +78,15 @@ function DatavisualisationIntroduction() {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 h-full md:mb-20 bg-gradient-to-br from-blue-300 via-purple-500 to-pink-600">
-        <div className="flex items-center justify-center xl:w-auto">
-          <div className="grid grid-cols-1 text-start px-10 font-lora">
+        <div className="flex items-center justify-center pl-4 ">
+          <div className="grid grid-cols-1 text-start px-10 font">
             <div>
-              <p className="text-blue-800 text-xl font-lora font-medium">
+              <p className="text-blue-800 text-xl font font-medium">
                 Introduction
               </p>
             </div>
             <div className="py-5">
-              <p className="text-6xl font-lora">
+              <p className="md:md:text-5xl text-2xl  font">
                 So what is
                 <span className="text-blue-800 inline pl-2">
                   Data Visualization?
@@ -100,8 +100,8 @@ function DatavisualisationIntroduction() {
             </div>
           </div>
         </div>
-        <div className="px-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <div className="px-4">
+          <div className="max-w-7xl mx-auto  lg:px-8 mt-8">
             <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
               <div className="relative w-full overflow-hidden">
                 <div className="flex">

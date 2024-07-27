@@ -102,7 +102,7 @@ function DBKeyHighights() {
         id="main"
         className="md:lg:xl:px-20 bg-gradient-to-r from-rose-500 to-red-500"
       >
-        <div id="subdiv1" className="pt-4 font-lora">
+        <div id="subdiv1" className="pt-4 font">
           <div id="h1" className="">
             <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#00509d]">
               Course Highlights
