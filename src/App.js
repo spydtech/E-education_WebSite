@@ -99,20 +99,20 @@ import Pricing2 from "./Components/Home/Pricing/Pricing2";
 import Java from "./Components/BasicCourse/BasicAllCourses/Basic_Java/BasicJava";
 import PowerBi from "./Components/AdvanceCourses/Advance-courses/PowerBI/PowerBi";
 import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ERP";
-import Options from './Components/optionsPages/Options'
+import Options from "./Components/optionsPages/Options";
 import AdminLogin from "./Admin/Components/AdminLogin";
-import Trainee from './Components/trainee/Trainee'
-import TraineeDashboard from './Components/trainee/TraineeDashboard/TraineeDashboard'
+import Trainee from "./Components/trainee/Trainee";
+import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
 import Meeting from "./Components/Meeting/Meeting";
-import Tabs from "./Components/trainee/TraineAdmin/TraineComplateCourses/Tabs"
-import UserAccounts from "./Components/trainee/UsersSection/usernavigation/navigation"
-import TraineUpload from "./Components/trainee/UserTask/traineuploads"
-import TraineeCourses from "./Admin/Views/TraineeCourses"
-import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login"
+import Tabs from "./Components/trainee/TraineAdmin/TraineComplateCourses/Tabs";
+import UserAccounts from "./Components/trainee/UsersSection/usernavigation/navigation";
+import TraineUpload from "./Components/trainee/UserTask/traineuploads";
+import TraineeCourses from "./Admin/Views/TraineeCourses";
+import Traine_Login from "./Components/trainee/TraineLogin/Traine_Login";
 import Traine_Home from "./Components/trainee/home/Home";
-import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales"
-import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile"
-import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers"
+import CountOfSeals from "./Admin/Components/sealsRepotes2/countofsales";
+import CountOfProduct from "./Admin/Components/sealsRepotes2/rendaringfile";
+import CountOfCustomers from "./Admin/Components/sealsRepotes2/countofcustomers";
 import StatusPage from "./Components/trainee/UserTask/StatusPage";
 import Sam from "./Admin/Components/Reports/Sample";
 import BarGraph from "./Admin/Components/Reports/BarGraph";
@@ -122,6 +122,7 @@ import CustomerCount from "./Admin/Components/Reports/CustomerCount";
 import TableforAdmin from "./Admin/Components/Reports/TableforAdmin";
 import ProductsCount from "./Admin/Components/Reports/CountofProducts";
 import Todo from "./Components/trainee/SheduledReports/Todo";
+// import Slider from "./Components/FinalTestimonials";
 function App() {
   return (
     <div>
@@ -133,8 +134,12 @@ function App() {
           <Route path="/options" element={<Options />} />
           <Route path="/pricing" element={<Pricing2 />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
+<<<<<<< HEAD
           <Route path="/main-post" element={<MainPost />} />
 
+=======
+          {/* <Route path="/slider" element={<Slider />} /> */}
+>>>>>>> c25ed64f52b4723effe3fcffb3f6f160fc75389a
 
           {/* Graph  */}
           <Route path="/table" element={<Sam />} />
@@ -143,7 +148,7 @@ function App() {
           <Route path="/saleslinegraph" element={<SalesLineGraph />} />
           <Route path="/customercount" element={<CustomerCount />} />
           <Route path="/productscount" element={<ProductsCount />} />
-          <Route path="/tableforadmin" element={<TableforAdmin />} />
+          <Route path="/tableforadmin" element={<TableforAdmin />} />
           {/* traine Login */}
 
           <Route path="/trainelogin" element={<Traine_Login />} />
@@ -156,16 +161,14 @@ function App() {
           {/* <Route path="/traine-upload" element={<TraineUpload />} /> */}
           <Route path="/status-page" element={<StatusPage />} />
 
-          <Route path="/todo" element={<Todo />} />
+          <Route path="/todo" element={<Todo />} />
 
           {/* admin */}
           <Route path="/admin/*" element={<AdminRouter />} />
-          <Route path="/trainee-courses" element={<TraineeCourses />} />
+          {/* <Route path="/trainee-courses" element={<TraineeCourses />} /> */}
           <Route path="/linechart" element={<CountOfSeals />} />
           <Route path="/countofproducts" element={<CountOfProduct />} />
           <Route path="/countofcustomers" element={<CountOfCustomers />} />
-
-
 
           {/* WSpace */}
           <Route path="/WSpace" element={<WSpace />} />
@@ -385,7 +388,6 @@ function App() {
             element={<PersonalDevelopment />}
           />
           <Route path="/socialscience" element={<SocialScience />} />
-
 
           {/* Basic Advance Preminum Cousrses here */}
           {/* Basic Courses */}

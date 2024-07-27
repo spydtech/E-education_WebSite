@@ -186,6 +186,12 @@ function Login() {
 
   return (
     <div className="relative">
+<<<<<<< HEAD
+=======
+      {/* <button className="absolute   top-4 right-24 bg-[#F6AC14] text-white px-2 py-2 rounded-lg shadow-lg hover:bg-[#F8B64C] focus:outline-none focus:ring-2 focus:ring-[#F6AC14] transition-all duration-300 ease-in-out text-sm md:text-base">
+        Sign Up
+      </button> */}
+>>>>>>> c25ed64f52b4723effe3fcffb3f6f160fc75389a
       <button className="hidden md:block absolute top-4 right-24 bg-[#F6AC14] text-white px-2 py-2 rounded-lg shadow-lg hover:bg-[#F8B64C] focus:outline-none focus:ring-2 focus:ring-[#F6AC14] transition-all duration-300 ease-in-out text-sm md:text-base">
         Sign Up
       </button>

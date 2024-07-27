@@ -9,13 +9,8 @@ const skills = [
 
 const Skills = () => {
   return (
-<<<<<<< HEAD
     <div className="bg-white p-4 rounded-lg shadow-lg w-full md:w-[500px] lg:w-[600px] xl:w-[700px] mx-auto mt-8">
-      <h3 className="text-black font pl-2 text-xl pb-2 font-semibold">
-=======
-    <div className="bg-white p-4 rounded-lg shadow-lg w-full md:w-[500px] lg:w-[400px] xl:w-[500px] mx-auto mt-8">
       <h3 className="text-black font-lora pl-2 text-xl pb-2 font-semibold">
->>>>>>> c25ed64f52b4723effe3fcffb3f6f160fc75389a
         Skills
       </h3>
       <div className="grid grid-cols-2 md:grid-cols-2 gap-6">

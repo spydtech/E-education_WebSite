@@ -4,14 +4,21 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^5.3.7",
+<<<<<<< HEAD
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
+=======
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+>>>>>>> c25ed64f52b4723effe3fcffb3f6f160fc75389a
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@glidejs/glide": "^3.6.0",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^1.0.6",
+    "@mantine/core": "^7.11.0",
+    "@mantine/hooks": "^7.10.2",
     "@material-tailwind/react": "^2.1.9",
     "@motionone/utils": "^10.17.0",
     "@mui/icons-material": "^5.15.17",
@@ -46,6 +53,7 @@
     "react-scripts": "^5.0.1",
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.5",
+    "recharts": "^2.12.7",
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
     "slick-carousel": "^1.8.1",

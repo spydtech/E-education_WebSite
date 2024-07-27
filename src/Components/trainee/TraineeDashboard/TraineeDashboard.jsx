@@ -18,10 +18,13 @@ import UserAccount from "../UsersSection/usernavigation/navigation";
 import Calendar from "../Calendar/Calendar";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { IoMdLogOut } from "react-icons/io";
+<<<<<<< HEAD
 import StatusPage from "../UserTask/StatusPage";
 import { getTrainee, logout } from "../../../State/Auth/Action";
 import { useDispatch, useSelector } from "react-redux";
 
+=======
+>>>>>>> c25ed64f52b4723effe3fcffb3f6f160fc75389a
 const TraineeDashboard = () => {
   const location = useLocation();
   const redirect = location?.state?.redirect;
@@ -58,7 +61,7 @@ const TraineeDashboard = () => {
       case "calendar":
         return <Calendar />;
       case "reports":
-        return <StatusPage />; // Ensure this line renders StatusPage for the "reports" tab
+        return <div>Reports Content</div>;
       case "approvals":
         return <TraineUpload />;
       case "user":
@@ -86,8 +89,8 @@ const TraineeDashboard = () => {
         {/* sidebar */}
         <div className="hidden md:flex flex-col w-64 bg-gray-800">
           <div className="flex items-center justify-center h-16 bg-gray-900">
-            <span className="text-white font-bold uppercase">
-              Trainee Dashboard
+            <span className="px-2 flex py-1 text-xl text-white font-bold rounded-md">
+              Trainee DashBoard
             </span>
           </div>
           <div className="flex flex-col flex-1 overflow-y-auto">
@@ -128,17 +131,6 @@ const TraineeDashboard = () => {
                 <TbReportAnalytics className="h-6 w-6 mr-2" />
                 Reports
               </a>
-
-              {/* <a
-                href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${
-                  activeTab === "courses" && "bg-gray-700"
-                }`}
-                onClick={() => handleTabClick("reports")}
-              >
-                <FaLayerGroup className="h-6 w-6 mr-2" />
-                Reports
-              </a> */}
               <a
                 href="#"
                 className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "approvals" && "bg-gray-700"
@@ -168,7 +160,6 @@ const TraineeDashboard = () => {
               </a>
             </nav>
           </div>
-
           {isLogoutOpen && (
             <div className="w-auto h-14 mx-2 px-2 float-end  relative z-10">
               <div className="flex items-end justify-end space-x-1 mt-2">
@@ -203,11 +194,12 @@ const TraineeDashboard = () => {
             />
           </div>
         </div>
+
         {/* Main content */}
         <div className="flex flex-col flex-1 overflow-y-auto">
           <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200">
-            <div className="flex items-center px-4">
-              <button className="text-gray-500 focus:outline-none focus:text-gray-700">
+            <div className="flex items-center bg-[#111827] h-16 text-white px-4">
+              <button className="text-white focus:outline-none focus:text-gray-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -227,9 +219,9 @@ const TraineeDashboard = () => {
             <div className="flex-1 flex items-center justify-center px-4 h-16">
               <h1 className="text-xl font-semibold">Trainee Dashboard</h1>
             </div>
-            <div className="flex items-center px-4">
+            <div className="flex items-center bg-[#111827] h-16 px-4">
               <button
-                className="text-gray-500 hover:text-gray-600"
+                className="text-white  hover:text-gray-600"
                 id="open-sidebar"
                 onClick={toggleDrawer}
               >
