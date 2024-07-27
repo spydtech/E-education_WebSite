@@ -1,28 +1,37 @@
-
-
 import React from "react";
 import { FaCaretRight } from "react-icons/fa";
+import { FaAnglesRight } from "react-icons/fa6";
 
 const Outcomes = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4">
+      {/* <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4">
         <div className="w-full md:w-1/2">
           <div className="mt-3 font-extrabold text-gray-600 text-xl md:text-2xl lg:text-xl xl:text-2xl font-lora">
-            Elevate your career with sought-after skills in full stack web development
+            Elevate your career with sought-after skills in full stack web
+            development
           </div>
           <div className="pl-4">
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">Acquire full stack web skills. Industry-recognized certification. Excel in tech.</div>
+              <div className="text-base text-gray-600 font-lora">
+                Acquire full stack web skills. Industry-recognized
+                certification. Excel in tech.
+              </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">Master front-end, back-end. Real-world projects. Career-ready in web development.</div>
+              <div className="text-base text-gray-600 font-lora">
+                Master front-end, back-end. Real-world projects. Career-ready in
+                web development.
+              </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">Elevate career with full stack. Google-endorsed. Prepare for industry. Success awaits.</div>
+              <div className="text-base text-gray-600 font-lora">
+                Elevate career with full stack. Google-endorsed. Prepare for
+                industry. Success awaits.
+              </div>
             </div>
           </div>
         </div>
@@ -48,15 +57,24 @@ const Outcomes = () => {
           <div className="pl-4 md:pl-16">
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">Acquire comprehensive full stack web skills for industry recognition.</div>
+              <div className="text-base text-gray-600 font-lora">
+                Acquire comprehensive full stack web skills for industry
+                recognition.
+              </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">Excel in both front-end and back-end development with real-world projects.</div>
+              <div className="text-base text-gray-600 font-lora">
+                Excel in both front-end and back-end development with real-world
+                projects.
+              </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">Elevate your career with Google-endorsed training, preparing you for industry success.</div>
+              <div className="text-base text-gray-600 font-lora">
+                Elevate your career with Google-endorsed training, preparing you
+                for industry success.
+              </div>
             </div>
           </div>
         </div>
@@ -70,15 +88,24 @@ const Outcomes = () => {
           <div className="pl-4">
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">Master both front-end and back-end technologies for diverse job roles.</div>
+              <div className="text-base text-gray-600 font-lora">
+                Master both front-end and back-end technologies for diverse job
+                roles.
+              </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">Gain hands-on experience through real-world projects and case studies.</div>
+              <div className="text-base text-gray-600 font-lora">
+                Gain hands-on experience through real-world projects and case
+                studies.
+              </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
               <FaCaretRight />
-              <div className="text-base text-gray-600 font-lora">Prepare for success with industry-recognized certification and Google-endorsed training.</div>
+              <div className="text-base text-gray-600 font-lora">
+                Prepare for success with industry-recognized certification and
+                Google-endorsed training.
+              </div>
             </div>
           </div>
         </div>
@@ -88,10 +115,66 @@ const Outcomes = () => {
             className="rounded-xl w-full max-w-md mx-auto"
           />
         </div>
+      </div> */}
+      <div>
+        <h1 className="text-[#0098F1] text-3xl font-semibold">
+          What you will learn{" "}
+        </h1>
+        <p className="flex items-center text-[#0098F1] mt-4 text-[20px]">
+          <FaAnglesRight className="text-[#F6AC14] mr-2 text-[25px] h-12 w-12" />
+          The Feature Of Learning The Feature Of Learning The Feature Of
+          Learning The Feature Of Learning The Feature Of Learning The Feature
+          Of Learning The Feature Of Learning The Feature Of Learning The
+          Feature Of Learning{" "}
+        </p>
+        <p className="flex items-center mt-4 text-[#0098F1] text-[20px]">
+          <FaAnglesRight className="text-[#F6AC14] mr-2 text-[25px] h-12 w-12" />
+          The Feature Of Learning The Feature Of Learning The Feature Of
+          Learning The Feature Of Learning The Feature Of Learning The Feature
+          Of Learning The Feature Of Learning The Feature Of Learning The
+          Feature Of Learning{" "}
+        </p>
+      </div>
+      <div>
+        <h1 className="text-[#0098F1] mt-5 text-3xl font-semibold">
+          What you will learn{" "}
+        </h1>
+        <p className="flex items-center text-[#0098F1] mt-4 text-[20px]">
+          <FaAnglesRight className="text-[#F6AC14] mr-2 text-[25px] h-12 w-12" />
+          The Feature Of Learning The Feature Of Learning The Feature Of
+          Learning The Feature Of Learning The Feature Of Learning The Feature
+          Of Learning The Feature Of Learning The Feature Of Learning The
+          Feature Of Learning{" "}
+        </p>
+        <p className="flex items-center mt-4 text-[#0098F1] text-[20px]">
+          <FaAnglesRight className="text-[#F6AC14] mr-2 text-[25px] h-12 w-12" />
+          The Feature Of Learning The Feature Of Learning The Feature Of
+          Learning The Feature Of Learning The Feature Of Learning The Feature
+          Of Learning The Feature Of Learning The Feature Of Learning The
+          Feature Of Learning{" "}
+        </p>
+      </div>
+      <div>
+        <h1 className="text-[#0098F1] text-3xl mt-4 font-semibold">
+          What you will learn{" "}
+        </h1>
+        <p className="flex items-center text-[#0098F1] mt-6 text-[20px]">
+          <FaAnglesRight className="text-[#F6AC14] mr-2 text-[25px] h-12 w-12" />
+          The Feature Of Learning The Feature Of Learning The Feature Of
+          Learning The Feature Of Learning The Feature Of Learning The Feature
+          Of Learning The Feature Of Learning The Feature Of Learning The
+          Feature Of Learning{" "}
+        </p>
+        <p className="flex items-center mt-4 text-[#0098F1] text-[20px]">
+          <FaAnglesRight className="text-[#F6AC14] mr-2 text-[25px] h-12 w-12" />
+          The Feature Of Learning The Feature Of Learning The Feature Of
+          Learning The Feature Of Learning The Feature Of Learning The Feature
+          Of Learning The Feature Of Learning The Feature Of Learning The
+          Feature Of Learning{" "}
+        </p>
       </div>
     </>
   );
 };
 
 export default Outcomes;
-

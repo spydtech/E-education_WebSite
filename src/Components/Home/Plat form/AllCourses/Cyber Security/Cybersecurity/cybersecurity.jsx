@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from "react";
 import Navbar from "../../../../../Navbar";
-import Footer from "../../../../../Home/footer/Footer";
+import Footer from "../../../../footer/Footer";
 import Cybersecurityimg from "../../../../../../assets/CyberSecurityImages/cybersecurityimg.png";
 import { useNavigate } from "react-router-dom";
 import CybersecurityNavigation from "./CyberSecurityNavigation";
