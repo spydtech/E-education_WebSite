@@ -19,98 +19,70 @@ function CertifiedEthicalHackingKeyHighlights() {
     switch (selectedItem) {
       case 0:
         return (
-          <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl md:my-16">
-              <p className="text-2xl font-medium text-orange-600 py-4">
-                Overview
-              </p>
-              <li>
-                Comprehensive modules covering all aspects of ethical hacking
-              </li>
-              <li>
-                Certificate accredited by leading cybersecurity institutions
-              </li>
-              <li>Access to live hacking simulations and workshops</li>
-              <li>15+ Case Studies and real-world projects</li>
-              <li>Earn Certified Ethical Hacker (CEH) certification</li>
-              <li>Extensive library of hacking tools and resources</li>
-              <li>Mentor-led guidance and coaching sessions</li>
-              <li>Personalized resume feedback</li>
-              <li>Mock interviews conducted by industry experts</li>
-              <li>
-                Explore the latest tools and techniques in ethical hacking
-              </li>
-            </ul>
-          </>
+          <ul className="space-y-2 pt-4 font-normal text-[16px] list-disc">
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Overview</p>
+            <li>Comprehensive modules covering all aspects of ethical hacking</li>
+            <li>Certificate accredited by leading cybersecurity institutions</li>
+            <li>Access to live hacking simulations and workshops</li>
+            <li>15+ Case Studies and real-world projects</li>
+            <li>Earn Certified Ethical Hacker (CEH) certification</li>
+            <li>Extensive library of hacking tools and resources</li>
+            <li>Mentor-led guidance and coaching sessions</li>
+            <li>Personalized resume feedback</li>
+            <li>Mock interviews conducted by industry experts</li>
+            <li>Explore the latest tools and techniques in ethical hacking</li>
+          </ul>
         );
       case 1:
         return (
-          <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium text-orange-600 py-4">
-                Key Concepts
-              </p>
-              <li>Introduction to ethical hacking and penetration testing</li>
-              <li>Footprinting and reconnaissance techniques</li>
-              <li>Scanning networks and identifying vulnerabilities</li>
-              <li>Enumeration and gaining unauthorized access</li>
-              <li>Maintaining access and covering tracks</li>
-              <li>Web application and network hacking</li>
-              <li>Wireless network security</li>
-            </ul>
-          </>
+          <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Key Concepts</p>
+            <li>Introduction to ethical hacking and penetration testing</li>
+            <li>Footprinting and reconnaissance techniques</li>
+            <li>Scanning networks and identifying vulnerabilities</li>
+            <li>Enumeration and gaining unauthorized access</li>
+            <li>Maintaining access and covering tracks</li>
+            <li>Web application and network hacking</li>
+            <li>Wireless network security</li>
+          </ul>
         );
       case 2:
         return (
-          <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium text-orange-600">
-                Applications
-              </p>
-              <li>Penetration Tester</li>
-              <li>Security Consultant</li>
-              <li>Network Security Engineer</li>
-              <li>Security Analyst</li>
-              <li>Information Security Manager</li>
-              <li>Incident Responder</li>
-              <li>Threat Hunter</li>
-              <li>Vulnerability Assessor</li>
-            </ul>
-          </>
+          <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Applications</p>
+            <li>Penetration Tester</li>
+            <li>Security Consultant</li>
+            <li>Network Security Engineer</li>
+            <li>Security Analyst</li>
+            <li>Information Security Manager</li>
+            <li>Incident Responder</li>
+            <li>Threat Hunter</li>
+            <li>Vulnerability Assessor</li>
+          </ul>
         );
       case 3:
         return (
-          <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium text-orange-600">
-                Skills Developed
-              </p>
-              <li>
-                Proficiency in various ethical hacking tools and techniques
-              </li>
-              <li>In-depth knowledge of network security and protocols</li>
-              <li>Ability to identify and exploit system vulnerabilities</li>
-              <li>Expertise in web application security</li>
-              <li>Skills in wireless network security</li>
-              <li>Incident response and forensic analysis skills</li>
-              <li>Strong problem-solving and analytical abilities</li>
-            </ul>
-          </>
+          <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Skills Developed</p>
+            <li>Proficiency in various ethical hacking tools and techniques</li>
+            <li>In-depth knowledge of network security and protocols</li>
+            <li>Ability to identify and exploit system vulnerabilities</li>
+            <li>Expertise in web application security</li>
+            <li>Skills in wireless network security</li>
+            <li>Incident response and forensic analysis skills</li>
+            <li>Strong problem-solving and analytical abilities</li>
+          </ul>
         );
       case 4:
         return (
-          <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium text-orange-600">
-                Target Audience
-              </p>
-              <li>IT professionals seeking to enhance their security skills</li>
-              <li>Individuals aspiring to become ethical hackers</li>
-              <li>Network and security administrators</li>
-              <li>Security enthusiasts and hobbyists</li>
-              <li>Anyone interested in learning about cybersecurity</li>
-            </ul>
-          </>
+          <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Target Audience</p>
+            <li>IT professionals seeking to enhance their security skills</li>
+            <li>Individuals aspiring to become ethical hackers</li>
+            <li>Network and security administrators</li>
+            <li>Security enthusiasts and hobbyists</li>
+            <li>Anyone interested in learning about cybersecurity</li>
+          </ul>
         );
       default:
         return null;
@@ -118,57 +90,35 @@ function CertifiedEthicalHackingKeyHighlights() {
   };
 
   return (
-    <>
-      <div
-        id="main"
-        className="md:lg:xl:px-20 bg-gradient-to-br from-yellow-300 via-orange-500 to-red-600"
-      >
-        <div id="subdiv1" className="pt-4">
-          <div id="h1" className="">
-            <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-pink-900">
+    <div className="px-20 mb-20 bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start justify-center">
+        <div className="w-auto h-auto md:w-[500px] md:h-[420px] mt-10 md:pl-10 pl-0 text-xl">
+          {renderContent()}
+        </div>
+        <div className="lg:pl-20 pl-0 -ml-10 md:ml-10 lg:-ml-0 lg:ml-10">
+          <div className="pt-4">
+            <p className="font-bold underline-offset-2 underline text-xl p-2 text-[#f6ac14]">
               Ethical Hacking Course Highlights
             </p>
           </div>
-          <div
-            id="h2"
-            className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96 h-auto"
-          >
-            <p className="md:text-5xl text-2xl font-bold ">What does this</p>
-            <p className="md:text-5xl text-2xl font-bold text-yellow-700 inline">
-              Course have to offer?
-            </p>
-          </div>
-        </div>
-        <div
-          id="subdiv2"
-          className="justify-between grid grid-cols-1 lg:md:grid-cols-2"
-        >
-          {/* content start */}
-          <div id="content1" className="">
+          <div className="w-auto h-auto md:w-[500px] md:h-[420px] sm:w-[250px] mt-10 md:pl-16 pl-0 items-center">
             {data.map((item, index) => (
               <div
                 key={index}
                 onClick={() => handleClick(index)}
-                className={`hover:text-violet-700 p-5 text-start hover:cursor-pointer text-xl font-medium my-6  h-16 w-[300px] lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden shadow-lg shadow-gray-400 transition-transform duration-300 transform md:hover:scale-105 hover:scale-100 ${
+                className={`p-5 text-center hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-[210px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden transition-transform duration-300 transform hover:scale-105 ${
                   selectedItem === index
-                    ? "bg-cyan-600 text-white hover:text-white border-none"
+                    ? "bg-[#0098f1] text-white border-none"
                     : ""
                 }`}
               >
-                <p>{item.label}</p>
+                <p className="text-center">{item.label}</p>
               </div>
             ))}
           </div>
-          <div
-            id="content2"
-            className="md:lg:w-auto w-[300px] md:lg:h-auto md:lg:xl:w-[400px] h-auto pt-4 md:lg:xl:pl-4 text-xl"
-          >
-            {renderContent()}
-          </div>
-          {/* content end */}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

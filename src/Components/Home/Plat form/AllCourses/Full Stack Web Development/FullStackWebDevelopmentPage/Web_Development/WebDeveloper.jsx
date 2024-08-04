@@ -1,11 +1,11 @@
 import React from "react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
-import { IoRemoveOutline } from "react-icons/io5";
-import { IoReorderThreeOutline } from "react-icons/io5";
+// import { IoRemoveOutline } from "react-icons/io5";
+// import { IoReorderThreeOutline } from "react-icons/io5";
 import WebDevelopmentCard from "./WebDevelopmentCard";
-import skills from "../../../../../../../assets/WebDeveloper/skills.png";
-import requirements from "../../../../../../../assets/WebDeveloper/requirements.png";
 
+import skillsImg from "../../../../../../../assetss/fullstackwebdev/skills.png";
+import requirementsImg from "../../../../../../../assetss/fullstackwebdev/requirements.png"
 const softSkills = [
   { name: "Coordination" },
   { name: "Empathy" },
@@ -26,76 +26,52 @@ const WebDeveloper = () => {
   return (
     <>
       <WebDevelopmentCard />
-      <div
-        id="main"
-        className="gap-10 py-20 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 p-10 justify-center items-center"
-      >
-        <div
-          id="1"
-          className="max-w-sm w-full rounded-lg h-60 relative mx-auto mb-10"
-        >
-          <div className="p-4 rounded-lg shadow-2xl border-orange-700 border-2 relative">
-            <img src={skills} className="w-24 h-24 absolute top-4 right-4" />
-            <h2 className="text-base font-extrabold text-[#25a244] sm:text-xl lg:text-lg xl:text-3xl font mb-4">
-              Soft Skills
-            </h2>
-            <div>
-              {softSkills.map((skill, index) => (
-                <div key={index} className="flex items-center mb-2">
-                  <p className="text-base text-gray-600 font">
-                    <FaArrowAltCircleRight className="text-[#25a244] inline mx-2" />
-                    {skill.name}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div
-          id="2"
-          className="max-w-sm w-full rounded-lg h-60 relative mx-auto mb-10"
-        >
-          <div className="bg-white p-4 rounded-lg shadow-2xl border-orange-700 border-2 relative">
-            <img
-              src={requirements}
-              className="w-24 h-24 absolute top-4 right-4"
-            />
-            <h2 className="text-base font-extrabold text-[#25a244] sm:text-xl lg:text-lg xl:text-3xl font mb-4">
-              Technical Skills
-            </h2>
-            <div>
-              {technicalSkills.map((skill, index) => (
-                <div key={index} className="flex items-center mb-2">
-                  <p className="text-base text-gray-600 font">
-                    <FaArrowAltCircleRight className="text-[#25a244] inline mx-2" />
-                    {skill.name}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div
-          id="3"
-          className="max-w-sm w-full h-32 rounded-lg items-center flex mx-auto mb-4"
-        >
-          <div className="p-4 rounded-lg ">
-            <h2 className="text-base font-extrabold text-[#25a244] sm:text-xl lg:text-lg xl:text-3xl font mb-2">
-              full Stack Web Developer Skills{" "}
-            </h2>
-            <div className="flex text-[#25a244] justify-center items-center mb-4">
-              <IoRemoveOutline className="text-[40px]" />
-              <IoReorderThreeOutline className="text-[40px]" />
-              <IoRemoveOutline className="text-[40px]" />
-            </div>
-            <p className="text-base text-gray-600 font">
-              Over the last decade, webdevelopment expectations have shifted
-              dramatically, with many businesses now expecting their MEAN stack
-              developers to be multi-skilled experts.{" "}
+    <div className="container mx-auto p-6">
+      <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+        Full Stack <span className="text-[#F6AC14]">Web Development</span> Skills
+      </h2>
+      <p className="text-gray-600 mb-6 text-center">
+        The future of learning The future of learning The future of learning...
+      </p>
+      <div className="flex flex-col md:flex-row justify-around">
+      <div className="bg-[#0098F1] rounded-lg mb-6 md:mb-0">
+    <div className="flex">
+      <img src={skillsImg} alt="Soft Skills" className="mb-4 w-190 h-160" />
+      <h3 className="text-3xl font-bold px-20 py-14 text-white">Soft Skills</h3>
+    </div>
+    <div>
+      {softSkills.map((skill, index) => (
+        <div key={index} className="flex justify-center items-center mb-2">
+          <div className="grid">
+            <p className="text-xl text-white font">
+              <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14] inline mx-2" />
+              {skill.name}
             </p>
           </div>
         </div>
+      ))}
+    </div>
+        </div>
+        <div className="bg-[#0098F1]   rounded-lg mb-6 md:mb-0">
+          <div className=" flex">
+          <img src={requirementsImg} alt="Technical Skills" className="mb-4  w-190 h-160" />
+          <h3 className="text-3xl font-bold px-20 py-14 text-white">Technical Skills</h3>
+          </div>
+          <div>
+              {technicalSkills.map((skill, index) => (
+                <div key={index} className="flex justify-center items-center mb-2">
+                 <div className="grid">
+                 <p className="text-xl text-white font">
+                    <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14] inline mx-2" />
+                    {skill.name}
+                  </p>
+                 </div>
+                </div>
+              ))}
+            </div>
+        </div>
       </div>
+    </div>
     </>
   );
 };

@@ -947,11 +947,14 @@ const SoftwareTestingArray = () => {
                   key={course.id}
                   className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
+                     <a href={course.link} rel="noopener noreferrer">
+                  <div className="">
                   <img
                     src={course.image}
                     alt={course.title}
                     className="w-full h-32 object-cover rounded-md mb-4"
                   />
+                  </div>
                   <h2 className="text-xl font-semibold mb-2">{course.title}</h2>
                   <p className="text-gray-600 mb-2">{course.description}</p>
                   <div className="flex items-center justify-between mb-4">
@@ -979,6 +982,7 @@ const SoftwareTestingArray = () => {
                       {course.price}
                     </span>
                   </div>
+                  </a>
                 </div>
               ))}
           </div>

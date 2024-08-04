@@ -25,7 +25,7 @@ const AboutCourses = () => {
         {/* Menu Icon */}
         <div className="block lg:hidden mb-4">
           <button
-            className="px-4 py-2 font-semibold border rounded-lg hover:bg-blue-800 hover:text-white focus:outline-none"
+            className="px-4 py-2 font-semibold border rounded-lg hover:bg-[#0098F1] hover:text-white focus:outline-none"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <IoMenu />
@@ -40,7 +40,7 @@ const AboutCourses = () => {
         >
           <div className="flex flex-col space-y-2 lg:space-y-0 lg:flex-row lg:space-x-4">
             <button
-              className={`px-4 py-2 font-semibold border-b-4 border-blue-800 rounded-lg hover:bg-blue-800 hover:text-white focus:outline-none tab-button ${
+              className={`px-4 py-2 font-semibold border-b-4 border-[#0098F1] rounded-lg hover:bg-[#0098F1] hover:text-white focus:outline-none tab-button ${
                 activeTab === "tab1" ? "active" : ""
               }`}
               onClick={() => showTab("tab1")}
@@ -52,7 +52,7 @@ const AboutCourses = () => {
               About
             </button>
             <button
-              className={`px-4 py-2 font-semibold border-b-4 border-blue-800 rounded-lg hover:bg-blue-800 hover:text-white focus:outline-none tab-button ${
+              className={`px-4 py-2 font-semibold border-b-4 border-[#0098F1] rounded-lg hover:bg-[#0098F1] hover:text-white focus:outline-none tab-button ${
                 activeTab === "tab2" ? "active" : ""
               }`}
               onClick={() => showTab("tab2")}
@@ -64,7 +64,7 @@ const AboutCourses = () => {
               Outcomes
             </button>
             <button
-              className={`px-4 py-2 font-semibold border-b-4 border-blue-800 rounded-lg hover:bg-blue-800 hover:text-white focus:outline-none tab-button ${
+              className={`px-4 py-2 font-semibold border-b-4 border-[#0098F1] rounded-lg hover:bg-[#0098F1] hover:text-white focus:outline-none tab-button ${
                 activeTab === "tab3" ? "active" : ""
               }`}
               onClick={() => showTab("tab3")}
@@ -76,7 +76,7 @@ const AboutCourses = () => {
               Courses
             </button>
             <button
-              className={`px-4 py-2 font-semibold border-b-4 border-blue-800 rounded-lg hover:bg-blue-800 hover:text-white focus:outline-none tab-button ${
+              className={`px-4 py-2 font-semibold border-b-4 border-[#0098F1] rounded-lg hover:bg-[#0098F1] hover:text-white focus:outline-none tab-button ${
                 activeTab === "tab4" ? "active" : ""
               }`}
               onClick={() => showTab("tab4")}

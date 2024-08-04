@@ -74,7 +74,7 @@ const StudentCourses = () => {
               <div
                 key={index}
                 id="card"
-                className="w-full sm:w-[317px] lg:w-[340px] mx-2 h-[360px] lg:h-[360px] bg-[#0098f1] rounded-lg p-4 group transition-all duration-600 ease-out transform  hover:bg-[#f6ac14] "
+                className="w-full sm:w-[317px] lg:w-[340px] mx-2 h-[360px] lg:h-[360px] rounded-lx p-4 group  duration-600 ease-out transform bg-[#0098f1] text-white relative rounded-2xl shadow-md  flex flex-col justify-between transition-transform duration-500 hover:scale-105 before:absolute before:w-1/5 before:h-1/5 before:bg-[#f6ac14] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px] after:absolute after:w-1/5 after:h-1/5 after:bg-[#f6ac14] after:bg-opacity-0 after:transition-all after:duration-500 after:bottom-0 after:left-0 after:rounded-tl-[100%] after:rounded-br-[15px] hover:after:w-full hover:after:h-full hover:after:rounded-[15px] "
               >
                 <div>
                   <div className="rounded-full w-[80px] h-[80px] bg-[#d2efff] relative flex justify-center items-center mb-4">
@@ -84,13 +84,13 @@ const StudentCourses = () => {
                       className="w-[48px] h-[48px]"
                     />
                   </div>
-                  <div>
-                    <p className="text-white text-[20px] font-bold mt-4">
+                  <div className=" relative z-10 ">
+                    <p className="text-white  text-[20px] font-bold mt-4">
                       {course.title}
                     </p>
-                    <p className="text-white mt-4">{course.description}</p>
+                    <p className="text-whitemt-4">{course.description}</p>
                   </div>
-                  <div className="flex justify-center items-center mt-10 relative rounded-lg">
+                  <div className="flex justify-center items-center mt-10 relative z-10 rounded-lg">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -116,3 +116,6 @@ const StudentCourses = () => {
 };
 
 export default StudentCourses;
+
+
+

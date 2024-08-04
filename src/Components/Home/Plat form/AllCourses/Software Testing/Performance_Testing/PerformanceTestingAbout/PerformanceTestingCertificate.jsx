@@ -1,22 +1,24 @@
 import React from "react";
-// import certificate from "../../../../../../../assets/dataAnalatics/Certificate-PNG-Pic.png";
-import certificate from "../../../../../../../assets/dataAnalatics/Certificate-PNG-Pic.png";
+import certificate from "../../../../../../../assetss/certficate.png";
 
 function PerformanceTestingCertificate() {
   return (
-    <>
-      <div
-        id="main"
-        className="grid  grid-cols-1 md:lg:grid-cols-2 pb-16 bg-gradient-to-br  from-[#474973] to-[#0d0c1d]"
-      >
-        <div id="content" className="flex justify-center items-center">
-          <div className="p-5 space-y-5 w-[450px] h-96">
-            <p className="text-[#30c5ff] text-xl font-medium">
-              Performance Testing Certification
-            </p>
-            <p className="md:text-5xl text-2xl font">
-              Achieve{" "}
-              <p className="text-[#30c5ff]">Credentials and Recognition</p>
+    <div className="bg-white mb-20 pt-10">
+      <div className="h-auto grid grid-cols-1 md:grid-cols-2 gap-8 p-4 justify-center items-center">
+        {/* Left Content */}
+        <div className="flex justify-center items-center">
+          <img
+            src={certificate}
+            alt="Performance Testing Certificate"
+            className="max-w-full h-auto"
+          />
+        </div>
+
+        {/* Right Content */}
+        <div className="flex justify-center items-center">
+          <div className="space-y-5 text-center md:text-left p-5">
+            <p className="text-2xl font-bold text-[#f6ac14]">
+              Achieve Credentials and Recognition
             </p>
             <p className="text-xl text-gray-500">
               Successfully complete all course modules to obtain a Performance
@@ -25,14 +27,9 @@ function PerformanceTestingCertificate() {
             </p>
           </div>
         </div>
-        <div
-          id="certificate"
-          className="flex justify-center items-center p-10 pt-4"
-        >
-          <img src={certificate} alt="certificate" className="bg-transparent" />
-        </div>
       </div>
-    </>
+    </div>
   );
 }
+
 export default PerformanceTestingCertificate;

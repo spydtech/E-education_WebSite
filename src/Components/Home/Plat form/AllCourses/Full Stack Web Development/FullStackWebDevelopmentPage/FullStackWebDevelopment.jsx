@@ -57,7 +57,7 @@ const ParticularFullStack = () => {
           </p>
           <button
             onClick={handleEnroll}
-            className="bg-[#0098F1] text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95"
+            className="bg-[#0098F1] text-white font-medium py-2 px-4 rounded transition-all hover:bg-[#0098F1] active:scale-95"
           >
             Enroll Now
           </button>
