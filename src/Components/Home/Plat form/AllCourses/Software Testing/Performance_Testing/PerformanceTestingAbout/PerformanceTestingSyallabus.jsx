@@ -27,50 +27,40 @@ function PerformanceTestingSyllabus() {
   ];
 
   return (
-    <>
-      <div
-        id="subdiv"
-        className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6  bg-gradient-to-br  from-[#474973] to-[#0d0c1d]"
-      >
-        <div
-          id="div1"
-          className="flex items-center justify-center xl:lg:md:w-auto"
-        >
-          <div id="headings" className="grid grid-cols-1 text-start pl-4">
-            <div>
-              <p className="text-[#30c5ff] text-xl font-medium">Syllabus</p>
-            </div>
-            <div className="py-5">
-              <p className="md:text-5xl text-2xl font">
-                Discover What You
-                <p className="text-[#30c5ff] inline pl-2">Will Learn</p>
-              </p>
-            </div>
-            <div>
-              <p className="text-xl text-gray-300">
-                Top-notch and up-to-date curriculum taught by renowned
-                professors and industry experts using videos, case studies,
-                hands-on projects, and live sessions.
-              </p>
-            </div>
+    <div className="bg-white mb-20 pt-10">
+      <div className="h-auto grid grid-cols-1 md:grid-cols-2 gap-8 p-4 justify-center items-center">
+        {/* Left Content */}
+        <div className="flex justify-center items-center">
+          <div className="p-5 space-y-5">
+            <p className="text-2xl font-bold text-[#f6ac14]">
+              Syllabus
+            </p>
+            <p className="md:text-5xl text-2xl font">
+              Discover What You{" "}
+              <span className="text-[#f6ac14]">Will Learn</span>
+            </p>
+            <p className="text-xl text-gray-500">
+              Top-notch and up-to-date curriculum taught by renowned professors
+              and industry experts using videos, case studies, hands-on projects,
+              and live sessions.
+            </p>
           </div>
         </div>
-        <div
-          id="div2"
-          className="space-y-5 flex justify-center px-10 p-4 my-2 mx-2 mb-2 border-2 border-opacity-15 rounded overflow-hidden bg-gray-200 shadow-2xl"
-        >
+
+        {/* Right Content */}
+        <div className="bg-[#0098f1] p-6 rounded-lg">
           <div className="container mx-auto">
             {data.map((category, index) => (
               <div key={index} className="mb-6">
-                <h2 className="text-4xl font-semibold mb-2 text-[#30c5ff]">
+                <h2 className="text-3xl font-semibold mb-2 text-[#ffffff]">
                   {category.heading}
                 </h2>
-                <h3 className="text-2xl font-medium mb-2">
+                <h3 className="text-xl md:text-2xl font-medium mb-2 text-[#ffffff]">
                   {category.subheading}
                 </h3>
-                <ul className="list-disc ml-6 text-[16px]">
+                <ul className="list-disc ml-4 text-base md:text-lg text-[#ffffff] text-opacity-80">
                   {category.items.map((item, idx) => (
-                    <li key={idx} className="text-gray-700">
+                    <li key={idx} className="mb-1">
                       {item}
                     </li>
                   ))}
@@ -80,7 +70,7 @@ function PerformanceTestingSyllabus() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

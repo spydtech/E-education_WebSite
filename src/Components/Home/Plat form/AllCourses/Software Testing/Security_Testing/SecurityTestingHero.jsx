@@ -1,73 +1,48 @@
-// import React from "react";
 import React, { useState } from "react";
-// import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-// import PerformanceTestingScroller from "./PerformanceTestingScroller";
-
 const SecurityTestingHero = () => {
-  const [courseName] = useState("Security Testing"); // Placeholder for course name
+  const [courseName] = useState("Security Testing");
   const [coursePrice] = useState(14999);
-
   const navigate = useNavigate();
+
   const handleEnroll = () => {
-    // Navigate to the card details page with course details as parameters
     navigate("/course-details", { state: { courseName, coursePrice } });
   };
 
   return (
     <>
-      {/* First Part */}
-
-      <div>
-        <img
-          // src="https://thumbs.dreamstime.com/b/ascending-arrow-icons-data-science-292911896.jpg?w=992"
-          src="https://media.licdn.com/dms/image/D4E12AQFaTWK5tGnszg/article-cover_image-shrink_720_1280/0/1696577081709?e=2147483647&v=beta&t=jm1_WO36lQXpHX2tD9tvdLqHtQio3D1aUBqvhJeG00Y"
-          className="w-full object-cover md:h-[500px]"
-        />
-        {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
-      </div>
-
-      <div
-        className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
-        data-aos="fade-right"
-        data-aos-duration={800}
-      >
-        <div className="pr-2 md:mb-14 py-14 font md:py-0">
-          <h1 className="text-3xl font-semibold text-[#31cb00] xl:text-5xl lg:text-3xl">
+      <div className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5">
+        <div className="w-auto h-auto pr-10 md:mb-14 py-14 font md:py-0 mx-auto">
+          <h1 className="text-lg font-semibold text-[#f6ac14] xl:text-2xl lg:text-xl">
             <span className="block w-full">
               Optimize Your Performance Testing
             </span>{" "}
             to Achieve Unmatched Reliability!
           </h1>
-          <p className="py-4 text-lg text-gray-500 2xl:py-8 md:py-6 2xl:pr-5">
+          <p className="py-4 text-lg text-gray-500 md:py-6 leading-10">
             Empowering you to rigorously test and optimize your systems,
             ensuring unparalleled performance and reliability for your
             business...
           </p>
-
-          <div className="mt-4">
-            <a
+          <div className="mt-14 lg:md:w-[250px] lg:md:h-[70px] w-auto h-auto justify-center items-center">
+            <button
               onClick={handleEnroll}
-              className="px-5 py-3 text-lg tracking-wider text-white bg-green-300 rounded-lg md:px-8 hover:bg-green-500 group"
+              className="px-5 md:lg:w-full w-auto font-sans h-full py-3 text-[26px] font-medium text-white bg-[#0098f1] rounded-[22px] md:px-6"
             >
-              <span>Enroll Now</span>{" "}
-            </a>
+              Enroll Now
+            </button>
           </div>
         </div>
-        <div className="pb-10 overflow-hidden md:p-10 lg:p-0 sm:pb-0">
+        <div className="pb-10 lg:w-[400px] lg:h-[400px] mx-auto md:w-[640px] h-auto overflow-hidden md:p-10 lg:p-0 sm:pb-0 ">
           <img
             id="heroImg1"
-            className="transition-all duration-300 ease-in-out hover:scale-105 lg:w-full sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0"
-            src="https://img.freepik.com/premium-vector/two-individuals-sitting-table-focused-typing-their-laptops-two-people-are-inputting-data-simple-minimalist-flat-vector-illustration_538213-53758.jpg?w=826"
+            className="rounded-full lg:h-full object-cover lg:w-auto sm:mx-auto sm:w-4/6 sm:h-4/6"
+            src="https://img.freepik.com/premium-photo/dedicated-computer-science-major-engrossed-learning-new-programming-languages_981640-60156.jpg?w=900"
             alt="Performance Testing hero image"
-            width={500}
-            height={488}
           />
         </div>
       </div>
-
-      {/* Second Part */}
     </>
   );
 };

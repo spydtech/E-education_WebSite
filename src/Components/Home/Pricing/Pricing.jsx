@@ -349,7 +349,7 @@ function Pricing() {
             </div>
 
             {/* <!-- Third Course --> */}
-            <div class="ring-1 ring-[#F6AC14] bg-[#F6AC141C]  p-8 xl:p-10 hover:ring-2 hover:ring-indigo-500 hover:scale-105 duration-100">
+            <div class="ring-1 ring-[#F6AC14] bg-[#F6AC141C]  p-8 xl:p-10 hover:ring-2 hover:ring-[#F6AC14] hover:scale-105 duration-100">
               <div class="flex items-center justify-between gap-x-4">
                 <h2
                   id="Course3"

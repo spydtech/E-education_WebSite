@@ -5,7 +5,7 @@ const FullStackWebDevelopmentTestimonials = () => {
     <>
       <div className="md:px-14 px-4 max-w-screen-2xl mx-auto">
         <div className="py-8">
-          <h3 className="mt-3 font-extrabold text-violet-800 sm:mt-5 sm:text-xl lg:text-lg xl:text-4xl font">
+          <h3 className="mt-3 font-extrabold text-[#0098F1] sm:mt-5 sm:text-xl lg:text-lg xl:text-4xl font">
             Why people choose E-education for their career
           </h3>
           <p className="text-base text-gray-600 text-md font mt-4 pl-2">

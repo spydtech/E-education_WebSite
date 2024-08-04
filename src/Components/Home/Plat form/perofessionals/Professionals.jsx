@@ -33,13 +33,13 @@ const Professionals = () => {
       title: "Python Programming",
       description: "Unlock the power of Python programming with E-education.",
       link: "/fullStack_WebDevelopment/fullStack-Python-Development",
-      icon: <FaPython className="text-[#f6ac14] w-[50px] h-[50px]" />,
+      icon: <FaPython className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "Java Programming",
       description: "Build a solid foundation in Java programming with an engaging course on E-education.",
       link: "/fullStack_WebDevelopment/fullStack-Java-Development",
-      icon: <FaJava className="text-[#f6ac14] w-[50px] h-[50px]" />,
+      icon: <FaJava className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "Data Science and Analytics",
@@ -51,61 +51,61 @@ const Professionals = () => {
       title: "Machine Learning",
       description: "Explore machine learning with hands-on Python & R training.",
       link: "/data_Science/machine-Learning",
-      icon: <GrVirtualMachine className="text-[#f6ac14] w-[50px] h-[50px]" />,
+      icon: <GrVirtualMachine className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "Data Visualization",
       description: "Master the art of data visualization with Python and Matplotlib in a course.",
       link: "/data_Science/data-visualization",
-      icon: <AiFillDatabase className="text-[#f6ac14] w-[50px] h-[50px]" />,
+      icon: <AiFillDatabase className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "Big Data",
       description: "Conquer big data challenges with specialized training on E-education.",
       link: "/data_Science/big-data-analysis",
-      icon: <DiDatabase className="text-[#f6ac14] w-[50px] h-[50px]" />,
+      icon: <DiDatabase className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "Cybersecurity",
       description: "Embark on a journey into cybersecurity fundamentals on E-education.",
       link: "/cyber_security",
-      icon: <SiCyberdefenders className="text-[#f6ac14] w-[50px] h-[50px]" />,
+      icon: <SiCyberdefenders className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "Ethical Hacking",
       description: "Learn the art of ethical hacking through comprehensive training on E-education.",
       link: "/ethical_Hacking",
-      icon: <GiGraduateCap className="text-[#f6ac14] w-[50px] h-[50px]" />,
+      icon: <GiGraduateCap className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "Network Security",
       description: "Master network security essentials with a comprehensive course on Pluralsight.",
       link: "/network_security",
-      icon: <MdOutlineNetworkCheck className="text-[#f6ac14] w-[50px] h-[50px]" />,
+      icon: <MdOutlineNetworkCheck className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "Cloud Computing",
       description: "Embark on a journey into cloud computing with E-education.",
       link: "/cloud-testing",
-      icon: <FaMixcloud className="text-[#f6ac14] w-[50px] h-[50px]" />,
+      icon: <FaMixcloud className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "IT and Networking",
       description: "Master IT and networking essentials with courses on E-education.",
       link: "/network_security/advance-network-secuity",
-      icon: <SiNintendonetwork className="text-[#f6ac14] w-[50px] h-[50px]" />,
+      icon: <SiNintendonetwork className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "Database Management",
       description: "Unlock the potential of database management with E-education.",
       link: "/database",
-      icon: <FaDatabase className="text-[#f6ac14] w-[50px] h-[50px]" />,
+      icon: <FaDatabase className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
     {
       title: "UI/UX Design",
       description: "Master the principles of UI/UX design with courses on E-education.",
       link: "/ui_ux_design",
-      icon: <FaComputer className="text-[#f6ac14] w-[50px] h-[50px]" />,
+      icon: <FaComputer className="text-[#f6ac14] w-[40px] h-[40px]" />,
     },
   ];
 
@@ -115,7 +115,7 @@ const Professionals = () => {
     
       <div className="bg-gray-50 px-4 sm:px-6 lg:px-8 w-screen">
         <div className="flex flex-col lg:flex-row lg:justify-between">
-          <div className="text-center lg:text-left my-4 lg:w-1/2">
+          <div className="text-center xl:p-12 lg:text-left my-4 lg:w-1/2">
           <div className="  xl:text-center pb-4">
             <p className="px-6 md:lg:xl:text-xl text-sm text-left">
               Elevate your career with our curated professional courses designed
@@ -130,13 +130,13 @@ const Professionals = () => {
             </p>
             </div>
 
-            <div className="flex justify-center lg:justify-start mb-6 px-4">
-              <button className="bg-[#0098f1] text-white md:lg:xl:text-2xl md:lg:xl:font-bold  md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg mr-4 font-medium text-sm ">Discover Course</button>
-              <button className="bg-[#0098f1] text-white md:lg:xl:text-2xl md:lg:xl:font-bold md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg font-medium text-sm">Explore Course</button>
+            <div className="flex justify-center lg:justify-center mb-6 px-4">
+              <button className="bg-[#0098f1] text-white md:lg:xl:text-2xl md:lg:xl:font-bold  md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg mr-4 w-48 h-16 font-medium text-sm ">Discover Course</button>
+              <button className="bg-[#0098f1] text-white md:lg:xl:text-2xl md:lg:xl:font-bold md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg w-48 h-16  font-medium text-sm">Explore Course</button>
             </div>
           </div>
         
-          <div className="flex justify-center  mb-6 lg:mb-0">
+          <div className="flex justify-center  mb-4 lg:mb-6">
             <img src={image1} alt="People learning" className="w-[480px] md:lg:xl:h-96 h-52  xl:w-full xl:h-full  shadow-md" />
           </div>
         </div>
@@ -150,19 +150,20 @@ const Professionals = () => {
             Our courses empower tech professionals with specialized knowledge and practical skills, ensuring they excel in their careers.
           </p>
           <p className="pb-8 md:lg:xl:text-xl text-sm"> Dive deep into emerging technologies and master industry-relevant tools.</p>
-          <button className="bg-[#0098F1] text-white text-sm font-medium md:lg:xl:text-2xl md:lg:xl:font-bold md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg mt-4">Find a class</button>
+          <button className="bg-[#0098F1] text-white text-sm font-medium md:lg:xl:text-2xl md:lg:xl:font-bold md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg w-48 h-16 mt-4">Find a class</button>
         </div>
 
-        <div className="text-center my-6">
+        <div className="text-center my-8">
           <h2 className="text-4xl pt-4 font-bold">
             <span className="text-[#f6ac14]">Highly</span>
             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent"> Demanded Skill Enhancement </span>
             <span className="text-[#0098f1]">Courses</span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 py-6">
+        <div className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-9 gap-4 justify-center pb-8 items-center">
           {courses.map((course, index) => (
-            <div key={index} className="bg-[#0098f1] text-white relative rounded-2xl shadow-md p-6 flex flex-col justify-between transition-transform duration-500 hover:scale-105 before:absolute before:w-1/5 before:h-1/5 before:bg-[#f6ac14] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px] after:absolute after:w-1/5 after:h-1/5 after:bg-[#f6ac14] after:bg-opacity-0 after:transition-all after:duration-500 after:bottom-0 after:left-0 after:rounded-tl-[100%] after:rounded-br-[15px] hover:after:w-full hover:after:h-full hover:after:rounded-[15px]">
+            <div key={index} className=" w-full sm:w-[317px] lg:w-[340px] mx-2 h-[360px] lg:h-[360px]  rounded-lx p-4 group  duration-600 ease-out transform bg-[#0098f1] text-white relative rounded-2xl shadow-md p-6 flex flex-col justify-between transition-transform duration-500 hover:scale-105 before:absolute before:w-1/5 before:h-1/5 before:bg-[#f6ac14] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px] after:absolute after:w-1/5 after:h-1/5 after:bg-[#f6ac14] after:bg-opacity-0 after:transition-all after:duration-500 after:bottom-0 after:left-0 after:rounded-tl-[100%] after:rounded-br-[15px] hover:after:w-full hover:after:h-full hover:after:rounded-[15px]">
               <div className="flex items-center mb-4 z-10">
                 <div className="border-2 bg-white bg-opacity-50 rounded-full w-[80px] h-[80px] flex items-center justify-center  ">{course.icon}</div>
                 <h3 className="text-lg lg:text-xl font-semibold ml-4">{course.title}</h3>
@@ -175,6 +176,7 @@ const Professionals = () => {
               </div>
             </div>
           ))}
+        </div>
         </div>
       </div>
     
