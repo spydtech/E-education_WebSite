@@ -73,14 +73,6 @@ const SecurityTestingNavigation = () => {
               </button>
             </li>
           ))}
-          {/* <li className="mt-2 sm:mt-0">
-            <button
-              className="text-black text-2xl hover:text-green-700 transition duration-300"
-              onClick={() => handleNextSection("next")}
-            >
-              <TbPlayerTrackNextFilled />
-            </button>
-          </li> */}
         </ul>
       </nav>
       <div className="">
