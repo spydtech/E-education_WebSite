@@ -29,41 +29,31 @@ function BlockChainSyllabus() {
   ];
 
   return (
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 bg-gradient-to-br to-[#0a0908] from-[#272640]">
-        <div className="flex items-center justify-center xl:lg:md:w-auto">
-          <div className="grid grid-cols-1 text-start px-20">
-            <div>
-              <p className="text-[#ff7000] text-xl font-medium">Syllabus</p>
-            </div>
-            <div className="py-5">
-              <p className="text-6xl font text-white">
-                Explore
-                <p className="text-[#ff7000] inline pl-2">Blockchain</p>
-              </p>
-            </div>
-            <div>
-              <p className="text-xl text-gray-300">
-                Dive into the world of blockchain with our comprehensive
-                syllabus covering the fundamental concepts, applications, and
-                future trends in blockchain technology.
-              </p>
-            </div>
+    <div className="py-8">
+      <div className="flex flex-col lg:flex-row items-center justify-between px-4">
+        <div className="lg:w-1/2 w-full mb-8 lg:mb-0 px-10">
+          <div className="text-start">
+            <h2 className="text-2xl text-[#f6ac14] font-bold mb-4">
+              Discover What You Will Learn
+            </h2>
+            <p className="text-lg text-gray-500">
+              Dive into the world of blockchain with our comprehensive syllabus covering the fundamental concepts, applications, and future trends in blockchain technology.
+            </p>
           </div>
         </div>
-        <div className="space-y-5 flex justify-center px-10 p-4 my-2 mx-2 mb-2 border-2 border-opacity-15 rounded overflow-hidden bg-gray-200 shadow-2xl">
+        <div className="lg:w-[700px] w-full bg-[#0098f1] p-6 pl-20 rounded-lg">
           <div className="container mx-auto">
             {data.map((category, index) => (
               <div key={index} className="mb-6">
-                <h2 className="text-4xl font-semibold mb-2 text-[#ff7000]">
+                <h3 className="text-3xl font-semibold mb-2 text-[#ffffff]">
                   {category.heading}
-                </h2>
-                <h3 className="text-2xl font-medium mb-2">
-                  {category.subheading}
                 </h3>
-                <ul className="list-disc ml-6 text-[16px]">
+                <h4 className="text-xl md:text-2xl font-medium mb-2 text-[#ffffff]">
+                  {category.subheading}
+                </h4>
+                <ul className="list-disc ml-4 text-base md:text-lg text-[#ffffff] text-opacity-80">
                   {category.items.map((item, idx) => (
-                    <li key={idx} className="text-gray-700">
+                    <li key={idx} className="mb-1">
                       {item}
                     </li>
                   ))}
@@ -73,7 +63,7 @@ function BlockChainSyllabus() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

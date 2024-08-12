@@ -1,69 +1,43 @@
-// import React from "react";
-
 import React, { useState } from "react";
-// import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import JavaPic from "../../../../../src/assetss/Basic_Courses/java.png";
 
 const BasicJavaHero = () => {
-  const [courseName] = useState("Basic Java"); // Placeholder for course name
+  const [courseName] = useState("Basic Java");
   const [coursePrice] = useState(14999);
-
   const navigate = useNavigate();
+
   const handleEnroll = () => {
-    // Navigate to the card details page with course details as parameters
     navigate("/course-details", { state: { courseName, coursePrice } });
   };
 
   return (
     <>
-      {/* First Part */}
-
-      <div>
-        <img
-          src="https://bairesdev.mo.cloudinary.net/blog/2022/12/ordenador-con-elementos-de-cC3B3digo-de-programa-en-la-pantalla-y-la-inscripciC3B3n-java-y-un-1.jpg_s1024x1024wisk20cLRurCA2qFxY0HFKYDh_5Cjgu8mCuo9sbGxPiIB6_x38-1.jpg?tx=w_1920,q_auto"
-          className="w-full object-cover md:h-[500px]"
-        />
-      </div>
-
-      <div
-        className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
-        data-aos="fade-right"
-        data-aos-duration={800}
-      >
-        <div className="pr-2 md:mb-14 py-14 font md:py-0">
-          <h1 className="text-3xl font-semibold text-[#d90429] xl:text-5xl lg:text-3xl">
-            <span className="block w-full">
-              Elevate Your Java Programming Skills
-            </span>{" "}
-            for Unmatched Performance!
-          </h1>
-          <p className="py-4 text-lg text-gray-500 2xl:py-8 md:py-6 2xl:pr-5">
-            Empower yourself with advanced Java programming techniques to
-            optimize performance and reliability for your projects...
+      <div className="grid grid-cols-1 lg:grid-cols-2  w-10/12 mx-auto overflow-x-hidden md:py-14 lg:py-24 xl:py-14 ">
+        <div className="order-2 lg:order-1 w-auto h-auto pr-10 md:mb-14 flex flex-col justify-start items-start md:justify-center md:items-center  font md:py-0 mx-auto">
+          <p className="text-lg text-start text-gray-500 md:py-6 leading-10">
+            Empower yourself with advanced Java programming techniques to optimize performance and reliability for your projects. Our comprehensive course will guide you from the basics to advanced concepts, ensuring you're ready to tackle real-world challenges.
           </p>
-
-          <div className="mt-4">
-            <a
+          <div className="mt-4 md:w-[250px] md:h-[70px] w-auto h-auto lg:w-[160px] lg:h-[60px]  ">
+            <button
               onClick={handleEnroll}
-              className="px-5 py-3 text-lg tracking-wider text-white bg-red-500 rounded-lg md:px-8 hover:bg-red-700 group"
+              className="px-5 w-auto font-sans h-full py-3 text-[26px] font-medium text-white bg-[#0098f1] rounded-[22px] md:px-6"
             >
-              <span>Enroll Now</span>{" "}
-            </a>
+              Enroll Now
+            </button>
           </div>
         </div>
-        <div className="pb-10 overflow-hidden md:p-10 lg:p-0 sm:pb-0">
+        <div className="order-1 lg:order-2 pb-10 mx-auto w-auto h-auto overflow-hidden md:p-10 lg:p-0 sm:pb-0  md:mb-10">
           <img
             id="heroImg1"
-            className="transition-all duration-300 ease-in-out hover:scale-105 lg:w-full sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0"
-            src="https://img.freepik.com/free-vector/app-development-concept-with-programming-languages_23-2148688949.jpg?t=st=1716970373~exp=1716973973~hmac=0322411a56d76b8a30c1e30198670505b94db1f057df973f4c1f06bb31c8519c&w=740"
+            className=" rounded-full object-cover w-[250px] h-[250px] sm:w-[375px] sm:h-[375px] md:w-[400px] md:h-[400px] lg:w-[400px] lg:h-[400px] xl:w-[400px] xl:h-[400px] 2xl:w-[600px] 2xl:h-[600px] mx-auto"
+            src="https://ioflood.com/blog/wp-content/uploads/2023/10/Streamlined-display-of-Java-programming-keywords.jpg"
+            // src="https://img.freepik.com/free-vector/programmers-concept-with-flat-design_23-2147851367.jpg?t=st=1722598533~exp=1722602133~hmac=28024f166c07b7913d73796e469324d89866d11795997aaa55e8ef7a319e3da4&w=740"
+            // src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/292544620/original/01259a62d10be914d5fe3b518d2e29a67b851883/api-integration-with-java.png"
             alt="Java Programming hero image"
-            width={500}
-            height={488}
           />
         </div>
       </div>
-
-      {/* Second Part */}
     </>
   );
 };

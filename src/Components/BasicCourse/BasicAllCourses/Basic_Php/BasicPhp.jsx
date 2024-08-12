@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../../Navbar";
-import Footer from "../../../Home/footer/Footer";
 import BasicPhpHero from "./BasicPhpHero";
 import BasicPhpCard from "./BasicPhpCard";
 import BasicPhpNavigation from "./BasicPhpAbout/BasicPhpNavigation";
 import BasicPhpFoot from "./BasicPhpFoot";
+import FooterPart from "../../../Home/footer/Footer";
+
 const BasicPhp = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />
       <BasicPhpHero />
       <BasicPhpCard />
       <BasicPhpNavigation />
-      <BasicPhpFoot></BasicPhpFoot>
-      <Footer />
+      <BasicPhpFoot />
+      <FooterPart />
     </>
   );
 };

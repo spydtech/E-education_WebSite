@@ -2,19 +2,35 @@ import React, { useState } from "react";
 
 function BlockChainIntroduction() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const Slide = ({ heading, items }) => {
     return (
-      <div className="w-full flex-shrink-0 px-4 py-8">
-        <div className="h-[400px] flex justify-center">
+      <div className="w-full flex-shrink-0 px-2 py-8">
+        <div className="h-auto flex flex-col justify-center">
           <div>
-            <h2 className="text-3xl font-medium mb-4 text-[#ff7000] font">
+            <h2 className="text-2xl lg:text-3xl font-medium mb-2 text-white font-sans">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-xl font">
+            <ul className="list-disc list-inside text-lg lg:text-xl pl-6">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
+          </div>
+          <div className="flex justify-between mt-8 pt-10 lg:mt-0">
+            <button
+              onClick={goToPreviousSlide}
+              className="hover:text-pink-700 text-white font-bold px-4 rounded"
+            >
+              Previous
+            </button>
+            <div className="text-white">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+            <button
+              onClick={goToNextSlide}
+              className="hover:text-pink-700 text-white font-bold px-4 rounded"
+            >
+              Next
+            </button>
           </div>
         </div>
       </div>
@@ -78,58 +94,43 @@ function BlockChainIntroduction() {
   };
 
   return (
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 bg-gradient-to-br to-[#0a0908] from-[#272640]">
-        <div className="flex items-center justify-center xl:lg:md:w-auto">
-          <div className="grid grid-cols-1 text-start px-10 font">
-            <div>
-              <p className="text-[#ff7000] text-xl font-medium">Introduction</p>
-            </div>
-            <div className="py-5">
-              <p className="text-6xl font text-white">
-                Discover
-                <p className="text-[#ff7000] inline pl-2">Blockchain</p>
-              </p>
-            </div>
-            <div>
-              <p className="text-xl text-gray-300">
-                Learn about the fundamentals of blockchain technology, its key
-                concepts, applications, and challenges.
-              </p>
-            </div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[468px] bg-white mb-16">
+      <div className="flex items-center justify-center lg:pr-10">
+        <div className="text-start px-4 lg:px-10">
+          <div>
+            <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
+              Introduction
+            </p>
+          </div>
+          <div className="py-5">
+            <p className="text-xl lg:text-5xl font">
+              Discover
+              <span className="text-[#f6ac14] inline pl-2">Blockchain</span>
+            </p>
+          </div>
+          <div>
+            <p className="text-lg lg:text-xl text-gray-500">
+              Learn about the fundamentals of blockchain technology, its key
+              concepts, applications, and challenges.
+            </p>
           </div>
         </div>
-        <div className="px-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-            <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
-              <div className="relative w-full overflow-hidden">
-                <div className="flex">
-                  <Slide
-                    heading={slidesData[currentSlide].heading}
-                    items={slidesData[currentSlide].items}
-                  />
-                </div>
-              </div>
-              <div className="flex justify-between">
-                <button
-                  onClick={goToPreviousSlide}
-                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
-                >
-                  Previous
-                </button>
-                <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-                <button
-                  onClick={goToNextSlide}
-                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
-                >
-                  Next
-                </button>
+      </div>
+      <div className="h-auto lg:h-[468px] flex justify-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-4 lg:px-10 mt-10 lg:mt-0">
+          <div className="bg-[#0098f1] w-full lg:w-auto h-auto lg:h-auto p-5 mt-4 mb-2 shadow-xl sm:rounded-lg">
+            <div className="relative w-full">
+              <div className="flex text-white text-opacity-80">
+                <Slide
+                  heading={slidesData[currentSlide].heading}
+                  items={slidesData[currentSlide].items}
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -23,53 +23,43 @@ function CloudComputingSyllabus() {
   ];
 
   return (
-    <>
-      <div className="grid grid-cols-1 md:lg:grid-cols-2 gap-x-6 bg-gradient-to-br from-[#04e761] to-[#00916e]">
-        <div className="flex items-center justify-center xl:w-auto">
-          <div className="grid grid-cols-1 text-start px-20">
-            <div>
-              <p className="text-[#072ac8] text-xl font-medium">Syllabus</p>
-            </div>
-            <div className="py-5">
-              <p className="text-6xl font">
-                Discover What You
-                <span className="text-[#072ac8] inline pl-2">Will Learn</span>
-              </p>
-            </div>
-            <div>
-              <p className="text-xl text-gray-300">
-                Top-notch and up-to-date curriculum taught by renowned
-                professors and industry experts using videos, case studies,
-                hands-on projects, and live sessions.
-              </p>
-            </div>
+    <div className="py-8">
+      <div className="flex flex-col lg:flex-row items-center justify-between px-4">
+        <div className="lg:w-1/2 w-full mb-8 lg:mb-0 px-10">
+          <div className="text-start">
+            <h2 className="text-2xl text-[#f6ac14] font-bold mb-4">
+              Discover What You Will Learn
+            </h2>
+            <p className="text-lg text-gray-500">
+              Top-notch and up-to-date curriculum taught by renowned professors
+              and industry experts using videos, case studies, hands-on projects,
+              and live sessions.
+            </p>
           </div>
         </div>
-        <div className="px-10">
-          <div className="space-y-5 flex justify-center p-4 my-2 mx-2 mb-2 border-2 border-opacity-15 rounded overflow-hidden bg-gray-200 shadow-2xl">
-            <div className="container mx-auto">
-              {data.map((category, index) => (
-                <div key={index} className="mb-6">
-                  <h2 className="text-4xl font-semibold mb-2 text-[#072ac8]">
-                    {category.heading}
-                  </h2>
-                  <h3 className="text-2xl font-medium mb-2">
-                    {category.subheading}
-                  </h3>
-                  <ul className="list-disc ml-6 text-[16px]">
-                    {category.items.map((item, idx) => (
-                      <li key={idx} className="text-gray-700">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+        <div className="lg:w-[700px] w-full bg-[#0098f1] p-6 pl-20 rounded-lg">
+          <div className="container mx-auto">
+            {data.map((category, index) => (
+              <div key={index} className="mb-6">
+                <h3 className="text-3xl font-semibold mb-2 text-[#ffffff]">
+                  {category.heading}
+                </h3>
+                <h4 className="text-xl md:text-2xl font-medium mb-2 text-[#ffffff]">
+                  {category.subheading}
+                </h4>
+                <ul className="list-disc ml-4 text-base md:text-lg text-[#ffffff] text-opacity-80">
+                  {category.items.map((item, idx) => (
+                    <li key={idx} className="mb-1">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
