@@ -1,5 +1,5 @@
 import React from "react";
-import CommunityImg from "../../../../../../../../assetss/fullstackwebdev/community.png";
+import CommunityImg from "../../../../../../assetss/fullstackwebdev/community.png";
 
 const Community = () => {
   return (
@@ -11,7 +11,7 @@ const Community = () => {
         }}
       ></div>
       <div className="relative text-center z-10 flex flex-col items-center justify-center min-h-[300px] md:min-h-[500px] lg:min-h-[800px]">
-        <h1 className="sm:text-xl text-xl md:text-4xl lg:text-5xl font-bold text-[#0098F1] mb-4 pb-6 pt-4">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0098F1] mb-4 pb-6 pt-4">
           Join Our Thriving Community
         </h1>
         <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#0098F1] py-6 mb-8">
