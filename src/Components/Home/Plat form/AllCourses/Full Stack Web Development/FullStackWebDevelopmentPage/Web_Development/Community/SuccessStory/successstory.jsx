@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import successImage from "../../../../../../../assets/success.png";
-import company from "../../../../../../../assets/company.png";
-import webcertificate from "../../../../../../../assets/webcertificate.png";
+
+import successImage from "../../../../../../../../../assets/success.png"; // Adjusted path
+import company from "../../../../../../../../../assets/company.png"; // Adjusted path
+import webcertificate from "../../../../../../../../../assets/Certfication.png"
 import { ImQuotesLeft } from "react-icons/im";
 
 function SuccessStory() {
@@ -18,12 +19,12 @@ function SuccessStory() {
   }, []);
 
   return (
-    <div className="relative h-screen flex flex-col justify-center items-center bg-white mt-8">
+    <div className="relative h-screen flex flex-col justify-center items-center sm:py-10 bg-white mt-8">
       {/* Background Image */}
       <div
         className="relative bg-cover bg-center w-96 h-96 mb-4 mt-4 sm:w-80 sm:h-80 md:w-96 md:h-96"
         style={{
-          backgroundImage: `url(https://media.istockphoto.com/id/1301397300/photo/portrait-of-young-woman-stock-photo.jpg?s=612x612&w=0&k=20&c=Xvgo-k58_woBTuQaRNZ4JXP2SQsw_RSbrlSbt7XbQlU=)`,
+          backgroundImage: `url(https://media.istockphoto.com/id/1473711199/photo/face-portrait-student-and-man-in-university-ready-for-back-to-school-learning-goals-or.jpg?s=612x612&w=0&k=20&c=Xrwp5ePvm6RjixgAjJo-OAw9oXkLt_HcmT3bdlLZUdw=)`,
           backgroundPosition: "top",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -40,7 +41,7 @@ function SuccessStory() {
                 transform: "translateX(-50%)",
                 display: "flex",
                 alignItems: "center",
-                backgroundColor: "white",
+                backgroundColor: "#0098F1",
                 padding: "10px",
                 borderRadius: "8px",
                 zIndex: 1,
@@ -56,7 +57,7 @@ function SuccessStory() {
                   width: "30px",
                 }}
               />
-              <p style={{ marginLeft: "10px", fontSize: "10px" }}>
+              <p style={{ marginLeft: "10px", fontSize: "10px", color:"white" }}>
                 finished
                 <br /> kotlin track
               </p>
@@ -70,7 +71,7 @@ function SuccessStory() {
                 left: "-50px",
                 display: "flex",
                 alignItems: "center",
-                backgroundColor: "white",
+                backgroundColor: "#0098F1",
                 padding: "10px",
                 borderRadius: "8px",
                 zIndex: 1,
@@ -86,8 +87,8 @@ function SuccessStory() {
                   width: "30px",
                 }}
               />
-              <p style={{ marginLeft: "0px", fontSize: "10px" }}>
-                MEAN stack developer
+              <p style={{ marginLeft: "0px", fontSize: "10px", color:"white" }}>
+                full stack web developer
                 <br /> certificate
               </p>
             </div>
@@ -120,32 +121,34 @@ function SuccessStory() {
               ></p>
             </div>
           </>
-        )}
+        )} 
+
       </div>
 
       {/* Content */}
-      <div className="text-center mb-8 bg-white rounded-lg p-8 shadow-lg border border-gray-200">
+      <div className="text-center mb-8  bg-[#0098F1] bg-opacity-10 rounded-lg p-8 shadow-lg border border-gray-200">
         <h1
-          className="text-4xl  pb-4"
-          style={{ fontStyle: "italic", color: "black", fontSize: "30px" }}
+          className="text-4xl pb-4"
+          style={{ fontStyle: "italic", color: "#F6AC14", fontSize: "30px" }}
         >
           The Success Story of{" "}
-          <span className="text-blue-600" style={{ fontFamily: "Arial" }}>
-            Emily
+          <span className="text-[#0098F1]" style={{ fontFamily: "Arial" }}>
+            Alex
           </span>
         </h1>
 
-        <p className="text-black mb-4 mx-4 text-justify">
-          Emily embarked on her journey with a clear vision and unwavering
+        <p className="text-[#0098F1] mb-4 mx-4 text-justify">
+          Alex embarked on their journey with a clear vision and unyielding
           determination.
-          <br /> Through perseverance and resilience, she overcame every
+          <br /> Despite facing countless hurdles, they remained resolute.
+          <br /> Through persistent effort and resilience, they surmounted every
           obstacle.
-          <br /> Emily's relentless pursuit of her goals serves as a powerful
-          inspiration to us all.
-          <br /> She began her quest with a dream and the courage to pursue it.
-          <br /> Despite facing adversity, she never wavered in her commitment.
+          <br /> Alex's unwavering commitment inspires us all to pursue our
+          aspirations.
+          <br /> They commenced their adventure with a dream and fierce resolve.
+          <br /> Confronted by adversity, they stood firm and persevered.
         </p>
-        <button className="bg-blue-600 text-white py-2 px-4 rounded-md">
+        <button className="bg-[#0098F1] hover:bg-[#F6AC14] text-white py-2 px-4 rounded-md">
           Start your success story
         </button>
       </div>

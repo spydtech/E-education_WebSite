@@ -43,7 +43,7 @@ const CybersecurityHero = () => {
           <img
             id="heroImg1"
             className="rounded-full lg:w-full  sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0"
-            src={student}
+            src="https://img.freepik.com/free-vector/gradient-ssl-illustration_23-2149251020.jpg?t=st=1722951201~exp=1722954801~hmac=d10890eabb5b76994fef715c6c3d76b48ebe90e8622337c91e67e158a8488e3c&w=740"
             alt="Data Science Introduction "
             width={500}
             height={488}

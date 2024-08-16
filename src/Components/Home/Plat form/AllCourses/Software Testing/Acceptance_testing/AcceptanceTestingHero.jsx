@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import student from "../../../../../../assetss/Home/intro_DataScience/student.jpg";
+// import student from "../../../../../../assetss/Home/intro_DataScience/student.jpg";
 const AcceptanceTestingHero = () => {
   const [courseName] = useState("Acceptance Testing"); // Placeholder for course name
   const [coursePrice] = useState(14999);
@@ -16,7 +16,7 @@ const AcceptanceTestingHero = () => {
   return (
     <>
     <div className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5">
-      <div className="w-auto h-auto pr-10 md:mb-14 py-14 font md:py-0 mx-auto ">
+      <div className="w-auto h-auto pr-10 md:mb-14 text-[#0098f1] py-14 text-4xl font md:py-0 mx-auto ">
       <h1>  Achieve Seamless Acceptance Testing    for Your Software Projects!
             </h1>
         <p className="py-4 md:lg:xl:2xl:text-[24px] text-[20px] text-[#101828]  md:py-6  leading-10">

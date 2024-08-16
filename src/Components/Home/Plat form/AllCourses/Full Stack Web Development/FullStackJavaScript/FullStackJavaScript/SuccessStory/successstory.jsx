@@ -161,125 +161,23 @@ function SuccessStory() {
   }, []);
 
   return (
-    <div className="relative h-screen flex flex-col justify-center items-center bg-white mt-8">
+    <div className="relative  flex flex-col justify-center items-center bg-white ">
       {/* Background Image */}
-      <div
-        className="relative bg-cover bg-center w-96 h-96 mb-4 mt-4 sm:w-80 sm:h-80 md:w-96 md:h-96"
-        style={{
-          backgroundImage: `url(https://media.istockphoto.com/id/1322844568/photo/education-concept-positive-young-man-with-backpack-headphones-and-notebooks-posing-on-orange.jpg?s=612x612&w=0&k=20&c=5pSZkkzIGQYBNlkSh95lJdC75ZixcziIEMAEacHpWmM=)`,
-          backgroundPosition: "top",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        {isLargeScreen && (
-          <>
-            {/* Company Background Strip */}
-            <div
-              style={{
-                position: "absolute",
-                top: "10px",
-                marginLeft: "400px",
-                transform: "translateX(-50%)",
-                display: "flex",
-                alignItems: "center",
-                backgroundColor: "white",
-                padding: "10px",
-                borderRadius: "8px",
-                zIndex: 1,
-                height: "40px",
-                width: "120px",
-              }}
-            >
-              <img
-                src={company}
-                alt="company"
-                style={{
-                  height: "30px",
-                  width: "30px",
-                }}
-              />
-              <p style={{ marginLeft: "10px", fontSize: "10px" }}>
-                finished
-                <br /> kotlin track
-              </p>
-            </div>
-
-            {/* Web Developer Certificate */}
-            <div
-              style={{
-                position: "absolute",
-                top: "60px",
-                left: "-50px",
-                display: "flex",
-                alignItems: "center",
-                backgroundColor: "white",
-                padding: "10px",
-                borderRadius: "8px",
-                zIndex: 1,
-                height: "40px",
-                width: "160px",
-              }}
-            >
-              <img
-                src={webcertificate}
-                alt="webdeveloper"
-                style={{
-                  height: "30px",
-                  width: "30px",
-                }}
-              />
-              <p style={{ marginLeft: "0px", fontSize: "10px" }}>
-                full stack javascript developer
-                <br /> certificate
-              </p>
-            </div>
-
-            {/* ImQuotesLeft Strip */}
-            <div
-              style={{
-                position: "absolute",
-                top: "10px",
-                left: "10px",
-                display: "flex",
-                alignItems: "center",
-                backgroundColor: "white",
-                padding: "10px",
-                borderRadius: "8px",
-                zIndex: 1,
-                height: "40px",
-                width: "60px",
-              }}
-            >
-              <ImQuotesLeft
-                style={{
-                  color: "skyblue",
-                  fontSize: "20px",
-                  marginBottom: "10px",
-                }}
-              />
-              <p
-                style={{ marginLeft: "10px", color: "white", fontSize: "14px" }}
-              ></p>
-            </div>
-          </>
-        )}
-      </div>
-
+    
       {/* Content */}
       <div className="text-center mb-8 bg-white rounded-lg p-8 shadow-lg border border-gray-200">
         <h1
           className="text-4xl  pb-4"
-          style={{ fontStyle: "italic", color: "black", fontSize: "30px" }}
+          style={{ fontStyle: "italic", color: "#F6AC14", fontSize: "30px" }}
         >
           The Success Story of{" "}
-          <span className="text-blue-600" style={{ fontFamily: "Arial" }}>
+          <span className="text-[#0098F1] " style={{ fontFamily: "Arial" }}>
             James
           </span>
         </h1>
 
-        <p className="text-black mb-4 mx-4 text-justify">
-          James embarked on his journey with a clear vision and indomitable
+        <p className="text-[#0098F1]  mb-4 mx-4 text-lg text-justify">
+          {"   "} James embarked on his journey with a clear vision and indomitable
           determination.
           <br /> Despite facing myriad challenges, he remained unwavering.
           <br /> Through relentless perseverance and resilience, he overcame
@@ -289,7 +187,7 @@ function SuccessStory() {
           <br /> He commenced his odyssey with a dream and unwavering resolve.
           <br /> Confronted by adversity, he stood firm and persisted.
         </p>
-        <button className="bg-blue-600 text-white py-2 px-4 rounded-md">
+        <button className="bg-[#0098F1]  text-white py-2 px-4 rounded-md">
           Start your success story
         </button>
       </div>
@@ -298,3 +196,108 @@ function SuccessStory() {
 }
 
 export default SuccessStory;
+
+
+// <div
+// className="relative bg-cover bg-center w-96 h-96 mb-4 mt-4 sm:w-80 sm:h-80 md:w-96 md:h-96"
+// style={{
+//   backgroundImage: `url(https://media.istockphoto.com/id/1322844568/photo/education-concept-positive-young-man-with-backpack-headphones-and-notebooks-posing-on-orange.jpg?s=612x612&w=0&k=20&c=5pSZkkzIGQYBNlkSh95lJdC75ZixcziIEMAEacHpWmM=)`,
+//   backgroundPosition: "top",
+//   backgroundSize: "cover",
+//   backgroundRepeat: "no-repeat",
+// }}
+// >
+// {isLargeScreen && (
+//   <>
+//     {/* Company Background Strip */}
+//     <div
+//       style={{
+//         position: "absolute",
+//         top: "10px",
+//         marginLeft: "400px",
+//         transform: "translateX(-50%)",
+//         display: "flex",
+//         alignItems: "center",
+//         backgroundColor: "white",
+//         padding: "10px",
+//         borderRadius: "8px",
+//         zIndex: 1,
+//         height: "40px",
+//         width: "120px",
+//       }}
+//     >
+//       <img
+//         src={company}
+//         alt="company"
+//         style={{
+//           height: "30px",
+//           width: "30px",
+//         }}
+//       />
+//       <p style={{ marginLeft: "10px", fontSize: "10px" }}>
+//         finished
+//         <br /> kotlin track
+//       </p>
+//     </div>
+
+//     {/* Web Developer Certificate */}
+//     <div
+//       style={{
+//         position: "absolute",
+//         top: "60px",
+//         left: "-50px",
+//         display: "flex",
+//         alignItems: "center",
+//         backgroundColor: "white",
+//         padding: "10px",
+//         borderRadius: "8px",
+//         zIndex: 1,
+//         height: "40px",
+//         width: "160px",
+//       }}
+//     >
+//       <img
+//         src={webcertificate}
+//         alt="webdeveloper"
+//         style={{
+//           height: "30px",
+//           width: "30px",
+//         }}
+//       />
+//       <p style={{ marginLeft: "0px", fontSize: "10px" }}>
+//         full stack javascript developer
+//         <br /> certificate
+//       </p>
+//     </div>
+
+//     {/* ImQuotesLeft Strip */}
+//     <div
+//       style={{
+//         position: "absolute",
+//         top: "10px",
+//         left: "10px",
+//         display: "flex",
+//         alignItems: "center",
+//         backgroundColor: "white",
+//         padding: "10px",
+//         borderRadius: "8px",
+//         zIndex: 1,
+//         height: "40px",
+//         width: "60px",
+//       }}
+//     >
+//       <ImQuotesLeft
+//         style={{
+//           color: "skyblue",
+//           fontSize: "20px",
+//           marginBottom: "10px",
+//         }}
+//       />
+//       <p
+//         style={{ marginLeft: "10px", color: "white", fontSize: "14px" }}
+//       ></p>
+//     </div>
+//   </>
+// )}
+// </div>
+

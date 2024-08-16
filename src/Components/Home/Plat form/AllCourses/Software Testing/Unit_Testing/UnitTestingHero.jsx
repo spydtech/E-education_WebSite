@@ -39,8 +39,8 @@ const UnitTestingHero = () => {
         <div className="pb-10 lg:md:w-[400px] lg:md:h-[380px] mx-auto w-auto h-auto  overflow-hidden md:p-10 lg:p-0 sm:pb-0">
           <img
             id="heroImg1"
-            className="rounded-full lg:w-full sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0"
-            src={student}
+            className="rounded-full lg:w-full border-4 border-[#0098f1] sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0"
+            src="https://img.freepik.com/free-vector/multi-device-targeting-concept-illustration_114360-7585.jpg?t=st=1722952670~exp=1722956270~hmac=af27d05af0ba8acf7c23fd9a54b9479fd02cae9c3ec5aebc3a0789c4ecb3266f&w=740"
             alt="Data Science Introduction "
             width={500}
             height={488}
