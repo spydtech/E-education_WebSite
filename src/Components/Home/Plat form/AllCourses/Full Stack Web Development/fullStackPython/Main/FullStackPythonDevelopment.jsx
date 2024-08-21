@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 
 import { useNavigate } from "react-router-dom";
-import Hero from './../../../../../../../assetss/fullstackwebdev/hero.png'
+import Hero from './../../../../../../../assetss/fullstackwebdev/python/python1.avif'
 // import Navbar from "../../../../Navbar";
 import Navbar from "../../../../../../Navbar";
 import Footer from "../../../../../footer/Footer";
@@ -31,9 +31,9 @@ const FullStackPythonDevelopment = () => {
     <>
       <Navbar />
       <div className="pl-4">
-      <div className="w-full flex flex-col p-6 lg:flex-row  items-center justify-center gap-4 md:px-8 lg:px-16 xl:px-32 py-8 ">
-        <div className="md:w-3/4 text-center xl:2xl:text-left">
-          <h3 className=" sm:text-xl text-xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900">
+      <div className="w-full flex flex-col mb-8  p-6 lg:flex-row  items-center md:justify-center gap-4 md:px-8 lg:px-16 xl:px-32 ">
+        <div className="md:w-3/4 text-center lg:text-left">
+          <h3 className=" text-xl md:text-3xl lg:text-4xl font-bold leading-tight sm:leading-none tracking-tight text-gray-900">
           Master {" "}
             <span className="text-[#F6AC14]"> Full Stack </span> Python Development
           </h3>
@@ -44,14 +44,9 @@ const FullStackPythonDevelopment = () => {
             proficiency in building robust, scalable applications and position
             yourself for success as a full stack Python developer.
           </p>
-          <p className="mt-4 text-base md:text-lg lg:text-xl text-gray-700">
-          Our courses empower you to dive deep into full stack Python
-            technologies. Develop practical skills and stand out in a
-            competitive job market. Start your full stack Python journey today.
-          </p>
           <button
             onClick={handleEnroll}
-            className="mt-6 bg-[#0098F1] text-white  md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[280px] xl:lg:h-[80px] md:text-xl"
+            className="mt-6 bg-[#0098F1] text-white  md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[180px] xl:lg:h-[60px] md:text-xl"
           >
             Enroll Now
           </button>
@@ -59,7 +54,7 @@ const FullStackPythonDevelopment = () => {
         </div>
         <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
           <img
-            src={Hero}
+          src={Hero}
             alt="Hero"
             className="w-full max-w-md md:max-w-lg lg:max-w-xl"
           />

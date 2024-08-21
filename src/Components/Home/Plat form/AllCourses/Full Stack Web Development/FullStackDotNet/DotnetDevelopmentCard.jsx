@@ -1,16 +1,16 @@
 import React from "react";
-import Nextgen from "../../../../../../assetss/fullstackwebdev/nextGen.png";
+import Nextgen from "../../../../../../assetss/fullstackwebdev/dotnet/dotnet2.png";
 
 const DotnetDevelopmentCard = () => {
   return (
     <>
-     <div className="max-w-screen-xl px-4 mx-auto mt-8 sm:mt-12 sm:px-6 md:mt-16">
+     <div className="max-w-screen  px-4 mx-auto  sm:px-6 mb-12">
         <div className="  lg:grid lg:grid-cols-12 lg:gap-8">
-          <div className="relative mt-12 sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+          <div className="relative mt-8 pl-8 sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
             <img src={Nextgen} alt="" className="" />
           </div>
-          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left pl-4 mb-8">
-            <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base font">
+          <div className="sm:text-center pt-6 md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left pl-4 mb-8">
+            <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base xl:text-base font">
             .Net Full Stack  Development
             </div>
             <h2 className="mt-1   leading-10 tracking-tight text-gray-900 sm:leading-none sm:text-xl text-xl md:text-4xl lg:text-5xl font-bold font">

@@ -59,7 +59,7 @@ const Question = ({ title, info }) => {
         <h4
           onClick={() => setExpanded(!expanded)}
           className={`text-lg font-semibold cursor-pointer ${
-            expanded ? "text-[#F6AC14]" : "text-[#0098F1]"
+            expanded ? "text-[#0098F1]" : "text-[#0098F1]"
           }`}
         >
           {title}
@@ -72,7 +72,7 @@ const Question = ({ title, info }) => {
           )}
         </button>
       </header>
-      {expanded && <p className="mt-4 text-[#F6AC14]">{info}</p>}
+      {expanded && <p className="mt-4 text-[#0098F1]">{info}</p>}
     </article>
   );
 };
@@ -81,13 +81,13 @@ const FullStackWebDev = () => {
   const [questions, setQuestions] = useState(data);
   return (
     <main className="bg-white min-h-screen flex items-center justify-center">
-      <div className="bg-white p-4 rounded w-full max-w-4xl">
-        <h3 className="sm:text-xl text-xl pb-6 md:text-4xl lg:text-4xl text-[#0098F1] text-center">
-          Courses We{" "}
+      <div className="bg-white p-4 rounded w-full max-w-4xl  xl:max-w-5xl">
+        <h3 className=" text-xl pb-6 md:text-3xl lg:text-4xl text-[#0098F1] font-bold text-center">
+          Courses We Are Covered in{" "}
           <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
-            Are Covered in
+           this Course
           </span>{" "}
-          <span className="text-[#F6AC14]">this Course</span>
+          <span className="text-[#F6AC14]"></span>
         </h3>
         <section className="space-y-4 text-[#0098F1]">
           {questions.map((question) => (
