@@ -260,19 +260,25 @@
 // export default FullStackWebDevelopmentArray;
 
 import React, { useEffect, useState } from "react";
-import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
-import cardImage from "../../../../../assets/cardImage.png";
-import { Link } from "react-router-dom";
+import cardImage from "../../../../../assetss/fullstackwebdev/webdev/nextGen.png";
 import Navbar from "../../../../Navbar";
 import Footer from "../../../footer/Footer";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
+import java from "../../../../../assetss/fullstackwebdev/java/java1.avif";
+import  javascript  from "../../../../../assetss/fullstackwebdev/javaScript/javascript1.avif";
+import mern   from "../../../../../assetss/fullstackwebdev/Mernstack/mern2.avif"
+import  dotnet  from "../../../../../assetss/fullstackwebdev/dotnet/dotnet1.jpg";
+import devops   from "../../../../../assetss/fullstackwebdev/devops/devops2.avif";
+import  python  from "../../../../../assetss/fullstackwebdev/python/python1.avif";
+// import { IoIosSearch } from "react-icons/io";
+
 
 const FullStackWebDevelopmentArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
-  const [sh, setShow] = useState(false);
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -292,8 +298,8 @@ const FullStackWebDevelopmentArray = () => {
 
   useEffect(() => {
     console.log("wish", wishlist);
-    if (sh) navigate("/wishLists", { state: { wishlist } });
-  }, [wishlist, sh]);
+    if (show) navigate("/wishLists", { state: { wishlist } });
+  }, [wishlist, show]);
 
   const handleDelete = (id) => {
     setWishlist((prevWishlist) =>
@@ -313,85 +319,85 @@ const FullStackWebDevelopmentArray = () => {
       price: "$17.84",
       profilePic:
         "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "John Doe",
+      name: "Shyam",
     },
     {
       id: 2,
       title: "Full Stack JavaScript",
       description:
         "The future of learning The future of learning The future of learning The future of learning",
-      image: cardImage,
+      image: javascript,
       link: "/fullStack_WebDevelopment/full-stack-javascript",
       rating: 4.5,
       price: "$19.99",
       profilePic:
         "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "Jane Smith",
+      name: "Mounika",
     },
     {
       id: 3,
       title: "MEAN Stack Development",
       description:
         "The future of learning The future of learning The future of learning The future of learning",
-      image: cardImage,
+      image:mern,
       link: "/fullStack_WebDevelopment/mean-Stack-Developer",
       rating: 4.8,
       price: "$21.50",
       profilePic:
         "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "Michael Brown",
+      name: "Sathish",
     },
     {
       id: 4,
       title: "Full Stack Python",
       description:
         "The future of learning The future of learning The future of learning The future of learning",
-      image: cardImage,
+      image:python ,
       link: "/fullStack_WebDevelopment/fullStack-Python-Development",
       rating: 4.7,
       price: "$22.99",
       profilePic:
         "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "Emily Davis",
+      name: "Raghvendra",
     },
     {
       id: 5,
       title: "Full Stack Java",
       description:
         "The future of learning The future of learning The future of learning The future of learning",
-      image: cardImage,
+      image: java,
       link: "/fullStack_WebDevelopment/fullStack-Java-Development",
       rating: 4.3,
       price: "$18.75",
       profilePic:
         "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "Sophia Johnson",
+      name: "Ratna Priya",
     },
     {
       id: 6,
       title: " Dot Net development",
       description:
         "The future of learning The future of learning The future of learning The future of learning",
-      image: cardImage,
+      image: dotnet,
       link: "/fullStack_WebDevelopment/dot-net-development",
       rating: 4.9,
       price: "$24.50",
       profilePic:
         "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "Olivia Williams",
+      name: "Ashwini Kumari",
     },
     {
       id: 7,
       title: " Full Stack Devops",
       description:
         "The future of learning The future of learning The future of learning The future of learning",
-      image: cardImage,
+      image: devops,
       link: "/fullStack_WebDevelopment/fullStack-Devops",
       rating: 4.9,
       price: "$20.50",
       profilePic:
         "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "Olivia Williams",
+      name: "Premchand",
     },
   ];
 
@@ -423,27 +429,33 @@ const FullStackWebDevelopmentArray = () => {
   return (
     <>
       <Navbar />
-      <img
+      {/* <img
         src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg?ga=GA1.1.1671979702.1717669022&semt=sph"
         className="object-cover w-full md:h-[490px]"
         alt="Background Image"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
+      /> */}
+     
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-4 text-center text-purple-600 underline">
-          Expand Data Science <span>Courses</span>
+        <h1 className="text-4xl font-bold mb-4 text-center text-[#0098f1] ">
+          Expand <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
+          Data Science
+          </span>{" "} <span className="text-[#f6ac14]">Courses</span>
         </h1>
 
-        <div className="mb-4 flex justify-center">
-          <input
+        <div className="mb-4 flex justify-center ">
+         
+        <input
             type="text"
             placeholder="Search by course name"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded focus:outline-none"
+            className="relative px-4 w-80 py-2 border border-gray-300  rounded focus:outline-none"
+            
           />
+         {/* <button className="absolute"> <IoIosSearch className=" text-4xl pt-2 pr-2 font-semibold" /></button> */}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+        <div className="flex justify-center ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 justify-center items-center">
           {filteredCourses.map((course) => (
             <div
               key={course.id}
@@ -454,11 +466,11 @@ const FullStackWebDevelopmentArray = () => {
                   <img
                     src={course.image}
                     alt={course.title}
-                    className="w-full h-32 object-cover px-3 py-3"
+                    className="w-full h-32 object-cover px-3 "
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2 flex items-center justify-between">
+                  <h3 className="text-xl font-semibold mb-2 flex items-center text-nowrap justify-between">
                     {course.title}
                     <MdArrowOutward className="text-gray-500 text-2xl" />
                   </h3>
@@ -493,6 +505,7 @@ const FullStackWebDevelopmentArray = () => {
               </a>
             </div>
           ))}
+          </div>
         </div>
       </div>
       <Footer />

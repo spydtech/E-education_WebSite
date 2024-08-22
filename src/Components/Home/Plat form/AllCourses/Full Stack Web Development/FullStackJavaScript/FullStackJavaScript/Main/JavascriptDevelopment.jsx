@@ -5,7 +5,7 @@ import AboutCourses from "./AboutCourses";
 import Community from "../Community/community";
 import SuccessStory from "../SuccessStory/successstory";
 import Footer from "../../../../../../footer/Footer";
-import heroImage from '../../../../../../../../assetss/fullstackwebdev/hero.png'
+import hero from '../../../../../../../../assetss/fullstackwebdev/javaScript/javascript1.avif'
 // import DeliveryMethods from './../../deliverymethods/Delivery_Methods';
 import JavascriptDeveloperSkills from "../Developer/JavascriptDeveloperSkills";
 
@@ -26,27 +26,26 @@ const JavascriptDevelopment = () => {
     <>
       <Navbar />
       <div className="pl-4">
-      <div className="w-full flex flex-col p-6 lg:flex-row  items-center justify-center gap-4 md:px-8 lg:px-16 xl:px-32 py-8 ">
-        <div className="md:w-3/4 text-center xl:2xl:text-left">
-          <h3 className="  text-xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900">
+      <div className="w-full flex flex-col mb-8  p-6 lg:flex-row  items-center md:justify-center gap-4 md:px-8 lg:px-16 xl:px-32">
+        <div className="md:w-3/4 text-center lg:text-left">
+          <h3 className=" text-xl md:text-3xl lg:text-4xl font-bold leading-tight sm:leading-none tracking-tight text-gray-900">
             Master{" "}
             <span className="text-[#F6AC14]">Full Stack</span> JavaScript Programming
           </h3>
-          <p className="mt-4 text-base md:text-lg lg:text-xl text-gray-600">
+          <p className="mt-4 text-base lg:text-lg xl:text-xl text-gray-600">
           Boost your career by mastering JavaScript, the most popular
             programming language for web development. From front-end to
             back-end, learn everything you need to build dynamic and responsive
             web applications.
-          </p>
-          <p className="mt-4 text-base md:text-lg lg:text-xl text-gray-700">
-          Our courses will guide you through the entire JavaScript ecosystem,
+            Our courses will guide you through the entire JavaScript ecosystem,
             covering frameworks like React, Node.js, and Express.js. Develop
             practical skills and stand out in a competitive job market. Start
             your JavaScript journey today.
           </p>
+        
           <button
             onClick={handleEnroll}
-            className="mt-6 bg-[#0098F1] text-white  md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[280px] xl:lg:h-[80px] md:text-xl"
+            className="mt-6 bg-[#0098F1] text-white  md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[180px] xl:lg:h-[60px] md:text-xl"
           >
             Enroll Now
           </button>
@@ -54,7 +53,7 @@ const JavascriptDevelopment = () => {
         </div>
         <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
           <img
-            src={heroImage}
+             src={hero}
             alt="Hero"
             className="w-full max-w-md md:max-w-lg lg:max-w-xl"
           />

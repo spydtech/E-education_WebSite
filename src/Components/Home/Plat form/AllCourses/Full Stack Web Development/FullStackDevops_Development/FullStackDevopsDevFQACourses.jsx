@@ -44,7 +44,7 @@ const Question = ({ title,  description }) => {
         <h4
           onClick={() => setExpanded(!expanded)}
           className={`text-lg font-semibold cursor-pointer ${
-            expanded ? "text-[#F6AC14]" : "text-[#0098F1]"
+            expanded ? "text-[#0098F1]" : "text-[#0098F1]"
           }`}
         >
           {title}
@@ -57,7 +57,7 @@ const Question = ({ title,  description }) => {
           )}
         </button>
       </header>
-      {expanded && <p className="mt-4 text-[#F6AC14]">{ description}</p>}
+      {expanded && <p className="mt-4 text-[#0098F1]">{ description}</p>}
     </article>
   );
 };

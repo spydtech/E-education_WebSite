@@ -1,13 +1,13 @@
 import React from "react";
-import Nextgen from "../../../../../../../assetss/fullstackwebdev/nextGen.png";
+import Nextgen from "../../../../../../../assetss/fullstackwebdev/devops/devops2.avif";
 
 const FullStackDevOpsDevelopmentCard = () => {
   return (
     <>
 
-      <div className="max-w-screen-xl px-4 mx-auto mt-8 sm:mt-12 sm:px-6 md:mt-16">
-        <div className="  lg:grid lg:grid-cols-12 lg:gap-8">
-          <div className="relative mt-12 sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+      <div className="max-w-screen  px-4 mx-auto  sm:px-6 mb-12">
+        <div className=" lg:grid lg:grid-cols-12 lg:gap-8">
+          <div className="relative mt-8 pl-8 sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
             <img src={Nextgen} alt="" className="" />
           </div>
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left pl-4 mb-8">

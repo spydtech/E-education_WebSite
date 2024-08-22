@@ -59,11 +59,11 @@ const StudentCourses = () => {
     <>
       <div className="my-10 mb-16">
         <div className="text-center text-black text-3xl font-bold m-4 my-10">
-          <span className="text-black">Popular Skill </span>
-          <span className="bg-gradient-to-r to-[#0098f1] from-[#f6ac14] bg-clip-text text-transparent">
-            Enhancement
+          <span className="text-[#f6ac14]">Popular </span>
+          <span className="bg-gradient-to-r  from-[#f6ac14] to-[#0098f1] bg-clip-text text-transparent">
+          Skill Enhancement
           </span>
-          <span> Programs</span>
+          <span className="text-[#0098f1]"> Programs</span>
         </div>
         <div className="flex justify-center">
           <div

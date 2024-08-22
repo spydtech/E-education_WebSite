@@ -47,7 +47,7 @@ const Question = ({ title, info }) => {
         <h4
           onClick={() => setExpanded(!expanded)}
           className={`text-lg font-semibold cursor-pointer ${
-            expanded ? "text-[#F6AC14]" : "text-[#0098F1]"
+            expanded ? "text-[#0098F1]" : "text-[#0098F1]"
           }`}
         >
           {title}
@@ -60,7 +60,7 @@ const Question = ({ title, info }) => {
           )}
         </button>
       </header>
-      {expanded && <p className="mt-4 text-[#F6AC14]">{info}</p>}
+      {expanded && <p className="mt-4 text-[#0098F1]">{info}</p>}
     </article>
   );
 };
@@ -71,8 +71,8 @@ export default function MeanStackDev() {
   return (
     <main className="bg-white min-h-screen flex items-center justify-center">
       <div className="bg-white p-8 rounded w-full max-w-4xl">
-        <h3 className="sm:text-xl text-xl md:text-4xl lg:text-4xl font-bold mb-6 text-[#0098F1] text-center">
-        Courses Covered in this{" "}
+        <h3 className="sm:text-xl text-xl md:text-3xl lg:text-4xl font-bold mb-6 text-[#0098F1] text-center">
+        Courses We Covered in this{" "}
           <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
            Fullstack JavaScript
           </span>{" "}

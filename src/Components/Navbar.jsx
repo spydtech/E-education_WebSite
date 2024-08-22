@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { FaBars } from "react-icons/fa";
@@ -59,7 +58,10 @@ const Navbar = () => {
                   className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:bg-[#0098F1] hover:text-white focus:outline-none"
                 >
                   {open ? (
-                    <IoCloseSharp className="block h-6 w-6" aria-hidden="true" />
+                    <IoCloseSharp
+                      className="block h-6 w-6"
+                      aria-hidden="true"
+                    />
                   ) : (
                     <FaBars className="block h-6 w-6" aria-hidden="true" />
                   )}
@@ -69,7 +71,11 @@ const Navbar = () => {
               {/* Logo */}
               <div className="flex items-center justify-between flex-1 pl-8 md:justify-start">
                 <Link to="/" className="flex-shrink-0">
-                  <img className="h-12 w-40 lg:h-16 lg:w-56" src={IMG} alt="Logo" />
+                  <img
+                    className="h-12 w-40 lg:h-16 lg:w-56"
+                    src={IMG}
+                    alt="Logo"
+                  />
                 </Link>
 
                 {/* Desktop Search Bar */}
@@ -102,25 +108,161 @@ const Navbar = () => {
 
                   {/* Dropdown Menu */}
                   {showDropdown && (
-                    <div className="absolute  right-0 mt-2 w-48 bg-white rounded-md shadow-lg">
-                      <Link
-                        to="/web-development"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
-                      >
-                        Web Development
-                      </Link>
-                      <Link
-                        to="/app-development"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
-                      >
-                        App Development
-                      </Link>
-                      <Link
-                        to="/data-science"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
-                      >
-                        Data Science
-                      </Link>
+                    <div className="absolute right-0 top-10 bg-[#007acc] mt-8   text-white rounded-md shadow-lg p-4 w-full ">
+                      <h3 className="text-xl text-center font-bold mb-6">
+                        Explore Here Courses List
+                      </h3>
+
+                      <div className="grid grid-cols-3 gap-8">
+                        {/* Column 1: Courses */}
+                        <div>
+                          <h4 className="font-bold mb-4">Courses</h4>
+                          <ul>
+                            <li className="mb-2">
+                              <Link
+                                to="/full-stack-javascript"
+                                className="hover:underline"
+                              >
+                                Full Stack JavaScript
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/mern-stack"
+                                className="hover:underline"
+                              >
+                                MERN Stack Development
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/full-stack-java"
+                                className="hover:underline"
+                              >
+                                Full Stack Java
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/full-stack-dotnet"
+                                className="hover:underline"
+                              >
+                                Full Stack .Net
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/full-stack-devops"
+                                className="hover:underline"
+                              >
+                                Full Stack DevOps
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/data-science-intro"
+                                className="hover:underline"
+                              >
+                                Introduction to Data Science
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Column 2: Advance Courses */}
+                        <div>
+                          <h4 className="font-bold mb-4">Advance Courses</h4>
+                          <ul>
+                            <li className="mb-2">
+                              <Link
+                                to="/ethical-hacking"
+                                className="hover:underline"
+                              >
+                                Ethical Hacking
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/network-security"
+                                className="hover:underline"
+                              >
+                                Network Security
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/mobile-app-development"
+                                className="hover:underline"
+                              >
+                                Mobile App Development
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/database-management"
+                                className="hover:underline"
+                              >
+                                Database Management
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/ui-ux-design"
+                                className="hover:underline"
+                              >
+                                UI/UX Design
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Column 3: Premium Courses */}
+                        <div>
+                          <h4 className="font-bold mb-4">Premium Courses</h4>
+                          <ul>
+                            <li className="mb-2">
+                              <Link
+                                to="/machine-learning"
+                                className="hover:underline"
+                              >
+                                Machine Learning
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/cyber-security"
+                                className="hover:underline"
+                              >
+                                Cyber Security
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/cloud-computing"
+                                className="hover:underline"
+                              >
+                                Cloud Computing
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/blockchain-development"
+                                className="hover:underline"
+                              >
+                                Blockchain Development
+                              </Link>
+                            </li>
+                            <li className="mb-2">
+                              <Link
+                                to="/devops-mastery"
+                                className="hover:underline"
+                              >
+                                DevOps Mastery
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -140,8 +282,12 @@ const Navbar = () => {
                   </>
                 ) : (
                   <>
-                    <Link to="/trainee" className="text-black text-lg pl-4 ">Trainee</Link>
-                    <Link to="/login" className="text-black text-lg ">Log In</Link>
+                    <Link to="/trainee" className="text-black text-lg pl-4 ">
+                      Trainee
+                    </Link>
+                    <Link to="/login" className="text-black text-lg ">
+                      Log In
+                    </Link>
                     <button
                       onClick={() => navigate("/signup")}
                       className="px-4 py-2 bg-[#0098F1] text-white rounded-lg"
@@ -167,7 +313,10 @@ const Navbar = () => {
                   {item.name}
                 </Disclosure.Button>
               ))}
-              <button className="w-full text-left px-3 py-2" onClick={toggleSidebar}>
+              <button
+                className="w-full text-left px-3 py-2"
+                onClick={toggleSidebar}
+              >
                 Explore
               </button>
             </div>
@@ -179,12 +328,22 @@ const Navbar = () => {
               className="fixed inset-y-0 left-0 w-48 bg-[#0098F1] p-6 text-white z-50 transform duration-300 ease-in-out"
               style={{ left: showSidebar ? "0" : "-100%" }}
             >
-              <button onClick={toggleSidebar} className="mb-4">Close</button>
+              <button onClick={toggleSidebar} className="mb-4">
+                Close
+              </button>
               <ul className="space-y-4 text-lg">
-                <li><Link to="/explore">Explore</Link></li>
-                <li><Link to="/trainee">Trainee</Link></li>
-                <li><Link to="/login">Login</Link></li>
-                <li><Link to="/signup">Signup</Link></li>
+                <li>
+                  <Link to="/explore">Explore</Link>
+                </li>
+                <li>
+                  <Link to="/trainee">Trainee</Link>
+                </li>
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
+                <li>
+                  <Link to="/signup">Signup</Link>
+                </li>
                 {auth.user && <li onClick={handleLogout}>Logout</li>}
               </ul>
             </div>
@@ -196,9 +355,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
 
 // import React, { useEffect, useState } from "react";
 // import { Disclosure } from "@headlessui/react";
@@ -365,8 +521,6 @@ export default Navbar;
 // };
 
 // export default Navbar;
-
-
 
 // import React, { Fragment, useRef, useEffect, useState } from "react";
 // import { Disclosure, Menu, Transition } from "@headlessui/react";
@@ -724,8 +878,6 @@ export default Navbar;
 // };
 
 // export default Navbar;
-
-
 
 // import React, { Fragment, useRef, useEffect, useState } from "react";
 // import { Disclosure, Menu, Transition } from "@headlessui/react";

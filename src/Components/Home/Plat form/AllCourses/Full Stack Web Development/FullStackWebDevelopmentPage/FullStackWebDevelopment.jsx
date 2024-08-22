@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../../../Navbar";
-import Hero from "../../../../../../assetss/fullstackwebdev/hero.png";
+import Hero from "../../../../../../assetss/fullstackwebdev/webdev/hero.png";
 import Footer from "../../../../footer/Footer";
 import WebDeveloper from "./Web_Development/WebDeveloper";
 import AboutCourses from "./AboutCourses";
@@ -28,10 +28,10 @@ const ParticularFullStack = () => {
   return (
     <>
     <Navbar />
-    <div className="pl-4">
-      <div className="w-full flex flex-col p-6 lg:flex-row  items-center justify-center gap-4 md:px-8 lg:px-16 xl:px-32 py-8 ">
-        <div className="md:w-3/4 text-center xl:2xl:text-left">
-          <h3 className="  text-xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-gray-900">
+    <div className="pl-4 ">
+      <div className="w-full flex flex-col mb-8  p-6 lg:flex-row  items-center md:justify-center gap-4 md:px-8 lg:px-16 xl:px-32  ">
+        <div className="md:w-3/4 text-center lg:text-left">
+          <h3 className="  text-xl md:text-3xl lg:text-4xl font-bold leading-tight sm:leading-none tracking-tight text-gray-900">
             Master{" "}
             <span className="text-[#F6AC14]">Full Stack</span> Web Development
           </h3>
@@ -41,14 +41,9 @@ const ParticularFullStack = () => {
             JavaScript frameworks, databases, server-side scripting, and more.
             Prepare yourself for success as a full stack developer.
           </p>
-          <p className="mt-4 text-base md:text-lg lg:text-xl text-gray-700">
-            Our courses empower you to dive deep into full stack technologies.
-            Develop practical skills and stand out in a competitive job market.
-            Start your full stack journey today.
-          </p>
           <button
             onClick={handleEnroll}
-            className="mt-6 bg-[#0098F1] text-white  md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[280px] xl:lg:h-[80px] md:text-xl"
+            className="mt-6 bg-[#0098F1] text-white  md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[180px] xl:lg:h-[60px] md:text-xl"
           >
             Enroll Now
           </button>
