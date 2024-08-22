@@ -50,13 +50,13 @@ const WordpressCard = () => {
     <section id="portfolio" className="portfolio-section py-10 md:py-0 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl pb-2 md:text-4xl lg:text-5xl font-medium">
+          <h2 className="text-xl sm:pb-2 md:text-4xl lg:text-5xl font-medium">
             <span className="text-[#f6ac14]">Unlock the Power of</span>
             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
               {" "}
               WordPress:{" "}
             </span>
-            <span className="text-[#0098f1]">Create Stunning Websites</span>
+            <span className="text-[#0098f1]"> Create Stunning Websites</span>
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -70,7 +70,7 @@ const WordpressCard = () => {
                   <img
                     className="w-full h-full object-cover"
                     src={course.imgSrc}
-                    alt={`Project ${index + 1}`}
+                    alt={`Course ${index + 1}`}
                   />
                 </div>
                 <div className="p-4 flex flex-col items-center justify-between">

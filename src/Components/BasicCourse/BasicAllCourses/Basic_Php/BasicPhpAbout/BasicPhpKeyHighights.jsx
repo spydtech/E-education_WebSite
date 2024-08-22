@@ -77,14 +77,14 @@ function BasicPhpKeyHighlights() {
   };
 
   return (
-    <div className="px-20 mb-20 bg-white">
+    <div className="sm:px-20 pl-12   mb-20 bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start justify-center">
         <div className="w-auto h-auto md:lg:w-[500px] md:lg:h-[420px] mt-10 md:lg:pl-10 pl-0 text-xl">
           {renderContent()}
         </div>
-        <div className="md:lg:pl-20 pl-0">
-          <div className="pt-4">
-            <p className="font-bold underline-offset-2 underline text-xl p-2 text-[#f6ac14]">
+        <div className="">
+          <div className="pt-4 lg:pl-12">
+            <p className="font-bold underline-offset-2 underline text-xl  text-[#f6ac14]">
               E-Education Course Highlights
             </p>
           </div>
@@ -94,7 +94,7 @@ function BasicPhpKeyHighlights() {
               Course have to offer?
             </p>
           </div>*/}
-          <div className="pt-4 -ml-10 md:ml-10 lg:-ml-0 lg:ml-10">
+          <div className="pt-4  md:ml-10  lg:pl-10">
             {data.map((item, index) => (
               <div
                 key={index}
