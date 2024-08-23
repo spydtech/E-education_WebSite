@@ -20,7 +20,7 @@ const About = () => {
             Front-End Development
           </div>
           <div className="text-[#0098F1] leading-2 lg:text-lg text-base">
-            <span className="mt-3 text-base  text-[#F6AC14] sm:mt-5 stext-lg font-medium">
+            <span className="mt-3  text-[#F6AC14] sm:mt-5 text-lg font-medium">
               Angular:
             </span>{" "}
             Expertise in Angular is crucial for creating dynamic, single-page

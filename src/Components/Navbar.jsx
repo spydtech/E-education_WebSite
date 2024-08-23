@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import IMG from "../assets/logo/E-eLogo.png";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,6 +11,7 @@ import { NotificationAdd } from "@mui/icons-material";
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false); // State for dropdown
+  const [sidebarDropdown, setSidebarDropdown] = useState(false);
   const navigate = useNavigate();
   const jwt = localStorage.getItem("jwt");
   const auth = useSelector((state) => state.auth);
@@ -44,6 +45,9 @@ const Navbar = () => {
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown); // Toggle the dropdown
   };
+  const toggleSidebarDropdown = () => {
+    setSidebarDropdown(!sidebarDropdown); // Toggle the sidebar dropdown
+  };
 
   return (
     <Disclosure as="nav" className="bg-white sticky top-0 z-50">
@@ -52,10 +56,10 @@ const Navbar = () => {
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 justify-between items-center">
               {/* Mobile Menu Button */}
-              <div className="absolute inset-y-0 left-0 flex border-2 border-gray-500 mt-3 h-10 w-8 justify-center rounded-lg items-center md:hidden">
+              <div className="absolute inset-y-0 left-0 flex pl-2  mt-5 h-6 w-4 justify-center items-center md:hidden">
                 <Disclosure.Button
                   onClick={toggleSidebar}
-                  className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:bg-[#0098F1] hover:text-white focus:outline-none"
+                  className="inline-flex items-center justify-center p-2  text-gray-400 hover:bg-[#0098F1] hover:text-white focus:outline-none"
                 >
                   {open ? (
                     <IoCloseSharp
@@ -70,7 +74,8 @@ const Navbar = () => {
 
               {/* Logo */}
               <div className="flex items-center justify-between flex-1 pl-8 md:justify-start">
-                <Link to="/" className="flex-shrink-0">
+                
+                <Link to="/" className="flex-shrink-0 ">
                   <img
                     className="h-12 w-40 lg:h-16 lg:w-56"
                     src={IMG}
@@ -101,171 +106,174 @@ const Navbar = () => {
                   </button>
                   <button
                     onClick={toggleDropdown} // Toggle dropdown on Explore click
-                    className="absolute right-[1px] p-2 py-[6px] top-1/2 transform -translate-y-1/2 bg-blue-100 rounded-lg text-[#0098F1]"
+                    className="absolute right-[1px] p-2 py-[6px] top-1/2 transform -translate-y-1/2 bg-blue-100 rounded-lg text-[#0098F1] flex items-center space-x-1"
                   >
-                    Explore
+                    <span>Explore</span>
+                    {showDropdown ? <FaChevronUp /> : <FaChevronDown />}
                   </button>
-
                   {/* Dropdown Menu */}
-                  {showDropdown && (
-                    <div className="absolute right-0 top-10 bg-[#007acc] mt-8   text-white rounded-md shadow-lg p-4 w-full ">
-                      <h3 className="text-xl text-center font-bold mb-6">
-                        Explore Here Courses List
-                      </h3>
+                </div>
+                {showDropdown && (
+                  <div className="absolute right-0 top-10 bg-[#0098F1] mt-8 text-white  shadow-lg w-full">
+                    <h3 className="text-2xl text-start p-4 bg-white text-[#0098F1] w-max font-bold ">
+                      Explore Here Courses List
+                    </h3>
+                    <div className="grid text-xl ">
+                      {/* Column 1: Courses */}
+                      {/* <div className="p-4 text-nowrap m-4 ">
+                        <h4 className="font-bold mb-4">Advance Courses</h4>
+                        <ul className="grid gap-4">
+                          <li className="mb-2">
+                            <Link
+                              to="/full-stack-javascript"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              Full Stack JavaScript
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/mern-stack"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              MERN Stack Development
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/full-stack-java"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              Full Stack Java
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/full-stack-dotnet"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2"
+                            >
+                              Full Stack .Net
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/full-stack-devops"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              Full Stack DevOps
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/data-science-intro"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2"
+                            >
+                              Introduction to Data Science
+                            </Link>
+                          </li>
+                        </ul>
+                      </div> */}
 
-                      <div className="grid grid-cols-3 gap-8">
-                        {/* Column 1: Courses */}
-                        <div>
-                          <h4 className="font-bold mb-4">Courses</h4>
-                          <ul>
-                            <li className="mb-2">
-                              <Link
-                                to="/full-stack-javascript"
-                                className="hover:underline"
-                              >
-                                Full Stack JavaScript
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/mern-stack"
-                                className="hover:underline"
-                              >
-                                MERN Stack Development
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/full-stack-java"
-                                className="hover:underline"
-                              >
-                                Full Stack Java
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/full-stack-dotnet"
-                                className="hover:underline"
-                              >
-                                Full Stack .Net
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/full-stack-devops"
-                                className="hover:underline"
-                              >
-                                Full Stack DevOps
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/data-science-intro"
-                                className="hover:underline"
-                              >
-                                Introduction to Data Science
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
+                      {/* Column 2: Advance Courses */}
+                      <div className="flex px-20 justify-between  ">
+                      <div className="p-4 text-center text-nowrap m-4">
+                        <h4 className="font-bold mb-4 text-2xl underline underline-offset-4">Advance Courses</h4>
+                        <ul className="grid gap-4">
+                        <li className="mb-2">
+                            <Link
+                              to="/mobile-app-development"
+                              className="hover:bg-white hover:text-[#0098F1] text-white p-2 "
+                            >
+                              Mobile App Development
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/database-management"
+                              className="hover:bg-white hover:text-[#0098F1] text-white p-2"
+                            >
+                              Database Management
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/ethical-hacking"
+                              className="hover:bg-white hover:text-[#0098F1] text-white p-2 "
+                            >
+                              Ethical Hacking
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/network-security"
+                              className="hover:bg-white hover:text-[#0098F1] text-white p-2 "
+                            >
+                              Network Security
+                            </Link>
+                          </li>
+                       
+                          <li className="mb-2">
+                            <Link
+                              to="/ui-ux-design"
+                              className="hover:bg-white hover:text-[#0098F1] text-white  p-2 "
+                            >
+                              UI/UX Design
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
 
-                        {/* Column 2: Advance Courses */}
-                        <div>
-                          <h4 className="font-bold mb-4">Advance Courses</h4>
-                          <ul>
-                            <li className="mb-2">
-                              <Link
-                                to="/ethical-hacking"
-                                className="hover:underline"
-                              >
-                                Ethical Hacking
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/network-security"
-                                className="hover:underline"
-                              >
-                                Network Security
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/mobile-app-development"
-                                className="hover:underline"
-                              >
-                                Mobile App Development
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/database-management"
-                                className="hover:underline"
-                              >
-                                Database Management
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/ui-ux-design"
-                                className="hover:underline"
-                              >
-                                UI/UX Design
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-
-                        {/* Column 3: Premium Courses */}
-                        <div>
-                          <h4 className="font-bold mb-4">Premium Courses</h4>
-                          <ul>
-                            <li className="mb-2">
-                              <Link
-                                to="/machine-learning"
-                                className="hover:underline"
-                              >
-                                Machine Learning
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/cyber-security"
-                                className="hover:underline"
-                              >
-                                Cyber Security
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/cloud-computing"
-                                className="hover:underline"
-                              >
-                                Cloud Computing
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/blockchain-development"
-                                className="hover:underline"
-                              >
-                                Blockchain Development
-                              </Link>
-                            </li>
-                            <li className="mb-2">
-                              <Link
-                                to="/devops-mastery"
-                                className="hover:underline"
-                              >
-                                DevOps Mastery
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
+                      {/* Column 3: Premium Courses */}
+                      <div className="p-4 text-center text-nowrap m-4">
+                        <h4 className="font-bold mb-4 text-2xl underline  underline-offset-4">Premium Courses</h4>
+                        <ul className="grid gap-4">
+                        <li className="mb-2">
+                            <Link
+                              to="/blockchain-development"
+                              className="hover:bg-white hover:text-[#0098F1] text-white p-2"
+                            >
+                              Blockchain Development
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/machine-learning"
+                              className="hover:bg-white hover:text-[#0098F1] text-white p-2 "
+                            >
+                              Machine Learning
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/cyber-security"
+                              className="hover:bg-white hover:text-[#0098F1] text-white p-2 "
+                            >
+                              Cyber Security
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/cloud-computing"
+                              className="hover:bg-white hover:text-[#0098F1] text-white p-2 "
+                            >
+                              Cloud Computing
+                            </Link>
+                          </li>
+                         
+                          <li className="mb-2">
+                            <Link
+                              to="/devops-mastery"
+                              className="hover:bg-white hover:text-[#0098F1] text-white p-2"
+                            >
+                              DevOps Mastery
+                            </Link>
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                  )}
-                </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* User Action Buttons */}
@@ -301,7 +309,213 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Sidebar */}
-          <Disclosure.Panel className="md:hidden">
+          {showSidebar && (
+            <div className="md:hidden fixed  inset-0  z-50 flex">
+              <div
+                className="bg-black opacity-50 hidden w-full h-full"
+                onClick={toggleSidebar}
+              ></div>
+              <div className="   bg-white w-72  shadow-lg">
+                <div className="flex items-center justify-between px-4 py-3">
+                  <Link to="/" className="flex-shrink-0">
+                    <img className="h-10 w-auto" src={IMG} alt="Logo" />
+                  </Link>
+                  <button
+                    onClick={toggleSidebar}
+                    className="text-gray-500 hover:text-gray-700 focus:outline-none"
+                  >
+                    <IoCloseSharp className="h-6 w-6" />
+                  </button>
+                </div>
+                <div className="mt-6 bg-[#0098F1] h-screen overflow-y-scroll px-4">
+                  <button
+                    onClick={toggleSidebarDropdown} // Toggle sidebar dropdown
+                    className="w-full flex items-center justify-between p-3 text-gray-700 hover:bg-[#0098F1] hover:text-white rounded-lg"
+                  >
+                    <span>Explore</span>
+                    {sidebarDropdown ? <FaChevronUp /> : <FaChevronDown />}
+                  </button>
+                  {sidebarDropdown && (
+                    <div className=" mt-2space-y-2">
+                      {/* <div className="p-4 text-nowrap  ">
+                        <h4 className="font-bold mb-4">Advance Courses</h4>
+                        <ul className="grid gap-4">
+                          <li className="mb-2">
+                            <Link
+                              to="/full-stack-javascript"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              Full Stack JavaScript
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/mern-stack"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              MERN Stack Development
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/full-stack-java"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              Full Stack Java
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/full-stack-dotnet"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2"
+                            >
+                              Full Stack .Net
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/full-stack-devops"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              Full Stack DevOps
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/data-science-intro"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2"
+                            >
+                              Introduction to Data Science
+                            </Link>
+                          </li>
+                        </ul>
+                      </div> */}
+
+                      {/* Column 2: Advance Courses */}
+                      <div className="p-4 text-nowrap">
+                        <h4 className="font-bold mb-4">Advance Courses</h4>
+                        <ul className="grid gap-4">
+                          <li className="mb-2">
+                            <Link
+                              to="/ethical-hacking"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              Ethical Hacking
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/network-security"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              Network Security
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/mobile-app-development"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              Mobile App Development
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/database-management"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2"
+                            >
+                              Database Management
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/ui-ux-design"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              UI/UX Design
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+
+                      {/* Column 3: Premium Courses */}
+                      <div className="p-4 text-nowrap ">
+                        <h4 className="font-bold mb-4">Premium Courses</h4>
+                        <ul className="grid gap-4">
+                          <li className="mb-2">
+                            <Link
+                              to="/machine-learning"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              Machine Learning
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/cyber-security"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              Cyber Security
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/cloud-computing"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                            >
+                              Cloud Computing
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/blockchain-development"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2"
+                            >
+                              Blockchain Development
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/devops-mastery"
+                              className="hover:bg-white hover:text-[#0098F1] hover:border  border-white border-2 p-2"
+                            >
+                              DevOps Mastery
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                  <Link
+                    to="/mylearning"
+                    className="block mt-4 text-gray-700 hover:bg-[#0098F1] hover:text-white p-3 rounded-lg"
+                  >
+                    My Learning
+                  </Link>
+                  <Link
+                    to="/Mycourse"
+                    className="block text-gray-700 hover:bg-[#0098F1] hover:text-white p-3 rounded-lg"
+                  >
+                    Course
+                  </Link>
+                  <Link
+                    to="/about_us"
+                    className="block text-gray-700 hover:bg-[#0098F1] hover:text-white p-3 rounded-lg"
+                  >
+                    About Us
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className="block text-gray-700 hover:bg-[#0098F1] hover:text-white p-3 rounded-lg"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* <Disclosure.Panel className="md:hidden">
             <div className="space-y-1 px-2 pt-2 pb-3">
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -320,10 +534,10 @@ const Navbar = () => {
                 Explore
               </button>
             </div>
-          </Disclosure.Panel>
+          </Disclosure.Panel> */}
 
           {/* Sidebar */}
-          {showSidebar && (
+          {/* {showSidebar && (
             <div
               className="fixed inset-y-0 left-0 w-48 bg-[#0098F1] p-6 text-white z-50 transform duration-300 ease-in-out"
               style={{ left: showSidebar ? "0" : "-100%" }}
@@ -347,7 +561,7 @@ const Navbar = () => {
                 {auth.user && <li onClick={handleLogout}>Logout</li>}
               </ul>
             </div>
-          )}
+          )} */}
         </>
       )}
     </Disclosure>

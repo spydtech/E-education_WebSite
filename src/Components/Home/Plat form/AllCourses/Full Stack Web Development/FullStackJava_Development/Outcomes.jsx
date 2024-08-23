@@ -14,21 +14,21 @@ const Outcomes = () => {
           <div className="pl-4">
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
               Acquire full stack Java skills. Industry-recognized
                 certification. Excel in tech
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
               Master MongoDB, Express, Angular, and Node.js. Real-world
               projects. Career-ready in web development.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
               Elevate career with full stack Java. Google-endorsed. Prepare
               for industry. Success awaits.
               </div>
@@ -37,7 +37,7 @@ const Outcomes = () => {
         </div>
        
       </div>
-      <div className="flex flex-col md:flex-row-reverse justify-center items-center md:space-x-4 mt-8">
+      <div className="flex flex-col md:flex-row-reverse justify-center items-center md:space-x-4 mt-4">
         <div className="w-full ">
           <div className="mt-3 font-bold text-[#0098F1] text-xl md:text-xl lg:text-xl xl:text-2xl font pl-0 ">
           Master Full Stack Java Development for Career Advancement
@@ -45,21 +45,21 @@ const Outcomes = () => {
           <div className="pl-4 ">
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
               Acquire comprehensive full stack Java skills for industry
               recognition.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
               Excel in both front-end and back-end development with real-world
                 projects.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
               Elevate your career with Google-endorsed training, preparing you
               for industry success.
               </div>
@@ -68,7 +68,7 @@ const Outcomes = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4 mt-8">
+      <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4 mt-4">
         <div className="w-full ">
           <div className=" font-bold text-[#0098F1] text-xl md:text-2xl lg:text-xl xl:text-2xl font">
           Unlock Career Opportunities with Full Stack Java Development
@@ -76,21 +76,21 @@ const Outcomes = () => {
           <div className="pl-4">
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
                 Master both front-end and back-end technologies for diverse job
                 roles.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
                 Gain hands-on experience through real-world projects and case
                 studies.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
                 Prepare for success with industry-recognized certification and
                 Google-endorsed training.
               </div>

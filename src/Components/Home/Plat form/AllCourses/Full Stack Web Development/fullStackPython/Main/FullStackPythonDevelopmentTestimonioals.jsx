@@ -72,7 +72,7 @@ const FullStackPythonDevelopmentTestimonioals = () => {
   return (
     <div className="flex flex-col items-center pt-4 space-y-8">
       <h2 className="sm:text-xl text-xl md:text-4xl lg:text-5xl font-semibold text-[#0098F1] text-center mb-4">
-        Why<span className=" bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">People Choose </span>{" "}<span className=" text-[#F6AC14]"> Us</span>
+        Why{" "}<span className=" bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">People Choose </span>{" "}<span className=" text-[#F6AC14]"> Us</span>
       </h2>
       <div className="hidden md:flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
         {testimonials.map((testimonial, index) => (

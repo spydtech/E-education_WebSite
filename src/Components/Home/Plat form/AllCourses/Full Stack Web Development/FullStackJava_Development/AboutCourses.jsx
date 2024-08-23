@@ -34,7 +34,7 @@ const AboutCourses = () => {
       <div className={`w-full ${menuOpen ? "flex justify-center" : "hidden lg:flex"}  transition-all duration-300`}>
       <div className="flex flex-col lg:justify-between lg:pl-20 w-5/6 justify-center  lg:flex-row  lg:items-start">
           <button
-            className={`px-4 py-2 font-semibold text-xl lg:rounded-r-xl text-[#F6AC14] focus:outline-none tab-button ${
+            className={`px-4 py-2 font-semibold text-xl lg:rounded-r-2xl text-[#F6AC14] focus:outline-none tab-button ${
               activeTab === "tab1" ? "bg-[#F6AC14] text-white" : ""
             }`}
             onClick={() => showTab("tab1")}
@@ -42,7 +42,7 @@ const AboutCourses = () => {
             About
           </button>
           <button
-            className={`px-4 py-2 font-semibold text-xl  lg:rounded-r-xl text-[#F6AC14] focus:outline-none tab-button ${
+            className={`px-4 py-2 font-semibold text-xl  lg:rounded-r-2xl text-[#F6AC14] focus:outline-none tab-button ${
               activeTab === "tab2" ? "bg-[#F6AC14] text-white" : ""
             }`}
             onClick={() => showTab("tab2")}
@@ -50,7 +50,7 @@ const AboutCourses = () => {
             Outcomes
           </button>
           <button
-            className={`px-4 py-2 font-semibold text-xl  lg:rounded-r-xl text-[#F6AC14] focus:outline-none tab-button ${
+            className={`px-4 py-2 font-semibold text-xl  lg:rounded-r-2xl text-[#F6AC14] focus:outline-none tab-button ${
               activeTab === "tab3" ? "bg-[#F6AC14] text-white" : ""
             }`}
             onClick={() => showTab("tab3")}
@@ -58,7 +58,7 @@ const AboutCourses = () => {
             Courses
           </button>
           <button
-            className={`px-4 py-2 font-semibold text-xl  lg:rounded-r-xl text-[#F6AC14] focus:outline-none tab-button ${
+            className={`px-4 py-2 font-semibold text-xl  lg:rounded-r-2xl text-[#F6AC14] focus:outline-none tab-button ${
               activeTab === "tab4" ? "bg-[#F6AC14] text-white" : ""
             }`}
             onClick={() => showTab("tab4")}

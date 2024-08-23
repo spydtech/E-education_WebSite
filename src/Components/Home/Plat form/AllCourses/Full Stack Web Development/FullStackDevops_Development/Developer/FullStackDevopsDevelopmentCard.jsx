@@ -28,7 +28,7 @@ const FullStackDevOpsDevelopmentCard = () => {
               </p>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <button
-            className="mt-6 bg-[#0098F1] text-white   md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[280px] xl:lg:h-[80px] md:text-xl">
+            className="mt-6 bg-[#0098F1] text-white   md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 text-nowrap lg:text-2xl lg:w-[180px] lg:h-[60px] md:text-xl">
             <a href="/"
                className=""
                 >

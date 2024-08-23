@@ -8,7 +8,7 @@ const About = () => {
       <div className=" text-[#0098F1] lg:text-4xl font-bold text-2xl">
           About this Course
         </div>
-        <div className="pt-4 text-[#0098F1] font">
+        <div className="pt-4 lg:text-lg text-base text-[#0098F1] font">
           Mastering Full Stack Python Development involves becoming proficient
           in both front-end and back-end aspects using Python and its associated
           technologies. Here's a breakdown of what it entails:
