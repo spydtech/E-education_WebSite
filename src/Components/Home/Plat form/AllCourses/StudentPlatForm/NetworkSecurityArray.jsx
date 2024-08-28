@@ -39,45 +39,43 @@ const NetworkSecurityArray = () => {
       id: 1,
       title: "Network Security Fundamentals",
       image: cardImage,
-
       description:
         "Understand the basics of network security, including firewalls, intrusion detection systems, and VPNs.",
       link: "/network_security/network-security-fundamentals",
       rating: 4.3, // Add dummy rating
       price: "$29.99", // Add dummy price
-      profilePic:
-        Girl2,
+      profilePic: Girl2,
       name: "Ashwini Sharma",
+      enrolled: 1500, // Add dummy enrolled number
     },
     {
       id: 2,
       title: "Advanced Network Security",
       image: cardImage,
-
       description:
         "Learn advanced network security techniques and strategies to protect against sophisticated cyber threats.",
       link: "/network_security/advance-network-secuity",
       rating: 4.7, // Add dummy rating
       price: "$39.99", // Add dummy price
-      profilePic:
-        Girl2,
+      profilePic: Girl2,
       name: "Ravi Kumar",
+      enrolled: 2000, // Add dummy enrolled number
     },
     {
       id: 3,
       title: "Network Security Best Practices",
       image: cardImage,
-
       description:
         "Explore best practices for securing network infrastructure.",
       link: "/network_security/network-security-best-practices",
       rating: 4.6, // Add dummy rating
       price: "$24.99", // Add dummy price
-      profilePic:
-        Girl2,
+      profilePic: Girl2,
       name: "Shyam Gupta",
+      enrolled: 1800, // Add dummy enrolled number
     },
   ];
+  
 
   const filteredCourses = networkSecurityCourses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -149,7 +147,7 @@ const NetworkSecurityArray = () => {
                         <span className="text-gray-700 font-bold">
                           {course.name}
                         </span>
-                        <p className="text-gray-500 text-xs">2001 Enrolled</p>
+                        <p className="text-gray-500 text-xs">{course.enrolled} Enrolled</p>
                       </div>
                     </div>
                     <span className="text-gray-900 font-bold">

@@ -39,15 +39,14 @@ const EthicalHackingStudentArray = () => {
       id: 1,
       title: "Ethical Hacking Basics",
       image: cardImage,
-
       description:
         "Learn the fundamentals of ethical hacking, including reconnaissance, scanning, and vulnerability assessment.",
       link: "/Ethical_Hacking/basic_ethical_Hacking",
       rating: 4.2, // Add dummy rating
-      price: "$19.99", // Add dummy price
-      profilePic:
-       Girl2,
-      name: "John Doe",
+      price: "₹1499", // Add dummy price
+      profilePic: Girl2,
+      name: "Rohan Patel",
+      erolled: "1500 Enrolled"
     },
     {
       id: 2,
@@ -57,26 +56,27 @@ const EthicalHackingStudentArray = () => {
       image: cardImage,
       link: "/Ethical_Hacking/advance_Ethical_Hacking",
       rating: 4.5, // Add dummy rating
-      price: "$24.99", // Add dummy price
-      profilePic:
-       Girl2,
-      name: "John Doe",
+      price: "₹1899", // Add dummy price
+      profilePic: Girl2,
+      name: "Neeraj Malhotra",
+      erolled: "1000 Enrolled"
+
     },
     {
       id: 3,
       title: "Certified Ethical Hacker",
       image: cardImage,
-
       description:
         "Prepare for the Certified Ethical Hacker (CEH) certification with comprehensive coverage of ethical hacking topics.",
       link: "/Ethical-Hacking/certified_Ethical_Hacking",
       rating: 4.8, // Add dummy rating
-      price: "$34.99", // Add dummy price
-      profilePic:
-       Girl2,
-      name: "John Doe",
+      price: "₹2499", // Add dummy price
+      profilePic: Girl2,
+      name: "Sakshi Agarwal",
+      erolled: "2000 Enrolled"
     },
   ];
+  
 
   const filteredCourses = ethicalHackingCourses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -148,7 +148,7 @@ const EthicalHackingStudentArray = () => {
                         <span className="text-gray-700 font-bold">
                           {course.name}
                         </span>
-                        <p className="text-gray-500 text-xs">2001 Enrolled</p>
+                        <p className="text-gray-500 text-xs">{course.erolled}</p>
                       </div>
                     </div>
                     <span className="text-gray-900 font-bold">

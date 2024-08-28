@@ -54,6 +54,7 @@ const DataScienceArray = () => {
       price: "₹2499",
       profilePic: Girl2,
       name: "Rajesh Kumar",
+      enrolled: 3000, // Add dummy enrolled number
     },
     {
       id: 2,
@@ -66,6 +67,7 @@ const DataScienceArray = () => {
       price: "₹2899",
       profilePic: Girl2,
       name: "Aditi Singh",
+      enrolled: 2800, // Add dummy enrolled number
     },
     {
       id: 3,
@@ -78,6 +80,7 @@ const DataScienceArray = () => {
       price: "₹3299",
       profilePic: Girl2,
       name: "Amitabh Bhatt",
+      enrolled: 3200, // Add dummy enrolled number
     },
     {
       id: 4,
@@ -89,6 +92,7 @@ const DataScienceArray = () => {
       price: "₹2099",
       profilePic: Girl2,
       name: "Sunita Deshmukh",
+      enrolled: 2500, // Add dummy enrolled number
     },
     {
       id: 5,
@@ -101,6 +105,7 @@ const DataScienceArray = () => {
       price: "₹2299",
       profilePic: Girl2,
       name: "Vikram Kapoor",
+      enrolled: 2700, // Add dummy enrolled number
     },
     {
       id: 6,
@@ -113,8 +118,10 @@ const DataScienceArray = () => {
       price: "₹2499",
       profilePic: Girl2,
       name: "Priya Menon",
+      enrolled: 2900, // Add dummy enrolled number
     },
   ];
+  
   
 
   const filteredCourses = courses.filter((course) =>
@@ -208,7 +215,7 @@ const DataScienceArray = () => {
                         <span className="text-gray-700 font-bold">
                           {course.name}
                         </span>
-                        <p className="text-gray-500 text-xs">2001 Enrolled</p>
+                        <p className="text-gray-500 text-xs">{course.enrolled} Enrolled</p>
                       </div>
                     </div>
                     <span className="text-gray-900 font-bold">

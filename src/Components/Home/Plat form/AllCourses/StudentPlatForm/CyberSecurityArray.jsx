@@ -36,44 +36,45 @@ const CyberSecurityArray = () => {
   const cybersecurityCourses = [
     {
       id: 1,
-      title: "Introduction to Cybersecurity",
+      title: "Introduction to Cyber security",
       description:
         "Learn the basic principles of cybersecurity, including risk management, threat detection, and security policies.",
       link: "/Cybersecurity/Cybersecurity_fundamentals",
       image: cardImage,
       rating: 4.5,
       price: "$24.99",
-      profilePic:
-       Girl2,
+      profilePic: Girl2,
       name: "Mohan Sharma",
+      enrolled: 2200, // Add dummy enrolled number
     },
     {
       id: 2,
-      title: "Cybersecurity Essentials",
+      title: "Cyber security Essentials",
       description:
         "Understand the core concepts of cybersecurity, including network security, cryptography, and incident response.",
       link: "/Cybersecurity/cybersecurity_essentials",
       rating: 4.7,
       image: cardImage,
       price: "$29.99",
-      profilePic:
-       Girl2,
+      profilePic: Girl2,
       name: "Ratna Priya",
+      enrolled: 2500, // Add dummy enrolled number
     },
     {
       id: 3,
       image: cardImage,
-      title: "Cybersecurity for Beginners",
+      title: "Cyber security for Beginners",
       description:
         "An introductory course for those new to the field of cybersecurity, covering fundamental concepts and best practices.",
       link: "/Cybersecurity/cybersecurity_beginners",
       rating: 4.6,
       price: "$27.50",
-      profilePic:
-       Girl2,
+      profilePic: Girl2,
       name: "Manish Sharma",
+      enrolled: 2100, // Add dummy enrolled number
     },
   ];
+  
 
   const filteredCourses = cybersecurityCourses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -166,7 +167,7 @@ const CyberSecurityArray = () => {
                         <span className="text-gray-700 font-bold">
                           {course.name}
                         </span>
-                        <p className="text-gray-500 text-xs">2001 Enrolled</p>
+                        <p className="text-gray-500 text-xs">{course.enrolled} Enrolled</p>
                       </div>
                     </div>
                     <span className="text-gray-900 font-bold">

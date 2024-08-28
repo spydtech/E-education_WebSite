@@ -757,6 +757,7 @@ const SoftwareTestingArray = () => {
       name: "Anjali Sharma",
       rating: 4.3, // Add dummy rating
       price: "₹2499", // Add dummy price
+      enrolled: 1200, // Add dummy enrolled number
     },
     {
       id: 2,
@@ -768,6 +769,7 @@ const SoftwareTestingArray = () => {
       name: "Ravi Mehta",
       rating: 4.3, // Add dummy rating
       price: "₹2499", // Add dummy price
+      enrolled: 1500, // Add dummy enrolled number
     },
     {
       id: 3,
@@ -779,6 +781,7 @@ const SoftwareTestingArray = () => {
       name: "Neha Verma",
       rating: 4.3, // Add dummy rating
       price: "₹2499", // Add dummy price
+      enrolled: 1300, // Add dummy enrolled number
     },
     {
       id: 4,
@@ -790,6 +793,7 @@ const SoftwareTestingArray = () => {
       name: "Arjun Gupta",
       rating: 4.3, // Add dummy rating
       price: "₹2499", // Add dummy price
+      enrolled: 1400, // Add dummy enrolled number
     },
     {
       id: 5,
@@ -801,6 +805,7 @@ const SoftwareTestingArray = () => {
       name: "Pooja Nair",
       rating: 4.3, // Add dummy rating
       price: "₹2499", // Add dummy price
+      enrolled: 1600, // Add dummy enrolled number
     },
     {
       id: 6,
@@ -812,6 +817,7 @@ const SoftwareTestingArray = () => {
       name: "Vikram Singh",
       rating: 4.3, // Add dummy rating
       price: "₹2499", // Add dummy price
+      enrolled: 1800, // Add dummy enrolled number
     },
     {
       id: 7,
@@ -823,6 +829,7 @@ const SoftwareTestingArray = () => {
       name: "Priya Iyer",
       rating: 4.3, // Add dummy rating
       price: "₹2499", // Add dummy price
+      enrolled: 1700, // Add dummy enrolled number
     },
     {
       id: 8,
@@ -834,6 +841,7 @@ const SoftwareTestingArray = () => {
       name: "Amit Desai",
       rating: 4.3, // Add dummy rating
       price: "₹2499", // Add dummy price
+      enrolled: 1600, // Add dummy enrolled number
     },
     {
       id: 9,
@@ -845,6 +853,7 @@ const SoftwareTestingArray = () => {
       name: "Kavita Rao",
       rating: 4.3, // Add dummy rating
       price: "₹2499", // Add dummy price
+      enrolled: 1400, // Add dummy enrolled number
     },
     {
       id: 10,
@@ -856,6 +865,7 @@ const SoftwareTestingArray = () => {
       name: "Suresh Kumar",
       rating: 4.3, // Add dummy rating
       price: "₹2499", // Add dummy price
+      enrolled: 1500, // Add dummy enrolled number
     },
     {
       id: 11,
@@ -867,6 +877,7 @@ const SoftwareTestingArray = () => {
       name: "Meera Pillai",
       rating: 4.3, // Add dummy rating
       price: "₹2499", // Add dummy price
+      enrolled: 1800, // Add dummy enrolled number
     },
     {
       id: 12,
@@ -878,6 +889,7 @@ const SoftwareTestingArray = () => {
       name: "Rahul Joshi",
       rating: 4.3, // Add dummy rating
       price: "₹2499", // Add dummy price
+      enrolled: 2000, // Add dummy enrolled number
     },
   ];
   
@@ -964,7 +976,7 @@ const SoftwareTestingArray = () => {
                         <span className="text-gray-700 font-bold">
                           {course.name}
                         </span>
-                        <p className="text-gray-500 text-xs">2001 Enrolled</p>
+                        <p className="text-gray-500 text-xs">{course.enrolled} Enrolled</p>
                       </div>
                     </div>
                     <span className="text-gray-900 font-bold">
