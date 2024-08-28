@@ -7,27 +7,27 @@ const Outcomes = () => {
     <div className="lg:pl-20">
       <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4">
         <div className="w-full ">
-          <div className="mt-3 font-extrabold text-[#0098F1] text-xl md:text-2xl lg:text-xl xl:text-2xl font">
+          <div className="mt-3 font-bold text-[#0098F1] text-xl md:text-2xl lg:text-xl xl:text-2xl font">
             Elevate your career with sought-after skills in DevOps development
           </div>
           <div className="pl-4">
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
                 Acquire DevOps skills. Industry-recognized certification. Excel
                 in tech.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
                 Master infrastructure as code, automation, and collaboration.
                 Real-world projects. Career-ready in DevOps.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
                 Elevate career with DevOps expertise. Industry-endorsed. Prepare
                 for industry. Success awaits.
               </div>
@@ -40,26 +40,26 @@ const Outcomes = () => {
       <div className="flex flex-col md:flex-row-reverse justify-center items-center md:space-x-4 mt-8">
        
         <div className="w-full ">
-          <div className="mt-3 font-extrabold text-[#0098F1] text-xl md:text-2xl lg:text-xl xl:text-2xl font pl-0 ">
+          <div className="mt-3 font-bold text-[#0098F1] text-xl md:text-2xl lg:text-xl xl:text-2xl font pl-0 ">
             Master DevOps Practices for Career Advancement
           </div>
           <div className="pl-4">
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
                 Acquire comprehensive DevOps skills for industry recognition.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
                 Excel in infrastructure automation, continuous integration, and
                 deployment with real-world projects.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
                 Elevate your career with industry-endorsed training, preparing
                 you for industry success.
               </div>
@@ -70,27 +70,27 @@ const Outcomes = () => {
 
       <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4 mt-8">
         <div className="w-full">
-          <div className=" font-extrabold text-[#0098F1] text-xl md:text-2xl lg:text-xl xl:text-2xl font">
+          <div className=" font-bold text-[#0098F1] text-xl md:text-2xl lg:text-xl xl:text-2xl font">
             Unlock Career Opportunities with DevOps Expertise
           </div>
           <div className="pl-4">
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
                 Master infrastructure as code, continuous integration and
                 delivery, and cloud technologies for diverse job roles.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
                 Gain hands-on experience through real-world projects and case
                 studies.
               </div>
             </div>
             <div className="flex justify-start items-center gap-2 mt-2">
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base text-[#0098F1] font">
+              <div className="text-base lg:text-lg text-[#0098F1] font">
                 Prepare for success with industry-recognized certification and
                 endorsed training.
               </div>

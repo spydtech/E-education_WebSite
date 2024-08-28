@@ -142,10 +142,10 @@
 // export default SuccessStory;
 
 import React, { useEffect, useState } from "react";
-import successImage from "../../../../../../../../assets/success.png";
-import company from "../../../../../../../../assets/company.png";
-import webcertificate from "../../../../../../../../assets/webcertificate.png";
-import { ImQuotesLeft } from "react-icons/im";
+// import successImage from "../../../../../../../../assets/success.png";
+// import company from "../../../../../../../../assets/company.png";
+// import webcertificate from "../../../../../../../../assets/webcertificate.png";
+// import { ImQuotesLeft } from "react-icons/im";
 
 function SuccessStory() {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -187,7 +187,7 @@ function SuccessStory() {
           <br /> He commenced his odyssey with a dream and unwavering resolve.
           <br /> Confronted by adversity, he stood firm and persisted.
         </p>
-        <button className="bg-[#0098F1]  text-white py-2 px-4 rounded-md">
+        <button className="bg-[#0098F1] hover:bg-[#f6ac14]  text-white py-2 px-4 rounded-md">
           Start your success story
         </button>
       </div>

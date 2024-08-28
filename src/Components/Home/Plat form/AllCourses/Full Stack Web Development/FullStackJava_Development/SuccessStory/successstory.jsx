@@ -1,9 +1,7 @@
-// import React from "react";
-import React, { useState, useEffect } from "react";
-// import DotnetSuccess from "../../DotnetSuccess/DotnetSuccess3.jpg";
-import DotnetSuccess from "../../../../../../assets/success.png";
-import company from "../../../../../../assets/company.png";
-import webcertificate from "../../../../../../assets/webcertificate.png";
+import React, { useEffect, useState } from "react";
+import successImage from "../../../../../../../assets/success.png";
+import company from "../../../../../../../assets/company.png";
+import webcertificate from "../../../../../../../assets/webcertificate.png";
 import { ImQuotesLeft } from "react-icons/im";
 
 function SuccessStory() {
@@ -27,22 +25,24 @@ function SuccessStory() {
     <div className="text-center mb-8 bg-white rounded-lg p-8 shadow-lg border border-gray-200">
       <h1
         className="text-4xl  pb-4"
-          style={{ fontStyle: "italic", color: "#f6ac14", fontSize: "30px" }}
+          style={{ fontStyle: "italic", color: "#F6AC14", fontSize: "30px" }}
         >
           The Success Story of{" "}
           <span className="text-[#0098F1]" style={{ fontFamily: "Arial" }}>
-            Ethan
+            Emma
           </span>
         </h1>
 
         <p className="text-[#0098F1] mb-4 mx-4 text-justify">
-          Ethan embarked on his journey with a clear vision and <br />{" "}
-          unwavering determination.
-          <br /> Despite encountering numerous obstacles, he never faltered.
-          <br /> Through relentless perseverance and unyielding resilience
-          <br /> Ethan's relentless pursuit of his dreams inspires us all.
-          <br /> He began his adventure with passion and unwavering resolve.
-          <br /> In the face of adversity, he stood firm and persevered.
+          Emma embarked on her journey with a vivid dream and unyielding
+          determination.
+          <br /> Despite facing numerous trials, she remained resolute.
+          <br /> Through relentless perseverance and unwavering resolve, she
+          triumphed over adversity.
+          <br /> Emma's unwavering dedication motivates us all to pursue our
+          ambitions.
+          <br /> She initiated her quest with passion and unwavering resolve.
+          <br /> In the face of challenges, she stood tall and persevered.
         </p>
         <button className="bg-[#0098F1] hover:bg-[#f6ac14] text-white py-2 px-4 rounded-md">
           Start your success story
@@ -58,8 +58,8 @@ export default SuccessStory;
 // <div
 //         className="relative bg-cover bg-center w-96 h-96 mb-4 mt-4 sm:w-80 sm:h-80 md:w-96 md:h-96"
 //         style={{
-//           backgroundImage: `url(https://media.istockphoto.com/id/1310896133/photo/happy-smiling-afro-businessman-using-laptop-at-the-desk-in-office.jpg?s=612x612&w=0&k=20&c=QUQpwqaaPswBIJB6_lk5xU6HY_RevWNSwcqAErPZsOc=)`,
-//           backgroundPosition: "top ",
+//           backgroundImage: `url(https://media.istockphoto.com/id/1352606416/photo/young-woman-working-at-home-stock-photo.jpg?s=612x612&w=0&k=20&c=uKfBCoTeP54nA8KOzXDLIyoU31nZ4a4UreFE4p_x_3A=)`,
+//           backgroundPosition: "top",
 //           backgroundSize: "cover",
 //           backgroundRepeat: "no-repeat",
 //         }}
@@ -122,7 +122,7 @@ export default SuccessStory;
 //                 }}
 //               />
 //               <p style={{ marginLeft: "0px", fontSize: "10px" }}>
-//                 full stack .net
+//                 full stack java developer
 //                 <br /> certificate
 //               </p>
 //             </div>

@@ -8,13 +8,13 @@ const About = () => {
       <div className=" text-[#0098F1] lg:text-4xl font-bold text-2xl">
           About this Course
         </div>
-        <div className="pt-4 text-[#0098F1] font">
+        <div className="pt-2 lg:text-lg text-base text-[#0098F1] font">
           Mastering Full Stack Java Development involves becoming proficient in
           both front-end and back-end aspects using Java and its associated
           technologies. Here's a breakdown of what it entails:
         </div>        
         <div className="py-2 leading-2 gap-4">
-          <div className="mt-1  leading-2 tracking-tight text-[#0098F1] sm:leading-none sm:text-xl pb-2 lg:text-2xl font-bold">
+          <div className="mt-1 tracking-tight text-[#0098F1] sm:leading-none sm:text-xl pb-2 lg:text-2xl font-bold">
             Front-End Development
           </div>
           <div className="text-[#0098F1] leading-2 md:text-lg text-base ">
@@ -40,7 +40,7 @@ const About = () => {
           </div>
         </div>
         <div className="py-2 gap-4">
-          <div className="mt-1 leading-2 tracking-tight text-[#0098F1] sm:leading-none sm:text-xl pb-2 lg:text-2xl font-bold">
+          <div className="mt-1  tracking-tight text-[#0098F1] sm:leading-none sm:text-xl pb-2 lg:text-2xl font-bold">
             Back-End Development
           </div>
           <div className="text-[#0098F1] leading-2 md:text-lg text-base ">

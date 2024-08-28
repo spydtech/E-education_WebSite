@@ -5,13 +5,13 @@ const About = () => {
     <>
       <div className=" lg:pl-20  w-5/6"> 
       <div className="lg:text-4xl font-bold text-2xl text-[#0098F1] ">About this Course</div>
-        <div className="pt-4 w-full text-[#0098F1] pb-8 font">
+        <div className="pt-2 w-full text-[#0098F1] lg:text-lg text-base  font">
         Mastering .NET Full Stack Development involves becoming proficient in
           both front-end and back-end technologies, enabling developers to build
           scalable and dynamic web applications. Here's a breakdown of the
           essential skills:
-        </div>         
-        <div className="py-2 gap-4 leading-2 pb-8 ">
+        </div>
+        <div className="py-2 gap-4 leading-2  ">
           <div className="mt-1 tracking-tight text-[#0098F1] sm:leading-none sm:text-xl pb-2 lg:text-2xl font-bold"> Front-End Development:</div>
           <div className="  text-[#0098F1] leading-2 lg:text-lg text-base">
             <span className="mt-3 text-[#F6AC14] sm:mt-5 text-lg font-medium">ASP.NET Core:
@@ -21,20 +21,20 @@ const About = () => {
             architecture.
           </div>
           <div className="text-[#0098F1] leading-2 lg:text-lg text-base">
-            <span className="mt-3 text-xl  text-[#F6AC14] sm:mt-5 font-medium ">  HTML/CSS:
+            <span className="mt-3 text-lg  text-[#F6AC14] sm:mt-5 font-medium ">  HTML/CSS:
             </span>{" "}
             Proficiency in HTML and CSS is necessary for structuring web pages
             and styling them to create visually appealing designs.
           </div>
           <div className="  text-[#0098F1] leading-2 lg:text-lg text-base">
-            <span className="mt-3  font-lg text-[#F6AC14]  sm:mt-5 text-lg font-medium">
+            <span className="mt-3 text-[#F6AC14]  sm:mt-5 text-lg font-medium">
             JavaScript:
             </span>{" "}
             A strong understanding of JavaScript is fundamental for implementing
             client-side logic and enhancing user experiences.
           </div>
         </div>
-        <div className="py-2 gap-4 pb-8 ">
+        <div className="py-2 gap-4 ">
           <div className="mt-1  tracking-tight leading-2 sm:leading-none sm:text-xl pb-2 lg:text-2xl font-bold text-[#0098F1]"> Back-End Development:</div>
           <div className="  text-[#0098F1] leading-2 lg:text-lg text-base">
             <span className="mt-3   text-[#F6AC14] sm:mt-5 text-lg font-medium">
@@ -64,7 +64,7 @@ const About = () => {
             <div>
             <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
             </div>
-            <div className="  text-[#0098F1] text-lg font-medium" > Master the skills needed for .NET Full Stack Development.</div>
+            <div className="  text-[#0098F1] text-lg " > Master the skills needed for .NET Full Stack Development.</div>
           </div>
           <div className="flex justify-start items-center font mt-2">
             <div>

@@ -25,7 +25,7 @@ const DotnetDeveloperSkills = () => {
       <DotnetDevelopmentCard />
       <div className="container mx-auto ">
         <h2 className=" font-bold text-gray-900 py-4 mb-4 sm:text-xl text-xl md:text-4xl lg:text-5xl text-center">
-          Full Stack <span className="text-[#F6AC14]">Web Development</span>{" "}
+          Full Stack <span className="text-[#F6AC14]">Dot Net Development</span>{" "}
           Skills
         </h2>
         <div className="flex flex-col lg:flex-row  md:justify-center gap-8">

@@ -31,17 +31,18 @@ const FullStackDevopsDevelopmentTestimonioals = () => {
   const [isArrowClicked, setIsArrowClicked] = useState(false);
   const [flippedCardIndex, setFlippedCardIndex] = useState(null);
 
+  
   const testimonials = [
     {
-      imageSrc: "https://img.freepik.com/free-photo/female-student-with-books-paperworks_1258-48204.jpg?t=st=1715830841~exp=1715834441~hmac=2346133ec64dcee998aeefeb1d577beec37175baa1f0c5b0c16db1c232342ccf&w=996",
-      text: "Education goes beyond improving work skills; it's about personal growth. E-learning empowers me to learn without boundaries."
+      imageSrc: "https://img.freepik.com/free-photo/international-day-education-celebration_23-2150930946.jpg?semt=ais_hybrid",
+      text:"Education goes beyond improving work skills; it's about personal growth. E-learning empowers me to learn without boundaries."
     },
     {
-      imageSrc: "https://media.istockphoto.com/id/1144287280/photo/focused-african-student-looking-at-laptop-holding-book-doing-research.jpg?s=612x612&w=0&k=20&c=Ee2sGNsiZXbkCchKwZPX8Z9JDzcBscr4fGAjx5kDnUc=",
-      text: "The courses offered deep insights and practical knowledge.I've grown both professionally and personally."
+      imageSrc: "https://img.freepik.com/free-photo/medium-shot-smiley-young-traveller_23-2148570581.jpg?semt=ais_hybrid",
+      text:"The courses offered deep insights and practical knowledge.I've grown both professionally and personally."
     },
     {
-      imageSrc: "https://img.freepik.com/free-photo/female-student-with-books-paperworks_1258-48204.jpg?t=st=1715830841~exp=1715834441~hmac=2346133ec64dcee998aeefeb1d577beec37175baa1f0c5b0c16db1c232342ccf&w=996",
+      imageSrc: "https://img.freepik.com/free-photo/beautiful-girl-with-blue-t-shirt-books_144627-10275.jpg?t=st=1722908122~exp=1722911722~hmac=8aa7ae7dc155eeb4d2e2ff2b66e84e5134f42a13a09bdb484baaf9a405e9270a&w=740",
       text: "The structured learning paths helped me focus and progress quickly, The flexibility is unparalleled."
     }
   ];
@@ -72,7 +73,7 @@ const FullStackDevopsDevelopmentTestimonioals = () => {
   return (
     <div className="flex flex-col items-center pt-4 space-y-8">
       <h2 className="sm:text-xl text-xl md:text-4xl lg:text-5xl font-semibold text-[#0098F1] text-center mb-4">
-        Why<span className=" bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">People Choose </span>{" "}<span className=" text-[#F6AC14]"> Us</span>
+        Why{" "}<span className=" bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">People Choose </span>{" "}<span className=" text-[#F6AC14]"> Us</span>
       </h2>
       <div className="hidden md:flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
         {testimonials.map((testimonial, index) => (

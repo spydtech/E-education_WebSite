@@ -27,7 +27,7 @@ const FullStackPythonDeveloper = () => {
       <FullStackPythonDevelopmentCard />
       <div className="container mx-auto ">
         <h2 className=" font-bold text-gray-900 py-4 mb-4 sm:text-xl text-xl md:text-3xl lg:text-4xl text-center">
-          Full Stack <span className="text-[#F6AC14]">Web Development</span>{" "}
+          Full Stack <span className="text-[#F6AC14]">Python Development</span>{" "}
           Skills
         </h2>
         <div className="flex flex-col lg:flex-row  md:justify-center gap-8">

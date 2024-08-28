@@ -8,7 +8,7 @@ const About = () => {
       <div className="fone-bold text-[#0098F1] lg:text-4xl font-bold text-2xl  md:text-3xl ">
           About this Course
         </div>
-        <div className="pt-4 text-[#0098F1] font">
+        <div className="pt-4 lg:text-lg text-base text-[#0098F1] font">
           Mastering Full Stack DevOps Development involves becoming proficient
           in continuous integration, deployment, and infrastructure management
           using a variety of tools and technologies. Here's a breakdown of what
@@ -59,7 +59,7 @@ const About = () => {
             Infrastructure Management
           </div>
           <div className="text-[#0098F1] leading-2 lg:text-lg text-base">
-            <span className="mt-3 font-bold text-base text-[#F6AC14] sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font">
+            <span className="mt-3 font-semibold text-base text-[#F6AC14] sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font">
               Infrastructure as Code (IaC):
             </span>{" "}
             Knowledge of IaC tools like Terraform or Ansible is essential for

@@ -29,8 +29,9 @@ const ParticularFullStack = () => {
     <>
     <Navbar />
     <div className="pl-4 ">
-      <div className="w-full flex flex-col mb-8  p-6 lg:flex-row  items-center md:justify-center gap-4 md:px-8 lg:px-16 xl:px-32  ">
-        <div className="md:w-3/4 text-center lg:text-left">
+      <div className="w-full flex flex-col mb-8  p-6 lg:flex-row  items-center md:justify-center gap-4 md:px-8 lg:px-16 2xl:px-32  ">
+        <div className=""></div>
+        <div className="lg:w-2/3 text-center lg:text-left">
           <h3 className="  text-xl md:text-3xl lg:text-4xl font-bold leading-tight sm:leading-none tracking-tight text-gray-900">
             Master{" "}
             <span className="text-[#F6AC14]">Full Stack</span> Web Development
