@@ -90,14 +90,14 @@ function AdvancewordpressKeyHighlights() {
   };
 
   return (
-    <div className="px-20 mb-20 bg-white">
+    <div className="md:px-20 px-10 mb-20 bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start justify-center">
         <div className="w-auto h-auto md:lg:w-[500px] md:lg:h-[420px] mt-10 md:lg:pl-10 pl-0 text-xl">
           {renderContent()}
         </div>
         <div className="md:lg:pl-20 pl-0">
           <div className="pt-4">
-            <p className="font-bold underline-offset-2 underline text-xl p-2 text-[#f6ac14]">
+            <p className="font-bold underline-offset-2 underline text-xl  text-[#f6ac14]">
               Advanced wordpress Key Highlights
             </p>
           {/*}  <div className="flex space-x-3 pt-4">
@@ -105,7 +105,7 @@ function AdvancewordpressKeyHighlights() {
               <p className="text-2xl font-bold text-[#f6ac14]">Course have to offer?</p>
             </div>*/}
           </div>
-          <div className="pt-4 -ml-10 md:ml-10 lg:-ml-0 lg:ml-10">
+          <div className="pt-4 ">
             {data.map((item, index) => (
               <div
                 key={index}

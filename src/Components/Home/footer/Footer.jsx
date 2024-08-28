@@ -63,20 +63,26 @@ function FooterPart() {
     {
       title: "Community",
       links: [
-        // { label: "Discuss", Link: "/" },
-        // { label: "Code Bits", Link: "/" },
+        { label: "Discuss", Link: "/" },
         { label: "Feeds", Link: "/PostFeeds" },
         { label: "Ask me!", Link: "/QuestionForm" },
+      ],
+      socialIcons: [
+        { icon: <SlSocialLinkedin className="w-6 h-6  text-blue-500" />, Link: "https://www.linkedin.com/company/e-edu/" },
+        { icon: <FaFacebookF className="w-6 h-6 text-blue-800" />, Link: "https://www.facebook.com/profile.php?id=61558814622409" },
+        { icon: <FiTwitter className="w-6 h-6 text-blue-500" />, Link: "https://x.com/eeducatione07" },
+        { icon: <BsInstagram className="w-6 h-6 text-pink-700" />, Link: "https://www.instagram.com/eeducatione07/" },
+        { icon: <FaYoutube className="w-6 h-6 text-red-600" />, Link: "https://www.youtube.com/@EEducationOnline" },
       ],
     },
   ];
 
   return (
     <>
-      <footer className=" h-auto bg-black font">
-        <div className=" p-2   pb-4 text-sm">
-          <div className="container mx-auto px-6 pt-24  flex justify-center">
-            <div className="grid grid-cols-4  gap-6 md:grid-cols-8 lg:grid-cols-12 justify-around   bg-black">
+      <footer className="h-auto bg-white font">
+        <div className="p-2 pb-4 text-sm">
+          <div className="container mx-auto px-6 pt-24 flex justify-center">
+            <div className="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12 justify-around bg-white">
               <div className="col-span-2 md:col-span-2 lg:col-span-2">
                 <a
                   id="WindUI-5-logo"
@@ -92,25 +98,24 @@ function FooterPart() {
               {sections.map((section, index) => (
                 <div
                   key={index}
-                  className="col-span-2 md:col-span-4 lg:col-span-2 "
+                  className="col-span-2 md:col-span-4 lg:col-span-2"
                   aria-labelledby={`footer-${section.title
                     .toLowerCase()
                     .replace(/\s+/g, "-")}`}
                 >
                   <h3
-                    className="mb-6 text-[20px] font-medium text-white"
+                    className="mb-6 text-[20px] font-medium text-black"
                     id={`footer-${section.title
                       .toLowerCase()
                       .replace(/\s+/g, "-")}`}
                   >
                     {section.title}
                   </h3>
-                  {/*  */}
                   <ul>
-                    {section.links.map((link, index) => (
+                    {section.links.map((link, linkIndex) => (
                       <li
-                        key={index}
-                        className="mb-2 text-gray-400 leading-7 text-[18px]"
+                        key={linkIndex}
+                        className="mb-2 text-black leading-7 text-[18px]"
                       >
                         <Link
                           to={link.Link}
@@ -121,96 +126,29 @@ function FooterPart() {
                       </li>
                     ))}
                   </ul>
+                  {section.socialIcons && (
+                    <div className="flex gap-4 mt-4">
+                      {section.socialIcons.map((social, socialIndex) => (
+                        <a
+                          key={socialIndex}
+                          href={social.Link}
+                          className="transition-colors duration-300 hover:opacity-75"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {social.icon}
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
           </div>
         </div>
-        {/* foot */}
-        <div className="container mx-auto flex justify-center items-center  px-8 py-6 bg-gray-900  text-white ">
-          <div className="grid gap-6 md:ml-10 md:grid-cols-3 md:px-10 lg:grid-cols-5  grid-cols-2">
-            <div>
-              <Link
-                to="https://www.linkedin.com/company/e-edu/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mr-2 flex items-center font-medium w-36"
-              >
-                <SlSocialLinkedin
-                  className="w-12 h-10 text-blue-500 mr-3"
-                  alt="LinkedIn"
-                />
-                Follow us on LinkedIn
-              </Link>
-            </div>
-
-            <div>
-              {" "}
-              <a
-                href=" https://www.facebook.com/profile.php?id=61558814622409"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mr-4 flex items-center font-medium w-40"
-              >
-                <FaFacebookF
-                  className="w-12 h-10 text-blue-800 mr-3"
-                  alt="LinkedIn"
-                />
-                Check out our facebook
-              </a>
-            </div>
-
-            <div>
-              {" "}
-              <a
-                href=" https://x.com/eeducatione07"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mr-4 flex items-center font-medium w-36"
-              >
-                <FiTwitter
-                  className="w-12 h-12 text-blue-500 mr-3"
-                  alt="LinkedIn"
-                />
-                See what we tweet about
-              </a>
-            </div>
-
-            <div>
-              {" "}
-              <a
-                href=" https://www.instagram.com/eeducatione07/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mr-4 flex items-center font-medium w-36"
-              >
-                <BsInstagram
-                  className="w-12 h-12 text-pink-700 mr-3"
-                  alt="LinkedIn"
-                />
-                Join our instagram
-              </a>
-            </div>
-
-            <div>
-              <a
-                href="https://www.youtube.com/@EEducationOnline"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mr-4 flex items-center font-medium w-36"
-              >
-                <FaYoutube
-                  className="w-12 h-12 text-red-600 mr-3"
-                  alt="LinkedIn"
-                />
-                Watch our youtube
-              </a>
-            </div>
-          </div>
-        </div>
         <div className="mt-4 mx-auto text-center">
-          <p className="text-xs text-white">
-            &copy; {new Date().getFullYear()} SPY D Technology . All rights reserved.
+          <p className="text-xs text-black">
+            &copy; {new Date().getFullYear()} SPY D Technology. All rights reserved.
           </p>
         </div>
       </footer>
