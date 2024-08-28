@@ -40,7 +40,7 @@ const AdvancewordpressNavigation = () => {
     } else {
       setCurrentSection(index);
     }
-    setMenuOpen(true); // Close the menu when a section is selected
+    setMenuOpen(false); // Close the menu when a section is selected
   };
 
   const toggleMenu = () => {
@@ -49,7 +49,7 @@ const AdvancewordpressNavigation = () => {
 
   return (
     <>
-      <nav className="flex bg-[#0098f1] rounded-t-2xl px-4 sm:px-6 py-4 mt-4">
+      <nav className="flex bg-[#0098f1] rounded-t-2xl px-4 sm:px-6 py-4 mt-4 m-4">
         <button className="text-white text-2xl sm:hidden" onClick={toggleMenu}>
           {menuOpen ? <FaTimes /> : <FaBars />}{" "}
           {/* Toggle between menu and close icon */}
@@ -57,10 +57,10 @@ const AdvancewordpressNavigation = () => {
         <ul
           className={`${
             menuOpen ? "block" : "hidden"
-          } sm:flex sm:flex-row flex-col text-nowrap overflow-x-auto xl:lg:md:text-[22px] text-16px text-white font-md space-y-2 sm:space-y-0 sm:space-x-4`}
+          } lg:flex lg:flex-row flex-col text-nowrap overflow-x-auto xl:lg:md:text-[22px] text-16px text-white font-md space-y-2 lg:space-y-0 `}
         >
           {sections.map((section, index) => (
-            <li key={index} className="mt-2 text-center sm:mt-0">
+            <li key={index} className="mt-2 text-center lg:mt-0">
               <button
                 className={`text-white transition duration-300 ${
                   currentSection === index
@@ -73,9 +73,9 @@ const AdvancewordpressNavigation = () => {
               </button>
             </li>
           ))}
-          <li className="mt-2 sm:mt-0 flex items-center justify-center">
+          <li className="mt-2 lg:mt-0 flex items-center justify-center">
             <button
-              className="text-white text-2xl hover:text-violet-700 transition duration-300"
+              className="text-white text-2xl hover:text-yellow-500 transition duration-300"
               onClick={() => handleNextSection("next")}
             >
               <TbPlayerTrackNextFilled />

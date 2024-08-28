@@ -40,7 +40,7 @@ const CloudComputingNavigation = () => {
     } else {
       setCurrentSection(index);
     }
-    setMenuOpen(true); // Close the menu when a section is selected
+    setMenuOpen(false); // Close the menu when a section is selected
   };
 
   const toggleMenu = () => {
@@ -49,15 +49,17 @@ const CloudComputingNavigation = () => {
 
   return (
     <>
-      <nav className="flex bg-[#0098f1] rounded-t-2xl px-4 sm:px-6 py-4 mt-4">
-        <button className="text-black text-2xl sm:hidden" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes className="mb-56" /> : <FaBars />}{" "}
-          {/* Toggle between menu and close icon */}
+      <nav className="relative flex bg-[#0098f1] rounded-t-2xl px-4 sm:px-6 lg:py-4 py-6 mt-4 m-4">
+        <button
+          className="text-black text-2xl lg:hidden absolute top-4 left-4"
+          onClick={toggleMenu}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
         <ul
           className={`${
             menuOpen ? "block" : "hidden"
-          } sm:flex sm:flex-row flex-col text-nowrap overflow-x-auto xl:lg:md:text-[22px] text-16px text-white font-md space-y-2 sm:space-y-0 sm:space-x-4`}
+          } lg:flex px-12 md:pl-56 lg:px-12 lg:flex-row flex-col text-nowrap overflow-x-auto xl:lg:md:text-[22px] text-[16px] text-white font-md space-y-2 lg:space-y-0 lg:space-x-4`}
         >
           {sections.map((section, index) => (
             <li key={index} className="mt-2 text-center sm:mt-0">
@@ -83,7 +85,7 @@ const CloudComputingNavigation = () => {
           </li>
         </ul>
       </nav>
-      <div className="">
+      <div>
         {currentSection === 0 && <CloudComputingIntroduction />}
         {currentSection === 1 && <CloudComputingKeyHighights />}
         {currentSection === 2 && <CloudComputingCareersOutcomes />}

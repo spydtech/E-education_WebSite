@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function BlockChainKeyHighights() {
+function BlockChainKeyHighlights() {
   const [selectedItem, setSelectedItem] = useState(0);
 
   const data = [
@@ -21,64 +21,61 @@ function BlockChainKeyHighights() {
         return (
           <ul className="space-y-2 pt-4 font-normal text-[16px] list-disc">
             <p className="text-2xl font-medium text-[#f6ac14] py-4">Overview</p>
-            <li>Advanced modules with Generative AI fusion</li>
-            <li>E-education certificate via upGrad collaboration</li>
-            <li>Access to live training sessions by Meta Blueprint trainers</li>
-            <li>15+ Case Studies, Live projects</li>
-            <li>Earn E-Education Executive Alumni Status</li>
-            <li>90+ Tool Video Library</li>
-            <li>Industry mentor-led fortnightly coaching</li>
-            <li>Tailored resume feedback</li>
-            <li>Mock Interview by managers</li>
-            <li>Explore ChatGPT in digital marketing tutorials</li>
+            <li>Introduction to blockchain technology and its fundamentals.</li>
+            <li>Understanding of decentralized networks and distributed ledgers.</li>
+            <li>Exploration of various consensus algorithms and smart contracts.</li>
+            <li>Case studies of blockchain applications in different industries.</li>
+            <li>Hands-on experience with blockchain development tools and platforms.</li>
           </ul>
         );
       case 1:
         return (
           <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
             <p className="text-2xl font-medium text-[#f6ac14] py-4">Key Concepts</p>
-            <li>Generative AI in digital marketing</li>
-            <li>SEO</li>
-            <li>Search and Display advertising</li>
-            <li>Social and Display advertising</li>
-            <li>Content Marketing</li>
-            <li>Branding</li>
-            <li>Web Analytics</li>
+            <li>Blockchain Basics and History</li>
+            <li>Cryptographic Hash Functions</li>
+            <li>Consensus Mechanisms: Proof of Work, Proof of Stake</li>
+            <li>Smart Contracts and DApps</li>
+            <li>Tokenomics and Cryptocurrencies</li>
+            <li>Decentralized Finance (DeFi)</li>
+            <li>Blockchain Security and Privacy</li>
           </ul>
         );
       case 2:
         return (
           <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
             <p className="text-2xl font-medium text-[#f6ac14] py-4">Applications</p>
-            <li>Digital Marketing Manager</li>
-            <li>SEM Manager</li>
-            <li>SEO Manager</li>
-            <li>Social Media and Content Manager</li>
-            <li>Associate</li>
-            <li>Consultant</li>
-            <li>Business Analyst</li>
-            <li>(Sr.) Associate-Digital Marketing</li>
+            <li>Cryptocurrencies and Digital Payments</li>
+            <li>Supply Chain Management</li>
+            <li>Healthcare Data Management</li>
+            <li>Decentralized Finance (DeFi) Platforms</li>
+            <li>Smart Contracts and Legal Agreements</li>
+            <li>Voting Systems and Governance</li>
+            <li>Intellectual Property and Digital Rights Management</li>
           </ul>
         );
       case 3:
         return (
           <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
             <p className="text-2xl font-medium text-[#f6ac14] py-4">Skills Developed</p>
-            <li>List of target audience goes here...</li>
-            <li>Explore 2 tracks & 5 specializations for diverse learning.</li>
-            <li>Experience seamless integration with Gen AI modules.</li>
-            <li>Attain E-Education Executive Alumni Status for exclusive benefits.</li>
-            <li>Access EMI at RS. 2,879/month for greater flexibility.</li>
-            <li>A voucher worth $50 for Meta's "Digital Marketing Associate" certificate exam, free of cost.</li>
+            <li>Understanding of Blockchain Technology and Architecture</li>
+            <li>Development of Smart Contracts and Decentralized Applications (DApps)</li>
+            <li>Implementation of Blockchain Security Measures</li>
+            <li>Exploring Cryptocurrencies and Token Creation</li>
+            <li>Designing Blockchain Solutions for Real-World Problems</li>
+            <li>Analyzing Blockchain Trends and Future Directions</li>
           </ul>
         );
       case 4:
         return (
           <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
             <p className="text-2xl font-medium text-[#f6ac14] py-4">Target Audience</p>
-            <li>Utilize ChatGPT to assist in creating unique content, planning strategies, building calendars, and more</li>
-            <li>Generative SEO-optimized content with ChatGPT</li>
-            <li>Gain insights into your social media analytics by using ChatGPT</li>
+            <li>Blockchain Enthusiasts and Developers</li>
+            <li>IT Professionals and System Architects</li>
+            <li>Financial Analysts and Cryptocurrency Traders</li>
+            <li>Legal Professionals interested in Smart Contracts</li>
+            <li>Supply Chain and Healthcare Professionals</li>
+            <li>Anyone interested in understanding and leveraging blockchain technology</li>
           </ul>
         );
       default:
@@ -87,18 +84,18 @@ function BlockChainKeyHighights() {
   };
 
   return (
-    <div className="px-20 mb-20 bg-white">
+    <div className="px-10 mb-20 bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start justify-center">
-        <div className="w-auto h-auto md:lg:w-[500px] md:lg:h-[420px] mt-10 md:lg:pl-10 pl-0 text-xl">
+        <div className="w-auto h-auto md:w-[550px] md:h-[420px] mt-10 md:pl-10 pl-0 text-xl">
           {renderContent()}
         </div>
-        <div className="md:lg:pl-20 pl-0">
+        <div className="md:pl-10 pl-0">
           <div className="pt-4">
-            <p className="font-bold underline-offset-2 underline text-xl p-2 text-[#f6ac14]">
-              E-Education Course Highlights
+            <p className="font-bold underline-offset-2 underline text-xl  text-[#f6ac14]">
+              Blockchain Course Highlights
             </p>
           </div>
-          <div className="pt-4 -ml-10 md:ml-10 lg:-ml-0 lg:ml-10">
+          <div className="pt-4 lg:ml-10">
             {data.map((item, index) => (
               <div
                 key={index}
@@ -119,4 +116,4 @@ function BlockChainKeyHighights() {
   );
 }
 
-export default BlockChainKeyHighights;
+export default BlockChainKeyHighlights;

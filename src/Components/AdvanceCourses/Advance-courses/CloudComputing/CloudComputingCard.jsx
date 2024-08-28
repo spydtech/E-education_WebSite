@@ -38,7 +38,7 @@ const CloudComputingCard = () => {
     <section id="portfolio" className="portfolio-section py-10 md:py-0 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl pb-2 md:text-4xl lg:text-5xl font-medium">
+          <h2 className="text-xl sm:pb-2 md:text-4xl lg:text-5xl font-medium">
             <span className="text-[#f6ac14]">Mastering</span>
             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
               {" "}
@@ -46,9 +46,6 @@ const CloudComputingCard = () => {
             </span>
             <span className="text-[#0098f1]"> Build Scalable Solutions</span>
           </h2>
-          {/*<p className="text-lg text-[#31cb00] font-semibold mt-2">
-            Enhance your cloud computing skills with our comprehensive AWS courses. Dive deep into AWS services and gain hands-on experience. Whether novice or pro, build scalable and reliable cloud solutions with confidence.
-          </p>*/}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {courseData.map((course, index) => (
