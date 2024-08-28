@@ -3,7 +3,6 @@ import Ui_UxKeyHighights from "./Ui_UxKeyHighights";
 import Ui_UxCertificate from "./Ui_UxCertificate";
 import Ui_UxCareersOutcomes from "./Ui_UxCareersOutcomes";
 import Ui_UxAbout from "./Ui_UxAbout";
-import { TbPlayerTrackNextFilled } from "react-icons/tb";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for menu toggle
 import Ui_UxSyallabus from "./Ui_UxSyallabus";
 import Ui_UxIntroduction from "./Ui_UxIntroduction";
@@ -49,15 +48,14 @@ const Ui_UxNavigation = () => {
 
   return (
     <>
-      <nav className="flex bg-[#0098f1] rounded-t-2xl px-4 sm:px-6 py-4 mt-4">
-        <button className="text-black text-2xl sm:hidden" onClick={toggleMenu}>
+      <nav className="flex bg-[#0098f1] rounded-t-2xl px-4 sm:px-6 py-4 mt-4 m-4">
+        <button className="text-black text-2xl lg:hidden " onClick={toggleMenu}>
           {menuOpen ? <FaTimes className="mb-56" /> : <FaBars />}{" "}
-          {/* Toggle between menu and close icon */}
         </button>
         <ul
           className={`${
             menuOpen ? "block" : "hidden"
-          } sm:flex sm:flex-row flex-col text-nowrap overflow-x-auto xl:lg:md:text-[22px] text-16px text-white font-md space-y-2 sm:space-y-0 sm:space-x-4`}
+          } lg:flex px-12  md:pl-56 lg:px-12 lg:flex-row flex-col text-nowrap overflow-x-auto xl:lg:md:text-[22px] text-16px text-white font-md space-y-2 lg:space-y-0 lg:space-x-4`}
         >
           {sections.map((section, index) => (
             <li key={index} className="mt-2 text-center sm:mt-0">
@@ -73,14 +71,6 @@ const Ui_UxNavigation = () => {
               </button>
             </li>
           ))}
-          <li className="mt-2 sm:mt-0 flex items-center justify-center">
-            <button
-              className="text-white text-2xl hover:text-blue-700 transition duration-300"
-              onClick={() => handleNextSection("next")}
-            >
-              <TbPlayerTrackNextFilled />
-            </button>
-          </li>
         </ul>
       </nav>
       <div className="">

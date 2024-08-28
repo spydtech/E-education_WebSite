@@ -13,17 +13,17 @@ const Ui_UxHero = () => {
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center w-10/12 mx-auto overflow-x-hidden md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5">
-        <div className="order-2 lg:order-1 w-auto h-auto pr-10 md:mb-14 py- font md:py-0 mx-auto">
-          <h1 className="text-[18px] md:text-[26px] lg:text-[28px] font-semibold text-[#f6ac14] leading-tight">
+        <div className="order-2 lg:order-1 w-auto h-auto md:mb-14 font md:py-0 mx-auto">
+          <h1 className="text-[18px] md:text-[26px] lg:text-[28px] font-semibold text-[#f6ac14] inline  leading-tight text-start">
             Master UI/UX Design and Create Exceptional User Experiences!
           </h1>
-          <p className="text-lg text-gray-500 md:py-6 leading-10">
+          <p className="text-lg text-gray-500 flex items-center justify-center pl-3 leading-8 mt-4">
             Dive into the world of UI/UX design. Learn the principles of user-centered design, enhance your skills, and create visually stunning and user-friendly interfaces. Our resources will take you from basics to advanced techniques in UI/UX design.
           </p>
-          <div className="mt-4 md:w-[250px] md:h-[70px] w-auto h-auto lg:w-[160px] lg:h-[60px] flex justify-center items-center md:ml-48">
+          <div className="mt-6 md:w-[250px] md:h-[70px] w-auto h-auto lg:w-[160px] lg:h-[60px] flex justify-center items-center md:ml-48">
             <button
               onClick={handleEnroll}
-              className="px-5 w-auto font-sans h-full py-3 text-[26px] font-medium text-white bg-[#0098f1] rounded-[22px] md:px-6"
+              className="px-5 md:w-full w-auto font-sans h-full py-3 text-[26px] font-medium text-white bg-[#0098f1] rounded-[22px] md:px-6"
             >
               Enroll Now
             </button>

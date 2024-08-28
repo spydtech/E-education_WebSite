@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function BasicJavaKeyHighights() {
+function BasicJavaKeyHighlights() {
   const [selectedItem, setSelectedItem] = useState(0);
 
   const data = [
@@ -36,9 +36,7 @@ function BasicJavaKeyHighights() {
       case 1:
         return (
           <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">
-              Key Concepts
-            </p>
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Key Concepts</p>
             <li>Generative AI in digital marketing</li>
             <li>SEO</li>
             <li>Search and Display advertising</li>
@@ -51,9 +49,7 @@ function BasicJavaKeyHighights() {
       case 2:
         return (
           <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">
-              Applications
-            </p>
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Applications</p>
             <li>Digital Marketing Manager</li>
             <li>SEM Manager</li>
             <li>SEO Manager</li>
@@ -67,36 +63,22 @@ function BasicJavaKeyHighights() {
       case 3:
         return (
           <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">
-              Skills Developed
-            </p>
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Skills Developed</p>
             <li>List of target audience goes here...</li>
             <li>Explore 2 tracks & 5 specializations for diverse learning.</li>
             <li>Experience seamless integration with Gen AI modules.</li>
-            <li>
-              Attain E-Education Executive Alumni Status for exclusive benefits.
-            </li>
+            <li>Attain E-Education Executive Alumni Status for exclusive benefits.</li>
             <li>Access EMI at RS. 2,879/month for greater flexibility.</li>
-            <li>
-              A voucher worth $50 for Meta's "Digital Marketing Associate"
-              certificate exam, free of cost.
-            </li>
+            <li>A voucher worth $50 for Meta's "Digital Marketing Associate" certificate exam, free of cost.</li>
           </ul>
         );
       case 4:
         return (
           <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">
-              Target Audience
-            </p>
-            <li>
-              Utilize ChatGPT to assist in creating unique content, planning
-              strategies, building calendars, and more.
-            </li>
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Target Audience</p>
+            <li>Utilize ChatGPT to assist in creating unique content, planning strategies, building calendars, and more.</li>
             <li>Generative SEO-optimized content with ChatGPT</li>
-            <li>
-              Gain insights into your social media analytics by using ChatGPT
-            </li>
+            <li>Gain insights into your social media analytics by using ChatGPT</li>
           </ul>
         );
       default:
@@ -105,26 +87,18 @@ function BasicJavaKeyHighights() {
   };
 
   return (
-    <div className="px-20 mb-20 bg-white">
+    <div className="sm:px-20 pl-12 mb-20 bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start justify-center">
         <div className="w-auto h-auto md:lg:w-[500px] md:lg:h-[420px] mt-10 md:lg:pl-10 pl-0 text-xl">
           {renderContent()}
         </div>
-        <div className="md:lg:pl-20 pl-0">
-          <div className="pt-4">
-            <p className="font-bold underline-offset-2 underline text-xl p-2 text-[#f6ac14]">
+        <div className="">
+          <div className="pt-4 lg:pl-12">
+            <p className="font-bold underline-offset-2 underline text-xl text-[#f6ac14]">
               E-Education Course Highlights
             </p>
           </div>
-          <div className="flex items-center space-x-3">
-           {/*} <p className="text-xl font-bold text-[#f6ac14] inline">
-              What does this
-            </p>
-            <p className="text-xl font-bold text-[#0098f1] inline">
-              Course have to offer?
-            </p>*/}
-          </div>
-          <div className="pt-4 lg:-ml-0 lg:ml-10">
+          <div className="pt-4 lg:ml-10">
             {data.map((item, index) => (
               <div
                 key={index}
@@ -145,4 +119,4 @@ function BasicJavaKeyHighights() {
   );
 }
 
-export default BasicJavaKeyHighights;
+export default BasicJavaKeyHighlights;

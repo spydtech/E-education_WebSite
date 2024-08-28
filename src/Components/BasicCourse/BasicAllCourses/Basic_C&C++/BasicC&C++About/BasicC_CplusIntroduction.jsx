@@ -5,33 +5,31 @@ function BasicC_CplusIntroduction() {
 
   const Slide = ({ heading, items }) => {
     return (
-      <div className="w-full flex-shrink-0 px-2 py-8">
-        <div className="h-auto flex flex-col justify-center">
-          <div>
-            <h2 className="text-2xl lg:text-3xl font-medium mb-2 text-white font-sans">
-              {heading}
-            </h2>
-            <ul className="list-disc list-inside text-lg lg:text-xl pl-6 text-white">
-              {items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="flex justify-between mt-8 pt-10 lg:mt-0">
-            <button
-              onClick={goToPreviousSlide}
-              className="hover:text-pink-700 text-white font-bold px-4 rounded"
-            >
-              Previous
-            </button>
-            <div className="text-white">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-            <button
-              onClick={goToNextSlide}
-              className="hover:text-pink-700 text-white font-bold px-4 rounded"
-            >
-              Next
-            </button>
-          </div>
+      <div className="w-full flex-shrink-0 px-2 py-8 flex flex-col h-full relative overflow-hidden">
+        <div className="flex-grow pb-28">
+          <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
+            {heading}
+          </h2>
+          <ul className="list-disc list-outside text-lg lg:text-xl pl-10 text-start text-white">
+            {items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="absolute left-0 right-0 bottom-0 flex justify-between">
+          <button
+            onClick={goToPreviousSlide}
+            className="hover:text-[#f6ac14] text-white font-bold rounded px-4"
+          >
+            Previous
+          </button>
+          <div className="text-white">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+          <button
+            onClick={goToNextSlide}
+            className="hover:text-[#f6ac14] text-white font-bold rounded px-4"
+          >
+            Next
+          </button>
         </div>
       </div>
     );
@@ -92,8 +90,8 @@ function BasicC_CplusIntroduction() {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[468px] bg-white mb-16">
-      <div className="flex items-center justify-center lg:pr-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-screen h-auto mb-16">
+      <div className="flex items-center justify-center">
         <div className="text-start px-4 lg:px-10">
           <div>
             <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
@@ -113,16 +111,14 @@ function BasicC_CplusIntroduction() {
           </div>
         </div>
       </div>
-      <div className="h-auto lg:h-[468px] flex justify-center">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-4 lg:px-10 mt-10 lg:mt-0">
-          <div className="bg-[#0098f1] w-full lg:w-auto h-auto lg:h-auto p-5 mt-4 mb-2 shadow-xl sm:rounded-lg">
-            <div className="relative w-full">
-              <div className="flex text-white text-opacity-80">
-                <Slide
-                  heading={slidesData[currentSlide].heading}
-                  items={slidesData[currentSlide].items}
-                />
-              </div>
+      <div className="h-auto lg:h-[650px] flex justify-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-4 lg:px-14 xl:px-36 sm:mt-8 lg:mt-0 lg:mr-32">
+          <div className="bg-[#0098f1] relative w-full lg:w-[500px] lg:h-[400px] md:h-[300px] sm:h-[400px] h-[450px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg">
+            <div className="relative w-full h-full">
+              <Slide
+                heading={slidesData[currentSlide].heading}
+                items={slidesData[currentSlide].items}
+              />
             </div>
           </div>
         </div>

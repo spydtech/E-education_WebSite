@@ -50,7 +50,7 @@ const BasicJavaCard = () => {
     <section id="portfolio" className="portfolio-section py-10 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-xl pb-2 md:text-4xl lg:text-5xl font-medium">
+          <h2 className="text-3xl pb-2 md:text-4xl lg:text-5xl font-medium">
             <span className="text-[#f6ac14]">Mastering</span>
             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
               {" "}
@@ -58,9 +58,6 @@ const BasicJavaCard = () => {
             </span>
             <span className="text-[#0098f1]"> Building Applications</span>
           </h2>
-        {/*}  <p className="text-lg text-[#31cb00] font-semibold mt-2">
-            Enhance your expertise with our Java programming courses. Dive deep into methodologies and gain hands-on experience. Whether novice or pro, secure your systems with confidence.
-          </p>*/}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {courseData.map((course, index) => (
@@ -73,7 +70,7 @@ const BasicJavaCard = () => {
                   <img
                     className="w-full h-full object-cover"
                     src={course.imgSrc}
-                    alt={`Project ${index + 1}`}
+                    alt={`Course ${index + 1}`}
                   />
                 </div>
                 <div className="p-4 flex flex-col items-center justify-between">

@@ -3,52 +3,48 @@ import programmer from "../../../../../assets/dataAnalatics/programmer.jpg";
 import assistance from "../../../../../assets/dataAnalatics/assistance.jpg";
 
 const BasicPhpAbout = () => {
+
+  const phpInfo = [
+    {
+      title: "Student Support",
+      description:
+        "Learn about the latest techniques and get support for courses 24/7.",
+      imgSrc: programmer,
+      imgAlt: "student-support",
+    },
+    {
+      title: "Career Assistance",
+      description:
+        "Gain expertise in continuous network monitoring to detect anomalies and respond to incidents in real-time.",
+      imgSrc: assistance,
+      imgAlt: "career-assistance",
+    },
+  ];
+
   return (
-    <div className="mx-auto h-[470px] w-full mb-20 px-4 md:px-10 bg-white">
-      <div className="mt-4">
+    <div className="mx-auto h-auto w-full lg:mb-20 px-4 md:px-10 bg-white">
+      <div className="py-2 my-10">
         <p className="text-2xl text-center font-bold text-[#f6ac14]">
-          About PHP Course
-        </p>
-      </div>
-      <div className="mt-2 ">
-        <p className="text-4xl text-center font-bold">
-          Discover the
-          <span className="text-[#f6ac14] my-2 block">Basic PHP Program</span>
+          Discover the Basic PHP Program
         </p>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center pb-6">
-        <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              className="w-full h-52 object-cover object-center"
-              src={programmer}
-              alt="student-support"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Student Support</h2>
-              <p className="text-gray-700">
-                Learn about the latest techniques and get support for courses 24/7.
-              </p>
+      <div className="flex flex-wrap justify-center items-center pb-6">
+        {phpInfo.map((item, index) => (
+          <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+            <div className="bg-white h-[400px] rounded-lg shadow-lg overflow-hidden">
+              <img
+                className="w-full h-52 object-cover object-center"
+                src={item.imgSrc}
+                alt={item.imgAlt}
+              />
+              <div className="p-4">
+                <h2 className="text-xl font-bold mb-2">{item.title}</h2>
+                <p className="text-gray-700">{item.description}</p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8 ">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              className="w-full h-52 object-cover object-center"
-              src={assistance}
-              alt="career-assistance"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Career Assistance</h2>
-              <p className="text-gray-700">
-                Gain expertise in continuous network monitoring to detect anomalies and respond to incidents in real-time.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

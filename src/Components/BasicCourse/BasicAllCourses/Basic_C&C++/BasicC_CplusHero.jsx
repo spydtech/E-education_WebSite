@@ -13,17 +13,14 @@ const BasicC_CplusHero = () => {
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center w-10/12 mx-auto overflow-x-hidden md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5">
-        <div className="order-2 lg:order-1 w-auto h-auto pr-10 md:mb-14 py- font md:py-0 mx-auto">
-          <p className="text-lg text-gray-500 md:py-6 leading-10">
-            Gain the skills to develop high-performance applications using C and
-            C++. Our comprehensive course will guide you from basic programming
-            concepts to advanced techniques, ensuring you're prepared to tackle
-            complex software development challenges...
+        <div className="order-2 lg:order-1 w-auto h-auto md:mb-14 font md:py-0 mx-auto">
+          <p className="text-lg text-gray-500 flex items-center justify-center pl-3 leading-8">
+            Gain the skills to develop high-performance applications using C and C++. Our comprehensive course will guide you from basic programming concepts to advanced techniques, ensuring you're prepared to tackle complex software development challenges.
           </p>
-          <div className="mt-4 md:w-[250px] md:h-[70px] w-auto h-auto lg:w-[160px] lg:h-[60px] flex justify-center items-center md:ml-48">
+          <div className="mt-6 md:w-[250px] md:h-[70px] w-auto h-auto lg:w-[160px] lg:h-[60px] flex justify-center items-center md:ml-48">
             <button
               onClick={handleEnroll}
-              className="px-5 w-auto font-sans h-full py-3 text-[26px] font-medium text-white bg-[#0098f1] rounded-[22px] md:px-6"
+              className="px-5 md:w-full w-auto font-sans h-full py-3 text-[26px] font-medium text-white bg-[#0098f1] rounded-[22px] md:px-6"
             >
               Enroll Now
             </button>
