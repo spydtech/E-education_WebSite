@@ -272,6 +272,7 @@ import mern   from "../../../../../assetss/fullstackwebdev/Mernstack/mern2.avif"
 import  dotnet  from "../../../../../assetss/fullstackwebdev/dotnet/dotnet1.jpg";
 import devops   from "../../../../../assetss/fullstackwebdev/devops/devops2.avif";
 import  python  from "../../../../../assetss/fullstackwebdev/python/python1.avif";
+import Girl2 from "../../../../../assetss/profile/girl2.png"
 // import { IoIosSearch } from "react-icons/io";
 
 
@@ -438,7 +439,7 @@ const FullStackWebDevelopmentArray = () => {
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-4 text-center text-[#0098f1] ">
           Expand <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
-          Data Science
+         Full Stack Development
           </span>{" "} <span className="text-[#f6ac14]">Courses</span>
         </h1>
 
