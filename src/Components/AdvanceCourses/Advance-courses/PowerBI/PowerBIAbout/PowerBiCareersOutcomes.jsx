@@ -55,7 +55,7 @@ function PowerBiCareersOutcomes() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center p-3 cursor-pointer text-xl font-medium border-2 border-transparent hover:border-[#480ca8] bg-white rounded-md overflow-hidden shadow-lg"
+                className="flex flex-col items-center p-3 cursor-pointer text-xl font-medium border-2 border-transparent hover:border-[#f6ac14] bg-white rounded-md overflow-hidden shadow-lg"
               >
                 {item.icon}
                 <p>{item.stat}</p>
