@@ -41,7 +41,7 @@ const DotnetDeveloperSkills = () => {
               </h3>
               {softSkills.map((skill, index) => (
                 <div key={index} className="flex items-center mb-2">
-                  <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14] inline mx-2" />
+                  {/* <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14] inline mx-2" /> */}
                   <p className="text-xl text-white">{skill.name}</p>
                 </div>
               ))}
@@ -59,7 +59,7 @@ const DotnetDeveloperSkills = () => {
               </h3>
               {technicalSkills.map((skill, index) => (
                 <div key={index} className="flex items-center mb-2">
-                  <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14] inline mx-2" />
+                  {/* <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14] inline mx-2" /> */}
                   <p className="text-xl text-white">{skill.name}</p>
                 </div>
               ))}

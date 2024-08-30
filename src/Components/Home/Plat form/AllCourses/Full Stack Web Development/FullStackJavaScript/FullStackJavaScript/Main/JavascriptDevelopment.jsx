@@ -26,14 +26,23 @@ const JavascriptDevelopment = () => {
     <>
       <Navbar />
       <div className="pl-4">
-      <div className="w-full flex flex-col mb-8  p-6 lg:flex-row  items-center md:justify-center gap-4 md:px-8 lg:px-16 2xl:px-32">
-        <div className="lg:w-2/3 text-center lg:text-left">
+      <div className="w-full flex flex-col mb-8 p-6 lg:flex-row items-center md:justify-center gap-4 md:px-8 lg:px-16 2xl:px-32">
+          {/* Image Section */}
+          <div className="order-1 lg:order-2 mt-4 md:mt-0 md:w-1/2 flex justify-center">
+            <img
+              src={hero}
+              alt="Hero"
+              className="w-full h-full max-w-md md:max-w-lg lg:max-w-xl"
+            />
+          </div>
+          {/* Content Section */}
+          <div className="lg:w-2/3 text-center lg:text-left order-2 lg:order-1">
           <h3 className=" text-xl md:text-3xl lg:text-4xl font-bold leading-tight sm:leading-none tracking-tight text-gray-900">
             Master{" "}
             <span className="text-[#F6AC14]">Full Stack</span> JavaScript Programming
           </h3>
-          <p className="mt-4 text-base lg:text-lg xl:text-xl text-gray-600">
-          Boost your career by mastering JavaScript, the most popular
+            <p className="mt-4 text-base md:text-lg lg:text-xl text-gray-600">
+            Boost your career by mastering JavaScript, the most popular
             programming language for web development. From front-end to
             back-end, learn everything you need to build dynamic and responsive
             web applications.
@@ -41,24 +50,16 @@ const JavascriptDevelopment = () => {
             covering frameworks like React, Node.js, and Express.js. Develop
             practical skills and stand out in a competitive job market. Start
             your JavaScript journey today.
-          </p>
-        
-          <button
-            onClick={handleEnroll}
-            className="mt-6 bg-[#0098F1] text-white  md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[180px] xl:lg:h-[60px] md:text-xl"
-          >
-            Enroll Now
-          </button>
-          <div className="mt-4 text-gray-600">11,095 already enrolled</div>
+            </p>
+            <button
+              onClick={handleEnroll}
+              className="mt-6 bg-[#0098F1] text-white md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[180px] xl:lg:h-[60px] md:text-xl"
+            >
+              Enroll Now
+            </button>
+            <div className="mt-4 text-gray-600">11,095 already enrolled</div>
+          </div>
         </div>
-        <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
-          <img
-             src={hero}
-            alt="Hero"
-            className="w-full max-w-md md:max-w-lg lg:max-w-xl"
-          />
-        </div>
-      </div>
       <JavascriptDeveloperSkills />
       <AboutCourses />
       <Community />

@@ -115,107 +115,67 @@ const Navbar = () => {
                 </div>
                 {showDropdown && (
                   <div className="absolute right-0 top-10 bg-[#0098F1] mt-8 text-white  shadow-lg w-full">
-                    <h3 className="text-2xl text-start p-4 bg-white text-[#0098F1] w-max font-bold ">
+                    <h3 className="text-2xl text-center p-4 bg-white text-[#0098F1] w-full font-bold ">
                       Explore Here Courses List
                     </h3>
-                    <div className="grid text-xl ">
+                    <div className="grid text-xl">
                       {/* Column 1: Courses */}
-                      {/* <div className="p-4 text-nowrap m-4 ">
-                        <h4 className="font-bold mb-4">Advance Courses</h4>
+                      <div className="flex  justify-between  ">
+                      <div className="p-4 text-nowrap text-center  m-4 ">
+                        <h4 className="font-bold mb-4 text-2xl underline underline-offset-4"> Courses</h4>
                         <ul className="grid gap-4">
-                          <li className="mb-2">
+                          <li className="">
                             <Link
-                              to="/full-stack-javascript"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                              to="/fullStack_WebDevlopment/fullStack-Web-Development"
+                              className="border-white hover:border-2 text-white p-2"
                             >
-                              Full Stack JavaScript
+                             Web Development
                             </Link>
                           </li>
-                          <li className="mb-2">
+                          <li className="">
                             <Link
-                              to="/mern-stack"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                              to="/php"
+                              className="border-white hover:border-2 text-white p-2"
                             >
-                              MERN Stack Development
+                              Php
                             </Link>
                           </li>
-                          <li className="mb-2">
+                          <li className="">
                             <Link
-                              to="/full-stack-java"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                              to="/java"
+                              className="border-white hover:border-2 text-white p-2"
                             >
-                              Full Stack Java
+                             Java
                             </Link>
                           </li>
-                          <li className="mb-2">
+                          <li className="">
                             <Link
-                              to="/full-stack-dotnet"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2"
+                              to="/wordpress"
+                              className="border-white hover:border-2 text-white p-2"
                             >
-                              Full Stack .Net
+                              Wordpress
                             </Link>
                           </li>
-                          <li className="mb-2">
+                          <li className="">
                             <Link
-                              to="/full-stack-devops"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                              to="/javascript"
+                              className="border-white hover:border-2 text-white p-2 "
                             >
-                              Full Stack DevOps
+                              JavaScript
                             </Link>
                           </li>
-                          <li className="mb-2">
+                          <li className="">
                             <Link
-                              to="/data-science-intro"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2"
+                              to="/c_c++"
+                              className="border-white hover:border-2 text-white p-2"
                             >
-                              Introduction to Data Science
+                             C/C++
                             </Link>
                           </li>
-                        </ul>
-                      </div> */}
-
-                      {/* Column 2: Advance Courses */}
-                      <div className="flex px-20 justify-between  ">
-                      <div className="p-4 text-center text-nowrap m-4">
-                        <h4 className="font-bold mb-4 text-2xl underline underline-offset-4">Advance Courses</h4>
-                        <ul className="grid gap-4">
-                        <li className="mb-2">
+                          <li className="">
                             <Link
-                              to="/mobile-app-development"
-                              className="hover:bg-white hover:text-[#0098F1] text-white p-2 "
-                            >
-                              Mobile App Development
-                            </Link>
-                          </li>
-                          <li className="mb-2">
-                            <Link
-                              to="/database-management"
-                              className="hover:bg-white hover:text-[#0098F1] text-white p-2"
-                            >
-                              Database Management
-                            </Link>
-                          </li>
-                          <li className="mb-2">
-                            <Link
-                              to="/ethical-hacking"
-                              className="hover:bg-white hover:text-[#0098F1] text-white p-2 "
-                            >
-                              Ethical Hacking
-                            </Link>
-                          </li>
-                          <li className="mb-2">
-                            <Link
-                              to="/network-security"
-                              className="hover:bg-white hover:text-[#0098F1] text-white p-2 "
-                            >
-                              Network Security
-                            </Link>
-                          </li>
-                       
-                          <li className="mb-2">
-                            <Link
-                              to="/ui-ux-design"
-                              className="hover:bg-white hover:text-[#0098F1] text-white  p-2 "
+                              to="/ui_ux_design"
+                              className="border-white hover:border-2 text-white p-2"
                             >
                               UI/UX Design
                             </Link>
@@ -223,47 +183,163 @@ const Navbar = () => {
                         </ul>
                       </div>
 
+                      {/* Column 2: Advance Courses */}
+                     
+                      <div className="p-4 text-center text-nowrap m-4">
+                        <h4 className="font-bold mb-4 text-2xl underline underline-offset-4">Advance Courses</h4>
+                        <ul className="grid gap-4">
+                        <li className="">
+                            <Link
+                              to="/fullStack_WebDevelopment/mean-Stack-Developer"
+                              className="border-white hover:border-2 text-white p-2"
+                            >
+                              MEAN Stack
+                            </Link>
+                          </li>
+                          <li className="">
+                            <Link
+                              to="/database-management"
+                              className="border-white hover:border-2 text-white p-2"
+                            >
+                              Java Programming Mastery
+                            </Link>
+                          </li>
+                          
+                          <li className="">
+                            <Link
+                              to="/network-security"
+                              className="border-white hover:border-2 text-white p-2"
+                            >
+                             Advanced PHP Programming
+                            </Link>
+                          </li>
+                       
+                          <li className="">
+                            <Link
+                              to="/ui-ux-design"
+                              className="border-white hover:border-2 text-white p-2"
+                            >
+                             Mastering Wordpress Development
+                            </Link>
+                          </li>
+                       
+                        <li className="">
+                            <Link
+                              to="/mobile-app-development"
+                              className="border-white hover:border-2 text-white p-2"
+                            >
+                             JavaSCript for advanced DevelopMent
+                            </Link>
+                          </li>
+                          <li className="">
+                            <Link
+                              to="/data_Science"
+                              className="border-white hover:border-2 text-white p-2"
+                            >
+                              Data Science Techniques
+                            </Link>
+                          </li>
+                          
+                          <li className="">
+                            <Link
+                              to="/network-security"
+                              className="border-white hover:border-2 text-white p-2"
+                            >
+                              Network Security
+                            </Link>
+                          </li>
+                          <li className="">
+                            <Link
+                              to="/ui-ux-design"
+                              className="border-white hover:border-2 text-white p-2"
+                            >
+                              ERP-Software-Development
+                            </Link>
+                          </li>
+                          <li className="">
+                            <Link
+                              to="/ui-ux-design"
+                              className="border-white hover:border-2 text-white p-2"
+                            >
+                              Power BI development
+                            </Link>
+                          </li>
+                          <li className="">
+                            <Link
+                              to="/fullStack-MobileApp-Development"
+                              className="border-white hover:border-2 text-white p-2 "
+                            >
+                              Full Stack Mobile App Development
+                            </Link>
+                          </li>
+                          </ul>
+                      </div>
+
                       {/* Column 3: Premium Courses */}
                       <div className="p-4 text-center text-nowrap m-4">
                         <h4 className="font-bold mb-4 text-2xl underline  underline-offset-4">Premium Courses</h4>
                         <ul className="grid gap-4">
-                        <li className="mb-2">
+                        <li className="">
                             <Link
-                              to="/blockchain-development"
-                              className="hover:bg-white hover:text-[#0098F1] text-white p-2"
+                              to="/fullStack_WebDevelopment/fullStack-Web-Development"
+                              className="border-white hover:border-2 text-white p-2"
+                            >
+                              Full Stack Development
+                            </Link>
+                          </li>
+                          <li className="">
+                            <Link
+                              to="/software_testing"
+                              className="border-white hover:border-2 text-white p-2"
+                            >
+                              Software Testing
+                            </Link>
+                          </li>
+                        <li className="">
+                            <Link
+                              to="/blockchain"
+                              className="border-white hover:border-2 text-white p-2"
                             >
                               Blockchain Development
                             </Link>
                           </li>
-                          <li className="mb-2">
+                          <li className="">
                             <Link
-                              to="/machine-learning"
-                              className="hover:bg-white hover:text-[#0098F1] text-white p-2 "
+                              to="/data_Science/machine-Learning"
+                              className="border-white hover:border-2 text-white p-2"
                             >
-                              Machine Learning
+                              Machine Learning with AI
                             </Link>
                           </li>
-                          <li className="mb-2">
+                          <li className="">
                             <Link
-                              to="/cyber-security"
-                              className="hover:bg-white hover:text-[#0098F1] text-white p-2 "
+                              to="/ethical_hacking"
+                              className="border-white hover:border-2 text-white p-2"
+                            >
+                              Ethical Hacking
+                            </Link>
+                          </li>
+                          <li className="">
+                            <Link
+                              to="/cyber_security"
+                              className="border-white hover:border-2 text-white p-2"
                             >
                               Cyber Security
                             </Link>
                           </li>
-                          <li className="mb-2">
+                          <li className="">
                             <Link
                               to="/cloud-computing"
-                              className="hover:bg-white hover:text-[#0098F1] text-white p-2 "
+                              className="border-white hover:border-2 text-white p-2"
                             >
-                              Cloud Computing
+                              Cloud with AWS
                             </Link>
                           </li>
                          
-                          <li className="mb-2">
+                          <li className="">
                             <Link
-                              to="/devops-mastery"
-                              className="hover:bg-white hover:text-[#0098F1] text-white p-2"
+                              to="/fullStack_WebDevelopment/fullStack-Devops"
+                              className="border-white hover:border-2 text-white p-2"
                             >
                               DevOps Mastery
                             </Link>
@@ -337,100 +413,61 @@ const Navbar = () => {
                   </button>
                   {sidebarDropdown && (
                     <div className=" mt-2space-y-2">
-                      {/* <div className="p-4 text-nowrap  ">
-                        <h4 className="font-bold mb-4">Advance Courses</h4>
+                      <div className="p-4 text-nowrap md:text-wrap  ">
+                        <h4 className="font-bold mb-4"> Courses</h4>
                         <ul className="grid gap-4">
                           <li className="mb-2">
                             <Link
-                              to="/full-stack-javascript"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                              to="/fullStack_WebDevelopment/fullStack-Web-Development"
+                              className="hover:border-white border-2 text-white p-2  "
                             >
-                              Full Stack JavaScript
+                             Web Development
                             </Link>
                           </li>
                           <li className="mb-2">
                             <Link
-                              to="/mern-stack"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                              to="/php"
+                              className="hover:border-white border-2 text-white p-2 "
                             >
-                              MERN Stack Development
+                              Php
                             </Link>
                           </li>
                           <li className="mb-2">
                             <Link
-                              to="/full-stack-java"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                              to="/java"
+                              className="hover:border-white border-2 text-white p-2 "
                             >
-                              Full Stack Java
+                             Java
                             </Link>
                           </li>
                           <li className="mb-2">
                             <Link
-                              to="/full-stack-dotnet"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2"
+                              to="/wordpress"
+                              className="hover:border-white border-2 text-white p-2 "
                             >
-                              Full Stack .Net
+                              Wordpress
                             </Link>
                           </li>
                           <li className="mb-2">
                             <Link
-                              to="/full-stack-devops"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                              to="/javascript"
+                              className="hover:border-white border-2 text-white p-2 "
                             >
-                              Full Stack DevOps
+                              JavaScript
                             </Link>
                           </li>
                           <li className="mb-2">
                             <Link
-                              to="/data-science-intro"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2"
+                              to="/c_c++"
+                              className="hover:border-white border-2 text-white p-2"
                             >
-                              Introduction to Data Science
-                            </Link>
-                          </li>
-                        </ul>
-                      </div> */}
-
-                      {/* Column 2: Advance Courses */}
-                      <div className="p-4 text-nowrap">
-                        <h4 className="font-bold mb-4">Advance Courses</h4>
-                        <ul className="grid gap-4">
-                          <li className="mb-2">
-                            <Link
-                              to="/ethical-hacking"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
-                            >
-                              Ethical Hacking
+                             C/C++
                             </Link>
                           </li>
                           <li className="mb-2">
                             <Link
-                              to="/network-security"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
-                            >
-                              Network Security
-                            </Link>
-                          </li>
-                          <li className="mb-2">
-                            <Link
-                              to="/mobile-app-development"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
-                            >
-                              Mobile App Development
-                            </Link>
-                          </li>
-                          <li className="mb-2">
-                            <Link
-                              to="/database-management"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2"
-                            >
-                              Database Management
-                            </Link>
-                          </li>
-                          <li className="mb-2">
-                            <Link
-                              to="/ui-ux-design"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                              to="/ui_ux_design"
+                              className="hover:border-white border-2 text-white p-2 "
                             >
                               UI/UX Design
                             </Link>
@@ -438,22 +475,145 @@ const Navbar = () => {
                         </ul>
                       </div>
 
-                      {/* Column 3: Premium Courses */}
-                      <div className="p-4 text-nowrap ">
-                        <h4 className="font-bold mb-4">Premium Courses</h4>
+                      {/* Column 2: Advance Courses */}
+                      <div className="p-4 text-nowrap">
+                        <h4 className="font-bold mb-4">Advance Courses</h4>
                         <ul className="grid gap-4">
-                          <li className="mb-2">
+                        <li className="mb-2">
                             <Link
-                              to="/machine-learning"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                              to="/fullStack_WebDevelopment/mean-Stack-Developer"
+                              className="hover:border-white border-2 text-white p-2 "
                             >
-                              Machine Learning
+                              MEAN Stack
                             </Link>
                           </li>
                           <li className="mb-2">
                             <Link
-                              to="/cyber-security"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                              to="/fullStack_WebDevelopment/fullStack-Java-Development"
+                              className="hover:border-white border-2 text-white p-2"
+                            >
+                              Java Programming Mastery
+                            </Link>
+                          </li>
+                          
+                          <li className="mb-2">
+                            <Link
+                              to="/advancedPhpProgramming"
+                              className="hover:border-white border-2 text-white p-2 "
+                            >
+                             Advanced PHP Programming
+                            </Link>
+                          </li>
+                       
+                          <li className="mb-2">
+                            <Link
+                              to="/masteringWordPressDevelopment"
+                              className="hover:border-white border-2 text-white p-2"
+                            >
+                             Mastering Wordpress Development
+                            </Link>
+                          </li>
+                       
+                        <li className="mb-2">
+                            <Link
+                              to="/fullStack_WebDevelopment/full-stack-javascript"
+                              className="hover:border-white border-2 text-white p-2"
+                            >
+                             JavaSCript for advanced DevelopMent
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/data_Science"
+                              className="hover:border-white border-2 text-white p-2"
+                            >
+                              Data Science Techniques
+                            </Link>
+                          </li>
+                          
+                          <li className="mb-2">
+                            <Link
+                              to="/network_security"
+                              className="hover:border-white border-2 text-white p-2"
+                            >
+                              Network Security
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/erp"
+                              className="hover:border-white border-2 text-white p-2"
+                            >
+                              ERP-Software-Development
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/power-bi"
+                              className="hover:border-white border-2 text-white p-2 "
+                            >
+                              Power BI development
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/fullStackMobileAppDevelopment"
+                              className="hover:border-white border-2 text-white p-2"
+                            >
+                              Full Stack Mobile App Development
+                            </Link>
+                          </li>
+                          </ul>
+                      </div>
+
+                      {/* Column 3: Premium Courses */}
+                      <div className="p-4 text-nowrap ">
+                        <h4 className="font-bold mb-4">Premium Courses</h4>
+                        <ul className="grid gap-4">
+                        <li className="mb-2">
+                            <Link
+                              to="/fullStack_WebDevelopment/fullStack-Web-Development"
+                              className="hover:border-white  text-white p-2"
+                            >
+                              Full Stack Development
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/software_testing"
+                              className="hover:border-white border-2 text-white p-2"
+                            >
+                              Software Testing
+                            </Link>
+                          </li>
+                        <li className="mb-2">
+                            <Link
+                              to="/blockchain"
+                              className="hover:border-white border-2 text-white p-2"
+                            >
+                              Blockchain Development
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/data_Science/machine-Learning"
+                              className="hover:border-white border-2 text-white p-2 "
+                            >
+                              Machine Learning with AI
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/ethical_hacking"
+                              className="hover:border-white border-2 text-white p-2 "
+                            >
+                              Ethical Hacking
+                            </Link>
+                          </li>
+                          <li className="mb-2">
+                            <Link
+                              to="/cyber_security"
+                              className="hover:border-white border-2 text-white p-2"
                             >
                               Cyber Security
                             </Link>
@@ -461,23 +621,16 @@ const Navbar = () => {
                           <li className="mb-2">
                             <Link
                               to="/cloud-computing"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2 "
+                              className="hover:border-white border-2 text-white p-2 "
                             >
-                              Cloud Computing
+                              Cloud with AWS
                             </Link>
                           </li>
+                         
                           <li className="mb-2">
                             <Link
-                              to="/blockchain-development"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border border-white border-2 p-2"
-                            >
-                              Blockchain Development
-                            </Link>
-                          </li>
-                          <li className="mb-2">
-                            <Link
-                              to="/devops-mastery"
-                              className="hover:bg-white hover:text-[#0098F1] hover:border  border-white border-2 p-2"
+                              to="/fullStack_WebDevelopment/fullStack-Devops"
+                              className="hover:border-white border-2 text-white p-2"
                             >
                               DevOps Mastery
                             </Link>
@@ -515,53 +668,7 @@ const Navbar = () => {
             </div>
           )}
 
-          {/* <Disclosure.Panel className="md:hidden">
-            <div className="space-y-1 px-2 pt-2 pb-3">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:bg-gray-200 rounded-md"
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-              <button
-                className="w-full text-left px-3 py-2"
-                onClick={toggleSidebar}
-              >
-                Explore
-              </button>
-            </div>
-          </Disclosure.Panel> */}
 
-          {/* Sidebar */}
-          {/* {showSidebar && (
-            <div
-              className="fixed inset-y-0 left-0 w-48 bg-[#0098F1] p-6 text-white z-50 transform duration-300 ease-in-out"
-              style={{ left: showSidebar ? "0" : "-100%" }}
-            >
-              <button onClick={toggleSidebar} className="mb-4">
-                Close
-              </button>
-              <ul className="space-y-4 text-lg">
-                <li>
-                  <Link to="/explore">Explore</Link>
-                </li>
-                <li>
-                  <Link to="/trainee">Trainee</Link>
-                </li>
-                <li>
-                  <Link to="/login">Login</Link>
-                </li>
-                <li>
-                  <Link to="/signup">Signup</Link>
-                </li>
-                {auth.user && <li onClick={handleLogout}>Logout</li>}
-              </ul>
-            </div>
-          )} */}
         </>
       )}
     </Disclosure>

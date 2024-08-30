@@ -76,7 +76,7 @@ function CybersecurityIntroduction() {
     <>
     
      <div className="grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[468px] bg-white mb-20">
-      <div className="flex items-center justify-center lg:pr-10">
+      <div className="flex items-center justify-center  lg:pr-10">
         <div className="text-start px-4 lg:px-10">
           <div>
             <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
@@ -97,7 +97,7 @@ function CybersecurityIntroduction() {
         </div>
       </div>
       <div className="h-auto lg:h-[468px] flex justify-center">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 lg:mt-0">
+        <div className="w-full max-w-7xl mx-auto mt-8 lg:mt-0">
           <div className="bg-[#0098f1] w-full lg:w-[550px] h-auto lg:h-[420px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg">
 
              <div className="relative w-full">

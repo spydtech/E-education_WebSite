@@ -20,7 +20,7 @@ const CybersecurityHero = () => {
   return (
     <>
     
-      <div className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5">
+    <div className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid  lg:mt-3 xl:mt-5">
         <div className="w-auto h-auto pr-10 md:mb-14 py-14 font md:py-0 mx-auto ">
         <h1 className="text-2xl  text-[#0098f1]   font-lora font-bold  pt-4">
               Your Digital World with Cybersecurity
@@ -39,7 +39,8 @@ const CybersecurityHero = () => {
             </button>
           </div>
         </div>
-        <div className="pb-10 lg:md:w-[400px] lg:md:h-[380px] mx-auto w-auto h-auto   md:p-10 lg:p-0 sm:pb-0">
+        
+        <div className="pb-10 lg:md:w-[400px] lg:md:h-[380px] mx-auto w-auto h-auto overflow-hidden  p-6 ">
           <img
             id="heroImg1"
             className="rounded-full lg:w-full  sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0"

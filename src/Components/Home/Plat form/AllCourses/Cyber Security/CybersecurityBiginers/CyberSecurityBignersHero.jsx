@@ -22,7 +22,7 @@ const CybersecurityBeginnersHero = () => {
   
        <>
     
-      <div className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5">
+      <div className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid  lg:mt-3 xl:mt-5">
         <div className="w-auto h-auto pr-10 md:mb-14 py-14 font md:py-0 mx-auto ">
         <h1 className="text-2xl  text-[#0098f1]   font-lora font-bold  pt-4">
         Cybersecurity for Beginners: Safeguard Your Digital World
