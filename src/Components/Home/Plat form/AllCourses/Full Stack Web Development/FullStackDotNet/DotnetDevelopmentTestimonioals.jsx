@@ -5,7 +5,7 @@ import DeliveryMethods from './../FullStackDotNet/Delivery_Methods';
 
 const Card = ({ imageSrc, text, isFlipped, isArrowClicked, toggleCard, isMobile }) => {
   return (
-    <div className="relative w-72 h-72 sm:w-64 sm:h-64 rounded-full border-8 border-[#0098F1] flex items-center justify-center">
+    <div className="relative md:w-60 md:h-60  w-72 h-72 sm:w-64 sm:h-64 rounded-full border-8 border-[#0098F1] flex items-center justify-center">
       <img
         src={imageSrc}
         alt="Front Imagee"
@@ -71,11 +71,11 @@ const  DotnetDevelopmentTestimonioals = () => {
   };
 
   return (
-    <div className="flex flex-col items-center pt-4 space-y-8">
+    <div className="flex flex-col items-center pt-4 space-y-2">
       <h2 className="sm:text-xl text-xl md:text-4xl lg:text-5xl font-semibold text-[#0098F1] text-center mb-4">
         Why{" "}<span className=" bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">People Choose </span>{" "}<span className=" text-[#F6AC14]"> Us</span>
       </h2>
-      <div className="hidden md:flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+      <div className="hidden md:flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-2">
         {testimonials.map((testimonial, index) => (
           <Card
             key={index}

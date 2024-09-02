@@ -1,73 +1,69 @@
 import React from "react";
 import home from "../assetss/Home/Homebg.png";
 import Girl from "../assetss/Home/girl.png";
-import Vector1 from "../assetss/Home/Vector1.png";
-import Vector2 from "../assetss/Home/Vector2.png";
 import { Link } from "react-router-dom";
 
 function Main() {
   return (
-    <>
-      <div>
-        <section className="sm:mt-6 mx-auto px-4 sm:px-6 lg:px-8">
+    <div>
+      <section className="sm:mt-6 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-3">
           <div
-            className=" mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 lg:px-8  flex gap-3"
-            
+            className="flex flex-col lg:flex-row bg-cover w-full h-auto lg:h-screen"
+            style={{ backgroundImage: `url(${home})` }}
           >
-            <div className=" flex bg-cover w-full h-screen" style ={{ backgroundImage: `url(${home})` }}>
-            <div className="sm:text-center w-1/2 lg:text-left">
-              <h1 className="font text-4xl tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl">
+            {/* Text Section */}
+            <div className="sm:text-center w-full lg:w-1/2 lg:text-left p-4 flex flex-col justify-center items-start">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight font-extrabold text-gray-800">
                 <span className="block xl:inline">
                   Learn{" "}
                   <span className="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] inline-block text-transparent bg-clip-text">
-                    {" "}
                     without
                   </span>{" "}
                   limits online{" "}
                   <span className="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] inline-block text-transparent bg-clip-text">
-                    {" "}
                     courses
                   </span>
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 Start, switch, or advance your career with more than 6,900
-                courses, Professional Certificates, and degrees from world-class
-                universities and companies.
+                courses, Professional Certificates, and degrees from
+                world-class universities and companies.
               </p>
-              <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <div className="rounded-md shadow">
-                  <Link
-                    to="/pricing"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#0098F1] hover:bg-gray-600 md:py-4 md:text-lg md:px-10"
-                  >
-                    Get started
-                  </Link>
-                </div>
-                <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <Link
-                    to="/try-a-demo"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#0098F1] bg-[#0098F11A] hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
-                  >
-                    Try demo
-                  </Link>
-                </div>
+              <div className="mt-5 sm:mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
+                <Link
+                  to="/pricing"
+                  className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#0098F1] hover:bg-gray-600 md:py-4 md:text-lg md:px-10"
+                >
+                  Get started
+                </Link>
+                <Link
+                  to="/try-a-demo"
+                  className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#0098F1] bg-[#0098F11A] hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+                >
+                  Try demo
+                </Link>
               </div>
-            </div>  
-             <div className="  w-auto h-auto">
-                <img src={Girl} alt="" className=" z-20" />
-              </div>
+            </div>
 
-         
+            {/* Image Section */}
+            <div className="relative w-full lg:w-1/2 flex justify-center items-center mt-6 lg:mt-0">
+              <img
+                src={Girl}
+                alt="Illustration of a girl"
+                className="z-20 max-w-full h-auto object-contain rounded-full"
+              />
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 }
 
 export default Main;
+
 
 
 
@@ -128,7 +124,6 @@ export default Main;
 //                 </div>
 //               </div>
 //             </div>
-
 //             <div className="relative lg:inset-y-0 lg:right-0 lg:h-full  lg:w-1/2 md:flex md:justify-center md:items-center rounded-full">
 //               <div
 //                 className="absolute inset-0 bg-cover bg-no-repeat "
@@ -149,5 +144,4 @@ export default Main;
 //     </>
 //   );
 // }
-
 // export default Main;
