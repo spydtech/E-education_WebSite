@@ -19,92 +19,65 @@ function WordpressKeyHighlights() {
     switch (selectedItem) {
       case 0:
         return (
-          <>
-            <ul className="space-y-2 pt-4 font-normal text-[16px] list-disc pl-16  bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium text-green-500 py-4">
-                Overview
-              </p>
-              <li>WordPress is a powerful content management system (CMS).</li>
-              <li>It allows users to create and manage websites easily.</li>
-              <li>Flexible and customizable with themes and plugins.</li>
-              <li>
-                Supports various types of websites: blogs, e-commerce, etc.
-              </li>
-              <li>Offers both free and premium versions.</li>
-              <li>Widely used and supported by a large community.</li>
-            </ul>
-          </>
+          <ul className="space-y-2 pt-4 font-normal text-[16px] list-disc">
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Overview</p>
+            <li>WordPress is a leading content management system (CMS).</li>
+            <li>Used for building and managing websites with ease.</li>
+            <li>Highly customizable with a wide range of themes and plugins.</li>
+            <li>Supports various types of websites including blogs and e-commerce.</li>
+            <li>Offers both free and premium features.</li>
+            <li>Backed by a robust community and extensive support.</li>
+          </ul>
         );
       case 1:
         return (
-          <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium text-green-500 py-4">
-                Key Concepts
-              </p>
-              <li>Themes: Customize the design and layout of your site.</li>
-              <li>Plugins: Extend the functionality of your site.</li>
-              <li>Widgets: Add content and features to your sidebars.</li>
-              <li>Posts and Pages: Two main content types in WordPress.</li>
-              <li>SEO: Optimize your site for search engines.</li>
-              <li>
-                User Roles: Manage permissions and access for different users.
-              </li>
-            </ul>
-          </>
+          <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Key Concepts</p>
+            <li>Themes: Customize your site's appearance and layout.</li>
+            <li>Plugins: Enhance functionality and add features.</li>
+            <li>Widgets: Add extra content and functionalities to sidebars.</li>
+            <li>Posts vs. Pages: Understand the differences and use cases.</li>
+            <li>SEO: Optimize your site for search engines.</li>
+            <li>User Roles: Manage permissions and access control.</li>
+          </ul>
         );
       case 2:
         return (
-          <>
-            {" "}
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium  text-green-500">
-                Applications
-              </p>
-              <li>Blogging: Share articles and updates regularly.</li>
-              <li>E-commerce: Sell products and services online.</li>
-              <li>Portfolio: Showcase your work and projects.</li>
-              <li>Business Website: Promote your business and services.</li>
-              <li>Membership Site: Offer exclusive content to members.</li>
-              <li>Online Community: Create forums and social networks.</li>
-            </ul>
-          </>
+          <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Applications</p>
+            <li>Blogging: Regularly publish articles and updates.</li>
+            <li>E-commerce: Build online stores to sell products and services.</li>
+            <li>Portfolio: Showcase your work and creative projects.</li>
+            <li>Business Website: Promote and manage business presence online.</li>
+            <li>Membership Site: Provide exclusive content to members.</li>
+            <li>Community Forum: Create and manage user forums and discussion boards.</li>
+          </ul>
         );
       case 3:
         return (
-          <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium  text-green-500">
-                Skills Developed
-              </p>
-              <li>Website Design and Development</li>
-              <li>Content Management</li>
-              <li>Search Engine Optimization (SEO)</li>
-              <li>Using Themes and Plugins</li>
-              <li>Basic HTML and CSS</li>
-              <li>Website Security and Maintenance</li>
-              <li>Understanding of Web Hosting</li>
-              <li>Analytics and Performance Tracking</li>
-            </ul>
-          </>
+          <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Skills Developed</p>
+            <li>Design and development of WordPress websites</li>
+            <li>Content management and optimization</li>
+            <li>Utilization of themes and plugins</li>
+            <li>Basic knowledge of HTML and CSS</li>
+            <li>Website security and maintenance</li>
+            <li>Understanding web hosting and domain management</li>
+            <li>Analytics and performance tracking</li>
+          </ul>
         );
       case 4:
         return (
-          <>
-            {" "}
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium  text-green-500">
-                Target Audience
-              </p>
-              <li>Bloggers and Writers</li>
-              <li>Small Business Owners</li>
-              <li>E-commerce Entrepreneurs</li>
-              <li>Web Designers and Developers</li>
-              <li>Marketing Professionals</li>
-              <li>Anyone interested in creating a website</li>
-              <li>Freelancers and Consultants</li>
-            </ul>
-          </>
+          <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
+            <p className="text-2xl font-medium text-[#f6ac14] py-4">Target Audience</p>
+            <li>Bloggers and Content Creators</li>
+            <li>Small to Medium Business Owners</li>
+            <li>E-commerce Operators</li>
+            <li>Freelance Web Designers and Developers</li>
+            <li>Digital Marketers</li>
+            <li>Anyone interested in starting a website</li>
+            <li>Consultants and Educators</li>
+          </ul>
         );
       default:
         return null;
@@ -112,54 +85,35 @@ function WordpressKeyHighlights() {
   };
 
   return (
-    <>
-      <div id="main" className=" md:lg:xl:px-20  bg-[#9e0059]">
-        <div id="subdiv1" className="pt-4 font">
-          <div id="h1" className="">
-            <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#31cb00]">
+    <div className="sm:px-20 pl-12 mb-20 bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start justify-center">
+        <div className="w-auto h-auto md:w-[500px] md:h-[420px] mt-10 md:pl-10 pl-0 text-xl">
+          {renderContent()}
+        </div>
+        <div className="md:pl-20 pl-0">
+          <div className="pt-4">
+            <p className="font-bold underline-offset-2 underline text-xl  text-[#f6ac14]">
               WordPress Course Highlights
             </p>
           </div>
-          <div
-            id="h2"
-            className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
-          >
-            <p className="text-5xl font-bold ">What does this</p>
-            <p className="text-5xl font-bold text-[#31cb00] inline">
-              Course have to offer?
-            </p>
-          </div>
-        </div>
-        <div
-          id="subdiv2"
-          className="justify-between grid  grid-cols-1 lg:md:grid-cols-2"
-        >
-          {/* content start*/}
-          <div id="content1" className="">
+          <div className="pt-4 lg:ml-10">
             {data.map((item, index) => (
               <div
                 key={index}
                 onClick={() => handleClick(index)}
-                className={`hover:text-green-500 p-5 text-start hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-80 lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden  transition-transform duration-300 transform hover:scale-105 ${
+                className={`p-5 text-center hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-[210px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden transition-transform duration-300 transform hover:scale-105 ${
                   selectedItem === index
-                    ? "bg-[#31cb00]  text-white hover:text-white border-none"
+                    ? "bg-[#0098f1] text-white border-none"
                     : ""
                 }`}
               >
-                <p>{item.label}</p>
+                <p className="text-center">{item.label}</p>
               </div>
             ))}
           </div>
-          <div
-            id="content2"
-            className="md:lg:w-auto md:lg:h-auto md:lg:xl:w-[400px] h-auto pt-4 md:lg:xl:pl-4 text-xl"
-          >
-            {renderContent()}
-          </div>
-          {/* content end */}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

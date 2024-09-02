@@ -5,7 +5,7 @@ const About = () => {
     <>
       <div className=" lg:pl-20  w-5/6"> 
       <div className=" lg:text-4xl  font-bold text-2xl text-[#0098F1] ">About this Course</div>
-        <div className="pt-2 leading-1 w-full text-base lg:text-lg text-[#0098F1] pb-4 font">
+        <div className="pt-2 leading-1 w-full text-base lg:text-lg text-gray-700 pb-4 font">
           Mastering Full Stack Web Development involves becoming proficient in
           both the front-end and back-end aspects of web development. This
           includes understanding various programming languages, frameworks,

@@ -10,6 +10,7 @@ import WSpace from "./Components/Profile/WorkSpace1/WSpace";
 // import WSpace from "./Components/trainee/UserTask/WSpace";
 import Settings from "./Components/Profile/Settings";
 import PostFeeds from "./Components/Home/post/PostFeeds";
+import MainPost from "./Components/Home/postFeed/MainPost";
 import QuestionForm from "./Components/Home/AskMe/QuestionForm";
 import ForgotPassword from "./Components/trainee/TraineAdmin/ForgotPassword/forgotpassword";
 import Purchases from "./Components/Profile/Purchases/Purchases";
@@ -132,6 +133,7 @@ function App() {
           <Route path="/options" element={<Options />} />
           <Route path="/pricing" element={<Pricing2 />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
+          <Route path="/main-post" element={<MainPost />} />
 
 
           {/* Graph  */}

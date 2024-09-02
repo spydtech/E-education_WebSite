@@ -2,20 +2,34 @@ import React, { useState } from "react";
 
 function WordpressIntroduction() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const Slide = ({ heading, items }) => {
     return (
-      <div className="w-full flex-shrink-0 px-4 py-8">
-        <div className="h-[400px] flex justify-center">
-          <div>
-            <h2 className="text-3xl font-medium mb-4 text-[#31cb00] font">
-              {heading}
-            </h2>
-            <ul className="list-disc list-inside text-xl font">
-              {items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
+      <div className="w-full flex-shrink-0 px-2 py-8 flex flex-col h-full relative overflow-hidden">
+        <div className="flex-grow pb-28">
+          <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
+            {heading}
+          </h2>
+          <ul className="list-disc list-outside text-lg lg:text-xl pl-10 text-start text-white">
+            {items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="absolute left-0 right-0 bottom-0 flex justify-between">
+          <button
+            onClick={goToPreviousSlide}
+            className="hover:text-[#f6ac14] text-white font-bold rounded px-4"
+          >
+            Previous
+          </button>
+          <div className="text-white">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+          <button
+            onClick={goToNextSlide}
+            className="hover:text-[#f6ac14] text-white font-bold rounded px-4"
+          >
+            Next
+          </button>
         </div>
       </div>
     );
@@ -72,64 +86,40 @@ function WordpressIntroduction() {
   };
 
   return (
-    <>
-      <div
-        id="subdiv"
-        className="grid grid-cols-1 w-fit md:lg:grid-cols-2 h-full bg-[#9e0059]"
-      >
-        <div
-          id="div1"
-          className="flex items-center justify-center xl:lg:md:w-auto"
-        >
-          <div
-            id="headings"
-            className="grid grid-cols-1 text-start px-10 font"
-          >
-            <div>
-              <p className="text-[#31cb00] text-xl font-medium">Introduction</p>
-            </div>
-            <div className="py-5">
-              <p className="text-6xl font">
-                So what is
-                <p className="text-[#31cb00] inline pl-2">WordPress?</p>
-              </p>
-            </div>
-            <div>
-              <p className="text-xl text-gray-500">Brief about WordPress</p>
-            </div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-screen h-auto mb-16">
+      <div className="flex items-center justify-center">
+        <div className="text-start px-4 lg:px-10">
+          <div>
+            <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
+              Introduction
+            </p>
+          </div>
+          <div className="py-5">
+            <p className="text-xl lg:text-5xl font">
+              So what is
+              <span className="text-[#f6ac14] inline pl-2">WordPress?</span>
+            </p>
+          </div>
+          <div>
+            <p className="text-lg lg:text-xl text-gray-500">
+              Brief about WordPress
+            </p>
           </div>
         </div>
-        <div id="div2" className="px-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-            <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
-              <div className="relative w-full overflow-hidden">
-                <div className="flex">
-                  <Slide
-                    heading={slidesData[currentSlide].heading}
-                    items={slidesData[currentSlide].items}
-                  />
-                </div>
-              </div>
-              <div className="flex justify-between">
-                <button
-                  onClick={goToPreviousSlide}
-                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
-                >
-                  Previous
-                </button>
-                <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-                <button
-                  onClick={goToNextSlide}
-                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
-                >
-                  Next
-                </button>
-              </div>
+      </div>
+      <div className="h-auto lg:h-[520px] flex justify-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-4 lg:px-14 xl:px-36 sm:mt-8 lg:mt-0 lg:mr-32">
+          <div className="bg-[#0098f1] relative w-full lg:w-[500px] lg:h-[450px] md:h-[350px] sm:h-[400px] h-[520px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg">
+            <div className="relative w-full h-full">
+              <Slide
+                heading={slidesData[currentSlide].heading}
+                items={slidesData[currentSlide].items}
+              />
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

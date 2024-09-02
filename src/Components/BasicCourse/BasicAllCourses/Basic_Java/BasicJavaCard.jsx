@@ -1,146 +1,92 @@
 import React from "react";
 
 const BasicJavaCard = () => {
+  const courseData = [
+    {
+      imgSrc:
+        "https://img.freepik.com/free-vector/programmer-doing-his-job-office_23-2148274928.jpg?t=st=1722598938~exp=1722602538~hmac=36fae1570ff87c8591042b26cfa59ae8a79c12292f342cb0428c64d21ea2251f&w=740",
+      title: "Explore Course Catalog",
+      description:
+        "Browse our extensive catalog of Java Programming courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
+    },
+    {
+      imgSrc:
+        "https://img.freepik.com/premium-psd/3d-artificial-intelligence-illustrations_504676-5117.jpg?w=740",
+      title: "Enroll in Foundational Courses",
+      description:
+        "Start with foundational courses covering basic concepts, tools, and methodologies essential for Java.",
+    },
+    {
+      imgSrc:
+        "https://img.freepik.com/premium-vector/app-development-concept-with-desktop-coding-languages_23-2148700923.jpg?w=740",
+      title: "Practice with Real-world Projects",
+      description:
+        "Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience in Java, vulnerability assessment under the guidance of industry experts.",
+    },
+    {
+      imgSrc:
+        "https://img.freepik.com/free-vector/flat-design-cms-illustration_23-2148825229.jpg?t=st=1722599283~exp=1722602883~hmac=5ea7f8e457faa105e244ccd066a127024c6ae30b7856871205e79bf2de28e0bd&w=740",
+      title: "Track Your Progress",
+      description:
+        "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Java concepts as you advance through the courses.",
+    },
+    {
+      imgSrc:
+        "https://img.freepik.com/free-vector/portrait-programmer-working-with-pc_23-2148222501.jpg?t=st=1722599336~exp=1722602936~hmac=fd5abc8e8af579ddfd10f168337488e889d442250e0a4c1b4234cd2f95cf26d6&w=740",
+      title: "Specialize and Advance",
+      description:
+        "Choose specialized tracks or advanced courses to delve deeper into specific areas of Java Programming. Customize your learning path to align with your interests and career goals.",
+    },
+    {
+      imgSrc:
+        "https://img.freepik.com/free-vector/app-development-concept-with-desktop_23-2148700922.jpg?t=st=1722594308~exp=1722597908~hmac=eed976f6658996c632f22a2da2c76c9c1e9f39e08f0c6a271f385a112c0527ff&w=740",
+      title: "Earn Recognized Certifications",
+      description:
+        "Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.",
+    },
+  ];
+
   return (
-    <>
-      <section id="portfolio" className="portfolio-section py-16 px-4 ">
-        <div className="container mx-auto ">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold">
-              Mastering Java Programming: Building applications
-            </h2>
-            <p className="text-lg text-[#d90429] font-semibold mt-2">
-              Enhance your expertise with our Java programming Courses. Dive
-              deep into methodologies and gain hands-on experience. Whether
-              novice or pro, secure your systems with confidence.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-1">
-                <img
-                  className="w-full h-60 object-cover"
-                  src="https://img.freepik.com/free-vector/man-sitting-desk-unlocking-computer-computer-settings-login-flat-illustration_74855-20645.jpg?t=st=1716801266~exp=1716804866~hmac=a175f1b6402416844d43b31f4223a4af11769cf0f2b0f15a2c17aeef35458484&w=740"
-                  alt="Project 1"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-red-400 to-red-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
-                <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
-                    Explore Course Catalog
-                  </h3>
-                  <span className="text-sm font-bold text-[#d90429] group-hover:text-white pt-4">
-                    Browse our extensive catalog of Java Programming courses.
-                    Discover beginner-friendly to advanced-level programs
-                    designed to accommodate learners of all backgrounds.
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-2">
-                <img
-                  className="w-full h-60 object-cover"
-                  src="https://img.freepik.com/free-vector/coding-workshop-concept-illustration_114360-8172.jpg?t=st=1716970539~exp=1716974139~hmac=4530d6d1b6fd152428cac027cd13f1de51377528e62e96bbbd119463dbb91b0f&w=740"
-                  alt="Project 2"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-red-400 to-red-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
-                <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
-                    Enroll in Foundational Courses
-                  </h3>
-                  <span className="text-sm font-bold text-[#d90429] group-hover:text-white pt-4">
-                    Start with foundational courses covering basic concepts,
-                    tools, and methodologies essential for Java.
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-3">
-                <img
-                  className="w-full h-60 object-cover"
-                  src="https://img.freepik.com/premium-vector/digital-media-data-concept-with-character-people-working-with-multimedia-files-database-upload-play-music-video-film_269730-293.jpg?w=740"
-                  alt="Project 3"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-red-400 to-red-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
-                <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
-                    Practice with Real-world Projects
-                  </h3>
-                  <span className="text-sm font-bold text-[#d90429] group-hover:text-white pt-4">
-                    Apply your knowledge by working on hands-on projects
-                    tailored to real-world scenarios. Gain practical experience
-                    in Java, vulnerability assessment under the guidance of
-                    industry experts.
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-4">
-                <img
-                  className="w-full h-60 object-cover"
-                  src="https://img.freepik.com/premium-vector/cloud-computing-technology-concept-with-character-data-storage-protection-computing-science-disk-services-connection-innovations_269730-308.jpg?w=740"
-                  alt="Project 4"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-red-400 to-red-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
-                <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
-                    Track Your Progress
-                  </h3>
-                  <span className="text-sm font-bold text-[#d90429] group-hover:text-white pt-4">
-                    Monitor your progress with intuitive dashboards and tracking
-                    tools. Set goals, track milestones, and measure your
-                    proficiency in various Java concepts as you advance through
-                    the courses.
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-5">
-                <img
-                  className="w-full h-60 object-cover"
-                  src="https://img.freepik.com/free-vector/digital-designers-team-drawing-with-pen-computer-monitor_74855-10586.jpg?t=st=1716801403~exp=1716805003~hmac=83292bbbed4dd8e277f7371cb532153cfd2a240c3befe9df113c41a7d9a689c8&w=826"
-                  alt="Project 5"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-red-400 to-red-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
-                <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
-                    Specialize and Advance
-                  </h3>
-                  <span className="text-sm font-bold text-[#d90429] group-hover:text-white pt-4">
-                    Choose specialized tracks or advanced courses to delve
-                    deeper into specific areas ofJava Programming,Customize your
-                    learning path to align with your interests and career goals.
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a href="/project-6">
-                <img
-                  className="w-full h-60 object-cover"
-                  src="https://img.freepik.com/free-vector/colleagues-working-together-project_74855-6308.jpg?t=st=1716801419~exp=1716805019~hmac=7bc82bca82870cbfb7eb42f0c2379263f0d286f69044e64652e03f6c5d008db3&w=900"
-                  alt="Project 6"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-red-400 to-red-600 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
-                <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
-                    Earn Recognized Certifications
-                  </h3>
-                  <span className="text-sm font-bold text-[#d90429] group-hover:text-white pt-4">
-                    Upon successful completion of courses and projects, earn
-                    industry-recognized certifications to showcase your
-                    expertise to employers and enhance your career prospects.
-                  </span>
-                </div>
-              </a>
-            </div>
-          </div>
+    <section id="portfolio" className="portfolio-section py-10 px-4">
+      <div className="container mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl pb-2 md:text-4xl lg:text-5xl font-medium">
+            <span className="text-[#f6ac14]">Mastering</span>
+            <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
+              {" "}
+              Java Programming:{" "}
+            </span>
+            <span className="text-[#0098f1]"> Building Applications</span>
+          </h2>
         </div>
-      </section>
-    </>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {courseData.map((course, index) => (
+            <div
+              key={index}
+              className="group border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
+            >
+              <a href="#">
+                <div className="h-[210px] bg-[#0098f1]">
+                  <img
+                    className="w-full h-full object-cover"
+                    src={course.imgSrc}
+                    alt={`Course ${index + 1}`}
+                  />
+                </div>
+                <div className="p-4 flex flex-col items-center justify-between">
+                  <h3 className="text-lg font-medium text-gray-800 group-hover:text-gray-900">
+                    {course.title}
+                  </h3>
+                  <p className="text-md text-gray-600 pt-4">
+                    {course.description}
+                  </p>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

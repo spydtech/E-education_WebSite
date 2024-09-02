@@ -5,15 +5,25 @@ import { Link } from "react-router-dom";
 
 function Main() {
   return (
-    <div>
-      <section className="sm:mt-6 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-3">
+    <div className=" bg-cover" style={{ backgroundImage: `url(${home})` }}> 
+      <section className="sm:mt-6 mx-auto px-4 sm:px-6 lg:px-8 " >
+        <div className="mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 lg:px-8 flex flex-col lg:flex-row-reverse items-center gap-6 "
+        >
+          {/* Image Section at the Top */}
+          <div className="relative w-full flex justify-center items-center mt-6 lg:mt-0">
+            <img
+              src={Girl}
+              alt="Illustration of a girl"
+              className="z-20 max-w-full h-auto object-contain "
+            />
+          </div>
+
+          {/* Text Section Below the Image */}
           <div
-            className="flex flex-col lg:flex-row bg-cover w-full h-auto lg:h-screen"
-            style={{ backgroundImage: `url(${home})` }}
+            className="flex flex-col  w-full h-auto text-center p-6"
+           
           >
-            {/* Text Section */}
-            <div className="sm:text-center w-full lg:w-1/2 lg:text-left p-4 flex flex-col justify-center items-start">
+            <div className="w-full flex flex-col justify-center items-center">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight font-extrabold text-gray-800">
                 <span className="block xl:inline">
                   Learn{" "}
@@ -26,12 +36,12 @@ function Main() {
                   </span>
                 </span>
               </h1>
-              <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl">
                 Start, switch, or advance your career with more than 6,900
                 courses, Professional Certificates, and degrees from
                 world-class universities and companies.
               </p>
-              <div className="mt-5 sm:mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-3">
+              <div className="mt-5 sm:mt-8 flex flex-col sm:flex-row gap-3">
                 <Link
                   to="/pricing"
                   className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#0098F1] hover:bg-gray-600 md:py-4 md:text-lg md:px-10"
@@ -46,15 +56,6 @@ function Main() {
                 </Link>
               </div>
             </div>
-
-            {/* Image Section */}
-            <div className="relative w-full lg:w-1/2 flex justify-center items-center mt-6 lg:mt-0">
-              <img
-                src={Girl}
-                alt="Illustration of a girl"
-                className="z-20 max-w-full h-auto object-contain rounded-full"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -63,6 +64,7 @@ function Main() {
 }
 
 export default Main;
+
 
 
 
