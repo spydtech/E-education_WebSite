@@ -16,7 +16,7 @@ const NetworkSecurityBestPracticesHero = () => {
   return (
     <>
   
-    <div className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5">
+    <div className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid lg:mt-3 xl:mt-5">
         <div className="w-auto h-auto pr-10 md:mb-14 py-14 font md:py-0 mx-auto ">
           <p className="py-4 md:lg:xl:2xl:text-[24px] text-[20px] text-[#101828]  md:py-6  leading-10">
           Empowering you to implement advanced security measures and defend

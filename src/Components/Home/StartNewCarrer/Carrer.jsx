@@ -16,12 +16,12 @@ const Carrer = () => {
           with E-education &#8594;
         </div>
       </div>
-      <div className="flex md:flex-row flex-col justify-center items-center md:px-16 md:mb-24 md:gap-x-8 md:mx-16 mt-6">
+      <div className="flex lg:flex-row flex-col justify-center items-center md:px-16 md:mb-24 md:gap-x-8 md:mx-16 mt-6">
         <div className=" ">
           <img src={Carrerimg} />
         </div>
         <div className="ml-6 ">
-          <div className="flex  flex-col items-start justify-start md:min-w-[400px] gap-8">
+          <div className="flex  flex-col items-start justify-start md:min-w-[400px] gap-4">
             <div className="font font-bold  text-xl md:text-3xl ">
               Unlocking Career Horizons: Navigating New Paths With E-education
             </div>

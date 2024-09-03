@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Add this import for navigation
+import { useNavigate } from "react-router-dom";
 import AboutCourses from "./AboutCourses";
 import Community from "../Community/community";
 import SuccessStory from "../SuccessStory/successstory";
-import Hero from './../../../../../../../assetss/fullstackwebdev/Mernstack/mern1.avif'
+import Hero from './../../../../../../../assetss/fullstackwebdev/Mernstack/mern1.avif';
 import Navbar from "../../../../../../Navbar";
 import Footer from "../../../../../footer/Footer";
 // import Delivery_Methods from "../deliverymethods/Delivery_Methods";
 import MeanStackDeveloper from "../Developer/MeanStackDeveloper";
 
 const MeanStackDevelopment = () => {
-  const [courseName] = useState("Master MEAN Stack Development"); // Moved inside component
-  const [coursePrice] = useState(199); // Moved inside component
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const navigate = useNavigate(); // useNavigate hook for navigation
+  const [courseName] = useState("Master MEAN Stack Development");
+  const [coursePrice] = useState(199);
+  const navigate = useNavigate();
 
   const handleEnroll = () => {
     navigate("/course-details", { state: { courseName, coursePrice } });
   };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -26,47 +26,52 @@ const MeanStackDevelopment = () => {
     <>
       <Navbar />
       <div className="pl-4">
-      <div className="w-full flex flex-col  p-6 lg:flex-row  items-center md:justify-center gap-4 md:px-8 lg:px-16 2xl:px-32  ">
-        <div className="lg:w-3/4 text-center lg:text-left">
-          <h3 className="  text-xl md:text-3xl lg:text-4xl font-bold leading-tight sm:leading-none tracking-tight text-gray-900">
-          Master {" "}
-            <span className="text-[#F6AC14]">MEAN Stack </span> Development
-          </h3>
-          <p className="mt-4 text-base md:text-lg lg:text-xl text-gray-600">
-          Enhance your tech capabilities with in-depth courses focused on MEAN
-            stack development. Master MongoDB, Express.js, Angular, and Node.js,
-            covering both front-end and back-end technologies. Develop
-            proficiency in building robust, scalable applications and position
-            yourself for success as a MEAN stack developer.
-          </p>
-         
-          <button
-            onClick={handleEnroll}
-            className="mt-6 bg-[#0098F1] text-white  md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[180px] xl:lg:h-[60px] md:text-xl"
-          >
-            Enroll Now
-          </button>
-          <div className="mt-4 text-gray-600">11,095 already enrolled</div>
+
+      <div className="max-w- flex flex-col mb-8 p-6 lg:flex-row items-center justify-center gap-4 lg:px-32">
+          {/* Image Section */}
+          <div className="order-1 md:order-1 lg:order-2  md:mt-0 md:w-1/2  flex justify-center">
+            <img
+              src={Hero}
+              alt="Hero"
+              className="w-full max-w-md md:max-w-xl lg:min-w-2xl"
+            />
+          </div>
+          {/* Content Section */}
+          <div className="lg:w-2/3 text-center lg:text-left order-2 md:order-2 lg:order-1">
+          <h3 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight sm:leading-none tracking-tight text-gray-900">
+              Master{" "}
+              <span className="text-[#F6AC14]">MEAN Stack </span> Development
+            </h3>
+            <p className="mt-4 text-base md:text-lg lg:text-xl text-gray-600">
+            Enhance your tech capabilities with in-depth courses focused on
+              MEAN stack development. Master MongoDB, Express.js, Angular, and
+              Node.js, covering both front-end and back-end technologies.
+              Develop proficiency in building robust, scalable applications and
+              position yourself for success as a MEAN stack developer.
+            </p>
+            <button
+              onClick={handleEnroll}
+              className="mt-6 bg-[#0098F1] text-white md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[180px] xl:lg:h-[60px] md:text-xl"
+            >
+              Enroll Now
+            </button>
+            <div className="mt-4 text-gray-600">11,095 already enrolled</div>
+          </div>
         </div>
-        <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
-          <img
-            src={Hero}
-            alt="Hero"
-            className="w-full max-w-md md:max-w-lg lg:max-w-xl"
-          />
-        </div>
+        <MeanStackDeveloper />
+        <AboutCourses />
+        {/* <Delivery_Methods /> */}
+        <Community />
+        <SuccessStory />
+        <Footer />
       </div>
-      <MeanStackDeveloper />
-      <AboutCourses />
-      {/* <Delivery_Methods /> */}
-      <Community />
-      <SuccessStory />
-      <Footer />
-    </div>
     </>
   );
 };
+
 export default MeanStackDevelopment;
+
+
 
 
 
