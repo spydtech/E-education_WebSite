@@ -37,7 +37,7 @@ function Main() {
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl">
-                Start, switch, or advance your career with more than 6,900
+                Start, switch, or advance your career with more than 8,000
                 courses, Professional Certificates, and degrees from
                 world-class universities and companies.
               </p>
