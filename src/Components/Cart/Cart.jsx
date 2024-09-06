@@ -96,7 +96,7 @@ const Cart = ({ history }) => {
                 {
                     amount: totalAmount * 100, // Amount in paisa (convert to integer)
                     currency: 'INR',
-                    receipt: 'receipt_order_12345', // Replace with your logic for receipt ID
+                    receipt: 'receipt_order_12345', 
                     paymentMethod: 'Razorpay',
                 },
                 {
