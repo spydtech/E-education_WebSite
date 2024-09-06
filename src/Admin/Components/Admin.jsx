@@ -7,13 +7,17 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-
+import adminimg from "../../assetss/profile/boy.png";
 import AdminDashBoard from "./AdminDashBoard";
 import Orders from "../Views/Orders";
 // import Users from "../Views/FilterUsers";
+import { TbLockAccess } from "react-icons/tb";
+import { MdOutlinePayment } from "react-icons/md";
 
+import { TbReport } from "react-icons/tb";
+import { SiGooglemeet } from "react-icons/si";
 import PaymentDashboard from "./pymentData/MainDashBoard";
-import SealsReports from "./sealsRepotes2/coursestable";
+import SealsReports from "./Reports/TableforAdmin";
 
 import CreateGroup from "../Views/FilterUsers";
 import ExistingGroup from "../Views/TraineeCourses";
@@ -21,10 +25,10 @@ import { AccountCircle, ExpandLess, ExpandMore } from "@mui/icons-material";
 import AccessField from "./AccessField";
 import RegisterEmployee from "./Register/RegisterEmployee";
 import RegisterTrainee from "./Register/RegisterTraniee";
-import SalesReport from "./SalesReport";
+// import SalesReport from "./SalesReport";
 import Meeting from "./Meet/Meeting";
-import PaymentData from "./PaymentData";
-import TotalSales from "./TotalSales";
+// import PaymentData from "./PaymentData";
+// import TotalSales from "./TotalSales";
 import {
   Dashboard as DashboardIcon,
   People as UsersIcon,
@@ -33,8 +37,16 @@ import {
 } from "@mui/icons-material";
 
 const menu = [
-  { name: "Dashboard", path: "/admin", icon: <DashboardIcon /> },
-  { name: "Access Field", path: "/admin/accessField", icon: <DashboardIcon /> },
+  {
+    name: "Dashboard",
+    path: "/admin",
+    icon: <DashboardIcon className="w-6 h-6" />,
+  },
+  {
+    name: "Access Field",
+    path: "/admin/accessField",
+    icon: <TbLockAccess className="w-6 h-6" />,
+  },
   {
     name: "Users",
     path: "/admin/users",
@@ -47,11 +59,19 @@ const menu = [
   {
     name: "payment Data",
     path: "/admin/payment-data",
-    icon: <DashboardIcon />,
+    icon: <MdOutlinePayment className="w-6 h-6" />,
   },
-  { name: "Sales Report", path: "/admin/sales-report", icon: <UsersIcon /> },
+  {
+    name: "Sales Report",
+    path: "/admin/sales-report",
+    icon: <TbReport className="w-6 h-6" />,
+  },
+  {
+    name: "Meet",
+    path: "/admin/meeting",
+    icon: <SiGooglemeet className="w-6 h-6" />,
+  },
   { name: "Settings", path: "/admin/settings", icon: <SettingsIcon /> },
-  { name: "Meet", path: "/admin/meeting", icon: <SettingsIcon /> },
 ];
 
 const Admin = () => {
@@ -77,13 +97,19 @@ const Admin = () => {
         height: "100vh",
         width: drawerWidth,
       }}
-      className="bg-gray-800 text-white"
+      className="bg-white  border-[#f6ac14] border-opacity-10 border-r-2 text-[#f6ac14]"
     >
       {isLargeScreen && <Toolbar />}
-      <div className="flex-grow">
-        <ul className="py-4">
+      <span className="flex absolute top-3 left-4">
+        <img className="w-[60px]  h-[60px] rounded-full" src={adminimg} />
+        <span className="text-[20px] text-[#0098f1] font-medium pt-4 pl-1">
+          Admin Name
+        </span>
+      </span>
+      <div className="flex-grow ">
+        <ul className="py-8 ">
           {menu.map((item, index) => (
-            <li key={item.name}>
+            <li key={item.name} className="relative">
               <button
                 onClick={() => {
                   if (item.subMenu) {
@@ -92,23 +118,27 @@ const Admin = () => {
                     navigate(item.path);
                   }
                 }}
-                className="flex items-center space-x-2 px-4 py-2 hover:bg-gray-700 w-full"
+                className="flex items-center space-x-2 px-4 py-2 hover:bg-[#f6ac14] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#f6ac14] transition-all duration-300"
               >
-                <span className="text-lg">{item.icon}</span>
+                <span className="text-lg pl-10">{item.icon}</span>
                 <span className="font-semibold">{item.name}</span>
                 {item.subMenu && (
-                  <>{openSubMenu === index ? <ExpandLess /> : <ExpandMore />}</>
+                  <span className="ml-auto">
+                    {openSubMenu === index ? <ExpandLess /> : <ExpandMore />}
+                  </span>
                 )}
               </button>
               {item.subMenu && openSubMenu === index && (
-                <ul className="pl-8">
+                <ul className="">
                   {item.subMenu.map((subItem) => (
-                    <li key={subItem.name}>
+                    <li key={subItem.name} className="relative ">
                       <button
                         onClick={() => navigate(subItem.path)}
-                        className="flex items-center space-x-2 px-4 py-2 hover:bg-gray-700 w-full"
+                        className="flex items-center space-x-2 px-4 py-2 hover:bg-[#f6ac14] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#f6ac14] transition-all duration-300"
                       >
-                        <span className="font-semibold">{subItem.name}</span>
+                        <span className="font-semibold pl-10">
+                          {subItem.name}
+                        </span>
                       </button>
                     </li>
                   ))}
@@ -118,22 +148,22 @@ const Admin = () => {
           ))}
         </ul>
       </div>
-      <div>
-        <button className="flex items-center space-x-2 px-4 py-2 hover:bg-gray-700 w-full">
+      {/* <div>
+        <button className="flex items-center pl-20 py-2 hover:bg-[#f6ac14] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#f6ac14] transition-all duration-300">
           <AccountCircle />
-          <span className="font-semibold">Account</span>
+          <span className="font-semibold pl-2 ">Account</span>
         </button>
-      </div>
+      </div> */}
     </Box>
   );
 
   const drawerVariant = isLargeScreen ? "permanent" : "temporary";
 
   return (
-    <div className="flex h-screen">
+    <div className="flex  h-screen  ">
       <CssBaseline />
       <div
-        className={`bg-gray-900 text-white ${
+        className={`bg-white   text-[#f6ac14] ${
           drawerVariant === "temporary" && !sideBarVisible
             ? "-left-64"
             : `w-${drawerWidth}`

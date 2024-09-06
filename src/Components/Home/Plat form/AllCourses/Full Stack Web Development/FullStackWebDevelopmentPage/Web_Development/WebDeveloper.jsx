@@ -6,18 +6,18 @@ import requirementsImg from "../../../../../../../assetss/fullstackwebdev/techsk
 
 const softSkills = [
   { name: "Coordination" },
-  { name: "Empathy . . . ." },
-  { name: "Articulation. ." },
-  { name: "Analysis . . . . ." },
-  { name: "Initialization ." },
+  { name: "Empathy" },
+  { name: "Articulation" },
+  { name: "Analysis" },
+  { name: "Initialization" },
 ];
 
 const technicalSkills = [
   { name: "MongoDB" },
-  { name: "Express.js ." },
-  { name: "Angular. js" },
-  { name: "Node. js   .  ." },
-  { name: "REST APIs." },
+  { name: "Express.js" },
+  { name: "Angular.js" },
+  { name: "Node.js" },
+  { name: "REST APIs" },
 ];
 
 const WebDeveloper = () => {

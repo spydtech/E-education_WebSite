@@ -29,7 +29,7 @@ const Delivery_Methods = () => {
         className={`relative transition-transform duration-500 ease-in-out transform ${sizeClass} ${opacityClass} flex-shrink-0 cursor-pointer`}
         onClick={onClick}
       >
-        <img src={src} alt={title} className="w-full h-96 object-cover transition-all duration-500 ease-in-out" />
+        <img src={src} alt={title} className="w-full h-96 md:h-64 object-cover transition-all duration-500 ease-in-out" />
         {isVisible && (
           <div
             className="absolute bottom-0 left-0 bg-[#F6AC14] h-28 text-white p-4 w-full md:w-40 transition-all duration-500 ease-in-out"

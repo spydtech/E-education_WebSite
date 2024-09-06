@@ -79,10 +79,10 @@ function FooterPart() {
 
   return (
     <>
-      <footer className="h-auto bg-[#bfd200] font">
+      <footer className="h-auto bg-[#FFFFFF] font ">
         <div className="p-2 pb-4 text-sm">
           <div className="container mx-auto px-6 pt-24 flex justify-center">
-            <div className="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12 justify-around bg-[#bfd200]">
+            <div className="grid grid-cols-4 gap-6 md:grid-cols-8 lg:grid-cols-12 justify-around bg-[#FFFFFF]">
               <div className="col-span-2 md:col-span-2 lg:col-span-2">
                 <a
                   id="WindUI-5-logo"
