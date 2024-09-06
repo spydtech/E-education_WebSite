@@ -5,11 +5,17 @@ import { Link } from "react-router-dom";
 import Navbar from "../../../../Navbar";
 import Footer from "../../../footer/Footer";
 import cardImage from "../../../../../assetss/student/cardImg.png";
+import Introduction_to_data_science from "../../../../../assetss/student/dataScience/Introduction_to_data_science.png";
+import Datascience_with_python from "../../../../../assetss/student/dataScience/Datascience_with_python.png";
+import Machine_learning from "../../../../../assetss/student/dataScience/Machine_learning.png";
+import Data_Visualization from "../../../../../assetss/student/dataScience/Data_Visualization.png";
+import Big_Data from "../../../../../assetss/student/dataScience/Big_Data.png";
+import Data_analytics from "../../../../../assetss/student/dataScience/Data_analytics.png";
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
-import Girl2 from "../../../../../assetss/profile/girl2.png"
+import Girl2 from "../../../../../assetss/profile/girl2.png";
 const DataScienceArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
@@ -48,7 +54,7 @@ const DataScienceArray = () => {
       title: "Introduction to Data Science",
       description:
         "Master data analysis, visualization, and machine learning with Python.",
-      image: cardImage,
+      image: Introduction_to_data_science,
       link: "/data_Science/introduction-to-data-science",
       rating: 4.7,
       price: "₹2499",
@@ -61,7 +67,7 @@ const DataScienceArray = () => {
       title: "Data Science with Python",
       description:
         "Learn machine learning algorithms and their real-world applications.",
-      image: cardImage,
+      image: Datascience_with_python,
       link: "/data_Science/data-science-with-python",
       rating: 4.8,
       price: "₹2899",
@@ -74,7 +80,7 @@ const DataScienceArray = () => {
       title: "Machine Learning",
       description:
         "Dive deep into neural networks and deep learning techniques.",
-      image: cardImage,
+      image: Machine_learning,
       link: "/data_Science/machine-Learning",
       rating: 4.9,
       price: "₹3299",
@@ -86,7 +92,7 @@ const DataScienceArray = () => {
       id: 4,
       title: "Data Visualization",
       description: "Learn to analyze and visualize data using R programming.",
-      image: cardImage,
+      image: Data_Visualization,
       link: "/data_Science/data-visualization",
       rating: 4.6,
       price: "₹2099",
@@ -99,7 +105,7 @@ const DataScienceArray = () => {
       title: "Big Data Analytics",
       description:
         "Get introduced to the world of big data technologies and tools.",
-      image: cardImage,
+      image: Big_Data,
       link: "/data_Science/big-data-analysis",
       rating: 4.4,
       price: "₹2299",
@@ -112,7 +118,7 @@ const DataScienceArray = () => {
       title: "Data Analytics",
       description:
         "Understand the basics of artificial intelligence and its applications.",
-      image: cardImage,
+      image: Data_analytics,
       link: "/data_Science/data-Analatics",
       rating: 4.9,
       price: "₹2499",
@@ -121,8 +127,6 @@ const DataScienceArray = () => {
       enrolled: 2900, // Add dummy enrolled number
     },
   ];
-  
-  
 
   const filteredCourses = courses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -154,7 +158,7 @@ const DataScienceArray = () => {
       <Navbar />
       <img
         src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg?ga=GA1.1.1671979702.1717669022&semt=sph"
-        className="object-cover w-full md:h-[490px]"
+        className="object-cover w-full md:h-[500px]"
         alt="Background Image"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
@@ -165,7 +169,7 @@ const DataScienceArray = () => {
           </span>
         </div>
 
-        <div className="mb-4 flex justify-end">
+        <div className="mb-4 flex justify-center ">
           <input
             type="text"
             placeholder="Search by course name ......"
@@ -174,58 +178,62 @@ const DataScienceArray = () => {
             className="px-4 py-2 border border-blue-600 rounded placeholder-blue-500"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-          {filteredCourses.map((course, index) => (
-            <div
-              key={course.id}
-              className={`relative bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out max-w-[320px] mx-auto ${
-                index >= 3 ? "mt-6" : "" // Add top margin for the second row
-              }`}
-            >
-              <a href={course.link} rel="noopener noreferrer">
-                <div className="relative">
-                  <img
-                    src={course.image}
-                    alt={course.title}
-                    className="w-full h-32 object-cover px-3 py-3"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2 flex items-center justify-between">
-                    {course.title}
-                    <MdArrowOutward className="text-gray-500 text-2xl" />
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {course.description}
-                  </p>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center text-gray-900">
-                      <span className="mr-2 font-bold">{course.rating}</span>
-                      {renderStarRating(course.rating)}
-                    </div>
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center">
+            {filteredCourses.map((course, index) => (
+              <div
+                key={course.id}
+                className={`relative bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out max-w-[320px] mx-auto ${
+                  index >= 3 ? "" : "" // Add top margin for the second row
+                }`}
+              >
+                <a href={course.link} rel="noopener noreferrer">
+                  <div className="relative">
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="w-full h-32 object-cover px-3"
+                    />
                   </div>
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center">
-                      <img
-                        src={course.profilePic}
-                        alt={course.name}
-                        className="w-8 h-8 rounded-full mr-2"
-                      />
-                      <div>
-                        <span className="text-gray-700 font-bold">
-                          {course.name}
-                        </span>
-                        <p className="text-gray-500 text-xs">{course.enrolled} Enrolled</p>
+                  <div className="p-4">
+                    <h3 className="text-xl font-semibold mb-2 flex items-center justify-between">
+                      {course.title}
+                      <MdArrowOutward className="text-gray-500 text-2xl" />
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4">
+                      {course.description}
+                    </p>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center text-gray-900">
+                        <span className="mr-2 font-bold">{course.rating}</span>
+                        {renderStarRating(course.rating)}
                       </div>
                     </div>
-                    <span className="text-gray-900 font-bold">
-                      {course.price}
-                    </span>
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center">
+                        <img
+                          src={course.profilePic}
+                          alt={course.name}
+                          className="w-8 h-8 rounded-full mr-2"
+                        />
+                        <div>
+                          <span className="text-gray-700 font-bold">
+                            {course.name}
+                          </span>
+                          <p className="text-gray-500 text-xs">
+                            {course.enrolled} Enrolled
+                          </p>
+                        </div>
+                      </div>
+                      <span className="text-gray-900 font-bold">
+                        {course.price}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
-          ))}
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <Footer />
