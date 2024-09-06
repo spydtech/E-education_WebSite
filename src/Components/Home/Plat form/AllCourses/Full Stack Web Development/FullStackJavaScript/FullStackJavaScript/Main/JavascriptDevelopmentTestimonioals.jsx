@@ -5,7 +5,7 @@ import DeliveryMethods from './../../deliverymethods/Delivery_Methods';
 
 const Card = ({ imageSrc, text, isFlipped, isArrowClicked, toggleCard, isMobile }) => {
   return (
-    <div className="relative w-72 h-72 sm:w-64 sm:h-64 rounded-full border-8 border-[#0098F1] flex items-center justify-center">
+    <div className="relative w-72 h-72 md:w-56 md:h-56 rounded-full border-8 border-[#0098F1] flex items-center justify-center">
       <img
         src={imageSrc}
         alt="Front "

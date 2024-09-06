@@ -34,14 +34,14 @@ const ImageHomePage = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="bg-white  border-2 border-[#f6ac14]  hover:border-[#f6ac14] border-opacity-20 px-6 shadow-md text-center w-[350px] h-[250px] flex flex-col items-center"
+            className="bg-white  border-2 border-[#F19E22]  hover:border-[#F19E22] border-opacity-20 px-6 shadow-md text-center w-[350px] h-[250px] flex flex-col items-center"
           >
             <img
               src={item.imgSrc}
               alt={item.altText}
               className="w-[130px] h-[130px]"
             />
-            <h2 className="text-[26px] font-bold mb-2 bg-gradient-to-r from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
+            <h2 className="text-[26px] font-bold mb-2 bg-gradient-to-r from-[#0098f1] to-[#F19E22] bg-clip-text text-transparent">
               {item.title}
             </h2>
             <p className="text-sm">{item.description}</p>
