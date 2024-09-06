@@ -19,7 +19,7 @@ const Cart = ({ history }) => {
     const { cart } = useSelector(store => store);
 
 
-    // Calculate total price and discount price
+    
     const totalPrice = cartItems.reduce((total, item) => total + item.coursePrice, 0);
 
     const discountPrice = 0;
