@@ -5,7 +5,7 @@ import DeliveryMethods from './../deliverymethods/Delivery_Methods';
 
 const Card = ({ imageSrc, text, isFlipped, isArrowClicked, toggleCard, isMobile }) => {
   return (
-    <div className="relative w-72 h-72 sm:w-64 sm:h-64 rounded-full border-8 border-[#0098F1] flex items-center justify-center">
+    <div className="relative w-72 h-72 md:w-56 md:h-56 rounded-full border-8 border-[#0098F1] flex items-center justify-center">
       <img
         src={imageSrc}
         alt="Front Imagee"
@@ -16,7 +16,7 @@ const Card = ({ imageSrc, text, isFlipped, isArrowClicked, toggleCard, isMobile 
           {text}</p>
       </div>
       <button
-        className={`absolute bottom-6 right-4 rounded-full p-2 transition-colors duration-300 ${isArrowClicked ? 'bg-[#F6AC14] text-white' : 'bg-white shadow-lg text-[#F6AC14]'}`}
+        className={`absolute bottom-5 right-1 rounded-full p-2 transition-colors duration-300 ${isArrowClicked ? 'bg-[#F6AC14] text-white' : 'bg-white shadow-lg text-[#F6AC14]'}`}
         onClick={toggleCard}
       >
         <HiCursorArrowRays className='text-3xl' />
