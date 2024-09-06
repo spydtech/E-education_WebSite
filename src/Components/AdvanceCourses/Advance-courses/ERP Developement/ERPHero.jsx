@@ -12,8 +12,8 @@ const ERPHero = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 items-center w-10/12 mx-auto overflow-x-hidden md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5">
-        <div className="order-2 lg:order-1 w-auto h-auto md:mb-14 font md:py-0 mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center w-10/12 mx-auto overflow-x-hidden">
+        <div className="order-2 lg:order-1 w-auto h-auto  mx-auto">
           <h1 className="text-[18px] md:text-[26px] lg:text-[28px] xl:text-[28px] font-semibold text-[#f6ac14] leading-tight text-start">
             Master Enterprise Resource Planning with Our Comprehensive Course!
           </h1>
@@ -29,12 +29,11 @@ const ERPHero = () => {
             </button>
           </div>
         </div>
-        <div className="order-1 lg:order-2 pb-10 mx-auto w-auto h-auto overflow-hidden md:p-10 lg:p-0 sm:pb-0 mt-14 md:mb-10 flex justify-center items-center">
+        <div className="order-1 lg:order-2   flex justify-center">
           <img
-            id="heroImg1"
-            className="rounded-full object-cover w-[280px] h-[280px] sm:w-[375px] sm:h-[375px] md:w-[400px] md:h-[400px] lg:w-[400px] lg:h-[400px] xl:w-[400px] xl:h-[400px] 2xl:w-[600px] 2xl:h-[600px] mx-auto"
-            src="https://img.freepik.com/free-photo/business-growth-graph_53876-163233.jpg?ga=GA1.1.124895894.1693499002&semt=ais_hybrid"
-            alt="Enterprise Resource Planning"
+            src="https://img.freepik.com/free-vector/speed-test-concept-illustration_114360-3267.jpg?t=st=1725014215~exp=1725017815~hmac=0f061f675b6f9f4fc0fc5888c1331e5d8f681067e1777ddc3bdd2cf1d826f223&w=740"
+            alt="Hero"
+            className="w-full h-full max-w-md md:max-w-lg lg:max-w-xl"
           />
         </div>
       </div>
