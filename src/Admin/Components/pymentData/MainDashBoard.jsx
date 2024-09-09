@@ -8,6 +8,10 @@ import ProcessingPaymentsTable from "./ProcessingPaymentTable";
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("All");
 
+  const handleTabChange = (event) => {
+    setActiveTab(event.target.value);
+  };
+
   const renderTable = () => {
     switch (activeTab) {
       case "All":
@@ -28,9 +32,9 @@ const Dashboard = () => {
   const totalEarningsCard = [
     {
       title: "Total Earnings",
-      amount: "$450.89",
+      amount: "₹4,50,000",
       textColor: "text-green-600",
-      bgColor: "bg-gray-100",
+
       Date: "02/July/2024",
     },
   ];
@@ -38,9 +42,9 @@ const Dashboard = () => {
   const pendingPaymentsCard = [
     {
       title: "Pending Payments",
-      amount: "$10.89",
+      amount: "₹10,000",
       textColor: "text-red-700",
-      bgColor: "bg-gray-100",
+
       Date: "02/July/2024",
     },
   ];
@@ -50,113 +54,93 @@ const Dashboard = () => {
       title: "Withdrawal Method",
       amount: "Acc No: 1736738373",
       textColor: "text-black",
-      bgColor: "bg-gray-100",
     },
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-6 grid-rows-auto gap-4 p-4">
-      {totalEarningsCard.map((card, index) => (
-        <div
-          key={index}
-          className={`col-span-1 md:col-span-2 rounded-lg p-4 ${card.bgColor}`}
-        >
-          <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>
-          <p
-            className={`${card.textColor} float-end relative bottom-3 text-3xl font-bold pt-2`}
+    <div className="p-4">
+      {/* Card Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        {/* Total Earnings Card */}
+        {totalEarningsCard.map((card, index) => (
+          <div
+            key={index}
+            className={`w-full text-white bg-[#ff259d] h-[160px] rounded-lg grid grid-cols-[1fr_auto]  relative`}
           >
-            {card.amount}
-          </p>
+            <div className="flex flex-col justify-center rounded-l-lg p-4 pl-6">
+              <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>
+              <p className="text-sm mt-2">{card.Date}</p>
+              <p className={` text-2xl font-bold mt-2`}>{card.amount}</p>
+            </div>
+            <div
+              style={{
+                clipPath: "ellipse(60% 60% at 70% 50%)",
+              }}
+              className="rounded-r-lg bg-white bg-opacity-60 w-[80px] h-full flex items-center justify-center"
+            ></div>
+          </div>
+        ))}
 
-          <p className="text-sm top-10 relative  ml-3 mb-8">{card.Date}</p>
-        </div>
-      ))}
-
-      {pendingPaymentsCard.map((card, index) => (
-        <div
-          key={index}
-          className={`col-span-1 md:col-span-2 rounded-lg p-4 ${card.bgColor}`}
-        >
-          <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>
-          <p
-            className={`${card.textColor} float-end relative bottom-3 text-3xl font-bold pt-2`}
+        {/* Pending Payments Card */}
+        {pendingPaymentsCard.map((card, index) => (
+          <div
+            key={index}
+            className={`w-full text-white bg-[#ff8205] h-[160px] rounded-lg grid grid-cols-[1fr_auto]  relative`}
           >
-            {card.amount}
-          </p>
+            <div className="flex flex-col justify-center rounded-l-lg p-4 pl-6">
+              <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>
+              <p className="text-sm mt-2">{card.Date}</p>
+              <p className={` text-2xl font-bold mt-2`}>{card.amount}</p>
+            </div>
+            <div
+              style={{
+                clipPath: "ellipse(60% 60% at 70% 50%)",
+              }}
+              className="rounded-r-lg bg-white bg-opacity-60 w-[80px] h-full flex items-center justify-center"
+            ></div>
+          </div>
+        ))}
 
-          <p className="text-sm top-10 relative  ml-3 mb-4">{card.Date}</p>
-        </div>
-      ))}
-
-      {withdrawalMethodCard.map((card, index) => (
-        <div
-          key={index}
-          className={`col-span-1 md:col-span-2 rounded-lg p-4 ${card.bgColor}`}
-        >
-          <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>
-          <p className={`${card.textColor} text-[18px]   pt-3 `}>
-            {card.amount}
-          </p>
-        </div>
-      ))}
-
-      <div className="col-span-1 md:col-span-6 text-xl md:text-2xl font-semibold px-2 py-4">
-        <h2>Payment History</h2>
-      </div>
-      <div className="col-span-1 md:col-span-1">
-        <button
-          onClick={() => setActiveTab("All")}
-          className={`w-full md:w-36 p-2 border-gray-200 border-2 text-black rounded-full ${
-            activeTab === "All" ? "bg-blue-500 text-white" : ""
-          }`}
-        >
-          All Transactions
-        </button>
-      </div>
-      <div className="col-span-1 md:col-span-1">
-        <button
-          onClick={() => setActiveTab("Completed")}
-          className={`w-full md:w-36 p-2 border-gray-200 border-2 text-black rounded-full ${
-            activeTab === "Completed" ? "bg-green-500 text-white" : ""
-          }`}
-        >
-          Completed
-        </button>
+        {/* Withdrawal Method Card */}
+        {withdrawalMethodCard.map((card, index) => (
+          <div
+            key={index}
+            className={`w-full text-white bg-[#ff2f6a] h-[160px] rounded-lg grid grid-cols-[1fr_auto]  relative`}
+          >
+            <div className="flex flex-col justify-center rounded-l-lg p-4 pl-6">
+              <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>
+              <p className={` text-xl font-bold mt-2`}>{card.amount}</p>
+            </div>
+            <div
+              style={{
+                clipPath: "ellipse(60% 60% at 70% 50%)",
+              }}
+              className="rounded-r-lg bg-white bg-opacity-60 w-[80px] h-full flex items-center justify-center"
+            ></div>
+          </div>
+        ))}
       </div>
 
-      <div className="col-span-1 md:col-span-1">
-        <button
-          onClick={() => setActiveTab("Pending")}
-          className={`w-full md:w-36 p-2 border-gray-200 border-2 text-black rounded-full ${
-            activeTab === "Pending" ? "bg-orange-500 text-white" : ""
-          }`}
+      {/* Payment History Section */}
+      <div className="flex items-center justify-between px-2 py-4 mb-4">
+        <h2 className="text-xl sm:text-sm md:text-2xl text-[#0098f1] font-semibold">
+          Payment History
+        </h2>
+        <select
+          value={activeTab}
+          onChange={handleTabChange}
+          className="w-full md:w-[190px] p-3 bg-[#f6ac14] outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none text-white rounded-lg"
         >
-          Pending
-        </button>
+          <option value="All">All Transactions</option>
+          <option value="Completed">Completed</option>
+          <option value="Pending">Pending</option>
+          <option value="Processing">Processing</option>
+          <option value="Rejected">Rejected</option>
+        </select>
       </div>
-      <div className="col-span-1 md:col-span-1">
-        <button
-          onClick={() => setActiveTab("Processing")}
-          className={`w-full md:w-36 p-2 border-gray-200 border-2 text-black rounded-full ${
-            activeTab === "Processing" ? "bg-yellow-500 text-white" : ""
-          }`}
-        >
-          Processing
-        </button>
-      </div>
-      <div className="col-span-1 md:col-span-1">
-        <button
-          onClick={() => setActiveTab("Rejected")}
-          className={`w-full md:w-36 p-2 border-gray-200 border-2 text-black rounded-full ${
-            activeTab === "Rejected" ? "bg-red-600 text-white" : ""
-          }`}
-        >
-          Rejected
-        </button>
-      </div>
-      <div className="col-span-1 md:col-span-6 row-span-auto bg-gray-100 p-4 overflow-x-auto">
-        {renderTable()}
-      </div>
+
+      {/* Table Section */}
+      <div className="row-span-auto p-4 overflow-x-auto">{renderTable()}</div>
     </div>
   );
 };
