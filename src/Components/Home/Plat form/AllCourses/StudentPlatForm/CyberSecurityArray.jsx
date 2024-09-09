@@ -141,7 +141,7 @@ const CyberSecurityArray = () => {
                   <img
                     src={course.image}
                     alt={course.title}
-                    className="w-full h-32 object-cover px-3 py-3"
+                    className="w-full h-36 px-3"
                   />
                 </div>
                 <div className="p-4">
