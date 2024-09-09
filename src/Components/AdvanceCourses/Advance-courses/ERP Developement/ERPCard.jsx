@@ -41,7 +41,7 @@ const ERPCard = () => {
   ];
 
   return (
-    <section id="portfolio" className="portfolio-section py-10 px-4">
+    <section id="portfolio" className="portfolio-section pt-6 md:pt-0 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl pb-2 md:text-4xl lg:text-5xl font-medium">
