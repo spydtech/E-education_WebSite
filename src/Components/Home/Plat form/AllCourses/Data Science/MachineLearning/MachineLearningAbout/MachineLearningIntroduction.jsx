@@ -1,26 +1,25 @@
 import React, { useState } from "react";
-// DataAnalyticsIntroduction
+
 function MachineLearningIntroduction() {
-  // const recruiters = [amazon, spotify, google, flipkart, uber, microsoft];
   const [currentSlide, setCurrentSlide] = useState(0);
-  const Slide = ({ heading, items }) => {
-    return (
-      <div className="w-full flex-shrink-0 px-4 py-8">
-        <div className=" h-[400px] flex  justify-center">
-          <div>
-            <h2 className="text-3xl font-medium mb-4 text-orange-600 font">
-              {heading}
-            </h2>
-            <ul className="list-disc list-inside text-xl font">
-              {items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
+
+  const Slide = ({ heading, items }) => (
+    <div className="w-full flex-shrink-0 px-4 py-8">
+      <div className="h-auto flex justify-center">
+        <div>
+          <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
+            {heading}
+          </h2>
+          <ul className="list-disc list-inside text-lg lg:text-xl">
+            {items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+
   const slidesData = [
     {
       heading: "Introduction to Machine Learning",
@@ -73,70 +72,51 @@ function MachineLearningIntroduction() {
   };
 
   return (
-    <>
-      <div
-        id="subdiv"
-        className="grid grid-cols-1  w-fit   md:lg:grid-cols-2  h-full bg-gradient-to-br from-yellow-300 via-orange-500 to-red-600"
-      >
-        <div
-          id="div1"
-          className="  flex items-center justify-center   xl:lg:md:w-auto "
-        >
-          <div
-            id="headings"
-            className="grid grid-cols-1 text-start md:px-10 font"
-          >
-            <div>
-              {" "}
-              <p className="text-orange-800 text-xl font-medium">
-                Introduction
-              </p>
-            </div>
-            <div className="py-5">
-              <p className="md:text-5xl text-2xl font ">
-                So what is
-                <p className="text-violet-800 inline pl-2">Machine Learning</p>
-              </p>
-            </div>
-            <div>
-              <p className="text-xl text-gray-500">
-                Brief about Data Analytics
-              </p>
+    <div className="grid grid-cols-1 lg:grid-cols-2 h-auto bg-white mb-20">
+      <div className="flex items-center justify-center lg:pr-10 px-4 lg:px-10 py-10">
+        <div className="text-center lg:text-left">
+          <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
+            Introduction
+          </p>
+          <div className="py-5">
+            <p className="text-xl lg:text-5xl font">
+              So what is
+              <span className="text-[#f6ac14] inline pl-2">Machine Learning</span>
+            </p>
+          </div>
+          <p className="text-lg lg:text-xl text-gray-500">
+            Brief about Machine Learning
+          </p>
+        </div>
+      </div>
+      <div className="flex items-center justify-center px-4 lg:px-10 py-10">
+        <div className="w-full max-w-7xl">
+          <div className="bg-[#0098f1] w-full lg:w-[550px] h-auto lg:h-[420px] p-5 mx-auto shadow-xl sm:rounded-lg">
+            <div className="relative w-full flex justify-center">
+              <Slide
+                heading={slidesData[currentSlide].heading}
+                items={slidesData[currentSlide].items}
+              />
             </div>
           </div>
-        </div>
-        <div id="div2" className=" md:px-10   ">
-          {/*  */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 ">
-            <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
-              <div className="relative w-full overflow-hidden">
-                <div className="flex">
-                  <Slide
-                    heading={slidesData[currentSlide].heading}
-                    items={slidesData[currentSlide].items}
-                  />
-                </div>
-              </div>
-              <div className="flex justify-between">
-                <button
-                  onClick={goToPreviousSlide}
-                  className=" hover:text-pink-700  text-black font-bold py-2 px-4 rounded"
-                >
-                  Previous
-                </button>
-                <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-                <button
-                  onClick={goToNextSlide}
-                  className=" hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
-                >
-                  Next
-                </button>
-              </div>
-            </div>
+          <div className="flex justify-between mt-4">
+            <button
+              onClick={goToPreviousSlide}
+              className="hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
+            >
+              Previous
+            </button>
+            <div className="text-center">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+            <button
+              onClick={goToNextSlide}
+              className="hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
+            >
+              Next
+            </button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

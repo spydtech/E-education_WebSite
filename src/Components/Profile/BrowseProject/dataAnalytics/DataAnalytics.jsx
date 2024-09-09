@@ -19,16 +19,21 @@ const DataAnalytics = () => {
             predictions, and derive valuable insights that can inform
             decision-making and drive innovation across industries.
           </div>
-          <div className="md:pl-12 pl-4 md:w-[700px] md:pt-6 pt-8"> <strong>Unlock endless opportunities.</strong> 
-    Whether you're aspiring to become a data analyst, machine learning
-    engineer, or data scientist, proficiency in Data Science opens doors to
-    diverse career paths across industries such as tech, finance, healthcare,
-    and beyond.</div>
+          <div className="md:pl-12 pl-4 md:w-[700px] md:pt-6 pt-8">
+            {" "}
+            <strong>Unlock endless opportunities.</strong>
+            Whether you're aspiring to become a data analyst, machine learning
+            engineer, or data scientist, proficiency in Data Science opens doors
+            to diverse career paths across industries such as tech, finance,
+            healthcare, and beyond.
+          </div>
         </div>
         <div className="shadow-2xl bg-gray-200 md:w-[400px] md:mt-24 h-[360px] mt-8 pt-[36px] pl-4">
           <div>
             <div className="font-bold text-xl pb-2">Course</div>
-            <p className="pb-2">Gain insight into a topic and learn the fundamentals</p>
+            <p className="pb-2">
+              Gain insight into a topic and learn the fundamentals
+            </p>
 
             <hr />
 

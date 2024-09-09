@@ -267,14 +267,13 @@ import Footer from "../../../footer/Footer";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import java from "../../../../../assetss/fullstackwebdev/java/java1.avif";
-import  javascript  from "../../../../../assetss/fullstackwebdev/javaScript/javascript1.avif";
-import mern   from "../../../../../assetss/fullstackwebdev/Mernstack/mern2.avif"
-import  dotnet  from "../../../../../assetss/fullstackwebdev/dotnet/dotnet1.jpg";
-import devops   from "../../../../../assetss/fullstackwebdev/devops/devops2.avif";
-import  python  from "../../../../../assetss/fullstackwebdev/python/python1.avif";
-import Girl2 from "../../../../../assetss/profile/girl2.png"
+import javascript from "../../../../../assetss/fullstackwebdev/javaScript/javascript1.avif";
+import mern from "../../../../../assetss/fullstackwebdev/Mernstack/mern2.avif";
+import dotnet from "../../../../../assetss/fullstackwebdev/dotnet/dotnet1.jpg";
+import devops from "../../../../../assetss/fullstackwebdev/devops/devops2.avif";
+import python from "../../../../../assetss/fullstackwebdev/python/python1.avif";
+import Girl2 from "../../../../../assetss/profile/girl2.png";
 // import { IoIosSearch } from "react-icons/io";
-
 
 const FullStackWebDevelopmentArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -401,7 +400,6 @@ const FullStackWebDevelopmentArray = () => {
       enrolled: 1600, // Add dummy enrolled number
     },
   ];
-  
 
   const filteredCourses = courses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -436,77 +434,79 @@ const FullStackWebDevelopmentArray = () => {
         className="object-cover w-full md:h-[490px]"
         alt="Background Image"
       /> */}
-     
+
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-4 text-center text-[#0098f1] ">
-          Expand <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
-         Full Stack Development
-          </span>{" "} <span className="text-[#f6ac14]">Courses</span>
+          Expand{" "}
+          <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
+            Full Stack Development
+          </span>{" "}
+          <span className="text-[#f6ac14]">Courses</span>
         </h1>
 
         <div className="mb-4 flex justify-center ">
-         
-        <input
+          <input
             type="text"
             placeholder="Search by course name"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="relative px-4 w-80 py-2 border border-gray-300  rounded focus:outline-none"
-            
           />
-         {/* <button className="absolute"> <IoIosSearch className=" text-4xl pt-2 pr-2 font-semibold" /></button> */}
+          {/* <button className="absolute"> <IoIosSearch className=" text-4xl pt-2 pr-2 font-semibold" /></button> */}
         </div>
         <div className="flex justify-center ">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 justify-center items-center">
-          {filteredCourses.map((course) => (
-            <div
-              key={course.id}
-              className="relative bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out max-w-[320px] mx-auto"
-            >
-              <a href={course.link} rel="noopener noreferrer">
-                <div className="relative">
-                  <img
-                    src={course.image}
-                    alt={course.title}
-                    className="w-full h-32 object-cover px-3 "
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2 flex items-center text-nowrap justify-between">
-                    {course.title}
-                    <MdArrowOutward className="text-gray-500 text-2xl" />
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {course.description}
-                  </p>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center text-gray-900">
-                      <span className="mr-2 font-bold">{course.rating}</span>
-                      {renderStarRating(course.rating)}
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 justify-center items-center">
+            {filteredCourses.map((course) => (
+              <div
+                key={course.id}
+                className="relative bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out max-w-[320px] mx-auto"
+              >
+                <a href={course.link} rel="noopener noreferrer">
+                  <div className="relative">
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="w-full h-32 object-cover px-3 "
+                    />
                   </div>
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center">
-                      <img
-                        src={course.profilePic}
-                        alt={course.name}
-                        className="w-8 h-8 rounded-full mr-2"
-                      />
-                      <div>
-                        <span className="text-gray-700 font-bold">
-                          {course.name}
-                        </span>
-                        <p className="text-gray-500 text-xs">{course.enrolled} Enrolled</p>
+                  <div className="p-4">
+                    <h3 className="text-xl font-semibold mb-2 flex items-center text-nowrap justify-between">
+                      {course.title}
+                      <MdArrowOutward className="text-gray-500 text-2xl" />
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4">
+                      {course.description}
+                    </p>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center text-gray-900">
+                        <span className="mr-2 font-bold">{course.rating}</span>
+                        {renderStarRating(course.rating)}
                       </div>
                     </div>
-                    <span className="text-gray-900 font-bold">
-                      {course.price}
-                    </span>
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center">
+                        <img
+                          src={course.profilePic}
+                          alt={course.name}
+                          className="w-8 h-8 rounded-full mr-2"
+                        />
+                        <div>
+                          <span className="text-gray-700 font-bold">
+                            {course.name}
+                          </span>
+                          <p className="text-gray-500 text-xs">
+                            {course.enrolled} Enrolled
+                          </p>
+                        </div>
+                      </div>
+                      <span className="text-gray-900 font-bold">
+                        {course.price}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
-          ))}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -3,7 +3,9 @@ import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../../Navbar";
 import FooterPart from "../../../footer/Footer";
-import cardImage from "../../../../../assetss/student/cardImg.png";
+import cardImage from "../../../../../assetss/fullstackwebdev/java/java1.avif";
+import  cardImage1  from "../../../../../assetss/fullstackwebdev/dotnet/dotnet1.jpg";
+import  cardImage2  from "../../../../../assetss/fullstackwebdev/javaScript/javascript1.avif";
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
@@ -53,7 +55,7 @@ const EthicalHackingStudentArray = () => {
       title: "Advanced Ethical Hacking",
       description:
         "Dive deeper into ethical hacking techniques, including exploitation, privilege escalation, and post-exploitation.",
-      image: cardImage,
+      image: cardImage1,
       link: "/Ethical_Hacking/advance_Ethical_Hacking",
       rating: 4.5, // Add dummy rating
       price: "₹1899", // Add dummy price
@@ -65,7 +67,7 @@ const EthicalHackingStudentArray = () => {
     {
       id: 3,
       title: "Certified Ethical Hacker",
-      image: cardImage,
+      image: cardImage2,
       description:
         "Prepare for the Certified Ethical Hacker (CEH) certification with comprehensive coverage of ethical hacking topics.",
       link: "/Ethical-Hacking/certified_Ethical_Hacking",
