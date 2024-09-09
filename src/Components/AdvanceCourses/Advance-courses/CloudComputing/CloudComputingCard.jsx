@@ -35,7 +35,7 @@ const CloudComputingCard = () => {
   ];
 
   return (
-    <section id="portfolio" className="portfolio-section py-10 md:py-0 px-4">
+    <section id="portfolio" className="portfolio-section pt-10 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-xl sm:pb-2 md:text-4xl lg:text-5xl font-medium">

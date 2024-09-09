@@ -59,7 +59,7 @@ const CloudComputingNavigation = () => {
         <ul
           className={`${
             menuOpen ? "block" : "hidden"
-          } lg:flex px-12 md:pl-56 lg:px-12 lg:flex-row flex-col text-nowrap overflow-x-auto xl:lg:md:text-[22px] text-[16px] text-white font-md space-y-2 lg:space-y-0 lg:space-x-4`}
+          } lg:flex px-12 md:pl-56 lg:px-12 lg:flex-row flex-col text-nowrap overflow-x-auto xl:lg:md:text-[18px] text-[16px] text-white font-md space-y-2 lg:space-y-0 lg:space-x-4`}
         >
           {sections.map((section, index) => (
             <li key={index} className="mt-2 text-center sm:mt-0">
