@@ -3,12 +3,11 @@ import MachineLearningKeyHighights from "./MachineLearningKeyHighights";
 import MachineLearningCertificate from "./MachineLearningCertificate";
 import MachineLearningCareersOutcomes from "./MachineLearningCareersOutcomes";
 import MachineLearningAbout from "./MachineLearningAbout";
-import { TbPlayerTrackNextFilled } from "react-icons/tb";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for menu toggle
 import MachineLearningSyallabus from "./MachineLearningSyallabus";
 import MachineLearningIntroduction from "./MachineLearningIntroduction";
 
-const DataAnalaticsNavigation = () => {
+const DataScienceNavigation = () => {
   const sections = [
     "Introduction",
     "Key Highlights",
@@ -40,7 +39,7 @@ const DataAnalaticsNavigation = () => {
     } else {
       setCurrentSection(index);
     }
-    setMenuOpen(true); // Close the menu when a section is selected
+    setMenuOpen(false); // Close the menu when a section is selected
   };
 
   const toggleMenu = () => {
@@ -49,38 +48,30 @@ const DataAnalaticsNavigation = () => {
 
   return (
     <>
-      <nav className="flex items-center px-4 sm:px-6 py-4">
+      <nav className="flex justify-center items-center bg-[#0098F1] rounded-t-2xl px-4 sm:px-6 py-4 ml-5 mr-5">
         <button className="text-black text-2xl sm:hidden" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes className="mb-56" /> : <FaBars />}{" "}
-          {/* Toggle between menu and close icon */}
+          {menuOpen ? <FaTimes /> : <FaBars />} 
         </button>
         <ul
           className={`${
             menuOpen ? "block" : "hidden"
-          } sm:flex sm:flex-row flex-col items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4`}
+          } sm:flex flex-row text-nowrap overflow-x-auto xl:lg:md:text-[22px] text-[16px] text-[#0098f1] font-md space-y-2 sm:space-y-0 sm:space-x-4 md:ml-12 justify-center items-center`}
+          style={{ width: '100%', padding: 0, margin: 0 }}
         >
           {sections.map((section, index) => (
-            <li key={index} className="mt-2 sm:mt-0">
+            <li key={index} className="text-center">
               <button
-                className={`text-black hover:text-violet-800 transition duration-300 ${
+                className={`transition duration-300 px-2 py-1 sm:px-4 sm:py-2 rounded ${
                   currentSection === index
-                    ? "text-red-700 hover:text-red-700 underline underline-offset-8"
-                    : ""
-                } px-2 py-1 sm:px-4 sm:py-2 rounded`}
+                    ? "text-white opacity-100  underline underline-offset-8"
+                    : "text-white opacity-50 hover:opacity-100"
+                }`}
                 onClick={() => handleNextSection(index)}
               >
                 {section}
               </button>
             </li>
           ))}
-          {/* <li className="mt-2 sm:mt-0">
-            <button
-              className="text-black text-2xl hover:text-violet-700 transition duration-300"
-              onClick={() => handleNextSection("next")}
-            >
-              <TbPlayerTrackNextFilled />
-            </button>
-          </li> */}
         </ul>
       </nav>
       <div className="">
@@ -95,4 +86,4 @@ const DataAnalaticsNavigation = () => {
   );
 };
 
-export default DataAnalaticsNavigation;
+export default DataScienceNavigation;
