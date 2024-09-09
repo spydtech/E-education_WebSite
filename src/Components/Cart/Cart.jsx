@@ -19,7 +19,7 @@ const Cart = ({ history }) => {
     const { cart } = useSelector(store => store);
 
 
-    // Calculate total price and discount price
+    
     const totalPrice = cartItems.reduce((total, item) => total + item.coursePrice, 0);
 
     const discountPrice = 0;
@@ -96,7 +96,7 @@ const Cart = ({ history }) => {
                 {
                     amount: totalAmount * 100, // Amount in paisa (convert to integer)
                     currency: 'INR',
-                    receipt: 'receipt_order_12345', // Replace with your logic for receipt ID
+                    receipt: 'receipt_order_12345', 
                     paymentMethod: 'Razorpay',
                 },
                 {
