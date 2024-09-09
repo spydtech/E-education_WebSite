@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../../Navbar";
 import Footer from "../../../footer/Footer";
-import cardImage from "../../../../../assetss/student/cardImg.png";
+import intro_CS from "../../../../../assetss/student/cyberSecurity/intro_CS.png";
+import CS_Essentials from "../../../../../assetss/student/cyberSecurity/CS_Essentials.png";
+import CS_Beginners from "../../../../../assetss/student/cyberSecurity/CS_Beginners.png";
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
@@ -40,7 +42,7 @@ const CyberSecurityArray = () => {
       description:
         "Learn the basic principles of cybersecurity, including risk management, threat detection, and security policies.",
       link: "/Cybersecurity/Cybersecurity_fundamentals",
-      image: cardImage,
+      image: intro_CS,
       rating: 4.5,
       price: "$24.99",
       profilePic: Girl2,
@@ -54,7 +56,7 @@ const CyberSecurityArray = () => {
         "Understand the core concepts of cybersecurity, including network security, cryptography, and incident response.",
       link: "/Cybersecurity/cybersecurity_essentials",
       rating: 4.7,
-      image: cardImage,
+      image: CS_Essentials,
       price: "$29.99",
       profilePic: Girl2,
       name: "Ratna Priya",
@@ -62,7 +64,7 @@ const CyberSecurityArray = () => {
     },
     {
       id: 3,
-      image: cardImage,
+      image: CS_Beginners,
       title: "Cyber security for Beginners",
       description:
         "An introductory course for those new to the field of cybersecurity, covering fundamental concepts and best practices.",
