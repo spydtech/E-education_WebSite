@@ -1,5 +1,5 @@
 import React from "react";
-import fullstack from "../../../assetss/student/studentCourses/full stack.png";
+import fullstack from "../../../assetss/student/studentCourses/full_stack.png";
 import science from "../../../assetss/student/studentCourses/data-science.png";
 import cyber from "../../../assetss/student/studentCourses/cyber-security (1).png";
 import ethical from "../../../assetss/student/studentCourses/hacker.png";
