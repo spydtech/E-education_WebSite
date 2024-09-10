@@ -8,10 +8,10 @@ function EthicalHackingIntroduction() {
       <div className="w-full flex-shrink-0 px-4 py-8">
         <div className="h-auto flex justify-center">
           <div>
-            <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-lg lg:text-xl text-white">
+            <ul className="list-disc list-inside text-md lg:text-xl text-white">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
