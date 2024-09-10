@@ -60,29 +60,27 @@ function EthicalHackingIntroduction() {
   ];
 
   const goToPreviousSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? slidesData.length - 1 : prevSlide - 1
-    );
+    setCurrentSlide((prevSlide) => (prevSlide > 0 ? prevSlide - 1 : 0));
   };
 
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide === slidesData.length - 1 ? 0 : prevSlide + 1
+      prevSlide < slidesData.length - 1 ? prevSlide + 1 : prevSlide
     );
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[468px] bg-white mb-20">
+    <div className="flex flex-col space-y-3 lg:flex-row lg:justify-between lg:items-center lg:h-[468px] mb-5">
       {/* Text Section */}
-      <div className="flex items-center justify-center lg:pr-10">
-        <div className="text-start px-4 lg:px-10">
+      <div className=" ">
+        <div className=" lg:px-10">
           <div>
-            <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
+            <p className="text-[#f6ac14] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
               Introduction
             </p>
           </div>
-          <div className="py-5">
-            <p className="text-xl lg:text-5xl font">
+          <div className="">
+            <p className="md:text-xl lg:text-4xl">
               So what is
               <span className="text-[#f6ac14] inline pl-2">
                 Ethical Hacking
@@ -90,7 +88,7 @@ function EthicalHackingIntroduction() {
             </p>
           </div>
           <div>
-            <p className="text-lg lg:text-xl text-gray-500">
+            <p className="md:text-lg lg:text-4xl text-gray-500">
               Brief about Ethical Hacking
             </p>
           </div>
@@ -98,48 +96,30 @@ function EthicalHackingIntroduction() {
       </div>
 
       {/* Slider Section */}
-      <div className="h-auto lg:h-[468px] flex justify-center ml-10">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-4 lg:px-10 mt-8 lg:mt-0">
-          <div className="bg-[#0098f1] w-full lg:w-[550px] h-auto lg:h-[420px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg">
-            <div className="w-full">
-              <div className="flex text-white text-opacity-80">
-                <Slide
-                  heading={slidesData[currentSlide].heading}
-                  items={slidesData[currentSlide].items}
-                />
-              </div>
-              <div className="flex justify-between">
-                <button
-                  onClick={goToPreviousSlide}
-                  className="hover:text-white text-black font-bold  rounded"
-                >
-                  Previous
-                </button>
-                <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-                <button
-                  onClick={goToNextSlide}
-                  className="hover:text-white text-black font-bold  rounded"
-                >
-                  Next
-                </button>
-              </div>
-            </div>
+      <div className=" lg:h-[468px]">
+        <div className="bg-[#0098f1] lg:w-[550px] lg:h-[420px] md:p-5 lg:flex flex-col justify-between ">
+          <div className="flex text-white text-opacity-80">
+            <Slide
+              heading={slidesData[currentSlide].heading}
+              items={slidesData[currentSlide].items}
+            />
           </div>
-          {/* <div className="flex justify-between mt-4 lg:mt-0">
+
+          <div className="flex justify-between max-md:p-4">
             <button
               onClick={goToPreviousSlide}
-              className="hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
+              className="hover:text-white text-black font-bold  rounded"
             >
               Previous
             </button>
             <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
             <button
               onClick={goToNextSlide}
-              className="hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
+              className="hover:text-white text-black font-bold  rounded"
             >
               Next
             </button>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
