@@ -3,37 +3,37 @@ import React from "react";
 const EthicalHackingCard = () => {
   const courseData = [
     {
-      imgSrc: "https://spacema-dev.com/elevate/assets/images/portfolio-1.png",
+      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
       title: "Explore Course Catalog",
       description:
         "Browse our extensive catalog of Ethical Hacking courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
     },
     {
-      imgSrc: "https://spacema-dev.com/elevate/assets/images/portfolio-2.png",
+      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
       title: "Enroll in Foundational Courses",
       description:
         "Start with foundational courses covering basic concepts, algorithms, and programming languages essential for Ethical Hacking.",
     },
     {
-      imgSrc: "https://img.freepik.com/premium-vector/hacker-using-computer-server-activity-hacked-database-background-vector-illustration_2175-742.jpg?w=826",
+      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
       title: "Practice with Real-world Projects",
       description:
         "Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience in data analysis, model building, and evaluation under the guidance of industry experts.",
     },
     {
-      imgSrc: "https://img.freepik.com/premium-photo/2023-jpg-image-photo-white-background-isolated-wallpaper-texture-photo-image-2024_873925-238679.jpg?w=740",
+      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
       title: "Track Your Progress",
       description:
         "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Machine Learning concepts as you advance through the courses.",
     },
     {
-      imgSrc: "https://img.freepik.com/free-vector/hacker-activity-concept_23-2148549186.jpg?t=st=1722407616~exp=1722411216~hmac=c8b353a86edcae34e7d3e6ecb25ec03a9171e9b197cd04dbc8ab4299b3007426&w=740",
+      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
       title: "Specialize and Advance",
       description:
         "Choose specialized tracks or advanced courses to delve deeper into specific areas of Ethical Hacking, such as penetration testing, network security, or digital forensics. Customize your learning path to align with your interests and career goals.",
     },
     {
-      imgSrc: "https://img.freepik.com/premium-vector/stealing-data-concept-illustrated_23-2148536250.jpg?w=900",
+      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
       title: "Earn Recognized Certifications",
       description:
         "Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.",
@@ -60,15 +60,15 @@ const EthicalHackingCard = () => {
               className="group border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-                <div className="h-[210px] bg-[#0098f1]">
+                <div className="h-[180px]">
                   <img
-                    className="w-full h-full object-cover"
+                    className="w-full h-full bg-cover"
                     src={course.imgSrc}
                     alt={`Course ${index + 1}`}
                   />
                 </div>
                 <div className="p-4 flex flex-col items-center justify-between">
-                  <h3 className="text-lg font-medium text-gray-800 group-hover:text-gray-900">
+                  <h3 className="text-lg font-medium text-[#FF9B26] group-hover:text-gray-900">
                     {course.title}
                   </h3>
                   <p className="text-md text-gray-600 pt-4">

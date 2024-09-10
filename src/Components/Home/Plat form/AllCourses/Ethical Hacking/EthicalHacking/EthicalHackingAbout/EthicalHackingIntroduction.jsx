@@ -84,7 +84,9 @@ function EthicalHackingIntroduction() {
           <div className="py-5">
             <p className="text-xl lg:text-5xl font">
               So what is
-              <span className="text-[#f6ac14] inline pl-2">Ethical Hacking</span>
+              <span className="text-[#f6ac14] inline pl-2">
+                Ethical Hacking
+              </span>
             </p>
           </div>
           <div>
@@ -99,16 +101,31 @@ function EthicalHackingIntroduction() {
       <div className="h-auto lg:h-[468px] flex justify-center ml-10">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-4 lg:px-10 mt-8 lg:mt-0">
           <div className="bg-[#0098f1] w-full lg:w-[550px] h-auto lg:h-[420px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg">
-            <div className="relative w-full">
+            <div className="w-full">
               <div className="flex text-white text-opacity-80">
                 <Slide
                   heading={slidesData[currentSlide].heading}
                   items={slidesData[currentSlide].items}
                 />
               </div>
+              <div className="flex justify-between">
+                <button
+                  onClick={goToPreviousSlide}
+                  className="hover:text-white text-black font-bold  rounded"
+                >
+                  Previous
+                </button>
+                <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+                <button
+                  onClick={goToNextSlide}
+                  className="hover:text-white text-black font-bold  rounded"
+                >
+                  Next
+                </button>
+              </div>
             </div>
           </div>
-          <div className="flex justify-between mt-4 lg:mt-0">
+          {/* <div className="flex justify-between mt-4 lg:mt-0">
             <button
               onClick={goToPreviousSlide}
               className="hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
@@ -122,7 +139,7 @@ function EthicalHackingIntroduction() {
             >
               Next
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
