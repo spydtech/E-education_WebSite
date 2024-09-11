@@ -19,7 +19,7 @@ const CertifiedEthicalHacking = () => {
       <CertifiedEthicalHackingNavigation />
       {/* <EthicalHackingHero /> */}
       <CertifiedEthicalHackingFoot />
-      <FooterPart />
+      {/* <FooterPart /> */}
     </>
   );
 };
