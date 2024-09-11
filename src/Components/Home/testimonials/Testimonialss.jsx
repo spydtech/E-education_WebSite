@@ -149,7 +149,7 @@ export default function Testimonialss() {
                   <div className="flex flex-col text-black font-sans items-center justify-center mt-8 p-4">
                     <p className="text-center mt-4">{user.comment}</p>
                   </div>
-                  <div className="left-0 absolute rounded-tr-xl bottom-0 w-80 sm:w-[441px] h-[23px] bg-gradient-to-r from-[#0098f1] via-green-500 to-[#f6ac14]"></div>
+                  <div className="left-0 absolute rounded-tr-xl bottom-0 w-80 sm:w-[441px] h-[23px] bg-gradient-to-r from-[#0098f1] via-green-500 to-[#F19E22]"></div>
                 </div>
               </li>
             ))}

@@ -29,12 +29,11 @@ const AdvancephpHero = () => {
             </button>
           </div>
         </div>
-        <div className="order-1 lg:order-2 pb-10 mx-auto w-auto h-auto overflow-hidden md:p-10 lg:p-0 sm:pb-0 mt-14 md:mb-10 flex justify-center items-center">
+        <div className="order-1 lg:order-2 mt-4 md:mt-0 p-10  flex justify-center">
           <img
-            id="heroImg1"
-            className="rounded-full object-cover w-[280px] h-[280px] sm:w-[375px] sm:h-[375px] md:w-[400px] md:h-[400px] lg:w-[400px] lg:h-[400px] xl:w-[400px] xl:h-[400px] 2xl:w-[600px] 2xl:h-[600px] mx-auto"
-            src="https://media.istockphoto.com/id/1136829806/vector/website-app-design-development-technology-software-code-programming-ui-ux-concept.jpg?s=612x612&w=0&k=20&c=wB6hinX448B_fLDEGKubgkeVyX6ijVLQQ_Gz_kSqQUg="
-            alt="Advanced PHP Illustration"
+            src="https://img.freepik.com/free-vector/coding-workshop-concept-illustration_114360-8412.jpg?t=st=1725014941~exp=1725018541~hmac=8b955413b04d9b3485341f26d6d0e6f3780a94fd40f346f28cc0aa55b9c6a61a&w=740"
+            alt="Hero"
+            className="w-full h-full max-w-md md:max-w-lg lg:max-w-xl"
           />
         </div>
       </div>
