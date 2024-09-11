@@ -41,7 +41,7 @@ const RejectedPaymentsTable = () => {
           type="text"
           value={searchTerm}
           onChange={handleSearch}
-          className="p-3 border w-[250px] bg-[#f6ac14] text-[15px] text-white placeholder:text-gray-500 outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none rounded-lg"
+          className="p-3 border w-[250px] bg-[#0098f1] text-[15px] text-white placeholder:text-white outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none rounded-lg"
           placeholder="Search Here...."
         />
       </div>

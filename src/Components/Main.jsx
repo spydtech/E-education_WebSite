@@ -23,7 +23,7 @@ function Main() {
             className="flex flex-col  w-full h-auto text-center p-6"
            
           >
-            <div className="w-full flex flex-col justify-center items-center">
+            <div className="w-full flex flex-col justify-start text-start items-center">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight font-extrabold text-gray-800">
                 <span className="block xl:inline">
                   Learn{" "}
@@ -41,16 +41,16 @@ function Main() {
                 courses, Professional Certificates, and degrees from
                 world-class universities and companies.
               </p>
-              <div className="mt-5 sm:mt-8 flex flex-col sm:flex-row gap-3">
+              <div className="mt-5 sm:mt-8 flex flex-col  sm:flex-row gap-3">
                 <Link
                   to="/pricing"
-                  className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#0098F1] hover:bg-gray-600 md:py-4 md:text-lg md:px-10"
+                  className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#0098F1] hover:bg-[#F19E22] md:py-4 md:text-lg md:px-10"
                 >
                   Get started
                 </Link>
                 <Link
                   to="/try-a-demo"
-                  className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#0098F1] bg-[#0098F11A] hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+                  className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#0098F1] bg-[#0098F11A] hover:bg-[#0098F1] hover:bg-opacity-60 hover:text-white md:py-4 md:text-lg md:px-10"
                 >
                   Try demo
                 </Link>

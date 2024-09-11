@@ -85,7 +85,7 @@ const Dashboard = () => {
         {pendingPaymentsCard.map((card, index) => (
           <div
             key={index}
-            className={`w-full text-white bg-[#ff8205] h-[160px] rounded-lg grid grid-cols-[1fr_auto]  relative`}
+            className={`w-full text-white bg-[#0098f1] h-[160px] rounded-lg grid grid-cols-[1fr_auto]  relative`}
           >
             <div className="flex flex-col justify-center rounded-l-lg p-4 pl-6">
               <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>
@@ -129,9 +129,9 @@ const Dashboard = () => {
         <select
           value={activeTab}
           onChange={handleTabChange}
-          className="w-full md:w-[190px] p-3 bg-[#f6ac14] outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none text-white rounded-lg"
+          className="w-full md:w-[190px] p-3 bg-[#0098f1] outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none text-white rounded-lg"
         >
-          <option value="All">All Transactions</option>
+          <option value="All">Status</option>
           <option value="Completed">Completed</option>
           <option value="Pending">Pending</option>
           <option value="Processing">Processing</option>
