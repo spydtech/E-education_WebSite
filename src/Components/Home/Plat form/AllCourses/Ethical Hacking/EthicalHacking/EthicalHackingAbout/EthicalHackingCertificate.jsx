@@ -3,7 +3,6 @@ import certificate from "../../../../../../../assetss/certficate.png";
 
 function EthicalHackingCertificate() {
   return (
-    <div className="">
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 p-4 justify-center items-center">
         {/* Certificate Image */}
         <div className="flex justify-center items-center">
@@ -26,7 +25,6 @@ function EthicalHackingCertificate() {
           </p>
         </div>
       </div>
-    </div>
   );
 }
 
