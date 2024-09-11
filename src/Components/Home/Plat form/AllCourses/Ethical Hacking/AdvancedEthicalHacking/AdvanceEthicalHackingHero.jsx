@@ -12,7 +12,7 @@ const AdvanceEthicalHackingHero = () => {
 
   return (
     <>
-      <div className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5">
+      {/* <div className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5">
         <div className="w-auto h-auto pr-10 md:mb-14 py-14 font md:py-0 mx-auto">
           <p className="py-4 md:lg:xl:2xl:text-[24px] text-[20px] text-[#101828] md:py-6 leading-10">
             Master the art of ethical hacking with advanced techniques and tools to secure your digital assets and stay ahead in the cybersecurity landscape...
@@ -35,6 +35,31 @@ const AdvanceEthicalHackingHero = () => {
             width={500}
             height={488}
           />
+        </div>
+      </div> */}
+      <div
+        className="relative w-full h-[370px] bg-cover bg-center"
+        style={{
+          backgroundImage:
+            'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725874356/image_13_oi7qfs.png")',
+        }}
+      >
+        <div className="absolute inset-0 flex items-center justify-center">
+          <p className="text-center text-white text-[20px] font-medium px-4">
+            Discover how Machine Learning can transform using data and
+            algorithms
+            <br />
+            to enable AI to imitate the way that humans learn, gradually
+            improving its accuracy.
+          </p>
+        </div>
+        <div className="absolute inset-0 flex items-end justify-center pb-10">
+          <button
+            onClick={handleEnroll}
+            className="px-6 py-3 text-[20px] font-medium text-white bg-[#0098f1] rounded-xl"
+          >
+            Enroll Now
+          </button>
         </div>
       </div>
     </>

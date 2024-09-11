@@ -7,7 +7,7 @@ function Main() {
   return (
     <div className=" bg-cover" style={{ backgroundImage: `url(${home})` }}> 
       <section className="sm:mt-6 mx-auto px-4 sm:px-6 lg:px-8 " >
-        <div className="mx-auto max-w-7xl px-4 sm:mt-12  lg:px-8 flex flex-col lg:flex-row-reverse items-center gap-6 "
+        <div className="mx-auto max-w-7xl px-4 sm:mt-12  lg:px-8 flex flex-col lg:flex-row-reverse items-center gap-4"
         >
           {/* Image Section at the Top */}
           <div className="relative w-full flex justify-center items-center mt-6 lg:mt-0">
@@ -20,17 +20,17 @@ function Main() {
 
           {/* Text Section Below the Image */}
           <div
-            className="flex flex-col  w-full h-auto text-center p-6"
+            className="flex flex-col  w-full h-auto  p-6"
            
           >
-            <div className="w-full flex flex-col justify-center items-center">
+            <div className="w-full flex flex-col justify-center ">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight font-extrabold text-gray-800">
                 <span className="block xl:inline">
                   Learn{" "}
                   <span className="bg-gradient-to-r from-[#F19E22] to-[#25AAE3] inline-block text-transparent bg-clip-text">
                     without
                   </span>{" "}
-                  limits online{" "}
+                  limits online {" "}
                   <span className="bg-gradient-to-r from-[#FF9B26] to-[#0098F1] inline-block text-transparent bg-clip-text">
                     courses
                   </span>

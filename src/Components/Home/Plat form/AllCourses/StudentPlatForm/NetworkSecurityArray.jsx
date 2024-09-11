@@ -6,7 +6,10 @@ import FooterPart from "../../../footer/Footer";
 import Navbar from "../../../../Navbar";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
-import cardImage from "../../../../../assetss/student/cardImg.png";
+import card from "../../../../../assetss/fullstackwebdev/java/java1.avif";
+import card1   from "../../../../../assetss/fullstackwebdev/devops/devops2.avif";
+import  card2  from "../../../../../assetss/fullstackwebdev/python/python1.avif";
+
 import Girl2 from "../../../../../assetss/profile/girl2.png"
 
 const NetworkSecurityArray = () => {
@@ -38,7 +41,7 @@ const NetworkSecurityArray = () => {
     {
       id: 1,
       title: "Network Security Fundamentals",
-      image: cardImage,
+      image: card,
       description:
         "Understand the basics of network security, including firewalls, intrusion detection systems, and VPNs.",
       link: "/network_security/network-security-fundamentals",
@@ -51,7 +54,7 @@ const NetworkSecurityArray = () => {
     {
       id: 2,
       title: "Advanced Network Security",
-      image: cardImage,
+      image: card1,
       description:
         "Learn advanced network security techniques and strategies to protect against sophisticated cyber threats.",
       link: "/network_security/advance-network-secuity",
@@ -64,7 +67,7 @@ const NetworkSecurityArray = () => {
     {
       id: 3,
       title: "Network Security Best Practices",
-      image: cardImage,
+      image: card2,
       description:
         "Explore best practices for securing network infrastructure.",
       link: "/network_security/network-security-best-practices",

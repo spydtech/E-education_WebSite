@@ -1,12 +1,12 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import fullstack from "../../assetss/studentCourses/full stack.png";
-import science from "../../assetss/studentCourses/data-science.png";
-import cyber from "../../assetss/studentCourses/cyber-security (1).png";
-import ethical from "../../assetss/studentCourses/hacker.png";
-import testing from "../../assetss/studentCourses/testing.png";
-import security from "../../assetss/studentCourses/cyber-security.png";
+import fullstack from "../../assetss/student/studentCourses/full_stack.png"
+import science from "../../assetss/student/studentCourses/data-science.png";
+import cyber from "../../assetss/student/studentCourses/cyber-security (1).png";
+import ethical from "../../assetss/student/studentCourses/hacker.png";
+import testing from "../../assetss/student/studentCourses/testing.png";
+import security from "../../assetss/student/studentCourses/cyber-security.png";
 import { FiArrowRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 

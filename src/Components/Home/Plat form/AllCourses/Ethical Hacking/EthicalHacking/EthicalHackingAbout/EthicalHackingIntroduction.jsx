@@ -8,10 +8,10 @@ function EthicalHackingIntroduction() {
       <div className="w-full flex-shrink-0 px-4 py-8">
         <div className="h-auto flex justify-center">
           <div>
-            <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-lg lg:text-xl text-white">
+            <ul className="list-disc list-inside text-md lg:text-xl text-white">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -60,35 +60,35 @@ function EthicalHackingIntroduction() {
   ];
 
   const goToPreviousSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? slidesData.length - 1 : prevSlide - 1
-    );
+    setCurrentSlide((prevSlide) => (prevSlide > 0 ? prevSlide - 1 : 0));
   };
 
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide === slidesData.length - 1 ? 0 : prevSlide + 1
+      prevSlide < slidesData.length - 1 ? prevSlide + 1 : prevSlide
     );
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[468px] bg-white mb-20">
+    <div className="flex flex-col space-y-3 md:flex-row md:justify-between md:items-center md:h-[380px] lg:h-[450px] px-3 mb-5">
       {/* Text Section */}
-      <div className="flex items-center justify-center lg:pr-10">
-        <div className="text-start px-4 lg:px-10">
+      <div className=" ">
+        <div className=" lg:px-10">
           <div>
-            <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
+            <p className="text-[#0098F1] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
               Introduction
             </p>
           </div>
-          <div className="py-5">
-            <p className="text-xl lg:text-5xl font">
+          <div className="mt-2">
+            <p className="md:text-xl lg:text-4xl">
               So what is
-              <span className="text-[#f6ac14] inline pl-2">Ethical Hacking</span>
+              <span className="text-[#f6ac14] inline pl-2">
+                Ethical Hacking
+              </span>
             </p>
           </div>
           <div>
-            <p className="text-lg lg:text-xl text-gray-500">
+            <p className="md:text-lg lg:text-4xl text-gray-500 mt-2">
               Brief about Ethical Hacking
             </p>
           </div>
@@ -96,35 +96,32 @@ function EthicalHackingIntroduction() {
       </div>
 
       {/* Slider Section */}
-      <div className="h-auto lg:h-[468px] flex justify-center ml-10">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-4 lg:px-10 mt-8 lg:mt-0">
-          <div className="bg-[#0098f1] w-full lg:w-[550px] h-auto lg:h-[420px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg">
-            <div className="relative w-full">
-              <div className="flex text-white text-opacity-80">
-                <Slide
-                  heading={slidesData[currentSlide].heading}
-                  items={slidesData[currentSlide].items}
-                />
-              </div>
-            </div>
+      {/* <div className=" lg:h-[468px]"> */}
+        <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:h-[420px] md:p-5 lg:flex flex-col justify-between ">
+          <div className="flex text-white text-opacity-80">
+            <Slide
+              heading={slidesData[currentSlide].heading}
+              items={slidesData[currentSlide].items}
+            />
           </div>
-          <div className="flex justify-between mt-4 lg:mt-0">
+
+          <div className="flex justify-between max-md:p-4">
             <button
               onClick={goToPreviousSlide}
-              className="hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
+              className="hover:text-white text-black font-bold  rounded"
             >
               Previous
             </button>
             <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
             <button
               onClick={goToNextSlide}
-              className="hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
+              className="hover:text-white text-black font-bold  rounded"
             >
               Next
             </button>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 }
