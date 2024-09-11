@@ -70,16 +70,16 @@ function EthicalHackingIntroduction() {
   };
 
   return (
-    <div className="flex flex-col space-y-3 lg:flex-row lg:justify-between lg:items-center lg:h-[468px] mb-5">
+    <div className="flex flex-col space-y-3 md:flex-row md:justify-between md:items-center md:h-[380px] lg:h-[450px] px-3 mb-5">
       {/* Text Section */}
       <div className=" ">
         <div className=" lg:px-10">
           <div>
-            <p className="text-[#f6ac14] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
+            <p className="text-[#0098F1] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
               Introduction
             </p>
           </div>
-          <div className="">
+          <div className="mt-2">
             <p className="md:text-xl lg:text-4xl">
               So what is
               <span className="text-[#f6ac14] inline pl-2">
@@ -88,7 +88,7 @@ function EthicalHackingIntroduction() {
             </p>
           </div>
           <div>
-            <p className="md:text-lg lg:text-4xl text-gray-500">
+            <p className="md:text-lg lg:text-4xl text-gray-500 mt-2">
               Brief about Ethical Hacking
             </p>
           </div>
@@ -96,8 +96,8 @@ function EthicalHackingIntroduction() {
       </div>
 
       {/* Slider Section */}
-      <div className=" lg:h-[468px]">
-        <div className="bg-[#0098f1] lg:w-[550px] lg:h-[420px] md:p-5 lg:flex flex-col justify-between ">
+      {/* <div className=" lg:h-[468px]"> */}
+        <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:h-[420px] md:p-5 lg:flex flex-col justify-between ">
           <div className="flex text-white text-opacity-80">
             <Slide
               heading={slidesData[currentSlide].heading}
@@ -121,7 +121,7 @@ function EthicalHackingIntroduction() {
             </button>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 }
