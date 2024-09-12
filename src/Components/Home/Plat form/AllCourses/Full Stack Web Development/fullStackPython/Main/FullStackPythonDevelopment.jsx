@@ -28,7 +28,6 @@ const FullStackPythonDevelopment = () => {
       <Navbar />
       <div className="pl-4">
         <div className="w-full flex flex-col mb-8 p-6 lg:flex-row items-center md:justify-center gap-4 md:px-8 lg:px-16 2xl:px-32">
-          {/* Image Section */}
           <div className="order-1 md:order-1 lg:order-2  md:mt-0 md:w-1/2 flex justify-center">
             <img
               src={Hero}
@@ -36,7 +35,6 @@ const FullStackPythonDevelopment = () => {
               className="w-full max-w-md md:max-w-lg lg:max-w-xl"
             />
           </div>
-          {/* Content Section */}
           <div className="lg:w-2/3 text-center lg:text-left order-2 md:order-2 lg:order-1">
             <h3 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight sm:leading-none tracking-tight text-gray-900">
               Master{" "}

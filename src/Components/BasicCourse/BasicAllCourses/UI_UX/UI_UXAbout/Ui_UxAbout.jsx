@@ -24,15 +24,8 @@ const Ui_UxAbout = () => {
   return (
     <div className="mx-auto h-auto w-full mb-20 px-4 md:px-10 bg-white">
       <div className="py-2 my-10">
-        <p className="text-2xl text-center font-bold text-[#f6ac14]">
-          Discover the UI and UX Development Course
-        </p>
-      </div>
-
-      <div className="py-2 my-10">
-        <p className="text-4xl text-center font-bold">
-          Discover the
-          <span className="text-[#f6ac14] my-2 block">UI and UX Development Program</span>
+        <p className="text-2xl text-center text-[#0098f1] font-bold">
+          Discover the UI and UX Development Program
         </p>
       </div>
 

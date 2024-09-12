@@ -19,14 +19,14 @@ function Ui_UxIntroduction() {
         <div className="absolute left-0 right-0 bottom-0 flex justify-between">
           <button
             onClick={goToPreviousSlide}
-            className="hover:text-[#f6ac14] text-white font-bold rounded px-4"
+            className="hover:text-white text-black font-bold rounded px-4"
           >
             Previous
           </button>
-          <div className="text-white">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+          <div className="text-black">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
           <button
             onClick={goToNextSlide}
-            className="hover:text-[#f6ac14] text-white font-bold rounded px-4"
+            className="hover:text-white text-black font-bold rounded px-4"
           >
             Next
           </button>
@@ -94,7 +94,7 @@ function Ui_UxIntroduction() {
       <div className="flex items-center justify-center">
         <div className="text-start px-4 lg:px-10">
           <div>
-            <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
+            <p className="text-[#0098f1] underline-offset-2 underline text-2xl lg:text-[30px] font-bold">
               Introduction
             </p>
           </div>
