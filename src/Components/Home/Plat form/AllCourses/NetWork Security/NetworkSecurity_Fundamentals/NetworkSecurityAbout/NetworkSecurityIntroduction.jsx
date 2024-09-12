@@ -5,19 +5,19 @@ function NetworkSecurityIntroduction() {
   const Slide = ({ heading, items }) => {
     return (
       <div className="w-full flex-shrink-0 px-4 py-8">
-      <div className="h-[400px] flex justify-center">
-        <div>
-          <h2 className="text-3xl font-medium mb-4 text-white font">
-            {heading}
-          </h2>
-          <ul className="list-disc list-inside text-xl text-opacity-70 font text-white">
-            {items.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
+        <div className="h-[400px] flex justify-center">
+          <div>
+            <h2 className="text-3xl font-medium mb-4 text-white font">
+              {heading}
+            </h2>
+            <ul className="list-disc list-outside pl-5 text-md lg:text-xl text-white">
+              {items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
     );
   };
 
@@ -73,65 +73,9 @@ function NetworkSecurityIntroduction() {
 
   return (
     <>
-  
-     {/* <div className="grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[468px] bg-white mb-20">
-      <div className="flex items-center justify-center lg:pr-10">
-        <div className="text-start px-4 lg:px-10">
-          <div>
-            <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
-              Introduction
-            </p>
-          </div>
-          <div className="py-5">
-            <p className="text-xl lg:text-5xl font">
-              So what is
-              <span className="text-[#f6ac14] inline pl-2">Network Security</span>
-            </p>
-          </div>
-          <div>
-            <p className="text-lg lg:text-xl text-gray-500">
-              Brief about Network Security
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="h-auto lg:h-[468px] flex justify-center">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 lg:mt-0">
-          <div className="bg-[#0098f1] w-full lg:w-[550px] h-auto lg:h-[420px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg">
-
-             <div className="relative w-full">
-              <div className="flex text-white text-opacity-80 ">
-                <Slide
-                  heading={slidesData[currentSlide].heading}
-                  items={slidesData[currentSlide].items}
-                />
-              </div>
-            </div>
-          </div>
-          <div className=" lg:w-[563px] xl:w-[563px]  ">
-          <div className="flex justify-between mt-4 lg:mt-0">
-            <button
-              onClick={goToPreviousSlide}
-              className="hover:text-[#F6AC14]  text-black font-bold    rounded"
-            >
-              Previous
-            </button>
-            <div className="pt-2 pr-2">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-            <button
-              onClick={goToNextSlide}
-              className="hover:text-[#F6AC14] text-black font-bold  py-2 px-4 rounded"
-            >
-              Next
-            </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> */}
-    <div className="flex flex-col space-y-3 md:flex-row md:justify-between md:items-center md:h-[380px] lg:h-[450px] px-3 mb-5">
-      {/* Text Section */}
-      <div className=" ">
-        <div className=" lg:px-10">
+      <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center md:h-[380px] lg:h-[450px] px-3 mb-5">
+        {/* Text Section */}
+        <div className="">
           <div>
             <p className="text-[#0098F1] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
               Introduction
@@ -141,20 +85,19 @@ function NetworkSecurityIntroduction() {
             <p className="md:text-xl lg:text-4xl">
               So what is
               <span className="text-[#f6ac14] inline pl-2">
-                Ethical Hacking
+                Network Security
               </span>
             </p>
           </div>
           <div>
-            <p className="md:text-lg lg:text-4xl text-gray-500 mt-2">
-              Brief about Ethical Hacking
+            <p className="md:text-lg lg:text-4xl mt-2">
+              Brief about Network Security
             </p>
           </div>
         </div>
-      </div>
 
-      {/* Slider Section */}
-      {/* <div className=" lg:h-[468px]"> */}
+        {/* Slider Section */}
+        {/* <div className=" lg:h-[468px]"> */}
         <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:h-[420px] md:p-5 lg:flex flex-col justify-between ">
           <div className="flex text-white text-opacity-80">
             <Slide
@@ -166,21 +109,21 @@ function NetworkSecurityIntroduction() {
           <div className="flex justify-between max-md:p-4">
             <button
               onClick={goToPreviousSlide}
-              className="hover:text-white text-black font-bold  rounded"
+              className="text-white hover:text-black font-bold  rounded"
             >
               Previous
             </button>
             <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
             <button
               onClick={goToNextSlide}
-              className="hover:text-white text-black font-bold  rounded"
+              className="text-white hover:text-black font-bold  rounded"
             >
               Next
             </button>
           </div>
         </div>
-      {/* </div> */}
-    </div>
+        {/* </div> */}
+      </div>
     </>
   );
 }
