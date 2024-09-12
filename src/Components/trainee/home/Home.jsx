@@ -208,7 +208,7 @@ function HomeTrainee() {
                 </li>
               ))}
             </ul>
-            <div className="text-xl bg-gray-200 font-bold text-green-600 w-20 h-20 md:w-16 md:h-16   border-4 border-green-400 rounded-full flex items-center justify-center mt-4">
+            <div className="text-xl bg-gray-200 font-bold text-[#FF9B26] w-20 h-20 md:w-16 md:h-16   border-4 border-[#FF9B26] rounded-full flex items-center justify-center mt-4">
               {total}
             </div>
           </div>
@@ -229,7 +229,7 @@ function HomeTrainee() {
                 </li>
               ))}
             </ul>
-            <div className="text-xl bg-gray-200 font-bold text-[#FF9B26] w-20 h-20 md:w-16 md:h-16  border-4 border-blue-600 rounded-full flex items-center justify-center mt-4">
+            <div className="text-xl bg-gray-200 font-bold text-[#FF9B26] w-20 h-20 md:w-16 md:h-16  border-4 border-[#FF9B26] rounded-full flex items-center justify-center mt-4">
               {usertotal}
             </div>
           </div>
@@ -315,7 +315,7 @@ function HomeTrainee() {
         </div>
       </div>
 
-      <div id="table-card" className="shadow-lg p-4 my-4 rounded-lg">
+      <div id="table-card" className="shadow-lg p-4 my-4   rounded-lg">
         <CourseCompletionTable />
       </div>
     </div>

@@ -82,7 +82,7 @@ const TraineeDashboard = () => {
   };
   return (
     <>
-      <div className="flex h-screen bg-gray-100 w-auto">
+      <div className="flex h-screen bg-white w-auto">
         {/* sidebar */}
         <div className="hidden md:flex flex-col w-64 text-[#FF9B26]">
           <div className="flex items-center justify-center h-16 bg-white">
@@ -90,77 +90,7 @@ const TraineeDashboard = () => {
               Trainee Dashboard
             </span>
           </div>
-          {/* <div className="flex flex-col flex-1 overflow-y-auto">
-            <nav className="flex-1 px-2 py-4 bg-white">
-              <a
-                href="#"
-               
-                 className="flex items-center space-x-2 px-4 py-4 hover:bg-[#FF9B26] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#FF9B26] transition-all duration-300"
-                onClick={() => handleTabClick("home")}
-              >
-                <MdOutlineDashboardCustomize className="h-6 w-6 mr-2" />
-                Home
-              </a>
-              <a
-                href="#"
-                className={`flex items-center space-x-2 px-4 py-4 hover:bg-[#FF9B26] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#FF9B26] transition-all duration-300 {activeTab === "courses" && ""
-                  }`}
-                onClick={() => handleTabClick("courses")}
-              >
-                <FaLayerGroup className="h-6 w-6 mr-2" />
-                Courses Group
-              </a>
-              <a
-                href="#"
-                className={`flex items-center space-x-2 px-4 py-4 hover:bg-[#FF9B26] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#FF9B26] transition-all duration-300{activeTab === "calendar" && "bg-gray-700"
-                  }`}
-                onClick={() => handleTabClick("calendar")}
-              >
-                <SlCalender className="h-6 w-6 mr-2" />
-                Calendar
-              </a>
-              <a
-                href="#"
-                className={`flex items-center space-x-2 px-4 py-4 hover:bg-[#FF9B26] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#FF9B26] transition-all duration-300 ${activeTab === "reports" && ""
-                  }`}
-                onClick={() => handleTabClick("reports")}
-              >
-                <TbReportAnalytics className="h-6 w-6 mr-2" />
-                Reports
-              </a>
-
-            
-            
-              <a
-                href="#"
-                className={`flex items-center space-x-2 px-4 py-4 hover:bg-[#FF9B26] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#FF9B26] transition-all duration-300{activeTab === "approvals" && "bg-gray-700"
-                  }`}
-                onClick={() => handleTabClick("approvals")}
-              >
-                <ApprovalIcon className="h-6 w-6 mr-2 " />
-                Approvals
-              </a>
-              <a
-                href="#"
-                className={`flex items-center space-x-2 px-4 py-4 hover:bg-[#FF9B26] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#FF9B26] transition-all duration-300 
-                  {activeTab === "user" && "bg-gray-700"
-                  }`}
-                onClick={() => handleTabClick("user")}
-              >
-                <FaUserAlt className="h-6 w-6 mr-2" />
-                User
-              </a>
-              <a
-                href="#"
-                className={`flex items-center space-x-2 px-4 py-4 hover:bg-[#FF9B26] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#FF9B26] transition-all duration-300{activeTab === "settings" && "bg-gray-700"
-                  }`}
-                onClick={() => handleTabClick("settings")}
-              >
-                <IoSettingsSharp className="h-6 w-6 mr-2" />
-                Settings
-              </a>
-            </nav>
-          </div> */}
+         
           <div className="flex flex-col flex-1 overflow-y-auto">
   <nav className="flex-1 px-2 py-4 bg-white">
     <a
@@ -268,29 +198,13 @@ const TraineeDashboard = () => {
         <div className="flex flex-col flex-1 overflow-y-auto">
           <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200">
             <div className="flex items-center px-4">
-              {/* <button className="text-gray-500 focus:outline-none focus:text-gray-700">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button> */} 
+             
               <div className=" flex h-10 w-10">
                 <img src={Traineeprofile}/>
                 <h2 className="text-nowrap pl-4 pt-2 font-bold text-[#FF9B26] text-[20px]">TraineeName</h2>
                 </div>
             </div>
             <div className="flex-1 flex items-center justify-center px-4 h-16">
-              {/* <h1 className="text-xl font-semibold">Trainee Dashboard</h1> */}
             </div>
             <div className="flex items-center px-4">
               <button
