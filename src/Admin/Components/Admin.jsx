@@ -490,15 +490,16 @@ const Admin = () => {
         height: "100vh",
         width: drawerWidth,
       }}
-      className="bg-white max-w-56 border-[#0098f1] border-opacity-10 border-r-2 text-[#0098f1]"
+      className="bg-gradient-to-b from-[#2C3E50]  to-[#4CA1AF]
+ max-w-56 border-[#2C3E50] border-opacity-10 border-r-2 text-white"
     >
-      {isLargeScreen && <Toolbar/>}
+       <div className="p-4">
+     <img className="h-16 w-auto" src={IMG} alt="Logo" />
+     </div>
+      {/* {isLargeScreen && <Toolbar/>} */}
       
       <div className="flex-grow ">
-     <div className="">
-     <img className="h-10 w-auto" src={IMG} alt="Logo" />
-     </div>
-        <ul className="py-8 ">
+        <ul className="">
           
           {menu.map((item, index) => (
             <li key={item.name} className="relative">
@@ -511,7 +512,7 @@ const Admin = () => {
                     navigate(item.path);
                   }
                 }}
-                className="flex items-center space-x-2 px-4 py-2 hover:bg-[#0098f1] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#0098f1] transition-all duration-300"
+                className="flex items-center  px-4 py-2 hover:bg-[#2C3E50] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#2C3E50] transition-all duration-300"
               >
                 <span className="text-lg ">{item.icon}</span>
                 <span className="font-semibold">{item.name}</span>
@@ -530,7 +531,7 @@ const Admin = () => {
                       
                       <button
                         onClick={() => navigate(subItem.path)}
-                        className="flex items-center space-x-2 px-2 py-2 hover:bg-[#0098f1] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#0098f1] transition-all duration-300"
+                        className="flex items-center space-x-2 px-2 py-2 hover:bg-[#2C3E50] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#2C3E50] transition-all duration-300"
                       >
                         <span className="font-semibold text-nowrap pl-10">
                           {subItem.name}
@@ -557,9 +558,9 @@ const Admin = () => {
 
   return (
     <div className="flex  h-screen  ">
-      <CssBaseline />
+      {/* <CssBaseline /> */}
       <div
-        className={`bg-white   text-[#FF9B26] ${
+        className={`bg-white   text-[#2C3E50] ${
           drawerVariant === "temporary" && !sideBarVisible
             ? "-left-64"
             : `w-${drawerWidth}`

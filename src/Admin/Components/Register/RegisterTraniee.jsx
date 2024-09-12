@@ -423,7 +423,7 @@ const RegisterTrainee = () => {
         id="main"
         className="bg-white rounded-lg shadow-lg w-[700px] h-[420px] relative"
       >
-        <div className="w-auto h-[100px] bg-[#0098f1]  rounded-t-lg flex justify-center items-center">
+        <div className="w-auto h-[100px] bg-[#2C3E50]  rounded-t-lg flex justify-center items-center">
           <h2 className="text-2xl font-bold text-white">Register Trainee</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-10 my-8">
@@ -433,7 +433,7 @@ const RegisterTrainee = () => {
               placeholder="First Name"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="shadow appearance-none border rounded w-[300px] h-[60px] py-2 px-3 text-gray-700 leading-tight focus:outline-none border-[#0098f1]  focus:shadow-outline mb-3"
+              className="shadow appearance-none border rounded w-[300px] h-[60px] py-2 px-3 text-gray-700 leading-tight focus:outline-none border-[#2C3E50]  focus:shadow-outline mb-3"
             />
             {firstNameError && (
               <p className="text-red-500 text-sm ">{firstNameError}</p>
@@ -443,7 +443,7 @@ const RegisterTrainee = () => {
               placeholder="Mobile Number"
               value={mobileNumber}
               onChange={(e) => setMobileNumber(e.target.value)}
-              className="shadow appearance-none border rounded w-[300px] h-[60px] py-2 px-3 text-gray-700 leading-tight focus:outline-none border-[#0098f1]  focus:shadow-outline mb-3"
+              className="shadow appearance-none border rounded w-[300px] h-[60px] py-2 px-3 text-gray-700 leading-tight focus:outline-none border-[#2C3E50]  focus:shadow-outline mb-3"
             />
             {mobileNumberError && (
               <p className="text-red-500 text-sm ">{mobileNumberError}</p>
@@ -455,7 +455,7 @@ const RegisterTrainee = () => {
               placeholder="Last Name"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className="shadow appearance-none border rounded w-[300px] h-[60px] py-2 px-3 text-gray-700 leading-tight focus:outline-none border-[#0098f1]  focus:shadow-outline mb-3"
+              className="shadow appearance-none border rounded w-[300px] h-[60px] py-2 px-3 text-gray-700 leading-tight focus:outline-none border-[#2C3E50]  focus:shadow-outline mb-3"
             />
             {lastNameError && (
               <p className="text-red-500 text-sm ">{lastNameError}</p>
@@ -465,7 +465,7 @@ const RegisterTrainee = () => {
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="shadow appearance-none border rounded w-[300px] h-[60px] py-2 px-3 text-gray-700 leading-tight focus:outline-none border-[#0098f1]  focus:shadow-outline mb-3"
+              className="shadow appearance-none border rounded w-[300px] h-[60px] py-2 px-3 text-gray-700 leading-tight focus:outline-none border-[#2C3E50]  focus:shadow-outline mb-3"
             />
             {emailError && (
               <p className="text-red-500 text-sm ">{emailError}</p>
@@ -475,25 +475,25 @@ const RegisterTrainee = () => {
         <div className="flex items-center justify-center">
           <button
             onClick={handleAddTrainee}
-            className="bg-[#0098f1] w-[300px] h-[60px] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-gradient-to-r from-[#2C3E50] to-[#4CA1AF] w-[300px] h-[60px] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Generate Credentials
           </button>
         </div>
 
         {Trainee && showSuccess && (
-          <div className="absolute inset-0 bg-[#0098f1] w-[700px] h-[420px] bg-opacity-10 flex justify-center items-center rounded-lg">
-            <div className="bg-[#ffffff] border-[#0098f1] border-2 w-[320px] h-[240px] sm:w-[440px] sm:h-[320px] py-8 px-4 sm:py-10 sm:px-16 rounded-lg text-white flex flex-col justify-center items-center relative">
+          <div className="absolute inset-0 bg-[#2C3E50] w-[700px] h-[420px] bg-opacity-10 flex justify-center items-center rounded-lg">
+            <div className="bg-[#ffffff] border-[#2C3E50] border-2 w-[320px] h-[240px] sm:w-[440px] sm:h-[320px] py-8 px-4 sm:py-10 sm:px-16 rounded-lg text-white flex flex-col justify-center items-center relative">
               <IoClose
-                className="absolute top-2 right-2 text-2xl text-[#0098f1]  cursor-pointer"
+                className="absolute top-2 right-2 text-2xl text-[#2C3E50]  cursor-pointer"
                 onClick={handleCloseSuccess}
               />
-              <BsCheck2Circle className="text-3xl text-[#0098f1] sm:text-4xl md:text-6xl mb-4" />
-              <h2 className="text-2xl text-[#0098f1] font-medium mb-4">
+              <BsCheck2Circle className="text-3xl text-[#2C3E50] sm:text-4xl md:text-6xl mb-4" />
+              <h2 className="text-2xl text-[#2C3E50] font-medium mb-4">
                 Generated Credentials
               </h2>
               <ul>
-                <li className="mb-3 text-[#0098f1] ">
+                <li className="mb-3 text-[#2C3E50] ">
                   <p>
                     <strong>Username:</strong> {Trainee.username}
                   </p>

@@ -120,16 +120,16 @@ const CourseBarGraph = () => {
   };
 
   return (
-    <div className=" ">
-      <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
+    <div className="container relative h-[400px]  shadow-xl rounded-xl  mx-auto p-4 ">
+      <h1 className=" font-bold text-center text-nowrap text-[#2C3E50] mb-6">
         Courses Added in Each Month by Admin
       </h1>
-      <div className="flex justify-center mb-4">
+      <div className="flex absolute justify-center mt-4">
         <select
           id="year-select"
           value={selectedYear}
           onChange={(e) => setSelectedYear(e.target.value)}
-          className="mt-1 block w-40 pl-3 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 block w-24 pl-3 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
         >
           {years.map((year) => (
             <option key={year} value={year}>
@@ -138,7 +138,7 @@ const CourseBarGraph = () => {
           ))}
         </select>
       </div>
-      <div className="my-4 h-[500px] w-auto justify-center items-center flex ">
+      <div className="my-4 h-[400px]  w-auto justify-center items-center flex ">
         <Bar data={data} options={options} />
       </div>
     </div>

@@ -12,11 +12,11 @@ const PaymentData = () => {
 
   return (
     <div className="flex flex-col justify-center overflow-x-auto p-4">
-      <h1 className='text-[#0098f1] font-semibold text-lg py-2'>Payment Method</h1>
+      <h1 className='text-[#2C3E50] font-semibold text-xl py-2'>Payment Method</h1>
       <div className="max-w-6xl">
         <table className="min-w-full border-collapse overflow-hidden">
           <thead>
-            <tr className="bg-[#0098f1] text-white">
+            <tr className="bg-[#2C3E50] text-white">
               <th className="px-4 py-2 border">Date</th>
               <th className="px-4 py-2 border">User Id</th>
               <th className="px-4 py-2 border">Full Name</th>
@@ -27,7 +27,7 @@ const PaymentData = () => {
           </thead>
           <tbody>
             {paymentData.map((data, index) => (
-              <tr key={index} className="bg-white text-[#0098f1]">
+              <tr key={index} className="bg-white text-[#2C3E50]">
                 <td className="px-4 py-2 border">{data.date}</td>
                 <td className="px-4 py-2 border">{data.userId}</td>
                 <td className="px-4 py-2 border">{data.fullName}</td>

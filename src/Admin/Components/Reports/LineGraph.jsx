@@ -87,11 +87,11 @@ const SalesLineChart = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
+    <div className="container h-[400px] shadow-xl rounded-xl relative mx-auto p-4">
+      <h1 className=" font-bold text-center text-[#2C3E50] mb-6">
         Sales of Each Course
       </h1>
-      <div className="flex justify-center mb-4">
+      <div className="flex absolute justify-center mt-4">
         <label
           htmlFor="year-select"
           className="block text-sm font-medium text-gray-700"
@@ -100,7 +100,7 @@ const SalesLineChart = () => {
           id="year-select"
           value={selectedYear}
           onChange={handleYearChange}
-          className="mt-1 block w-52 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 block w-30 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
         >
           {Object.keys(sampleData).map((year) => (
             <option key={year} value={year}>
@@ -110,7 +110,7 @@ const SalesLineChart = () => {
         </select>
       </div>
 
-      <div className="flex justify-center mb-4">
+      <div className="flex absolute justify-center mt-14">
         <label
           htmlFor="month-select"
           className="block text-sm font-medium text-gray-700"
@@ -119,7 +119,7 @@ const SalesLineChart = () => {
           id="month-select"
           value={selectedMonth}
           onChange={handleMonthChange}
-          className="mt-1 block w-52 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 block w-30 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
         >
           <option value="All Months">All Months</option>
           {Object.keys(sampleData[selectedYear]).map((month) => (
@@ -134,7 +134,7 @@ const SalesLineChart = () => {
         Sales of Each Course
       </div> */}
 
-      <div className="my-4 h-[500px] w-auto justify-center items-center flex">
+      <div className="my-4 h-[400px] w-auto justify-center items-center flex">
         <Line
           data={{
             labels: chartData.map((data) => data.course),

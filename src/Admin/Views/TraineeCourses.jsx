@@ -93,7 +93,7 @@ function Tabs() {
           <>
             {group.groupName}
             <span
-              className="ml-2 mt-1 text-gray-500 hover:text-gray-700 cursor-pointer"
+              className="ml-2  text-gray-500 hover:text-gray-700 cursor-pointer"
               onClick={() => handleEditGroup(group.id, group.groupName)}
             >
               <FaPencilAlt />
@@ -103,18 +103,18 @@ function Tabs() {
           <>
             <input
               type="text"
-              className="border border-gray-300 rounded px-2 py-1"
+              className="border border-gray-300 text-[#2C3E50] rounded px-2 py-1"
               value={editedGroupName}
               onChange={(e) => setEditedGroupName(e.target.value)}
             />
             <button
-              className="ml-2 bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600"
+              className="ml-2 bg-gradient-to-r from-[#2C3E50] to-[#4CA1AF] hover:bg-green-500 text-white px-2 py-1 rounded "
               onClick={() => handleSaveEdit(group.id)}
             >
               Save
             </button>
             <span
-              className="ml-2 mt-1 text-red-500 hover:text-red-700 cursor-pointer"
+              className="ml-2 mt-1 text-[#2C3E50] hover:text-red-700 cursor-pointer"
               onClick={() => handleDeleteGroup(group.id)}
             >
               <FaTrashAlt />
@@ -151,8 +151,8 @@ function Tabs() {
                     href="#"
                     className={`bg-white inline-block py-2 px-4 font-semibold ${
                       openTab === course.id
-                        ? "border-l border-t border-r rounded-t text-blue-700"
-                        : "text-black hover:text-blue-700"
+                        ? "border-l border-t border-r rounded-t text-[#2C3E50]"
+                        : "text-black hover:text-[#2C3E50]"
                     }`}
                   >
                     {course.name}

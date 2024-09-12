@@ -287,10 +287,11 @@ const TraineeTable = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl text-center font-bold text-white">
+      <h1 className="text-3xl text-center font-bold text-[#2C3E50]">
         User Information{" "}
       </h1>
-      <div className="mb-4">
+      <div className=" flex gap-2">
+      <div className="mb-4 ">
         <label
           htmlFor="year-select"
           className="block text-sm font-medium text-white"
@@ -332,27 +333,27 @@ const TraineeTable = () => {
           ))}
         </select>
       </div>
-
+ </div>
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-pink-600">
+          <thead className="bg-[#2C3E50]">
             <tr className="">
-              <th className="px-6 py-3 bg-pink-600 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#2C3E50] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
                 Username
               </th>
-              <th className="px-6 py-3 bg-pink-600 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#2C3E50] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
                 UserID
               </th>
-              <th className="px-6 py-3 bg-pink-600 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#2C3E50] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
                 Course
               </th>
-              <th className="px-6 py-3 bg-pink-600 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#2C3E50] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
                 Price
               </th>
-              <th className="px-6 py-3 bg-pink-600 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#2C3E50] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
                 Course Count
               </th>
-              <th className="px-6 py-3 bg-pink-600 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#2C3E50] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
                 Aggregate Total
               </th>
             </tr>
@@ -363,7 +364,7 @@ const TraineeTable = () => {
                 <tr className="bg-gray-100">
                   <td
                     colSpan="6"
-                    className="px-6 py-3 text-xs font-bold text-pink-600 uppercase tracking-wider"
+                    className="px-6 py-3 text-xs font-bold text-[#2C3E50] uppercase tracking-wider"
                   >
                     {course}
                   </td>

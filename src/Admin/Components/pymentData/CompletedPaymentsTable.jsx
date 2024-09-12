@@ -7,6 +7,7 @@ const completedData = [
     transactionId: "rzp_1",
     totalAmount: "500",
     status: "Completed",
+    coursePurchase:"",
     Date: "24/june/2024",
     email: "john.doe@example.com",
     paymentMethod: "Credit Card",
@@ -51,17 +52,18 @@ const CompletedPaymentsTable = () => {
           type="text"
           value={searchTerm}
           onChange={handleSearch}
-          className="p-3 border w-[250px] bg-[#0098f1] text-[15px] text-white placeholder:text-white outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none rounded-lg"
+          className="p-3 border w-[250px] bg-[#2C3E50] text-[15px] text-white placeholder:text-white outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none rounded-lg"
           placeholder="Search Here...."
         />
       </div>
       <table className="min-w-full">
-        <thead className="bg-[#0098f1] text-white">
+        <thead className="bg-[#2C3E50] text-white">
           <tr className="h-12">
             <th className="px-4 py-2 text-left">Date</th>
             <th className="px-4 py-2 text-left">UserId</th>
             <th className="px-4 py-2 text-left">FullName</th>
             <th className="px-4 py-2 text-left">Email</th>
+            <th className="px-4 py-2 text-left">Course Purchase</th>
             <th className="px-4 py-2 text-left">PaymentMethod</th>
             <th className="px-4 py-2 text-left">TransactionId</th>
             <th className="px-4 py-2 text-left">TotalAmount</th>
@@ -72,12 +74,13 @@ const CompletedPaymentsTable = () => {
           {filteredData.map((item, index) => (
             <tr
               key={index}
-              className="hover:bg-[#0098f1] hover:bg-opacity-10 text-[#0098f1]"
+              className="hover:bg-[#2C3E50] hover:bg-opacity-10 text-[#2C3E50]"
             >
               <td className="px-4 py-2">{item.Date}</td>
               <td className="px-4 py-2">{item.userId}</td>
               <td className="px-4 text-nowrap py-2">{item.fullName}</td>
               <td className="px-4 py-2">{item.email}</td>
+              <td className="px-4 py-2">{item.courseDetails}</td>
               <td className="px-4 py-2">{item.paymentMethod}</td>
               <td className="px-4 py-2">{item.transactionId}</td>
               <td className="px-4 py-2">{item.totalAmount}</td>
