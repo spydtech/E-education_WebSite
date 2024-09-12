@@ -13,7 +13,7 @@ function EthicalHackingIntroduction() {
             </h2>
             <ul className="list-disc list-outside pl-5 text-md lg:text-xl text-white">
               {items.map((item, index) => (
-                <li key={index} className="">{item}</li>
+                <li key={index}>{item}</li>
               ))}
             </ul>
           </div>
@@ -70,7 +70,7 @@ function EthicalHackingIntroduction() {
   };
 
   return (
-    <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center md:h-[380px] lg:h-[450px] px-3 mb-5">
+    <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center lg:h-[450px] px-3 md:mb-9 mb-5">
       {/* Text Section */}
         <div className="">
           <div>
@@ -95,8 +95,8 @@ function EthicalHackingIntroduction() {
 
       {/* Slider Section */}
       {/* <div className=" lg:h-[468px]"> */}
-        <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:h-[420px] md:p-5 lg:flex flex-col justify-between ">
-          <div className="flex text-white text-opacity-80">
+        <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:p-5 lg:flex flex-col justify-between ">
+          <div className="flex text-white">
             <Slide
               heading={slidesData[currentSlide].heading}
               items={slidesData[currentSlide].items}

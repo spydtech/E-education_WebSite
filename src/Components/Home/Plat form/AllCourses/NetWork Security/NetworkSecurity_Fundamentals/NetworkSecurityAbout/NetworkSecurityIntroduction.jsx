@@ -4,8 +4,8 @@ function NetworkSecurityIntroduction() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const Slide = ({ heading, items }) => {
     return (
-      <div className="w-full flex-shrink-0 px-4 py-8">
-        <div className="h-[400px] flex justify-center">
+      <div className="w-full flex-shrink-0 px-4 py-2">
+        <div className="h-[300px] flex justify-center">
           <div>
             <h2 className="text-3xl font-medium mb-4 text-white font">
               {heading}

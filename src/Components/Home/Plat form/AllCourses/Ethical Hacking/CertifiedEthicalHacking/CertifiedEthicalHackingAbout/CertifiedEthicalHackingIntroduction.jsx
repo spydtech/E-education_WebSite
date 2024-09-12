@@ -8,10 +8,10 @@ function CertifiedEthicalHackingIntroduction() {
       <div className="w-full flex-shrink-0 px-4 py-8">
         <div className="h-auto flex justify-center">
           <div>
-            <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
               {heading}
             </h2>
-            <ul className="list-disc list-outside pl-5  text-lg lg:text-xl">
+            <ul className="list-disc list-outside pl-5 text-md lg:text-xl text-white">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -61,19 +61,17 @@ function CertifiedEthicalHackingIntroduction() {
   ];
 
   const goToPreviousSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? slidesData.length - 1 : prevSlide - 1
-    );
+    setCurrentSlide((prevSlide) => (prevSlide > 0 ? prevSlide - 1 : 0));
   };
 
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide === slidesData.length - 1 ? 0 : prevSlide + 1
+      prevSlide < slidesData.length - 1 ? prevSlide + 1 : prevSlide
     );
   };
 
   return (
-    <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center md:h-[380px] lg:h-[450px] px-3 mb-5">
+    <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center lg:h-[450px] px-3 md:mb-9 mb-5">
       {/* Text Section */}
         <div className="">
           <div>
@@ -98,8 +96,8 @@ function CertifiedEthicalHackingIntroduction() {
 
       {/* Slider Section */}
       {/* <div className=" lg:h-[468px]"> */}
-        <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:h-[420px] md:p-5 lg:flex flex-col justify-between ">
-          <div className="flex text-white text-opacity-80">
+        <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:p-5 lg:flex flex-col justify-between ">
+          <div className="flex text-white">
             <Slide
               heading={slidesData[currentSlide].heading}
               items={slidesData[currentSlide].items}

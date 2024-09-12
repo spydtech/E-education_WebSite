@@ -106,7 +106,7 @@ function AdvancedEthicalHackingKeyHighlights() {
   return (
     <div className="px-3 md:mb-4">
       <div className="md:flex justify-around  ">
-        <div className="bg-[#0098F1] text-white pl-7 pb-5 md:w-2/5">
+        <div className="bg-[#0098F1] text-white  pb-5 md:w-2/5">
           {renderContent()}
         </div>
         <div className="my-3">
