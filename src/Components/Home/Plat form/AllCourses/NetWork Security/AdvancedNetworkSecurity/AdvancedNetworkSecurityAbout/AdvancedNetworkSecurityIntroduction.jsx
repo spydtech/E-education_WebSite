@@ -6,7 +6,7 @@ function AdvancedNetworkSecurityIntroduction() {
   const Slide = ({ heading, items }) => {
     return (
       <div className="w-full flex-shrink-0 px-4">
-      <div className="h-[300px] flex justify-center">
+      <div className="h-[300px] flex ">
         <div>
           <h2 className="text-3xl font-medium mb-4 text-white ">
             {heading}
