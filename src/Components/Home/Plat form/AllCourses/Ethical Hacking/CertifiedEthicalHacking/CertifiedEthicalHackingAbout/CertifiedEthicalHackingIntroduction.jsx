@@ -11,7 +11,7 @@ function CertifiedEthicalHackingIntroduction() {
             <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-lg lg:text-xl">
+            <ul className="list-disc list-outside pl-5  text-lg lg:text-xl">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -73,10 +73,9 @@ function CertifiedEthicalHackingIntroduction() {
   };
 
   return (
-    <div className="flex flex-col space-y-3 md:flex-row md:justify-between md:items-center md:h-[380px] lg:h-[450px] px-3 mb-5">
+    <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center md:h-[380px] lg:h-[450px] px-3 mb-5">
       {/* Text Section */}
-      <div className=" ">
-        <div className=" lg:px-10">
+        <div className="">
           <div>
             <p className="text-[#0098F1] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
               Introduction
@@ -91,12 +90,11 @@ function CertifiedEthicalHackingIntroduction() {
             </p>
           </div>
           <div>
-            <p className="md:text-lg lg:text-4xl text-gray-500 mt-2">
+            <p className="md:text-lg lg:text-4xl mt-2">
               Brief about Ethical Hacking
             </p>
           </div>
         </div>
-      </div>
 
       {/* Slider Section */}
       {/* <div className=" lg:h-[468px]"> */}
@@ -111,14 +109,14 @@ function CertifiedEthicalHackingIntroduction() {
           <div className="flex justify-between max-md:p-4">
             <button
               onClick={goToPreviousSlide}
-              className="hover:text-white text-black font-bold  rounded"
+              className="text-white hover:text-black font-bold  rounded"
             >
               Previous
             </button>
             <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
             <button
               onClick={goToNextSlide}
-              className="hover:text-white text-black font-bold  rounded"
+              className="text-white hover:text-black font-bold  rounded"
             >
               Next
             </button>

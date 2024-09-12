@@ -22,31 +22,31 @@ const CertifiedEthicalHackingAbout = () => {
 
   return (
     <div className="px-3 text-center">
-    <div className="">
-      <p className="md:text-2xl font-bold text-[#0098F1]">
-        Discover the Ethical Hacking Program
-      </p>
-    </div>
+      <div className="">
+        <p className="md:text-2xl font-bold text-[#0098F1]">
+          Discover the Ethical Hacking Program
+        </p>
+      </div>
 
-    <div className="md:flex justify-around">
-      {aboutInfo.map((item, index) => (
-        <div
-          key={index}
-          className="md:w-80 lg:w-2/5 bg-white rounded-lg shadow-lg p-3 my-4"
-        >
-          <img
-            className=" object-cover object-center rounded-md"
-            src={item.imgSrc}
-            alt={item.imgAlt}
-          />
-          <div className="my-3">
-            <h2 className="md:text-xl font-bold">{item.title}</h2>
-            <p className="text-gray-700">{item.description}</p>
+      <div className="md:flex justify-around ">
+        {aboutInfo.map((item, index) => (
+          <div
+            key={index}
+            className="md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
+          >
+            <img
+              className=" md:w-full md:h-64 rounded-md"
+              src={item.imgSrc}
+              alt={item.imgAlt}
+            />
+            <div className="my-3">
+              <h2 className="md:text-xl font-bold">{item.title}</h2>
+              <p className="text-gray-700">{item.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
   );
 };
 

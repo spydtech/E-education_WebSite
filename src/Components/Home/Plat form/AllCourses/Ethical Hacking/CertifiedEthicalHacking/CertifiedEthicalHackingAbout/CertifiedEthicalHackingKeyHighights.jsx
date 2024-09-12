@@ -20,9 +20,13 @@ function CertifiedEthicalHackingKeyHighlights() {
       case 0:
         return (
           <ul className="space-y-2  font-normal text-[16px] list-disc ">
-            <p className="text-2xl font-medium text-white py-4">Overview</p>
-            <li>Comprehensive modules covering all aspects of ethical hacking</li>
-            <li>Certificate accredited by leading cybersecurity institutions</li>
+            <p className="text-2xl font-medium text-white py-4 ">Overview</p>
+            <li>
+              Comprehensive modules covering all aspects of ethical hacking
+            </li>
+            <li>
+              Certificate accredited by leading cybersecurity institutions
+            </li>
             <li>Access to live hacking simulations and workshops</li>
             <li>15+ Case Studies and real-world projects</li>
             <li>Earn Certified Ethical Hacker (CEH) certification</li>
@@ -63,7 +67,9 @@ function CertifiedEthicalHackingKeyHighlights() {
       case 3:
         return (
           <ul className="space-y-3 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-white py-4">Skills Developed</p>
+            <p className="text-2xl font-medium text-white py-4">
+              Skills Developed
+            </p>
             <li>Proficiency in various ethical hacking tools and techniques</li>
             <li>In-depth knowledge of network security and protocols</li>
             <li>Ability to identify and exploit system vulnerabilities</li>
@@ -76,7 +82,9 @@ function CertifiedEthicalHackingKeyHighlights() {
       case 4:
         return (
           <ul className="space-y-3 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-white py-4">Target Audience</p>
+            <p className="text-2xl font-medium text-white py-4 ">
+              Target Audience
+            </p>
             <li>IT professionals seeking to enhance their security skills</li>
             <li>Individuals aspiring to become ethical hackers</li>
             <li>Network and security administrators</li>
@@ -90,60 +98,33 @@ function CertifiedEthicalHackingKeyHighlights() {
   };
 
   return (
-    // <div className="px-20 mb-20 bg-white">
-    //   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start justify-center">
-    //     <div className="w-auto h-auto md:w-[500px] md:h-[420px] mt-10 md:pl-10 pl-0 text-xl">
-    //       {renderContent()}
-    //     </div>
-    //     <div className="lg:pl-20 pl-0 -ml-10 md:ml-10 lg:-ml-0 lg:ml-10">
-    //       <div className="pt-4">
-    //         <p className="font-bold underline-offset-2 underline text-xl p-2 text-[#f6ac14]">
-    //           Ethical Hacking Course Highlights
-    //         </p>
-    //       </div>
-    //       <div className="w-auto h-auto md:w-[500px] md:h-[420px] sm:w-[250px] mt-10 md:pl-16 pl-0 items-center">
-    //         {data.map((item, index) => (
-    //           <div
-    //             key={index}
-    //             onClick={() => handleClick(index)}
-    //             className={`p-5 text-center hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-[210px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden transition-transform duration-300 transform hover:scale-105 ${
-    //               selectedItem === index
-    //                 ? "bg-[#0098f1] text-white border-none"
-    //                 : ""
-    //             }`}
-    //           >
-    //             <p className="text-center">{item.label}</p>
-    //           </div>
-    //         ))}
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
     <div className="px-3 md:mb-4">
-    <div className="md:flex justify-around  ">
-      <div className="bg-[#0098F1] text-white px-5 pb-5 md:w-2/5">{renderContent()}</div>
-      <div className="my-3">
-        <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
-          E-Education Course Highlights
-        </p>
-        {data.map((item, index) => (
-          <ul className="">
-            <li
-              key={index}
-              onClick={() => handleClick(index)}
-              className={`p-5 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md  ${
-                selectedItem === index
-                  ? "bg-[#0098f1] text-white border-none"
-                  : ""
-              }`}
-            >
-              {item.label}
-            </li>
-          </ul>
-        ))}
+      <div className="md:flex justify-around  ">
+        <div className="bg-[#0098F1] text-white pl-7 pb-5 md:w-2/5">
+          {renderContent()}
+        </div>
+        <div className="my-3">
+          <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
+            E-Education Course Highlights
+          </p>
+          {data.map((item, index) => (
+            <ul className="">
+              <li
+                key={index}
+                onClick={() => handleClick(index)}
+                className={`p-5 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md  ${
+                  selectedItem === index
+                    ? "bg-[#0098f1] text-white border-none"
+                    : ""
+                }`}
+              >
+                {item.label}
+              </li>
+            </ul>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
   );
 }
 
