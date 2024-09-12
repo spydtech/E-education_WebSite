@@ -175,28 +175,28 @@ function CourseCompletionTable() {
   );
 
   return (
-    <div className="p-4 bg-white">
+    <div className="p-4 bg-white  ">
       <h2 className="text-xl text-[#FF9B26] font-bold mb-4">
         Course Completion Within 30 Days
       </h2>
       <div className="mb-4 flex flex-col md:flex-row justify-between items-center gap-2">
         <input
           type="text"
-          className="border-[#FF9B26] border-2 p-2 focus:border-[#FF9B26] rounded-3xl placeholder:text-[#FF9B26] w-full md:w-auto"
+          className="border-[#FF9B26] border-2 focus:ring-[#FF9B26]  p-2 focus:border-[#FF9B26] rounded-3xl placeholder:text-[#FF9B26] w-full md:w-auto"
           placeholder="Search courses"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <input
           type="number"
-          className="border-[#FF9B26] border-2 p-2 text-[#FF9B26] placeholder:text-[#FF9B26] rounded w-full md:w-auto"
+          className="border-[#FF9B26] border-2 focus:ring-[#FF9B26] focus:border-[#FF9B26] p-2 text-[#FF9B26] placeholder:text-[#FF9B26] rounded w-full md:w-auto"
           placeholder="Show rows"
           value={rowsToShow}
           onChange={(e) => setRowsToShow(Number(e.target.value))}
         />
       </div>
       <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border">
+        <table className="min-w-full bg-white border  ">
           <thead>
             <tr>
               <th className="border  bg-[#FF9B26] text-white px-4 py-4">Course Name</th>

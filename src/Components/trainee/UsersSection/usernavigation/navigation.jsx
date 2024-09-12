@@ -3,7 +3,7 @@ import ActiveUsers from "../users/Activeusers";
 // import InactiveUsers from "../users/Inactiveusers";
 
 const UserNavigation = () => {
-  const sections = ["Active Users"];
+  const sections = [""];
   const [currentSection, setCurrentSection] = useState(0);
 
   const handleSectionChange = (index) => {
@@ -14,7 +14,7 @@ const UserNavigation = () => {
     <>
       <div className="flex flex-col items-center min-h-screen pt-4">
         <nav className="flex flex-col sm:flex-row w-full sm:w-auto max-w-full md:max-w-xl mx-4 rounded-lg shadow-lg bg-white overflow-hidden">
-          {sections.map((section, index) => (
+          {/* {sections.map((section, index) => (
             <button
               key={index}
               onClick={() => handleSectionChange(index)}
@@ -32,7 +32,7 @@ const UserNavigation = () => {
             >
               {section}
             </button>
-          ))}
+          ))} */}
         </nav>
         <div className="container mx-auto p-4 mt-4 bg-white shadow-lg rounded-lg">
           {currentSection === 0 && <ActiveUsers />}

@@ -85,7 +85,7 @@ function TraineeCourseTable3() {
   );
 
   const rows = filteredData.map((item, index) => (
-    <tr key={index} className="border-b ">
+    <tr key={index} className="border-b  bg-opacity-10">
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
           <div className="flex-shrink-0 h-10 w-10">
@@ -117,7 +117,7 @@ function TraineeCourseTable3() {
             onChange={handleSearchChange}
             className="inline-block  px-4 py-2  placeholder:text-[#FF9B26]  border-2 border-[#F6AC14] rounded-3xl"
           />
-          <div className="flex items-center  space-x-2 mx-2">
+          <div className="flex items-center bg-opacity-10  space-x-2 mx-2">
             <span className="text-[#FF9B26]"> Trainee:</span>
             {trainee.map((traineeItem, index) => (
               <span key={index} className="px-2 py-1  text-[#FF9B26] rounded-md">
@@ -127,9 +127,9 @@ function TraineeCourseTable3() {
           </div>
         </div>
 
-        <table className="min-w-full divide-y bg-[#FF9B26]  bg-opacity-10 divide-gray-200">
+        <table className="min-w-full divide-y bg-[#FF9B26]  bg-opacity-10 divide-white">
           <thead className="bg-[#FF9B26]  text-white">
-            <tr>
+            <tr >
               <th
                 scope="col"
                 className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
@@ -144,7 +144,7 @@ function TraineeCourseTable3() {
               </th>
             </tr>
           </thead>
-          <tbody className="bg-[#FF9B26] bg-opacity-100 divide-y divide-gray-200">{rows}</tbody>
+          <tbody className=" divide-y divide-gray-200">{rows}</tbody>
         </table>
       </div>
     </div>
