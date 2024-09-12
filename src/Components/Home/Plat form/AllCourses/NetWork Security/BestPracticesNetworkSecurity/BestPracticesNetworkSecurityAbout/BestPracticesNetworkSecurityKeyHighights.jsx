@@ -20,7 +20,7 @@ function BestPracticesNetworkSecurityKeyHighights() {
       case 0:
         return (
           <ul className="space-y-2 pt-4 pl-8 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">Overview</p>
+            <p className="text-2xl font-medium text-white py-4">Overview</p>
             <li>Advanced modules with Generative AI fusion</li>
             <li>E-education certificate via upGrad collaboration</li>
             <li>Access to live training sessions by Meta Blueprint trainers</li>
@@ -36,7 +36,7 @@ function BestPracticesNetworkSecurityKeyHighights() {
       case 1:
         return (
           <ul className="space-y-3 pt-4 pl-8 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">
+            <p className="text-2xl font-medium text-white py-4">
               Key Concepts
             </p>
             <li>Generative AI in digital marketing</li>
@@ -51,7 +51,7 @@ function BestPracticesNetworkSecurityKeyHighights() {
       case 2:
         return (
           <ul className="space-y-3 pt-4 pl-8 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">
+            <p className="text-2xl font-medium text-white py-4">
               Applications
             </p>
             <li>Digital Marketing Manager</li>
@@ -67,7 +67,7 @@ function BestPracticesNetworkSecurityKeyHighights() {
       case 3:
         return (
           <ul className="space-y-3 pt-4 pl-8 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">
+            <p className="text-2xl font-medium text-white py-4">
               Skills Developed
             </p>
             <li>List of target audience goes here...</li>
@@ -86,7 +86,7 @@ function BestPracticesNetworkSecurityKeyHighights() {
       case 4:
         return (
           <ul className="space-y-3 pt-4 pl-8 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">
+            <p className="text-2xl font-medium text-white py-4">
               Target Audience
             </p>
             <li>
@@ -101,40 +101,40 @@ function BestPracticesNetworkSecurityKeyHighights() {
         );
       default:
         return null;
-      }
+    }
   };
 
   return (
     <>
-    <div className=" px-20 mb-20 bg-white">
-     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start justify-center">
-       <div className="w-auto h-auto md:lg:w-[500px] md:lg:h-[420px] mt-10 md:lg:pl-10 pl-0 text-xl">
-         {renderContent()}
-       </div>
-       <div className="md:lg:pl-20  pl-0">
-         <div className="pt-4">
-           <p className="font-bold underline-offset-2 underline text-xl p-2 text-[#f6ac14]">
-             E-Education Course Highlights
-           </p>
-         </div>
-         {data.map((item, index) => (
-           <div
-             key={index}
-             onClick={() => handleClick(index)}
-             className={`p-5 text-center hover:cursor-pointer text-xl font-medium my-6  h-16 w-[210px] flex justify-center items-center border-2 border-opacity-15 rounded-md overflow-hidden transition-transform duration-300 transform hover:scale-105 ${
-               selectedItem === index
-                 ? "bg-[#0098f1] text-white border-none"
-                 : ""
-             }`}
-           >
-             <p className="text-center">{item.label}</p>
-           </div>
-         ))}
-       </div>
-     </div>
-   </div>
-   </>
-  )
+      <div className="px-3 md:mb-4">
+        <div className="md:flex justify-around  ">
+          <div className="bg-[#0098F1] text-white pl-7 pb-5 md:w-2/5">
+            {renderContent()}
+          </div>
+          <div className="my-3">
+            <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
+              E-Education Course Highlights
+            </p>
+            {data.map((item, index) => (
+              <ul className="">
+                <li
+                  key={index}
+                  onClick={() => handleClick(index)}
+                  className={`p-5 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md  ${
+                    selectedItem === index
+                      ? "bg-[#0098f1] text-white border-none"
+                      : ""
+                  }`}
+                >
+                  {item.label}
+                </li>
+              </ul>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default BestPracticesNetworkSecurityKeyHighights;

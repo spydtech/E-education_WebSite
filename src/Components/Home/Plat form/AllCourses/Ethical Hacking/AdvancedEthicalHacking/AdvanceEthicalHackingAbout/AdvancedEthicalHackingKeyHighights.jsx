@@ -105,30 +105,32 @@ function AdvancedEthicalHackingKeyHighlights() {
 
   return (
     <div className="px-3 md:mb-4">
-    <div className="md:flex justify-around  ">
-      <div className="bg-[#0098F1] text-white ">{renderContent()}</div>
-      <div className="my-3">
-        <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
-          E-Education Course Highlights
-        </p>
-        {data.map((item, index) => (
-          <ul className="">
-            <li
-              key={index}
-              onClick={() => handleClick(index)}
-              className={`p-5 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md  ${
-                selectedItem === index
-                  ? "bg-[#0098f1] text-white border-none"
-                  : ""
-              }`}
-            >
-              {item.label}
-            </li>
-          </ul>
-        ))}
+      <div className="md:flex justify-around  ">
+        <div className="bg-[#0098F1] text-white pl-7 pb-5 md:w-2/5">
+          {renderContent()}
+        </div>
+        <div className="my-3">
+          <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
+            E-Education Course Highlights
+          </p>
+          {data.map((item, index) => (
+            <ul className="">
+              <li
+                key={index}
+                onClick={() => handleClick(index)}
+                className={`p-5 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md  ${
+                  selectedItem === index
+                    ? "bg-[#0098f1] text-white border-none"
+                    : ""
+                }`}
+              >
+                {item.label}
+              </li>
+            </ul>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
   );
 }
 
