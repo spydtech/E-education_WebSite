@@ -15,8 +15,8 @@ const NetworkSecurityFundamentals = () => {
       <NetworkSecurityHero />
       <NetworkSecurityCard />
       <NetworkSecurityNavigation />
-      <NetworkSecurityFoot/>
-      <Footer />
+      {/* <NetworkSecurityFoot/> */}
+      {/* <Footer /> */}
     </>
   );
 };

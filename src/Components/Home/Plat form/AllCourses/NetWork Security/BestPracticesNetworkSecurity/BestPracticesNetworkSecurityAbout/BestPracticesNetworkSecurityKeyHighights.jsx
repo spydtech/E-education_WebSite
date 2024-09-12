@@ -19,8 +19,9 @@ function BestPracticesNetworkSecurityKeyHighights() {
     switch (selectedItem) {
       case 0:
         return (
-          <ul className="space-y-2 pt-4 pl-8 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-white py-4">Overview</p>
+          <div className="p-3 space-y-2 ">
+            <p className="text-xl font-medium text-white pl-2">Overview</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
             <li>Advanced modules with Generative AI fusion</li>
             <li>E-education certificate via upGrad collaboration</li>
             <li>Access to live training sessions by Meta Blueprint trainers</li>
@@ -31,14 +32,14 @@ function BestPracticesNetworkSecurityKeyHighights() {
             <li>Tailored resume feedback</li>
             <li>Mock Interview by managers</li>
             <li>Explore ChatGPT in digital marketing tutorials</li>
-          </ul>
+            </ul>
+          </div>
         );
       case 1:
         return (
-          <ul className="space-y-3 pt-4 pl-8 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-white py-4">
-              Key Concepts
-            </p>
+          <div className="p-3 space-y-2 ">
+            <p className="text-xl font-medium text-white pl-2"> Key Concepts</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
             <li>Generative AI in digital marketing</li>
             <li>SEO</li>
             <li>Search and Display advertising</li>
@@ -46,14 +47,14 @@ function BestPracticesNetworkSecurityKeyHighights() {
             <li>Content Marketing</li>
             <li>Branding</li>
             <li>Web Analytics</li>
-          </ul>
+            </ul>
+          </div>
         );
       case 2:
         return (
-          <ul className="space-y-3 pt-4 pl-8 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-white py-4">
-              Applications
-            </p>
+          <div className="p-3 space-y-2 ">
+            <p className="text-xl font-medium text-white pl-2">Applications</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
             <li>Digital Marketing Manager</li>
             <li>SEM Manager</li>
             <li>SEO Manager</li>
@@ -62,14 +63,14 @@ function BestPracticesNetworkSecurityKeyHighights() {
             <li>Consultant</li>
             <li>Business Analyst</li>
             <li>(Sr.) Associate-Digital Marketing</li>
-          </ul>
+            </ul>
+          </div>
         );
       case 3:
         return (
-          <ul className="space-y-3 pt-4 pl-8 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-white py-4">
-              Skills Developed
-            </p>
+          <div className="p-3 space-y-2 ">
+            <p className="text-xl font-medium text-white pl-2">Skills Developed</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
             <li>List of target audience goes here...</li>
             <li>Explore 2 tracks & 5 specializations for diverse learning.</li>
             <li>Experience seamless integration with Gen AI modules.</li>
@@ -81,14 +82,14 @@ function BestPracticesNetworkSecurityKeyHighights() {
               A voucher worth $50 for Meta's "Digital Marketing Associate"
               certificate exam, free of cost.
             </li>
-          </ul>
+            </ul>
+          </div>
         );
       case 4:
         return (
-          <ul className="space-y-3 pt-4 pl-8 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-white py-4">
-              Target Audience
-            </p>
+          <div className="p-3 space-y-2 ">
+            <p className="text-xl font-medium text-white pl-2">Target Audience</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
             <li>
               Utilise ChatGPT to assist in creating unique content, planning
               strategies, building calendars, and more.
@@ -97,7 +98,8 @@ function BestPracticesNetworkSecurityKeyHighights() {
             <li>
               Gain insights into your social media analytics by using ChatGPT
             </li>
-          </ul>
+            </ul>
+          </div>
         );
       default:
         return null;
@@ -108,9 +110,7 @@ function BestPracticesNetworkSecurityKeyHighights() {
     <>
       <div className="px-3 md:mb-4">
         <div className="md:flex justify-around  ">
-          <div className="bg-[#0098F1] text-white pl-7 pb-5 md:w-2/5">
-            {renderContent()}
-          </div>
+        <div className="bg-[#0098F1] text-white md:w-2/5">{renderContent()}</div>
           <div className="my-3">
             <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
               E-Education Course Highlights
