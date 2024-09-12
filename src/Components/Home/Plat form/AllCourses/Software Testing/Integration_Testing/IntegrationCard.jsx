@@ -63,18 +63,18 @@ const IntigrationCard = () => {
           {courseData.map((course, index) => (
             <div
               key={index}
-              className="group  border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
+              className="group border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-                <div className="h-[210px] bg-[#0098f1]">
+                <div className="h-[210px]">
                   <img
                     className="w-full h-full object-cover"
                     src={course.imgSrc}
-                    alt={`Project ${index + 1}`}
+                    alt={`Course ${index + 1}`}
                   />
                 </div>
                 <div className="p-4 flex flex-col items-center justify-between">
-                  <h3 className="text-lg font-medium text-gray-800 group-hover:text-gray-900">
+                  <h3 className="text-lg flex justify-center items-center font-medium text-[#f6ac14] group-hover:text-black">
                     {course.title}
                   </h3>
                   <p className="text-md text-gray-600 pt-4">

@@ -23,14 +23,14 @@ const SystemTestingAbout = () => {
     return (
       <div className="mx-auto h-auto w-full mb-20 px-4 md:px-10 bg-white">
         <div className="py-2 my-10">
-          <p className="text-2xl text-center font-bold text-[#f6ac14]">
-            Discover the   System Testing Program
+          <p className="text-2xl text-center font-bold text-[#0098f1]">
+            Discover the System Testing Program
           </p>
         </div>
   
         <div className="flex flex-wrap justify-center items-center pb-6">
           {softwareTestingInfo.map((item, index) => (
-            <div key={index} className="w-full  md:w-1/2 lg:w-1/3 px-4 mb-8">
+            <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
               <div className="bg-white h-[400px] rounded-lg shadow-lg overflow-hidden">
                 <img
                   className="w-full h-52 object-cover object-center"
@@ -46,10 +46,7 @@ const SystemTestingAbout = () => {
           ))}
         </div>
       </div>
-
-
- 
-  );
+    );
 };
 
 export default SystemTestingAbout;
