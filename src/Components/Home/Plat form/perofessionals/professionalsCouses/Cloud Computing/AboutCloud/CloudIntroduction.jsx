@@ -61,64 +61,6 @@ function CloudIntroduction() {
 
   return (
     <>
-      {/* <div
-        id="subdiv"
-        className="grid grid-cols-1 w-fit md:lg:grid-cols-2 h-full bg-gradient-to-br from-[#cca000] to-[#f5cc00]"
-      >
-        <div
-          id="div1"
-          className="flex items-center justify-center xl:lg:md:w-auto"
-        >
-          <div
-            id="headings"
-            className="grid grid-cols-1 text-start px-10 font"
-          >
-            <div>
-              <p className="text-[#00509d] text-xl font-medium">Introduction</p>
-            </div>
-            <div className="py-5">
-              <p className="text-6xl font">
-                Welcome to
-                <p className="text-[#00509d] inline pl-2">Cloud Computing!</p>
-              </p>
-            </div>
-            <div>
-              <p className="text-xl text-gray-500">
-                Gain insights into the foundational concepts and principles of cloud computing.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div id="div2" className="px-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-            <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
-              <div className="relative w-full overflow-hidden">
-                <div className="flex">
-                  <Slide
-                    heading={slidesData[currentSlide].heading}
-                    items={slidesData[currentSlide].items}
-                  />
-                </div>
-              </div>
-              <div className="flex justify-between">
-                <button
-                  onClick={goToPreviousSlide}
-                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
-                >
-                  Previous
-                </button>
-                <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-                <button
-                  onClick={goToNextSlide}
-                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
-                >
-                  Next
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center lg:h-[450px] px-3 md:mb-9 mb-5">
       {/* Text Section */}
         <div className="md:w-[50%]">
@@ -128,7 +70,7 @@ function CloudIntroduction() {
             </p>
           </div>
           <div className="mt-2">
-            <p className="md:text-xl lg:text-4xl">
+            <p className="md:text-gl lg:text-3xl">
             Welcome to
               <span className="text-[#f6ac14] inline pl-2">
               Cloud Computing!
@@ -136,7 +78,7 @@ function CloudIntroduction() {
             </p>
           </div>
           <div>
-            <p className="md:text-lg lg:text-4xl mt-2">
+            <p className="md:text-lg lg:text-3xl mt-2">
             Gain insights into the foundational concepts and principles of cloud computing.
             </p>
           </div>
