@@ -80,7 +80,7 @@ function CertifiedEthicalHackingIntroduction() {
             </p>
           </div>
           <div className="mt-2">
-            <p className="md:text-xl lg:text-4xl">
+            <p className="md:text-lg lg:text-3xl">
               So what is
               <span className="text-[#f6ac14] inline pl-2">
                 Ethical Hacking
@@ -88,7 +88,7 @@ function CertifiedEthicalHackingIntroduction() {
             </p>
           </div>
           <div>
-            <p className="md:text-lg lg:text-4xl mt-2">
+            <p className="md:text-lg lg:text-3xl mt-2">
               Brief about Ethical Hacking
             </p>
           </div>

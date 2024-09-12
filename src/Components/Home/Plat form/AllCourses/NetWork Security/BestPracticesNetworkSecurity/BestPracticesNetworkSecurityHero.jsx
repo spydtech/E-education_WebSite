@@ -13,10 +13,6 @@ const NetworkSecurityBestPracticesHero = () => {
     navigate("/course-details", { state: { courseName, coursePrice } });
   };
 
-  // Empowering you to implement advanced security measures and defend
-  // against cyber attacks, we provide comprehensive solutions to keep
-  // your networks safe...
-
   return (
     <>
       <div

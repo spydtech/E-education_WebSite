@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 
 import BestPracticesNetworkSecurityKeyHighights from "./BestPracticesNetworkSecurityKeyHighights";
@@ -47,7 +46,7 @@ const BestPracticesNetworkSecurityNavigation = () => {
 
   return (
     <>
-      <nav className="flex justify-between items-center p-2 bg-[#0098f1] shadow-xl rounded-t-2xl mb-5 lg:px-28 lg:py-3">
+      <nav className="flex justify-between items-center p-2 bg-[#0098f1] shadow-xl rounded-t-2xl mb-5 lg:px-28 lg:py-3 mx-5">
         <button
           className={` text-white ${currentSection === 0 ? "invisible" : ""}`}
           onClick={() => handleNextSection("prev")}
@@ -107,10 +106,10 @@ const BestPracticesNetworkSecurityNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div className=" ">
-         {currentSection === 0 && <BestPracticesNetworkSecurityIntroduction />}
-      {currentSection === 1 && <BestPracticesNetworkSecurityKeyHighights />}
-         {currentSection === 2 && (
+      <div className="mx-5 ">
+        {currentSection === 0 && <BestPracticesNetworkSecurityIntroduction />}
+        {currentSection === 1 && <BestPracticesNetworkSecurityKeyHighights />}
+        {currentSection === 2 && (
           <BestPracticesNetworkSecurityCareersOutcomes />
         )}
         {currentSection === 3 && <BestPracticesNetworkSecurityAbout />}
@@ -122,4 +121,3 @@ const BestPracticesNetworkSecurityNavigation = () => {
 };
 
 export default BestPracticesNetworkSecurityNavigation;
-

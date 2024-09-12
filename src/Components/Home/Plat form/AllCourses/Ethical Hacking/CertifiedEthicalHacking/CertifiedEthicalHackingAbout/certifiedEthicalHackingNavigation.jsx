@@ -47,7 +47,7 @@ const CertifiedEthicalHackingNavigation = () => {
 
   return (
     <>
-      <nav className="flex justify-between items-center p-2 bg-[#0098f1] shadow-xl rounded-t-2xl mb-5 lg:px-28 lg:py-3">
+      <nav className="flex justify-between items-center p-2 bg-[#0098f1] shadow-xl rounded-t-2xl mb-5 lg:px-28 lg:py-3 mx-5">
         <button
           className={` text-white ${currentSection === 0 ? "invisible" : ""}`}
           onClick={() => handleNextSection("prev")}
@@ -107,7 +107,7 @@ const CertifiedEthicalHackingNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div>
+      <div className="mx-5">
         {currentSection === 0 && <CertifiedEthicalHackingIntroduction />}
         {currentSection === 1 && <CertifiedEthicalHackingKeyHighights />}
         {currentSection === 2 && <CertifiedEthicalHackingCareersOutcomes />}

@@ -70,7 +70,7 @@ function EthicalHackingIntroduction() {
   };
 
   return (
-    <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center lg:h-[450px] px-3 md:mb-9 mb-5">
+    <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center lg:h-[450px] px-3 md:mb-9 mb-5 ">
       {/* Text Section */}
         <div className="">
           <div>
@@ -79,7 +79,7 @@ function EthicalHackingIntroduction() {
             </p>
           </div>
           <div className="mt-2">
-            <p className="md:text-xl lg:text-4xl">
+            <p className="md:text-lg lg:text-3xl">
               So what is
               <span className="text-[#f6ac14] inline pl-2">
                 Ethical Hacking
@@ -87,7 +87,7 @@ function EthicalHackingIntroduction() {
             </p>
           </div>
           <div>
-            <p className="md:text-lg lg:text-4xl mt-2">
+            <p className="md:text-lg lg:text-3xl mt-2">
               Brief about Ethical Hacking
             </p>
           </div>

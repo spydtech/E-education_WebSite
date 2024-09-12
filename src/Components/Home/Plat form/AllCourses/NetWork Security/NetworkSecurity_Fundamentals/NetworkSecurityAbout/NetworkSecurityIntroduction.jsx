@@ -81,7 +81,7 @@ function NetworkSecurityIntroduction() {
             </p>
           </div>
           <div className="mt-2">
-            <p className="md:text-xl lg:text-4xl">
+            <p className="md:text-lg lg:text-3xl">
               So what is
               <span className="text-[#f6ac14] inline pl-2">
                 Network Security
@@ -89,7 +89,7 @@ function NetworkSecurityIntroduction() {
             </p>
           </div>
           <div>
-            <p className="md:text-lg lg:text-4xl mt-2">
+            <p className="md:text-lg lg:text-3xl mt-2">
               Brief about Network Security
             </p>
           </div>
