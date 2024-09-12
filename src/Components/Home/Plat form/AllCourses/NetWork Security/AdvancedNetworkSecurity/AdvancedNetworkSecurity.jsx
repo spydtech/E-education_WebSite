@@ -16,7 +16,7 @@ const AdvancedNetworkSecurity = () => {
       <AdvancedNetworkSecurityCard />
       <AdvancedNetworkSecurityNavigation />
       <AdvancedNetworkSecurityFoot/>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
