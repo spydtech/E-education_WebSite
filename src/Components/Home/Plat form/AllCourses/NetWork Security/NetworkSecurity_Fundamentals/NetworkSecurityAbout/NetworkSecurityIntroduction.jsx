@@ -112,7 +112,9 @@ function NetworkSecurityIntroduction() {
             >
               Previous
             </button>
-            <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+            <div className="text-white text-sm">{`Page ${currentSlide + 1}/${
+              slidesData.length
+            }`}</div>
             <button
               onClick={goToNextSlide}
               className="text-white hover:text-black font-bold  rounded"
