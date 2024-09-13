@@ -168,6 +168,7 @@
 //   );
 // }
 
+
 import React, { useEffect } from "react";
 import Glide from "@glidejs/glide";
 import {
@@ -181,6 +182,11 @@ import {
 import { Link } from "react-router-dom";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
+import WebDev from "../../../assetss/Home/slider/webDev.png"
+import ReactIcon from "../../../assetss/Home/slider/reactIcon.png"
+import Python from "../../../assetss/Home/slider/python.png"
+import DataScience from "../../../assetss/Home/slider/dataScience.png"
+
 
 const courses = [
   {
@@ -194,28 +200,28 @@ const courses = [
     title: "Web Development",
     description: "Build dynamic, responsive websites",
     bgColor: "bg-green-300",
-    icon: <FaCode className="text-orange-400" />,
+    icon: WebDev, // Use the image path directly
     link: "/fullStack_WebDevelopment",
   },
   {
     title: "Data Science",
     description: "Introduction to data science concepts",
     bgColor: "bg-purple-300",
-    icon: <FaDatabase className="text-[#881337]" />,
+    icon: DataScience, // Use the image path directly
     link: "/data_Science/introduction-to-data-science",
   },
   {
     title: "React.js Mastery",
     description: "Master React.js for web development",
     bgColor: "bg-yellow-300",
-    icon: <FaReact className="text-[#312e81]" />,
+    icon: ReactIcon, // Use the image path directly
     link: "/reactjs",
   },
   {
     title: "Python Programming",
     description: "Learn Python for various applications",
     bgColor: "bg-red-300",
-    icon: <FaPython className="text-[#facc15]" />,
+    icon: Python, // Use the image path directly
     link: "/fullStack_WebDevelopment/fullStack-Python-Development",
   },
   {
@@ -240,6 +246,7 @@ const courses = [
     link: "/software_testing",
   },
 ];
+
 
 export default function EducationCarousel() {
   useEffect(() => {
@@ -300,17 +307,15 @@ export default function EducationCarousel() {
           className="glide__track overflow-hidden md:pl-80 sm:pl-64 lg:pl-80  pl-8"
           data-glide-el="track"
         >
-          <ul className="glide__slides  flex p-0  justify-center">
+          <ul className="glide__slides  flex p-0 items-center justify-center">
             {courses.map((course, index) => (
-              <li key={index} className="glide__slide   flex-none pt-10">
+              <li key={index} className="glide__slide flex-none pt-10">
                 <Link
                   to={course.link}
-                  className="group shadow-sm relative w-[268px]  h-[168px] m-4 bg-blue-600 hover:ring duration-400 hover:scale-105 flex flex-col items-center justify-center p-4 rounded-lg text-center cursor-pointer hover:shadow-md transform hover:-translate-y-2 transition-transform"
+                  className="group shadow-sm relative w-[268px] h-[168px] m-4 bg-[#0098F1] hover:ring duration-400 hover:scale-105 flex flex-col items-center justify-center p-4 rounded-lg text-center cursor-pointer hover:shadow-md transform hover:-translate-y-2 transition-transform"
                 >
                   <div className="flex justify-center items-center w-[87px] h-[87px] rounded-full absolute top-[-40px] border-2 border-blue-500 bg-white group-hover:shadow-md transform duration-300">
-                    <span className="text-3xl md:text-5xl transform duration-500">
-                      {course.icon}
-                    </span>
+                    <img src={course.icon} alt={course.title} className="w-20 h-20" />
                   </div>
                   <div className="flex flex-col text-white items-center justify-center mt-8 p-4">
                     <h2 className="text-xl capitalize font-bold text-shadesOfBlue dark:text-slate-800 my-4">
@@ -323,6 +328,7 @@ export default function EducationCarousel() {
                 </Link>
               </li>
             ))}
+
           </ul>
         </div>
         <div className="pt-20">

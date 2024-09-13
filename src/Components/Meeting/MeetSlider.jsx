@@ -61,7 +61,7 @@
 // // //               </div>
 // // //             </div>
 // // //           </div>
-        
+
 // // //         </div>
 // // //       </div>
 // // //     </div>
@@ -87,7 +87,7 @@
 // //         }`}
 // //       >
 // //         <h2 className="text-2xl font-semibold">MeetSlider Content</h2>
-        
+
 // //         <button onClick={onClose} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">
 // //           Close MeetSlider
 // //         </button>
@@ -133,10 +133,50 @@
 // };
 
 // export default MeetSlider;
-import React from 'react';
-import moment from 'moment';
+// import React from 'react';
+// import moment from 'moment';
 
-const MeetSlider = ({ isOpen, onClose, selectedEventDetails }) => {
+// const MeetSlider = ({ isOpen, onClose, selectedEventDetails }) => {
+//   return (
+//     <div className={`fixed inset-0 flex items-end justify-end z-50 ${isOpen ? 'visible' : 'invisible'}`}>
+//       <div
+//         className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0'}`}
+//         onClick={onClose}
+//       ></div>
+//       <div
+//         className={`transform top-0 right-0 w-64 bg-white p-4 fixed h-full overflow-auto ease-in-out transition-all duration-300 ${
+//           isOpen ? 'translate-x-0' : 'translate-x-full'
+//         }`}
+//       >
+//         <h2 className="text-2xl font-semibold">MeetSlider Content</h2>
+
+//         {selectedEventDetails && (
+//           <div className='mt-4 bg-blue-200 border border-blue-800 text-start p-5'>
+//             <h3 className='font-bold'>Event Details:</h3>
+//             <p>Title: {selectedEventDetails.title}</p>
+//             <p>Start: {moment(selectedEventDetails.start).format('MMMM Do YYYY, h:mm a')}</p>
+//             <p>End: {moment(selectedEventDetails.end).format('MMMM Do YYYY, h:mm a')}</p>
+//             <p>Type: {selectedEventDetails.type}</p>
+//           </div>
+//         )}
+
+//         <button onClick={onClose} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">
+//           Close MeetSlider
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default MeetSlider;
+
+
+
+import React from 'react';
+
+import Calendar from './calender';
+
+const MeetSlider = ({ isOpen, onClose }) => {
   return (
     <div className={`fixed inset-0 flex items-end justify-end z-50 ${isOpen ? 'visible' : 'invisible'}`}>
       <div
@@ -144,29 +184,21 @@ const MeetSlider = ({ isOpen, onClose, selectedEventDetails }) => {
         onClick={onClose}
       ></div>
       <div
-        className={`transform top-0 right-0 w-64 bg-white p-4 fixed h-full overflow-auto ease-in-out transition-all duration-300 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={`transform top-0 right-0 w-96 bg-white p-4 fixed h-full overflow-auto ease-in-out transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
-        <h2 className="text-2xl font-semibold">MeetSlider Content</h2>
+        <div>
+          <Calendar />
+        </div>
 
-        {selectedEventDetails && (
-          <div className='mt-4 bg-blue-200 border border-blue-800 text-start p-5'>
-            <h3 className='font-bold'>Event Details:</h3>
-            <p>Title: {selectedEventDetails.title}</p>
-            <p>Start: {moment(selectedEventDetails.start).format('MMMM Do YYYY, h:mm a')}</p>
-            <p>End: {moment(selectedEventDetails.end).format('MMMM Do YYYY, h:mm a')}</p>
-            <p>Type: {selectedEventDetails.type}</p>
-          </div>
-        )}
-
-        <button onClick={onClose} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">
-          Close MeetSlider
-        </button>
       </div>
+      <button onClick={onClose} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">
+        Close MeetSlider
+      </button>
     </div>
   );
 };
 
 export default MeetSlider;
+
 

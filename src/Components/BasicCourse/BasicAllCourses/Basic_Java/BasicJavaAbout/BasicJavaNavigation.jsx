@@ -3,7 +3,6 @@ import BasicJavaKeyHighights from "./BasicJavaKeyHighights";
 import BasicJavaCertificate from "./BasicJavaCertificate";
 import BasicJavaCareersOutcomes from "./BasicJavaCareersOutcomes";
 import BasicJavaAbout from "./BasicJavaAbout";
-import { TbPlayerTrackNextFilled } from "react-icons/tb";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for menu toggle
 import BasicJavaSyallabus from "./BasicJavaSyallabus";
 import BasicJavaIntroduction from "./BasicJavaIntroduction";
@@ -40,7 +39,7 @@ const BasicJavaNavigation = () => {
     } else {
       setCurrentSection(index);
     }
-    setMenuOpen(true); // Close the menu when a section is selected
+    setMenuOpen(false); // Close the menu when a section is selected
   };
 
   const toggleMenu = () => {
@@ -49,22 +48,24 @@ const BasicJavaNavigation = () => {
 
   return (
     <>
-      <nav className="flex  items-center px-4 sm:px-6 py-4">
-        <button className="text-black text-2xl sm:hidden" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes className="mb-56" /> : <FaBars />}{" "}
-          {/* Toggle between menu and close icon */}
+      <nav className="relative flex bg-[#0098f1] rounded-t-2xl px-4 sm:px-6  lg:py-4 py-8 mt-4 m-4">
+        <button
+          className="text-black text-2xl lg:hidden absolute top-4 left-4"
+          onClick={toggleMenu}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
         <ul
           className={`${
             menuOpen ? "block" : "hidden"
-          } sm:flex sm:flex-row flex-col items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4`}
+          } lg:flex px-16 md:pl-56 lg:px-12 lg:flex-row flex-col text-nowrap overflow-x-auto xl:lg:md:text-[22px] text-[16px] text-white font-md space-y-2 lg:space-y-0 lg:space-x-4`}
         >
           {sections.map((section, index) => (
-            <li key={index} className="mt-2 sm:mt-0">
+            <li key={index} className="mt-2 text-center sm:mt-0">
               <button
-                className={`text-black hover:text-red-500 transition duration-300 ${
+                className={`text-white transition duration-300 ${
                   currentSection === index
-                    ? "text-red-500 hover:text-red-700 underline underline-offset-8"
+                    ? "text-white underline underline-offset-8"
                     : ""
                 } px-2 py-1 sm:px-4 sm:py-2 rounded`}
                 onClick={() => handleNextSection(index)}
@@ -73,17 +74,9 @@ const BasicJavaNavigation = () => {
               </button>
             </li>
           ))}
-          <li className="mt-2 sm:mt-0">
-            <button
-              className="text-black text-2xl hover:text-red-700 transition duration-300"
-              onClick={() => handleNextSection("next")}
-            >
-              <TbPlayerTrackNextFilled />
-            </button>
-          </li>
         </ul>
       </nav>
-      <div className="">
+      <div>
         {currentSection === 0 && <BasicJavaIntroduction />}
         {currentSection === 1 && <BasicJavaKeyHighights />}
         {currentSection === 2 && <BasicJavaCareersOutcomes />}

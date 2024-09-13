@@ -1,14 +1,68 @@
 import React, { useState } from "react";
 
-function SecurityTestingKeyHighights() {
+function SecurityTestingKeyHighlights() {
   const [selectedItem, setSelectedItem] = useState(0);
 
   const data = [
-    { label: "Overview" },
-    { label: "Key Concepts" },
-    { label: "Applications" },
-    { label: "Skills Developed" },
-    { label: "Target Audience" },
+    {
+      label: "Overview",
+      items: [
+        "Advanced modules with Generative AI fusion",
+        "E-education certificate via upGrad collaboration",
+        "Access to live training sessions by Meta Blueprint trainers",
+        "15+ Case Studies, Live projects",
+        "Earn E-Education Executive Alumni Status",
+        "90+ Tool Video Library",
+        "Industry mentor-led fortnightly coaching",
+        "Tailored resume feedback",
+        "Mock Interview by managers",
+        "Explore ChatGPT in digital marketing tutorials"
+      ]
+    },
+    {
+      label: "Key Concepts",
+      items: [
+        "Generative AI in digital marketing",
+        "SEO",
+        "Search and Display advertising",
+        "Social and Display advertising",
+        "Content Marketing",
+        "Branding",
+        "Web Analytics"
+      ]
+    },
+    {
+      label: "Applications",
+      items: [
+        "Digital Marketing Manager",
+        "SEM Manager",
+        "SEO Manager",
+        "Social Media and Content Manager",
+        "Associate",
+        "Consultant",
+        "Business Analyst",
+        "(Sr.)Associate-Digital Marketing"
+      ]
+    },
+    {
+      label: "Skills Developed",
+      items: [
+        "List of target audience goes here...",
+        "Explore 2 tracks & 5 specializations for diverse learning.",
+        "Experience seamless integration with Gen AI modules.",
+        "Attain E-education Executive Alumni Status for exclusive benefits.",
+        "Access EMI at RS. 2,879/month for greater flexibility.",
+        "A voucher worth $50 for Meta's 'Digital Marketing Associate' certificate exam, free of cost."
+      ]
+    },
+    {
+      label: "Target Audience",
+      items: [
+        "Utilize ChatGPT to assist in creative unique content, plan strategies, build calendars, and more",
+        "Generative SEO-optimized content with ChatGPT",
+        "Gain insights into your social media analytics by using ChatGPT"
+      ]
+    }
   ];
 
   const handleClick = (index) => {
@@ -16,166 +70,55 @@ function SecurityTestingKeyHighights() {
   };
 
   const renderContent = () => {
-    switch (selectedItem) {
-      case 0:
-        return (
-          <>
-            <ul className="space-y-2 pt-4 font-normal text-[16px] list-disc  bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium text-green-500 py-4">
-                Overview
-              </p>
-              <li>Advanced modules with Generative AI fusion</li>
-              <li>E-education certificate via upGrad collaboration</li>
-              <li>
-                Access to live training sessions by Meta Blueprint trainers
-              </li>
-              <li>15+ Case Studies, Live projects</li>
-              <li>Earn E-Eduction Executive Alumni Status</li>
-              <li>90+ Tool Video Library</li>
-              <li>Industry mentor-led fortnightly coaching</li>
-              <li>Tailored resume feedback</li>
-              <li>Mock Interview by managers</li>
-              <li>Explore ChatGPT in digital marketing tutorials</li>
-            </ul>
-          </>
-        );
-      case 1:
-        return (
-          <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium text-green-500 py-4">
-                Key Concepts
-              </p>
-              <li>Generative AI in digital marketing</li>
-              <li>SEO</li>
-              <li>Search and Display advertising</li>
-              <li>Social and Display advertising</li>
-              <li>Content Marketing</li>
-              <li>Branding</li>
-              <li>Web Analytics</li>
-            </ul>
-          </>
-        );
-      case 2:
-        return (
-          <>
-            {" "}
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium  text-green-500">
-                Applications
-              </p>
-              <li>Digital Marketing Manager</li>
-              <li>SEM Manager</li>
-              <li>SEO Manager</li>
-              <li>Social Media and Content Manager</li>
-              <li>Associate</li>
-              <li>Consultant</li>
-              <li>Business Analyst</li>
-              <li>(Sr.)Associate-Digital Marketing</li>
-            </ul>
-          </>
-        );
-      case 3:
-        return (
-          <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium  text-green-500">
-                Skills Developed
-              </p>
-              <li>List of target audience goes here...</li>
-              <li>
-                Explore 2 tracks & 5 specializations for diverse learning.
-              </li>
-              <li>Experience seamless integration with Gen AI modules.</li>
-              <li>
-                Attain E-education Executive Alumni Status for exclusive
-                benefits.
-              </li>
-              <li>Access EMI at RS. 2,879/month for greater flexibility.</li>
-              <li>
-                A voucher worth $50 for Meta's "Digital Marketing Associate"
-                certificate exam, free of cost.
-              </li>
-            </ul>
-          </>
-        );
-      case 4:
-        return (
-          <>
-            {" "}
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium  text-green-500">
-                Target Audience
-              </p>
-              <li>
-                Utilise ChatGPT to assist in creative unique content,plan
-                strategies,build,calenders,and more
-              </li>
-              <li>Generative SEO-optimised content with chatGPT</li>
-              <li>
-                Gain insights into your social media analytics by using chatGPT
-              </li>
-            </ul>
-          </>
-        );
-      default:
-        return null;
-    }
+    const selectedData = data[selectedItem];
+    return (
+      <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
+        <p className="text-2xl font-medium text-[#f6ac14] py-4">
+          {selectedData.label}
+        </p>
+        {selectedData.items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    );
   };
 
   return (
-    <>
-      <div
-        id="main"
-        className=" md:lg:xl:px-20  bg-gradient-to-br  from-[#560bad] to-[#3a0ca3]"
-      >
-        <div id="subdiv1" className="pt-4 font">
-          <div id="h1" className="pl-4">
-            <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#31cb00]">
-              E-education Course Highlights
-            </p>
-          </div>
-          <div
-            id="h2"
-            className="md:lg:flex pl-4 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
-          >
-            <p className="md:text-5xl text-2xl font-bold pl-4">What does this</p>
-            <p className="md:text-5xl text-2xl font-bold text-[#31cb00] inline">
-              Course have to offer?
-            </p>
-          </div>
+    <div className="px-20 mb-20 bg-white">
+      <div className="pt-4">
+        <p className="font-bold underline-offset-2 underline text-xl p-2 text-[#f6ac14]">
+          E-education Course Highlights
+        </p>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start justify-center">
+        <div className="w-auto h-auto md:w-[500px] md:h-[420px] mt-10 md:pl-10 pl-0 text-xl">
+          {renderContent()}
         </div>
-        <div
-          id="subdiv2"
-          className="justify-between grid  grid-cols-1 lg:md:grid-cols-2"
-        >
-          {/* content start*/}
-          <div id="content1" className="">
+        <div className="lg:pl-14">
+          <div className="pt-4">
+            <p className="sm:text-2xl font-bold text-[#f6ac14] inline text-xs">
+              What does this Course have to offer?
+            </p>
+          </div>
+          <div className="w-auto h-auto xs:w-[20px] md:w-[500px] md:h-[420px] sm:w-[250px] mt-10 md:pl-16 pl-0 items-center">
             {data.map((item, index) => (
               <div
                 key={index}
                 onClick={() => handleClick(index)}
-                className={`hover:text-green-500 p-5 text-start hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-80 lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden  transition-transform duration-300 transform hover:scale-105 ${
+                className={`p-5 text-center hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-[210px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden transition-transform duration-300 transform hover:scale-105 ${
                   selectedItem === index
-                    ? "bg-[#31cb00]  text-white hover:text-white border-none"
+                    ? "bg-[#0098f1] text-white border-none"
                     : ""
                 }`}
               >
-                <p>{item.label}</p>
+                <p className="text-center">{item.label}</p>
               </div>
             ))}
           </div>
-          <div
-            id="content2"
-            className="md:lg:w-auto md:lg:h-auto md:lg:xl:w-[400px] h-auto pt-4 md:lg:xl:pl-4 text-xl"
-          >
-            {renderContent()}
-          </div>
-          {/* content end */}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-export default SecurityTestingKeyHighights;
+export default SecurityTestingKeyHighlights;

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import student from "../../../../../../assetss/Home/intro_DataScience/student.jpg";
 
 const UnitTestingHero = () => {
   const [courseName] = useState("Unit Testing"); // Placeholder for course name
@@ -16,52 +17,36 @@ const UnitTestingHero = () => {
 
   return (
     <>
-      {/* First Part */}
-      <div>
-        <img
-          src="https://assets.codegrip.tech/wp-content/uploads/2019/10/04113325/1_Y07KF-_laqG2cJ1Squ0Bag.png"
-          className="w-full object-cover md:h-[500px]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
-      </div>
-      <div
-        className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
-        data-aos="fade-right"
-        data-aos-duration={800}
-      >
-        <div className="pr-2 md:mb-14 py-14 font md:py-0">
-          <h1 className="text-3xl font-semibold text-[#f9ac13] xl:text-5xl lg:text-3xl">
-            <span className="block w-full">Master the Art of Unit Testing</span>{" "}
-            to Ensure Software Quality!
+      <div className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5">
+        <div className="w-auto h-auto pr-10 md:mb-14 py-14 font md:py-0 mx-auto ">
+          <h1 className="text-2xl  text-[#0098f1]   font-lora font-bold  pt-4">
+            Master the Art of Stress Testing to Ensure Software Quality!
           </h1>
-          <p className="py-4 text-lg text-gray-500 2xl:py-8 md:py-6 2xl:pr-5">
-            Empowering you to write effective unit tests and achieve reliable
-            software, we are your trusted partners in ensuring code quality and
-            robustness...
+          <p className="py-4 md:lg:xl:2xl:text-[24px] text-[20px] text-[#101828]  md:py-6  leading-10">
+            Empower your team with efficient acceptance testing procedures,
+            ensuring your software meets stakeholder requirements and
+            expectations...
           </p>
-
-          <div className="mt-4">
-            <a
+          <div className="mt-14 lg:md:w-[250px] lg:md:h-[70px]  w-auto h-auto justify-center items-center">
+            <button
               onClick={handleEnroll}
-              className="px-5 py-3 text-lg tracking-wider text-white bg-yellow-300 rounded-lg md:px-8 hover:bg-yellow-400 group"
+              className="px-5  md:lg:w-full  w-auto font-sans h-full  py-3 text-[26px] font-medium text-white bg-[#0098f1] rounded-[22px] md:px-6  "
             >
-              <span>Enroll Now</span>{" "}
-            </a>
+              Enroll Now
+            </button>
           </div>
         </div>
-        <div className="pb-10 overflow-hidden md:p-10 lg:p-0 sm:pb-0">
+        <div className="pb-10 lg:md:w-[400px] lg:md:h-[380px] mx-auto w-auto h-auto  overflow-hidden md:p-10 lg:p-0 sm:pb-0">
           <img
             id="heroImg1"
-            className="transition-all duration-300 ease-in-out hover:scale-105 lg:w-full sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0"
-            src="https://img.freepik.com/free-vector/flat-safer-internet-day-background_23-2151163157.jpg?t=st=1716534608~exp=1716538208~hmac=09e4c538073b8355fd4ffcbfe01d08ff8411d5109bc8fb5320e4a51009442ee6&w=826"
-            alt="Unit Testing Illustration"
+            className="rounded-full lg:w-full border-4 border-[#0098f1] sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0"
+            src="https://img.freepik.com/free-vector/multi-device-targeting-concept-illustration_114360-7585.jpg?t=st=1722952670~exp=1722956270~hmac=af27d05af0ba8acf7c23fd9a54b9479fd02cae9c3ec5aebc3a0789c4ecb3266f&w=740"
+            alt="Data Science Introduction "
             width={500}
             height={488}
           />
         </div>
       </div>
-
-      {/* Second Part */}
     </>
   );
 };

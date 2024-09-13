@@ -5,58 +5,50 @@ import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg
 import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
 
 const IntigrationAbout = () => {
+  const softwareTestingInfo = [
+    {
+      title: "Career Assistance",
+      description:
+        "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
+      imgSrc: "https://img.freepik.com/free-photo/it-specialist-checking-code-computer-dark-office-night_1098-18699.jpg?ga=GA1.1.481732087.1715859514&semt=ais_hybrid",
+      imgAlt: "career-assistance",
+    },
+    {
+      title: "Student Support",
+      description:
+        'Access student support via support@datasciencecourse.com or through the "ask us?" option on our learning platform for urgent queries.',
+      imgSrc: "https://img.freepik.com/free-photo/guys-browsing_1098-16355.jpg?ga=GA1.1.481732087.1715859514&semt=ais_hybrid",
+      imgAlt: "student-support",
+    },
+  ];
+
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 pl-4 bg-gradient-to-r from-blue-600 to-blue-600">
-      <div className="pt-0 ">
-        <p className="text-[#f9ac13] text-xl font-medium">
-          About The Compatibility Testing Course
-        </p>
-      </div>
-      <div className="py-2">
-        <p className="md:text-5xl text-2xl font">
-          Discover the
-          <p className="text-[#f9ac13] my-2">Intigration Testing Program</p>
+    <div className="mx-auto h-auto w-full mb-20 px-4 md:px-10 bg-white">
+      <div className="py-2 my-10">
+        <p className="text-2xl text-center font-bold text-[#f6ac14]">
+          Discover the   Software Testing Program
         </p>
       </div>
 
-      <div className="flex flex-wrap -mx-4 items-center pb-6">
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              className="w-full h-52 object-cover object-center"
-              src={programmer}
-              alt="compatibility-testing"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Student Support</h2>
-              <p className="text-gray-700">
-                Learn about the latest compatibility testing techniques and
-                tools to ensure your applications are robust and reliable across
-                various environments.
-              </p>
+      <div className="flex flex-wrap justify-center items-center pb-6">
+        {softwareTestingInfo.map((item, index) => (
+          <div key={index} className="w-full  md:w-1/2 lg:w-1/3 px-4 mb-8">
+            <div className="bg-white h-[400px] rounded-lg shadow-lg overflow-hidden">
+              <img
+                className="w-full h-52 object-cover object-center"
+                src={item.imgSrc}
+                alt={item.imgAlt}
+              />
+              <div className="p-4">
+                <h2 className="text-xl font-bold mb-2">{item.title}</h2>
+                <p className="text-gray-700">{item.description}</p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              className="w-full h-52 object-cover"
-              src={assistance}
-              alt="career-assistance"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Career Assistance</h2>
-              <p className="text-gray-700">
-                Gain expertise in various compatibility testing methodologies
-                and receive support to advance your career in this specialized
-                field.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
+ 
   );
 };
 

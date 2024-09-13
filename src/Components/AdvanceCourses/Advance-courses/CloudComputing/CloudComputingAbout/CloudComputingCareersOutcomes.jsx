@@ -1,89 +1,71 @@
+import React from "react";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { FcPositiveDynamic } from "react-icons/fc";
 import { GrTransaction } from "react-icons/gr";
 
 function CloudComputingCareersOutcomes() {
-  // const recruiters = ["apple", "facebook", "intel", "oracle", "sap", "nvidia"];
-
   return (
-    <>
-      <div
-        id="main"
-        className=" md:lg:xl:pl-20  bg-gradient-to-br from-[#04e761] to-[#00916e]"
-      >
-        <div id="headings" className="grid grid-cols-1 text-start ">
-          <div>
-            <p className="text-[#072ac8] text-xl font-medium">
-              Career Outcomes in CloudComputing with AWS Program
-            </p>
-          </div>
-          <div className="py-5">
-            <p className="text-6xl font">
-              Discover What our{" "}
-              <p className="text-[#072ac8]">Learners Have Achieved</p>
-            </p>
-          </div>
-          <div>
-            <p className="text-xl text-gray-500">
-              Snapshot of Alumni Placement Support
-            </p>
+    <div className="bg-white px-20 py-20 mb-20">
+      <div className="flex flex-col lg:flex-row items-center justify-between">
+        {/* Left Content */}
+        <div className="mb-8 lg:mb-0 lg:w-1/2">
+          <div className="text-start">
+            <div className="py-5">
+              <p className="text-2xl font-bold text-[#f6ac14]">
+                Discover What our Learners Have Achieved
+              </p>
+              <p className="text-xl text-gray-500 mt-2">
+                Career Outcomes in Cloud Computing with AWS Program
+              </p>
+            </div>
           </div>
         </div>
-        <div id="subdiv" className="grid grid-cols-1 md:grid-cols-2 gap-x-6 ">
-          <div
-            id="a"
-            className="grid grid-rows-2 grid-cols-2 gap-8 p-3  hover:cursor-pointer text-xl font-medium my-6 items-center bg-gray-100 border-4 border-[#072ac8] border-opacity-50 rounded-md overflow-hidden  "
-          >
-            <div id="x">
-              <p>
-                <BsGraphUpArrow className="w-10 h-10 text-green-700" />
-              </p>
-              <p>60%</p>
-              <p className="text-gray-500 text-[16px]">Average salary hike</p>
-            </div>
-            <div id="y">
-              <p>
-                <FaPeopleGroup className="w-10 h-10 text-blue-700" />
-              </p>
-              <p>120+</p>
-              <p className="text-gray-500 text-[16px]">Hiring partners</p>
-            </div>
-            <div id="z">
-              <p>
-                <FcPositiveDynamic className="w-10 h-10 text-yellow-500" />
-              </p>
-              <p>6/7</p>
-              <p className="text-gray-500 text-[16px]">
-                Learners saw positive career growth
-              </p>
-            </div>
-            <div id="z">
-              <p>
-                <GrTransaction className="w-10 h-10 text-red-800" />
-              </p>
-              <p>400+</p>
-              <p className="text-gray-500 text-[16px]">Career Transitions</p>
-            </div>
-          </div>
-          {/*  */}
-          <div id="b">
-            <div
-              id="n"
-              className="p-5 text-xl font-medium my-6 rounded-md overflow-hidden"
-            >
-              <div id="list" className="grid grid-rows-3 gap-y-8 grid-cols-3  ">
-                {/* {recruiters.map((recruiter, index) => (
-            <div key={index} className="w-12 h-12">
-              <img src={recruiter} alt="" />
-            </div>
-          ))} */}
+
+        {/* Right Content */}
+        <div className="lg:w-1/2 flex flex-col items-center lg:items-end">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                icon: (
+                  <BsGraphUpArrow className="w-10 h-10 text-green-700 mb-2" />
+                ),
+                stat: "60%",
+                description: "Average salary hike",
+              },
+              {
+                icon: (
+                  <FaPeopleGroup className="w-10 h-10 text-blue-700 mb-2" />
+                ),
+                stat: "120+",
+                description: "Hiring partners",
+              },
+              {
+                icon: (
+                  <FcPositiveDynamic className="w-10 h-10 text-yellow-500 mb-2" />
+                ),
+                stat: "6/7",
+                description: "Learners saw positive career growth",
+              },
+              {
+                icon: <GrTransaction className="w-10 h-10 text-red-800 mb-2" />,
+                stat: "400+",
+                description: "Career Transitions",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center p-3 cursor-pointer text-xl font-medium border-2 border-transparent hover:border-[#f6ac14] bg-gray-100 rounded-md overflow-hidden shadow-lg"
+              >
+                {item.icon}
+                <p>{item.stat}</p>
+                <p className="text-gray-500 text-[16px]">{item.description}</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

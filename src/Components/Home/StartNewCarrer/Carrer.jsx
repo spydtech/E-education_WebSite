@@ -16,7 +16,7 @@ const Carrer = () => {
           with E-education &#8594;
         </div>
       </div>
-      <div className="flex md:flex-row flex-col justify-center items-center md:px-16 md:mb-24 md:gap-x-8 md:mx-16">
+      <div className="flex md:flex-row flex-col justify-center items-center md:px-16 md:mb-24 md:gap-x-8 md:mx-16 mt-6">
         <div className=" ">
           <img src={Carrerimg} />
         </div>

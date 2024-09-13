@@ -1,58 +1,49 @@
 import React from "react";
-
-// import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
 import programmer from "../../../../../assets/dataAnalatics/programmer.jpg";
 import assistance from "../../../../../assets/dataAnalatics/assistance.jpg";
 
 const MobileappAbout = () => {
+  const mobileAppInfo = [
+    {
+      title: "Student Support",
+      description:
+        "Learn about the latest mobile app development techniques and tools to build robust and scalable applications.",
+      imgSrc: programmer,
+      imgAlt: "student-support",
+    },
+    {
+      title: "Career Assistance",
+      description:
+        "Gain expertise in mobile app development and receive support to advance your career in this growing field.",
+      imgSrc: assistance,
+      imgAlt: "career-assistance",
+    },
+  ];
+
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-[#00296b] mb-16">
-      <div className="pt-0">
-        <p className="text-[#f9ac13] text-xl font-medium">
-          About The Mobile App Development Program
-        </p>
-      </div>
-      <div className="py-2">
-        <p className="text-6xl font">
-          Discover the
-          <p className="text-[#f9ac13] my-2">Mobile App Development Program</p>
+    <div className="mx-auto h-auto w-full mb-20 px-4 md:px-10 bg-white">
+      <div className="py-2 my-10">
+        <p className="text-2xl text-center font-bold text-[#f6ac14]">
+          Discover the Mobile App Development Program
         </p>
       </div>
 
-      <div className="flex flex-wrap -mx-4 items-center pb-6">
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              className="w-full h-52 object-cover object-center"
-              src={programmer}
-              alt="software-testing"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Student Support</h2>
-              <p className="text-gray-700">
-                Learn about the latest software testing techniques and tools to
-                ensure robust and reliable applications.
-              </p>
+      <div className="flex flex-wrap justify-center items-center pb-6">
+        {mobileAppInfo.map((item, index) => (
+          <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+            <div className="bg-white h-[400px] rounded-lg shadow-lg overflow-hidden">
+              <img
+                className="w-full h-52 object-cover object-center"
+                src={item.imgSrc}
+                alt={item.imgAlt}
+              />
+              <div className="p-4">
+                <h2 className="text-xl font-bold mb-2">{item.title}</h2>
+                <p className="text-gray-700">{item.description}</p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              className="w-full h-52 object-cover"
-              src={assistance}
-              alt="career-assistance"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Career Assistance</h2>
-              <p className="text-gray-700">
-                Gain expertise in various testing methodologies and receive
-                support to advance your career in software testing.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

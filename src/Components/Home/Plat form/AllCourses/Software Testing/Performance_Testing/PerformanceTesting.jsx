@@ -12,10 +12,12 @@ const PerformanceTesting = () => {
   return (
     <>
       <Navbar />
+      <div className="max-w-full">
       <PerformanceTestingHero />
       <PerformanceTestingCard />
       <PerformanceTestingNavigation />
-      <PerformanceTestingFoot></PerformanceTestingFoot>
+      <PerformanceTestingFoot/>
+      </div>
       <Footer />
     </>
   );

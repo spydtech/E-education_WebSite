@@ -8,6 +8,7 @@ import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
+import Girl2 from "../../../../../assetss/profile/girl2.png"
 const EthicalHackingStudentArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
@@ -38,15 +39,14 @@ const EthicalHackingStudentArray = () => {
       id: 1,
       title: "Ethical Hacking Basics",
       image: cardImage,
-
       description:
         "Learn the fundamentals of ethical hacking, including reconnaissance, scanning, and vulnerability assessment.",
       link: "/Ethical_Hacking/basic_ethical_Hacking",
       rating: 4.2, // Add dummy rating
-      price: "$19.99", // Add dummy price
-      profilePic:
-        "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "John Doe",
+      price: "₹1499", // Add dummy price
+      profilePic: Girl2,
+      name: "Rohan Patel",
+      erolled: "1500 Enrolled"
     },
     {
       id: 2,
@@ -56,26 +56,27 @@ const EthicalHackingStudentArray = () => {
       image: cardImage,
       link: "/Ethical_Hacking/advance_Ethical_Hacking",
       rating: 4.5, // Add dummy rating
-      price: "$24.99", // Add dummy price
-      profilePic:
-        "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "John Doe",
+      price: "₹1899", // Add dummy price
+      profilePic: Girl2,
+      name: "Neeraj Malhotra",
+      erolled: "1000 Enrolled"
+
     },
     {
       id: 3,
       title: "Certified Ethical Hacker",
       image: cardImage,
-
       description:
         "Prepare for the Certified Ethical Hacker (CEH) certification with comprehensive coverage of ethical hacking topics.",
       link: "/Ethical-Hacking/certified_Ethical_Hacking",
       rating: 4.8, // Add dummy rating
-      price: "$34.99", // Add dummy price
-      profilePic:
-        "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "John Doe",
+      price: "₹2499", // Add dummy price
+      profilePic: Girl2,
+      name: "Sakshi Agarwal",
+      erolled: "2000 Enrolled"
     },
   ];
+  
 
   const filteredCourses = ethicalHackingCourses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -93,7 +94,7 @@ const EthicalHackingStudentArray = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center mb-4">
           <span className="bg-gradient-to-r text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
-            Expand CyberSecurityCourses
+            Expand Ethical Hacking Courses
           </span>
         </div>
 
@@ -147,7 +148,7 @@ const EthicalHackingStudentArray = () => {
                         <span className="text-gray-700 font-bold">
                           {course.name}
                         </span>
-                        <p className="text-gray-500 text-xs">2001 Enrolled</p>
+                        <p className="text-gray-500 text-xs">{course.erolled}</p>
                       </div>
                     </div>
                     <span className="text-gray-900 font-bold">

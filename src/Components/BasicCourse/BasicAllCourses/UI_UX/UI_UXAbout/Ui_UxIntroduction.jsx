@@ -2,20 +2,34 @@ import React, { useState } from "react";
 
 function Ui_UxIntroduction() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const Slide = ({ heading, items }) => {
     return (
-      <div className="w-full flex-shrink-0 px-4 py-8">
-        <div className="h-[400px] flex justify-center">
-          <div>
-            <h2 className="text-3xl font-medium mb-4 text-[#0070f3] font">
-              {heading}
-            </h2>
-            <ul className="list-disc list-inside text-xl font">
-              {items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
+      <div className="w-full flex-shrink-0 px-2 py-8 flex flex-col h-full relative overflow-hidden">
+        <div className="flex-grow pb-28">
+          <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
+            {heading}
+          </h2>
+          <ul className="list-disc list-outside text-lg lg:text-xl pl-10 text-start text-white">
+            {items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="absolute left-0 right-0 bottom-0 flex justify-between">
+          <button
+            onClick={goToPreviousSlide}
+            className="hover:text-[#f6ac14] text-white font-bold rounded px-4"
+          >
+            Previous
+          </button>
+          <div className="text-white">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+          <button
+            onClick={goToNextSlide}
+            className="hover:text-[#f6ac14] text-white font-bold rounded px-4"
+          >
+            Next
+          </button>
         </div>
       </div>
     );
@@ -76,58 +90,41 @@ function Ui_UxIntroduction() {
   };
 
   return (
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 bg-gradient-to-br to-[#0a0908] from-[#272640]">
-        <div className="flex items-center justify-center xl:lg:md:w-auto">
-          <div className="grid grid-cols-1 text-start px-10 font">
-            <div>
-              <p className="text-[#0070f3] text-xl font-medium">Introduction</p>
-            </div>
-            <div className="py-5">
-              <p className="text-6xl font text-white">
-                Explore
-                <p className="text-[#0070f3] inline pl-2">UI/UX Design</p>
-              </p>
-            </div>
-            <div>
-              <p className="text-xl text-gray-300">
-                Learn about the fundamentals of UI/UX design, its key
-                principles, tools, and trends.
-              </p>
-            </div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-screen h-auto mb-16">
+      <div className="flex items-center justify-center">
+        <div className="text-start px-4 lg:px-10">
+          <div>
+            <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
+              Introduction
+            </p>
+          </div>
+          <div className="py-5">
+            <p className="text-xl lg:text-5xl font">
+              Explore
+              <span className="text-[#f6ac14] inline pl-2">UI/UX Design</span>
+            </p>
+          </div>
+          <div>
+            <p className="text-lg lg:text-xl text-gray-500">
+              Learn about the fundamentals of UI/UX design, its key principles,
+              tools, and trends.
+            </p>
           </div>
         </div>
-        <div className="px-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-            <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
-              <div className="relative w-full overflow-hidden">
-                <div className="flex">
-                  <Slide
-                    heading={slidesData[currentSlide].heading}
-                    items={slidesData[currentSlide].items}
-                  />
-                </div>
-              </div>
-              <div className="flex justify-between">
-                <button
-                  onClick={goToPreviousSlide}
-                  className="hover:text-blue-600 text-black font-bold py-2 px-4 rounded"
-                >
-                  Previous
-                </button>
-                <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-                <button
-                  onClick={goToNextSlide}
-                  className="hover:text-blue-600 text-black font-bold py-2 px-4 rounded"
-                >
-                  Next
-                </button>
-              </div>
+      </div>
+      <div className="h-auto lg:h-[650px] flex justify-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-4 lg:px-14 xl:px-36 sm:mt-8 lg:mt-0 lg:mr-32">
+          <div className="bg-[#0098f1] relative w-full lg:w-[500px] lg:h-[480px] md:h-[350px] sm:h-[400px] h-[450px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg">
+            <div className="relative w-full h-full">
+              <Slide
+                heading={slidesData[currentSlide].heading}
+                items={slidesData[currentSlide].items}
+              />
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

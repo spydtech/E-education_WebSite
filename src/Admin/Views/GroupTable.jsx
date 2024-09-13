@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { userData, traineeData } from "./FilterUsers";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -10,14 +10,60 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   const [userSearchQuery, setUserSearchQuery] = useState("");
   const [userSearchQueryByCourse, setUserSearchQueryByCourse] = useState("");
   const [showWarning, setShowWarning] = useState(false);
+  const jwt = localStorage.getItem("jwt");
+  const [userData, setUserData] = useState([]);
+  const [traineeData, setTraineeData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/api/payment/user-courses", {
+        headers: {
+          Authorization: `Bearer ${jwt}`, // Send JWT token to authenticate the request
+        },
+      })
+      .then((response) => {
+        console.log("API response:", response);
+        if (Array.isArray(response.data)) {
+          setUserData(response.data);
+        } else {
+          console.error("API response is not an array:", response.data);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching user data:", error);
+      });
+  }, [jwt]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/trainee/getAllTrainee", {
+        headers: {
+          Authorization: `Bearer ${jwt}`, // Send JWT token to authenticate the request
+        },
+      })
+      .then((response) => {
+        console.log("API response:", response);
+        if (Array.isArray(response.data)) {
+          setTraineeData(response.data);
+        } else {
+          console.error("API response is not an array:", response.data);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching user data:", error);
+      });
+  }, [jwt]);
 
   const traineeName = trainees.map((trainee) => (
-    <tr key={trainee.name} className="border-b hover:bg-gray-100">
+    <tr
+      key={trainee.firstName + " " + trainee.lastName}
+      className="border-b hover:bg-gray-100"
+    >
       <td className="whitespace-nowrap">
         <div className="flex items-center">
           <div className="ml-4 flex">
             <span className="px-2 py-1 bg-gray-100 rounded-md">
-              {trainee.name}
+              {trainee.firstName + " " + trainee.lastName}
             </span>
           </div>
         </div>
@@ -64,12 +110,14 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
 
   const setTrainee = (trainee) => {
     const traineeExists = trainees.some(
-      (existingTrainee) => existingTrainee.name === trainee.name
+      (existingTrainee) =>
+        existingTrainee.firstName + existingTrainee.lastName ===
+        trainee.firstName + trainee.lastName
     );
     if (traineeExists) {
       setShowWarning(true);
     } else {
-      setSelectedTrainee(trainee.name);
+      setSelectedTrainee(trainee.firstName + " " + trainee.lastName);
       setShowTraineeDetails(false);
       setShowWarning(false);
     }
@@ -81,35 +129,33 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   };
 
   const filteredUsers = users.filter((user) =>
-    user.name.toLowerCase().includes(searchQuery.toLowerCase())
+    user.userName.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const filteredTrainees = traineeData.filter((trainee) =>
-    trainee.name.toLowerCase().includes(traineeSearchQuery.toLowerCase())
+    (trainee.firstName + " " + trainee.lastName)
+      .toLowerCase()
+      .includes(traineeSearchQuery.toLowerCase())
   );
 
-  const filteredAddUsers = userData
-    .filter(
-      (user) =>
-        user.name.toLowerCase().includes(userSearchQuery.toLowerCase()) &&
-        user.course
-          .toLowerCase()
-          .includes(userSearchQueryByCourse.toLowerCase())
-    )
-    .filter((user) => !users.some((groupUser) => groupUser.name === user.name));
+  const filteredAddUsers = userData.filter(
+    (user) =>
+      user.userName.toLowerCase().includes(userSearchQuery.toLowerCase()) &&
+      user.courses.some((course) =>
+        course.toLowerCase().includes(userSearchQueryByCourse.toLowerCase())
+      )
+  );
 
   const traineeRows = filteredTrainees.map((trainee) => (
-    <tr key={trainee.name} className="border-b hover:bg-gray-100 ">
+    <tr
+      key={trainee.firstName + " " + trainee.lastName}
+      className="border-b hover:bg-gray-100 "
+    >
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
-          <img
-            className="h-10 w-10 rounded-full"
-            src={trainee.avatar}
-            alt={`Avatar of ${trainee.name}`}
-          />
           <div className="ml-4">
             <div className="text-sm font-medium text-gray-900">
-              {trainee.name}
+              {trainee.firstName + " " + trainee.lastName}
             </div>
             <div className="text-sm text-gray-500">{trainee.email}</div>
           </div>
@@ -127,21 +173,18 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   ));
 
   const userRows = filteredAddUsers.map((user) => (
-    <tr key={user.name} className="border-b hover:bg-gray-100 ">
+    <tr key={user.userName} className="border-b hover:bg-gray-100 ">
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
-          <img
-            className="h-10 w-10 rounded-full"
-            src={user.avatar}
-            alt={`Avatar of ${user.name}`}
-          />
           <div className="ml-4">
-            <div className="text-sm font-medium text-gray-900">{user.name}</div>
+            <div className="text-sm font-medium text-gray-900">
+              {user.userName}
+            </div>
             <div className="text-sm text-gray-500">{user.email}</div>
           </div>
         </div>
       </td>
-      <td className="px-6 py-4 whitespace-nowrap">{user.course}</td>
+      <td className="px-6 py-4 whitespace-nowrap">{user.courses}</td>
       <td className="px-6 py-4 whitespace-nowrap">
         <button
           className="px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600"
@@ -154,22 +197,19 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   ));
 
   const rows = filteredUsers.map((user) => (
-    <tr key={user.name} className="border-b hover:bg-gray-100 ">
+    <tr key={user.userName} className="border-b hover:bg-gray-100 ">
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
-          <img
-            className="h-10 w-10 rounded-full"
-            src={user.avatar}
-            alt={`Avatar of ${user.name}`}
-          />
           <div className="ml-4">
-            <div className="text-sm font-medium text-gray-900">{user.name}</div>
+            <div className="text-sm font-medium text-gray-900">
+              {user.userName}
+            </div>
             <div className="text-sm text-gray-500">{user.email}</div>
           </div>
         </div>
       </td>
       <td className="px-6 py-4 whitespace-nowrap">
-        <div className="text-sm text-gray-900">{user.course}</div>
+        <div className="text-sm text-gray-900">{user.courses}</div>
       </td>
       <td className="px-6 py-4 whitespace-nowrap">
         <button

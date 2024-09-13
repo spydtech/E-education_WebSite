@@ -8,7 +8,7 @@ function IntegrationIntroduction() {
       <div className="w-full flex-shrink-0 px-4 py-8">
         <div className="h-[400px] flex justify-center">
           <div>
-            <h2 className="text-2xl font-medium mb-4 text-[#f9ac13] font">
+            <h2 className="text-2xl font-medium mb-4 text-white font">
               {heading}
             </h2>
             <ul className="list-disc list-inside text-xl font">
@@ -74,68 +74,63 @@ function IntegrationIntroduction() {
 
   return (
     <>
-      <div
-        id="subdiv"
-        bg
-        className="grid grid-cols-1 w-fit md:lg:grid-cols-2 h-full bg-gradient-to-r from-blue-600 to-blue-600 mb-12"
-      >
-        <div
-          id="div1"
-          className="flex items-center justify-center xl:lg:md:w-auto"
-        >
-          <div
-            id="headings"
-            className="grid grid-cols-1 text-start px-10 font"
-          >
-            <div>
-              <p className="text-[#f9ac13] text-xl font-medium">Introduction</p>
-            </div>
-            <div className="py-5">
-              <p className="md:text-5xl text-2xl font">
-                So what is
-                <p className="text-[#f9ac13] inline pl-2">
-                  Integration Testing?
-                </p>
-              </p>
-            </div>
-            <div>
-              <p className="text-xl text-gray-500">
-                Brief about Integration Testing
-              </p>
-            </div>
-          </div>
-        </div>
-        <div id="div2" className="">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-            <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
-              <div className="relative w-full overflow-hidden">
-                <div className="flex">
-                  <Slide
-                    heading={slidesData[currentSlide].heading}
-                    items={slidesData[currentSlide].items}
-                  />
-                </div>
-              </div>
-              <div className="flex justify-between">
-                <button
-                  onClick={goToPreviousSlide}
-                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
-                >
-                  Previous
-                </button>
-                <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-                <button
-                  onClick={goToNextSlide}
-                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
-                >
-                  Next
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    
+      
+    <div className="grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[468px] bg-white mb-20">
+     <div className="flex items-center justify-center lg:pr-10">
+       <div className="text-start px-4 lg:px-10">
+         <div>
+           <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
+             Introduction
+           </p>
+         </div>
+         <div className="py-5">
+           <p className="text-xl lg:text-5xl font">
+             So what is
+             <span className="text-[#f6ac14] inline pl-2">Integration testing</span>
+           </p>
+         </div>
+         <div>
+           <p className="text-lg lg:text-xl text-gray-500">
+             Brief about Integration testing
+           </p>
+         </div>
+       </div>
+     </div>
+     <div className="h-auto lg:h-[468px] flex justify-center">
+       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 lg:mt-0">
+         <div className="bg-[#0098f1] w-full lg:w-[550px] h-auto lg:h-[420px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg">
+
+            <div className="relative w-full">
+             <div className="flex text-white text-opacity-80 ">
+               <Slide
+                 heading={slidesData[currentSlide].heading}
+                 items={slidesData[currentSlide].items}
+               />
+             </div>
+           </div>
+         </div>
+         <div className=" lg:w-[563px] xl:w-[563px]  ">
+         <div className="flex justify-between mt-4 lg:mt-0">
+           <button
+             onClick={goToPreviousSlide}
+             className="hover:text-[#F6AC14]  text-black font-bold    rounded"
+           >
+             Previous
+           </button>
+           <div className="pt-2 pr-2">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+           <button
+             onClick={goToNextSlide}
+             className="hover:text-[#F6AC14] text-black font-bold  py-2 px-4 rounded"
+           >
+             Next
+           </button>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   </>
   );
 }
 

@@ -3,16 +3,18 @@ import { RiCheckLine, RiPencilFill } from "react-icons/ri";
 // import Accounts from "./accounts";
 import Skills from "./skills";
 import DetailsPage from "./detailespage";
+import { useSelector } from "react-redux";
 
 const ProfileSection = () => {
   const [avatar, setAvatar] = useState(
     "https://media.istockphoto.com/id/2153160662/photo/young-man-portrait.jpg?s=612x612&w=0&k=20&c=Yfr7DN3ifyfyA7t6tQDMOYpwRj5-OlGqBqLWJH6k6SA="
   );
-  const [name, setName] = useState("Ratnapriya");
-  const [about, setAbout] = useState("DK002");
+  const [name, setName] = useState("");
+  const [about, setAbout] = useState("");
   const [showInput, setShowInput] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const imgRef = useRef(null);
+  const auth = useSelector((state) => state.auth);
 
   const onImageClick = () => {
     imgRef.current.click();
@@ -65,7 +67,7 @@ const ProfileSection = () => {
                     />
                   ) : (
                     <span className="w-full px-3 py-2 border border-transparent bg-gray-100 rounded-xl">
-                      {name}
+                      {auth.trainee.firstName} {auth.trainee.lastName}
                     </span>
                   )}
                   <button
@@ -94,7 +96,7 @@ const ProfileSection = () => {
                     />
                   ) : (
                     <span className="w-full px-3 py-2 border border-transparent bg-gray-100 rounded-xl">
-                      {about}
+                      {auth.trainee.userId}
                     </span>
                   )}
                   <button
