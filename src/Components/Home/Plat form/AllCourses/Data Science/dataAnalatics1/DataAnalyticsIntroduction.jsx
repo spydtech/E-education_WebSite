@@ -1,26 +1,40 @@
 import React, { useState } from "react";
-// DataAnalyticsIntroduction
+
 function DataAnalyticsIntroduction() {
-  // const recruiters = [amazon, spotify, google, flipkart, uber, microsoft];
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const Slide = ({ heading, items }) => {
     return (
-      <div className="w-full flex-shrink-0 px-4 py-8">
-        <div className="h-auto flex justify-center">
-          <div>
-            <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
-              {heading}
-            </h2>
-            <ul className="list-disc list-inside text-lg lg:text-xl">
-              {items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
+      <div className="w-full flex-shrink-0 px-2 py-8 flex flex-col h-full relative overflow-hidden">
+        <div className="flex-grow pb-28">
+          <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
+            {heading}
+          </h2>
+          <ul className="list-disc list-outside text-lg lg:text-xl pl-10 text-start text-white">
+            {items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="absolute left-0 right-0 bottom-0 flex justify-between">
+          <button
+            onClick={goToPreviousSlide}
+            className="hover:text-white text-black font-bold rounded px-4"
+          >
+            Previous
+          </button>
+          <div className="text-black">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+          <button
+            onClick={goToNextSlide}
+            className="hover:text-white text-black font-bold rounded px-4"
+          >
+            Next
+          </button>
         </div>
       </div>
     );
   };
+
   const slidesData = [
     {
       heading: "Introduction",
@@ -30,7 +44,6 @@ function DataAnalyticsIntroduction() {
     },
     {
       heading: "Basics of Data Analytics",
-
       items: [
         "What is Data?: Define data and distinguish between structured and unstructured data.",
         "Types of Data Analytics: Introduce descriptive analytics (what happened), predictive analytics (what might happen), and prescriptive analytics (what should happen).",
@@ -52,7 +65,6 @@ function DataAnalyticsIntroduction() {
     },
     {
       heading: "Exploratory Data Analysis (EDA)",
-
       items: [
         "Understanding the Dataset: Explain the initial steps involved in exploring and understanding the dataset.",
         "Basic Statistical Analysis: Introduce basic statistical techniques like mean, median, standard deviation, etc., used in EDA.",
@@ -74,62 +86,42 @@ function DataAnalyticsIntroduction() {
   };
 
   return (
-    <>
-     <div className="grid grid-cols-1 lg:grid-cols-2 h-auto lg:h-[468px] bg-white mb-20">
-      <div className="flex items-center justify-center lg:pr-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full h-auto mb-16">
+      <div className="flex items-center justify-center">
         <div className="text-start px-4 lg:px-10">
           <div>
-            <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
+            <p className="text-[#0098f1] underline-offset-2 underline text-2xl lg:text-[30px] font-bold">
               Introduction
             </p>
           </div>
           <div className="py-5">
             <p className="text-xl lg:text-5xl font">
               So what is
-              <span className="text-[#f6ac14] inline pl-2">Data Analytics</span>
+              <span className="text-[#f6ac14] inline pl-2">
+              Data Analytics
+              </span>
             </p>
           </div>
           <div>
             <p className="text-lg lg:text-xl text-gray-500">
-              Brief about Data Analytics
+            Brief about Data Analytics
             </p>
           </div>
         </div>
       </div>
-      <div className="h-auto lg:h-[468px] flex justify-center">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 lg:mt-0">
-          <div className="bg-[#0098f1] w-full lg:w-[550px] h-auto lg:h-[420px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg">
-
-             <div className="relative w-full">
-              <div className="flex text-white text-opacity-80 ">
-                <Slide
-                  heading={slidesData[currentSlide].heading}
-                  items={slidesData[currentSlide].items}
-                />
-              </div>
-            </div>
-          </div>
-          <div className=" lg:w-[565px] xl:w-[565px]  ">
-          <div className="flex justify-between mt-4 lg:mt-0">
-            <button
-              onClick={goToPreviousSlide}
-              className="hover:text-[#F6AC14] text-black font-bold    rounded"
-            >
-              Previous
-            </button>
-            <div className="pt-2 pr-2">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-            <button
-              onClick={goToNextSlide}
-              className="hover:text-[#F6AC14] text-black font-bold  py-2 px-4 rounded"
-            >
-              Next
-            </button>
+      <div className="h-auto lg:h-[600px] flex justify-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-4 lg:px-14 xl:px-36 sm:mt-8 lg:mt-0 lg:mr-32">
+          <div className="bg-[#0098f1] relative w-full lg:w-[500px] lg:h-[500px] md:h-[360px] sm:h-[450px] h-[450px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg">
+            <div className="relative w-full h-full">
+              <Slide
+                heading={slidesData[currentSlide].heading}
+                items={slidesData[currentSlide].items}
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
-    </>
   );
 }
 

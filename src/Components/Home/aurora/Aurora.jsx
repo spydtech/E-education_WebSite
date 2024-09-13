@@ -81,14 +81,14 @@ const Aurora = () => {
   return (
     <>
       <div className="bg-[#F6AC144D] md:h-[476px]">
-        <div className="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] inline-block md:h-[80px] md:w-[458px] p-4 rounded-r-xl">
+        <div className="bg-gradient-to-r from-[#F19E22] to-[#0098F1] inline-block md:h-[80px] md:w-[458px] p-4 rounded-r-xl">
           <span className="ml-[200px] font md:text-2xl text-lg text-white ">Start Learning!</span>
         </div>
         <div className="grid place-content-center overflow-hidden px-4 py-16 gap-2">
           <div className="max-w-3xl  text-center text-xl font-medium leading-tight sm:text-5xl sm:leading-tight md:text-4xl md:leading-tight">
             Unlock Your Potential with {" "}
 
-            <span class="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] inline-block text-transparent bg-clip-text"
+            <span class="bg-gradient-to-r from-[#F19E22] to-[#0098F1] inline-block text-transparent bg-clip-text"
             >E-education</span>
           </div>
           <div className="my-6 max-w-2xl text-center  leading-relaxed text-sm md:text-lg md:leading-9">

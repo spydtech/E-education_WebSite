@@ -79,7 +79,7 @@ function CloudComputingIntroduction() {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-screen h-auto mb-16">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-auto overflow-x-hidden h-auto mb-16">
       <div className="flex items-center justify-center">
         <div className="text-start px-4 lg:px-10">
           <div>

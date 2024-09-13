@@ -35,13 +35,23 @@ const DotnetDeveloperSkills = () => {
               alt="Soft Skills"
               className="w-full h-auto mb-4 md:mb-0 md:w-48 md:h-44"
             />
-            <div className="flex flex-col items-center">
-              <h3 className="text-2xl font-bold text-white px-10 pt-6 mb-4">
-                Soft Skills
-              </h3>
+            <div className="flex  justify-start  flex-col items-start ">
+              <div>
+                <h3 className="text-2xl font-bold text-white px-10 pt-6 mb-4">
+                  Soft Skills
+                </h3>
+              </div>
+
               {softSkills.map((skill, index) => (
-                <div key={index} className="flex items-center mb-2">
-                  <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14] inline mx-2" />
+                <div
+                  key={index}
+                  className="flex pl-4  items-center  justify-between mb-2"
+                >
+                  <p>
+                    {" "}
+                    <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14] mx-2" />
+                  </p>
+
                   <p className="text-xl text-white">{skill.name}</p>
                 </div>
               ))}
@@ -53,19 +63,30 @@ const DotnetDeveloperSkills = () => {
               alt="STechnical Skills"
               className="w-full h-auto mb-4 md:mb-0 md:w-48 md:h-44"
             />
-            <div className="flex flex-col items-center">
-              <h3 className="text-2xl font-bold text-white px-6 pt-6 mb-4">
-                Technical Skills
-              </h3>
+            <div className="flex  justify-start  flex-col items-start">
+              <div>
+                <h3 className="text-2xl font-bold text-white px-6 pt-6 mb-4">
+                  Technical Skills
+                </h3>
+              </div>
+
               {technicalSkills.map((skill, index) => (
-                <div key={index} className="flex items-center mb-2">
-                  <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14] inline mx-2" />
+                <div
+                  key={index}
+                  className="flex pl-4  items-center  justify-between mb-2"
+                >
+                  <p>
+                    {" "}
+                    <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14] inline mx-2" />
+                  </p>
+
                   <p className="text-xl text-white">{skill.name}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
+
       </div>
     </>
   );

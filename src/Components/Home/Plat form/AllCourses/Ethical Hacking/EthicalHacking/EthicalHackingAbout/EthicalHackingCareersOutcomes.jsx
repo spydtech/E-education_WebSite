@@ -29,37 +29,31 @@ function EthicalHackingCareersOutcomes() {
   ];
 
   return (
-    <div className="bg-white px-20 py-20 mb-20">
-      <div className="flex flex-col lg:flex-row items-center justify-between">
-        {/* Left Content */}
-        <div className="lg:w-1/2 mb-8 lg:mb-0">
-          <div className="text-start">
-            <p className="text-2xl font-bold text-[#f6ac14]">
-              Discover What our Learners Have Achieved
-            </p>
-            <p className="text-xl text-gray-500 mt-4">
-              Snapshot of Alumni Placement Support
-            </p>
-          </div>
-        </div>
+    <div className="flex flex-col md:flex-row items-center justify-around md:my-9 px-3 mb-4 md:px-10">
+      {/* Left Content */}
+      <div className="mb-8 ">
+        <p className="md:text-2xl font-bold text-[#0098F1]">
+          Discover What our Learners Have Achieved
+        </p>
+        <p className="md:text-xl text-gray-500 mt-4">
+          Snapshot of Alumni Placement Support
+        </p>
+      </div>
 
-        {/* Right Content */}
-        <div className="lg:w-1/2 flex flex-col items-center lg:items-end">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {stats.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center p-3 cursor-pointer text-xl font-medium border-2 border-transparent hover:border-[#750e5c] bg-gray-100 rounded-md overflow-hidden shadow-lg"
-              >
-                {item.icon}
-                <p>{item.stat}</p>
-                <p className="text-gray-500 text-[16px]">{item.description}</p>
-              </div>
-            ))}
-          </div>
+      {/* Right Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+          {stats.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center p-3 cursor-pointer text-xl font-medium border-2 border-transparent hover:border-[#750e5c] bg-gray-100 rounded-md overflow-hidden shadow-lg"
+            >
+              {item.icon}
+              <p>{item.stat}</p>
+              <p className="text-gray-500 text-[16px]">{item.description}</p>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
   );
 }
 

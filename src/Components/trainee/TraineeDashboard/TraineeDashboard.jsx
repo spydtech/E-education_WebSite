@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 import { SiGooglemeet } from "react-icons/si";
@@ -8,6 +7,7 @@ import { SlCalender } from "react-icons/sl";
 import { FaLayerGroup } from "react-icons/fa";
 import { TbReportAnalytics } from "react-icons/tb";
 import ApprovalIcon from "@mui/icons-material/Approval";
+import Traineeprofile from "../../../assets/Calender/traineeprofile.png"
 import { FaUserAlt } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
 import Trainee_Home from "../home/Home";
@@ -58,7 +58,7 @@ const TraineeDashboard = () => {
       case "calendar":
         return <Calendar />;
       case "reports":
-        return <StatusPage />; // Ensure this line renders StatusPage for the "reports" tab
+        return <StatusPage />; 
       case "approvals":
         return <TraineUpload />;
       case "user":
@@ -82,99 +82,90 @@ const TraineeDashboard = () => {
   };
   return (
     <>
-      <div className="flex h-screen bg-gray-100">
+      <div className="flex h-screen bg-white w-auto">
         {/* sidebar */}
-        <div className="hidden md:flex flex-col w-64 bg-gray-800">
-          <div className="flex items-center justify-center h-16 bg-gray-900">
-            <span className="text-white font-bold uppercase">
+        <div className="hidden md:flex flex-col w-64 text-[#FF9B26]">
+          <div className="flex items-center justify-center h-16 bg-white">
+            <span className="text-[#FF9B26] font-bold uppercase">
               Trainee Dashboard
             </span>
           </div>
+         
           <div className="flex flex-col flex-1 overflow-y-auto">
-            <nav className="flex-1 px-2 py-4 bg-gray-800">
-              <a
-                href="#"
-                className={`flex items-center px-4 py-2 text-gray-100 hover:bg-gray-700 ${activeTab === "home" && "bg-gray-700"
-                  }`}
-                onClick={() => handleTabClick("home")}
-              >
-                <MdOutlineDashboardCustomize className="h-6 w-6 mr-2" />
-                Home
-              </a>
-              <a
-                href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "courses" && "bg-gray-700"
-                  }`}
-                onClick={() => handleTabClick("courses")}
-              >
-                <FaLayerGroup className="h-6 w-6 mr-2" />
-                Courses Group
-              </a>
-              <a
-                href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "calendar" && "bg-gray-700"
-                  }`}
-                onClick={() => handleTabClick("calendar")}
-              >
-                <SlCalender className="h-6 w-6 mr-2" />
-                Calendar
-              </a>
-              <a
-                href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "reports" && "bg-gray-700"
-                  }`}
-                onClick={() => handleTabClick("reports")}
-              >
-                <TbReportAnalytics className="h-6 w-6 mr-2" />
-                Reports
-              </a>
+  <nav className="flex-1 px-2 py-4 bg-white">
+    <a
+      href="#"
+      className={`flex items-center space-x-2 px-4 py-4 w-full border-l-8 transition-all duration-300 
+        ${activeTab === "home" ? "bg-[#FF9B26] text-white rounded-tr-3xl rounded-br-3xl border-[#FF9B26]" : "  text-[#FF9B26]"}`}
+      onClick={() => handleTabClick("home")}
+    >
+      <MdOutlineDashboardCustomize className="h-6 w-6 mr-2" />
+      Home
+    </a>
+    <a
+      href="#"
+      className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 
+        ${activeTab === "courses" ? "bg-[#FF9B26] text-white border-[#FF9B26]" : " border-transparent  text-[#FF9B26]"}`}
+      onClick={() => handleTabClick("courses")}
+    >
+      <FaLayerGroup className="h-6 w-6 mr-2" />
+      Courses Group
+    </a>
+    <a
+      href="#"
+      className={`flex items-center space-x-2 px-4 py-4 rounded-tr-3xl rounded-br-3xl w-full border-l-8 transition-all duration-300 
+        ${activeTab === "calendar" ? "bg-[#FF9B26] text-white border-[#FF9B26]" : " border-transparent  text-[#FF9B26]"}`}
+      onClick={() => handleTabClick("calendar")}
+    >
+      <SlCalender className="h-6 w-6 mr-2" />
+      Calendar
+    </a>
+    <a
+      href="#"
+      className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 
+        ${activeTab === "reports" ? "bg-[#FF9B26] text-white border-[#FF9B26]" : "border-transparent  text-[#FF9B26]"}`}
+      onClick={() => handleTabClick("reports")}
+    >
+      <TbReportAnalytics className="h-6 w-6 mr-2" />
+      Reports
+    </a>
+    <a
+      href="#"
+      className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 
+        ${activeTab === "approvals" ? "bg-[#FF9B26] text-white border-[#FF9B26]" : "  text-[#FF9B26]"}`}
+      onClick={() => handleTabClick("approvals")}
+    >
+      <ApprovalIcon className="h-6 w-6 mr-2" />
+      Approvals
+    </a>
+    <a
+      href="#"
+      className={`flex items-center space-x-2 px-4 rounded-tr-3xl rounded-br-3xl py-4 w-full border-l-8 transition-all duration-300 
+        ${activeTab === "user" ? "bg-[#FF9B26] text-white border-[#FF9B26]" : " border-transparent  text-[#FF9B26]"}`}
+      onClick={() => handleTabClick("user")}
+    >
+      <FaUserAlt className="h-6 w-6 mr-2" />
+      User
+    </a>
+    <a
+      href="#"
+      className={`flex items-center space-x-2 px-4 rounded-tr-3xl rounded-br-3xl py-4 w-full border-l-8 transition-all duration-300 
+        ${activeTab === "settings" ? "bg-[#FF9B26] text-white border-[#FF9B26]" : "hover:bg-[#FF9B26] hover:bg-opacity-10 border-transparent hover:border-[#FF9B26] text-[#FF9B26]"}`}
+      onClick={() => handleTabClick("settings")}
+    >
+      <IoSettingsSharp className="h-6 w-6 mr-2" />
+      Settings
+    </a>
+  </nav>
+        </div>
 
-              {/* <a
-                href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${
-                  activeTab === "courses" && "bg-gray-700"
-                }`}
-                onClick={() => handleTabClick("reports")}
-              >
-                <FaLayerGroup className="h-6 w-6 mr-2" />
-                Reports
-              </a> */}
-              <a
-                href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "approvals" && "bg-gray-700"
-                  }`}
-                onClick={() => handleTabClick("approvals")}
-              >
-                <ApprovalIcon className="h-6 w-6 mr-2 " />
-                Approvals
-              </a>
-              <a
-                href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "user" && "bg-gray-700"
-                  }`}
-                onClick={() => handleTabClick("user")}
-              >
-                <FaUserAlt className="h-6 w-6 mr-2" />
-                User
-              </a>
-              <a
-                href="#"
-                className={`flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700 ${activeTab === "settings" && "bg-gray-700"
-                  }`}
-                onClick={() => handleTabClick("settings")}
-              >
-                <IoSettingsSharp className="h-6 w-6 mr-2" />
-                Settings
-              </a>
-            </nav>
-          </div>
 
           {isLogoutOpen && (
             <div className="w-auto h-14 mx-2 px-2 float-end  relative z-10">
               <div className="flex items-end justify-end space-x-1 mt-2">
                 <IoMdLogOut className="h-8 w-8 mb-1  text-gray-300" />
                 {" "}
-                <button className=" p-2 bg-gray-800 text-white  rounded-md hover:bg-gray-700" onClick={handleLogout}>
+                <button className=" p-2 bg-gray-800 text-[#FF9B26]  rounded-md hover:bg-gray-700" onClick={handleLogout}>
                   Logout
                 </button>
 
@@ -185,20 +176,20 @@ const TraineeDashboard = () => {
           <div className=" flex mb-4 mx-2">
             {auth.trainee && auth.trainee.firstName ? (
               <>
-                <div className="rounded-full text-white font-bold text-xl border-2 w-12 h-12 flex justify-center items-center ">
+                <div className="rounded-full text-[#FF9B26] font-bold text-xl border-2 w-12 h-12 flex justify-center items-center ">
                   {auth.trainee.firstName.charAt(0)}
                 </div>
-                <span className="px-2 mx-1 mt-3 flex text-white font-bold">
+                <span className="px-2 mx-1 mt-3 flex text-[#FF9B26] font-bold">
                   {auth.trainee.firstName} {auth.trainee.lastName}
                 </span>
               </>
             ) : (
               <div className="flex items-center">
-                <span className="text-white font-bold">Loading...</span>
+                <span className="text-[#FF9B26] font-bold">Loading...</span>
               </div>
             )}
             <RiArrowRightSLine
-              className=" w-6 h-6 text-white mt-[13px] cursor-pointer"
+              className=" w-6 h-6 text-[#FF9B26] mt-[13px] cursor-pointer"
               onClick={toggleLogoutOptions}
             />
           </div>
@@ -207,25 +198,13 @@ const TraineeDashboard = () => {
         <div className="flex flex-col flex-1 overflow-y-auto">
           <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200">
             <div className="flex items-center px-4">
-              <button className="text-gray-500 focus:outline-none focus:text-gray-700">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
+             
+              <div className=" flex h-10 w-10">
+                <img src={Traineeprofile}/>
+                <h2 className="text-nowrap pl-4 pt-2 font-bold text-[#FF9B26] text-[20px]">TraineeName</h2>
+                </div>
             </div>
             <div className="flex-1 flex items-center justify-center px-4 h-16">
-              <h1 className="text-xl font-semibold">Trainee Dashboard</h1>
             </div>
             <div className="flex items-center px-4">
               <button

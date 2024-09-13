@@ -1,8 +1,8 @@
 import React from "react";
 import FullStackJavaDevelopmentCard from "./FullStackJavaDevelopmentCard";
 import { FaArrowAltCircleRight } from "react-icons/fa";
-import skillsImg from "../../../../../../../assetss/fullstackwebdev/skills.png";
-import requirementsImg from "../../../../../../../assetss/fullstackwebdev/requirements.png";
+import skillsImg from "../../../../../../../assetss/fullstackwebdev/SoftSkill.jpg";
+import requirementsImg from "../../../../../../../assetss/fullstackwebdev/techskills.jpg";
 
 const softSkills = [
   { name: "Coordination" },
@@ -61,7 +61,7 @@ const FullStackJavaDeveloper = () => {
           <div className="bg-[#0098F1] rounded-lg lg:xl:w-[480px] lg:xl:h-80 mb-6 md:mb-0 flex flex-col lg:items-start lg:flex-row md:items-center ">
             <img
               src={requirementsImg}
-              alt="STechnical Skills"
+              alt="Technical Skills"
               className="w-full h-auto mb-4 md:mb-0 md:w-48 md:h-44"
             />
             <div className="flex  justify-start  flex-col items-start">
@@ -70,7 +70,6 @@ const FullStackJavaDeveloper = () => {
                   Technical Skills
                 </h3>
               </div>
-
               {technicalSkills.map((skill, index) => (
                 <div
                   key={index}

@@ -14,7 +14,7 @@ function Calendar() {
         </p>
         <h2 className="px-10 pt-2 font-semibold ">Add to my calendar</h2>
         <div className="px-10 md:space-x-10 md:pb-0 pb-5  space-y-2 md:space-y-0 text-sm pt-2 flex flex-col md:flex-row">
-          <a className="border border-2 p-2 border-blue-600 rounded hover:bg-blue-100 cursor-pointer">
+          <a className="border border-2 p-2  border-blue-600 rounded hover:bg-blue-100 cursor-pointer">
             Calendar
           </a>
           {/* <a className="border border-2 p-2 border-blue-600 rounded hover:bg-blue-100 cursor-pointer">

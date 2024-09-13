@@ -26,7 +26,7 @@ const FullStackPythonDevelopmentCard = () => {
               and back-end technologies, with Python as the cornerstone
               programming language.
               </p>
-            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+            <div className="mt-5 sm:mt-8 flex justify-center lg:justify-start">
                 <button
             className="mt-6 bg-[#0098F1] text-white   md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[180px] xl:lg:h-[60px] text-nowrap md:text-xl">
             <a href="/"

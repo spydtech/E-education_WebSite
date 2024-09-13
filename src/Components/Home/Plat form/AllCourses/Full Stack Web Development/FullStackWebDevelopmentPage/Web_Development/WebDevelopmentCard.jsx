@@ -29,7 +29,7 @@ const WebDevelopmentCard = () => {
               
                 <button
           
-            className="mt-4 bg-[#0098F1] text-white   md:w-auto  px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 text-nowrap lg:text-2xl lg:w-[180px] lg:h-[60px] md:text-xl">
+            className="mt-4 bg-gradient-to-r from-[#0098F1] to-[#F6AC14] text-white   md:w-auto  px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 text-nowrap lg:text-2xl lg:w-[180px] lg:h-[60px] md:text-xl">
             <a href="/"
                className=""
                 >

@@ -19,7 +19,7 @@ const EthicalHacking = () => {
       <EthicalHackingCard />
       <EthicalHackingNavigation />
       <EthicalHackingHero />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

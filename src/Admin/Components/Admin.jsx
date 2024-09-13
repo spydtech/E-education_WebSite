@@ -25,10 +25,10 @@ import { AccountCircle, ExpandLess, ExpandMore } from "@mui/icons-material";
 import AccessField from "./AccessField";
 import RegisterEmployee from "./Register/RegisterEmployee";
 import RegisterTrainee from "./Register/RegisterTraniee";
-import SalesReport from "./SalesReport";
+// import SalesReport from "./SalesReport";
 import Meeting from "./Meet/Meeting";
-import PaymentData from "./PaymentData";
-import TotalSales from "./TotalSales";
+// import PaymentData from "./PaymentData";
+// import TotalSales from "./TotalSales";
 import {
   Dashboard as DashboardIcon,
   People as UsersIcon,
