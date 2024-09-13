@@ -17,8 +17,8 @@ const CompatabilityTesting = () => {
       <CompatabilityHero />
       <CompatabilityCard />
       <CompatabilityNavigation />
-      {/* <CompatabilityFoot /> */}
-      {/* <Footer /> */}
+      <CompatabilityFoot />
+      <Footer />
     </>
   );
 };
