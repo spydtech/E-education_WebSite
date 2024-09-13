@@ -4,7 +4,7 @@ import certificate from "../../../../../../../assetss/certficate1.png";
 function SystemTestingCertificate() {
   return (
     <>
-      <div className="bg-white mb-20 pt-10">
+      <div className="bg-white mb-20 pt-5">
         <div className="h-auto grid grid-cols-1 md:grid-cols-2 gap-8 p-4 justify-center items-start">
           <div className="flex justify-center items-center">
             <img

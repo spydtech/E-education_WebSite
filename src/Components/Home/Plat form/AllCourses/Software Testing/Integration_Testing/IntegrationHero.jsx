@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import student from "../../../../../../assetss/Home/intro_DataScience/student.jpg";
+import student from "../../../../../../assetss/professionalimages/image13.png";
 
 const IntigrationHero = () => {
   const [courseName] = useState("Integration Testing");
@@ -21,10 +21,7 @@ const IntigrationHero = () => {
       ></div>
 
       <div className="relative z-10 text-center text-white p-6 md:p-10">
-        <h1 className="text-[24px] lg:text-[32px] font-bold mb-4">
-          Master the Art of Integration Testing to Ensure Software Quality!
-        </h1>
-        <p className="text-[16px] lg:text-[20px] mb-8">
+        <p className="text-[20px] md:text-[24px] font-medium text-white px-4 mb-10 max-w-[800px] mx-auto">
           Empower your team with efficient acceptance testing procedures, ensuring your software meets stakeholder requirements and expectations...
         </p>
         <button
