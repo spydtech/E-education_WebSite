@@ -3,35 +3,24 @@ import React, { useState } from "react";
 function BasicPhpIntroduction() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const Slide = ({ heading, items }) => (
-    <div className="w-full flex-shrink-0 px-2 py-8 md:mr-6 flex flex-col h-full relative">
-      <div className="flex-grow pb-10 overflow-y-auto"> {/* Added overflow-y-auto to handle excess content */}
-        <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
-          {heading}
-        </h2>
-        <ul className="list-disc list-outside text-lg lg:text-xl pl-10 text-start text-white">
-          {items.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
+  const Slide = ({ heading, items }) => {
+    return (
+      <div className="w-full flex-shrink-0 px-4 py-8">
+        <div className="h-auto flex justify-center">
+          <div>
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
+              {heading}
+            </h2>
+            <ul className="list-disc list-inside text-md lg:text-xl text-white">
+              {items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
-      <div className="absolute left-0 right-0 bottom-0 flex justify-between">
-        <button
-          onClick={goToPreviousSlide}
-          className="hover:text-[#f6ac14] text-white font-bold rounded"
-        >
-          Previous
-        </button>
-        <div className="text-white">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-        <button
-          onClick={goToNextSlide}
-          className="hover:text-[#f6ac14] text-white font-bold rounded"
-        >
-          Next
-        </button>
-      </div>
-    </div>
-  );
+    );
+  };
 
   const slidesData = [
     {
@@ -76,49 +65,62 @@ function BasicPhpIntroduction() {
   ];
 
   const goToPreviousSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? slidesData.length - 1 : prevSlide - 1
-    );
+    setCurrentSlide((prevSlide) => (prevSlide > 0 ? prevSlide - 1 : 0));
   };
 
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide === slidesData.length - 1 ? 0 : prevSlide + 1
+      prevSlide < slidesData.length - 1 ? prevSlide + 1 : prevSlide
     );
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2  gap-6 w-screen h-auto lg:h-[468px] mb-16">
-      <div className="flex items-center justify-center ">
-        <div className="text-start px-4 lg:px-10">
+    <div className="flex flex-col space-y-3 md:flex-row md:justify-between md:items-center md:h-[380px] lg:h-[450px] px-3 mb-5">
+      {/* Text Section */}
+      <div className=" ">
+        <div className=" lg:px-10">
           <div>
-            <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
+            <p className="text-[#0098F1]  underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
               Introduction
             </p>
           </div>
-          <div className="sm:py-3 py-2">
-            <p className="text-xl lg:text-5xl font">
+          <div className="mt-2">
+            <p className="md:text-xl lg:text-4xl">
               So what is
               <span className="text-[#f6ac14] inline pl-2">PHP</span>
             </p>
           </div>
           <div>
-            <p className="text-lg lg:text-xl text-gray-500">
+            <p className="md:text-lg lg:text-4xl text-gray-500 mt-2">
               Brief about PHP
             </p>
           </div>
         </div>
       </div>
-      <div className="h-auto lg:h-[468px] flex justify-center ">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-4 lg:px-14 xl:px-36  sm:mt-8 lg:mt-0">
-          <div className="bg-[#0098f1] relative w-full lg:w-[400px] lg:h-[420px] md:h-[350px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg"> {/* Set fixed width and height */}
-            <div className="relative w-full h-full">
-              <Slide
-                heading={slidesData[currentSlide].heading}
-                items={slidesData[currentSlide].items}
-              />
-            </div>
-          </div>
+
+      {/* Slider Section */}
+      <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:h-[420px] md:p-5 lg:flex flex-col justify-between ">
+        <div className="flex text-white text-opacity-80">
+          <Slide
+            heading={slidesData[currentSlide].heading}
+            items={slidesData[currentSlide].items}
+          />
+        </div>
+
+        <div className="flex justify-between max-md:p-4">
+          <button
+            onClick={goToPreviousSlide}
+            className="hover:text-white text-black font-bold  rounded"
+          >
+            Previous
+          </button>
+          <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+          <button
+            onClick={goToNextSlide}
+            className="hover:text-white text-black font-bold  rounded"
+          >
+            Next
+          </button>
         </div>
       </div>
     </div>
