@@ -283,7 +283,8 @@ function App() {
           />
 
           <Route
-            path="/software-testing/compatability-testing"
+            path="/software-testing/compatibility-testing"
+            
             element={<CompatabilityTesting />}
           />
 
