@@ -29,39 +29,29 @@ function BasicJavaCareersOutcomes() {
   ];
 
   return (
-    <div className="px-3 mb-4">
-      <div className="flex flex-col lg:flex-row items-center justify-between lg:my-9">
-        {/* Left Content */}
-        <div className="mb-8 lg:mb-0 lg:w-1/2">
-          <div className="text-start">
-            <p className="text-2xl font-bold text-[#0098F1]">
-              Career Outcomes in Basic Java Program
-            </p>
-            <p className="text-5xl font-bold mt-2">
-              Discover What our{" "}
-              <span className="text-[#f6ac14] text-4xl">Learners Have Achieved</span>
-            </p>
-            <p className="text-xl text-gray-500 mt-4">
-              Snapshot of Alumni Placement Support
-            </p>
-          </div>
-        </div>
+    <div className="flex flex-col md:flex-row items-center justify-around md:my-9 px-3 mb-4 md:px-10">
+      {/* Left Content */}
+      <div className="mb-8 ">
+        <p className="md:text-2xl font-bold text-[#0098F1]">
+          Discover What our Learners Have Achieved
+        </p>
+        <p className="md:text-xl text-gray-500 mt-4">
+          Snapshot of Alumni Placement Support
+        </p>
+      </div>
 
-        {/* Right Content */}
-        <div className="lg:w-1/2 flex flex-col items-center lg:items-end">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {stats.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center p-4 cursor-pointer text-xl font-medium border-2 border-transparent hover:border-[#750e5c] bg-gray-100 rounded-md overflow-hidden shadow-lg"
-              >
-                {item.icon}
-                <p className="text-2xl font-bold mt-2">{item.stat}</p>
-                <p className="text-gray-500 text-base mt-1">{item.description}</p>
-              </div>
-            ))}
+      {/* Right Content */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+        {stats.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center p-3 cursor-pointer text-xl font-medium border-2 border-transparent hover:border-[#750e5c] bg-gray-100 rounded-md overflow-hidden shadow-lg"
+          >
+            {item.icon}
+            <p>{item.stat}</p>
+            <p className="text-gray-500 text-[16px]">{item.description}</p>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );

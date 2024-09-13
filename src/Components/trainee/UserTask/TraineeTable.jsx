@@ -3,8 +3,7 @@ import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/solid";
 
 const data = [
   {
-    avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+    avatar: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
     name: "Robert Wolfkisser",
     job: "Engineer",
     role: "Collaborator",
@@ -12,8 +11,7 @@ const data = [
     active: false,
   },
   {
-    avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+    avatar: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
     name: "Raghavendra",
     job: "Engineer",
     role: "Collaborator",
@@ -21,8 +19,7 @@ const data = [
     active: false,
   },
   {
-    avatar:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtJuUw4ajfA54wQ0kCRhPB3DvakpxYA0-yew&s",
+    avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtJuUw4ajfA54wQ0kCRhPB3DvakpxYA0-yew&s",
     name: "Ratnapriya",
     job: "Engineer",
     role: "Collaborator",
@@ -30,8 +27,7 @@ const data = [
     active: true,
   },
   {
-    avatar:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7YhzBEZnt8CapqZWwUK6SRRfZC0Hj5PPSbw&s",
+    avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7YhzBEZnt8CapqZWwUK6SRRfZC0Hj5PPSbw&s",
     name: "ashwini",
     job: "Engineer",
     role: "Collaborator",
@@ -39,8 +35,7 @@ const data = [
     active: false,
   },
   {
-    avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
+    avatar: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",
     name: "Robert Wolfkisser",
     job: "Engineer",
     role: "Collaborator",
@@ -48,8 +43,7 @@ const data = [
     active: true,
   },
   {
-    avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-6.png",
+    avatar: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-6.png",
     name: "Jill Jailbreaker",
     job: "Engineer",
     role: "Collaborator",
@@ -57,8 +51,7 @@ const data = [
     active: false,
   },
   {
-    avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
+    avatar: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png",
     name: "Henry Silkeater",
     job: "Designer",
     role: "Contractor",
@@ -66,8 +59,7 @@ const data = [
     active: false,
   },
   {
-    avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
+    avatar: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png",
     name: "Bill Horsefighter",
     job: "Designer",
     role: "Contractor",
@@ -75,8 +67,7 @@ const data = [
     active: true,
   },
   {
-    avatar:
-      "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png",
+    avatar: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png",
     name: "Jeremy Footviewer",
     job: "Manager",
     role: "Manager",
@@ -94,27 +85,21 @@ function TraineeTable({ updateUsersCount }) {
 
   const handleRoleChange = (event, name) => {
     const newRole = event.target.value;
-    // Update role in data (this would typically involve API call or state management)
     console.log(`Updating role for ${name} to ${newRole}`);
   };
 
-  // Function to handle search input change
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  // Toggle selection of all users
   const handleSelectAllUsers = () => {
     if (selectedUsers.length === data.length) {
-      // If all users are already selected, deselect all
       setSelectedUsers([]);
     } else {
-      // Otherwise, select all users
       setSelectedUsers(data.map((user) => user.name));
     }
   };
 
-  // Function to handle individual user selection
   const handleUserSelect = (event, name) => {
     if (event.target.checked) {
       setSelectedUsers([...selectedUsers, name]);
@@ -123,32 +108,28 @@ function TraineeTable({ updateUsersCount }) {
     }
   };
 
-  // Function to open the modal
   const openModal = () => {
     setIsModalOpen(true);
   };
 
-  // Function to close the modal
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
-  // Calculate active and inactive user counts
   const activeCount = data.filter((user) => user.active).length;
   const inactiveCount = data.filter((user) => !user.active).length;
 
-  // Filter data based on search term
   const filteredData = data.filter((user) =>
     user.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const rows = filteredData.map((item) => (
-    <tr key={item.name} className="border-b hover:bg-gray-100">
+    <tr key={item.name} className="border-b ">
       <td className="px-6 py-4 whitespace-nowrap">
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <input
             type="checkbox"
-            className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+            className="h-4 w-4 text-[#FF9B26] focus:ring-[#FF9B26] border-none border-[#FF9B26] rounded"
             checked={selectedUsers.includes(item.name)}
             onChange={(e) => handleUserSelect(e, item.name)}
           />
@@ -158,14 +139,14 @@ function TraineeTable({ updateUsersCount }) {
             alt={`Avatar of ${item.name}`}
           />
           <div className="ml-4">
-            <div className="text-sm font-medium text-gray-900">{item.name}</div>
+            <div className="text-sm font-medium text-[#FF9B26]">{item.name}</div>
           </div>
         </div>
       </td>
-      <td className="px-6 py-4 whitespace-nowrap">
+      <td className="px-6 py-4  text-[#FF9B26] whitespace-nowrap">
         <h1>React js</h1>
       </td>
-      <td className="px-6 py-4 whitespace-nowrap">{item.lastActive}</td>
+      <td className="px-6 py-4 whitespace-nowrap text-[#FF9B26] ">{item.lastActive}</td>
       <td className="px-6 py-4 whitespace-nowrap flex items-center justify-between">
         {item.active ? (
           <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
@@ -179,7 +160,7 @@ function TraineeTable({ updateUsersCount }) {
           </span>
         )}
         <button
-          className="px-4 py-2 bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 ml-4"
+          className="px-4 py-2 bg-[#FF9B26] text-white rounded-md shadow-sm hover:bg-[#FF9B26] focus:outline-none focus:ring-2 focus:ring-[#FF9B26] focus:ring-opacity-50 ml-4"
           onClick={openModal}
         >
           Upload
@@ -189,39 +170,37 @@ function TraineeTable({ updateUsersCount }) {
   ));
 
   return (
-    <div className="overflow-x-auto mt-10 w-[900px] bg-white shadow-xl  p-4 rounded-lg">
-      <div className="min-w-full overflow-x-auto rounded-lg">
-        <div className="flex justify-start m-3">
+    <div className=" mt-10 lg:m-8 bg-white shadow-xl rounded-lg">
+      <div className=" overflow-x-auto   text-lg scrollbar-thin scrollbar-track-white scrollbar-thumb-[#FF9B26] pt-4 mx-4 rounded-lg">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center p-4">
           <input
             type="search"
             value={searchTerm}
             onChange={handleSearchChange}
             placeholder="Search by name..."
-            className="w-[200px] px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            className="w-full md:w-[200px] px-3 py-2 placeholder:text-[#FF9B26] bg-white border border-[#FF9B26] rounded-md shadow-sm focus:outline-none focus:ring-[#FF9B26] focus:border-[#FF9B26] sm:text-sm mb-3 md:mb-0"
           />
-        </div>
-        <div className="flex justify-end mb-4 ">
           <button
-            className="px-4 py-2 bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+            className="px-4 py-2 bg-[#FF9B26] text-white rounded-md shadow-sm  focus:outline-none focus:ring-2 focus:ring-[#FF9B26] focus:ring-opacity-50"
             onClick={handleSelectAllUsers}
           >
             Select All Users
           </button>
         </div>
-
-        <table className="min-w-full overflow-x-auto divide-y divide-gray-200">
+         <div className="">
+        <table className="min-w-full divide-y divide-gray-200  ">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-4  bg-[#FF9B26] text-left text-xs font-medium text-white uppercase tracking-wider">
                 Employee
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-4  bg-[#FF9B26] text-left text-xs font-medium text-white uppercase tracking-wider">
                 Role
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-4  bg-[#FF9B26] text-left text-xs font-medium text-white uppercase tracking-wider">
                 Last active
               </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-6 py-4  bg-[#FF9B26] text-left text-xs font-medium text-white uppercase tracking-wider">
                 Status
               </th>
             </tr>
@@ -229,35 +208,27 @@ function TraineeTable({ updateUsersCount }) {
           <tbody className="bg-white divide-y divide-gray-200">{rows}</tbody>
         </table>
       </div>
+      </div>
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
-          <div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
-            <div className="mt-3 text-center">
-              <h3 className="text-lg leading-6 font-medium text-gray-900">
-                Upload File
-              </h3>
-              <div className="mt-2 px-7 py-3">
-                <input
-                  type="file"
-                  className="px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                />
-              </div>
-              <div className="items-center px-4 py-3">
-                <button
-                  className="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                  onClick={closeModal}
-                >
-                  Upload
-                </button>
-                <button
-                  className="px-4 py-2 bg-red-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 mt-2"
-                  onClick={closeModal}
-                >
-                  Cancel
-                </button>
-              </div>
+        <div className="fixed inset-0 z-50 overflow-auto bg-smoke-light flex justify-center items-center">
+          <div className="bg-white w-full md:w-1/3 max-w-lg p-6 rounded-lg shadow-lg">
+            <h2 className="text-xl font-bold mb-4 text-[#FF9B26] ">Upload Files</h2>
+            <input type="file" className="w-full mb-4 text-[#FF9B26]" />
+            <div className="flex justify-end">
+              <button
+                className="px-4 py-2 bg-red-600 text-white rounded-md shadow-sm  focus:outline-none focus:ring-2 focus:ring-opacity-50"
+                onClick={closeModal}
+              >
+                Cancel
+              </button>
+              <button
+                className="ml-4 px-4 py-2 bg-[#FF9B26] text-white rounded-md shadow-sm hover:bg-[#FF9B26] focus:outline-none focus:ring-2 focus:ring-[#FF9B26] focus:ring-opacity-50"
+                onClick={closeModal}
+              >
+                Upload
+              </button>
             </div>
           </div>
         </div>

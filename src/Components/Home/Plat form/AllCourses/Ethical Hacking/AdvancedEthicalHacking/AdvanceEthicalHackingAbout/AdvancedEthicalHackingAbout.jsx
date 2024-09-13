@@ -30,10 +30,10 @@ const EthicalHackingAbout = () => {
         {ethicalHackingInfo.map((item, index) => (
           <div
             key={index}
-            className="md:w-80 lg:w-2/5 bg-white rounded-lg shadow-lg p-3 my-4"
+            className=" md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
           >
             <img
-              className=" object-cover object-center rounded-md"
+              className="md:w-full md:h-64 rounded-md"
               src={item.imgSrc}
               alt={item.imgAlt}
             />

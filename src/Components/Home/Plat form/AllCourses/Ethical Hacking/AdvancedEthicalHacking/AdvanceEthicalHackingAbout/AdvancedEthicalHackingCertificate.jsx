@@ -3,7 +3,7 @@ import certificate from "../../../../../../../assetss/certficate.png";
 
 function AdvancedEthicalHackingCertificate() {
   return (
-    <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 p-4 justify-center items-center">
+    <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 p-4 justify-center items-center md:px-10 md:gap-8">
     {/* Certificate Image */}
     <div className="flex justify-center items-center">
       <img
@@ -14,7 +14,7 @@ function AdvancedEthicalHackingCertificate() {
     </div>
     
     {/* Text Content */}
-    <div className="space-y-3 text-center md:text-left lg:self-start lg:mt-5">
+    <div className="space-y-3 text-center md:text-left">
       <p className="md:text-2xl font-bold text-[#0098F1]">
         Achieve Credentials and Recognition
       </p>

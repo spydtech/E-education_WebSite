@@ -101,8 +101,8 @@ function Ui_UxKeyHighlights() {
                 onClick={() => handleClick(index)}
                 className={`p-5 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md ${
                   selectedItem === index
-                    ? "bg-[#0098f1] text-white border-none"
-                    : ""
+                    ? "bg-[#0098F1] text-white border-none"
+                    : "border-white"
                 }`}
               >
                 {item.label}

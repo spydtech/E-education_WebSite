@@ -4,6 +4,7 @@ import Outcomes from "./Outcomes";
 import FullStackJavaDevFQACourses from "./FullStackJavaDevFQACourses";
 import FullStackJavaDevelopmentTestimonioals from "./FullStackJavaDevelopmentTestimonioals";
 import { IoMenu } from "react-icons/io5";
+import { FaBars, FaTimes } from "react-icons/fa";
 const AboutCourses = () => {
   const [activeTab, setActiveTab] = useState("tab1");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,12 +23,12 @@ const AboutCourses = () => {
     <>
     
     <div className="container mx-auto py-6">
-      <div className="flex justify-start lg:hidden">
+      <div className="flex justify-start text-2xl lg:hidden">
         <button
           className="px-4 py-2 font-semibold border rounded-lg text-[#F6AC14] focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <IoMenu className="text-2xl" />
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 

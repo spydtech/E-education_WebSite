@@ -60,13 +60,6 @@ const AdvanceEthicalHackingCard = () => {
               className="group border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-                {/* <div className="relative h-[210px] bg-[#0098f1]">
-                  <img
-                    className="w-full h-full object-cover"
-                    src={item.imgSrc}
-                    alt={item.title}
-                  />
-                </div> */}
                 <div className="h-[180px]">
                   <img
                     className="w-full h-full bg-cover"

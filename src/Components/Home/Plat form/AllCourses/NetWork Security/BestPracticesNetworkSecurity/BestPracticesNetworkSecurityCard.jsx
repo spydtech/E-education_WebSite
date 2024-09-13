@@ -4,42 +4,42 @@ const NetworkSecurityBestPracticesCard = () => {
   const courseData = [
     {
       imgSrc:
-        "https://img.freepik.com/free-vector/pair-programming-concept-illustration_114360-2170.jpg?t=st=1716451287~exp=1716454887~hmac=cc991f9dacafb486a88efc45f1b6ab6d8d04e77495c9a8d56c3b1bc97ef7884d&w=740",
+        "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
       title: "Explore Course Catalog",
       description:
         "Browse our extensive catalog of Data Science courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
     },
     {
       imgSrc:
-        "https://img.freepik.com/free-vector/flat-background-safer-internet-day_23-2151127500.jpg?ga=GA1.1.481732087.1715859514&semt=ais_hybrid",
+        "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
       title: "Enroll in Foundational Courses",
       description:
         "Start with foundational courses covering basic concepts, algorithms, and tools essential for Data Science.",
     },
     {
       imgSrc:
-        "https://img.freepik.com/free-vector/hand-drawn-flat-design-website-hosting-illustration_23-2149233375.jpg?ga=GA1.1.481732087.1715859514&semt=ais_hybridg",
+       "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
       title: "Practice with Real-world Projects",
       description:
         "Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience in data analysis, data processing, and visualization.",
     },
     {
       imgSrc:
-        "https://img.freepik.com/free-vector/flat-safer-internet-day-background_52683-154505.jpg?ga=GA1.1.481732087.1715859514&semt=ais_hybrid",
+        "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
       title: "Track Your Progress",
       description:
         "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Data Science concepts as you advance through the courses.",
     },
     {
       imgSrc:
-        "https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866843.jpg?t=st=1716451464~exp=1716455064~hmac=b20bffd75cbf6f3c20c1d05348247ca261db387eb06c386f823603a08a890fd1&w=826",
+        "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
       title: "Specialize and Advance",
       description:
         "Choose specialized tracks or advanced courses to delve deeper into specific areas of Data Science, such as data engineering, predictive analytics, or machine learning.",
     },
     {
       imgSrc:
-        "https://img.freepik.com/free-vector/flat-safer-internet-day-illustration_23-2151163141.jpg?ga=GA1.1.481732087.1715859514&semt=ais_hybrid",
+        "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
       title: "Earn Recognized Certifications",
       description:
         "Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.",
@@ -66,9 +66,9 @@ const NetworkSecurityBestPracticesCard = () => {
               className="group  border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-                <div className="h-[210px] bg-[#0098f1]">
+                <div className="h-[180px]">
                   <img
-                    className="w-full h-full object-cover"
+                    className="w-full h-full bg-cover"
                     src={course.imgSrc}
                     alt={`Project ${index + 1}`}
                   />
