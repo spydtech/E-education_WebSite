@@ -19,7 +19,7 @@ function BasicC_CplusCertificate() {
         Achieve Credentials and Recognition
       </p>
       <p className="text-xl text-gray-500">
-              Successfully complete all course modules to obtain a Basic Php
+              Successfully complete all course modules to obtain a Basic C_C++
               Fundamentals certification, greatly enhancing career prospects and
               skill development.
             </p>
