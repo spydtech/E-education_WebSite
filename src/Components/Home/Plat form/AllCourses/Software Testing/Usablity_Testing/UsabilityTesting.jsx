@@ -13,16 +13,12 @@ const UsabilityTesting = () => {
 
   return (
     <>
-    
       <Navbar />
-      <div className="max-w-full">
       <UsabilityTestingHero />
       <UsabilityTestingCard />
       <UsabilityTestingNavigation />
       <UsabilityTestingFoot />
-      </div>
       <Footer />
-      
     </>
   );
 };
