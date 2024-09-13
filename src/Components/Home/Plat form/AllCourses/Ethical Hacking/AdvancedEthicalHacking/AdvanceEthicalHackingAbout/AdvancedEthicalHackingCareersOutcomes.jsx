@@ -30,17 +30,17 @@ function AdvancedEthicalHackingCareersOutcomes() {
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-around md:my-9 px-3 mb-4 md:px-10">
-    {/* Left Content */}
-    <div className="mb-8 ">
-      <p className="md:text-2xl font-bold text-[#0098F1]">
-        Discover What our Learners Have Achieved
-      </p>
-      <p className="md:text-xl text-gray-500 mt-4">
-        Snapshot of Alumni Placement Support
-      </p>
-    </div>
+      {/* Left Content */}
+      <div className="mb-8 ">
+        <p className="md:text-2xl font-bold text-[#0098F1]">
+          Discover What our Learners Have Achieved
+        </p>
+        <p className="md:text-xl text-gray-500 mt-4">
+          Snapshot of Alumni Placement Support
+        </p>
+      </div>
 
-    {/* Right Content */}
+      {/* Right Content */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
         {stats.map((item, index) => (
           <div
