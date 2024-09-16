@@ -26,8 +26,8 @@ function Ui_UxSyllabus() {
   ];
 
   return (
-    <div className="py-8">
-      <div className="flex flex-col lg:flex-row items-start justify-between px-4">
+    <div className="py-1">
+      <div className="flex flex-col lg:flex-row items-center justify-between px-4">
         <div className="lg:w-1/2 w-full mb-8 lg:mb-0 px-10">
           <div className="text-start">
             <h2 className="text-2xl text-[#0098f1] font-bold mb-4">
