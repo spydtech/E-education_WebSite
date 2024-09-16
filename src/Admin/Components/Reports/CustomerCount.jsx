@@ -86,13 +86,13 @@ const MonthlyCustomerBarGraph = () => {
 
   return (
     <div className="container relative h-[400px] shadow-xl rounded-xl mx-auto p-4">
-      <h1 className=" font-bold text-center text-[#2C3E50] mb-6">
+      <h1 className=" font-bold text-center text-[#001510] mb-6">
         Customer Growth - Total: {totalCustomers}
       </h1>
       <div className="flex absolute justify-center mt-6">
         <label
           htmlFor="year-select"
-          className="block text-sm  font-medium text-gray-700"
+          className="block text-sm  font-medium text-[#001510]"
         ></label>
         <select
           id="year-select"

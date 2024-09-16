@@ -132,8 +132,8 @@ const TraineeTable = () => {
   }, [groupedData]);
 
   return (
-    <div className="container relative h-[400px] rounded-xl shadow-xl mx-auto p-4">
-      <h1 className=" font-bold text-center text-[#2C3E50] mb-6">
+    <div className="container  relative h-[400px] rounded-xl shadow-xl mx-auto p-4">
+      <h1 className=" font-bold text-center text-[#001510] mb-6">
         Count of Courses Purchased - Total: {totalCoursesYear}
         {selectedMonth !== "All Months" && (
           <span>
@@ -145,7 +145,7 @@ const TraineeTable = () => {
       <div className="mt-4 absolute flex justify-center">
         <label
           htmlFor="year-select"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-[#001510]"
         ></label>
         <select
           id="year-select"
@@ -164,7 +164,7 @@ const TraineeTable = () => {
       <div className="flex mt-14 absolute justify-center">
         <label
           htmlFor="month-select"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-[#001510]"
         ></label>
         <select
           id="month-select"

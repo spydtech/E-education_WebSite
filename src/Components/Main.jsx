@@ -27,7 +27,7 @@ function Main() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight font-extrabold text-gray-800">
                 <span className="block xl:inline">
                   Learn{" "}
-                  <span className="bg-gradient-to-r from-[#F19E22] to-[#25AAE3] inline-block text-transparent bg-clip-text">
+                  <span className="bg-gradient-to-r from-[#FF9B26] to-[#25AAE3] inline-block text-transparent bg-clip-text">
                     without
                   </span>{" "}
                   limits online{" "}

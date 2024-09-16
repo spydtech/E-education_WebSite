@@ -9,6 +9,7 @@ import CustomerCount from "./CustomerCount";
 import CourseSales from "./LineGraph";
 import AnnualSalesGraph from "./SalesLineGraph";
 import CoursePurchased from "./BarGraph";
+import girl from "../../../assetss/Home/admin.png";
 
 const ProductsCount = () => <CountofProducts />;
 const CustomersCount = () => <CustomerCount />;
@@ -37,8 +38,14 @@ function TableforAdmin() {
   // };
 
   return (
-    <div className="container mx-auto p-6  min-h-screen">
-      <h1 className="text-xl h-12 px-4 py-2 font-semibold rounded-lg text-white bg-[#2C3E50] mb-4 ">
+    <div className="container mx-auto p-4  min-h-screen">
+       <span className="flex px-4 pb-4 left-4">
+        <img className="w-[60px]  h-[60px] rounded-full" src={girl} />
+        <span className="bg-gradient-to-r from-[#00BF8F] to-[#001510] text-transparent  bg-clip-text text-2xl  font-medium pt-4 pl-1">
+          Admin Name
+        </span>
+      </span>
+      <h1 className="text-xl h-12 px-4 py-2 font-semibold rounded-lg text-white bg-[#001510] mb-4 ">
            Overview
           </h1>
       <div className="flex flex-col md:flex-row">
@@ -52,7 +59,7 @@ function TableforAdmin() {
           <AnnualSalesGraph />
           <CoursePurchased />
           <CourseSales />
-          <CourseSales />
+      
           </div>
           {/* <div className="flex flex-col gap-6">
             <div

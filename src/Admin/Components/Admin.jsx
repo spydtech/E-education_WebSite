@@ -433,17 +433,17 @@ const menu = [
   {
     name: "Dashboard",
     path: "/admin",
-    icon: <DashboardIcon className="w-6 h-6" />,
+    icon: <DashboardIcon className="w-6 h-6 mr-2" />,
   },
   {
     name: "Access Field",
     path: "/admin/accessField",
-    icon: <TbLockAccess className="w-6 h-6" />,
+    icon: <TbLockAccess className="w-6 h-6 mr-2" />,
   },
   {
     name: "Users",
     path: "/admin/users",
-    icon: <UsersIcon />,
+    icon: <UsersIcon className="w-6 h-6 mr-2" />,
     subMenu: [
       { name: "Create Group", path: "/admin/users/create-group" },
       { name: "Go to Existing Group", path: "/admin/users/existing-group" },
@@ -452,19 +452,19 @@ const menu = [
   {
     name: "payment Data",
     path: "/admin/payment-data",
-    icon: <MdOutlinePayment className="w-6 h-6" />,
+    icon: <MdOutlinePayment className="w-6 h-6 mr-2" />,
   },
   {
     name: "Sales Report",
     path: "/admin/sales-report",
-    icon: <TbReport className="w-6 h-6" />,
+    icon: <TbReport className="w-6 h-6 mr-2" />,
   },
   {
     name: "Meet",
     path: "/admin/meeting",
-    icon: <SiGooglemeet className="w-6 h-6" />,
+    icon: <SiGooglemeet className="w-5 h-5 mr-3" />,
   },
-  { name: "Settings", path: "/admin/settings", icon: <SettingsIcon /> },
+  { name: "Settings", path: "/admin/settings", icon: <SettingsIcon className="w-6 h-6 mr-2" /> },
 ];
 
 const Admin = () => {
@@ -490,7 +490,7 @@ const Admin = () => {
         height: "100vh",
         width: drawerWidth,
       }}
-      className="bg-gradient-to-b from-[#2C3E50]  to-[#4CA1AF]
+      className="bg-gradient-to-b from-[#001510]  to-[#00BF8F]
  max-w-56 border-[#2C3E50] border-opacity-10 border-r-2 text-white"
     >
        <div className="p-4">
@@ -545,7 +545,8 @@ const Admin = () => {
           ))}
         </ul>
       </div>
-      {/* <div>
+      {/* <div> background: linear-gradient(180deg, #001510 0%, #00BF8F 100%);
+
         <button className="flex items-center pl-20 py-2 hover:bg-[#f6ac14] hover:bg-opacity-10 w-full border-l-8 border-transparent hover:border-[#f6ac14] transition-all duration-300">
           <AccountCircle />
           <span className="font-semibold pl-2 ">Account</span>

@@ -848,19 +848,19 @@ function UsersRolesTable() {
           alt="Admin"
           className="w-12 h-12 rounded-full  mr-3"
         />
-        <h2 className=" bg-gradient-to-r from-[#2C3E50] to-[#4CA1AF]   text-transparent bg-clip-text text-lg font-semibold">Admin Name</h2>
+        <h2 className=" bg-gradient-to-r from-[#00BF8F] to-[#001510]   text-transparent bg-clip-text text-lg font-semibold">Admin Name</h2>
       </div>
 
       {/* Buttons Section */}
       <div className="flex space-x-4 mb-6">
         <button
-          className="bg-[#2C3E50] text-white font-semibold py-2 px-4 rounded"
+          className="bg-[#001510]  text-white font-semibold py-2 px-4 rounded"
           onClick={() => setShowGroupForm(true)}
         >
           Create Group
         </button>
         <button
-          className="bg-[#2C3E50] text-white font-semibold py-2 px-4 rounded"
+          className="bg-[#001510]  text-white font-semibold py-2 px-4 rounded"
           onClick={() => setShowTraineeSearch(true)}
         >
           Add Trainee
@@ -869,25 +869,24 @@ function UsersRolesTable() {
  <div className="flex ">
       {/* Group Form and Search Section */}
       {showGroupForm && (
-      <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
-          <div className="bg-white min-w-[420px] overflow-x-auto border-2 border-[#2C3E50] rounded-lg p-4 relative">
+      <div className="fixed inset-0 bg-black/50 flex  justify-center items-center z-50">
+          <div className="bg-white lg:min-w-[640px]  overflow-x-auto border-2 border-[#001510]  rounded-lg p-4 relative">
           <div className="flex justify-between ">
-            <h1 className="text-[#2C3E50] h-12 font-semibold mb-4  p-5 text-2xl">Create Group</h1>
+            <h1 className="text-[#001510] [#2C3E50] h-12 font-semibold mb-4  p-5 text-2xl">Create Group</h1>
            <button
               className=""
               onClick={() => setShowGroupForm(false)}
             >
-       <IoCloseCircle className=" text-3xl mb-6 text-[#2C3E50] " />
+       <IoCloseCircle className=" text-3xl mb-6 text-[#001510]  " />
             </button>
             </div>
-         
           <div className="p-4">
             <input
               type="text"
               placeholder="Group Name"
               value={groupName}
               onChange={handleGroupNameChange}
-              className="w-full h-12 px-4 py-2 border border-[#2C3E50] rounded-md"
+              className="w-1/3 h-12 px-4 py-2 border border-[#001510]  rounded-md"
             />
           </div>
           {error && (
@@ -895,27 +894,25 @@ function UsersRolesTable() {
           )}
           <div className="p-4">
             <button
-              className="px-4 py-2 w-full h-12 text-white bg-gradient-to-r from-[#2C3E50] to-[#4CA1AF]   rounded-md "
-              onClick={handleCreateGroup}
-            >
+              className="px-4 py-2  h-12 text-white bg-gradient-to-r from-[#00BF8F] to-[#001510]    rounded-md "
+              onClick={handleCreateGroup}>
               Save
             </button>
            </div>
           </div>
         </div>
       )}
-
       {/* Trainee Search Section */}
       {showTraineeSearch && (
        <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
-//           <div className="bg-white min-w-[1020px] overflow-x-auto border-2 border-[#0098f1] rounded-lg p-4 relative">
+//           <div className="bg-white lg:min-w-[640px] overflow-x-auto border-2 border-[#0098f1] rounded-lg p-4 relative">
            <div className="flex justify-between ">
-           <h1 className=" h-12 font-semibold text-[#2C3E50] p-5 text-2xl">Add Trainee</h1>
+           <h1 className=" h-12 font-semibold text-[#001510] p-5 text-2xl">Add Trainee</h1>
            <button
               
               onClick={() => setShowTraineeSearch(false)}
             >
-         <IoCloseCircle className=" text-3xl mb-6 text-[#2C3E50] "/>
+         <IoCloseCircle className=" text-3xl mb-6 text-[#001510] "/>
             </button>
             </div>
           <div className="p-4 grid gap-6">
@@ -924,7 +921,7 @@ function UsersRolesTable() {
               placeholder="Search Trainee by name"
               value={searchTrainee}
               onChange={handleTraineeSearchChange}
-              className="w-1/3 px-4 h-12 py-2 border border-[#2C3E50] rounded-md"
+              className="w-1/3 px-4 h-12 py-2 border border-[#001510] rounded-md"
             />
             {/* <input
               type="text"
@@ -936,7 +933,7 @@ function UsersRolesTable() {
           </div>
           <div className="p-4">
             <button
-              className="px-4 py-2  text-white bg-gradient-to-r from-[#2C3E50] to-[#4CA1AF] rounded-md "
+              className="px-4 py-2  text-white bg-gradient-to-r from-[#00BF8F] to-[#001510] rounded-md "
               onClick={() => setShowTraineeSearch(false)}
             >
               Save
@@ -948,25 +945,25 @@ function UsersRolesTable() {
 </div>
       {/* Table Section */}
       <div className="overflow-x-auto pt-4">
-      <div className="px-4 py-4 flex  gap-4">
+      <div className="px-4 py-4 flex   gap-4">
             <input
               type="text"
               placeholder="Search by name"
               value={search}
               onChange={handleSearchChange}
-              className="w-1/4 h-12 px-4 py-2 border border-[#2C3E50] rounded-md"
+              className="w-1/4 h-12 px-4 py-2 border border-[#001510] rounded-md"
             />
             <input
               type="text"
               placeholder="Search by course"
               value={searchCourse}
               onChange={handleSearchCourseChange}
-              className="w-1/4 h-12 px-4 py-2  border border-[#2C3E50] rounded-md"
+              className="w-1/4 h-12 px-4 py-2  border border-[#001510] rounded-md"
             />
           </div>
         <table className="min-w-full border-collapse border border-gray-300 text-start">
           <thead>
-            <tr className="bg-[#2C3E50] text-white">
+            <tr className="bg-[#001510] text-white">
               <th className="py-3 px-6 border border-gray-300">Name</th>
               <th className="py-3 px-6 border border-gray-300">Course</th>
               <th className="py-3 px-6 border border-gray-300">Action</th>
@@ -983,7 +980,7 @@ function UsersRolesTable() {
                 </td>
                 <td className="py-3 px-6 border border-gray-300">
                   <button
-                    className="text-bg-gradient-to-r from-[#2C3E50] to-[#4CA1AF] text-white font-semibold hover:underline"
+                    className="text-bg-gradient-to-r from-[#00BF8F] to-[#001510] text-white font-semibold hover:underline"
                     onClick={() => handleAddToGroupClick(user)}
                   >
                     Add to Group
@@ -993,15 +990,15 @@ function UsersRolesTable() {
             ))}
             {filteredTraineeData.map((trainee) => (
               <tr key={trainee.userName}>
-                <td className="py-3 px-6 border border-[#2C3E50]">
+                <td className="py-3 px-6 border border-[#001510]">
                   {trainee.firstName} {trainee.lastName}
                 </td>
-                <td className="py-3 px-6 border border-[#2C3E50]">
+                <td className="py-3 px-6 border border-[#001510]">
                   {trainee.courses.join(", ")}
                 </td>
-                <td className="py-3 px-6 border border-[#2C3E50]">
+                <td className="py-3 px-6 border border-[#001510]">
                   <button
-                    className="bg-gradient-to-r from-[#2C3E50] to-[#4CA1AF]  text-white font-semibold hover:underline"
+                    className="bg-gradient-to-r from-[#00BF8F] to-[#001510]  text-white font-semibold hover:underline"
                     onClick={() => handleAddTraineeToGroup(trainee)}
                   >
                     Add to Group

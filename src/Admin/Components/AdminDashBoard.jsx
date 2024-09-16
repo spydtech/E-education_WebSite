@@ -27,13 +27,13 @@ const AdminDashBoard = () => {
       <div id="main" className="grid  items-center mx-2">
        <span className="flex p-4  top-3 left-4">
         <img className="w-[60px]  h-[60px] rounded-full" src={adminimg} />
-        <span className="bg-gradient-to-r from-[#2C3E50] to-[#4CA1AF] text-transparent  bg-clip-text text-2xl  font-medium pt-4 pl-1">
+        <span className="bg-gradient-to-r from-[#00BF8F] to-[#001510] text-transparent  bg-clip-text text-2xl  font-medium pt-4 pl-1">
           Admin Name
         </span>
       </span>
         <div
           id="div1"
-          className="h-auto bg-gradient-to-r from-[#2C3E50] to-[#4CA1AF] rounded-lg m-3 p-3 w-full max-w-6xl"
+          className="h-auto bg-gradient-to-r from-[#00BF8F] to-[#001510] rounded-lg m-3 p-3 w-full max-w-6xl"
         >
           <p className="text-xl text-white px-3">Monthly Overview</p>
           <span className="text-[14px] text-white px-3 pt-4 flex items-center">

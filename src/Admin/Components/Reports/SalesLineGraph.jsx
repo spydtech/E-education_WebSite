@@ -75,13 +75,13 @@ const AnnualSalesLineGraph = () => {
 
   return (
     <div className="container h-[400px] shadow-xl rounded-xl relative mx-auto p-4">
-      <h1 className=" font-bold text-center text-[#2C3E50] mb-6">
+      <h1 className=" font-bold text-center text-[#001510] mb-6">
         Annual Sales - Total: ₹{totalSales}
       </h1>
       <div className="flex  absolute justify-center mt-6">
         <label
           htmlFor="year-select"
-          className="block text-sm font-medium text-[#2C3E50]"
+          className="block text-sm font-medium text-[#001510]"
         ></label>
         <select
           id="year-select"

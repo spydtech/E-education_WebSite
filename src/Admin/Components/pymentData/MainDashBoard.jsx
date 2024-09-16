@@ -66,7 +66,7 @@ const Dashboard = () => {
           alt="Admin"
           className="w-12 h-12 rounded-full  mr-3"
         />
-        <h2 className=" bg-gradient-to-r from-[#2C3E50] to-[#4CA1AF]   text-transparent bg-clip-text text-lg font-semibold">Admin Name</h2>
+        <h2 className=" bg-gradient-to-r from-[#00BF8F] to-[#001510]   text-transparent bg-clip-text text-lg font-semibold">Admin Name</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         {/* Total Earnings Card */}
@@ -131,13 +131,13 @@ const Dashboard = () => {
 
       {/* Payment History Section */}
       <div className="flex items-center justify-between px-2 py-4 mb-4">
-        <h2 className="text-xl sm:text-sm md:text-2xl text-[#2C3E50] font-semibold">
+        <h2 className="text-xl sm:text-sm md:text-2xl text-[#001510] font-semibold">
           Payment History
         </h2>
         <select
           value={activeTab}
           onChange={handleTabChange}
-          className="w-full md:w-[190px] p-3 bg-[#2C3E50] outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none text-white rounded-lg"
+          className="w-full md:w-[190px] p-3 bg-[#001510] outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none text-white rounded-lg"
         >
           <option value="All">Status</option>
           <option value="Completed">Completed</option>
@@ -154,3 +154,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
