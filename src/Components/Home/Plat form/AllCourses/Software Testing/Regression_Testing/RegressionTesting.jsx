@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../../../../Navbar";
 import Footer from "../../../../footer/Footer";
 import RegressionTestingHero from "./RegressionTestingHero";
@@ -15,8 +15,8 @@ const RegressionTesting = () => {
       <RegressionTestingHero />
       <RegressionTestingCard />
       <RegressionTestingNavigation />
-      <RegressionTestingFoot></RegressionTestingFoot>
-      <Footer />
+      {/* <RegressionTestingFoot/> */}
+      {/* <Footer /> */}
     </>
   );
 };
