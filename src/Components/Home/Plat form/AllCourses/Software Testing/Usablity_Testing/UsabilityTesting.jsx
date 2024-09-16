@@ -17,8 +17,8 @@ const UsabilityTesting = () => {
       <UsabilityTestingHero />
       <UsabilityTestingCard />
       <UsabilityTestingNavigation />
-      <UsabilityTestingFoot />
-      <Footer />
+      {/* <UsabilityTestingFoot /> */}
+      {/* <Footer /> */}
     </>
   );
 };
