@@ -48,11 +48,11 @@
 //   return (
 //     <div className="container mx-auto p-4">
 //       <div className="flex justify-between items-center mb-4">
-//         <h1 className="text-2xl font-bold text-[#FF9B26]">File Status</h1>
+//         <h1 className="text-2xl font-bold text-[#204349]">File Status</h1>
 //         <div className="relative" ref={dropdownRef}>
 //           <button
 //             onClick={toggleDropdown}
-//             className="flex items-center bg-[#FF9B26] text-white p-2 rounded"
+//             className="flex items-center bg-[#204349] text-white p-2 rounded"
 //           >
 //             {selectedOption === "accepted" ? "Accepted Files" : "Rejected Files"}
 //             {isDropdownOpen ? (
@@ -62,14 +62,14 @@
 //             )}
 //           </button>
 //           {isDropdownOpen && (
-//             <ul className="absolute right-0 mt-2 w-48 border-2 border-[#FF9B26] text-[#FF9B26] rounded shadow-lg bg-white">
+//             <ul className="absolute right-0 mt-2 w-48 border-2 border-[#204349] text-[#204349] rounded shadow-lg bg-white">
 //               <li
-//                 className="cursor-pointer text-[#FF9B26] p-2 "
+//                 className="cursor-pointer text-[#204349] p-2 "
 //                 onClick={() => handleDropdownChange("accepted")}
 //               >
 //                 Accepted Files
 //               </li>
-//               <hr className="border-1 border-[#FF9B26]"/>
+//               <hr className="border-1 border-[#204349]"/>
 //               <li
 //                 className="cursor-pointer p-2 "
 //                 onClick={() => handleDropdownChange("rejected")}
@@ -84,7 +84,7 @@
 //       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 //         {selectedOption === "accepted" ? (
 //           <div>
-//             <h2 className="text-xl font-semibold mb-2 text-[#FF9B26]">Accepted Files</h2>
+//             <h2 className="text-xl font-semibold mb-2 text-[#204349]">Accepted Files</h2>
 //             {acceptedFiles.length > 0 ? (
 //               acceptedFiles.map((file, index) => (
 //                 <div className="p-2" key={index}>
@@ -105,12 +105,12 @@
 //                 </div>
 //               ))
 //             ) : (
-//               <p className="text-[#FF9B26]">No accepted files.</p>
+//               <p className="text-[#204349]">No accepted files.</p>
 //             )}
 //           </div>
 //         ) : (
 //           <div>
-//             <h2 className="text-xl font-semibold mb-2 text-[#FF9B26]">Rejected Files</h2>
+//             <h2 className="text-xl font-semibold mb-2 text-[#204349]">Rejected Files</h2>
 //             {rejectedFiles.length > 0 ? (
 //               rejectedFiles.map((file, index) => (
 //                 <div className="p-2" key={index}>
@@ -131,7 +131,7 @@
 //                 </div>
 //               ))
 //             ) : (
-//               <p className="text-[#FF9B26]">No rejected files.</p>
+//               <p className="text-[#204349]">No rejected files.</p>
 //             )}
 //           </div>
 //         )}
@@ -192,11 +192,11 @@ const StatusPage = () => {
   return (
     <div className="container mx-auto p-4">
       <div className="flex flex-col md:flex-row md:justify-between items-center mb-4">
-        <h1 className="text-2xl font-bold text-[#FF9B26] mb-2 md:mb-0">File Status</h1>
+        <h1 className="text-2xl font-bold text-[#204349] mb-2 md:mb-0">File Status</h1>
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={toggleDropdown}
-            className="flex items-center bg-[#FF9B26] text-white p-2 rounded text-sm md:text-base"
+            className="flex items-center bg-[#204349] text-white p-2 rounded text-sm md:text-base"
           >
             {selectedOption === "accepted" ? "Accepted Files" : "Rejected Files"}
             {isDropdownOpen ? (
@@ -206,16 +206,16 @@ const StatusPage = () => {
             )}
           </button>
           {isDropdownOpen && (
-            <ul className="absolute right-0 mt-2 w-48 border-2 border-[#FF9B26] text-[#FF9B26] rounded shadow-lg bg-white">
+            <ul className="absolute right-0 mt-2 w-48 border-2 border-[#204349] text-[#204349] rounded shadow-lg bg-white">
               <li
-                className="cursor-pointer text-[#FF9B26] p-2 hover:bg-[#FF9B26] hover:text-white transition"
+                className="cursor-pointer text-[#204349] p-2 hover:bg-[#204349] hover:text-white transition"
                 onClick={() => handleDropdownChange("accepted")}
               >
                 Accepted Files
               </li>
-              <hr className="border-1 border-[#FF9B26]"/>
+              <hr className="border-1 border-[#204349]"/>
               <li
-                className="cursor-pointer p-2 hover:bg-[#FF9B26] hover:text-white transition"
+                className="cursor-pointer p-2 hover:bg-[#204349] hover:text-white transition"
                 onClick={() => handleDropdownChange("rejected")}
               >
                 Rejected Files
@@ -228,7 +228,7 @@ const StatusPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {selectedOption === "accepted" ? (
           <div>
-            <h2 className="text-xl font-semibold mb-2 text-[#FF9B26]">Accepted Files</h2>
+            <h2 className="text-xl font-semibold mb-2 text-[#204349]">Accepted Files</h2>
             {acceptedFiles.length > 0 ? (
               acceptedFiles.map((file, index) => (
                 <div className="p-2" key={index}>
@@ -237,9 +237,9 @@ const StatusPage = () => {
                     onClick={() => handleDownload(file)}
                   >
                     <div className="flex items-center">
-                      <FaArrowCircleDown className="w-8 h-8 mr-2 text-[#FF9B26] " />
-                      <div className="flex flex-col text-[#FF9B26]">
-                        <span className="font-medium text-sm md:text-base text-[#FF9B26]">{file.name}</span>
+                      <FaArrowCircleDown className="w-8 h-8 mr-2 text-[#204349] " />
+                      <div className="flex flex-col text-[#204349]">
+                        <span className="font-medium text-sm md:text-base text-[#204349]">{file.name}</span>
                         <span className="text-gray-500 text-xs md:text-sm">
                           {file.description}
                         </span>
@@ -249,12 +249,12 @@ const StatusPage = () => {
                 </div>
               ))
             ) : (
-              <p className="text-[#FF9B26]">No accepted files.</p>
+              <p className="text-[#204349]">No accepted files.</p>
             )}
           </div>
         ) : (
           <div>
-            <h2 className="text-xl font-semibold mb-2 text-[#FF9B26]">Rejected Files</h2>
+            <h2 className="text-xl font-semibold mb-2 text-[#204349]">Rejected Files</h2>
             {rejectedFiles.length > 0 ? (
               rejectedFiles.map((file, index) => (
                 <div className="p-2" key={index}>
@@ -263,10 +263,10 @@ const StatusPage = () => {
                     onClick={() => handleDownload(file)}
                   >
                     <div className="flex items-center">
-                      <FaArrowCircleDown className="w-8 h-8 mr-2 text-[#FF9B26]" />
-                      <div className="flex flex-col text-[#FF9B26]">
-                        <span className="font-medium text-[#FF9B26] text-sm md:text-base">{file.name}</span>
-                        <span className="text-[#FF9B26] text-xs md:text-sm">
+                      <FaArrowCircleDown className="w-8 h-8 mr-2 text-[#204349]" />
+                      <div className="flex flex-col text-[#204349]">
+                        <span className="font-medium text-[#204349] text-sm md:text-base">{file.name}</span>
+                        <span className="text-[#204349] text-xs md:text-sm">
                           {file.description}
                         </span>
                       </div>
@@ -275,7 +275,7 @@ const StatusPage = () => {
                 </div>
               ))
             ) : (
-              <p className="text-[#FF9B26]">No rejected files.</p>
+              <p className="text-[#204349]">No rejected files.</p>
             )}
           </div>
         )}

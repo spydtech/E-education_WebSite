@@ -46,19 +46,19 @@
 // //   return (
 // //     <div className="w-full px-4 sm:px-6 lg:px-8">
 // //       {/* Heading */}
-// //       <h1 className="text-[#FF9B26] pl-0  font-semibold text-lg sm:text-xl">
-// //         <span className="border-b-2 border-[#FF9B26]">Uploaded Tasks</span>
+// //       <h1 className="text-[#204349] pl-0  font-semibold text-lg sm:text-xl">
+// //         <span className="border-b-2 border-[#204349]">Uploaded Tasks</span>
 // //       </h1>
 
 // //       {/* Main container with the form and FileFromUser in the same row */}
 // //       <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6">
 // //         {/* File Upload Form */}
-// //         <div className="w-full sm:w-[450px] bg-white rounded-lg border-[#FF9B26] border-2 border-solid shadow-sm">
+// //         <div className="w-full sm:w-[450px] bg-white rounded-lg border-[#204349] border-2 border-solid shadow-sm">
 // //           <form className="py-4 px-4 sm:px-6 lg:px-9" onSubmit={handleSubmit}>
 // //             <div className="mb-5">
 // //               <label
 // //                 htmlFor="description"
-// //                 className="mb-3 block text-base font-medium text-[#FF9B26]"
+// //                 className="mb-3 block text-base font-medium text-[#204349]"
 // //               >
 // //                 Description of file:
 // //               </label>
@@ -69,20 +69,20 @@
 // //                 placeholder="Enter file description"
 // //                 value={description}
 // //                 onChange={(e) => setDescription(e.target.value)}
-// //                 className="w-full rounded-md border-[#FF9B26] placeholder:text-[#FF9B26] bg-white py-3 px-4 sm:px-6 text-base font-medium outline-none focus:border-[#FF9B26] focus:shadow-md"
+// //                 className="w-full rounded-md border-[#204349] placeholder:text-[#204349] bg-white py-3 px-4 sm:px-6 text-base font-medium outline-none focus:border-[#204349] focus:shadow-md"
 // //               />
 // //             </div>
 
 // //             <div className="mb-6 pt-4">
-// //               <label className="mb-5 block text-xl font-semibold text-[#FF9B26]">
+// //               <label className="mb-5 block text-xl font-semibold text-[#204349]">
 // //                 Upload File
 // //               </label>
 
 // //               <div
 // //                 className={`relative bg-white flex min-h-[150px] sm:min-h-[200px] items-center justify-center rounded-md border ${
 // //                   isDragging
-// //                     ? "border-solid border-[#FF9B26]"
-// //                     : "border-dashed border-[#FF9B26]"
+// //                     ? "border-solid border-[#204349]"
+// //                     : "border-dashed border-[#204349]"
 // //                 } p-6 sm:p-12 text-center`}
 // //                 onDragOver={handleDragOver}
 // //                 onDragLeave={handleDragLeave}
@@ -100,13 +100,13 @@
 // //                   className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer"
 // //                 >
 // //                   <div>
-// //                     <span className="mb-2 block text-lg sm:text-xl font-semibold text-[#FF9B26]">
+// //                     <span className="mb-2 block text-lg sm:text-xl font-semibold text-[#204349]">
 // //                       {isDragging ? "Drop files here" : "Drag & drop files here"}
 // //                     </span>
-// //                     <span className="mb-2 block text-base font-medium text-[#FF9B26]">
+// //                     <span className="mb-2 block text-base font-medium text-[#204349]">
 // //                       Or
 // //                     </span>
-// //                     <span className="inline-flex rounded border border-[#e0e0e0] py-2 px-4 sm:px-7 text-base font-medium text-white bg-[#FF9B26]">
+// //                     <span className="inline-flex rounded border border-[#e0e0e0] py-2 px-4 sm:px-7 text-base font-medium text-white bg-[#204349]">
 // //                       Browse
 // //                     </span>
 // //                   </div>
@@ -153,7 +153,7 @@
 // //             <div>
 // //               <button
 // //                 type="submit"
-// //                 className="hover:shadow-form w-full rounded-md bg-[#FF9B26] py-3 px-6 text-center text-base font-semibold text-white outline-none"
+// //                 className="hover:shadow-form w-full rounded-md bg-[#204349] py-3 px-6 text-center text-base font-semibold text-white outline-none"
 // //               >
 // //                 Send File
 // //               </button>
@@ -215,15 +215,15 @@
 //   return (
 //     <div className="w-full flex flex-col md:flex-row gap-4 p-4">
 //       {/* File Upload Form */}
-//       <h1 className="text-[#FF9B26] p-2 font-semibold text-[20px]">
-//         <span className="border-b-2 border-[#FF9B26]">Tasks From Trainee</span>
+//       <h1 className="text-[#204349] p-2 font-semibold text-[20px]">
+//         <span className="border-b-2 border-[#204349]">Tasks From Trainee</span>
 //       </h1>
-//       <div className="flex-1 max-w-full md:max-w-[450px] bg-white rounded-lg border-[#FF9B26] border-2 border-solid shadow-lg">
+//       <div className="flex-1 max-w-full md:max-w-[450px] bg-white rounded-lg border-[#204349] border-2 border-solid shadow-lg">
 //         <form className="py-4 px-6 md:px-8" onSubmit={handleSubmit}>
 //           <div className="mb-5">
 //             <label
 //               htmlFor="description"
-//               className="mb-3 block text-base font-medium text-[#FF9B26]"
+//               className="mb-3 block text-base font-medium text-[#204349]"
 //             >
 //               Description of file:
 //             </label>
@@ -234,20 +234,20 @@
 //               placeholder="Enter file description"
 //               value={description}
 //               onChange={(e) => setDescription(e.target.value)}
-//               className="w-full rounded-md border-[#FF9B26] placeholder:text-[#FF9B26] bg-white py-3 px-6 text-base font-medium outline-none focus:border-[#FF9B26] focus:shadow-md"
+//               className="w-full rounded-md border-[#204349] placeholder:text-[#204349] bg-white py-3 px-6 text-base font-medium outline-none focus:border-[#204349] focus:shadow-md"
 //             />
 //           </div>
 
 //           <div className="mb-6 pt-4">
-//             <label className="mb-5 block text-xl font-semibold text-[#FF9B26]">
+//             <label className="mb-5 block text-xl font-semibold text-[#204349]">
 //               Upload File
 //             </label>
 
 //             <div
 //               className={`relative bg-white flex min-h-[200px] items-center justify-center rounded-md border ${
 //                 isDragging
-//                   ? "border-solid border-[#FF9B26]"
-//                   : "border-dashed border-[#FF9B26]"
+//                   ? "border-solid border-[#204349]"
+//                   : "border-dashed border-[#204349]"
 //               } p-6 md:p-12 text-center`}
 //               onDragOver={handleDragOver}
 //               onDragLeave={handleDragLeave}
@@ -265,13 +265,13 @@
 //                 className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer"
 //               >
 //                 <div>
-//                   <span className="mb-2 block text-xl font-semibold text-[#FF9B26]">
+//                   <span className="mb-2 block text-xl font-semibold text-[#204349]">
 //                     {isDragging ? "Drop files here" : "Drag & drop files here"}
 //                   </span>
-//                   <span className="mb-2 block text-base font-medium text-[#FF9B26]">
+//                   <span className="mb-2 block text-base font-medium text-[#204349]">
 //                     Or
 //                   </span>
-//                   <span className="inline-flex rounded border border-[#e0e0e0] py-2 px-7 text-base font-medium text-white bg-[#FF9B26]">
+//                   <span className="inline-flex rounded border border-[#e0e0e0] py-2 px-7 text-base font-medium text-white bg-[#204349]">
 //                     Browse
 //                   </span>
 //                 </div>
@@ -318,7 +318,7 @@
 //           <div>
 //             <button
 //               type="submit"
-//               className="hover:shadow-form w-full rounded-md bg-[#FF9B26] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+//               className="hover:shadow-form w-full rounded-md bg-[#204349] py-3 px-8 text-center text-base font-semibold text-white outline-none"
 //             >
 //               Send File
 //             </button>
@@ -327,7 +327,7 @@
 //       </div>
 
 //       {/* FileFromUser Component */}
-//       <div className="flex-1 max-w-full md:max-w-[500px] bg-white rounded-lg border-[#FF9B26] border-2 border-solid shadow-lg">
+//       <div className="flex-1 max-w-full md:max-w-[500px] bg-white rounded-lg border-[#204349] border-2 border-solid shadow-lg">
 //         <FileFromUser />
 //       </div>
 //     </div>
@@ -380,16 +380,16 @@ function FileUploadForm() {
     <>
     <div className="grid grid-cols-1 gap-4 md:grid-cols-1  lg:grid-cols-2 lg:px-8">
       {/* Container for the File Upload Form */}
-      <div className="flex-1 bg-white rounded-lg  border-[#FF9B26] border-2 border-solid shadow-lg">
+      <div className="flex-1 bg-white rounded-lg  border-[#204349] border-2 border-solid shadow-lg">
         <div className="p-4">
-          <h1 className="text-[#FF9B26] font-semibold text-lg mb-4">
-            <span className="border-b-2 border-[#FF9B26]">Upload Tasks</span>
+          <h1 className="text-[#204349] font-semibold text-lg mb-4">
+            <span className="border-b-2 border-[#204349]">Upload Tasks</span>
           </h1>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="description"
-                className="block text-base mb-2 font-medium text-[#FF9B26]"
+                className="block text-base mb-2 font-medium text-[#204349]"
               >
                 Description of file:
               </label>
@@ -400,20 +400,20 @@ function FileUploadForm() {
                 placeholder="Enter file description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="w-full rounded-md border-[#FF9B26] focus:outline-none focus:ring-[#FF9B26] focus:border-[#FF9B26]  placeholder:text-[#FF9B26] bg-white py-3 px-6 text-base font-medium outline-none focus:border-[#FF9B26] focus:shadow-md"
+                className="w-full rounded-md border-[#204349] focus:outline-none focus:ring-[#204349] focus:border-[#204349]  placeholder:text-[#204349] bg-white py-3 px-6 text-base font-medium outline-none focus:border-[#204349] focus:shadow-md"
               />
             </div>
   
             <div>
-              <label className="block text-xl font-semibold text-[#FF9B26] mb-4">
+              <label className="block text-xl font-semibold text-[#204349] mb-4">
                 Upload File
               </label>
   
               <div
                 className={`relative bg-white flex min-h-[200px] items-center justify-center rounded-md border ${
                   isDragging
-                    ? "border-solid border-[#FF9B26]"
-                    : "border-dashed border-[#FF9B26]"
+                    ? "border-solid border-[#204349]"
+                    : "border-dashed border-[#204349]"
                 } p-6 text-center`}
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
@@ -431,13 +431,13 @@ function FileUploadForm() {
                   className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer"
                 >
                   <div>
-                    <span className="mb-2 block text-xl font-semibold text-[#FF9B26]">
+                    <span className="mb-2 block text-xl font-semibold text-[#204349]">
                       {isDragging ? "Drop files here" : "Drag & drop files here"}
                     </span>
-                    <span className="mb-2 block text-base font-medium text-[#FF9B26]">
+                    <span className="mb-2 block text-base font-medium text-[#204349]">
                       Or
                     </span>
-                    <span className="inline-flex rounded border border-[#e0e0e0] py-2 px-7 text-base font-medium text-white bg-[#FF9B26]">
+                    <span className="inline-flex rounded border border-[#e0e0e0] py-2 px-7 text-base font-medium text-white bg-[#204349]">
                       Browse
                     </span>
                   </div>
@@ -484,7 +484,7 @@ function FileUploadForm() {
             <div>
               <button
                 type="submit"
-                className="hover:shadow-form w-full rounded-md bg-[#FF9B26] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                className="hover:shadow-form w-full rounded-md bg-[#204349] py-3 px-8 text-center text-base font-semibold text-white outline-none"
               >
                 Send File
               </button>
@@ -494,7 +494,7 @@ function FileUploadForm() {
       </div>
   
       {/* FileFromUser Component */}
-      <div className="flex-1 bg-white rounded-lg  border-[#FF9B26] border-2 border-solid">
+      <div className="flex-1 bg-white rounded-lg  border-[#204349] border-2 border-solid">
         <FileFromUser />
       </div> 
      

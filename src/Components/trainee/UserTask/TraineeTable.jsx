@@ -129,7 +129,7 @@ function TraineeTable({ updateUsersCount }) {
         <div className="flex items-center ">
           <input
             type="checkbox"
-            className="h-4 w-4 text-[#FF9B26] focus:ring-[#FF9B26] border-none border-[#FF9B26] rounded"
+            className="h-4 w-4 text-[#204349] focus:ring-[#204349] border-#204349] border-[#204349] rounded"
             checked={selectedUsers.includes(item.name)}
             onChange={(e) => handleUserSelect(e, item.name)}
           />
@@ -139,14 +139,14 @@ function TraineeTable({ updateUsersCount }) {
             alt={`Avatar of ${item.name}`}
           />
           <div className="ml-4">
-            <div className="text-sm font-medium text-[#FF9B26]">{item.name}</div>
+            <div className="text-sm font-medium text-[#204349]">{item.name}</div>
           </div>
         </div>
       </td>
-      <td className="px-6 py-4  text-[#FF9B26] whitespace-nowrap">
+      <td className="px-6 py-4  text-[#204349] whitespace-nowrap">
         <h1>React js</h1>
       </td>
-      <td className="px-6 py-4 whitespace-nowrap text-[#FF9B26] ">{item.lastActive}</td>
+      <td className="px-6 py-4 whitespace-nowrap text-[#204349] ">{item.lastActive}</td>
       <td className="px-6 py-4 whitespace-nowrap flex items-center justify-between">
         {item.active ? (
           <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
@@ -160,7 +160,7 @@ function TraineeTable({ updateUsersCount }) {
           </span>
         )}
         <button
-          className="px-4 py-2 bg-[#FF9B26] text-white rounded-md shadow-sm hover:bg-[#FF9B26] focus:outline-none focus:ring-2 focus:ring-[#FF9B26] focus:ring-opacity-50 ml-4"
+          className="px-4 py-2 bg-[#204349] text-white rounded-md shadow-sm hover:bg-[#204349] focus:outline-none focus:ring-2 focus:ring-[#204349] focus:ring-opacity-50 ml-4"
           onClick={openModal}
         >
           Upload
@@ -171,17 +171,17 @@ function TraineeTable({ updateUsersCount }) {
 
   return (
     <div className=" mt-10 lg:m-8 bg-white shadow-xl rounded-lg">
-      <div className=" overflow-x-auto   text-lg scrollbar-thin scrollbar-track-white scrollbar-thumb-[#FF9B26] pt-4 mx-4 rounded-lg">
+      <div className=" overflow-x-auto   text-lg scrollbar-thin scrollbar-track-white scrollbar-thumb-[#204349] pt-4 mx-4 rounded-lg">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center p-4">
           <input
             type="search"
             value={searchTerm}
             onChange={handleSearchChange}
             placeholder="Search by name..."
-            className="w-full md:w-[200px] px-3 py-2 placeholder:text-[#FF9B26] bg-white border border-[#FF9B26] rounded-md shadow-sm focus:outline-none focus:ring-[#FF9B26] focus:border-[#FF9B26] sm:text-sm mb-3 md:mb-0"
+            className="w-full md:w-[200px] px-3 py-2 placeholder:text-[#204349] bg-white border border-[#204349] rounded-md shadow-sm focus:outline-none focus:ring-[#204349] focus:border-[#204349] sm:text-sm mb-3 md:mb-0"
           />
           <button
-            className="px-4 py-2 bg-[#FF9B26] text-white rounded-md shadow-sm  focus:outline-none focus:ring-2 focus:ring-[#FF9B26] focus:ring-opacity-50"
+            className="px-4 py-2 bg-[#204349] text-white rounded-md shadow-sm  focus:outline-none focus:ring-2 focus:ring-[#204349] focus:ring-opacity-50"
             onClick={handleSelectAllUsers}
           >
             Select All Users
@@ -191,16 +191,16 @@ function TraineeTable({ updateUsersCount }) {
         <table className="min-w-full divide-y divide-gray-200  ">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-6 py-4  bg-[#FF9B26] text-left text-xs font-medium text-white uppercase tracking-wider">
+              <th className="px-6 py-4  bg-[#204349] text-left text-xs font-medium text-white uppercase tracking-wider">
                 Employee
               </th>
-              <th className="px-6 py-4  bg-[#FF9B26] text-left text-xs font-medium text-white uppercase tracking-wider">
+              <th className="px-6 py-4  bg-[#204349] text-left text-xs font-medium text-white uppercase tracking-wider">
                 Role
               </th>
-              <th className="px-6 py-4  bg-[#FF9B26] text-left text-xs font-medium text-white uppercase tracking-wider">
+              <th className="px-6 py-4  bg-[#204349] text-left text-xs font-medium text-white uppercase tracking-wider">
                 Last active
               </th>
-              <th className="px-6 py-4  bg-[#FF9B26] text-left text-xs font-medium text-white uppercase tracking-wider">
+              <th className="px-6 py-4  bg-[#204349] text-left text-xs font-medium text-white uppercase tracking-wider">
                 Status
               </th>
             </tr>
@@ -214,8 +214,8 @@ function TraineeTable({ updateUsersCount }) {
       {isModalOpen && (
         <div className="fixed inset-0 z-50 overflow-auto bg-smoke-light flex justify-center items-center">
           <div className="bg-white w-full md:w-1/3 max-w-lg p-6 rounded-lg shadow-lg">
-            <h2 className="text-xl font-bold mb-4 text-[#FF9B26] ">Upload Files</h2>
-            <input type="file" className="w-full mb-4 text-[#FF9B26]" />
+            <h2 className="text-xl font-bold mb-4 text-[#204349] ">Upload Files</h2>
+            <input type="file" className="w-full mb-4 text-[#204349]" />
             <div className="flex justify-end">
               <button
                 className="px-4 py-2 bg-red-600 text-white rounded-md shadow-sm  focus:outline-none focus:ring-2 focus:ring-opacity-50"
@@ -224,7 +224,7 @@ function TraineeTable({ updateUsersCount }) {
                 Cancel
               </button>
               <button
-                className="ml-4 px-4 py-2 bg-[#FF9B26] text-white rounded-md shadow-sm hover:bg-[#FF9B26] focus:outline-none focus:ring-2 focus:ring-[#FF9B26] focus:ring-opacity-50"
+                className="ml-4 px-4 py-2 bg-[#204349] text-white rounded-md shadow-sm hover:bg-[#204349] focus:outline-none focus:ring-2 focus:ring-[#204349] focus:ring-opacity-50"
                 onClick={closeModal}
               >
                 Upload
