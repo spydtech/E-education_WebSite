@@ -25,7 +25,7 @@ const DataScienceCard = () => {
     },
     {
       imgSrc:
-        "https://img.freepik.com/free-vector/gradient-data-driven-concept-illustration_23-2149525002.jpg?t=st=1716451440~exp=1716455040~hmac=1d42424bd8241fa0f99758312693f9a8c5aaf7c2b1e20f231ff72fc5667e5f4c&w=740",
+        "https://img.freepik.com/free-vector/control-panel-concept-illustration_114360-530.jpg?t=st=1722235065~exp=1722238665~hmac=2033e453859c10ec4258b47e11fd1638e193b034843d223211e267c69b2b7bba&w=740",
       title: "Track Your Progress",
       description:
         "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Data Science concepts as you advance through the courses.",
@@ -39,7 +39,7 @@ const DataScienceCard = () => {
     },
     {
       imgSrc:
-        "https://img.freepik.com/free-vector/3d-modeling-concept-illustration_114360-2971.jpg?t=st=1716451513~exp=1716455113~hmac=f53075acf6f8e69b191cbdd1db9ccd6dc17aab991a06dd2719d319773e0b2c8a&w=740",
+        "https://img.freepik.com/free-vector/big-isolated-employee-working-office-workplace-flat-illustration_1150-41780.jpg?ga=GA1.1.1810882797.1717402309&semt=ais_user",
       title: "Earn Recognized Certifications",
       description:
         "Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.",

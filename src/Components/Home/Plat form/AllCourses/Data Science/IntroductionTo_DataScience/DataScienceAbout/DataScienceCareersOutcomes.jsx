@@ -27,21 +27,21 @@ function DataScienceCareersOutcomes() {
                 icon: (
                   <BsGraphUpArrow className="w-10 h-10 text-green-700 mb-2" />
                 ),
-                stat: "70%",
+                stat: "90%",
                 description: "Average salary hike",
               },
               {
                 icon: (
                   <FaPeopleGroup className="w-10 h-10 text-blue-700 mb-2" />
                 ),
-                stat: "150+",
+                stat: "550+",
                 description: "Hiring partners",
               },
               {
                 icon: (
                   <FcPositiveDynamic className="w-10 h-10 text-green-700 mb-2" />
                 ),
-                stat: "8/10",
+                stat: "9/10",
                 description: "Learners saw positive career growth",
               },
               {

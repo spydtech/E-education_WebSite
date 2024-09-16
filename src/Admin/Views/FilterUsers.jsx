@@ -396,7 +396,6 @@
 
 // export default UsersRolesTable;
 
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -505,20 +504,29 @@ function UsersRolesTable() {
   };
   const filteredUserData = userData.filter(
     (user) =>
-      user.userName?.toLowerCase().includes(search.toLowerCase()) && user.email &&
-      user.courses?.some(course => course.toLowerCase().includes(searchCourse.toLowerCase()))
+      user.userName?.toLowerCase().includes(search.toLowerCase()) &&
+      user.email &&
+      user.courses?.some((course) =>
+        course.toLowerCase().includes(searchCourse.toLowerCase())
+      )
   );
 
   const filteredTraineeData = traineeData.filter((trainee) =>
-    (trainee.firstName + " " + trainee.lastName).toLowerCase().includes(searchTrainee.toLowerCase())
+    (trainee.firstName + " " + trainee.lastName)
+      .toLowerCase()
+      .includes(searchTrainee.toLowerCase())
   );
   const userRows = filteredUserData.map((user) => (
     <tr key={user.userName} className="border-b hover:bg-gray-100">
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
           <div className="ml-4">
-            <div className="text-sm font-medium text-gray-900">{user.userName}</div>
-            <div className="text-sm font-medium text-gray-900">{user.email}</div>
+            <div className="text-sm font-medium text-gray-900">
+              {user.userName}
+            </div>
+            <div className="text-sm font-medium text-gray-900">
+              {user.email}
+            </div>
           </div>
         </div>
       </td>
@@ -541,7 +549,9 @@ function UsersRolesTable() {
       key={trainee.firstName + " " + trainee.lastName}
       className="flex justify-between items-center px-4 py-2 bg-gray-100 rounded-md"
     >
-      <div className="text-sm font-medium text-gray-900">{trainee.firstName + " " + trainee.lastName}</div>
+      <div className="text-sm font-medium text-gray-900">
+        {trainee.firstName + " " + trainee.lastName}
+      </div>
       <button
         className="ml-4 px-4 py-2 text-white bg-purple-500 rounded-md hover:bg-purple-600"
         onClick={() => handleAddTraineeToGroup(trainee)}
@@ -550,7 +560,6 @@ function UsersRolesTable() {
       </button>
     </div>
   ));
-
 
   return (
     <div className="overflow-x-auto">
@@ -648,7 +657,9 @@ function UsersRolesTable() {
                     className="flex justify-between items-center mb-2 p-2 border-b border-gray-200 last:border-0"
                   >
                     <div className="flex items-center">
-                      <span className="ml-4 text-gray-900">{user.userName}</span>
+                      <span className="ml-4 text-gray-900">
+                        {user.userName}
+                      </span>
                       <span className="ml-4 text-gray-900">{user.email}</span>
                     </div>
                     <button
@@ -675,8 +686,12 @@ function UsersRolesTable() {
                     className="flex justify-between items-center mb-2 p-2 border-b border-gray-200 last:border-0"
                   >
                     <div className="flex items-center">
-                      <span className="ml-4 text-gray-900">{trainee.firstName + " " + trainee.lastName}</span>
-                      <span className="ml-4 text-gray-900">{trainee.email}</span>
+                      <span className="ml-4 text-gray-900">
+                        {trainee.firstName + " " + trainee.lastName}
+                      </span>
+                      <span className="ml-4 text-gray-900">
+                        {trainee.email}
+                      </span>
                     </div>
                     <button
                       className="ml-4 px-2 py-1 text-white bg-red-500 rounded-md hover:bg-red-600"
@@ -710,7 +725,6 @@ function UsersRolesTable() {
           </table>
         </div>
       )}
-
     </div>
   );
 }
