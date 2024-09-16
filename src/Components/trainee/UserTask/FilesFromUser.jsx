@@ -104,11 +104,11 @@
 
 // //   return (
 // //    <>
-// //     <h1 className="text-[#FF9B26] p-2 font-semibold text-[20px]">
-// //   <span className="border-b-2 border-[#FF9B26]">Tasks From Trainee</span>
+// //     <h1 className="text-[#204349] p-2 font-semibold text-[20px]">
+// //   <span className="border-b-2 border-[#204349]">Tasks From Trainee</span>
 // // </h1>
 
-// //      <div className="bg-white  h-[490px] w-[500px] shadow-xl rounded-lg p-4 border-[#FF9B26]  border-2  border-solid">
+// //      <div className="bg-white  h-[490px] w-[500px] shadow-xl rounded-lg p-4 border-[#204349]  border-2  border-solid">
 // //       <div className="flex flex-col gap-4">
 // //         {files.map((file, index) => (
 // //           <div
@@ -117,7 +117,7 @@
 // //             onClick={() => handleDownload(file, index)}
 // //           >
 // //             <div className="flex items-center gap-4 flex-grow">
-// //               <FaArrowCircleDown className="text-[#FF9B26] w-8 h-8" />
+// //               <FaArrowCircleDown className="text-[#204349] w-8 h-8" />
 // //               <div className="flex flex-col flex-grow">
 // //                 <span className="text-lg font-medium text-[#07074D]">
 // //                   {file.name}
@@ -271,8 +271,8 @@
 //   return (
 //     <>
 //       <div>
-//       <h1 className="text-[#FF9B26] p-2 font-semibold text-[20px]">
-//         <span className="border-b-2 border-[#FF9B26]">Tasks From Trainee</span>
+//       <h1 className="text-[#204349] p-2 font-semibold text-[20px]">
+//         <span className="border-b-2 border-[#204349]">Tasks From Trainee</span>
 //       </h1>
 //       </div>
 
@@ -285,7 +285,7 @@
 //               onClick={() => handleDownload(file, index)}
 //             >
 //               <div className="flex items-center gap-4 flex-grow">
-//                 <FaArrowCircleDown className="text-[#FF9B26] w-8 h-8" />
+//                 <FaArrowCircleDown className="text-[#204349] w-8 h-8" />
 //                 <div className="flex flex-col flex-grow">
 //                   <span className="text-lg font-medium text-[#07074D]">
 //                     {file.name}
@@ -323,7 +323,7 @@
 //           ))}
 //         </div>
 //         <div className="mt-6 flex justify-center">
-//           <Link className="text-[#FF9B26] hover:underline">View All</Link>
+//           <Link className="text-[#204349] hover:underline">View All</Link>
 //         </div>
 //       </div>
 //     </>
@@ -351,7 +351,7 @@ const FileFromUser = ({ setSelectedUsers }) => {
       accepted: false,
     },
     {
-      name: "Raghavendra",
+      name: "Anjani",
       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdSq5Nz20K1tTq5wvQKkWjnNvHAK05jE-EtQ&s",
       type: "image",
       accepted: false,
@@ -438,8 +438,8 @@ const FileFromUser = ({ setSelectedUsers }) => {
   return (
     <>
       <div className="p-4">
-        <h1 className="text-[#FF9B26] font-semibold text-2xl">
-          <span className="border-b-2 text-[20px] border-[#FF9B26]">Tasks From Trainee</span>
+        <h1 className="text-[#204349] font-semibold text-2xl">
+          <span className="border-b-2 text-[20px] border-[#204349]">Tasks From Trainee</span>
         </h1>
       </div>
 
@@ -452,17 +452,17 @@ const FileFromUser = ({ setSelectedUsers }) => {
               onClick={() => handleDownload(file, index)}
             >
               <div className="flex items-center gap-4 flex-grow">
-                <FaArrowCircleDown className="text-[#FF9B26] w-8 h-8" />
+                <FaArrowCircleDown className="text-[#204349] w-8 h-8" />
                 <div className="flex flex-col flex-grow">
-                  <span className="text-lg font-medium text-[#FF9B26]">
+                  <span className="text-lg font-medium text-[#204349]">
                     {file.name}
                   </span>
-                  <span className="text-[#FF9B26] text-sm">
+                  <span className="text-[#204349] text-sm">
                     {file.description || "No description"}
                   </span>
                 </div>
               </div>
-              <div className="flex gap-2 mt-2 md:mt-0">
+               <div className="flex gap-2 mt-2 md:mt-0">
                 <button
                   className={`px-4 py-2 rounded-md text-white font-semibold transition-colors duration-300 ${
                     file.accepted
@@ -485,12 +485,14 @@ const FileFromUser = ({ setSelectedUsers }) => {
                 >
                   {file.rejected ? "Rejected" : "Reject"}
                 </button>
-              </div>
+              </div> 
+       
+
             </div>
           ))}
         </div>
         <div className="mt-6 flex justify-center">
-          <Link className="text-[#FF9B26] hover:underline">View All</Link>
+          <Link className="text-[#204349] hover:underline">View All</Link>
         </div>
       </div>
     </>
