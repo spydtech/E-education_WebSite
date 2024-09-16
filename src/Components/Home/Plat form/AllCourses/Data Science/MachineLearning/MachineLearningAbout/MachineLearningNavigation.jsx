@@ -6,7 +6,7 @@ import MachineLearningAbout from "./MachineLearningAbout";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for menu toggle
 import MachineLearningSyallabus from "./MachineLearningSyallabus";
 import MachineLearningIntroduction from "./MachineLearningIntroduction";
-
+import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 const DataScienceNavigation = () => {
   const sections = [
     "Introduction",
@@ -48,31 +48,71 @@ const DataScienceNavigation = () => {
 
   return (
     <>
-      <nav className="flex justify-center items-center bg-[#0098F1] rounded-t-2xl px-4 sm:px-6 py-4 ml-5 mr-5">
-        <button className="text-black text-2xl sm:hidden" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes /> : <FaBars />} 
-        </button>
-        <ul
-          className={`${
-            menuOpen ? "block" : "hidden"
-          } sm:flex flex-row text-nowrap overflow-x-auto xl:lg:md:text-[22px] text-[16px] text-[#0098f1] font-md space-y-2 sm:space-y-0 sm:space-x-4 md:ml-12 justify-center items-center`}
-          style={{ width: '100%', padding: 0, margin: 0 }}
+       <nav className="flex justify-between items-center p-2 bg-[#0098f1] shadow-xl rounded-t-2xl mb-5 lg:px-28 lg:py-3 mx-5">
+        {/* Left button */}
+        <button
+          className={`text-white ${currentSection === 0 ? "invisible" : ""}`}
+          onClick={() => handleNextSection("prev")}
         >
+          <FaAngleDoubleLeft size={24} />
+        </button>
+
+        <ul className="text-md flex justify-center items-center w-full md:justify-around">
+          {/* Show only the current section on small screens */}
+          <li className="block md:hidden">
+            <button
+              className="transition duration-300 text-white rounded"
+              onClick={() => setCurrentSection(currentSection)}
+            >
+              {sections[currentSection]}
+            </button>
+          </li>
+
+          {/* Show current, previous, and next sections on medium screens */}
           {sections.map((section, index) => (
-            <li key={index} className="text-center">
+            <li
+              key={index}
+              className={`${
+                index >= currentSection - 1 && index <= currentSection + 1
+                  ? "md:block"
+                  : "md:hidden"
+              } hidden lg:hidden`}
+            >
               <button
-                className={`transition duration-300 px-2 py-1 sm:px-4 sm:py-2 rounded ${
-                  currentSection === index
-                    ? "text-white opacity-100  underline underline-offset-8"
-                    : "text-white opacity-50 hover:opacity-100"
-                }`}
-                onClick={() => handleNextSection(index)}
+                className={`transition duration-300 text-white ${
+                  currentSection === index ? "underline underline-offset-8" : ""
+                } rounded`}
+                onClick={() => setCurrentSection(index)}
+              >
+                {section}
+              </button>
+            </li>
+          ))}
+
+          {/* Show all sections on large screens */}
+          {sections.map((section, index) => (
+            <li key={index} className="hidden lg:block">
+              <button
+                className={`transition duration-300 text-white ${
+                  currentSection === index ? "underline underline-offset-8" : ""
+                } rounded`}
+                onClick={() => setCurrentSection(index)}
               >
                 {section}
               </button>
             </li>
           ))}
         </ul>
+
+        {/* Right button */}
+        <button
+          className={`text-white ${
+            currentSection === sections.length - 1 ? "invisible" : ""
+          }`}
+          onClick={() => handleNextSection("next")}
+        >
+          <FaAngleDoubleRight size={24} />
+        </button>
       </nav>
       <div className="">
         {currentSection === 0 && <MachineLearningIntroduction />}
@@ -87,3 +127,4 @@ const DataScienceNavigation = () => {
 };
 
 export default DataScienceNavigation;
+ 

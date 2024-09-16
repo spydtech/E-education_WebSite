@@ -106,33 +106,33 @@ function AutomationTestingKeyHighights() {
 
   return (
     <>
-    <div className=" px-20 mb-20 bg-white">
-     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start justify-center">
-       <div className="w-auto h-auto md:lg:w-[500px] md:lg:h-[420px] mt-10 md:lg:pl-10 pl-0 text-xl">
-         {renderContent()}
-       </div>
-       <div className="md:lg:pl-20  pl-0">
-         <div className="pt-4">
-           <p className="font-bold  underline-offset-2 sm:w-96 underline sm:text-md text-xl p-2 text-[#f6ac14]">
-             E-Education Course Highlights
-           </p>
-         </div>
-         {data.map((item, index) => (
-           <div
-             key={index}
-             onClick={() => handleClick(index)}
-             className={`p-5 text-center  hover:cursor-pointer text-xl font-medium my-6  h-16 w-[210px] flex justify-center items-center border-2 border-opacity-15 rounded-md overflow-hidden transition-transform duration-300 transform hover:scale-105 ${
-               selectedItem === index
-                 ? "bg-[#0098f1] text-white border-none"
-                 : ""
-             }`}
-           >
-             <p className="text-center">{item.label}</p>
-           </div>
-         ))}
-       </div>
-     </div>
-   </div>
+   <div className="px-3 md:mb-4">
+      <div className="md:flex justify-around  ">
+        <div className="bg-[#0098F1] text-white  pb-5 md:w-2/5">
+          {renderContent()}
+        </div>
+        <div className="my-3">
+          <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
+            E-Education Course Highlights
+          </p>
+          {data.map((item, index) => (
+            <ul className="">
+              <li
+                key={index}
+                onClick={() => handleClick(index)}
+                className={`pt-4 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md text-center  ${
+                  selectedItem === index
+                    ? "bg-[#0098f1] text-white border-none"
+                    : ""
+                }`}
+              >
+                {item.label}
+              </li>
+            </ul>
+          ))}
+        </div>
+      </div>
+    </div>
    </>
   );
 }

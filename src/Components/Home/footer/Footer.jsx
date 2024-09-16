@@ -127,20 +127,22 @@ function FooterPart() {
                     ))}
                   </ul>
                   {section.socialIcons && (
-                    <div className="flex gap-4 mt-4">
-                      {section.socialIcons.map((social, socialIndex) => (
-                        <a
-                          key={socialIndex}
-                          href={social.Link}
-                          className="transition-colors duration-300 hover:opacity-75"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {social.icon}
-                        </a>
-                      ))}
-                    </div>
-                  )}
+ <div className="flex flex-col gap-4 mt-4 md:flex-row md:flex-wrap md:gap-4 lg:flex-nowrap lg:gap-4">
+ {section.socialIcons.map((social, socialIndex) => (
+   <a
+     key={socialIndex} // Ensure a unique key if possible (use unique identifiers if available)
+     href={social.Link}
+     className="transition-colors duration-300 hover:opacity-75 flex-shrink-0 w-full md:w-1/2 lg:w-auto flex "
+     target="_blank"
+     rel="noopener noreferrer"
+   >
+     {social.icon}
+   </a>
+ ))}
+</div>
+
+)}
+
                 </div>
               ))}
             </div>

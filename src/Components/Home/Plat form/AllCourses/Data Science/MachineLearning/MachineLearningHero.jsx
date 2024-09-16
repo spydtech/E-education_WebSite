@@ -16,11 +16,12 @@ const MachineLearningHero = () => {
     <>
       {/* first part */}
 
-      <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725874356/image_13_oi7qfs.png")' }}>
+      <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1726473509/WhatsApp_Image_2024-09-15_at_11.16.11_PM_1_uilojh.jpg")' }}>
   <div className="absolute inset-0 flex items-center justify-center">
     <p className="text-center text-white text-[20px] font-medium px-4">
       Discover how Machine Learning can transform using data and algorithms<br/>
-       to enable AI to imitate the way that humans learn, gradually improving its accuracy.
+       to enable AI to imitate the way that humans learn, gradually<br/>
+       improving its accuracy.
     </p>
   </div>
   <div className="absolute inset-0 flex items-end justify-center pb-10">
