@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { PiCertificateThin } from "react-icons/pi";
 function Certified() {
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center my-8  px-20 ">
+    <div className="flex flex-col lg:flex-row justify-center items-center my-8 pl-8  lg:px-20 ">
       <div className="hover:bg-white mb-8 lg:mb-0 lg:mr-8 w-full max-w-xs md:max-w-sm lg:max-w-md h-[250px] shadow-lg rounded-lg p-6 transform transition-transform hover:scale-105 bg-[#0098F1] group">
         <div className="flex items-start justify-start mb-4">
           <MdImportantDevices className="h-[60px] w-[60px] text-[#0098F1] bg-white group-hover:bg-[#0098F1] group-hover:text-white rounded-full p-2 transition-colors" />

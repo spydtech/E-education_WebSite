@@ -21,7 +21,7 @@ function Ui_UxKeyHighlights() {
         return (
           <div className="p-3 space-y-2">
             <p className="text-xl font-medium text-white pl-2">Overview</p>
-            <ul className="space-y-2 font-normal list-disc pl-6 text-white">
+            <ul className="space-y-2 font-normal list-disc pl-6">
               <li>Introduction to UI/UX design principles</li>
               <li>Focus on user-centered design and usability</li>
               <li>Hands-on projects and real-world applications</li>
@@ -34,7 +34,7 @@ function Ui_UxKeyHighlights() {
         return (
           <div className="p-3 space-y-2">
             <p className="text-xl font-medium text-white pl-2">Key Concepts</p>
-            <ul className="space-y-2 font-normal list-disc pl-6 text-white">
+            <ul className="space-y-2 font-normal list-disc pl-6">
               <li>User Experience (UX) design fundamentals</li>
               <li>User Interface (UI) design best practices</li>
               <li>Wireframing and prototyping techniques</li>
@@ -47,7 +47,7 @@ function Ui_UxKeyHighlights() {
         return (
           <div className="p-3 space-y-2">
             <p className="text-xl font-medium text-white pl-2">Applications</p>
-            <ul className="space-y-2 font-normal list-disc pl-6 text-white">
+            <ul className="space-y-2 font-normal list-disc pl-6">
               <li>UI/UX Designer</li>
               <li>Product Designer</li>
               <li>Interaction Designer</li>
@@ -61,7 +61,7 @@ function Ui_UxKeyHighlights() {
         return (
           <div className="p-3 space-y-2">
             <p className="text-xl font-medium text-white pl-2">Skills Developed</p>
-            <ul className="space-y-2 font-normal list-disc pl-6 text-white">
+            <ul className="space-y-2 font-normal list-disc pl-6">
               <li>Proficiency in design tools like Figma and Adobe XD</li>
               <li>Strong understanding of UX research and testing methods</li>
               <li>Ability to create user-friendly and visually appealing interfaces</li>
@@ -74,7 +74,7 @@ function Ui_UxKeyHighlights() {
         return (
           <div className="p-3 space-y-2">
             <p className="text-xl font-medium text-white pl-2">Target Audience</p>
-            <ul className="space-y-2 font-normal list-disc pl-6 text-white">
+            <ul className="space-y-2 font-normal list-disc pl-6">
               <li>Aspiring UI/UX designers looking to build their skills</li>
               <li>Professionals seeking to transition into design roles</li>
               <li>Design enthusiasts eager to learn industry best practices</li>
@@ -90,13 +90,13 @@ function Ui_UxKeyHighlights() {
   return (
     <div className="px-3 md:mb-4">
       <div className="md:flex justify-around">
-        <div className="bg-[#0098F1] text-white p-4">{renderContent()}</div>
+        <div className="bg-[#0098F1] text-white">{renderContent()}</div>
         <div className="my-3">
           <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
             E-Education Course Highlights
           </p>
           {data.map((item, index) => (
-            <ul className="list-none" key={index}>
+            <ul key={index}>
               <li
                 onClick={() => handleClick(index)}
                 className={`p-5 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md ${

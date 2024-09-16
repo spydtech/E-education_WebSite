@@ -1,3 +1,58 @@
+// import React from "react";
+// import programmer from "../../../../../assets/dataAnalatics/programmer.jpg";
+// import assistance from "../../../../../assets/dataAnalatics/assistance.jpg";
+
+// const BasicJavaScriptAbout = () => {
+//   const javascriptInfo = [
+//     {
+//       title: "Student Support",
+//       description:
+//         "Learn about the latest techniques and get support for courses 24/7.",
+//       imgSrc: programmer,
+//       imgAlt: "student-support",
+//     },
+//     {
+//       title: "Career Assistance",
+//       description:
+//         "Gain expertise in continuous network monitoring to detect anomalies and respond to incidents in real-time.",
+//       imgSrc: assistance,
+//       imgAlt: "career-assistance",
+//     },
+//   ];
+
+//   return (
+//     <div className="mx-auto h-auto w-full mb-20 px-4 md:px-10 bg-white">
+//       <div className="py-2 my-10">
+//         <p className="text-2xl text-center font-bold text-[#f6ac14]">
+//           Discover the JavaScript Program
+//         </p>
+//       </div>
+
+//       <div className="flex flex-wrap justify-center items-center pb-6">
+//         {javascriptInfo.map((item, index) => (
+//           <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+//             <div className="bg-white h-[400px] rounded-lg shadow-lg overflow-hidden">
+//               <img
+//                 className="w-full h-52 object-cover object-center"
+//                 src={item.imgSrc}
+//                 alt={item.imgAlt}
+//               />
+//               <div className="p-4">
+//                 <h2 className="text-xl font-bold mb-2">{item.title}</h2>
+//                 <p className="text-gray-700">{item.description}</p>
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default BasicJavaScriptAbout;
+
+
+
 import React from "react";
 import programmer from "../../../../../assets/dataAnalatics/programmer.jpg";
 import assistance from "../../../../../assets/dataAnalatics/assistance.jpg";
@@ -21,26 +76,27 @@ const BasicJavaScriptAbout = () => {
   ];
 
   return (
-    <div className="mx-auto h-auto w-full mb-20 px-4 md:px-10 bg-white">
-      <div className="py-2 my-10">
-        <p className="text-2xl text-center font-bold text-[#f6ac14]">
+    <div className="px-3 text-center">
+      <div className="">
+        <p className="md:text-2xl font-bold  text-[#0098F1]">
           Discover the JavaScript Program
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center pb-6">
+      <div className="md:flex justify-around">
         {javascriptInfo.map((item, index) => (
-          <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-            <div className="bg-white h-[400px] rounded-lg shadow-lg overflow-hidden">
-              <img
-                className="w-full h-52 object-cover object-center"
-                src={item.imgSrc}
-                alt={item.imgAlt}
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-bold mb-2">{item.title}</h2>
-                <p className="text-gray-700">{item.description}</p>
-              </div>
+          <div
+            key={index}
+            className="md:w-80 lg:w-2/5 bg-white rounded-lg shadow-lg p-3 my-4"
+          >
+            <img
+              className="object-cover object-center rounded-md"
+              src={item.imgSrc}
+              alt={item.imgAlt}
+            />
+            <div className="my-3">
+              <h2 className="md:text-xl font-bold">{item.title}</h2>
+              <p className="text-gray-700">{item.description}</p>
             </div>
           </div>
         ))}
