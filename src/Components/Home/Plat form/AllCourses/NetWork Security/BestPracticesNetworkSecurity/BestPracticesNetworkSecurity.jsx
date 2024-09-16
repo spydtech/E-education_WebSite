@@ -16,7 +16,7 @@ const BestPracticesNetworkSecurity = () => {
       <BestPracticesNetworkSecurityCard />
       <BestPracticesNetworkSecurityNavigation />
       <BestPracticesNetworkSecurityFoot/>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
