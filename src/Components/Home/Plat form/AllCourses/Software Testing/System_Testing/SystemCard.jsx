@@ -70,11 +70,11 @@ const SystemTestingCard = () => {
               className="group border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-                <div className="h-[210px]">
+              <div className="h-[180px]">
                   <img
-                    className="w-full h-full object-cover"
+                    className="w-full h-full bg-cover"
                     src={course.imgSrc}
-                    alt={`Project ${index + 1}`}
+                    alt={`Course ${index + 1}`}
                   />
                 </div>
                 <div className="p-4 flex flex-col items-center justify-between">

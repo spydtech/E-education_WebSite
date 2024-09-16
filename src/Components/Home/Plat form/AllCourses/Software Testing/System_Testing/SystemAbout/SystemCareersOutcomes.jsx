@@ -7,7 +7,7 @@ function SystemTestingCareersOutcomes() {
   return (
     <>
       <div className="bg-white px-20 py-5 mb-20">
-        <div className="flex flex-col lg:flex-row items-start justify-between">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
           {/* Left Content */}
           <div className="mb-8 lg:mb-0 lg:w-1/2">
             <div className="text-start">

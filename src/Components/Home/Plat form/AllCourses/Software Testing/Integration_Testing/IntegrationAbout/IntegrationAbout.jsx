@@ -22,7 +22,7 @@ const IntigrationAbout = () => {
 
   return (
     <div className="mx-auto h-auto w-full mb-20 px-4 md:px-10 bg-white">
-      <div className="py-2 my-10">
+      <div className="py-2 my-2">
         <p className="text-2xl text-center font-bold text-[#0098f1]">
           Discover the Software Testing Program
         </p>
