@@ -107,12 +107,12 @@ function DataScienceKeyHighlights() {
   return (
     <div className=" px-20 mb-20 bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start justify-center">
-        <div className="w-auto h-auto md:lg:w-[500px] md:lg:h-[420px] mt-10 md:lg:pl-10 pl-0 text-xl">
+        <div className="w-auto h-auto md:lg:w-[500px] md:lg:h-[420px] mt-10 md:lg:pl-10 pl-6 text-xl">
           {renderContent()}
         </div>
         <div className="md:lg:pl-20 pl-0">
-          <div className="pt-4">
-            <p className="font-bold underline-offset-2 underline text-xl p-2 text-[#f6ac14]">
+          <div className="pt-4 ">
+            <p className="font-bold underline-offset-2  underline text-xl p-2 text-[#f6ac14]">
               E-Education Course Highlights
             </p>
           </div>
@@ -120,7 +120,7 @@ function DataScienceKeyHighlights() {
             <div
               key={index}
               onClick={() => handleClick(index)}
-              className={`p-5 text-center hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-[210px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden transition-transform duration-300 transform hover:scale-105 ${
+              className={`p-5 text-center hover:cursor-pointer text-xl font-medium my-6 mx-2 h-16 w-[210px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden transition-transform duration-300 transform hover:scale-105 ${
                 selectedItem === index
                   ? "bg-[#0098f1] text-white border-none"
                   : ""

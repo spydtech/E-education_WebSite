@@ -109,7 +109,7 @@ function DataScienceIntroduction() {
           <div className="flex justify-between mt-4 lg:mt-0">
             <button
               onClick={goToPreviousSlide}
-              className="hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
+              className="hover:text-pink-700 text-black font-bold py-2  rounded"
             >
               Previous
             </button>
