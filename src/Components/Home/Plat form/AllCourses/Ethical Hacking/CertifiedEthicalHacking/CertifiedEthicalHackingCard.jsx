@@ -1,9 +1,15 @@
 import React from "react";
+import img1 from '../../../../../../assetss/professional/ethicalHacking/certified/image1.jpg'
+import img2 from '../../../../../../assetss/professional/ethicalHacking/certified/image2.jpg'
+import img3 from '../../../../../../assetss/professional/ethicalHacking/certified/image3.jpg'
+import img4 from '../../../../../../assetss/professional/ethicalHacking/certified/image4.jpg'
+import img5 from '../../../../../../assetss/professional/ethicalHacking/certified/image5.jpg'
+import img6 from '../../../../../../assetss/professional/ethicalHacking/certified/image6.jpg'
 
 const CertifiedEthicalHackingCard = () => {
   const courseData = [
     {
-      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
+      imgSrc: img1,
       title: "Explore Course Catalog",
       description:
         "Browse our extensive catalog of Ethical Hacking courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
@@ -11,7 +17,7 @@ const CertifiedEthicalHackingCard = () => {
       gradientTo: "to-blue-500",
     },
     {
-      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
+      imgSrc: img2,
       title: "Enroll in Foundational Courses",
       description:
         "Start with foundational courses covering basic concepts, algorithms, and programming languages essential for Ethical Hacking.",
@@ -19,7 +25,7 @@ const CertifiedEthicalHackingCard = () => {
       gradientTo: "to-red-500",
     },
     {
-      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
+      imgSrc: img3,
       title: "Practice with Real-world Projects",
       description:
         "Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience in data analysis, model building, and evaluation under the guidance of industry experts.",
@@ -27,7 +33,7 @@ const CertifiedEthicalHackingCard = () => {
       gradientTo: "to-purple-500",
     },
     {
-      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
+      imgSrc: img4,
       title: "Track Your Progress",
       description:
         "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Ethical Hacking concepts as you advance through the courses.",
@@ -35,7 +41,7 @@ const CertifiedEthicalHackingCard = () => {
       gradientTo: "to-indigo-500",
     },
     {
-      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
+      imgSrc: img5,
       title: "Specialize and Advance",
       description:
         "Choose specialized tracks or advanced courses to delve deeper into specific areas of Ethical Hacking, such as penetration testing, network security, or digital forensics. Customize your learning path to align with your interests and career goals.",
@@ -43,7 +49,7 @@ const CertifiedEthicalHackingCard = () => {
       gradientTo: "to-yellow-500",
     },
     {
-      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
+      imgSrc: img6,
       title: "Earn Recognized Certifications",
       description:
         "Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.",
