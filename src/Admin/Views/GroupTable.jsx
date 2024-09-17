@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios'
+import axios from "axios";
 
 function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -10,9 +10,9 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   const [userSearchQuery, setUserSearchQuery] = useState("");
   const [userSearchQueryByCourse, setUserSearchQueryByCourse] = useState("");
   const [showWarning, setShowWarning] = useState(false);
-  const jwt = localStorage.getItem("jwt")
-  const [userData, setUserData] = useState([])
-  const [traineeData, setTraineeData] = useState([])
+  const jwt = localStorage.getItem("jwt");
+  const [userData, setUserData] = useState([]);
+  const [traineeData, setTraineeData] = useState([]);
 
   useEffect(() => {
     axios
@@ -55,7 +55,10 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   }, [jwt]);
 
   const traineeName = trainees.map((trainee) => (
-    <tr key={trainee.firstName + " " + trainee.lastName} className="border-b hover:bg-gray-100">
+    <tr
+      key={trainee.firstName + " " + trainee.lastName}
+      className="border-b hover:bg-gray-100"
+    >
       <td className="whitespace-nowrap">
         <div className="flex items-center">
           <div className="ml-4 flex">
@@ -107,7 +110,9 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
 
   const setTrainee = (trainee) => {
     const traineeExists = trainees.some(
-      (existingTrainee) => existingTrainee.firstName + existingTrainee.lastName === trainee.firstName + trainee.lastName
+      (existingTrainee) =>
+        existingTrainee.firstName + existingTrainee.lastName ===
+        trainee.firstName + trainee.lastName
     );
     if (traineeExists) {
       setShowWarning(true);
@@ -128,22 +133,26 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   );
 
   const filteredTrainees = traineeData.filter((trainee) =>
-    (trainee.firstName + " " + trainee.lastName).toLowerCase().includes(traineeSearchQuery.toLowerCase())
+    (trainee.firstName + " " + trainee.lastName)
+      .toLowerCase()
+      .includes(traineeSearchQuery.toLowerCase())
   );
 
-  const filteredAddUsers = userData
-    .filter(
-      (user) =>
-        user.userName.toLowerCase().includes(userSearchQuery.toLowerCase()) &&
-        user.courses.some(course => course.toLowerCase().includes(userSearchQueryByCourse.toLowerCase())
-        )
-    )
+  const filteredAddUsers = userData.filter(
+    (user) =>
+      user.userName.toLowerCase().includes(userSearchQuery.toLowerCase()) &&
+      user.courses.some((course) =>
+        course.toLowerCase().includes(userSearchQueryByCourse.toLowerCase())
+      )
+  );
 
   const traineeRows = filteredTrainees.map((trainee) => (
-    <tr key={trainee.firstName + " " + trainee.lastName} className="border-b hover:bg-gray-100 ">
+    <tr
+      key={trainee.firstName + " " + trainee.lastName}
+      className="border-b hover:bg-gray-100 "
+    >
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
-
           <div className="ml-4">
             <div className="text-sm font-medium text-gray-900">
               {trainee.firstName + " " + trainee.lastName}
@@ -168,7 +177,9 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
           <div className="ml-4">
-            <div className="text-sm font-medium text-gray-900">{user.userName}</div>
+            <div className="text-sm font-medium text-gray-900">
+              {user.userName}
+            </div>
             <div className="text-sm text-gray-500">{user.email}</div>
           </div>
         </div>
@@ -190,7 +201,9 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
           <div className="ml-4">
-            <div className="text-sm font-medium text-gray-900">{user.userName}</div>
+            <div className="text-sm font-medium text-gray-900">
+              {user.userName}
+            </div>
             <div className="text-sm text-gray-500">{user.email}</div>
           </div>
         </div>

@@ -22,9 +22,9 @@ const Tabs = () => {
   }, [numberOfCourses]);
 
   const activeClasses =
-    "bg-[#FF9B26] text-white border-l border-t border-r rounded-t";
+    "bg-[#204349] text-white border-l border-t border-r rounded-t";
   const inactiveClasses =
-    "text-[#FF9B26] hover:bg-[#FF9B26] hover:text-white";
+    "text-[#204349] hover:bg-[#204349] hover:text-white";
 
   const handleTabClick = (tabNumber) => {
     setOpenTab(tabNumber);
@@ -34,7 +34,7 @@ const Tabs = () => {
   return (
     <div className="p-4 sm:p-6 overflow-x-auto bg-white">
       <div className="flex items-center justify-between mb-4">
-      <h1 className="text-[#FF9B26] font-bold text-[16px] sm:text-xl md:text-3xl p-2 sm:p-4">
+      <h1 className="text-[#204349] font-semibold text-[16px] sm:text-xl md:text-3xl p-2 sm:p-4">
   Trainee name - Sumithra
 </h1>
 
@@ -44,7 +44,7 @@ const Tabs = () => {
         >
           <MenuIcon className="w-6 h-6 text-[#FF9B26]" />
         </button> */}
-        <p className="text-[#FF9B26] text-sm sm:text-base">
+        <p className="text-[#204349] text-sm sm:text-base">
           Number of Courses: {numberOfCourses}
         </p>
       </div> 
@@ -52,9 +52,9 @@ const Tabs = () => {
           className="block sm:hidden p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <MenuIcon className="w-6 h-6 text-[#FF9B26]" />
+          <MenuIcon className="w-6 h-6 text-[#204349]" />
         </button>
-      <div className={`flex flex-col sm:flex-row border-b ${isMenuOpen ? 'block' : 'hidden'} sm:block`}>
+      <div className={`flex flex-col  sm:flex-row border-b ${isMenuOpen ? 'block' : 'hidden'} sm:block`}>
         <ul className="flex flex-col sm:flex-row">
           {courses.map((course) => (
             <li

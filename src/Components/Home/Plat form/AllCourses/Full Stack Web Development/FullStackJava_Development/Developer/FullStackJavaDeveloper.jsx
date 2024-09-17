@@ -86,15 +86,12 @@ const FullStackJavaDeveloper = () => {
             </div>
           </div>
         </div>
-
       </div>
     </>
   );
 };
 
 export default FullStackJavaDeveloper;
-
-
 
 // import React from "react";
 // import { FaArrowAltCircleRight } from "react-icons/fa";

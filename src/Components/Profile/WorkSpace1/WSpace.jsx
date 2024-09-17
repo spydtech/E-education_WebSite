@@ -1,229 +1,3 @@
-// /* eslint-disable jsx-a11y/alt-text */
-// import React, { useState } from "react";
-// import Navbar from "../../Navbar";
-// import Certificate121 from "../WorkSpace1/Certificate121";
-// import IMG from "../../../assets/WorkSpace.png";
-// import Footer from "../../Home/footer/Footer";
-
-// function WSpace() {
-//   const [isBrowseProjectOpen, setIsBrowseProjectOpen] = useState(false);
-//   const [completedTasks, setCompletedTasks] = useState(0);
-//   const [uploadedFiles, setUploadedFiles] = useState({});
-
-//   const ExplorBrowseProject = [
-//     {
-//       image:
-//         "https://t3.ftcdn.net/jpg/02/88/80/38/360_F_288803822_0CJ8L3gr6w6nGnUeje6pCllCX7s986xz.jpg",
-//       title: "Data Science",
-//       timing: "7-9 hours (self-learning)",
-//       description:
-//         "Discover the transformative world of data science, from machine learning to big data analytics.",
-//     },
-//     {
-//       image:
-//         "https://t4.ftcdn.net/jpg/02/86/02/67/360_F_286026740_xWkobcEk5g38qrH7cpfeImAnlUUSIrc5.jpg",
-//       title: "Business",
-//       timing: "5-7 hours (self-learning)",
-//       description:
-//         "Navigate the complexities of business strategy, finance, and leadership with expert-led courses.",
-//     },
-//     {
-//       image:
-//         "https://t3.ftcdn.net/jpg/06/17/88/90/360_F_617889061_ZO5zsPTfTmxTfcMG8spbnPHf4wfJMGLY.jpg",
-//       title: "Computer Science",
-//       timing: "6-8 hours (self-learning)",
-//       description:
-//         "Embark on a journey through algorithms, programming, and emerging technologies in computer science.",
-//     },
-//     {
-//       image:
-//         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnxlauEo4V1_Bnb172cQTKE-i1Uc_3nBcf7tuB9MqqHhKgxLftD-g1aFIJi7PqVMJrWpc&usqp=CAU",
-//       title: "Health",
-//       timing: "4-6 hours (self-learning)",
-//       description:
-//         "Explore the latest in healthcare innovations, wellness practices, and medical advancements.",
-//     },
-//     {
-//       image:
-//         "https://videohive.img.customer.envatousercontent.com/files/229501069/Preview_Image_Di.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=9d60d3dfa35cee5db662c381e886696f",
-//       title: "Social Science",
-//       timing: "5-7 hours (self-learning)",
-//       description:
-//         "Uncover insights into human behavior, societies, and cultural phenomena across diverse disciplines.",
-//     },
-//     {
-//       image:
-//         "https://t4.ftcdn.net/jpg/02/86/02/67/360_F_286026740_xWkobcEk5g38qrH7cpfeImAnlUUSIrc5.jpg",
-//       title: "Personal Development",
-//       timing: "4-6 hours (self-learning)",
-//       description:
-//         "Invest in your personal growth and self-improvement through tailored development courses.",
-//     },
-//     {
-//       image:
-//         "https://ats.org/wp-content/uploads/2020/04/Index-High-Tech-Future-2400x1374.jpg",
-//       title: "Arts and Humanities",
-//       timing: "3-5 hours (self-learning)",
-//       description:
-//         "Immerse yourself in the beauty of arts, literature, and philosophical ideas from around the world.",
-//     },
-//   ];
-
-//   const openBrowseProject = () => {
-//     setIsBrowseProjectOpen(true);
-//   };
-
-//   const closeBrowseProject = () => {
-//     setIsBrowseProjectOpen(false);
-//   };
-
-//   const handleFileUpload = (index, event) => {
-//     const file = event.target.files[0];
-//     if (file) {
-//       setUploadedFiles((prevFiles) => ({
-//         ...prevFiles,
-//         [index]: file,
-//       }));
-//       setCompletedTasks((prevCount) => prevCount + 1);
-//     }
-//   };
-
-//   const progressBarWidth = `${
-//     (completedTasks / ExplorBrowseProject.length) * 100
-//   }%`;
-
-//   const awardCertificate = () => {
-//     if (completedTasks === ExplorBrowseProject.length) {
-//       alert(
-//         "Congratulations! You've completed all tasks and earned the certificate!"
-//       );
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <Navbar />
-//       <h1 className="text-2xl font-bold py-10 px-10  text-[#1e3a8a] text-center hover:underline">
-//         WorkSpace
-//       </h1>
-//       <div className="flex flex-col md:flex-row">
-//         <div className="px-10 ">
-//           <div className="p-5 border bg-white md:w-[500px] md:h-[250px] h-auto w-auto rounded text-gray-500">
-//             <div className="flex items-center">
-//               <div>
-//                 <button
-//                   onClick={openBrowseProject}
-//                   href="#"
-//                   className="font-bold text-lg leading-none hover:underline text-gray-900 hover:text-indigo-600 transition duration-500 ease-in-out"
-//                 >
-//                   Browse your Projects
-//                 </button>
-
-//                 {isBrowseProjectOpen && (
-//                   <div className="fixed rounded-md inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
-//                     <div className="relative w-auto max-w-3xl mx-auto my-6 overflow-y-auto max-h-full">
-//                       <div className="bg-[#023047] rounded-lgs">
-//                         <div className="text-white text-2xl p-2">
-//                           Browse Projects
-//                         </div>
-//                         <div className="text-white p-2">
-//                           Projects give you real-world challenges to solve with
-//                           industry tools, and produce work samples that help you
-//                           demonstrate your capabilities and stand out.
-//                         </div>
-//                       </div>
-//                       <div className="bg-white rounded-lg shadow-lg relative flex flex-col p-8">
-//                         <div className="grid grid-cols-1 gap-4">
-//                           {ExplorBrowseProject.map((course, index) => (
-//                             <div
-//                               key={index}
-//                               className="hover:shadow-2xl border h-[150px]"
-//                             >
-//                               <div className="flex justify-start items-start flex-row gap-8">
-//                                 <div className="md:w-36 h-[35px] w-28">
-//                                   <img
-//                                     src={course.image}
-//                                     alt={course.title}
-//                                     className="rounded-lg"
-//                                   />
-//                                 </div>
-//                                 <div className="md:w-[500px] flex justify-center items-start flex-col pt-3 font-semibold text-gray-600 text-sm">
-//                                   <div>{course.description}</div>
-//                                   <div className="flex items-center gap-2">
-//                                     <div>{course.title}</div>
-//                                     <input
-//                                       type="file"
-//                                       onChange={(event) =>
-//                                         handleFileUpload(index, event)
-//                                       }
-//                                       className="hidden"
-//                                       id={`file-upload-${index}`}
-//                                     />
-//                                     <label
-//                                       htmlFor={`file-upload-${index}`}
-//                                       className="border-2 text-white bg-blue-900 p-2 cursor-pointer"
-//                                     >
-//                                       {uploadedFiles[index]
-//                                         ? "Completed"
-//                                         : "Upload file"}
-//                                     </label>
-//                                   </div>
-//                                 </div>
-//                               </div>
-//                             </div>
-//                           ))}
-//                         </div>
-//                         <div className="mt-4 text-white">
-//                           <button
-//                             className="bg-blue-800 p-2 w-[100px] text-white hover:bg-black"
-//                             onClick={() => {
-//                               closeBrowseProject();
-//                               awardCertificate();
-//                             }}
-//                           >
-//                             Close
-//                           </button>
-//                         </div>
-//                       </div>
-//                     </div>
-//                   </div>
-//                 )}
-//                 <h2 className="text-lg font-semibold">
-//                   Showcase your skills to recruiters with job-relevant projects
-//                 </h2>
-//                 <p>
-//                   Add projects here to demonstrate your technical expertise and
-//                   ability to solve real-world problems.
-//                 </p>
-
-//                 <h1 className="text-2xl text-[#581c87] font-semibold">
-//                   Work Progress
-//                 </h1>
-//                 <div className="w-full h-4 bg-gray-200 rounded-lg mt-4 relative">
-//                   <div
-//                     className="h-full bg-blue-500 rounded-lg"
-//                     style={{
-//                       width: progressBarWidth,
-//                       transition: "width 0.5s",
-//                     }}
-//                   ></div>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//         <div>
-//           <img src={IMG} />
-//         </div>
-//       </div>
-
-//       <Certificate121 />
-//       <Footer />
-//     </div>
-//   );
-// }
-
-// export default WSpace;
 import React, { useState, useEffect } from "react";
 import Navbar from "../../Navbar";
 import FileList from "../../trainee/UserTask/FilesFromUser";
@@ -232,7 +6,7 @@ import Certificate121 from "../WorkSpace1/Certificate121";
 // import IMG from "../../assets/WorkSpace.png";
 // import FooterPart from "../Home/footer/Footer";
 
-import IMG from "../../../assets/WorkSpace.png";
+import IMG from "../../../assets/Wspace.png";
 import Footer from "../../Home/footer/Footer";
 
 import { FaArrowCircleDown } from "react-icons/fa";
@@ -386,262 +160,257 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
   const progressBarWidth = `${(Status / files.length) * 100}%`; // Calculate width based on Status
 
   return (
-    <div>
+    <div className="">
       <Navbar />
-      <h1 className="text-2xl font-bold py-10 px-10 text-[#1e3a8a] text-center hover:underline">
+      {/* <h1 className="text-2xl font-bold py-10 px-10 text-[#1e3a8a] text-center hover:underline">
         WorkSpace
-      </h1>
-      <p>{Status}</p>
-      <div className="flex flex-col md:flex-row">
-        <div className="px-10 ">
-          <div className="p-5 border bg-white md:w-[500px] md:h-[250px] h-auto w-auto rounded text-gray-500">
-            <div className="flex items-center">
-              <div>
-                <button
-                  onClick={openBrowseProject}
-                  href="#"
-                  className="font-bold text-lg leading-none hover:underline text-gray-900 hover:text-indigo-600 transition duration-500 ease-in-out"
-                >
-                  Browse your Projects
-                </button>
+      </h1> */}
+      {/* <p className="">{Status}</p> */}
+      <div className="flex justify-center items-center">
+        <div className="flex flex-col-reverse md:flex-row justify-center  md:items-start items-center md:justify-between  p-4">
+          <div className="p-4 border bg-white lg:w-[500px] w-[300px]  h-[340px]  mt-10  rounded-lg  shadow-sm-light shadow-[#0098f1]">
+            <div className="flex items-center ">
+              <div className=" h-[300px] space-y-16">
+                <div className="">
+                  <button
+                    onClick={openBrowseProject}
+                    href="#"
+                    className="font-bold py-4 text-xl leading-none hover:underline bg-gradient-to-r from-[#0098f1] to-[#F19E22] bg-clip-text text-transparent transition duration-500 ease-in-out"
+                  >
+                    Browse your Projects
+                  </button>
 
-                {isBrowseProjectOpen && (
-                  <div className="fixed rounded-md inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
-                    <div className="relative w-auto max-w-3xl mx-auto my-6 overflow-y-auto max-h-full">
-                      <div className="bg-[#023047] rounded-lgs">
-                        <div className="text-white text-2xl p-2">
-                          Browse Projects
+                  {isBrowseProjectOpen && (
+                    <div className="fixed rounded-md inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
+                      <div className="relative h-96 w-auto max-w-3xl m-4 overflow-y-auto max-h-full">
+                        <div className="bg-[#0098f1] rounded-lg">
+                          <div className=" text-white text-xl p-2">
+                            Browse Projects
+                          </div>
+                          <div className="text-white lg:text-lg text-sm p-2">
+                            Projects give you real-world challenges to solve
+                            with industry tools, and produce work samples that
+                            help you demonstrate your capabilities and stand
+                            out.
+                          </div>
                         </div>
-                        <div className="text-white p-2">
-                          Projects give you real-world challenges to solve with
-                          industry tools, and produce work samples that help you
-                          demonstrate your capabilities and stand out.
-                        </div>
-                      </div>
-                      <div className="bg-white rounded-lg shadow-lg relative flex flex-col p-8">
-                        <div className="mx-auto w-full h-[490px] max-w-[450px] bg-gray-100">
-                          <form className="py-4 px-9" onSubmit={handleSubmit}>
-                            <div className="mb-5">
-                              <label
-                                htmlFor="description"
-                                className="mb-3 block text-base font-medium text-[#07074D]"
-                              >
-                                Description of file:
-                              </label>
-                              <input
-                                type="text"
-                                name="description"
-                                id="description"
-                                placeholder="Enter file description"
-                                value={description}
-                                onChange={(e) => setDescription(e.target.value)}
-                                className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                              />
-                            </div>
-
-                            <div className="mb-6 pt-4">
-                              <label className="mb-5 block text-xl font-semibold text-[#07074D]">
-                                Upload File
-                              </label>
-
-                              <div
-                                className={`relative bg-white flex min-h-[200px] items-center justify-center rounded-md border ${
-                                  isDragging
-                                    ? "border-solid border-[#6A64F1]"
-                                    : "border-dashed border-[#e0e0e0]"
-                                } p-12 text-center`}
-                                onDragOver={handleDragOver}
-                                onDragLeave={handleDragLeave}
-                                onDrop={handleDrop}
-                              >
-                                <input
-                                  type="file"
-                                  name="file"
-                                  id="file"
-                                  className="sr-only"
-                                  onChange={handleFileChange}
-                                />
+                        <div className="bg-white  relative flex flex-col p-4 lg:p-8">
+                          <div className="mx-auto w-full h-auto max-w-[450px] bg-gray-100  shadow-sm-light shadow-[#0098f1]">
+                            <form className="py-4 px-9" onSubmit={handleSubmit}>
+                              <div className="mb-5">
                                 <label
-                                  htmlFor="file"
-                                  className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer"
+                                  htmlFor="description"
+                                  className="mb-3 block text-lg font-medium text-[#0098f1]"
                                 >
-                                  <div>
-                                    <span className="mb-2 block text-xl font-semibold text-[#07074D]">
-                                      {isDragging
-                                        ? "Drop files here"
-                                        : "Drag & drop files here"}
-                                    </span>
-                                    <span className="mb-2 block text-base font-medium text-[#6B7280]">
-                                      Or
-                                    </span>
-                                    <span className="inline-flex rounded border border-[#e0e0e0] py-2 px-7 text-base font-medium text-[#07074D]">
-                                      Browse
-                                    </span>
-                                  </div>
+                                  Description of file:
                                 </label>
+                                <input
+                                  type="text"
+                                  name="description"
+                                  id="description"
+                                  placeholder="Enter file description"
+                                  value={description}
+                                  onChange={(e) =>
+                                    setDescription(e.target.value)
+                                  }
+                                  className="w-full rounded-md border border-[#0098f1] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#0098f1] focus:shadow-md"
+                                />
                               </div>
 
-                              {selectedFile && (
-                                <div className="mt-5 rounded-md bg-[#F5F7FB] py-4 px-8">
-                                  <div className="flex items-center justify-between">
-                                    <span className="truncate pr-3 text-base font-medium text-[#07074D]">
-                                      {selectedFile.name}
-                                    </span>
-                                    <button
-                                      type="button"
-                                      className="text-[#07074D]"
-                                      onClick={() => setSelectedFile(null)}
-                                    >
-                                      <svg
-                                        width="10"
-                                        height="10"
-                                        viewBox="0 0 10 10"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <path
-                                          fillRule="evenodd"
-                                          clipRule="evenodd"
-                                          d="M0.279337 0.279338C0.651787 -0.0931121 1.25565 -0.0931121 1.6281 0.279338L9.72066 8.3719C10.0931 8.74435 10.0931 9.34821 9.72066 9.72066C9.34821 10.0931 8.74435 10.0931 8.3719 9.72066L0.279337 1.6281C-0.0931125 1.25565 -0.0931125 0.651788 0.279337 0.279338Z"
-                                          fill="currentColor"
-                                        />
-                                        <path
-                                          fillRule="evenodd"
-                                          clipRule="evenodd"
-                                          d="M0.279337 9.72066C-0.0931125 9.34821 -0.0931125 8.74435 0.279337 8.3719L8.3719 0.279338C8.74435 -0.0931127 9.34821 -0.0931123 9.72066 0.279338C10.0931 0.651787 10.0931 1.25565 9.72066 1.6281L1.6281 9.72066C1.25565 10.0931 0.651787 10.0931 0.279337 9.72066Z"
-                                          fill="currentColor"
-                                        />
-                                      </svg>
-                                    </button>
-                                  </div>
-                                </div>
-                              )}
-                            </div>
+                              <div className="mb-6 pt-4">
+                                <label className="mb-5 block text-lg font-semibold text-[#0098f1]">
+                                  Upload File
+                                </label>
 
-                            <div>
-                              <button
-                                type="submit"
-                                className="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
-                              >
-                                Send File
-                              </button>
-                            </div>
-                          </form>
-                        </div>
-                        <div className="flex mt-12 bg-gray-100 h-[480px] w-[500px] flex-col lg:w-4/6 sm:mx-auto sm:mb-2 -mx-2 p-4">
-                          <p className="block text-xl font-semibold text-[#07074D]">
-                            Tasks From Trainee
-                          </p>
-                          {files.map((file, index) => (
-                            <div className="p-2 sm:w-1/2 w-full" key={index}>
-                              <div
-                                className="bg-gray-100 rounded flex p-4 h-full cursor-pointer items-center justify-between"
-                                onClick={() => handleDownload(file, index)}
-                              >
-                                <div className="flex items-center">
-                                  <FaArrowCircleDown className="w-[40px] h-[50px] mr-2" />
-                                  <div className="flex flex-col">
-                                    <span className="font-medium">
-                                      {file.name}
-                                    </span>
-                                    <span className="text-gray-500 text-sm">
-                                      {file.description}
-                                    </span>
-                                  </div>
+                                <div
+                                  className={`relative bg-white flex min-h-[200px] items-center justify-center rounded-md border ${
+                                    isDragging
+                                      ? "border-solid border-[#6A64F1]"
+                                      : "border-dashed border-[#e0e0e0]"
+                                  }  p-12 text-center`}
+                                  onDragOver={handleDragOver}
+                                  onDragLeave={handleDragLeave}
+                                  onDrop={handleDrop}
+                                >
+                                  <input
+                                    type="file"
+                                    name="file"
+                                    id="file"
+                                    className="sr-only"
+                                    onChange={handleFileChange}
+                                  />
+                                  <label
+                                    htmlFor="file"
+                                    className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer"
+                                  >
+                                    <div>
+                                      <span className="mb-2 block text-lg font-semibold text-[#0098f1]">
+                                        {isDragging
+                                          ? "Drop files here"
+                                          : "Drag & drop files here"}
+                                      </span>
+                                      <span className="mb-2 block text-base font-medium text-[#0098f1]">
+                                        Or
+                                      </span>
+                                      <span className="inline-flex rounded border border-[#0098f1] py-2 px-7 text-base font-medium text-[#0098f1]">
+                                        Browse
+                                      </span>
+                                    </div>
+                                  </label>
                                 </div>
-                                <div className="flex items-center space-x-2 ml-20">
-                                  {fileStatuses[index] === "accepted" ? (
-                                    <button
-                                      className="bg-green-500 text-white px-3 py-1 rounded"
-                                      onClick={(e) => handleAccept(index, e)}
-                                    >
-                                      Completed
-                                    </button>
-                                  ) : fileStatuses[index] === "rejected" ? (
-                                    <button
-                                      className="bg-red-500 text-white px-3 py-1 rounded"
-                                      onClick={(e) => handleReject(index, e)}
-                                    >
-                                      Rejected
-                                    </button>
-                                  ) : (
-                                    <>
+
+                                {selectedFile && (
+                                  <div className=" rounded-md bg-[#F5F7FB] py-4 px-8">
+                                    <div className="flex items-center justify-between">
+                                      <span className="truncate pr-3 text-base font-medium text-[#0098f1]">
+                                        {selectedFile.name}
+                                      </span>
+                                      <button
+                                        type="button"
+                                        className="text-[#0098f1]"
+                                        onClick={() => setSelectedFile(null)}
+                                      >
+                                        <svg
+                                          width="10"
+                                          height="10"
+                                          viewBox="0 0 10 10"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <path
+                                            fillRule="evenodd"
+                                            clipRule="evenodd"
+                                            d="M0.279337 0.279338C0.651787 -0.0931121 1.25565 -0.0931121 1.6281 0.279338L9.72066 8.3719C10.0931 8.74435 10.0931 9.34821 9.72066 9.72066C9.34821 10.0931 8.74435 10.0931 8.3719 9.72066L0.279337 1.6281C-0.0931125 1.25565 -0.0931125 0.651788 0.279337 0.279338Z"
+                                            fill="currentColor"
+                                          />
+                                          <path
+                                            fillRule="evenodd"
+                                            clipRule="evenodd"
+                                            d="M0.279337 9.72066C-0.0931125 9.34821 -0.0931125 8.74435 0.279337 8.3719L8.3719 0.279338C8.74435 -0.0931127 9.34821 -0.0931123 9.72066 0.279338C10.0931 0.651787 10.0931 1.25565 9.72066 1.6281L1.6281 9.72066C1.25565 10.0931 0.651787 10.0931 0.279337 9.72066Z"
+                                            fill="currentColor"
+                                          />
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+
+                              <div>
+                                <button
+                                  type="submit"
+                                  className="hover:shadow-form w-full rounded-md bg-[#0098f1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                                >
+                                  Send File
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div className="flex mt-12 bg-gray-100 rounded-lg  shadow-sm-light shadow-[#0098f1] h-[480px] w-auto flex-col lg:w-4/6 sm:mx-auto sm:mb-2 -mx-2 p-2">
+                            <p className="block text-xl font-semibold text-[#0098f1]">
+                              Tasks From Trainee
+                            </p>
+                            {files.map((file, index) => (
+                              <div className="p-2 sm:w-1/2 w-full" key={index}>
+                                <div
+                                  className="bg-gray-100 rounded flex p-4 h-full cursor-pointer items-center justify-between"
+                                  onClick={() => handleDownload(file, index)}
+                                >
+                                  <div className="flex items-center">
+                                    <FaArrowCircleDown className="text-[#0098f1]  mr-2 " />
+                                    <div className="flex flex-col">
+                                      <span className="font-medium">
+                                        {file.name}
+                                      </span>
+                                      <span className="text-gray-500 text-sm">
+                                        {file.description}
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-center space-x-2 ml-6 lg:ml-20">
+                                    {fileStatuses[index] === "accepted" ? (
                                       <button
                                         className="bg-green-500 text-white px-3 py-1 rounded"
                                         onClick={(e) => handleAccept(index, e)}
                                       >
                                         Completed
                                       </button>
-                                      {/* <button
-                                        className="bg-red-500 text-white px-3 py-1 rounded"
+                                    ) : fileStatuses[index] === "rejected" ? (
+                                      <button
+                                        className="bg-red-500 text-white px-6 py-1 rounded"
                                         onClick={(e) => handleReject(index, e)}
                                       >
                                         Rejected
-                                      </button> */}
-                                    </>
-                                  )}
+                                      </button>
+                                    ) : (
+                                      <>
+                                        <button
+                                          className="bg-green-500 text-white px-3 py-1 rounded"
+                                          onClick={(e) =>
+                                            handleAccept(index, e)
+                                          }
+                                        >
+                                          Completed
+                                        </button>
+                                      </>
+                                    )}
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          ))}
-                        </div>
-                        <div className="mt-4 text-white">
-                          <button
-                            className="bg-blue-800 p-2 w-[100px] text-white hover:bg-black"
-                            onClick={() => {
-                              closeBrowseProject();
-                              awardCertificate();
-                            }}
-                          >
-                            Close
-                          </button>
+                            ))}
+                          </div>
+                          <div className="mt-4 text-white">
+                            <button
+                              className="bg-[#0098f1] p-2 w-[100px] text-white rounded-lg"
+                              onClick={() => {
+                                closeBrowseProject();
+                                awardCertificate();
+                              }}
+                            >
+                              Close
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
+                  )}
+                  <p className="lg:text-lg text-sm text-[#0098f1]">
+                    Showcase your skills to recruiters with job-relevant
+                    projects Add projects here to demonstrate your technical
+                    expertise and ability to solve real-world problems.
+                  </p>
+                </div>
+                <div className="py-4">
+                  <span className="text-lg bg-gradient-to-r from-[#0098f1]  to-[#F19E22] bg-clip-text text-transparent font-semibold">
+                    Work Progress
+                  </span>
+                  <div className="w-auto h-4 bg-[#0098f1] bg-opacity-30 rounded-lg mt-4 relative">
+                    <div
+                      id="progressBarWidth"
+                      className="h-full bg-[#0098f1] rounded-lg"
+                      style={{
+                        width: progressBarWidth,
+                        transition: "width 0.5s",
+                      }}
+                    ></div>
                   </div>
-                )}
-                <h2 className="text-lg font-semibold">
-                  Showcase your skills to recruiters with job-relevant projects
-                </h2>
-                <p>
-                  Add projects here to demonstrate your technical expertise and
-                  ability to solve real-world problems.
-                </p>
-
-                <h1 className="text-2xl text-[#581c87] font-semibold">
-                  Work Progress
-                </h1>
-                {/* <div className="w-full h-4 bg-gray-200 rounded-lg mt-4 relative">
-                  <div
-                    id="progressBarWidth"
-                    className="h-full bg-blue-500 rounded-lg"
-                    style={{
-                      width: progressBarWidth,
-                      transition: "width 0.5s",
-                    }}
-                  ></div>
-                </div> */}
-                <div className="w-full h-4 bg-gray-200 rounded-lg mt-4 relative">
-                  <div
-                    id="progressBarWidth"
-                    className="h-full bg-blue-500 rounded-lg"
-                    style={{
-                      width: progressBarWidth,
-                      transition: "width 0.5s",
-                    }}
-                  ></div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <img src={IMG} alt="Workspace" />
+
+          <div className="">
+            <img
+              src={IMG}
+              className="md:w-[500px] md:h-[500px] w-auto h-auto"
+              alt="Workspace"
+            />
+          </div>
         </div>
       </div>
 
       {uploadedFiles.length > 0 && (
-        <div className="grid md:lg:xl:grid-cols-2 grid-cols-1 gap-y-20 py-4 px-4">
+        <div className="grid md:lg:xl:grid-cols-2 grid-cols-1  gap-y-20 py-4 px-4">
           <div>
             <FileList files={uploadedFiles} />
           </div>

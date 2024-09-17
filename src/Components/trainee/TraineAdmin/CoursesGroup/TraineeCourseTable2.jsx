@@ -85,20 +85,20 @@ function TraineeCourseTable2() {
   );
 
   const rows = filteredData.map((item, index) => (
-    <tr key={index} className="border-b bg-[#FF9B26] bg-opacity-10">
+    <tr key={index} className="border-b bg-[#204349] bg-opacity-10">
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
           <div className="flex-shrink-0 h-10 w-10">
             <img className="h-10 w-10 rounded-full" src={item.avatar} alt="" />
           </div>
           <div className="ml-4">
-            <div className="text-sm font-medium text-[#FF9B26]">{item.name}</div>
+            <div className="text-sm font-medium text-[#204349]">{item.name}</div>
           </div>
         </div>
       </td>
       <td className="px-6 py-4 whitespace-nowrap">
         <span
-          className={`px-2 inline-flex text-[16px] leading-5 font-semibold text-[#FF9B26] rounded-full `}
+          className={`px-2 inline-flex text-[16px] leading-5 font-semibold text-[#204349] rounded-full `}
         >
           {item.course}
         </span>
@@ -115,12 +115,12 @@ function TraineeCourseTable2() {
             placeholder="Search by name"
             value={search}
             onChange={handleSearchChange}
-            className="inline-block  px-4 py-2  placeholder:text-[#FF9B26]  border-2 border-[#F6AC14] rounded-3xl"
+            className="inline-block  px-4 py-2  placeholder:text-[#204349]  border-2 border-[#204349] rounded-3xl"
           />
           <div className="flex items-center space-x-2 mx-2">
-            <span className="text-[#FF9B26]"> Trainee:</span>
+            <span className="text-[#204349]"> Trainee:</span>
             {trainee.map((traineeItem, index) => (
-              <span key={index} className="px-2 py-1  text-[#FF9B26] rounded-md">
+              <span key={index} className="px-2 py-1  text-[#204349] rounded-md">
                 {traineeItem.name}
               </span>
             ))}
@@ -128,7 +128,7 @@ function TraineeCourseTable2() {
         </div>
 
         <table className="min-w-full divide-y ">
-          <thead className="bg-[#FF9B26]">
+          <thead className="bg-[#204349]">
             <tr>
               <th
                 scope="col"
