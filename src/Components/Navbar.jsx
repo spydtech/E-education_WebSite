@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { FaBars, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-import IMG from "../assets/logo/E-eLogo.png";
+// import IMG from "../assets/logo/E-eLogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, logout } from "../State/Auth/Action";
@@ -82,11 +82,11 @@ const Navbar = () => {
               {/* Logo */}
               <div className="flex items-center lg:justify-between flex-1 pl-8 justify-center">
                 <Link to="/" className="flex-shrink-0 ">
-                  <img
+                  {/* <img
                     className="h-12 w-40 lg:h-16 lg:w-56"
                     src={IMG}
                     alt="Logo"
-                  />
+                  /> */}
                 </Link>
 
                 {/* Desktop Search Bar */}

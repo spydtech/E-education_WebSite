@@ -81,21 +81,21 @@ const TraineeDashboard = () => {
   };
   return (
     <>
-      <div className="flex h-screen bg-white w-auto">
+      <div className="flex h-screen    w-auto">
         {/* sidebar */}
-        <div className="hidden md:flex flex-col w-64 text-[#FF9B26]">
-          <div className="flex items-center justify-center h-16 bg-white">
-            <span className="text-[#204349] text-[18px] font-bold uppercase">
+        <div className="hidden md:flex flex-col w-64 bg-gradient-to-r from-[#4CA1AF] to-[#204349]">
+          <div className="flex items-center justify-center h-16 bg-gradient-to-r from-[#4CA1AF] to-[#204349]">
+            {/* <span className="text-[#204349] text-[18px] font-bold uppercase">
               Trainee Dashboard
-            </span>
+            </span> */}
           </div>
          
           <div className="flex flex-col flex-1 overflow-y-auto">
-  <nav className="flex-1 px-2 py-4 bg-white">
+  <nav className="flex-1 px-2 py-4 ">
     <a
       href="#"
-      className={`flex items-center space-x-2 px-4 py-4 w-full border-l-8 transition-all duration-300 
-        ${activeTab === "home" ? "bg-gradient-to-r from-[#4CA1AF] to-[#204349]  text-white rounded-tr-3xl rounded-br-3xl border-[#204349]" : "  text-[#204349]"}`}
+      className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 
+        ${activeTab === "home" ? "bg-white text-[#204349] border-[#204349]  " : " border-transparent text-white"}`}
       onClick={() => handleTabClick("home")}
     >
       <MdOutlineDashboardCustomize className="h-6 w-6 mr-2" />
@@ -104,7 +104,7 @@ const TraineeDashboard = () => {
     <a
       href="#"
       className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 
-        ${activeTab === "courses" ? "bg-gradient-to-r from-[#4CA1AF] to-[#204349]  text-white border-[#204349]" : " border-transparent  text-[#204349]"}`}
+        ${activeTab === "courses" ? "bg-white text-[#204349] border-[#204349]" : " border-transparent  text-white"}`}
       onClick={() => handleTabClick("courses")}
     >
       <FaLayerGroup className="h-6 w-6 mr-2" />
@@ -113,7 +113,7 @@ const TraineeDashboard = () => {
     <a
       href="#"
       className={`flex items-center space-x-2 px-4 py-4 rounded-tr-3xl rounded-br-3xl w-full border-l-8 transition-all duration-300 
-        ${activeTab === "calendar" ? "bg-gradient-to-r from-[#4CA1AF] to-[#204349] text-white border-[#204349]" : " border-transparent  text-[#204349]"}`}
+        ${activeTab === "calendar" ? "bg-white  text-[#204349] border-[#204349]" : " border-transparent  text-white"}`}
       onClick={() => handleTabClick("calendar")}
     >
       <SlCalender className="h-6 w-6 mr-2" />
@@ -122,7 +122,7 @@ const TraineeDashboard = () => {
     <a
       href="#"
       className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 
-        ${activeTab === "reports" ? "bg-gradient-to-r from-[#4CA1AF] to-[#204349] text-white border-[#204349]" : "border-transparent  text-[#204349]"}`}
+        ${activeTab === "reports" ? "bg-white text-[#204349] border-[#204349]" : "border-transparent  text-white"}`}
       onClick={() => handleTabClick("reports")}
     >
       <TbReportAnalytics className="h-6 w-6 mr-2" />
@@ -131,7 +131,7 @@ const TraineeDashboard = () => {
     <a
       href="#"
       className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 
-        ${activeTab === "approvals" ? "bg-gradient-to-r from-[#4CA1AF] to-[#204349] text-white border-[#204349]" : "  text-[#204349]"}`}
+        ${activeTab === "approvals" ? "bg-white text-[#204349] border-[#204349]" : " border-transparent text-white"}`}
       onClick={() => handleTabClick("approvals")}
     >
       <ApprovalIcon className="h-6 w-6 mr-2" />
@@ -140,7 +140,7 @@ const TraineeDashboard = () => {
     <a
       href="#"
       className={`flex items-center space-x-2 px-4 rounded-tr-3xl rounded-br-3xl py-4 w-full border-l-8 transition-all duration-300 
-        ${activeTab === "user" ? "bg-gradient-to-r from-[#4CA1AF] to-[#204349] text-white border-[#204349]" : " border-transparent  text-[#204349]"}`}
+        ${activeTab === "user" ? "bg-white text-[#204349] border-[#204349]" : " border-transparent  text-white"}`}
       onClick={() => handleTabClick("user")}
     >
       <FaUserAlt className="h-6 w-6 mr-2" />
@@ -149,7 +149,7 @@ const TraineeDashboard = () => {
     <a
       href="#"
       className={`flex items-center space-x-2 px-4 rounded-tr-3xl rounded-br-3xl py-4 w-full border-l-8 transition-all duration-300 
-        ${activeTab === "settings" ? "bg-gradient-to-r from-[#4CA1AF] to-[#204349] text-white border-[#204349]" : "hover:bg-[#204349] hover:bg-opacity-10 border-transparent hover:border-[#204349] text-[#204349]"}`}
+        ${activeTab === "settings" ? "bg-white text-[#204349] border-[#204349]" : "hover:bg-[#204349] hover:bg-opacity-10 border-transparent hover:border-[#204349] text-white"}`}
       onClick={() => handleTabClick("settings")}
     >
       <IoSettingsSharp className="h-6 w-6 mr-2" />
@@ -184,13 +184,13 @@ const TraineeDashboard = () => {
               </>
             ) : (
               <div className="flex items-center">
-                <span className="text-[#204349] font-bold">Loading...</span>
+                {/* <span className="text-[#204349] font-bold">Loading...</span> */}
               </div>
             )}
-            <RiArrowRightSLine
+            {/* <RiArrowRightSLine
               className=" w-6 h-6 text-[#204349] mt-[13px] cursor-pointer"
               onClick={toggleLogoutOptions}
-            />
+            /> */}
           </div>
         </div>
         {/* Main content */}

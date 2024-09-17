@@ -158,27 +158,7 @@ const skills = [
 </div>
 
       </div>
-      {/* <div className="bg-white p-4 rounded-lg shadow-lg w-full md:w-[550px] lg:w-[600px] xl:w-[800px] mx-auto mt-8">
-      <h3 className="text-black font pl-2 text-xl pb-2 font-semibold">
-        Skills
-      </h3>
-      <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
-        {skills.map((skill) => (
-          <div key={skill.name} className="mb-4">
-            <div className="flex justify-between items-center mb-1">
-              <span className="text-gray-800 font-semibold">{skill.name}</span>
-              <span className="text-gray-600">{skill.level}%</span>
-            </div>
-            <div className="w-full  rounded-full h-2.5">
-              <div
-                className="bg-[#204349] h-2.5 rounded-full"
-                style={{ width: `${skill.level}%` }}
-              ></div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>  */}
+     
     <div className="bg-white p-4 rounded-lg shadow-lg  max-w-[800px] md:max-w-[800px] mx-auto mt-8">
   <h3 className="text-black font pl-2 text-xl pb-2 font-semibold">Skills</h3>
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
