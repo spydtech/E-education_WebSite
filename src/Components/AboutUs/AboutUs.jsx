@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Home/footer/Footer";
 const AboutUs = () => {
@@ -36,8 +36,6 @@ const AboutUs = () => {
             industry by making quality learning accessible to everyone.
           </p>
         </section>
-
-     
 
         {/* why choose us  */}
 
@@ -278,9 +276,7 @@ const AboutUs = () => {
         </div>
 
         <section className="text-center py-12 px-4">
-          <h2 className="text-2xl font-bold font">
-            Our Education Specialties
-          </h2>
+          <h2 className="text-2xl font-bold font">Our Education Specialties</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-8">
             <div className="p-4 shadow-2xl rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors">
               <h3 className="text-xl font-bold font">Computer Science</h3>
@@ -305,26 +301,20 @@ const AboutUs = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-5xl mx-auto">
             <div className="p-4 shadow-2xl rounded-lg bg-white hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold font">
-                Virtual Classrooms
-              </h3>
+              <h3 className="text-xl font-bold font">Virtual Classrooms</h3>
               <p className="text-gray-700 mt-2 font">
                 Experience interactive and engaging virtual learning
                 environments.
               </p>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-white hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold font">
-                AI-Powered Learning
-              </h3>
+              <h3 className="text-xl font-bold font">AI-Powered Learning</h3>
               <p className="text-gray-700 mt-2 font">
                 Personalized learning paths and intelligent tutoring systems.
               </p>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-white hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-bold font">
-                Collaborative Tools
-              </h3>
+              <h3 className="text-xl font-bold font">Collaborative Tools</h3>
               <p className="text-gray-700 mt-2 font">
                 Seamless collaboration with peers and instructors in real-time.
               </p>
@@ -348,14 +338,10 @@ const AboutUs = () => {
               <h3 className="text-xl font-bold font">Enroll Now</h3>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors">
-              <h3 className="text-xl font-bold font">
-                Expert Instructors
-              </h3>
+              <h3 className="text-xl font-bold font">Expert Instructors</h3>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors">
-              <h3 className="text-xl font-bold font">
-                Comprehensive Courses
-              </h3>
+              <h3 className="text-xl font-bold font">Comprehensive Courses</h3>
             </div>
             <div className="p-4 shadow-2xl rounded-lg bg-blue-100 hover:bg-blue-200 transition-colors">
               <h3 className="text-xl font-bold font">Student Support</h3>

@@ -7,10 +7,10 @@ import Navbar from "../../../../Navbar";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import card from "../../../../../assetss/fullstackwebdev/java/java1.avif";
-import card1   from "../../../../../assetss/fullstackwebdev/devops/devops2.avif";
-import  card2  from "../../../../../assetss/fullstackwebdev/python/python1.avif";
+import card1 from "../../../../../assetss/fullstackwebdev/devops/devops2.avif";
+import card2 from "../../../../../assetss/fullstackwebdev/python/python1.avif";
 
-import Girl2 from "../../../../../assetss/profile/girl2.png"
+import Girl2 from "../../../../../assetss/profile/girl2.png";
 
 const NetworkSecurityArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -78,7 +78,6 @@ const NetworkSecurityArray = () => {
       enrolled: 1800, // Add dummy enrolled number
     },
   ];
-  
 
   const filteredCourses = networkSecurityCourses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -150,7 +149,9 @@ const NetworkSecurityArray = () => {
                         <span className="text-gray-700 font-bold">
                           {course.name}
                         </span>
-                        <p className="text-gray-500 text-xs">{course.enrolled} Enrolled</p>
+                        <p className="text-gray-500 text-xs">
+                          {course.enrolled} Enrolled
+                        </p>
                       </div>
                     </div>
                     <span className="text-gray-900 font-bold">
