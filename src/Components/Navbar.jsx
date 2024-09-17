@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, logout } from "../State/Auth/Action";
 import { NotificationAdd } from "@mui/icons-material";
-
+import { MdKeyboardArrowRight } from "react-icons/md";
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false); // State for dropdown
@@ -15,12 +15,27 @@ const Navbar = () => {
   const [isBasicCoursesOpen, setIsBasicCoursesOpen] = useState(false);
   const [isAdvanceCoursesOpen, setIsAdvanceCoursesOpen] = useState(false);
   const [isPremiumCoursesOpen, setIsPremiumCoursesOpen] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
 
+  const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
   const jwt = localStorage.getItem("jwt");
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 64) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const navigation = [{ name: "Explore", current: false }];
   if (auth.user) {
     navigation.push(
@@ -43,6 +58,8 @@ const Navbar = () => {
       }
     };
 
+    // Detect scroll and toggle background color
+
     handleResize();
     window.addEventListener("resize", handleResize);
 
@@ -64,6 +81,7 @@ const Navbar = () => {
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown); // Toggle the dropdown
   };
+
   const toggleSidebarDropdown = () => {
     setSidebarDropdown(!sidebarDropdown); // Toggle the sidebar dropdown
   };
@@ -74,832 +92,937 @@ const Navbar = () => {
     setIsPremiumCoursesOpen(!isPremiumCoursesOpen);
 
   return (
-    <Disclosure as="nav" className="bg-white sticky top-0 z-50">
-      {({ open }) => (
-        <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 justify-between items-center">
-              {/* Mobile Menu Button */}
-              <div className="absolute inset-y-0 left-0 flex pl-2  mt-5 h-6 w-4 justify-center items-center lg:hidden">
-                <Disclosure.Button
-                  onClick={toggleSidebar}
-                  className="inline-flex items-center justify-center p-2  text-[#0098F1] hover:bg-[#0098F1] hover:text-white focus:outline-none"
-                >
-                  {open ? (
-                    <FaBars className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <FaBars className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
-
-              {/* Logo */}
-              <div className="flex items-center lg:justify-between flex-1 pl-8 justify-center">
-                <Link to="/" className="flex-shrink-0 ">
-                  <img
-                    className="h-12 w-40 lg:h-16 lg:w-56"
-                    src={IMG}
-                    alt="Logo"
-                  />
-                </Link>
-
-                {/* Desktop Search Bar */}
-                <div className="hidden lg:flex relative w-full max-w-lg items-center ml-10">
-                  <input
-                    type="text"
-                    placeholder="Want to learn?"
-                    className="w-full border border-zinc-300 h-10 rounded-lg pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-[#0098F1]"
-                  />
-                  <button className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-500">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.387a1 1 0 01-1.414 1.414l-4.387-4.387zM8 14a6 6 0 100-12 6 6 0 000 12z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    onClick={toggleDropdown} // Toggle dropdown on Explore click
-                    className="absolute right-[1px] p-2 py-[6px] top-1/2 transform -translate-y-1/2 bg-[#0098F1]  rounded-lg text-[#0098F1]  flex items-center space-x-1"
+    <>
+      <Disclosure
+        as="nav"
+        className={`sticky top-0 z-50 ${
+          isScrolled ? "bg-white " : "bg-white "
+        }`}
+      >
+        {({ open }) => (
+          <>
+            <div
+              className={`max-w-7xl mx-auto px-2 sm:px-6 lg:px-8${
+                isScrolled ? "bg-white " : "bg-white "
+              }`}
+            >
+              <div className="relative flex h-16 justify-between items-center">
+                {/* Mobile Menu Button */}
+                <div className="absolute inset-y-0 left-0 flex pl-2  mt-5 h-6 w-4 justify-center items-center lg:hidden">
+                  <Disclosure.Button
+                    onClick={toggleSidebar}
+                    className="inline-flex items-center justify-center p-2  text-[#0098F1] hover:bg-[#0098F1] hover:text-white focus:outline-none"
                   >
-                    <span className="text-white">Explore</span>
-                    {showDropdown ? (
-                      <FaChevronUp className="text-white" />
+                    {open ? (
+                      <FaBars className="block h-6 w-6" aria-hidden="true" />
                     ) : (
-                      <FaChevronDown className="text-white" />
+                      <FaBars className="block h-6 w-6" aria-hidden="true" />
                     )}
-                  </button>
-                  {/* Dropdown Menu */}
+                  </Disclosure.Button>
                 </div>
-                {showDropdown && (
-                  <div className="absolute right-0 top-10 bg-[#0098f1] mt-5 text-white h-auto   w-full">
-                    <h3 className="lg:text-xl text-lg text-center p-4 bg-white text-[#0098F1] w-full font-bold ">
-                      Explore Here Courses List
-                    </h3>
-                    <div className="grid ">
-                      {/* Column 1: Courses */}
-                      <div className="flex  justify-between  ">
-                        <div className="p-4  text-nowrap text-start m-4">
-                          <h4 className="font-bold text-center mb-4 lg:text-xl text-lg">
-                            Basic Courses
-                          </h4>
-                          <ul className="grid text-lg ">
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/php"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Php
-                                </span>
-                              </Link>
-                            </li>
 
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/java"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Java
-                                </span>
-                              </Link>
-                            </li>
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/c_c++"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  C/C++
-                                </span>
-                              </Link>
-                            </li>
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/wordpress"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Wordpress
-                                </span>
-                              </Link>
-                            </li>
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/javascript"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  JavaScript
-                                </span>
-                              </Link>
-                            </li>
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/ui_ux_design"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  UI/UX Design
-                                </span>
-                              </Link>
-                            </li>
-                            <li className=" py-1">
-                              <Link
-                                className="group   transition-all duration-100 ease-in-out"
-                                to="/fullStack_WebDevlopment/fullStack-Web-Development"
-                              >
-                                <span className=" pb-[2px]   text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Web Development
-                                </span>
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
+                {/* Logo */}
+                <div className="flex items-center lg:justify-between flex-1 pl-8 justify-center">
+                  <Link to="/" className="flex-shrink-0 ">
+                    <img
+                      className="h-12 w-40 lg:h-16 lg:w-56"
+                      src={IMG}
+                      alt="Logo"
+                    />
+                  </Link>
 
-                        {/* Column 2: Advance Courses */}
+                  {/* Desktop Search Bar */}
+                  <div className="hidden lg:flex relative w-full max-w-lg items-center ml-10">
+                    <input
+                      type="text"
+                      placeholder="Want to learn?"
+                      className="w-full border border-zinc-300 h-10 rounded-lg pl-10 pr-12 focus:outline-none focus:ring-2 focus:ring-[#0098F1]"
+                    />
+                    <button className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.387a1 1 0 01-1.414 1.414l-4.387-4.387zM8 14a6 6 0 100-12 6 6 0 000 12z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={toggleDropdown} // Toggle dropdown on Explore click
+                      className="absolute right-[1px] p-2 py-[6px] top-1/2 transform -translate-y-1/2 bg-[#0098F1]   rounded-lg text-[#0098F1]  flex items-center space-x-1"
+                    >
+                      <span className="text-white">Explore</span>
+                      {showDropdown ? (
+                        <FaChevronUp className="text-white" />
+                      ) : (
+                        <FaChevronDown className="text-white" />
+                      )}
+                    </button>
+                    {/* Dropdown Menu */}
+                  </div>
+                  {showDropdown && (
+                    <div className=" h-auto  absolute right-20   top-14   justify-center items-center flex">
+                      <div className=" bg-[#0098F1] border-white border-2 rounded-xl  text-white h-auto w-auto   ">
+                        <h3 className="lg:text-xl text-lg text-center p-4 bg-white  text-[#0098F1] w-full font-bold ">
+                          Explore Here Courses List
+                        </h3>
+                        <div className="grid ">
+                          {/* Column 1: Courses */}
+                          <div className="flex  justify-between  ">
+                            <div className="p-4  text-nowrap text-start mx-4 my-2">
+                              <h4 className="font-bold text-white text-start ml-4 mb-2 text-lg">
+                                Basic
+                              </h4>
+                              <ul className="grid text-[16px] ">
+                                <li className="py-[2px] ">
+                                  <Link
+                                    className="group   text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/php"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Php
+                                    </span>
+                                  </Link>
+                                </li>
 
-                        <div className="p-2 text-lg text-start text-nowrap m-4">
-                          <h4 className="font-bold mb-4  text-center lg:text-xl text-lg ">
-                            Advance Courses
-                          </h4>
-                          <ul className="grid text-lg ">
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/fullStack_WebDevelopment/mean-Stack-Developer"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  MEAN Stack
-                                </span>
-                              </Link>
-                            </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/java"
+                                  >
+                                    <span className=" flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Java
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/c_c++"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black  ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      C/C++
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/wordpress"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Wordpress
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/javascript"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      JavaScript
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/ui_ux_design"
+                                  >
+                                    <span className=" flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      UI/UX Design
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className=" py-[2px]">
+                                  <Link
+                                    className="group   transition-all duration-100 ease-in-out"
+                                    to="/fullStack_WebDevelopment/fullStack-Web-Development"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black  ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Web Development
+                                    </span>
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
 
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/database-management"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Java Programming Mastery
-                                </span>
-                              </Link>
-                            </li>
+                            {/* Column 3: Premium Courses */}
+                            <div className="p-4  text-start text-nowrap  mx-4 my-2">
+                              <h4 className="font-bold text-white mb-2 text-start ml-4 text-lg ">
+                                Premium
+                              </h4>
+                              <ul className="grid text-[16px] ">
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/cyber_security"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Cyber Security
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/ethical_hacking"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Ethical Hacking
+                                    </span>
+                                  </Link>
+                                </li>
 
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/network-security"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Advanced PHP Programming
-                                </span>
-                              </Link>
-                            </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/cloud-computing"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Cloud with AWS
+                                    </span>
+                                  </Link>
+                                </li>
 
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/ui-ux-design"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Mastering Wordpress Development
-                                </span>
-                              </Link>
-                            </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/fullStack_WebDevelopment/fullStack-Devops"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      DevOps Mastery
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/software_testing"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Software Testing
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/fullStack_WebDevelopment/fullStack-Web-Development"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Full Stack Development
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/blockchain"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Blockchain Development
+                                    </span>
+                                  </Link>
+                                </li>
 
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/mobile-app-development"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Advanced JavaScript Programming
-                                </span>
-                              </Link>
-                            </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/data_Science/machine-Learning"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Machine Learning with AI
+                                    </span>
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+                            {/* Column 2: Advance Courses */}
 
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/data_Science"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Data Science Techniques
-                                </span>
-                              </Link>
-                            </li>
+                            <div className="p-2 text-lg text-start text-nowrap  mx-4 my-2">
+                              <h4 className="font-bold text-white mb-2 pt-2  text-start ml-4  text-lg ">
+                                Advance
+                              </h4>
+                              <ul className="grid text-[16px] ">
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/power-bi"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Power BI
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/data_Science"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Data Science
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/fullStack_WebDevelopment/mean-Stack-Developer"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      MEAN Stack
+                                    </span>
+                                  </Link>
+                                </li>
 
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/network-security"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Network Security
-                                </span>
-                              </Link>
-                            </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/fullStack_WebDevelopment/fullStack-Java-Development"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Java Mastery
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/erp"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      ERP-Software
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/advancedPhpProgramming"
+                                  >
+                                    <span className="flex pb-[2px] text-white">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Advance PHP
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/network_security"
+                                  >
+                                    <span className=" flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Network Security
+                                    </span>
+                                  </Link>
+                                </li>
 
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/ui-ux-design"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  ERP-Software-Development
-                                </span>
-                              </Link>
-                            </li>
-
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/ui-ux-design"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Power BI development
-                                </span>
-                              </Link>
-                            </li>
-
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/fullStack-MobileApp-Development"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Full Stack Mobile App Development
-                                </span>
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-
-                        {/* Column 3: Premium Courses */}
-                        <div className="p-4  text-start text-nowrap m-4">
-                          <h4 className="font-bold mb-4  text-center lg:text-xl text-lg ">
-                            Premium Courses
-                          </h4>
-                          <ul className="grid text-lg ">
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/fullStack_WebDevelopment/fullStack-Web-Development"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Full Stack Development
-                                </span>
-                              </Link>
-                            </li>
-
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/software_testing"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Software Testing
-                                </span>
-                              </Link>
-                            </li>
-
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/blockchain"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Blockchain Development
-                                </span>
-                              </Link>
-                            </li>
-
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/data_Science/machine-Learning"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Machine Learning with AI
-                                </span>
-                              </Link>
-                            </li>
-
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/ethical_hacking"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Ethical Hacking
-                                </span>
-                              </Link>
-                            </li>
-
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/cyber_security"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Cyber Security
-                                </span>
-                              </Link>
-                            </li>
-
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/cloud-computing"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  Cloud with AWS
-                                </span>
-                              </Link>
-                            </li>
-
-                            <li className="py-1">
-                              <Link
-                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                                to="/fullStack_WebDevelopment/fullStack-Devops"
-                              >
-                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                                  DevOps Mastery
-                                </span>
-                              </Link>
-                            </li>
-                          </ul>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/fullStack_WebDevelopment/full-stack-javascript"
+                                  >
+                                    <span className=" flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Advance JavaScript
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/masteringWordPressDevelopment"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Mastering Wordpress
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/fullStackMobileAppDevelopment"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      Full Stack Mobile App
+                                    </span>
+                                  </Link>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </div>
+                  )}
+                </div>
 
-              {/* for width above 1024 */}
+                {/* for width above 1024 */}
 
-              {/* User Action Buttons */}
-              <div className="hidden  lg:flex items-center ml-2 px-2 space-x-2">
-                {/* {auth.user ? ( */}
-                <>
-                  <Link
-                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                    to="/mylearning"
-                  >
-                    <span className="block pb-[2px] hover:text-[#0098f1]   text-black   bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                      My Learning
-                    </span>
-                  </Link>
+                {/* User Action Buttons */}
+                <div className="hidden  lg:flex items-center ml-2 px-2 space-x-3">
+                  {auth.user ? (
+                    <>
+                      <Link
+                        className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                        to="/mylearning"
+                      >
+                        <span className="block pb-[2px] hover:text-[#0098f1]   text-black   bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                          My Learning
+                        </span>
+                      </Link>
 
-                  <Link
-                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                    to="/Mycourse"
-                  >
-                    <span className="block pb-[2px] hover:text-[#0098f1]   text-black  bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                      Course
-                    </span>
-                  </Link>
+                      <Link
+                        className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                        to="/Mycourse"
+                      >
+                        <span className="block pb-[2px] hover:text-[#0098f1]   text-black  bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                          Course
+                        </span>
+                      </Link>
 
-                  <Link
-                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                    to="/about_us"
-                  >
-                    <span className="block pb-[2px] hover:text-[#0098f1]   text-black   bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                      About Us
-                    </span>
-                  </Link>
+                      <Link
+                        className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                        to="/about_us"
+                      >
+                        <span className="block pb-[2px] hover:text-[#0098f1]   text-black   bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                          About Us
+                        </span>
+                      </Link>
 
-                  <span className="p-2 w-10 h-10 rounded-full bg-[#0098F1]  text-white text-center font-bold">
-                    {/* {auth.user.firstName[0].toUpperCase()} */}A
-                  </span>
-                  <NotificationAdd className="text-[#0098f1] cursor-pointer" />
-                  <button
-                    onClick={handleLogout}
-                    className="bg-[#0098f1] px-2 py-2 rounded-lg text-white"
-                  >
-                    Logout
-                  </button>
-                </>
-                {/* ) : ( */}
-                <>
-                  {/* <Link to="/trainee" className="text-black text-lg pl-4 ">
-                      Trainee
-                    </Link>
-                    <Link to="/login" className="text-black text-lg ">
-                      Log In
-                    </Link>
-                    <button
-                      onClick={() => navigate("/signup")}
-                      className="px-4 py-2 bg-[#0098F1] text-white rounded-lg"
-                    >
-                      Sign Up
-                    </button> */}
-                </>
-                {/* )} */}
+                      <span className="p-2 w-10 h-10 rounded-full bg-[#0098F1]  text-white text-center font-bold">
+                        {auth.user.firstName[0].toUpperCase()}
+                      </span>
+                      <NotificationAdd
+                        onMouseOver={() => setShowTooltip(true)}
+                        onMouseOut={() => setShowTooltip(false)}
+                        className="text-[#0098f1] cursor-pointer"
+                      />
+                      {showTooltip && (
+                        <div className="absolute  right-11  z-50  top-16 mt-1 transform  mb-2 px-2 py-1 bg-[#0098f1] text-white text-sm rounded shadow-lg">
+                          Notifications
+                        </div>
+                      )}
+                      <button
+                        onClick={handleLogout}
+                        className="bg-[#0098F1] px-2 py-2 rounded-lg text-white"
+                      >
+                        Logout
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <Link to="/trainee" className="text-black text-lg pl-4 ">
+                        Trainee
+                      </Link>
+                      <Link to="/login" className="text-black text-lg ">
+                        Log In
+                      </Link>
+                      <button
+                        onClick={() => navigate("/signup")}
+                        className="px-4 py-2 bg-[#0098F1] text-white rounded-lg"
+                      >
+                        Sign Up
+                      </button>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Tablet & Mobile Sidebar */}
-          {showSidebar && (
-            <div className="lg:hidden fixed  inset-0  z-50 flex">
-              <div
-                className="bg-white opacity-50 hidden w-full h-full"
-                onClick={toggleSidebar}
-              ></div>
-              <div className="   bg-white w-80 h-16 shadow-lg">
-                <div className="flex items-center justify-between px-4 py-3">
-                  <div className="ml-20">
-                    <Link to="/" className="flex-shrink-0">
-                      <img className="h-10 w-auto" src={IMG} alt="Logo" />
-                    </Link>
-                  </div>
-                  <button
-                    onClick={toggleSidebar}
-                    className="text-[#0098F1] hover:text-[#0098F1] focus:outline-none"
-                  >
-                    <IoCloseSharp className="h-6 w-6" />
-                  </button>
-                </div>
-                {/* imp */}
-                <div className="bg-[#0098F1]  h-screen overflow-y-scroll px-4">
-                  <button
-                    onClick={toggleSidebarDropdown} // Toggle sidebar dropdown
-                    className="w-full flex items-center justify-between p-3 text-gray-700 hover:bg-[#0098F1] hover:text-white rounded-lg"
-                  >
-                    <span className="text-white">Explore</span>
-                    {sidebarDropdown ? (
-                      <FaChevronUp className="text-white" />
-                    ) : (
-                      <FaChevronDown className="text-white" />
-                    )}
-                  </button>
-                  {sidebarDropdown && (
-                    <div className=" ">
-                      <button
-                        onClick={toggleBasicCourses} // Toggle sidebar dropdown
-                        className="w-full flex items-center justify-between p-3 text-gray-700 hover:bg-[#0098F1] hover:text-white rounded-lg"
-                      >
-                        <span className="font-bold text-white ">
-                          Basic Courses
-                        </span>
-                        {isBasicCoursesOpen ? (
-                          <FaChevronUp className="text-white" />
-                        ) : (
-                          <FaChevronDown className="text-white" />
-                        )}
-                      </button>
-                      {isBasicCoursesOpen && (
-                        <div className="p-4 bg-[#F6AC14] text-nowrap md:text-wrap">
-                          <ul className="grid gap-4">
-                            <li className="">
-                              <Link
-                                to="/fullStack_WebDevelopment/fullStack-Web-Development"
-                                className="hover:border-2 border-white  text-white p-2  "
-                              >
-                                Web Development
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/php"
-                                className="hover:border-2 border-white  text-white p-2 "
-                              >
-                                Php
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/java"
-                                className="hover:border-2 border-white  text-white p-2 "
-                              >
-                                Java
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/wordpress"
-                                className="hover:border-2 border-white   text-white p-2 "
-                              >
-                                Wordpress
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/javascript"
-                                className="hover:border-2 border-white  text-white p-2 "
-                              >
-                                JavaScript
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/c_c++"
-                                className="hover:border-2 border-white  text-white p-2"
-                              >
-                                C/C++
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/ui_ux_design"
-                                className="hover:border-2 border-white  text-white p-2 "
-                              >
-                                UI/UX Design
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      )}
-
-                      {/* Column 2: Advance Courses */}
-
-                      <button
-                        onClick={toggleAdvanceCourses} // Toggle sidebar dropdown
-                        className="w-full flex items-center justify-between p-3 text-gray-700 hover:bg-[#0098F1] hover:text-white rounded-lg"
-                      >
-                        <span className="font-bold text-white">
-                          Advance Courses
-                        </span>
-                        {isAdvanceCoursesOpen ? (
-                          <FaChevronUp className="text-white" />
-                        ) : (
-                          <FaChevronDown className="text-white" />
-                        )}
-                      </button>
-                      {isAdvanceCoursesOpen && (
-                        <div className="p-4 bg-[#F6AC14] text-nowrap">
-                          <ul className="grid gap-4">
-                            <li className="">
-                              <Link
-                                to="/fullStack_WebDevelopment/mean-Stack-Developer"
-                                className="hover:border-2 border-white  text-white p-2 "
-                              >
-                                MEAN Stack
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/fullStack_WebDevelopment/fullStack-Java-Development"
-                                className="hover:border-2 border-white  text-white p-2"
-                              >
-                                Java Programming Mastery
-                              </Link>
-                            </li>
-
-                            <li className="">
-                              <Link
-                                to="/advancedPhpProgramming"
-                                className="hover:border-2 border-white  text-white p-2 "
-                              >
-                                Advanced PHP Programming
-                              </Link>
-                            </li>
-
-                            <li className="">
-                              <Link
-                                to="/masteringWordPressDevelopment"
-                                className="hover:border-2 border-white  text-white p-2"
-                              >
-                                Mastering Wordpress Development
-                              </Link>
-                            </li>
-
-                            <li className="">
-                              <Link
-                                to="/fullStack_WebDevelopment/full-stack-javascript"
-                                className="hover:border-2 border-white  text-white p-2"
-                              >
-                                Advanced JavaScript Programming
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/data_Science"
-                                className="hover:border-2 border-white  text-white p-2"
-                              >
-                                Data Science Techniques
-                              </Link>
-                            </li>
-
-                            <li className="">
-                              <Link
-                                to="/network_security"
-                                className="hover:border-2 border-white  text-white p-2"
-                              >
-                                Network Security
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/erp"
-                                className="hover:border-2 border-white  text-white p-2"
-                              >
-                                ERP-Software-Development
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/power-bi"
-                                className="hover:border-2 border-white  text-white p-2 "
-                              >
-                                Power BI development
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/fullStackMobileAppDevelopment"
-                                className="hover:border-2 border-white  text-white p-2"
-                              >
-                                FullStack MobileApp Development
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      )}
-
-                      {/* Column 3: Premium Courses */}
-
-                      <button
-                        onClick={togglePremiumCourses} // Toggle sidebar dropdown
-                        className="w-full flex items-center justify-between p-3 text-gray-700 hover:bg-[#0098F1] hover:text-white rounded-lg"
-                      >
-                        <span className="font-bold text-white">
-                          Premium Courses
-                        </span>
-                        {isPremiumCoursesOpen ? (
-                          <FaChevronUp className="text-white" />
-                        ) : (
-                          <FaChevronDown className="text-white" />
-                        )}
-                      </button>
-                      {isPremiumCoursesOpen && (
-                        <div className="p-4 bg-[#F6AC14] text-nowrap ">
-                          <ul className="grid gap-4">
-                            <li className="">
-                              <Link
-                                to="/fullStack_WebDevelopment/fullStack-Web-Development"
-                                className="hover:border-2    border-white  text-white p-2"
-                              >
-                                Full Stack Development
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/software_testing"
-                                className="hover:border-2 border-white  text-white p-2"
-                              >
-                                Software Testing
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/blockchain"
-                                className="hover:border-2 border-white  text-white p-2"
-                              >
-                                Blockchain Development
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/data_Science/machine-Learning"
-                                className="hover:border-2 border-white  text-white p-2 "
-                              >
-                                Machine Learning with AI
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/ethical_hacking"
-                                className="hover:border-2 border-white  text-white p-2 "
-                              >
-                                Ethical Hacking
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/cyber_security"
-                                className="hover:border-2 border-white  text-white p-2"
-                              >
-                                Cyber Security
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/cloud-computing"
-                                className="hover:border-2 border-white  text-white p-2 "
-                              >
-                                Cloud with AWS
-                              </Link>
-                            </li>
-
-                            <li className="">
-                              <Link
-                                to="/fullStack_WebDevelopment/fullStack-Devops"
-                                className="hover:border-2 border-white  text-white p-2"
-                              >
-                                DevOps Mastery
-                              </Link>
-                            </li>
-                          </ul>
-                        </div>
-                      )}
+            {/* Tablet & Mobile Sidebar */}
+            {showSidebar && (
+              <div className="lg:hidden fixed  inset-0  z-50 flex">
+                <div
+                  className="bg-white opacity-50 hidden w-full h-full"
+                  onClick={toggleSidebar}
+                ></div>
+                <div className="   bg-white w-80 h-16 shadow-lg">
+                  <div className="flex items-center justify-between px-4 py-3">
+                    <div className="ml-24 h-10">
+                      <Link to="/" className="flex-shrink-0 hidden  ">
+                        <img className="h-10 w-auto" src={IMG} alt="Logo" />
+                      </Link>
                     </div>
-                  )}
+                    <button
+                      onClick={toggleSidebar}
+                      className="text-[#0098F1] hover:text-[#0098F1] focus:outline-none"
+                    >
+                      <IoCloseSharp className="h-6 w-6" />
+                    </button>
+                  </div>
+                  {/* imp */}
+                  <div className="bg-[#0098f1] pb-36  h-screen overflow-y-scroll px-4">
+                    <button
+                      onClick={toggleSidebarDropdown} // Toggle sidebar dropdown
+                      className="w-full flex items-center justify-between p-3 text-gray-700 hover:bg-[#0098F1] hover:text-white rounded-lg"
+                    >
+                      <span className="text-white">Explore</span>
+                      {sidebarDropdown ? (
+                        <FaChevronUp className="text-white" />
+                      ) : (
+                        <FaChevronDown className="text-white" />
+                      )}
+                    </button>
+                    {sidebarDropdown && (
+                      <div className=" ">
+                        <button
+                          onClick={toggleBasicCourses} // Toggle sidebar dropdown
+                          className="w-full flex items-center justify-between p-3 text-gray-700 hover:bg-[#0098F1] hover:text-white rounded-lg"
+                        >
+                          <span className="font-bold text-white ">Basic</span>
+                          {isBasicCoursesOpen ? (
+                            <FaChevronUp className="text-white" />
+                          ) : (
+                            <FaChevronDown className="text-white" />
+                          )}
+                        </button>
+                        {isBasicCoursesOpen && (
+                          <div className="  text-nowrap md:text-wrap">
+                            <ul className="grid text-[16px] ">
+                              <li className="py-[2px] ">
+                                <Link
+                                  className="group   text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/php"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Php
+                                  </span>
+                                </Link>
+                              </li>
 
-                  {/* <button
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/java"
+                                >
+                                  <span className=" flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Java
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/c_c++"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black    ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    C/C++
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/wordpress"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Wordpress
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/javascript"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    JavaScript
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/ui_ux_design"
+                                >
+                                  <span className=" flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    UI/UX Design
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className=" py-[2px]">
+                                <Link
+                                  className="group   transition-all duration-100 ease-in-out"
+                                  to="/fullStack_WebDevelopment/fullStack-Web-Development"
+                                >
+                                  <span className="flex pb-[2px]   text-white hover:text-black  ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Web Development
+                                  </span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </div>
+                        )}
+
+                        {/* Column 2: Advance Courses */}
+
+                        <button
+                          onClick={toggleAdvanceCourses} // Toggle sidebar dropdown
+                          className="w-full flex items-center justify-between p-3 text-gray-700 hover:bg-[#0098F1] hover:text-white rounded-lg"
+                        >
+                          <span className="font-bold text-white">Advance</span>
+                          {isAdvanceCoursesOpen ? (
+                            <FaChevronUp className="text-white" />
+                          ) : (
+                            <FaChevronDown className="text-white" />
+                          )}
+                        </button>
+                        {isAdvanceCoursesOpen && (
+                          <div className="  text-nowrap">
+                            <ul className="grid text-[16px] ">
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/power-bi"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Power BI
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/data_Science"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Data Science
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/fullStack_WebDevelopment/mean-Stack-Developer"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    MEAN Stack
+                                  </span>
+                                </Link>
+                              </li>
+
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/fullStack_WebDevelopment/fullStack-Java-Development"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Java Mastery
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/erp"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    ERP-Software
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/advancedPhpProgramming"
+                                >
+                                  <span className="flex pb-[2px] text-white">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Advance PHP
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/network_security"
+                                >
+                                  <span className=" flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Network Security
+                                  </span>
+                                </Link>
+                              </li>
+
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/fullStack_WebDevelopment/full-stack-javascript"
+                                >
+                                  <span className=" flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Advance JavaScript
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/masteringWordPressDevelopment"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Mastering Wordpress
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/fullStackMobileAppDevelopment"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Full Stack Mobile App
+                                  </span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </div>
+                        )}
+
+                        {/* Column 3: Premium Courses */}
+
+                        <button
+                          onClick={togglePremiumCourses} // Toggle sidebar dropdown
+                          className="w-full flex items-center justify-between p-3 text-gray-700 hover:bg-[#0098F1] hover:text-white rounded-lg"
+                        >
+                          <span className="font-bold text-white">Premium</span>
+                          {isPremiumCoursesOpen ? (
+                            <FaChevronUp className="text-white" />
+                          ) : (
+                            <FaChevronDown className="text-white" />
+                          )}
+                        </button>
+                        {isPremiumCoursesOpen && (
+                          <div className="  text-nowrap ">
+                            <ul className="grid text-[16px] ">
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/cyber_security"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Cyber Security
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/ethical_hacking"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Ethical Hacking
+                                  </span>
+                                </Link>
+                              </li>
+
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/cloud-computing"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Cloud with AWS
+                                  </span>
+                                </Link>
+                              </li>
+
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/fullStack_WebDevelopment/fullStack-Devops"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    DevOps Mastery
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/software_testing"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Software Testing
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/fullStack_WebDevelopment/fullStack-Web-Development"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Full Stack Development
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/blockchain"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Blockchain Development
+                                  </span>
+                                </Link>
+                              </li>
+
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/data_Science/machine-Learning"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    Machine Learning with AI
+                                  </span>
+                                </Link>
+                              </li>
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* <button
                     onClick={handleLogout}
                     className="block hover:text-gray-700 hover:bg-[#0098F1] text-white p-3 rounded-lg"
                   >
                     Logout
                   </button> */}
 
-                  {/* width below 1024 */}
-                  <div className="flex-col space-y-4     ml-1 px-2">
-                    {/* {auth.user ? ( */}
-                    <>
-                      {" "}
-                      <span className="absolute top-3 p-2 w-10 h-10 rounded-full bg-[#0098f1]  text-white text-center font-bold">
-                        {/* {auth.user.firstName[0].toUpperCase()} */}A
-                      </span>
-                      <span className="text-white">
-                        Notifications{" "}
-                        {/* <NotificationAdd className="text-white cursor-pointer" /> */}
-                      </span>
-                      <Link
-                        to="/mylearning"
-                        className="block  hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
-                      >
-                        My Learning
-                      </Link>
-                      <Link
-                        to="/Mycourse"
-                        className="block hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
-                      >
-                        Course
-                      </Link>
-                      <Link
-                        to="/about_us"
-                        className="block hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
-                      >
-                        About Us
-                      </Link>
-                    </>
-                    {/* ) : ( */}
-                    <></>
-                    {/* )} */}
-                  </div>
+                    {/* width below 1024 */}
+                    <div className="flex-col space-y-4     ml-1 px-2">
+                      {auth.user ? (
+                        <>
+                          {" "}
+                          <span className="absolute top-3 p-2 w-10 h-10 rounded-full bg-[#0098f1]  text-white text-center font-bold">
+                            {auth.user.firstName[0].toUpperCase()}
+                          </span>
+                          <span className="text-white">
+                            Notifications{" "}
+                            {/* <NotificationAdd className="text-white cursor-pointer" /> */}
+                          </span>
+                          <Link
+                            to="/mylearning"
+                            className="block  hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
+                          >
+                            My Learning
+                          </Link>
+                          <Link
+                            to="/Mycourse"
+                            className="block hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
+                          >
+                            Course
+                          </Link>
+                          <Link
+                            to="/about_us"
+                            className="block hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
+                          >
+                            About Us
+                          </Link>
+                        </>
+                      ) : (
+                        <></>
+                      )}
+                    </div>
 
-                  <div className="w-auto absolute bg-[#0098f1] items-end flex  bottom-0 py-4   px-2 space-x-7">
-                    {/* {auth.user ? ( */}
-                    <>
-                      <div className="   ">
-                        <button
-                          onClick={handleLogout}
-                          className="bg-white p-2 rounded-lg text-[#0098f1]"
-                        >
-                          Logout
-                        </button>
-                      </div>
-                    </>
-                    {/* ) : ( */}
-                    <>
-                      {/* <Link
-                          to="/trainee"
-                          className="text-white text-lg pl-4 "
-                        >
-                          Trainee
-                        </Link>
-                        <Link
-                          to="/login"
-                          className="px-3 py-2 bg-white text-[#0098f1] rounded-lg "
-                        >
-                          Log In
-                        </Link>
-                        <button
-                          onClick={() => navigate("/signup")}
-                          className="px-3 py-2 bg-white text-[#0098f1] rounded-lg"
-                        >
-                          Sign Up
-                        </button> */}
-                    </>
-                    {/* )} */}
+                    <div className="w-auto absolute bg-[#0098f1] items-end flex  bottom-0 py-4   px-2 space-x-7">
+                      {auth.user ? (
+                        <>
+                          <div className="w-72   ">
+                            <button
+                              onClick={handleLogout}
+                              className="bg-white p-2 rounded-lg text-[#0098f1]"
+                            >
+                              Logout
+                            </button>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <Link
+                            to="/trainee"
+                            className="text-white text-lg pl-4 "
+                          >
+                            Trainee
+                          </Link>
+                          <Link
+                            to="/login"
+                            className="px-3 py-2 bg-white text-[#0098f1] rounded-lg "
+                          >
+                            Log In
+                          </Link>
+                          <button
+                            onClick={() => navigate("/signup")}
+                            className="px-3 py-2 bg-white text-[#0098f1] rounded-lg"
+                          >
+                            Sign Up
+                          </button>
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          )}
-        </>
-      )}
-    </Disclosure>
+            )}
+          </>
+        )}
+      </Disclosure>
+    </>
   );
 };
 

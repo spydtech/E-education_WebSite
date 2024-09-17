@@ -70,7 +70,7 @@ function CloudIntroduction() {
             </p>
           </div>
           <div className="mt-2">
-            <p className="md:text-gl lg:text-3xl">
+            <p className="md:text-lg lg:text-3xl">
             Welcome to
               <span className="text-[#f6ac14] inline pl-2">
               Cloud Computing!
@@ -94,14 +94,14 @@ function CloudIntroduction() {
             />
           </div>
 
-          <div className="flex justify-between max-md:p-4">
+          <div className="flex justify-between items-center max-md:p-4">
             <button
               onClick={goToPreviousSlide}
               className="text-white hover:text-black font-bold  rounded"
             >
               Previous
             </button>
-            <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+            <div className="text-white text-sm">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
             <button
               onClick={goToNextSlide}
               className="text-white hover:text-black font-bold  rounded"

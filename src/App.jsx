@@ -281,7 +281,8 @@ function App() {
           />
 
           <Route
-            path="/software-testing/compatability-testing"
+            path="/software-testing/compatibility-testing"
+            
             element={<CompatabilityTesting />}
           />
 
@@ -296,7 +297,7 @@ function App() {
           />
           {/* IntigrationTesting */}
           <Route
-            path="/software-testing/intigration-testing"
+            path="/software-testing/integration-testing"
             element={<IntigrationTesting />}
           />
 

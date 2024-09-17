@@ -15,8 +15,8 @@ const Cloud = () => {
     <CloudHero />
     <CloudCard />
     <CloudNavigation />
-    {/* <CloudFoot />  */}
-    {/* <Footer /> */}
+    <CloudFoot /> 
+    <Footer />
     </>
   )
 }
