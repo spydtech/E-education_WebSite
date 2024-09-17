@@ -36,6 +36,21 @@ const Navbar = () => {
     }
   }, [jwt, auth.jwt, dispatch]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setShowDropdown(false);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const handleLogout = () => {
     dispatch(logout());
     localStorage.removeItem("jwt");
@@ -59,7 +74,7 @@ const Navbar = () => {
     setIsPremiumCoursesOpen(!isPremiumCoursesOpen);
 
   return (
-    <Disclosure as="nav" className=" sticky top-0 z-50">
+    <Disclosure as="nav" className="bg-white sticky top-0 z-50">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -123,72 +138,87 @@ const Navbar = () => {
                   {/* Dropdown Menu */}
                 </div>
                 {showDropdown && (
-                  <div className="absolute right-0 top-10 bg-[#0098F1] mt-6 text-white h-screen overflow-y-scroll shadow-lg w-full">
-                    <h3 className="text-2xl text-center p-4 bg-white text-[#0098F1] w-full font-bold ">
+                  <div className="absolute right-0 top-10 bg-[#0098f1] mt-5 text-white h-auto   w-full">
+                    <h3 className="lg:text-xl text-lg text-center p-4 bg-white text-[#0098F1] w-full font-bold ">
                       Explore Here Courses List
                     </h3>
-                    <div className="grid text-xl">
+                    <div className="grid ">
                       {/* Column 1: Courses */}
                       <div className="flex  justify-between  ">
-                        <div className="p-4 text-nowrap text-center  m-4 ">
-                          <h4 className="font-bold mb-4 text-2xl underline underline-offset-4">
+                        <div className="p-4  text-nowrap text-start m-4">
+                          <h4 className="font-bold text-center mb-4 lg:text-xl text-lg">
                             Basic Courses
                           </h4>
-                          <ul className="grid gap-4">
-                            <li className="">
+                          <ul className="grid text-lg ">
+                            <li className="py-1">
                               <Link
-                                to="/fullStack_WebDevlopment/fullStack-Web-Development"
-                                className="border-white hover:border-2 text-white p-2"
-                              >
-                                Web Development
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/php"
-                                className="border-white hover:border-2 text-white p-2"
                               >
-                                Php
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Php
+                                </span>
                               </Link>
                             </li>
-                            <li className="">
+
+                            <li className="py-1">
                               <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/java"
-                                className="border-white hover:border-2 text-white p-2"
                               >
-                                Java
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Java
+                                </span>
                               </Link>
                             </li>
-                            <li className="">
+                            <li className="py-1">
                               <Link
-                                to="/wordpress"
-                                className="border-white hover:border-2 text-white p-2"
-                              >
-                                Wordpress
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/javascript"
-                                className="border-white hover:border-2 text-white p-2 "
-                              >
-                                JavaScript
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/c_c++"
-                                className="border-white hover:border-2 text-white p-2"
                               >
-                                C/C++
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  C/C++
+                                </span>
                               </Link>
                             </li>
-                            <li className="">
+                            <li className="py-1">
                               <Link
-                                to="/ui_ux_design"
-                                className="border-white hover:border-2 text-white p-2"
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                to="/wordpress"
                               >
-                                UI/UX Design
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Wordpress
+                                </span>
+                              </Link>
+                            </li>
+                            <li className="py-1">
+                              <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                to="/javascript"
+                              >
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  JavaScript
+                                </span>
+                              </Link>
+                            </li>
+                            <li className="py-1">
+                              <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                to="/ui_ux_design"
+                              >
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  UI/UX Design
+                                </span>
+                              </Link>
+                            </li>
+                            <li className=" py-1">
+                              <Link
+                                className="group   transition-all duration-100 ease-in-out"
+                                to="/fullStack_WebDevlopment/fullStack-Web-Development"
+                              >
+                                <span className=" pb-[2px]   text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Web Development
+                                </span>
                               </Link>
                             </li>
                           </ul>
@@ -196,167 +226,214 @@ const Navbar = () => {
 
                         {/* Column 2: Advance Courses */}
 
-                        <div className="p-4 text-center text-nowrap m-4">
-                          <h4 className="font-bold mb-4 text-2xl underline underline-offset-4">
+                        <div className="p-2 text-lg text-start text-nowrap m-4">
+                          <h4 className="font-bold mb-4  text-center lg:text-xl text-lg ">
                             Advance Courses
                           </h4>
-                          <ul className="grid gap-4">
-                            <li className="">
+                          <ul className="grid text-lg ">
+                            <li className="py-1">
                               <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/fullStack_WebDevelopment/mean-Stack-Developer"
-                                className="border-white hover:border-2 text-white p-2"
                               >
-                                MEAN Stack
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  MEAN Stack
+                                </span>
                               </Link>
                             </li>
-                            <li className="">
+
+                            <li className="py-1">
                               <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/database-management"
-                                className="border-white hover:border-2 text-white p-2"
                               >
-                                Java Programming Mastery
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Java Programming Mastery
+                                </span>
                               </Link>
                             </li>
 
-                            <li className="">
+                            <li className="py-1">
                               <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/network-security"
-                                className="border-white hover:border-2 text-white p-2"
                               >
-                                Advanced PHP Programming
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Advanced PHP Programming
+                                </span>
                               </Link>
                             </li>
 
-                            <li className="">
+                            <li className="py-1">
                               <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/ui-ux-design"
-                                className="border-white hover:border-2 text-white p-2"
                               >
-                                Mastering Wordpress Development
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Mastering Wordpress Development
+                                </span>
                               </Link>
                             </li>
 
-                            <li className="">
+                            <li className="py-1">
                               <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/mobile-app-development"
-                                className="border-white hover:border-2 text-white p-2"
                               >
-                                JavaSCript for advanced DevelopMent
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/data_Science"
-                                className="border-white hover:border-2 text-white p-2"
-                              >
-                                Data Science Techniques
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Advanced JavaScript Programming
+                                </span>
                               </Link>
                             </li>
 
-                            <li className="">
+                            <li className="py-1">
                               <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                to="/data_Science"
+                              >
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Data Science Techniques
+                                </span>
+                              </Link>
+                            </li>
+
+                            <li className="py-1">
+                              <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/network-security"
-                                className="border-white hover:border-2 text-white p-2"
                               >
-                                Network Security
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Network Security
+                                </span>
                               </Link>
                             </li>
-                            <li className="">
+
+                            <li className="py-1">
                               <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/ui-ux-design"
-                                className="border-white hover:border-2 text-white p-2"
                               >
-                                ERP-Software-Development
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  ERP-Software-Development
+                                </span>
                               </Link>
                             </li>
-                            <li className="">
+
+                            <li className="py-1">
                               <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/ui-ux-design"
-                                className="border-white hover:border-2 text-white p-2"
                               >
-                                Power BI development
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Power BI development
+                                </span>
                               </Link>
                             </li>
-                            <li className="">
+
+                            <li className="py-1">
                               <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/fullStack-MobileApp-Development"
-                                className="border-white hover:border-2 text-white p-2 "
                               >
-                                Full Stack Mobile App Development
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Full Stack Mobile App Development
+                                </span>
                               </Link>
                             </li>
                           </ul>
                         </div>
 
                         {/* Column 3: Premium Courses */}
-                        <div className="p-4 text-center text-nowrap m-4">
-                          <h4 className="font-bold mb-4 text-2xl underline  underline-offset-4">
+                        <div className="p-4  text-start text-nowrap m-4">
+                          <h4 className="font-bold mb-4  text-center lg:text-xl text-lg ">
                             Premium Courses
                           </h4>
-                          <ul className="grid gap-4">
-                            <li className="">
+                          <ul className="grid text-lg ">
+                            <li className="py-1">
                               <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
                                 to="/fullStack_WebDevelopment/fullStack-Web-Development"
-                                className="border-white hover:border-2 text-white p-2"
                               >
-                                Full Stack Development
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/software_testing"
-                                className="border-white hover:border-2 text-white p-2"
-                              >
-                                Software Testing
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/blockchain"
-                                className="border-white hover:border-2 text-white p-2"
-                              >
-                                Blockchain Development
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/data_Science/machine-Learning"
-                                className="border-white hover:border-2 text-white p-2"
-                              >
-                                Machine Learning with AI
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/ethical_hacking"
-                                className="border-white hover:border-2 text-white p-2"
-                              >
-                                Ethical Hacking
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/cyber_security"
-                                className="border-white hover:border-2 text-white p-2"
-                              >
-                                Cyber Security
-                              </Link>
-                            </li>
-                            <li className="">
-                              <Link
-                                to="/cloud-computing"
-                                className="border-white hover:border-2 text-white p-2"
-                              >
-                                Cloud with AWS
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Full Stack Development
+                                </span>
                               </Link>
                             </li>
 
-                            <li className="">
+                            <li className="py-1">
                               <Link
-                                to="/fullStack_WebDevelopment/fullStack-Devops"
-                                className="border-white hover:border-2 text-white p-2"
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                to="/software_testing"
                               >
-                                DevOps Mastery
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Software Testing
+                                </span>
+                              </Link>
+                            </li>
+
+                            <li className="py-1">
+                              <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                to="/blockchain"
+                              >
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Blockchain Development
+                                </span>
+                              </Link>
+                            </li>
+
+                            <li className="py-1">
+                              <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                to="/data_Science/machine-Learning"
+                              >
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Machine Learning with AI
+                                </span>
+                              </Link>
+                            </li>
+
+                            <li className="py-1">
+                              <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                to="/ethical_hacking"
+                              >
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Ethical Hacking
+                                </span>
+                              </Link>
+                            </li>
+
+                            <li className="py-1">
+                              <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                to="/cyber_security"
+                              >
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Cyber Security
+                                </span>
+                              </Link>
+                            </li>
+
+                            <li className="py-1">
+                              <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                to="/cloud-computing"
+                              >
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  Cloud with AWS
+                                </span>
+                              </Link>
+                            </li>
+
+                            <li className="py-1">
+                              <Link
+                                className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                to="/fullStack_WebDevelopment/fullStack-Devops"
+                              >
+                                <span className=" pb-[2px]    text-white   bg-left-bottom ml-1 bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                                  DevOps Mastery
+                                </span>
                               </Link>
                             </li>
                           </ul>
@@ -367,21 +444,53 @@ const Navbar = () => {
                 )}
               </div>
 
+              {/* for width above 1024 */}
+
               {/* User Action Buttons */}
-              <div className="hidden lg:flex items-center space-x-4">
-                {auth.user ? (
-                  <>
-                    <span className="p-3 w-10 h-10 rounded-full bg-[#0098F1] bg-opacity-40 text-white text-center font-bold">
-                      {auth.user.firstName[0].toUpperCase()}
+              <div className="hidden  lg:flex items-center ml-2 px-2 space-x-2">
+                {/* {auth.user ? ( */}
+                <>
+                  <Link
+                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                    to="/mylearning"
+                  >
+                    <span className="block pb-[2px] hover:text-[#0098f1]   text-black   bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                      My Learning
                     </span>
-                    <NotificationAdd className="text-[#F6AC14] cursor-pointer" />
-                    <button onClick={handleLogout} className="text-red-500">
-                      Logout
-                    </button>
-                  </>
-                ) : (
-                  <>
-                    <Link to="/trainee" className="text-black text-lg pl-4 ">
+                  </Link>
+
+                  <Link
+                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                    to="/Mycourse"
+                  >
+                    <span className="block pb-[2px] hover:text-[#0098f1]   text-black  bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                      Course
+                    </span>
+                  </Link>
+
+                  <Link
+                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                    to="/about_us"
+                  >
+                    <span className="block pb-[2px] hover:text-[#0098f1]   text-black   bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                      About Us
+                    </span>
+                  </Link>
+
+                  <span className="p-2 w-10 h-10 rounded-full bg-[#0098F1]  text-white text-center font-bold">
+                    {/* {auth.user.firstName[0].toUpperCase()} */}A
+                  </span>
+                  <NotificationAdd className="text-[#0098f1] cursor-pointer" />
+                  <button
+                    onClick={handleLogout}
+                    className="bg-[#0098f1] px-2 py-2 rounded-lg text-white"
+                  >
+                    Logout
+                  </button>
+                </>
+                {/* ) : ( */}
+                <>
+                  {/* <Link to="/trainee" className="text-black text-lg pl-4 ">
                       Trainee
                     </Link>
                     <Link to="/login" className="text-black text-lg ">
@@ -392,9 +501,9 @@ const Navbar = () => {
                       className="px-4 py-2 bg-[#0098F1] text-white rounded-lg"
                     >
                       Sign Up
-                    </button>
-                  </>
-                )}
+                    </button> */}
+                </>
+                {/* )} */}
               </div>
             </div>
           </div>
@@ -420,7 +529,8 @@ const Navbar = () => {
                     <IoCloseSharp className="h-6 w-6" />
                   </button>
                 </div>
-                <div className="bg-[#0098F1] h-screen overflow-y-scroll px-4">
+                {/* imp */}
+                <div className="bg-[#0098F1]  h-screen overflow-y-scroll px-4">
                   <button
                     onClick={toggleSidebarDropdown} // Toggle sidebar dropdown
                     className="w-full flex items-center justify-between p-3 text-gray-700 hover:bg-[#0098F1] hover:text-white rounded-lg"
@@ -433,7 +543,7 @@ const Navbar = () => {
                     )}
                   </button>
                   {sidebarDropdown && (
-                    <div className=" mt-2 space-y-2">
+                    <div className=" ">
                       <button
                         onClick={toggleBasicCourses} // Toggle sidebar dropdown
                         className="w-full flex items-center justify-between p-3 text-gray-700 hover:bg-[#0098F1] hover:text-white rounded-lg"
@@ -450,7 +560,7 @@ const Navbar = () => {
                       {isBasicCoursesOpen && (
                         <div className="p-4 bg-[#F6AC14] text-nowrap md:text-wrap">
                           <ul className="grid gap-4">
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/fullStack_WebDevelopment/fullStack-Web-Development"
                                 className="hover:border-2 border-white  text-white p-2  "
@@ -458,7 +568,7 @@ const Navbar = () => {
                                 Web Development
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/php"
                                 className="hover:border-2 border-white  text-white p-2 "
@@ -466,7 +576,7 @@ const Navbar = () => {
                                 Php
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/java"
                                 className="hover:border-2 border-white  text-white p-2 "
@@ -474,7 +584,7 @@ const Navbar = () => {
                                 Java
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/wordpress"
                                 className="hover:border-2 border-white   text-white p-2 "
@@ -482,7 +592,7 @@ const Navbar = () => {
                                 Wordpress
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/javascript"
                                 className="hover:border-2 border-white  text-white p-2 "
@@ -490,7 +600,7 @@ const Navbar = () => {
                                 JavaScript
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/c_c++"
                                 className="hover:border-2 border-white  text-white p-2"
@@ -498,7 +608,7 @@ const Navbar = () => {
                                 C/C++
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/ui_ux_design"
                                 className="hover:border-2 border-white  text-white p-2 "
@@ -528,7 +638,7 @@ const Navbar = () => {
                       {isAdvanceCoursesOpen && (
                         <div className="p-4 bg-[#F6AC14] text-nowrap">
                           <ul className="grid gap-4">
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/fullStack_WebDevelopment/mean-Stack-Developer"
                                 className="hover:border-2 border-white  text-white p-2 "
@@ -536,7 +646,7 @@ const Navbar = () => {
                                 MEAN Stack
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/fullStack_WebDevelopment/fullStack-Java-Development"
                                 className="hover:border-2 border-white  text-white p-2"
@@ -545,7 +655,7 @@ const Navbar = () => {
                               </Link>
                             </li>
 
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/advancedPhpProgramming"
                                 className="hover:border-2 border-white  text-white p-2 "
@@ -554,7 +664,7 @@ const Navbar = () => {
                               </Link>
                             </li>
 
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/masteringWordPressDevelopment"
                                 className="hover:border-2 border-white  text-white p-2"
@@ -563,15 +673,15 @@ const Navbar = () => {
                               </Link>
                             </li>
 
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/fullStack_WebDevelopment/full-stack-javascript"
                                 className="hover:border-2 border-white  text-white p-2"
                               >
-                                JavaScript for advanced DevelopMent
+                                Advanced JavaScript Programming
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/data_Science"
                                 className="hover:border-2 border-white  text-white p-2"
@@ -580,7 +690,7 @@ const Navbar = () => {
                               </Link>
                             </li>
 
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/network_security"
                                 className="hover:border-2 border-white  text-white p-2"
@@ -588,7 +698,7 @@ const Navbar = () => {
                                 Network Security
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/erp"
                                 className="hover:border-2 border-white  text-white p-2"
@@ -596,7 +706,7 @@ const Navbar = () => {
                                 ERP-Software-Development
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/power-bi"
                                 className="hover:border-2 border-white  text-white p-2 "
@@ -604,7 +714,7 @@ const Navbar = () => {
                                 Power BI development
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/fullStackMobileAppDevelopment"
                                 className="hover:border-2 border-white  text-white p-2"
@@ -634,7 +744,7 @@ const Navbar = () => {
                       {isPremiumCoursesOpen && (
                         <div className="p-4 bg-[#F6AC14] text-nowrap ">
                           <ul className="grid gap-4">
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/fullStack_WebDevelopment/fullStack-Web-Development"
                                 className="hover:border-2    border-white  text-white p-2"
@@ -642,7 +752,7 @@ const Navbar = () => {
                                 Full Stack Development
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/software_testing"
                                 className="hover:border-2 border-white  text-white p-2"
@@ -650,7 +760,7 @@ const Navbar = () => {
                                 Software Testing
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/blockchain"
                                 className="hover:border-2 border-white  text-white p-2"
@@ -658,7 +768,7 @@ const Navbar = () => {
                                 Blockchain Development
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/data_Science/machine-Learning"
                                 className="hover:border-2 border-white  text-white p-2 "
@@ -666,7 +776,7 @@ const Navbar = () => {
                                 Machine Learning with AI
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/ethical_hacking"
                                 className="hover:border-2 border-white  text-white p-2 "
@@ -674,7 +784,7 @@ const Navbar = () => {
                                 Ethical Hacking
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/cyber_security"
                                 className="hover:border-2 border-white  text-white p-2"
@@ -682,7 +792,7 @@ const Navbar = () => {
                                 Cyber Security
                               </Link>
                             </li>
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/cloud-computing"
                                 className="hover:border-2 border-white  text-white p-2 "
@@ -691,7 +801,7 @@ const Navbar = () => {
                               </Link>
                             </li>
 
-                            <li className="mb-2">
+                            <li className="">
                               <Link
                                 to="/fullStack_WebDevelopment/fullStack-Devops"
                                 className="hover:border-2 border-white  text-white p-2"
@@ -704,30 +814,85 @@ const Navbar = () => {
                       )}
                     </div>
                   )}
-                  <Link
-                    to="/mylearning"
-                    className="block  hover:text-gray-700 hover:bg-[#0098F1] text-white p-3 rounded-lg"
-                  >
-                    My Learning
-                  </Link>
-                  <Link
-                    to="/Mycourse"
-                    className="block hover:text-gray-700 hover:bg-[#0098F1] text-white p-3 rounded-lg"
-                  >
-                    Course
-                  </Link>
-                  <Link
-                    to="/about_us"
-                    className="block hover:text-gray-700 hover:bg-[#0098F1] text-white p-3 rounded-lg"
-                  >
-                    About Us
-                  </Link>
-                  <button
+
+                  {/* <button
                     onClick={handleLogout}
                     className="block hover:text-gray-700 hover:bg-[#0098F1] text-white p-3 rounded-lg"
                   >
                     Logout
-                  </button>
+                  </button> */}
+
+                  {/* width below 1024 */}
+                  <div className="flex-col space-y-4     ml-1 px-2">
+                    {/* {auth.user ? ( */}
+                    <>
+                      {" "}
+                      <span className="absolute top-3 p-2 w-10 h-10 rounded-full bg-[#0098f1]  text-white text-center font-bold">
+                        {/* {auth.user.firstName[0].toUpperCase()} */}A
+                      </span>
+                      <span className="text-white">
+                        Notifications{" "}
+                        {/* <NotificationAdd className="text-white cursor-pointer" /> */}
+                      </span>
+                      <Link
+                        to="/mylearning"
+                        className="block  hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
+                      >
+                        My Learning
+                      </Link>
+                      <Link
+                        to="/Mycourse"
+                        className="block hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
+                      >
+                        Course
+                      </Link>
+                      <Link
+                        to="/about_us"
+                        className="block hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
+                      >
+                        About Us
+                      </Link>
+                    </>
+                    {/* ) : ( */}
+                    <></>
+                    {/* )} */}
+                  </div>
+
+                  <div className="w-auto absolute bg-[#0098f1] items-end flex  bottom-0 py-4   px-2 space-x-7">
+                    {/* {auth.user ? ( */}
+                    <>
+                      <div className="   ">
+                        <button
+                          onClick={handleLogout}
+                          className="bg-white p-2 rounded-lg text-[#0098f1]"
+                        >
+                          Logout
+                        </button>
+                      </div>
+                    </>
+                    {/* ) : ( */}
+                    <>
+                      {/* <Link
+                          to="/trainee"
+                          className="text-white text-lg pl-4 "
+                        >
+                          Trainee
+                        </Link>
+                        <Link
+                          to="/login"
+                          className="px-3 py-2 bg-white text-[#0098f1] rounded-lg "
+                        >
+                          Log In
+                        </Link>
+                        <button
+                          onClick={() => navigate("/signup")}
+                          className="px-3 py-2 bg-white text-[#0098f1] rounded-lg"
+                        >
+                          Sign Up
+                        </button> */}
+                    </>
+                    {/* )} */}
+                  </div>
                 </div>
               </div>
             </div>
