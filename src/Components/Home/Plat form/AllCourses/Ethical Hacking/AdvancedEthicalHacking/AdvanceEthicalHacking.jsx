@@ -18,7 +18,7 @@ const AdvancedEthicalHacking = () => {
       <AdvancedEthicalHackingNavigation />
       {/* <EthicalHackingHero /> */}
       <AdvanceEthicalHackingFoot />
-      {/* <FooterPart /> */}
+      <FooterPart />
     </>
   );
 };

@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 const Carrer = () => {
   return (
     <>
-      <div class="w-full text-center mt-32  ">
-        <div class="md:text-4xl text-xl font-bold   font text-center">
+      <div class="text-center md:mt-32 mt-8  w-full px-12 ">
+        <div class="md:text-4xl text-xl font-bold    font text-center">
           Start a new{" "}
           <span class="bg-gradient-to-r from-[#F19E22] to-[#0098F1] inline-block text-transparent bg-clip-text">
             career
@@ -17,10 +17,10 @@ const Carrer = () => {
         </div>
       </div>
       <div className="flex lg:flex-row flex-col justify-center items-center md:px-16 md:mb-24 md:gap-x-8 md:mx-16 mt-6">
-        <div className=" ">
+        <div className="w-60 h-60 md:w-full md:h-full ">
           <img src={Carrerimg} />
         </div>
-        <div className="ml-6 ">
+        <div className="ml-6 px-6">
           <div className="flex  flex-col items-start justify-start md:min-w-[400px] gap-4">
             <div className="font font-bold  text-xl md:text-3xl ">
               Unlocking Career Horizons: Navigating New Paths With E-education

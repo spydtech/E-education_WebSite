@@ -17,7 +17,7 @@ const SecurityTestingNavigation = () => {
     "Certificate",
     "Syllabus",
   ];
-  
+
   const [currentSection, setCurrentSection] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false); // State to control menu visibility
 
@@ -51,7 +51,10 @@ const SecurityTestingNavigation = () => {
   return (
     <>
       <nav className="flex md:bg-[#0098f1] bg-white shadow-xl rounded-t-2xl px-4 sm:px-6 py-4">
-        <button className="text-[#0098f1] text-2xl sm:hidden md:text-black" onClick={toggleMenu}>
+        <button
+          className="text-[#0098f1] text-2xl sm:hidden md:text-black"
+          onClick={toggleMenu}
+        >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
         <ul

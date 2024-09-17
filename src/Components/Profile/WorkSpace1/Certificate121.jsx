@@ -2,7 +2,7 @@
 import React from "react";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
-import Img from "../../../assets/E- education logo .png";
+import Img from "../../../assets/newcertificate.png";
 import IMG from "../../../assets/Certfication.png";
 import IMG1 from "../../../assets/Certification12.png";
 
@@ -25,20 +25,32 @@ const Certificate121 = () => {
   };
 
   return (
-    <div>
-      <div className="">
-        <div className="justify-center items-center">
-          <h1 className="text-center text-2xl py-10 font-bold text-[#1e3a8a]">
-            Get Certified
-          </h1>
-          <div className="sm:md:lg:sm:xl:flex justify-center  hidden  ">
-            <img className="w-[500px] " src={IMG} />
-            <img className="w-[500px] " src={IMG1} />
-          </div>
+    <div className="">
+      <div className="py-4 ">
+        <div className=" flex justify-center items-center">
+          <p className="text-center text-2xl  font-bold text-black">
+            Earn <span className="text-[#f6ac14]"> Your</span> Certificate
+          </p>
         </div>
-        <div
+        <div className=" text-center justify-center items-center flex px-2  pt-10">
+          <p className="md:text-lg lg:w-[800px]   text-sm text-wrap text-[#0098f1] ">
+            Complete the course and receive a personalized certificate of
+            achievement.Showcase your new skills and knowledge to potential
+            employers. Boost your resume with a recognized credential. Download
+            and share your certificate online with ease.
+          </p>
+        </div>
+
+        <div className="px-2 py-4 pt-10 flex justify-center items-center">
+          <img
+            src={Img}
+            className="bg-[#969ebe] w-auto h-auto lg:w-[700px] lg:h-[350px]"
+            alt="Background"
+          />
+        </div>
+        {/* <div
           id="certificate"
-          className="relative   shadow-lg"
+          className="relative    shadow-lg"
           style={styles.certificate}
         >
           <img
@@ -68,11 +80,11 @@ const Certificate121 = () => {
             <p style={styles.date}>Date: {new Date().toLocaleDateString()}</p>
             <p className="pt-10 text-xl font-bold">Signature</p>
           </div>
-        </div>
+        </div> */}
       </div>
-      <button onClick={generatePDF} style={styles.button}>
+      {/* <button onClick={generatePDF} style={styles.button}>
         Download Certificate
-      </button>
+      </button> */}
     </div>
   );
 };

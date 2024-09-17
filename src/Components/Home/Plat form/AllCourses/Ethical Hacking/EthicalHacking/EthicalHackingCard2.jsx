@@ -21,7 +21,7 @@ const EthicalHackingCard2 = () => {
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          <p className="text-center text-white text-[20px] font-medium px-4">
+          <p className="text-center text-white max-md:text-[16px] text-[20px] font-medium px-4">
             Discover how Machine Learning can transform using data and
             algorithms
             <br />

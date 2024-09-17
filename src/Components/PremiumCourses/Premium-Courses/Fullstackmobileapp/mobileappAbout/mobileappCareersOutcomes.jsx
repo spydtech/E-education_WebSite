@@ -5,18 +5,14 @@ import { GrTransaction } from "react-icons/gr";
 
 function MobileappCareersOutcomes() {
   return (
-    <div className="bg-white px-20 py-20 mb-20">
+    <div className="bg-white px-20 mb-20">
       <div className="flex flex-col lg:flex-row items-center justify-between">
         {/* Left Content */}
         <div className="mb-8 lg:mb-0 lg:w-1/2">
           <div className="text-start">
             <div className="py-5">
-              <p className="text-2xl font-bold text-[#f6ac14]">
-                Career Outcomes in Mobile App Development Program
-              </p>
-              <p className="text-3xl font-bold mt-2">
-                Discover What our{" "}
-                <span className="text-[#f6ac14]">Learners Have Achieved</span>
+              <p className="text-2xl font-bold mt-2 text-[#0098f1]">
+                Discover What our Learners Have Achieved
               </p>
               <p className="text-xl text-gray-500 mt-2">
                 Snapshot of Alumni Placement Support
@@ -58,7 +54,7 @@ function MobileappCareersOutcomes() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center p-3 cursor-pointer text-xl font-medium border-2 border-transparent hover:border-[#f6ac14] bg-white rounded-md overflow-hidden shadow-lg"
+                className="flex flex-col items-center p-3 cursor-pointer text-xl font-medium border-2 border-transparent hover:border-[#750e5c] bg-white rounded-md overflow-hidden shadow-lg"
               >
                 {item.icon}
                 <p>{item.stat}</p>

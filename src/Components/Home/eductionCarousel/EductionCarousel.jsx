@@ -297,11 +297,12 @@ export default function EducationCarousel() {
           }
         `}
       </style>
-      <div className="my-8">
-        <div className="text-xl text-gray-700 lg:text-5xl font-semibold pb-4 items-center text-center font-lora">
-          <span>Choose a course for you</span>
-        </div>
-      </div>
+      <div className="my-16 text-center">
+  <div className="text-xl bg-gradient-to-r from-[#F19E22] to-[#0098F1] inline-block text-transparent bg-clip-text lg:text-5xl font-semibold pb-4 font-lora">
+    <span>Choose a course for you</span>
+  </div>
+</div>
+
       <div className="glide relative mb-12 font-lora">
         <div
           className="glide__track overflow-hidden md:pl-80 sm:pl-64 lg:pl-80  pl-8"

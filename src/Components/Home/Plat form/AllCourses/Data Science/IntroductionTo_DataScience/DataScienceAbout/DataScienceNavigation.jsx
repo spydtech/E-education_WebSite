@@ -49,14 +49,14 @@ const DataScienceNavigation = () => {
 
   return (
     <>
-      <nav className="flex  bg-[#0098f1] rounded-t-2xl  px-4 sm:px-6 py-4">
+      <nav className="flex bg-[#0098f1]  rounded-t-2xl   px-4 sm:px-6 py-4">
         <button className="text-black text-2xl sm:hidden " onClick={toggleMenu}>
           {menuOpen ? <FaTimes className="mb-56" /> : <FaBars />}{" "}
         </button>
         <ul
           className={`${
             menuOpen ? "block" : "hidden"
-          } sm:flex px-12 sm:flex-row flex-col text-nowrap overflow-x-auto xl:lg:md:text-[22px] text-16px text-white font-md space-y-2 sm:space-y-0 sm:space-x-4`}
+          } sm:flex px-12 sm:flex-row flex-col text-nowrap overflow-x-auto xl:lg:md:text-[22px] text-16px  text-white font-md space-y-2 sm:space-y-0 sm:space-x-4`}
         >
           {sections.map((section, index) => (
             <li key={index} className="mt-2 text-center sm:mt-0">

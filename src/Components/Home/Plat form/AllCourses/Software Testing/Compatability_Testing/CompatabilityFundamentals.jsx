@@ -14,12 +14,10 @@ const CompatabilityTesting = () => {
   return (
     <>
       <Navbar />
-      <div className="max-w-full">
       <CompatabilityHero />
       <CompatabilityCard />
       <CompatabilityNavigation />
       <CompatabilityFoot />
-      </div>
       <Footer />
     </>
   );

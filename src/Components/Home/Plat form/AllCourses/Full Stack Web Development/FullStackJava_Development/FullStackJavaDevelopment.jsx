@@ -28,7 +28,6 @@ const FullStackJavaDevelopment = () => {
       <Navbar />
       <div className="pl-4">
         <div className="w-full flex flex-col mb-8 p-6 lg:flex-row items-center justify-center gap-4 md:px-8 lg:px-16 2xl:px-32">
-          {/* Image Section */}
           <div className="order-1 md:order-1 lg:order-2 mt-8 md:mt-0 md:w-1/2 flex justify-center">
             <img
               src={Hero}
@@ -36,8 +35,7 @@ const FullStackJavaDevelopment = () => {
               className="w-full max-w-md md:max-w-lg lg:max-w-xl"
             />
           </div>
-          {/* Content Section */}
-          <div className="lg:w-2/3 text-center lg:text-left order-2 md:order-2 lg:order-1">
+          <div className="lg:mt-16 mt-5 lg:w-2/3 text-center lg:text-left order-2 md:order-2 lg:order-1">
             <h3 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight sm:leading-none tracking-tight text-gray-900">
               Master{" "}
               <span className="text-[#F6AC14]"> Full Stack </span> Java Development
@@ -52,7 +50,7 @@ const FullStackJavaDevelopment = () => {
             </p>
             <button
               onClick={handleEnroll}
-              className="mt-6 bg-[#0098F1] text-white md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[280px] xl:lg:h-[80px] md:text-xl"
+              className="mt-6 bg-[#0098F1] text-white md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[180px] xl:lg:h-[60px] md:text-xl"
             >
               Enroll Now
             </button>
