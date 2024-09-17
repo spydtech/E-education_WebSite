@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import hero from "../../../../../../assetss/professional/cloudComputing/hero.png";
 
 const CloudHero = () => {
   const [courseName] = useState("Cloud Computing");
@@ -52,15 +53,14 @@ const CloudHero = () => {
       <div
         className="relative w-full h-[370px] bg-cover bg-center"
         style={{
-          backgroundImage:
-            'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725874356/image_13_oi7qfs.png")',
+          backgroundImage: `url(${hero})`,
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
           <p className="text-center text-white max-md:text-[16px] text-[20px] font-medium px-4">
-            Empowering you to leverage cutting-edge cloud technologies,
-            ensuring optimal performance,<br /> security and cost-effectiveness
-            for your business...
+            Empowering you to leverage cutting-edge cloud technologies, ensuring
+            optimal performance,
+            <br /> security and cost-effectiveness for your business...
           </p>
         </div>
         <div className="absolute inset-0 flex items-end justify-center pb-10">
