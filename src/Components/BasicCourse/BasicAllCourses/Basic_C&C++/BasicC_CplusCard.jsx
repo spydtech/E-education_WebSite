@@ -1,11 +1,10 @@
 import React from "react";
-import Img1 from "../../../../assetss/Basic_Courses/BasicC++/image1.jpg";
-import Img2 from "../../../../assetss/Basic_Courses/BasicC++/image2.jpg";
-import Img3 from "../../../../assetss/Basic_Courses/BasicC++/image3.jpg";
-import Img4 from "../../../../assetss/Basic_Courses/BasicC++/image4.jpg";
-import Img5 from "../../../../assetss/Basic_Courses/BasicC++/image5.jpg";
-import Img6 from "../../../../assetss/Basic_Courses/BasicC++/image6.jpg";
-
+import Img1 from "../../../../assetss/Basic_Courses/BasicPHP/image1.jpg";
+import Img2 from "../../../../assetss/Basic_Courses/BasicPHP/image2.jpg";
+import Img3 from "../../../../assetss/Basic_Courses/BasicPHP/image3.jpg";
+import Img4 from "../../../../assetss/Basic_Courses/BasicPHP/image4.jpg";
+import Img5 from "../../../../assetss/Basic_Courses/BasicPHP/image5.jpg";
+import Img6 from "../../../../assetss/Basic_Courses/BasicPHP/image6.jpg";
 const BasicCplus_Card = () => {
   const courseData = [
     {
