@@ -17,8 +17,8 @@ const ManualTestingNavigation = () => {
     "Certificate",
     "Syllabus",
   ];
+
   const [currentSection, setCurrentSection] = useState(0);
-  const [menuOpen, setMenuOpen] = useState(false); // State to control menu visibility
 
   useEffect(() => {
     const sectionId = sections[currentSection];
@@ -32,19 +32,16 @@ const ManualTestingNavigation = () => {
     }
   }, [currentSection, sections]);
 
-  const handleNextSection = (index) => {
-    if (index === "next") {
+  const handleNextSection = (direction) => {
+    if (direction === "next") {
       setCurrentSection((prev) =>
         prev === sections.length - 1 ? 0 : prev + 1
       );
-    } else {
-      setCurrentSection(index);
+    } else if (direction === "prev") {
+      setCurrentSection((prev) =>
+        prev === 0 ? sections.length - 1 : prev - 1
+      );
     }
-    setMenuOpen(true); // Close the menu when a section is selected
-  };
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
   };
 
   return (

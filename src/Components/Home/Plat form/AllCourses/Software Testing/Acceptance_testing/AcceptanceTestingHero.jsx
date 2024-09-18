@@ -18,9 +18,9 @@ const AcceptanceTestingHero = () => {
  <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/dfftgkkev/image/upload/v1726484672/image_1_jtkxdd.png")' }}>
   <div className="absolute inset-0 flex items-center justify-center">
     <p className="text-center text-white text-[20px] font-medium px-4">
-          Empower your team with efficient acceptance testing procedures,<br/>
-            ensuring your software meets stakeholder requirements and
-            expectations...
+           Empower your team with efficient acceptance testing procedures,<br/>
+            ensuring your software meets stakeholder requirements  <br/>
+            and expectations...
     </p>
   </div>
   <div className="absolute inset-0 flex items-end justify-center pb-10">

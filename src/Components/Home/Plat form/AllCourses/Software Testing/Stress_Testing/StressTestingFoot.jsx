@@ -45,7 +45,7 @@ function StressTestingFoot() {
         </h2>
 
         <a
-          className="bg-yellow-300 dark:bg-gray-800 rounded-xl text-white dark:text-gray-300 font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-yellow-400 dark:hover:bg-gray-600 transition mb-0"
+           className="bg-white text-[26px] dark:bg-gray-800 rounded-xl text-[#0998f1]  font-medium px-10 py-3 sm:mt-10 mt-8  dark:hover:bg-gray-600 transition mb-0"
           href=""
           onClick={handleEnroll}
         >
