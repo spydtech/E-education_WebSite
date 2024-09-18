@@ -300,8 +300,8 @@ export default function EducationCarousel() {
           }
         `}
       </style>
-      <div className="my-16 text-center">
-        <div className="text-xl bg-gradient-to-r from-[#ff9b26] to-[#0098F1] inline-block text-transparent bg-clip-text lg:text-5xl  pb-4 font-bold font-lora">
+      <div className="lg:my-16 md:my-8 my-4 text-center">
+        <div className="md:text-3xl text-2xl bg-gradient-to-r from-[#ff9b26] to-[#0098F1] inline-block text-transparent bg-clip-text lg:text-5xl  pb-4 font-bold font-lora">
           <span>Choose a course for you</span>
         </div>
       </div>

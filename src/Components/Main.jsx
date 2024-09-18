@@ -9,7 +9,7 @@ function Main() {
       className="bg-contain sm:bg-cover "
       style={{ backgroundImage: `url(${home})` }}
     >
-      <section className="sm:mt-6 mx-auto px-4 sm:px-6 lg:px-8 ">
+      <section className="sm:mt-6 mx-auto px-0 sm:px-6 lg:px-8 ">
         <div className="mx-auto max-w-7xl px-4 sm:mt-12  lg:px-8 flex flex-col lg:flex-row-reverse items-center gap-4">
           {/* Image Section at the Top */}
           <div className="relative w-full flex justify-center items-center mt-6 lg:mt-0">

@@ -158,7 +158,7 @@ function Pricing() {
                 >
                   Premium
                 </h2>
-                <p class="rounded-full bg-[#ff9b26] px-2.5 py-1 text-xs font-semibold leading-5 text-white">
+                <p class="rounded-lg py-2 bg-[#ff9b26] px-4 lg:px-2.5 text-sm font-semibold  text-white">
                   Most popular Courses
                 </p>
               </div>

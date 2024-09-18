@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Carrer = () => {
   return (
     <>
-      <div class="text-center md:mt-32 mt-8  w-full px-12 ">
+      <div class="text-center md:mt-32 mt-8  w-full px-12">
         <div class="md:text-4xl text-xl font-bold    font text-center">
           Start a new{" "}
           <span class="bg-gradient-to-r from-[#ff9b26] to-[#0098F1] inline-block text-transparent bg-clip-text">
@@ -20,7 +20,7 @@ const Carrer = () => {
         <div className="w-60 h-60 md:w-auto md:h-auto ">
           <img src={Carrerimg} />
         </div>
-        <div className="ml-6 px-6 mt-4">
+        <div className="ml-6 px-4 mt-4">
           <div className="flex  flex-col items-start justify-start w-auto  gap-4">
             <div className="font font-bold  text-xl md:text-3xl ">
               Unlocking Career Horizons
