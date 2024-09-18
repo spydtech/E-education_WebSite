@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import hero from "../../../../../../assetss/student/softwareTesting/usabilityTesting/hero.png";
 
 const UsabilityTestingHero = () => {
   const [courseName] = useState("Usability Testing"); // Placeholder for course name
@@ -16,8 +17,7 @@ const UsabilityTestingHero = () => {
       <div
         className="relative w-full h-[370px] bg-cover bg-center"
         style={{
-          backgroundImage:
-            'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725874356/image_13_oi7qfs.png")',
+          backgroundImage: `url(${hero})`,
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
