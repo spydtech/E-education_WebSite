@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 
 function Main() {
   return (
-    <div className="bg-cover " style={{ backgroundImage: `url(${home})` }}>
+    <div
+      className="bg-contain sm:bg-cover "
+      style={{ backgroundImage: `url(${home})` }}
+    >
       <section className="sm:mt-6 mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="mx-auto max-w-7xl px-4 sm:mt-12  lg:px-8 flex flex-col lg:flex-row-reverse items-center gap-4">
           {/* Image Section at the Top */}

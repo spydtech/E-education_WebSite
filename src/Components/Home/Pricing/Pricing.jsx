@@ -6,7 +6,7 @@ function Pricing() {
       <div class="pt-5  font" id="pricing">
         <div class="mx-auto pb-20 mt-4 max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-4xl text-center">
-            <p class="mt-2 text-4xl font-bold tracking-tight text-black sm:text-5xl">
+            <p class="mt-2 text-2xl font-bold tracking-tight text-black sm:text-5xl">
               Whether it's you{" "}
               <span className="bg-gradient-to-r from-[#ff9b26]  to-[#0098F1] inline-block text-transparent bg-clip-text">
                 or
