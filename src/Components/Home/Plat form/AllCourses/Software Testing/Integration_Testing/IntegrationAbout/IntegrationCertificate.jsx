@@ -1,5 +1,6 @@
 import React from "react";
 import certificate from "../../../../../../../assetss/certficate1.png";
+import certificate from "../../../../../../../assetss/certficate1.png";
 
 function IntigrationCertificate() {
   return (
