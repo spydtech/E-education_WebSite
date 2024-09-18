@@ -5,14 +5,18 @@ import { MdArrowOutward } from "react-icons/md";
 import { SiSemanticweb } from "react-icons/si";
 import { FaMobile } from "react-icons/fa";
 import { FaPython, FaJava, FaDatabase, FaComputer } from "react-icons/fa6";
-import { SiAlwaysdata, SiCyberdefenders, SiNintendonetwork } from "react-icons/si";
+import {
+  SiAlwaysdata,
+  SiCyberdefenders,
+  SiNintendonetwork,
+} from "react-icons/si";
 import { GrVirtualMachine } from "react-icons/gr";
 import { AiFillDatabase } from "react-icons/ai";
 import { DiDatabase } from "react-icons/di";
 import { GiGraduateCap } from "react-icons/gi";
 import { MdOutlineNetworkCheck } from "react-icons/md";
 import { FaMixcloud } from "react-icons/fa";
-import image1 from '../../../../assetss/Home/FeaturesAssets/Professionalimage1.png';
+import image1 from "../../../../assetss/Home/FeaturesAssets/Professionalimage1.png";
 import ProfessionalsCourses from "./ProfessionalsCourses";
 
 const Professionals = () => {
@@ -22,7 +26,7 @@ const Professionals = () => {
   //     description: "Master full-stack web development with a comprehensive bootcamp course on E-education.",
   //     link: "/fullStack_WebDevelopment",
   //     icon: <SiSemanticweb className="text-[#f6ac14] w-[40px] h-[40px]" />,
-       
+
   //   },
   //   {
   //     title: "Mobile App Development",
@@ -112,7 +116,7 @@ const Professionals = () => {
 
   const courses = [
     {
-      title: "Full Stack Web Development",
+      title: "Full Stack Web ",
       description:
         "Master full-stack web development with a comprehensive bootcamp course on E-education.",
       link: "/fullStack_WebDevelopment",
@@ -147,7 +151,8 @@ const Professionals = () => {
     },
     {
       title: "Machine Learning",
-      description: "Explore machine learning with hands-on Python & R training .",
+      description:
+        "Explore machine learning with hands-on Python & R training .",
       link: "/data_Science/machine-Learning",
       icon: <GrVirtualMachine style={{ width: "40px", height: "40px" }} />,
     },
@@ -233,84 +238,110 @@ const Professionals = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-50 px-4 sm:px-6 lg:px-8 w-screen">
-        <div className="flex flex-col lg:flex-row lg:justify-between">
-          <div className="text-center xl:p-12 lg:text-left my-4 lg:w-1/2">
-          <div className="  xl:text-center pb-4">
-            <p className="px-6 md:lg:xl:text-xl text-sm text-left">
-              Elevate your career with our curated professional courses designed
-              to sharpen your skills and propel you towards success. Embrace the
-              flexibility of online learning and seize the opportunity to grow,
-              no matter where you are located.
-            </p>
-            <p className="px-6 md:lg:xl:text-xl text-sm text-left">
-              In today's dynamic job market, staying ahead requires continuous
-              learning. Our professional courses provide targeted skills and
-              knowledge to propel your career forward.
-            </p>
+      <div className=" px-4 sm:px-6 py-4">
+        <div className="flex lg:px-10  flex-col-reverse lg:flex-row lg:justify-between">
+          <div className="text-center lg:text-left my-4 lg:w-1/2">
+            <div className=" lg:pt-10 sm:mx-10 lg:mx-0  pb-4">
+              <p className=" md:lg:xl:text-lg text-sm text-left">
+                Elevate your career with our curated professional courses
+                designed to sharpen your skills and propel you towards success.
+                Embrace the flexibility of online learning and seize the
+                opportunity to grow, no matter where you are located.
+              </p>
+              <p className=" md:lg:xl:text-lg text-sm text-left">
+                In today's dynamic job market, staying ahead requires continuous
+                learning. Our professional courses provide targeted skills and
+                knowledge to propel your career forward.
+              </p>
             </div>
 
-            <div className="flex justify-center lg:justify-center mb-6 px-4">
-              <button className="bg-[#0098f1] text-white md:lg:xl:text-2xl md:lg:xl:font-bold  md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg mr-4 w-48 h-16 font-medium text-sm ">Discover Course</button>
-              <button className="bg-[#0098f1] text-white md:lg:xl:text-2xl md:lg:xl:font-bold md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg w-48 h-16  font-medium text-sm">Explore Course</button>
+            <div className=" my-4 px-4 lg:pl-10  ">
+              <button className="bg-[#0098f1] text-white    p-4  rounded-lg hover:shadow-lg  font-medium text-sm">
+                Explore Course
+              </button>
             </div>
           </div>
-        
+
           <div className="flex justify-center  mb-4 lg:mb-6">
-            <img src={image1} alt="People learning" className="w-[400px] md:lg:xl:h-96 h-52  xl:w-full xl:h-full  shadow-md" />
+            <img
+              src={image1}
+              alt="People learning"
+              className="md:w-[400px] w-auto h-96   shadow-md"
+            />
           </div>
         </div>
-        <div className="text-center pb-2 p-6 mb-6">
+        {/* <div className="text-center pb-2 p-6 mb-6">
           <h2 className="text-4xl pb-6 font-bold">
             <span className="text-[#f6ac14]">Explore</span>
-            <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent"> New </span>
+            <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
+              {" "}
+              New{" "}
+            </span>
             <span className="text-[#0098f1]">Horizons</span>
-          </h2> 
+          </h2>
           <p className="md:lg:xl:text-xl text-sm">
-            Our courses empower tech professionals with specialized knowledge and practical skills, ensuring they excel in their careers.
+            Our courses empower tech professionals with specialized knowledge
+            and practical skills, ensuring they excel in their careers.
           </p>
-          <p className="pb-8 md:lg:xl:text-xl text-sm"> Dive deep into emerging technologies and master industry-relevant tools.</p>
-          <button className="bg-[#0098F1] text-white text-sm font-medium md:lg:xl:text-2xl md:lg:xl:font-bold md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg w-48 h-16 mt-4">Find a class</button>
-        </div>
+          <p className="pb-8 md:lg:xl:text-xl text-sm">
+            {" "}
+            Dive deep into emerging technologies and master industry-relevant
+            tools.
+          </p>
+          <button className="bg-[#0098F1] text-white text-sm font-medium md:lg:xl:text-2xl md:lg:xl:font-bold md:lg:xl:w-[260px] md:lg:xl:h-[80px]  py-2 px-4 rounded-xl hover:shadow-lg w-48 h-16 mt-4">
+            Find a class
+          </button>
+        </div> */}
 
-        <div className="text-center my-8">
-          <h2 className="text-4xl pt-4 font-bold">
+        <div className="text-center  my-8">
+          <h2 className=" text:lg md:text-3xl pt-4 font-bold">
             <span className="text-[#f6ac14]">Highly</span>
-            <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent"> Demanded Skill Enhancement </span>
+            <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
+              {" "}
+              Demanded Skill Enhancement{" "}
+            </span>
             <span className="text-[#0098f1]">Courses</span>
           </h2>
         </div>
-        <div className="flex justify-center items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-8">
-          {courses.map((course, index) => (
-            <div key={index} className=" w-full sm:w-[317px] lg:w-[340px] mx-2 h-[360px] lg:h-[360px]  rounded-lx group  duration-600 ease-out transform bg-[#0098f1] text-white relative rounded-2xl shadow-md p-6 flex flex-col justify-between transition-transform duration-500 hover:scale-105 before:absolute before:w-1/5 before:h-1/5 before:bg-[#f6ac14] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px] after:absolute after:w-1/5 after:h-1/5 after:bg-[#f6ac14] after:bg-opacity-0 after:transition-all after:duration-500 after:bottom-0 after:left-0 after:rounded-tl-[100%] after:rounded-br-[15px] hover:after:w-full hover:after:h-full hover:after:rounded-[15px]">
-              <div className="flex items-center mb-4 z-10">
-                <div className="border-2 bg-white bg-opacity-50 rounded-full w-[80px] h-[80px] flex items-center justify-center  ">{course.icon}</div>
-                <h3 className="text-lg lg:text-xl font-semibold ml-4">{course.title}</h3>
+        <div className="flex  justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-9  gap-4 pb-8">
+            {courses.map((course, index) => (
+              <div
+                key={index}
+                className=" w-full sm:w-[315px]  h-[360px]   rounded-lx group  duration-600 ease-out transform bg-[#0098f1] text-white relative rounded-2xl shadow-md p-4 flex flex-col justify-between transition-transform duration-500 hover:scale-105 before:absolute before:w-1/5 before:h-1/5 before:bg-[#f6ac14] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px] after:absolute after:w-1/5 after:h-1/5 after:bg-[#f6ac14] after:bg-opacity-0 after:transition-all after:duration-500 after:bottom-0 after:left-0 after:rounded-tl-[100%] after:rounded-br-[15px] hover:after:w-full hover:after:h-full hover:after:rounded-[15px]"
+              >
+                <div className="flex items-center mb-4 z-10">
+                  <div className="border-2 bg-white bg-opacity-50 rounded-full w-[80px] h-[80px] flex items-center justify-center  ">
+                    {course.icon}
+                  </div>
+                  <h3 className="text-lg lg:text-lg font-semibold ml-3">
+                    {course.title}
+                  </h3>
+                </div>
+                <p className="mt-4 z-10 text-base lg:text-lg">
+                  {course.description}
+                </p>
+                <div className="flex justify-center z-10 mt-4">
+                  <a
+                    href={course.link}
+                    className="flex bg-white bg-opacity-30 text-white hover:bg-[#0098f1] hover:bg-opacity-80 py-2 px-4 justify-center rounded-md w-full text-lg lg:text-xl font-medium"
+                  >
+                    Explore Now{" "}
+                    <MdArrowOutward className="text-white text-2xl  lg:text-3xl ml-2" />
+                  </a>
+                </div>
               </div>
-              <p className="mt-4 z-10 text-base lg:text-lg">{course.description}</p>
-              <div className="flex justify-center z-10 mt-4">
-                <a href={course.link} className="flex bg-white bg-opacity-30 text-white hover:bg-[#0098f1] hover:bg-opacity-80 py-2 px-4 justify-center rounded-md w-full text-lg lg:text-2xl font-medium">
-                  Explore Now <MdArrowOutward className="text-white text-2xl  lg:text-3xl ml-2" />
-                </a>
-              </div>
-            </div>
-          ))}
-         
-        </div>
+            ))}
+          </div>
         </div>
       </div>
-    
+
       <Footer />
     </>
   );
 };
 
 export default Professionals;
-
-
-
-
 
 // import React from "react";
 // import Navbar from "../../../Navbar";
@@ -430,7 +461,7 @@ export default Professionals;
 //   return (
 //     <>
 //       <Navbar />
-    
+
 //       <div className="bg-gray-100 w-full ">
 //         <div className="flex">
 //           <div className="flex text-center my-4">
@@ -463,7 +494,7 @@ export default Professionals;
 //             <span className="text-[#f6ac14]">Explore</span>
 //             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent"> New </span>
 //             <span className="text-[#0098f1]">Horizons</span>
-//           </h2> 
+//           </h2>
 //           <p className=" text-xl">
 //            Our courses empower tech professionals with specialized knowledge and practical skills, ensuring they excel in their careers.
 //           </p>
@@ -495,17 +526,13 @@ export default Professionals;
 //           ))}
 //         </div>
 //       </div>
-    
+
 //       <Footer />
 //     </>
 //   );
 // };
 
 // export default Professionals;
-
-
-
-
 
 //main
 // import React from "react";
@@ -626,7 +653,7 @@ export default Professionals;
 //   return (
 //     <>
 //       <Navbar />
-    
+
 //       <div className="bg-gray-50 ">
 //         <div className="flex">
 //           <div className="grid text-center my-4">
@@ -660,7 +687,7 @@ export default Professionals;
 //             <span className="text-[#f6ac14]">Explore</span>
 //             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent"> New </span>
 //             <span className="text-[#0098f1]">Horizons</span>
-//           </h2> 
+//           </h2>
 //           <p className=" text-xl">
 //            Our courses empower tech professionals with specialized knowledge and practical skills, ensuring they excel in their careers.
 //           </p>
@@ -692,21 +719,13 @@ export default Professionals;
 //           ))}
 //         </div>
 //       </div>
-    
+
 //       <Footer />
 //     </>
 //   );
 // };
 
 // export default Professionals;
-
-
-
-
-
-
-
-
 
 // import React from "react";
 // import { motion } from "framer-motion";
@@ -877,5 +896,3 @@ export default Professionals;
 // };
 
 // export default Professionals;
-
-
