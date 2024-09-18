@@ -16,9 +16,9 @@ function DataScienceWithPythonFoot() {
     <>
       <div className="flex mb-20 flex-1 font w-full flex-col items-center justify-center text-center px-4 py-20 bg-[#0098f1] dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
         <h1 className="mx-auto max-w-4xl font-display text-2xl font-md tracking-normal text-white-300 dark:text-gray-300 md:text-6xl">
-        Transforming Insurance  &nbsp;
+          Unlock the Potential of &nbsp;
           <span className="relative text-white-600 dark:text-gray-300">
-          Operations with
+            Data Science with
           </span>
           <span className="relative whitespace-nowrap text-orange-500 dark:text-orange-300">
             <svg
@@ -31,14 +31,14 @@ function DataScienceWithPythonFoot() {
             </svg>
             <span className="relative font-bold text-[#ffffff]">
               {" "}
-              Data Science with Python
+              Data Science
             </span>
           </span>
         </h1>
         <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-white-400 text-white-500 dark:text-gray-300 leading-7">
-        Discover powerful machine learning solutions for businesses. Our
-          algorithms deliver actionable insights, optimize processes, and
-          empower you to stay ahead. Revolutionize data-driven decision-making.
+          Dive into the world of Data Science. Learn essential skills, tools,
+          and techniques to analyze and interpret complex data. Empower your
+          decision-making with data-driven insights.
         </h2>
         <a
           className="bg-white text-[26px] dark:bg-gray-800 rounded-xl text-[#0998f1]  font-medium px-10 py-3 sm:mt-10 mt-8  dark:hover:bg-gray-600 transition mb-0"
