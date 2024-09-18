@@ -12,7 +12,7 @@ import Footer from "./footer/Footer";
 import FinalTestimonials from "./testimonials/Testimonialss";
 import Platform from "./Plat form/Platform";
 import Pricing from "./Pricing/Pricing";
-import SlideInTimer from "./Timer/SlideInTimer";
+// import SlideInTimer from "./Timer/SlideInTimer";
 import ImageHomePage from "../Home/Plat form/AllCourses/ImageHomepage";
 import SingupHome from "../Home/SingUpHome/SignUpHome";
 import StartNewCarrer from "./StartNewCarrer/Carrer";
@@ -160,7 +160,7 @@ function Home() {
       <Aurora />
 
       <Pricing />
-      <SlideInTimer />
+      {/* <SlideInTimer /> */}
       {/* {!auth.user && <SingupHome />} */}
       <FinalTestimonials />
       <Footer />
@@ -169,4 +169,3 @@ function Home() {
 }
 
 export default Home;
-
