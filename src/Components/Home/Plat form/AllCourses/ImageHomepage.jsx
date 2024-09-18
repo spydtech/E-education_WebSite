@@ -29,7 +29,7 @@ const data = [
 
 const ImageHomePage = () => {
   return (
-    <div className="container mx-auto px-4 py-10 my-20">
+    <div className="container mx-auto px-4 py-10 my-6 md:my-14">
       <div className="grid grid-cols-1 sm:grid-cols-1 md:lg:xl:grid-cols-3 gap-6 justify-items-center">
         {data.map((item, index) => (
           <div
