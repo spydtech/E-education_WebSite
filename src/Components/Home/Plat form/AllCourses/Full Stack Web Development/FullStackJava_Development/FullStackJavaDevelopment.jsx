@@ -4,7 +4,7 @@ import Navbar from "../../../../../Navbar";
 import AboutCourses from "./AboutCourses";
 import Community from "./Community/community";
 import SuccessStory from "./SuccessStory/successstory";
-import Hero from "../../../../../../assetss/fullstackwebdev/java/java1.avif";
+import Hero from "../../../../../../assetss/fullstackwebdev/java/java12.png";
 // import Delivery_Methods from "./deliverymethods/Delivery_Methods";
 import FullStackJavaDeveloper from "./Developer/FullStackJavaDeveloper";
 import Footer from "../../../../footer/Footer";

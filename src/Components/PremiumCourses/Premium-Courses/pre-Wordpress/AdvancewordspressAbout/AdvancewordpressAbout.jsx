@@ -7,14 +7,14 @@ const AdvancewordpressAbout = () => {
     {
       title: "Student Support",
       description:
-        "Learn about the latest software testing techniques and tools to ensure robust and reliable applications.",
+        "Learn about the latest mobile app development techniques and tools to build robust and scalable applications.",
       imgSrc: programmer,
       imgAlt: "student-support",
     },
     {
       title: "Career Assistance",
       description:
-        "Gain expertise in various testing methodologies and receive support to advance your career in software testing.",
+        "Gain expertise in mobile app development and receive support to advance your career in this growing field.",
       imgSrc: assistance,
       imgAlt: "career-assistance",
     },
@@ -23,8 +23,8 @@ const AdvancewordpressAbout = () => {
   return (
     <div className="mx-auto h-auto w-full mb-20 px-4 md:px-10 bg-white">
       <div className="py-2 my-10">
-        <p className="text-2xl text-center font-bold text-[#f6ac14]">
-          Discover the Advance WordPress Program
+        <p className="text-2xl text-center font-bold text-[#0098f1]">
+          Discover the Mobile App Development Programs
         </p>
       </div>
 

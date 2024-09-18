@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Hero from './../../../../../../../assetss/fullstackwebdev/python/python1.avif';
+import Hero from './../../../../../../../assetss/fullstackwebdev/python/python11.png';
 import Navbar from "../../../../../../Navbar";
 import Footer from "../../../../../footer/Footer";
 import AboutCourses from "./AboutCourses";

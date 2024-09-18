@@ -1,5 +1,5 @@
 import React from "react";
-import Nextgen from "../../../../../../../assetss/fullstackwebdev/python/python2.avif";
+import Nextgen from "../../../../../../../assetss/fullstackwebdev/python/python12.png";
 
 const FullStackPythonDevelopmentCard = () => {
   return (

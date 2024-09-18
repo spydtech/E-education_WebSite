@@ -24,8 +24,8 @@ function IntegrationSyllabus() {
 
   return (
     <>
-      <div className="py-8">
-        <div className="flex flex-col lg:flex-row items-start justify-between px-4">
+      <div className="py-1">
+        <div className="flex flex-col lg:flex-row items-center justify-between px-4">
           <div className="lg:w-1/2 w-full mb-8 lg:mb-0 px-10">
             <div className="text-start">
               <h2 className="text-2xl text-[#0098f1] font-bold mb-4">
@@ -38,7 +38,7 @@ function IntegrationSyllabus() {
               </p>
             </div>
           </div>
-          <div className="lg:w-[700px] w-full bg-[#0098f1] p-6 pl-20 rounded-lg">
+          <div className="lg:w-[700px] w-full bg-[#0098f1] p-6 pl-10 mb-5 rounded-lg">
             <div className="container mx-auto">
               {data.map((category, index) => (
                 <div key={index} className="mb-6">

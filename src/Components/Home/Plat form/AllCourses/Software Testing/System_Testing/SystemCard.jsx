@@ -1,49 +1,48 @@
 import React from "react";
 // import girl3 from "../../../../../../assets/girl3.png";
-import img2 from '../../../../../../assetss/professionalimages/image14.png';
 import { GoArrowUpRight } from "react-icons/go";
+import Img1 from "../../../../../../assetss/Professionals/image1.jpg";
+import Img2 from "../../../../../../assetss/Professionals/image2.jpg";
+import Img3 from "../../../../../../assetss/Professionals/image3.jpg";
+import Img4 from "../../../../../../assetss/Professionals/image4.jpg";
+import Img5 from "../../../../../../assetss/Professionals/image5.jpg";
+import Img6 from "../../../../../../assetss/Professionals/image6.jpg";
 
 
 const SystemTestingCard = () => {
   const courseData = [
     {
-      imgSrc:
-        `${img2}`,
+      imgSrc:Img1,
       title: "Explore Course Catalog",
       description:
         "Browse our extensive catalog of Data Science courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
     },
     {
-      imgSrc:
-        `${img2}`,
+      imgSrc:Img2,
       title: "Enroll in Foundational Courses",
       description:
         "Start with foundational courses covering basic concepts, algorithms, and tools essential for Data Science.",
     },
     {
-      imgSrc:
-        `${img2}`,
+      imgSrc:Img3,
       title: "Practice with Real-world Projects",
       description:
         "Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience in data analysis, data processing, and visualization.",
     },
     {
-      imgSrc:
-        `${img2}`,
+      imgSrc:Img4,
       title: "Track Your Progress",
       description:
         "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Data Science concepts as you advance through the courses.",
     },
     {
-      imgSrc:
-        `${img2}`,
+      imgSrc:Img5,
       title: "Specialize and Advance",
       description:
         "Choose specialized tracks or advanced courses to delve deeper into specific areas of Data Science, such as data engineering, predictive analytics, or machine learning.",
     },
     {
-      imgSrc:
-      `${img2}`,
+      imgSrc:Img6,
       title: "Earn Recognized Certifications",
       description:
         "Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.",
@@ -54,7 +53,7 @@ const SystemTestingCard = () => {
     <section id="portfolio" className="portfolio-section py-10 px-4">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl pb-2 md:text-4xl lg:text-5xl font-medium">
+          <h2 className="text-2xl pb-2 md:text-3xl lg:text-4xl font-medium">
             <span className="text-[#f6ac14]">The</span>
             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
               {" "}
@@ -70,11 +69,11 @@ const SystemTestingCard = () => {
               className="group border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-                <div className="h-[210px]">
+              <div className="h-[180px] justify-center items-center flex">
                   <img
-                    className="w-full h-full object-cover"
+                    className="w-[300px] h-[220px] p-2 bg-cover"
                     src={course.imgSrc}
-                    alt={`Project ${index + 1}`}
+                    alt={`Course ${index + 1}`}
                   />
                 </div>
                 <div className="p-4 flex flex-col items-center justify-between">

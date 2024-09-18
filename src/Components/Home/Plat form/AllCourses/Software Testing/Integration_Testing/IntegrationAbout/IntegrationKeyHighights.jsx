@@ -96,10 +96,10 @@ function IntegrationKeyHighlights() {
   };
 
   return (
-    <div className="px-3 md:mb-4">
+    <div className="px-1 md:mb-4">
       <div className="md:flex justify-around">
-        <div className="bg-[#0098F1] text-white">{renderContent()}</div>
-        <div className="my-3">
+        <div className="bg-[#0098F1] text-white md:w-[460px] lg:w-[520px]">{renderContent()}</div>
+        <div className="my-3 px-2">
           <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
             E-Education Course Highlights
           </p>
