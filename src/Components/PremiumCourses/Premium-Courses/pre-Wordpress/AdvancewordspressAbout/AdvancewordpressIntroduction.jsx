@@ -2,10 +2,10 @@ import React, { useState } from "react";
 function AdvanceWordPressIntroduction() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const Slide = ({ heading, items, imgSrc }) => {
+  const Slide = ({ heading, items}) => {
     return (
       <div className="w-full flex-shrink-0 px-4 py-3">
-        <div className="h-auto flex flex-col justify-center items-center">
+        <div className="h-auto flex flex-col justify-center">
           <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
             {heading}
           </h2>
