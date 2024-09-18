@@ -1,4 +1,10 @@
 import React from "react";
+import img1 from '../../../../../../assetss/professional/cloudComputing/image1.jpg'
+import img2 from '../../../../../../assetss/professional/cloudComputing/image2.jpg'
+import img3 from '../../../../../../assetss/professional/cloudComputing/image3.jpg'
+import img4 from '../../../../../../assetss/professional/cloudComputing/image4.jpg'
+import img5 from '../../../../../../assetss/professional/cloudComputing/image5.jpg'
+import img6 from '../../../../../../assetss/professional/cloudComputing/image6.jpg'
 
 const CloudCard = () => {
   return (
@@ -23,7 +29,7 @@ const CloudCard = () => {
                 <div className="h-[180px]">
                   <img
                     className="w-full h-full bg-cover"
-                    src="https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg"
+                    src= {img1}
                     alt="image"
                   />
                 </div>
@@ -45,7 +51,7 @@ const CloudCard = () => {
                 <div className="h-[180px]">
                   <img
                     className="w-full h-full bg-cover"
-                    src="https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg"
+                    src={img2}
                     alt="image"
                   />
                 </div>
@@ -66,7 +72,7 @@ const CloudCard = () => {
                 <div className="h-[180px]">
                   <img
                     className="w-full h-full bg-cover"
-                    src="https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg"
+                    src={img3}
                     alt="image"
                   />
                 </div>
@@ -89,7 +95,7 @@ const CloudCard = () => {
                 <div className="h-[180px]">
                   <img
                     className="w-full h-full bg-cover"
-                    src="https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg"
+                    src={img4}
                     alt="image"
                   />
                 </div>
@@ -112,7 +118,7 @@ const CloudCard = () => {
                 <div className="h-[180px]">
                   <img
                     className="w-full h-full bg-cover"
-                    src="https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg"
+                    src={img5}
                     alt="image"
                   />
                 </div>
@@ -136,7 +142,7 @@ const CloudCard = () => {
                 <div className="h-[180px]">
                   <img
                     className="w-full h-full bg-cover"
-                    src="https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg"
+                    src={img6}
                     alt="image"
                   />
                 </div>

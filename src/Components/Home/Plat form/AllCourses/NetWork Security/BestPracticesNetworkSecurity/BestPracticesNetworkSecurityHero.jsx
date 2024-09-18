@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import student from "../../../../../../assetss/Home/intro_DataScience/student.jpg";
+import hero from '../../../../../../assetss/professional/networkSecurity/bestPractices/hero.png'
 const NetworkSecurityBestPracticesHero = () => {
   const [courseName] = useState("NetWork Security Best Practices"); // Placeholder for course name
   const [coursePrice] = useState(14999);
@@ -19,7 +20,7 @@ const NetworkSecurityBestPracticesHero = () => {
         className="relative w-full h-[370px] bg-cover bg-center"
         style={{
           backgroundImage:
-            'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725874356/image_13_oi7qfs.png")',
+            `url(${hero})`,
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">

@@ -1,39 +1,45 @@
 import React from "react";
+import img1 from '../../../../../../assetss/professional/ethicalHacking/basics/image1.jpg'
+import img2 from '../../../../../../assetss/professional/ethicalHacking/basics/image2.jpg'
+import img3 from '../../../../../../assetss/professional/ethicalHacking/basics/image3.jpg'
+import img4 from '../../../../../../assetss/professional/ethicalHacking/basics/image4.jpg'
+import img5 from '../../../../../../assetss/professional/ethicalHacking/basics/image5.jpg'
+import img6 from '../../../../../../assetss/professional/ethicalHacking/basics/image6.jpg'
 
 const EthicalHackingCard = () => {
   const courseData = [
     {
-      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
+      imgSrc: img1,
       title: "Explore Course Catalog",
       description:
         "Browse our extensive catalog of Ethical Hacking courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
     },
     {
-      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
+      imgSrc: img2,
       title: "Enroll in Foundational Courses",
       description:
         "Start with foundational courses covering basic concepts, algorithms, and programming languages essential for Ethical Hacking.",
     },
     {
-      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
+      imgSrc: img3,
       title: "Practice with Real-world Projects",
       description:
         "Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience in data analysis, model building, and evaluation under the guidance of industry experts.",
     },
     {
-      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
+      imgSrc: img4,
       title: "Track Your Progress",
       description:
         "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Machine Learning concepts as you advance through the courses.",
     },
     {
-      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
+      imgSrc: img5,
       title: "Specialize and Advance",
       description:
         "Choose specialized tracks or advanced courses to delve deeper into specific areas of Ethical Hacking, such as penetration testing, network security, or digital forensics. Customize your learning path to align with your interests and career goals.",
     },
     {
-      imgSrc: "https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725873209/image_14_hry4hj.jpg",
+      imgSrc: img6,
       title: "Earn Recognized Certifications",
       description:
         "Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.",
