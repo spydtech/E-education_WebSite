@@ -255,7 +255,7 @@ const Professionals = () => {
               </p>
             </div>
 
-            <div className=" my-4 px-4 lg:pl-10  ">
+            <div className=" my-4  ">
               <button className="bg-[#0098f1] text-white    p-4  rounded-lg hover:shadow-lg  font-medium text-sm">
                 Explore Course
               </button>
