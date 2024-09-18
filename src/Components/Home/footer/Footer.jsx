@@ -144,70 +144,62 @@ const sections = [
 
 function FooterPart() {
   return (
-    <>
-      <footer className="my-5 px-5">
-        <div>
-          <div className="flex justify-center">
-            <Link to="/">
-              <img src={IMG} className="w-52" alt="Your Company" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:justify-between gap-5 lg:mx-3 ">
-            {sections.map((section, index) => (
-              <div
-                key={index}
-                className=""
-              >
-                <h3
-                  className="mb-2 text-[20px] font-medium text-black"
-                  id={`footer-${section.title
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}`}
-                >
-                  {section.title}
-                </h3>
-                <ul>
-                  {section.links.map((link, linkIndex) => (
-                    <li
-                      key={linkIndex}
-                      className="my-1 text-black text-[18px]"
-                    >
-                      <Link
-                        to={link.Link}
-                        className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-                {section.socialIcons && (
-                  <div className="flex gap-4 mt-4">
-                    {section.socialIcons.map((social, socialIndex) => (
-                      <a
-                        key={socialIndex}
-                        href={social.Link}
-                        className="transition-colors duration-300 hover:opacity-75"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {social.icon}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="mt-4 mx-auto text-center">
-            <p className="text-xs text-black">
-              &copy; {new Date().getFullYear()} SPY D Technology. All rights
-              reserved.
-            </p>
-          </div>
+    <footer className="p-5">
+      <div>
+        <div className="flex justify-center">
+          <Link to="/">
+            <img src={IMG} className="w-52" alt="Your Company" />
+          </Link>
         </div>
-      </footer>
-    </>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:justify-between gap-5 lg:mx-3 ">
+          {sections.map((section, index) => (
+            <div key={index} className="">
+              <h3
+                className="mb-2 text-[20px] font-medium text-black"
+                id={`footer-${section.title
+                  .toLowerCase()
+                  .replace(/\s+/g, "-")}`}
+              >
+                {section.title}
+              </h3>
+              <ul>
+                {section.links.map((link, linkIndex) => (
+                  <li key={linkIndex} className="my-1 text-black text-[18px]">
+                    <Link
+                      to={link.Link}
+                      className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              {section.socialIcons && (
+                <div className="flex gap-4 mt-4">
+                  {section.socialIcons.map((social, socialIndex) => (
+                    <a
+                      key={socialIndex}
+                      href={social.Link}
+                      className="transition-colors duration-300 hover:opacity-75"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="mt-4 mx-auto text-center">
+          <p className="text-xs text-black">
+            &copy; {new Date().getFullYear()} SPY D Technology. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 }
 
