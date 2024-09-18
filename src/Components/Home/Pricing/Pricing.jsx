@@ -6,9 +6,12 @@ function Pricing() {
       <div class="pt-5  font" id="pricing">
         <div class="mx-auto pb-20 mt-4 max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-4xl text-center">
-          
-            <p class="mt-2 text-4xl font-bold tracking-tight text-black sm:text-5xl">
-            Whether its you are your entire team
+            <p class="mt-2 text-2xl font-bold tracking-tight text-black sm:text-5xl">
+              Whether it's you{" "}
+              <span className="bg-gradient-to-r from-[#ff9b26]  to-[#0098F1] inline-block text-transparent bg-clip-text">
+                or
+              </span>{" "}
+              your entire team
             </p>
           </div>
           {/* <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-black">
@@ -16,7 +19,7 @@ function Pricing() {
           </p> */}
           <div class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {/* <!-- First Course --> */}
-            <div class="ring-1  p-8 xl:p-10 hover:shadow-xl hover:ring-2 ring-[#F19E22] bg-[#F6AC141C] hover:scale-105 rounded-md shadow-md shadow-black duration-100">
+            <div class="ring-1  p-8 xl:p-10 hover:shadow-xl hover:ring-2 ring-[#ff9b26]  hover:scale-105 rounded-md shadow-md  duration-100">
               <div class="flex items-center justify-between gap-x-4">
                 <h2
                   id="Course1"
@@ -29,7 +32,6 @@ function Pricing() {
                 Course details for Basic
               </p>
               <p class="mt-6 flex items-baseline gap-x-1">
-
                 <span className="text-4xl font-bold tracking-tight text-black">
                   4999<span className="align-top text-base">&#8377;</span>
                   <span className="text-lg italic">/ course</span>
@@ -39,7 +41,7 @@ function Pricing() {
               <Link to="/basic-courses">
                 <button
                   aria-describedby="Course1"
-                  class="bg-[#F6AC144D]  text-black hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                  class="bg-[#ff9b26]  text-black hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   Explore Basic Courses
                 </button>
@@ -148,7 +150,7 @@ function Pricing() {
             </div>
 
             {/* <!-- Second Course --> */}
-            <div class=" ring-1 ring-[#F19E22] ring-opacity-40 bg-[#0098f1]  p-8 xl:p-10 hover:scale-105 duration-100 rounded-lg shadow-md shadow-black">
+            <div class=" ring-1 ring-[#ff9b26] ring-opacity-40 bg-[#0098f1]  p-8 xl:p-10 hover:scale-105 duration-100 rounded-lg shadow-md ">
               <div class="flex items-baseline justify-between gap-x-4">
                 <h2
                   id="Course2"
@@ -156,7 +158,7 @@ function Pricing() {
                 >
                   Premium
                 </h2>
-                <p class="rounded-full bg-[#F19E22] px-2.5 py-1 text-xs font-semibold leading-5 text-white">
+                <p class="rounded-lg py-2 bg-[#ff9b26] px-4 lg:px-2.5 text-sm font-semibold  text-white">
                   Most popular Courses
                 </p>
               </div>
@@ -168,12 +170,11 @@ function Pricing() {
                   34999<span className="align-top text-base">&#8377;</span>
                   <span className="text-lg italic">/ course</span>
                 </span>
-
               </p>
               <Link to="/premium-courses">
                 <button
                   aria-describedby="Course2"
-                  class="bg-white text-[#0098f1] shadow-sm hover:bg-[#F19E22] hover:text-white focus-visible:outline-[#0098f1] mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                  class="bg-white text-[#0098f1] shadow-sm hover:bg-[#ff9b26] hover:text-white focus-visible:outline-[#0098f1] mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   Explore Now With Premium Courses
                 </button>
@@ -244,7 +245,6 @@ function Pricing() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                
                   Recorded section
                 </li>
                 <li class="flex gap-x-3">
@@ -261,7 +261,6 @@ function Pricing() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                
                   Lifetime access
                 </li>
                 <li class="flex gap-x-3">
@@ -278,7 +277,7 @@ function Pricing() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                one month Internship opportunity
+                  one month Internship opportunity
                 </li>
                 <li class="flex gap-x-3">
                   <svg
@@ -328,7 +327,7 @@ function Pricing() {
                   </svg>
                   Reference in interview
                 </li>
-               
+
                 <li class="flex gap-x-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -349,7 +348,7 @@ function Pricing() {
             </div>
 
             {/* <!-- Third Course --> */}
-            <div class="ring-1 ring-[#F19E22] bg-[#F6AC141C]  p-8 xl:p-10 hover:ring-2 rounded-md shadow-md shadow-black hover:ring-[#F19E22] hover:scale-105 duration-100">
+            <div class="ring-1 ring-[#ff9b26] bg-[#ff9b261C]  p-8 xl:p-10 hover:ring-2 rounded-md shadow-md  hover:ring-[#ff9b26] hover:scale-105 duration-100">
               <div class="flex items-center justify-between gap-x-4">
                 <h2
                   id="Course3"
@@ -373,7 +372,7 @@ function Pricing() {
               <Link to="/advance-courses">
                 <button
                   aria-describedby="Course3"
-                  class="bg-[#F6AC144D] text-black hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+                  class="bg-[#ff9b26] text-black hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
                 >
                   Explore Advance Courses
                 </button>
@@ -444,7 +443,6 @@ function Pricing() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                
                   Recorded section
                 </li>
                 <li class="flex gap-x-3">
@@ -461,7 +459,6 @@ function Pricing() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                
                   Lifetime access
                 </li>
                 <li class="flex gap-x-3">
@@ -512,7 +509,7 @@ function Pricing() {
                   </svg>
                   Reference in interview
                 </li>
-               
+
                 <li class="flex gap-x-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

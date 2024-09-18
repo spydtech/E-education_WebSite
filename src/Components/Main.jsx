@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 
 function Main() {
   return (
-    <div className=" bg-cover" style={{ backgroundImage: `url(${home})` }}> 
-      <section className="sm:mt-6 mx-auto px-4 sm:px-6 lg:px-8 " >
-        <div className="mx-auto max-w-7xl px-4 sm:mt-12  lg:px-8 flex flex-col lg:flex-row-reverse items-center gap-4"
-        >
+    <div
+      className="bg-contain sm:bg-cover "
+      style={{ backgroundImage: `url(${home})` }}
+    >
+      <section className="sm:mt-6 mx-auto px-0 sm:px-6 lg:px-8 ">
+        <div className="mx-auto max-w-7xl px-4 sm:mt-12  lg:px-8 flex flex-col lg:flex-row-reverse items-center gap-4">
           {/* Image Section at the Top */}
           <div className="relative w-full flex justify-center items-center mt-6 lg:mt-0">
             <img
@@ -19,36 +21,35 @@ function Main() {
           </div>
 
           {/* Text Section Below the Image */}
-          <div
-            className="flex flex-col  w-full h-auto  p-6"
-           
-          >
+          <div className="flex flex-col  w-full h-auto  p-6">
             <div className="w-full flex flex-col justify-center ">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight font-extrabold text-gray-800">
                 <span className="block xl:inline">
                   Learn{" "}
-                  <span className="bg-gradient-to-r from-[#F19E22] to-[#25AAE3] inline-block text-transparent bg-clip-text">
+                  <span className="bg-gradient-to-r from-[#ff9b26] to-[#25AAE3] inline-block text-transparent bg-clip-text">
                     without
                   </span>{" "}
-                  limits online {" "}
-                  <span className="bg-gradient-to-r from-[#FF9B26] to-[#0098F1] inline-block text-transparent bg-clip-text">
+                  limits online{" "}
+                  <span className="bg-gradient-to-r from-[#ff9b26] to-[#0098F1] inline-block text-transparent bg-clip-text">
                     courses
                   </span>
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl">
-              Kickstart, switch, or elevate your career with over 6,900 courses, professional certificates, and degrees from leading universities and top companies.
+                Kickstart, switch, or elevate your career with over 6,900
+                courses, professional certificates, and degrees from leading
+                universities and top companies.
               </p>
               <div className="mt-5 sm:mt-8 flex flex-col sm:flex-row gap-3">
                 <Link
                   to="/pricing"
-                  className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#0098F1] hover:bg-gray-600 md:py-4 md:text-lg md:px-10"
+                  className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#0098F1] md:py-4 md:text-lg md:px-10"
                 >
                   Get started
                 </Link>
                 <Link
                   to="/try-a-demo"
-                  className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#0098F1] bg-[#0098F11A] hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
+                  className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#0098F1] bg-[#0098F11A] md:py-4 md:text-lg md:px-10"
                 >
                   Try demo
                 </Link>
@@ -62,11 +63,6 @@ function Main() {
 }
 
 export default Main;
-
-
-
-
-
 
 // import React, { useState, useEffect } from "react";
 // import Boy1 from "./Home/Boy1";
