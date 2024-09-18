@@ -10,7 +10,7 @@ const Carrer = () => {
       <div class="text-center md:mt-32 mt-8  w-full px-12 ">
         <div class="md:text-4xl text-xl font-bold    font text-center">
           Start a new{" "}
-          <span class="bg-gradient-to-r from-[#F19E22] to-[#0098F1] inline-block text-transparent bg-clip-text">
+          <span class="bg-gradient-to-r from-[#ff9b26] to-[#0098F1] inline-block text-transparent bg-clip-text">
             career
           </span>{" "}
           with E-education &#8594;

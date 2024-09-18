@@ -168,7 +168,6 @@
 //   );
 // }
 
-
 import React, { useEffect } from "react";
 import Glide from "@glidejs/glide";
 import {
@@ -182,18 +181,23 @@ import {
 import { Link } from "react-router-dom";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
-import WebDev from "../../../assetss/Home/slider/webDev.png"
-import ReactIcon from "../../../assetss/Home/slider/reactIcon.png"
-import Python from "../../../assetss/Home/slider/python.png"
-import DataScience from "../../../assetss/Home/slider/dataScience.png"
+import WebDev from "../../../assetss/Home/slider/web.png";
+import ReactIcon from "../../../assetss/Home/slider/react.png";
+import Python from "../../../assetss/Home/slider/pythonpic.png";
+import DataScience from "../../../assetss/Home/slider/ds.png";
 
+import Test from "../../../assetss/Home/slider/testing.png";
+import Js from "../../../assetss/Home/slider/js.png";
+import Ai from "../../../assetss/Home/slider/ai.png";
+
+import Machine from "../../../assetss/Home/slider/machine.png";
 
 const courses = [
   {
     title: "Generative AI",
     description: "Practical generative AI applications",
     bgColor: "bg-blue-300",
-    icon: <FaBrain className="text-[#18181b]" />,
+    icon: Ai,
     link: "/data_Science/machine-Learning",
   },
   {
@@ -228,25 +232,24 @@ const courses = [
     title: "JavaScript",
     description: "JavaScript programming skills",
     bgColor: "bg-indigo-300",
-    icon: <FaJs className="text-[#65a30d]" />,
+    icon: Js,
     link: "/fullStack_WebDevelopment/full-stack-javascript",
   },
   {
     title: "Machine Learning",
     description: "Study machine learning algorithms",
     bgColor: "bg-pink-300",
-    icon: <FaBrain className="text-[#dc2626]" />,
+    icon: Machine,
     link: "/data_Science/machine-Learning",
   },
   {
     title: "Software Testing",
     description: "Techniques for effective software testing",
     bgColor: "bg-orange-300",
-    icon: <FaDatabase className="text-[#475569]" />,
+    icon: Test,
     link: "/software_testing",
   },
 ];
-
 
 export default function EducationCarousel() {
   useEffect(() => {
@@ -298,25 +301,29 @@ export default function EducationCarousel() {
         `}
       </style>
       <div className="my-16 text-center">
-  <div className="text-xl bg-gradient-to-r from-[#F19E22] to-[#0098F1] inline-block text-transparent bg-clip-text lg:text-5xl font-semibold pb-4 font-lora">
-    <span>Choose a course for you</span>
-  </div>
-</div>
+        <div className="text-xl bg-gradient-to-r from-[#F19E22] to-[#0098F1] inline-block text-transparent bg-clip-text lg:text-5xl  pb-4 font-bold font-lora">
+          <span>Choose a course for you</span>
+        </div>
+      </div>
 
       <div className="glide relative mb-12 font-lora">
-        <div
-          className="glide__track overflow-hidden md:pl-80 sm:pl-64 lg:pl-80  pl-8"
-          data-glide-el="track"
-        >
-          <ul className="glide__slides  flex p-0 items-center justify-center">
+        <div className="glide__track overflow-hidden " data-glide-el="track">
+          <ul className="glide__slides  flex  items-center justify-center ">
             {courses.map((course, index) => (
-              <li key={index} className="glide__slide flex-none pt-10">
+              <li
+                key={index}
+                className="glide__slide flex  items-center justify-center  pt-10"
+              >
                 <Link
                   to={course.link}
                   className="group shadow-sm relative w-[268px] h-[168px] m-4 bg-[#0098F1] hover:ring duration-400 hover:scale-105 flex flex-col items-center justify-center p-4 rounded-lg text-center cursor-pointer hover:shadow-md transform hover:-translate-y-2 transition-transform"
                 >
                   <div className="flex justify-center items-center w-[87px] h-[87px] rounded-full absolute top-[-40px] border-2 border-blue-500 bg-white group-hover:shadow-md transform duration-300">
-                    <img src={course.icon} alt={course.title} className="w-20 h-20" />
+                    <img
+                      src={course.icon}
+                      alt={course.title}
+                      className="w-16 h-16"
+                    />
                   </div>
                   <div className="flex flex-col text-white items-center justify-center mt-8 p-4">
                     <h2 className="text-xl capitalize font-bold text-shadesOfBlue dark:text-slate-800 my-4">
@@ -329,7 +336,6 @@ export default function EducationCarousel() {
                 </Link>
               </li>
             ))}
-
           </ul>
         </div>
         <div className="pt-20">

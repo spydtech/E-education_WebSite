@@ -1,4 +1,3 @@
-
 // import React, { useEffect } from "react";
 // import { FiArrowRight } from "react-icons/fi";
 // import {
@@ -72,35 +71,34 @@
 // };
 // export default Aurora;
 
-
-
 import React, { useEffect } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 const Aurora = () => {
   return (
     <>
-      <div className="bg-[#F6AC144D] md:h-[476px]">
-        <div className="bg-gradient-to-r from-[#F19E22] to-[#0098F1] inline-block md:h-[80px] md:w-[458px] p-4 rounded-r-xl">
-          <span className="ml-[200px] font md:text-2xl text-lg text-white ">Start Learning!</span>
+      <div className="bg-[#ff9b26] bg-opacity-30 md:h-[476px]">
+        <div className="bg-gradient-to-r from-[#ff9b26] to-[#0098F1] flex items-center justify-center md:h-[80px] md:w-[458px] p-4 rounded-r-xl">
+          <p className="text-center text-white md:text-2xl text-lg">
+            Start Learning!
+          </p>
         </div>
+
         <div className="grid place-content-center overflow-hidden px-4 py-16 gap-2">
           <div className="max-w-3xl  text-center text-xl font-medium leading-tight sm:text-5xl sm:leading-tight md:text-4xl md:leading-tight">
-            Unlock Your Potential with {" "}
-
-            <span class="bg-gradient-to-r from-[#F19E22] to-[#0098F1] inline-block text-transparent bg-clip-text"
-            >E-education</span>
+            Unlock Your Potential with{" "}
+            <span class="bg-gradient-to-r from-[#ff9b26]  to-[#0098F1] inline-block text-transparent bg-clip-text">
+              {" "}
+              E-education
+            </span>
           </div>
           <div className="my-6 max-w-2xl text-center  leading-relaxed text-sm md:text-lg md:leading-9">
             Are you ready to take your skills next level?
             <div> Then join with us for your dream career </div>
           </div>
           <div className="flex justify-center items-center">
-
-            <button className=" flex md:w-[200px] md:h-[50px] items-center justify-center gap-1.5 rounded-lg bg-[#0098F1] px-4 py-2 text-white transition-colors hover:bg-gray-950/50">
-              <Link to="/pricing">
-                Start Now
-              </Link>
+            <button className=" flex md:w-[200px] md:h-[50px] items-center justify-center gap-1.5 rounded-lg bg-[#0098F1] px-4 py-2 text-white transition-colors">
+              <Link to="/pricing">Start Now</Link>
               <MdArrowOutward className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
             </button>
           </div>

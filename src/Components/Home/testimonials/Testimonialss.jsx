@@ -1,5 +1,3 @@
-
-
 import React, { useEffect } from "react";
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
@@ -128,7 +126,7 @@ export default function Testimonialss() {
           <ul className="glide__slides flex p-0 justify-center">
             {newdata.map((user, index) => (
               <li key={index} className="glide__slide flex-none pt-10">
-                <div className="group shadow-lg relative w-full lg:xl:w-[518px]  h-[258px] m-4 bg-white hover:border-none duration-400 hover:scale-105 flex flex-col items-center justify-center p-4 text-center cursor-pointer hover:shadow-md transform hover:-translate-y-2 transition-transform">
+                <div className="group  shadow-lg relative w-full lg:xl:w-[518px]  h-[258px] m-4  hover:border-none duration-400 hover:scale-105 flex flex-col items-center justify-center p-4 text-center cursor-pointer hover:shadow-md transform hover:-translate-y-2 transition-transform">
                   <div className="w-[60px] left-4 rounded-full top-4 h-[60px] absolute group-hover:shadow-md transform duration-300">
                     <img
                       src={user.image_url}
