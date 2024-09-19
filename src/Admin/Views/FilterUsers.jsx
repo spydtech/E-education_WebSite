@@ -501,6 +501,27 @@ function UsersRolesTable() {
     groups.push(newGroup);
     localStorage.setItem("groups", JSON.stringify(groups));
     navigate("/admin/users/existing-group");
+    // Prepare the data to send to the backend
+    const groupData = {
+      groupName: groupName,
+      users: selectedUsers,
+      trainees: selectedTrainees,
+    };
+
+    axios
+      .post("http://localhost:8080/api/groups", groupData, {
+        headers: {
+          Authorization: `Bearer ${jwt}`, // Optional, if your backend requires authentication
+        }
+      })
+      .then((response) => {
+        console.log("Group created successfully:", response.data);
+        navigate("/admin/users/existing-group"); // Redirect after successful creation
+      })
+      .catch((error) => {
+        console.error("Error creating group:", error);
+        setError("An error occurred while creating the group.");
+      });
   };
   const filteredUserData = userData.filter(
     (user) =>

@@ -95,16 +95,14 @@ const Navbar = () => {
     <>
       <Disclosure
         as="nav"
-        className={`sticky top-0 z-50 ${
-          isScrolled ? "bg-white " : "bg-white "
-        }`}
+        className={`sticky top-0 z-50 ${isScrolled ? "bg-white " : "bg-white "
+          }`}
       >
         {({ open }) => (
           <>
             <div
-              className={`max-w-7xl mx-auto px-2 sm:px-6 lg:px-8${
-                isScrolled ? "bg-white " : "bg-white "
-              }`}
+              className={`max-w-7xl mx-auto px-2 sm:px-6 lg:px-8${isScrolled ? "bg-white " : "bg-white "
+                }`}
             >
               <div className="relative flex h-16 justify-between items-center">
                 {/* Mobile Menu Button */}

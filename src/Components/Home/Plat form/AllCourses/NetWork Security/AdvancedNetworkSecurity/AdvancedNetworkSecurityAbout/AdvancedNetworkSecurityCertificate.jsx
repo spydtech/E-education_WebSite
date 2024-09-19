@@ -16,7 +16,7 @@ function AdvancedNetworkSecurityCertificate() {
             Achieve Credentials and Recognition
           </p>
           <p className="md:text-xl text-gray-500">
-            Successfully complete all course modules to obtain a Network
+            Successfully complete all course modules to obtain a Advanced Network
             Security certification, greatly enhancing career prospects and skill
             development.
           </p>

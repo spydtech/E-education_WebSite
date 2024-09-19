@@ -33,7 +33,7 @@ function CompatabilityCareersOutcomes() {
       {/* Left Content */}
       <div className="mb-8 ">
         <p className="md:text-2xl font-bold text-[#0098F1]">
-        Career Outcomes in Network Security
+        Career Outcomes in Compatibility Testing
         </p>
         <p className="md:text-xl text-gray-500 mt-4">
           Snapshot of Alumni Placement Support

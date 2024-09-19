@@ -33,7 +33,7 @@ function RegressionTestingSyllabus() {
           </h2>
           <p className="md:text-lg text-gray-500">
             Dive into the comprehensive curriculum covering key concepts,
-            practical applications, and advanced topics in cloud computing.
+            practical applications, and advanced topics in Regression Testing.
           </p>
         </div>
 
