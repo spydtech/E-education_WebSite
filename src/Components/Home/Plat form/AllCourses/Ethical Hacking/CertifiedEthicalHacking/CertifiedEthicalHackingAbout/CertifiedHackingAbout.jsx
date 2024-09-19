@@ -26,7 +26,7 @@ const CertifiedEthicalHackingAbout = () => {
     <div className="px-3 text-center">
       <div className="">
         <p className="md:text-2xl font-bold text-[#0098F1]">
-          Discover the Ethical Hacking Program
+          Discover The Certified Ethical Hacking Program
         </p>
       </div>
 
