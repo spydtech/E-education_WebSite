@@ -19,8 +19,8 @@ const AutomationTestingHero = () => {
   <div className="absolute inset-0 flex items-center justify-center">
     <p className="text-center text-white text-[20px] font-medium px-4">
             Learn how to leverage automation tools and techniques to streamline <br/>
-            your testing workflow, ensuring faster releases and higher quality <br/>
-            software...
+            your testing workflow, ensuring faster releases and higher  <br/>
+            quality software...
     </p>
   </div>
   <div className="absolute inset-0 flex items-end justify-center pb-10">

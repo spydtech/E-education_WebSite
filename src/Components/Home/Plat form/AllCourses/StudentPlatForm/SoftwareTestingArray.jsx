@@ -752,7 +752,7 @@ const SoftwareTestingArray = () => {
       title: "Unit Testing",
       description: "Testing individual components in isolation.",
       link: "/software-testing/unit-testing",
-      image:"https://img.freepik.com/free-vector/custom-style-script-website-optimization-coding-software-development-female-programmer-cartoon-character-working-adding-javascript-css-code_335657-2370.jpg?t=st=1725619937~exp=1725623537~hmac=acd18df1099833c8e0f4ba66ec22103814a5035ac53bfe57b8a67035ee92b18d&w=740",
+      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726657254/image_daa9b7.png",
       profilePic: Girl2,
       name: "Anjali Sharma",
       rating: 4.3, // Add dummy rating
@@ -761,7 +761,7 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 2,
-      image:"https://img.freepik.com/free-vector/new-app-development-desktop_23-2148684987.jpg?t=st=1725619658~exp=1725623258~hmac=cf41e3e1f00682ef4cc246534bd8118ad8391b2dba21cb48994391d511ac8647&w=740",
+      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726657258/image_1_yslvgz.png",
       title: "Integration Testing",
       description: "Testing software components together.",
       link: "/software-testing/integration-testing",
@@ -773,7 +773,7 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 3,
-      image:"https://img.freepik.com/free-vector/pair-programming-concept-illustration_114360-2170.jpg?t=st=1725619995~exp=1725623595~hmac=d23f93f8a3250b9f7ae58a643157ca2c075cdafbc28be499fd6cda53e41d474e&w=740",
+      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726657263/image_2_jn8sm5.png",
       title: "System Testing",
       description: "Testing the complete integrated software.",
       link: "/software-testing/system-testing",
@@ -785,7 +785,7 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 4,
-      image:"https://img.freepik.com/free-vector/programmers-with-laptops-working-code-big-data-software-development-data-processing-analysis-data-applications-management-concept-vector-isolated-illustration_335657-2145.jpg?t=st=1725620099~exp=1725623699~hmac=8d4b99a4ad160167f5e12c886e8887566a504570102eb2db0f85c8ba21882dd2&w=900",
+      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658495/image_3_sxipex.png",
       title: "Acceptance Testing",
       description: "Testing if software meets user needs.",
       link: "/software-testing/acceptance-testing",
@@ -797,7 +797,7 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 5,
-      image:"https://img.freepik.com/premium-vector/guy-developer-character-thinking-work-laptop-create-debugging-code-with-flat-cartoon-style_197170-380.jpg?w=826",
+      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658501/image_4_tmsbbg.png",
       title: "Performance Testing",
       description: "Testing speed and stability.",
       link: "/software-testing/performance-testing",
@@ -809,7 +809,7 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 6,
-      image:"https://img.freepik.com/premium-vector/engineer-team-programming-huge-laptop-testing-code-woman-developer-holding-wrench-programmer-optimizes-software-configures-develops-programs-products-vector-character-illustration_126283-3247.jpg?w=826",
+      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658509/image_5_ojh05n.png",
       title: "Security Testing",
       description: "Testing for vulnerabilities.",
       link: "/software-testing/security-testing",
@@ -821,7 +821,7 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 7,
-      image:"https://img.freepik.com/free-vector/developer-activity-concept-illustration_114360-1981.jpg?t=st=1725620396~exp=1725623996~hmac=a0353cbfa13a3e1b01284ad42a315cf6ea9f568c592f9fbaf96d447bde62e767&w=740",
+      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658513/image_6_jiwvdm.png",
       title: "Usability Testing",
       description: "Testing user-friendliness.",
       link: "/software-testing/usability-testing",
@@ -833,7 +833,7 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 8,
-      image:"https://img.freepik.com/free-vector/invoice-concept-illustration_114360-2485.jpg?t=st=1725620606~exp=1725624206~hmac=3c3f672fee1dcc463dbc78464579c1d52b70ea3797034fa755b77d8812334377&w=740",
+      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658519/image_7_w4eh1o.png",
       title: "Compatibility Testing",
       description: "Testing across different environments.",
       link: "/software-testing/compatibility-testing",
@@ -845,7 +845,7 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 9,
-      image:"https://img.freepik.com/free-vector/site-stats-concept-illustration_114360-1509.jpg?t=st=1725616852~exp=1725620452~hmac=da8f94b2763a58d91818b6a04fc1445bf69cf59ff8e55f0c15cc089615816fc5&w=740",
+      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658531/image_9_ricc7a.png",
       title: "Regression Testing",
       description: "Testing recent changes for new issues.",
       link: "/software-testing/regression-testing",
@@ -857,7 +857,7 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 10,
-      image:"https://img.freepik.com/premium-vector/web-design-man-with-laptop-ui-ux-programmer-with-computer-software-development-flat-illustration-vector-template_128772-1823.jpg?w=826",
+      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658524/image_8_zuhlts.png",
       title: "Stress Testing",
       description: "Testing under extreme conditions.",
       link: "/software-testing/stress-testing",
@@ -920,7 +920,7 @@ const SoftwareTestingArray = () => {
       <div className="md:px-20">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-center mb-4">
-            <span className="bg-gradient-to-r text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent pb-5">
             Expand Software Testing Courses
             </span>
           </div>

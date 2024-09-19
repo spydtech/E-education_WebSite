@@ -3,9 +3,13 @@ import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../../Navbar";
 import FooterPart from "../../../footer/Footer";
-import cardImage from "../../../../../assetss/fullstackwebdev/java/java1.avif";
-import  cardImage1  from "../../../../../assetss/fullstackwebdev/dotnet/dotnet1.jpg";
-import  cardImage2  from "../../../../../assetss/fullstackwebdev/javaScript/javascript1.avif";
+// import cardImage from "../../../../../assetss/fullstackwebdev/java/java1.avif";
+// import  cardImage1  from "../../../../../assetss/fullstackwebdev/dotnet/dotnet1.jpg";
+// import  cardImage2  from "../../../../../assetss/fullstackwebdev/javaScript/javascript1.avif";
+import basicsCard from '../../../../../assetss/professional/ethicalHacking/basicsCard.png'
+import advancedCard from '../../../../../assetss/professional/ethicalHacking/advancedCard.png'
+import certifiedCard from '../../../../../assetss/professional/ethicalHacking/certifiedCard.png'
+import hero from '../../../../../assetss/professional/ethicalHacking/hero.png'
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
@@ -40,7 +44,7 @@ const EthicalHackingStudentArray = () => {
     {
       id: 1,
       title: "Ethical Hacking Basics",
-      image: cardImage,
+      image: basicsCard,
       description:
         "Learn the fundamentals of ethical hacking, including reconnaissance, scanning, and vulnerability assessment.",
       link: "/Ethical_Hacking/basic_ethical_Hacking",
@@ -55,7 +59,7 @@ const EthicalHackingStudentArray = () => {
       title: "Advanced Ethical Hacking",
       description:
         "Dive deeper into ethical hacking techniques, including exploitation, privilege escalation, and post-exploitation.",
-      image: cardImage1,
+      image: advancedCard,
       link: "/Ethical_Hacking/advance_Ethical_Hacking",
       rating: 4.5, // Add dummy rating
       price: "₹1899", // Add dummy price
@@ -67,7 +71,7 @@ const EthicalHackingStudentArray = () => {
     {
       id: 3,
       title: "Certified Ethical Hacker",
-      image: cardImage2,
+      image: certifiedCard,
       description:
         "Prepare for the Certified Ethical Hacker (CEH) certification with comprehensive coverage of ethical hacking topics.",
       link: "/Ethical-Hacking/certified_Ethical_Hacking",
@@ -88,7 +92,7 @@ const EthicalHackingStudentArray = () => {
     <>
       <Navbar />
       <img
-        src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg?ga=GA1.1.1671979702.1717669022&semt=sph"
+        src={hero}
         className="object-cover w-full md:h-[490px]"
         alt="Background Image"
       />
@@ -118,11 +122,18 @@ const EthicalHackingStudentArray = () => {
               }`}
             >
               <a href={course.link} rel="noopener noreferrer">
-                <div className="relative">
+                {/* <div className="relative">
                   <img
                     src={course.image}
                     alt={course.title}
                     className="w-full h-32 object-cover px-3 py-3"
+                  />
+                </div> */}
+                <div className="h-[180px]">
+                  <img
+                    className="w-full h-full bg-cover"
+                    src={course.image}
+                    alt={course.title}
                   />
                 </div>
                 <div className="p-4">
