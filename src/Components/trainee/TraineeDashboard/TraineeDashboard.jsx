@@ -315,7 +315,7 @@ import Calendar from "../TraineeCalendar/Calendar";
 import { getTrainee, logout } from "../../../State/Auth/Action";
 import { useDispatch, useSelector } from "react-redux";
 
-const TraineeDashboard = () => {
+const TraineeDashboard = ({ changeTheme, theme }) => {
   const location = useLocation();
   const redirect = location?.state?.redirect;
   const [isDrawerOpen, setDrawerOpen] = useState(false);
@@ -345,7 +345,7 @@ const TraineeDashboard = () => {
   const handleLogout = () => {
     dispatch(logout());
     localStorage.removeItem("jwt");
-    navigate("/trainee"); // Redirect to the login page
+    // navigate("/trainee"); // Redirect to the login page
   };
 
   useEffect(() => {
@@ -445,7 +445,14 @@ const TraineeDashboard = () => {
                 <IoSettingsSharp className="h-6 w-6 mr-2" />
                 Settings
               </a>
+              {/* <button
+              className="p-2 bg-white px-16  py-2 text-[#4CA1AF] rounded-md hover:bg-white"
+             
+            >
+             ChangeTheme
+            </button> */}
             </nav>
+            
           </div>
 
           {/* Logout Button */} 
@@ -476,7 +483,7 @@ const TraineeDashboard = () => {
         </div>
 
         {/* Main Content */}
-        <div className="flex flex-col flex-1 overflow-y-auto">
+        {/* <div className="flex flex-col flex-1 overflow-y-auto">
           <div className="flex items-center justify-between h-56 py-4 bg-white border-b border-gray-200 px-4">
           
             <div className="flex items-center">
@@ -505,17 +512,61 @@ const TraineeDashboard = () => {
                 </div> 
             </div>
 
-            {/* Mobile Menu Toggle */}
+        
             <div className="flex items-center">
               <SiGooglemeet className="h-6 w-6 text-[#0098F1]" />
             </div>
           </div>
 
-          {/* Render Content based on active tab */}
+        
           <div className="flex-1 p-4 bg-gray-100">
             {renderContent()}
           </div>
-        </div>
+        </div> */} 
+        <div className="flex flex-col flex-1 overflow-y-auto">
+  <div className="flex flex-col md:flex-row items-center justify-between h-56 py-4 bg-white border-b border-gray-200 px-4">
+    <div className="flex items-center md:justify-start  justify-between w-full">
+      <button
+        className="md:hidden text-gray-500  hover:text-gray-700 focus:outline-none"
+        onClick={toggleSidebar}
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
+      <div className="flex items-center justify-center md:ml-4 mt-4 md:mt-0">
+        <img src={Traineeprofile} className="h-10 w-10 rounded-full" alt="Trainee Profile" />
+        <h2 className="pl-4 font-bold text-[#204349] text-[20px]">TraineeName</h2>
+      </div>
+    </div>
+
+    {/* Mobile Menu Toggle */}
+    {/* <div className="items-center md:visible   mt-4">
+      <SiGooglemeet className="h-6 w-6 text-[#0098F1 ]  " />
+    </div> */}
+    <div className="items-center hidden md:flex mt-4">
+  <SiGooglemeet className="h-6 w-6 text-[#0098F1]" />
+</div>
+
+  </div>
+
+  {/* Render Content based on active tab */}
+  <div className="flex-1 p-4 bg-gray-100">
+    {renderContent()}
+  </div>
+</div>
+
 
         {/* Sidebar for small screens */}
         <div
