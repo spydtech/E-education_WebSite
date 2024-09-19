@@ -12,7 +12,7 @@ const BlockChainHero = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center w-10/12 mx-auto overflow-x-hidden ">
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center w-10/12 mx-auto overflow-x-hidden ">
         <div className="order-2 lg:order-1 w-auto h-auto md:mb-14 font md:py-0 mx-auto">
           <h1 className="text-[18px] md:text-[26px] lg:text-[28px] xl:text-[28px] font-semibold text-[#f6ac14] leading-tight text-start">
             Master Block Chain Development with Our Expert Course!
@@ -36,7 +36,40 @@ const BlockChainHero = () => {
             className="w-full h-full max-w-md md:max-w-lg lg:max-w-xl"
           />
         </div>
-      </div>
+      </div> */}
+
+      <>
+        {/* first part */}
+
+        <div
+          className="relative w-full h-[370px] bg-cover bg-center"
+          style={{
+            backgroundImage:
+              'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1726473509/WhatsApp_Image_2024-09-15_at_11.16.11_PM_1_uilojh.jpg")',
+          }}
+        >
+          <div className="absolute inset-0 flex items-center justify-center">
+            <p className="text-center text-white text-[20px] font-medium px-4">
+              Explore blockchain technology and build innovative solutions! Our
+              comprehensive
+              <br />
+              resources will guide you from understanding the basics to
+              <br />
+              developing advanced blockchain applications.
+            </p>
+          </div>
+          <div className="absolute inset-0 flex items-end justify-center pb-10">
+            <button
+              onClick={handleEnroll}
+              className="px-6 py-3 text-[20px] font-medium text-white bg-[#0098f1] rounded-xl"
+            >
+              Enroll Now
+            </button>
+          </div>
+        </div>
+
+        {/* Second part */}
+      </>
     </>
   );
 };
