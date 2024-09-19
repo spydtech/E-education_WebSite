@@ -1,6 +1,8 @@
 import React from "react";
-import careerAssistanceImg from "../../../../../../../assets/dataAnalatics/assistance.jpg";
-import studentSupportImg from "../../../../../../../assets/dataAnalatics/programmer.jpg";
+// import careerAssistanceImg from "../../../../../../../assets/dataAnalatics/assistance.jpg";
+// import studentSupportImg from "../../../../../../../assets/dataAnalatics/programmer.jpg";
+import career from '../../../../../../../assetss/career.png'
+import student from '../../../../../../../assetss/student.png'
 
 const CertifiedEthicalHackingAbout = () => {
   const aboutInfo = [
@@ -8,14 +10,14 @@ const CertifiedEthicalHackingAbout = () => {
       title: "Career Assistance",
       description:
         "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
-      imgSrc: careerAssistanceImg,
+      imgSrc: student,
       imgAlt: "career-assistance",
     },
     {
       title: "Student Support",
       description:
         'Access student support via support@machinelearning.com or through the "ask us?" option on our learning platform for urgent queries.',
-      imgSrc: studentSupportImg,
+      imgSrc: career,
       imgAlt: "student-support",
     },
   ];
