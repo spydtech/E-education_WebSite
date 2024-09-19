@@ -36,7 +36,7 @@ function UsabilityTestingCareersOutcomes() {
           Discover What our Learners Have Achieved
         </p>
         <p className="md:text-xl my-4 font-bold">
-          Career Outcomes in Security Testing Program
+          Career Outcomes in Usability Testing Program
         </p>
         <p className="md:text-xl text-gray-500 mt-4">
           Snapshot of Alumni Placement Support
