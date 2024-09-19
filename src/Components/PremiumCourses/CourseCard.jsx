@@ -10,76 +10,73 @@ import { FiArrowRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const CourseCard = () => {
- 
+  const courses = [
+    {
+      title: "Full Stack Development",
+      description:
+        " Learn to build complete web applications, covering both frontend and backend development.",
+      image: "https://cdn-icons-png.flaticon.com/128/8361/8361113.png",
+      link: "/fullStack_WebDevelopment/fullStack-Web-Development",
+    },
+    {
+      title: "Software Testing",
+      description:
+        "Unlock expert-level techniques and tools for reliable software testing and quality assurance",
+      image: "https://cdn-icons-png.flaticon.com/128/9160/9160777.png",
+      link: "/software_testing",
+    },
 
+    {
+      title: "Machine Learning with AI",
+      description:
+        "Gain expertise in machine learning algorithms and artificial intelligence models.",
+      image: "https://cdn-icons-png.flaticon.com/128/17632/17632048.png",
+      link: "/data_Science/machine-Learning",
+    },
+    {
+      title: "DevOps Mastery",
+      description:
+        " Combine development and operations practices to enhance software delivery and reliability",
+      image: "https://cdn-icons-png.flaticon.com/128/6419/6419097.png",
+      link: "/fullStack_WebDevelopment/fullStack-Devops",
+    },
+    {
+      title: "Blockchain Development",
+      description:
+        "Build cutting-edge DApps with blockchain infrastructure and smart contract automation",
+      image: "https://cdn-icons-png.flaticon.com/128/3985/3985639.png",
+      link: "/blockchain",
+    },
+    {
+      title: "Cloud with AWS",
+      description:
+        "Unlock the potential of cloud computing and AWS for scalable and optimized app development.",
+      image: "https://cdn-icons-png.flaticon.com/128/3305/3305673.png",
+      link: "/cloud-computing",
+    },
 
-const courses = [
-  {
-    title: "Full Stack Development",
-    description:" Learn to build complete web applications, covering both frontend and backend development.",
-    image:
-      "https://media.licdn.com/dms/image/D4E12AQHPfeaf61ARlw/article-cover_image-shrink_720_1280/0/1707956393334?e=2147483647&v=beta&t=GYpFx7NlLhBWpF2Ow0tzdwoqWrF78PvPmI-wVFuO3B8",
-    link: "/fullStack_WebDevelopment/fullStack-Web-Development",
-  },
-  {
-    title: "Software Testing",
-    description:"Master techniques and tools for effective software testing and quality assurance.",
-    image:
-      "https://www.buildoffshoreteam.com/blog/wp-content/uploads/2024/03/type-of-testing.jpg",
-    link: "/software_testing",
-  },
-
-  {
-    title: "Machine Learning with AI",
-    description:"Gain expertise in machine learning algorithms and artificial intelligence models.",
-    image:
-      "https://www.simplilearn.com/ice9/free_resources_article_thumb/Deep-Learning-vs-Machine-Learning.jpg",
-    link: "/data_Science/machine-Learning",
-  },
-  {
-    title: "DevOps Mastery",
-    description:" Combine development and operations practices to enhance software delivery and reliability.t",
-    image:
-      "https://s3.amazonaws.com/tf-nightingale/2023/04/How-DevOps-Mastery-Optimizes-Development-and-Operations-for-Business-Success--2.jpg",
-    link: "/fullStack_WebDevelopment/fullStack-Devops",
-  },
-  {
-    title: "Blockchain Development",
-    description:"Develop decentralized applications using blockchain technology and smart contracts.",
-    image:
-      "https://ideausher.com/wp-content/uploads/2022/12/Blockchain-Developer-Hire_-A-Complete-Guide-1.webp",
-    link: "/blockchain",
-  },
-  {
-    title: "Cloud with AWS",
-    description:" Explore cloud computing and AWS services for scalable and efficient applications.",
-    image:
-      "https://images.squarespace-cdn.com/content/v1/60cfd646701da4034512a1c5/1654217981309-RTSZMBJWA9YJ5V32UN8R/AWS-Cloud.png",
-    link: "/cloud-computing",
-  },
-
-  {
-    title: "Data Science Techniques",
-    description:"Methods for extracting insights from data, such as machine learning, statistical analysis, and data visualization.",
-    image:
-      "https://cdn.hackr.io/uploads/posts/large/1573232636UxdizR1FyX.png",
-    link: "/data_Science",
-  },
-  {
-    title: "Ethical Hacking",
-    description:"Learn ethical hacking techniques to secure systems and networks from cyber threats.",
-    image:
-      "https://www.bugcrowd.com/wp-content/uploads/2022/05/ethical-hackers-1.jpg",
-    link: "/ethical_Hacking",
-  },
-  {
-    title: "Cyber Security",
-    description:"Understand and implement strategies to protect digital assets and data from cyber attacks.",
-    image:
-      "https://www.neit.edu/wp-content/uploads/2022/10/Cyber-Security-Icon-Concept-2-1.jpeg",
-    link: "/cyber_security",
-  },
-];
+    {
+      title: "Data Science Techniques",
+      description:
+        "Methods for extracting insights from data, such as machine learning, statistical analysis, and data visualization.",
+      image: "https://cdn-icons-png.flaticon.com/128/2821/2821637.png",
+      link: "/data_Science",
+    },
+    {
+      title: "Ethical Hacking",
+      description:
+        "Gain ethical hacking knowledge to identify and neutralize cyber threats in systems and networks.",
+      image: "https://cdn-icons-png.flaticon.com/128/13763/13763528.png",
+      link: "/ethical_Hacking",
+    },
+    {
+      title: "Cyber Security",
+      description:
+        "Understand and implement strategies to protect digital assets and data from cyber attacks.",
+      image: "https://cdn-icons-png.flaticon.com/128/1691/1691940.png",
+      link: "/cyber_security",
+    },
+  ];
 
   return (
     <>
@@ -87,7 +84,7 @@ const courses = [
         <div className="text-center text-black text-3xl font-bold m-4 my-10">
           <span className="text-[#f6ac14]">Explore </span>
           <span className="bg-gradient-to-r  from-[#f6ac14] to-[#0098f1] bg-clip-text text-transparent">
-          Premium
+            Premium
           </span>
           <span className="text-[#0098f1]"> Courses</span>
         </div>
@@ -116,7 +113,7 @@ const courses = [
                     </p>
                     <p className="text-whitemt-4">{course.description}</p>
                   </div>
-                  <div className="flex justify-center items-center mt-10 relative z-10 rounded-lg">
+                  <div className="flex justify-center items-center mt-10 relative z-10 rounded-lg ">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -142,8 +139,3 @@ const courses = [
 };
 
 export default CourseCard;
-
-
-
-
-

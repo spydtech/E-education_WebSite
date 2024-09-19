@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../../Navbar";
 import Footer from "../../footer/Footer";
+import { Link } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 import { SiSemanticweb } from "react-icons/si";
 import { FaMobile } from "react-icons/fa";
@@ -255,8 +256,8 @@ const Professionals = () => {
               </p>
             </div>
 
-            <div className=" my-4  ">
-              <button className="bg-[#0098f1] text-white    p-4  rounded-lg hover:shadow-lg  font-medium text-sm">
+            <div className="my-4  ">
+              <button className="bg-[#0098f1] text-white text-lg    p-4  rounded-lg hover:shadow-lg  font-medium ">
                 Explore Course
               </button>
             </div>
@@ -322,13 +323,13 @@ const Professionals = () => {
                   {course.description}
                 </p>
                 <div className="flex justify-center z-10 mt-4">
-                  <a
-                    href={course.link}
-                    className="flex bg-white bg-opacity-30 text-white hover:bg-[#0098f1] hover:bg-opacity-80 py-2 px-4 justify-center rounded-md w-full text-lg lg:text-xl font-medium"
+                  <Link
+                    to={course.link}
+                    className="flex bg-white bg-opacity-30 text-white hover:bg-[#0098f1] hover:bg-opacity-80 py-4 px-4 justify-center rounded-md w-full text-lg lg:text-xl font-medium"
                   >
                     Explore Now{" "}
                     <MdArrowOutward className="text-white text-2xl  lg:text-3xl ml-2" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

@@ -50,7 +50,7 @@ const StudentCourses = () => {
       title: "Software Testing",
       image: testing,
       description:
-        "Ensure software application functions correctly and meets specified requirements.",
+        "Ensure software application functions correctly, meets specified requirements.",
       link: "/software_Testing",
     },
   ];
@@ -90,7 +90,7 @@ const StudentCourses = () => {
                     </p>
                     <p className="text-whitemt-4">{course.description}</p>
                   </div>
-                  <div className="flex justify-center items-center mt-10 relative z-10 rounded-lg">
+                  <div className="flex  justify-center items-center mt-10 relative z-10 rounded-lg">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}

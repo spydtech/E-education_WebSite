@@ -15,7 +15,9 @@ const RegressionTesting = () => {
       <RegressionTestingHero />
       <RegressionTestingCard />
       <RegressionTestingNavigation />
-      <RegressionTestingFoot/>
+
+      <RegressionTestingFoot />
+
       <Footer />
     </>
   );
