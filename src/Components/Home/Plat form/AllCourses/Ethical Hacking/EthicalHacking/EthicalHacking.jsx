@@ -1,9 +1,6 @@
-import React,{useEffect} from "react";
-import Navbar from '../../../../../Navbar'
-import Footer from '../../../../footer/Footer'
-// import MachineLearningHero from "./EthicalHackingHero";
-// import MachineLearningCard from "./EthicalHackingCard";
-// import MachineLearningNavigation from "./MachineLearningAbout/MachineLearningNavigation";
+import React, { useEffect } from "react";
+import Navbar from "../../../../../Navbar";
+import Footer from "../../../../footer/Footer";
 import EthicalHackingHero from "./EthicalHackingHero";
 import EthicalHackingCard from "./EthicalHackingCard";
 import EthicalHackingNavigation from "./EthicalHackingAbout/EthicalHackingNavigation";

@@ -1,58 +1,52 @@
-import React from "react";
+
 // import dataVisualizationImage1 from "../../../../../../assets/datavisualization/datavisualization_image1.jpg";
 // import dataVisualizationImage2 from "../../../../../../assets/datavisualization/datavisualization_image2.jpg";
-
+import React from "react";
+import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
+import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
 const DatavisualisationAbout = () => {
+  const ethicalHackingInfo = [
+    {
+      title: "Career Assistance",
+      description:
+        "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
+      imgSrc: "https://img.freepik.com/premium-vector/software-development-programming-language-coding-isometric-pc-computer-with-digital-application-white-background_284092-318.jpg?w=740",
+      imgAlt: "career-assistance",
+    },
+    {
+      title: "Student Support",
+      description:
+        'Access student support via support@machinelearning.com or through the "ask us?" option on our learning platform for urgent queries.',
+      imgSrc: "https://img.freepik.com/free-vector/hacker-activity-isometric-composition_1284-21475.jpg?t=st=1716550896~exp=1716554496~hmac=5802aeca8133c034a5da30c58e2e1eb86602a116a2c98b917ed68ea329193008&w=740",
+      imgAlt: "student-support",
+    },
+  ];
+
   return (
-    <div className="mx-auto w-full md:lg:xl:pl-20 p-1 mb-8  bg-gradient-to-br from-blue-300 via-purple-500 to-pink-600">
-      <div className="pt-0">
-        <p className="text-pink-800 text-xl font-medium">
-          About The Data Visualization Course
-        </p>
-      </div>
-      <div className="py-2">
-        <p className="md:text-5xl text-2xl font">
-          Discover the
-          <p className="text-violet-800 my-2">Data Visualization Program</p>
+    <div className="px-3 text-center"> 
+      <div className="">
+        <p className="md:text-2xl font-bold text-[#0098F1]">
+          Discover the DataVisualization Program
         </p>
       </div>
 
-      <div className="flex flex-wrap -mx-4 items-center pb-6">
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="md:flex justify-around">
+        {ethicalHackingInfo.map((item, index) => (
+          <div
+            key={index}
+            className=" md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
+          >
             <img
-              className="w-full h-52 object-cover object-center"
-              src="https://media.istockphoto.com/id/1163818522/video/professional-young-african-businesswoman-dealing-with-finances-on-meeting.jpg?s=640x640&k=20&c=OPQmMM4sOgC3lDul0ssdo0IJKIWOw_VwnFEi8o256uY="
-              alt="data-visualization1"
+              className="md:w-full md:h-64 rounded-md"
+              src={item.imgSrc}
+              alt={item.imgAlt}
             />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">
-                Visualization Techniques
-              </h2>
-              <p className="text-gray-700">
-                Learn various data visualization techniques including charts,
-                graphs, maps, and more to represent data effectively.
-              </p>
+            <div className="my-3">
+              <h2 className="md:text-xl font-bold">{item.title}</h2>
+              <p className="text-gray-700">{item.description}</p>
             </div>
           </div>
-        </div>
-
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              className="w-full h-52 object-cover "
-              src="https://cdn.fordhamram.com/wp-content/uploads/Online-Data-Analytics-Courses.png"
-              alt="data-visualization2"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Data Analysis Skills</h2>
-              <p className="text-gray-700">
-                Develop strong data analysis skills to interpret and derive
-                meaningful insights from complex datasets.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

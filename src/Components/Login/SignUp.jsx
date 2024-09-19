@@ -7,7 +7,7 @@ import {
   register,
   verifyOtp,
   getUser,
-  checkEmail,
+  // checkEmail,
 } from "../../State/Auth/Action"; // Import the Redux action creators
 import Modal from "react-modal";
 import Navbar from "../Navbar";

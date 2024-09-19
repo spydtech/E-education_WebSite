@@ -4,56 +4,48 @@ import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg
 // import support from "../../../../../assets/Platform/support.jpg";
 
 const BestPracticesNetworkSecurityAbout = () => {
+  const networksecurityInfo = [
+    {
+      title: "Career Assistance",
+      description:
+        "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
+      imgSrc: assistance,
+      imgAlt: "career-assistance",
+    },
+    {
+      title: "Student Support",
+      description:
+        'Access student support via support@datasciencecourse.com or through the "ask us?" option on our learning platform for urgent queries.',
+      imgSrc: programmer,
+      imgAlt: "student-support",
+    },
+  ];
+
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br from-[#aad922] to-[#ffef19]">
-      <div className="pt-0">
-        <p className="text-[#ec3400] text-xl font-medium">
-          About The Network Security Best Practices Course
-        </p>
-      </div>
-      <div className="py-2">
-        <p className="text-6xl font">
-          Discover the
-          <p className="text-[#ec3400] my-2">
-            Network Security Best Practices Program
-          </p>
+    <div className="px-3 text-center">
+      <div className="">
+        <p className="md:text-2xl font-bold text-[#0098F1]">
+          Discover the Network Security Program
         </p>
       </div>
 
-      <div className="flex flex-wrap -mx-4 items-center pb-6">
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="md:flex justify-around">
+        {networksecurityInfo.map((item, index) => (
+          <div
+            key={index}
+            className=" md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
+          >
             <img
-              className="w-full h-52 object-cover object-center"
-              src={programmer}
-              alt="security-training"
+              className="md:w-full md:h-64 rounded-md"
+              src={item.imgSrc}
+              alt={item.imgAlt}
             />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Comprehensive Training</h2>
-              <p className="text-gray-700">
-                Equip yourself with cutting-edge security practices through our
-                comprehensive training sessions.
-              </p>
+            <div className="my-3">
+              <h2 className="md:text-xl font-bold">{item.title}</h2>
+              <p className="text-gray-700">{item.description}</p>
             </div>
           </div>
-        </div>
-
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              className="w-full h-52 object-cover"
-              src={assistance}
-              alt="expert-guidance"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Expert Guidance</h2>
-              <p className="text-gray-700">
-                Receive guidance from industry experts to stay updated with the
-                latest trends and techniques in network security.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

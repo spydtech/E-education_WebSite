@@ -1,17 +1,17 @@
-
 import React, { useState } from "react";
-// FundamentalsOfSoftwareDevelopmentIntroduction
+
 function UnitTestingIntroduction() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const Slide = ({ heading, items }) => {
     return (
       <div className="w-full flex-shrink-0 px-4 py-8">
-        <div className="h-[400px] flex justify-center">
+        <div className="h-auto flex justify-center">
           <div>
-            <h2 className="text-3xl font-medium mb-4 text-[#f9ac13] font">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-xl font">
+            <ul className="list-disc list-outside pl-5 text-md lg:text-xl text-white">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -30,34 +30,7 @@ function UnitTestingIntroduction() {
         "Key Concepts: Understand the software development lifecycle and its phases.",
       ],
     },
-    {
-      heading: "Software Development Methodologies",
-      items: [
-        "Agile: Learn about Agile methodologies and their focus on iterative development.",
-        "Waterfall: Understand the traditional Waterfall model and its structured approach.",
-      ],
-    },
-    {
-      heading: "Common Programming Languages",
-      items: [
-        "JavaScript: Explore the use of JavaScript in web development.",
-        "Python: Learn about Python and its applications in various domains.",
-      ],
-    },
-    {
-      heading: "Version Control Systems",
-      items: [
-        "Git: Understand the importance of version control and learn basic Git commands.",
-        "GitHub: Learn how to use GitHub for collaborative development and project management.",
-      ],
-    },
-    {
-      heading: "Software Testing and QA",
-      items: [
-        "Unit Testing: Understand the importance of unit testing in software development.",
-        "Automated Testing: Learn about automated testing tools and their role in ensuring software quality.",
-      ],
-    },
+    // Add other slides here...
   ];
 
   const goToPreviousSlide = () => {
@@ -73,68 +46,49 @@ function UnitTestingIntroduction() {
   };
 
   return (
-    <>
-      <div
-        id="subdiv"
-        className="grid grid-cols-1 w-fit md:lg:grid-cols-2 h-full bg-gradient-to-br from-[#0077b6] to-[#03045e] mb-12"
-      >
-        <div
-          id="div1"
-          className="flex items-center justify-center xl:lg:md:w-auto"
-        >
-          <div
-            id="headings"
-            className="grid grid-cols-1 text-start pl-4 font"
-          >
-            <div>
-              <p className="text-[#f9ac13] text-xl font-medium">Introduction</p>
-            </div>
-            <div className="py-5">
-              <p className="md:text-5xl text-2xl font">
-                So what is
-                <p className="text-[#f9ac13] inline pl-2">
-                  Software Development?
-                </p>
-              </p>
-            </div>
-            <div>
-              <p className="text-xl text-gray-500">
-                Brief about Software Development
-              </p>
-            </div>
-          </div>
+    <div className="flex flex-col space-y-3 md:flex-row md:justify-between md:items-center lg:h-[450px] px-14 md:mb-9 mb-5">
+      <div>
+        <div>
+          <p className="text-[#0098f1] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
+            Introduction
+          </p>
         </div>
-        <div id="div2" className="md:px-10 pl-2">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-            <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
-              <div className="relative w-full overflow-hidden">
-                <div className="flex">
-                  <Slide
-                    heading={slidesData[currentSlide].heading}
-                    items={slidesData[currentSlide].items}
-                  />
-                </div>
-              </div>
-              <div className="flex justify-between">
-                <button
-                  onClick={goToPreviousSlide}
-                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
-                >
-                  Previous
-                </button>
-                <div>{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-                <button
-                  onClick={goToNextSlide}
-                  className="hover:text-yellow-600 text-black font-bold py-2 px-4 rounded"
-                >
-                  Next
-                </button>
-              </div>
-            </div>
-          </div>
+        <div className="mt-2">
+          <p className="md:text-lg lg:text-3xl">
+            So what is
+            <span className="text-[#f6ac14] inline pl-2">Unit Testing</span>
+          </p>
+        </div>
+        <div>
+          <p className="md:text-lg lg:text-3xl mt-2">Brief about Unit Testing</p>
         </div>
       </div>
-    </>
+
+      <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:px-5 md:pt-1 md:pb-5 lg:flex flex-col justify-between">
+        <div className="flex text-white">
+          <Slide
+            heading={slidesData[currentSlide].heading}
+            items={slidesData[currentSlide].items}
+          />
+        </div>
+
+        <div className="flex justify-between items-center max-md:p-4">
+          <button
+            onClick={goToPreviousSlide}
+            className="text-white hover:text-black font-bold rounded"
+          >
+            Previous
+          </button>
+          <div className="text-white text-sm">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+          <button
+            onClick={goToNextSlide}
+            className="text-white hover:text-black font-bold rounded"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Ui_UxKeyHighights() {
+function Ui_UxKeyHighlights() {
   const [selectedItem, setSelectedItem] = useState(0);
 
   const data = [
@@ -19,104 +19,68 @@ function Ui_UxKeyHighights() {
     switch (selectedItem) {
       case 0:
         return (
-          <>
-            <ul className="space-y-2 pt-4 font-normal text-[16px] list-disc pl-16  bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium text-[#0070f3] py-4">
-                Overview
-              </p>
-              <li>Advanced modules with Generative AI fusion</li>
-              <li>E-education certificate via upGrad collaboration</li>
-              <li>
-                Access to live training sessions by Meta Blueprint trainers
-              </li>
-              <li>15+ Case Studies, Live projects</li>
-              <li>Earn E-Eduction Executive Alumni Status</li>
-              <li>90+ Tool Video Library</li>
-              <li>Industry mentor-led fortnightly coaching</li>
-              <li>Tailored resume feedback</li>
-              <li>Mock Interview by managers</li>
-              <li>Explore ChatGPT in digital marketing tutorials</li>
+          <div className="p-3 space-y-2">
+            <p className="text-xl font-medium text-white pl-2">Overview</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
+              <li>Introduction to UI/UX design principles</li>
+              <li>Focus on user-centered design and usability</li>
+              <li>Hands-on projects and real-world applications</li>
+              <li>Access to industry-leading design tools and resources</li>
+              <li>Expert-led workshops and training sessions</li>
             </ul>
-          </>
+          </div>
         );
       case 1:
         return (
-          <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium text-[#0070f3] py-4">
-                Key Concepts
-              </p>
-              <li>Generative AI in digital marketing</li>
-              <li>SEO</li>
-              <li>Search and Display advertising</li>
-              <li>Social and Display advertising</li>
-              <li>Content Marketing</li>
-              <li>Branding</li>
-              <li>Web Analytics</li>
+          <div className="p-3 space-y-2">
+            <p className="text-xl font-medium text-white pl-2">Key Concepts</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
+              <li>User Experience (UX) design fundamentals</li>
+              <li>User Interface (UI) design best practices</li>
+              <li>Wireframing and prototyping techniques</li>
+              <li>Usability testing and feedback integration</li>
+              <li>Design systems and component libraries</li>
             </ul>
-          </>
+          </div>
         );
       case 2:
         return (
-          <>
-            {" "}
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium  text-[#0070f3]">
-                Applications
-              </p>
-              <li>Digital Marketing Manager</li>
-              <li>SEM Manager</li>
-              <li>SEO Manager</li>
-              <li>Social Media and Content Manager</li>
-              <li>Associate</li>
-              <li>Consultant</li>
-              <li>Business Analyst</li>
-              <li>(Sr.)Associate-Digital Marketing</li>
+          <div className="p-3 space-y-2">
+            <p className="text-xl font-medium text-white pl-2">Applications</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
+              <li>UI/UX Designer</li>
+              <li>Product Designer</li>
+              <li>Interaction Designer</li>
+              <li>Usability Analyst</li>
+              <li>UX Researcher</li>
+              <li>Visual Designer</li>
             </ul>
-          </>
+          </div>
         );
       case 3:
         return (
-          <>
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium  text-[#0070f3]">
-                Skills Developed
-              </p>
-              <li>List of target audience goes here...</li>
-              <li>
-                Explore 2 tracks & 5 specializations for diverse learning.
-              </li>
-              <li>Experience seamless integration with Gen AI modules.</li>
-              <li>
-                Attain E-education Executive Alumni Status for exclusive
-                benefits.
-              </li>
-              <li>Access EMI at RS. 2,879/month for greater flexibility.</li>
-              <li>
-                A voucher worth $50 for Meta's "Digital Marketing Associate"
-                certificate exam, free of cost.
-              </li>
+          <div className="p-3 space-y-2">
+            <p className="text-xl font-medium text-white pl-2">Skills Developed</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
+              <li>Proficiency in design tools like Figma and Adobe XD</li>
+              <li>Strong understanding of UX research and testing methods</li>
+              <li>Ability to create user-friendly and visually appealing interfaces</li>
+              <li>Experience with wireframing and prototyping</li>
+              <li>Capability to design responsive and adaptive layouts</li>
             </ul>
-          </>
+          </div>
         );
       case 4:
         return (
-          <>
-            {" "}
-            <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc pl-16 bg-gray-200 shadow-2xl">
-              <p className="text-2xl font-medium  text-[#0070f3]">
-                Target Audience
-              </p>
-              <li>
-                Utilise ChatGPT to assist in creative unique content,plan
-                strategies,build,calenders,and more
-              </li>
-              <li>Generative SEO-optimised content with chatGPT</li>
-              <li>
-                Gain insights into your social media analytics by using chatGPT
-              </li>
+          <div className="p-3 space-y-2">
+            <p className="text-xl font-medium text-white pl-2">Target Audience</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
+              <li>Aspiring UI/UX designers looking to build their skills</li>
+              <li>Professionals seeking to transition into design roles</li>
+              <li>Design enthusiasts eager to learn industry best practices</li>
+              <li>Students and graduates aiming for a career in design</li>
             </ul>
-          </>
+          </div>
         );
       default:
         return null;
@@ -124,58 +88,31 @@ function Ui_UxKeyHighights() {
   };
 
   return (
-    <>
-      <div
-        id="main"
-        className=" md:lg:xl:px-20  bg-gradient-to-br  to-[#0a0908] from-[#272640]"
-      >
-        <div id="subdiv1" className="pt-4 font">
-          <div id="h1" className="">
-            <p className="md:lg:w-auto w-96 font-semibold text-xl p-2 text-[#0070f3]">
-              E-education Course Highlights
-            </p>
-          </div>
-          <div
-            id="h2"
-            className="md:lg:flex pl-2 space-x-3 md:lg:w-auto lg:md:h-auto w-96  h-auto"
-          >
-            <p className="text-5xl font-bold text-white">What does this</p>
-            <p className="text-5xl font-bold text-[#0070f3] inline">
-              Course have to offer?
-            </p>
-          </div>
-        </div>
-        <div
-          id="subdiv2"
-          className="justify-between grid  grid-cols-1 lg:md:grid-cols-2"
-        >
-          {/* content start*/}
-          <div id="content1" className="">
-            {data.map((item, index) => (
-              <div
-                key={index}
+    <div className="px-3 md:mb-4">
+      <div className="md:flex justify-around">
+        <div className="bg-[#0098F1] text-white">{renderContent()}</div>
+        <div className="my-3">
+          <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
+            E-Education Course Highlights
+          </p>
+          {data.map((item, index) => (
+            <ul key={index}>
+              <li
                 onClick={() => handleClick(index)}
-                className={`hover:text-blue-600 text-white p-5 text-start hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-80 lg:md:h-16 lg:md:w-[400px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden  transition-transform duration-300 transform hover:scale-105 ${
+                className={`p-5 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md ${
                   selectedItem === index
-                    ? "bg-[#0070f3]  text-white hover:text-white border-none"
-                    : ""
+                    ? "bg-[#0098F1] text-white border-none"
+                    : "border-white"
                 }`}
               >
-                <p>{item.label}</p>
-              </div>
-            ))}
-          </div>
-          <div
-            id="content2"
-            className="md:lg:w-auto md:lg:h-auto md:lg:xl:w-[400px] h-auto pt-4 md:lg:xl:pl-4 text-xl"
-          >
-            {renderContent()}
-          </div>
-          {/* content end */}
+                {item.label}
+              </li>
+            </ul>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-export default Ui_UxKeyHighights;
+export default Ui_UxKeyHighlights;

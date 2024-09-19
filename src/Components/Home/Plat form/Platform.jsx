@@ -1,24 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import IMG from "../../../assets/Platform/student.png";
 import EducationCarousel from "../eductionCarousel/EductionCarousel";
 import Certified from "./Certified";
 import { Link } from "react-router-dom";
 
 function Platform() {
+  // State to hold text content and style
+  const [studentText, setStudentText] = useState("Students");
+  const [professionalText, setProfessionalText] = useState("Professionals");
+
+  const [studentTextStyle, setStudentTextStyle] = useState({
+    color: "white", // Default color
+    fontSize: "18px", // Default size
+    fontWeight: "bold", // Default weight
+  });
+
+  const [professionalTextStyle, setProfessionalTextStyle] = useState({
+    color: "white",
+    fontSize: "18px",
+    fontWeight: "bold",
+  });
+
   return (
     <>
       <Certified />
       <EducationCarousel />
-      <div className="bg-[#ffdf9f] font-sans h-auto md:h-[625px] flex justify-center items-center py-10 md:py-0">
+      <div className="bg-[#ff9b26] bg-opacity-30 font-sans h-auto md:h-[625px] flex justify-center items-center py-4 md:py-0">
         <div>
-          <h1 className="text-2xl md:text-4xl font-bold text-center pt-10">
+          <h1 className=" text-xl md:text-3xl px-2 lg:text-4xl font-bold text-center pt-4 lg:pt-10">
             The perfect Platform{" "}
-            <span className="inline-block text-[#F6AC14]">To Boost</span> Your
-            Technical Skills
+            <span className="  bg-gradient-to-r from-[#ff9b26] to-[#0098F1] inline-block text-transparent bg-clip-text ">
+              To Boost
+            </span>{" "}
+            Your Technical Skills
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 md:p-10 justify-center items-center">
             <Link to="/student">
-              <div className="shyam overflow-hidden w-full lg:w-[420px] h-[385px] bg-white text-center p-4 transform hover:-translate-y-2 transition-transform">
+              <div className=" hover:shadow-sm hover:shadow-[#0098f1] shyam overflow-hidden w-full lg:w-[420px] h-[385px] bg-white rounded-lg text-center p-4 transform hover:-translate-y-2 transition-transform">
                 <div className="flex justify-center items-center">
                   <img
                     src={IMG}
@@ -26,20 +44,44 @@ function Platform() {
                     alt="Student"
                   />
                 </div>
-                <p className="text-black text-md mb-5">
-                  Kickstart your career in tech with industry-relevant skills
-                  that make you stand out to employers.
+                <p className="font-semibold bg-gradient-to-r from-[#ff9b26] to-[#0098F1] inline-block text-transparent bg-clip-text text-lg my-4 mb-7">
+                  Empower Your Journey
                 </p>
-                <div className="bar hover:bg-[#f6ac14]">
+                <div
+                  className="bar hover:bg-[#ff9b26]"
+                  onMouseEnter={() => {
+                    setStudentText(
+                      "Kickstart your career in tech with industry-relevant skills "
+                    );
+                    setStudentTextStyle({
+                      color: "white", // Change color on hover
+                      fontSize: "16px", // Change size on hover
+                      fontWeight: "normal",
+                    });
+                  }}
+                  onMouseLeave={() => {
+                    setStudentText("Students");
+                    setStudentTextStyle({
+                      color: "white", // Reset to default color
+                      fontSize: "18px", // Reset to default size
+                      fontWeight: "bold",
+                    });
+                  }}
+                >
                   <div className="emptybar"></div>
                   <div className="filledbar"></div>
-                  <span className="bar-text">Students</span>
+                  <span
+                    className="bar-text"
+                    style={studentTextStyle} // Apply styles dynamically
+                  >
+                    {studentText}
+                  </span>
                 </div>
               </div>
             </Link>
 
             <Link to="/professional">
-              <div className="shyam overflow-hidden w-full lg:w-[420px] h-[385px] bg-white text-center p-4 transform hover:-translate-y-2 transition-transform">
+              <div className="hover:shadow-sm hover:shadow-[#0098f1]  shyam overflow-hidden w-full lg:w-[420px] h-[385px]  bg-white rounded-lg text-center p-4 transform hover:-translate-y-2 transition-transform">
                 <div className="flex justify-center items-center">
                   <img
                     className="h-[180px] w-[180px]"
@@ -47,14 +89,39 @@ function Platform() {
                     alt="Professional"
                   />
                 </div>
-                <p className="text-black text-md mb-5">
-                  Stay ahead of the curve by mastering emerging technologies and
-                  techniques that drive innovation.
+                <p className="font-semibold bg-gradient-to-r from-[#ff9b26] to-[#0098F1] inline-block text-transparent bg-clip-text text-lg my-4 mb-7">
+                  Advance Your Career
                 </p>
-                <div className="bar hover:bg-[#f6ac14] ">
+                <div
+                  className="bar hover:bg-[#ff9b26] "
+                  onMouseEnter={() => {
+                    setProfessionalText(
+                      "Stay ahead of the curve by mastering emerging technologies ."
+                    );
+                    setProfessionalTextStyle({
+                      color: "white", // Change color on hover
+                      fontSize: "16px", // Change size on hover
+                      fontWeight: "normal",
+                      // Padding on the right
+                    });
+                  }}
+                  onMouseLeave={() => {
+                    setProfessionalText("Professionals");
+                    setProfessionalTextStyle({
+                      color: "white", // Reset to default
+                      fontSize: "18px", // Reset to default
+                      fontWeight: "bold",
+                    });
+                  }}
+                >
                   <div className="emptybar"></div>
                   <div className="filledbar"></div>
-                  <span className="bar-text">Professionals</span>
+                  <span
+                    className="bar-text"
+                    style={professionalTextStyle} // Apply styles dynamically
+                  >
+                    {professionalText}
+                  </span>
                 </div>
               </div>
             </Link>
@@ -89,7 +156,7 @@ function Platform() {
           border-radius: 0px 22px 0px 0px;
         }
         .emptybar {
-          background-color: #f6ac14;
+          background-color: #ff9b26;
           width: 100%;
           height: 100%;
           border-radius: 0px 22px 22px 0px;
@@ -112,7 +179,6 @@ function Platform() {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          color: white;
           font-size: 18px;
           font-weight: bold;
           pointer-events: none;

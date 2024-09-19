@@ -3,11 +3,18 @@ import { FcLike, FcLikePlaceholder } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../../Navbar";
 import FooterPart from "../../../footer/Footer";
-import cardImage from "../../../../../assetss/student/cardImg.png";
+// import cardImage from "../../../../../assetss/fullstackwebdev/java/java1.avif";
+// import  cardImage1  from "../../../../../assetss/fullstackwebdev/dotnet/dotnet1.jpg";
+// import  cardImage2  from "../../../../../assetss/fullstackwebdev/javaScript/javascript1.avif";
+import basicsCard from '../../../../../assetss/professional/ethicalHacking/basicsCard.png'
+import advancedCard from '../../../../../assetss/professional/ethicalHacking/advancedCard.png'
+import certifiedCard from '../../../../../assetss/professional/ethicalHacking/certifiedCard.png'
+import hero from '../../../../../assetss/professional/ethicalHacking/hero.png'
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
+import Girl2 from "../../../../../assetss/profile/girl2.png"
 const EthicalHackingStudentArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
@@ -37,45 +44,45 @@ const EthicalHackingStudentArray = () => {
     {
       id: 1,
       title: "Ethical Hacking Basics",
-      image: cardImage,
-
+      image: basicsCard,
       description:
         "Learn the fundamentals of ethical hacking, including reconnaissance, scanning, and vulnerability assessment.",
       link: "/Ethical_Hacking/basic_ethical_Hacking",
       rating: 4.2, // Add dummy rating
-      price: "$19.99", // Add dummy price
-      profilePic:
-        "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "John Doe",
+      price: "₹1499", // Add dummy price
+      profilePic: Girl2,
+      name: "Rohan Patel",
+      erolled: "1500 Enrolled"
     },
     {
       id: 2,
       title: "Advanced Ethical Hacking",
       description:
         "Dive deeper into ethical hacking techniques, including exploitation, privilege escalation, and post-exploitation.",
-      image: cardImage,
+      image: advancedCard,
       link: "/Ethical_Hacking/advance_Ethical_Hacking",
       rating: 4.5, // Add dummy rating
-      price: "$24.99", // Add dummy price
-      profilePic:
-        "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "John Doe",
+      price: "₹1899", // Add dummy price
+      profilePic: Girl2,
+      name: "Neeraj Malhotra",
+      erolled: "1000 Enrolled"
+
     },
     {
       id: 3,
       title: "Certified Ethical Hacker",
-      image: cardImage,
-
+      image: certifiedCard,
       description:
         "Prepare for the Certified Ethical Hacker (CEH) certification with comprehensive coverage of ethical hacking topics.",
       link: "/Ethical-Hacking/certified_Ethical_Hacking",
       rating: 4.8, // Add dummy rating
-      price: "$34.99", // Add dummy price
-      profilePic:
-        "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "John Doe",
+      price: "₹2499", // Add dummy price
+      profilePic: Girl2,
+      name: "Sakshi Agarwal",
+      erolled: "2000 Enrolled"
     },
   ];
+  
 
   const filteredCourses = ethicalHackingCourses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -85,7 +92,7 @@ const EthicalHackingStudentArray = () => {
     <>
       <Navbar />
       <img
-        src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg?ga=GA1.1.1671979702.1717669022&semt=sph"
+        src={hero}
         className="object-cover w-full md:h-[490px]"
         alt="Background Image"
       />
@@ -93,7 +100,7 @@ const EthicalHackingStudentArray = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center mb-4">
           <span className="bg-gradient-to-r text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
-            Expand CyberSecurityCourses
+            Expand Ethical Hacking Courses
           </span>
         </div>
 
@@ -115,11 +122,18 @@ const EthicalHackingStudentArray = () => {
               }`}
             >
               <a href={course.link} rel="noopener noreferrer">
-                <div className="relative">
+                {/* <div className="relative">
                   <img
                     src={course.image}
                     alt={course.title}
                     className="w-full h-32 object-cover px-3 py-3"
+                  />
+                </div> */}
+                <div className="h-[180px]">
+                  <img
+                    className="w-full h-full bg-cover"
+                    src={course.image}
+                    alt={course.title}
                   />
                 </div>
                 <div className="p-4">
@@ -147,7 +161,7 @@ const EthicalHackingStudentArray = () => {
                         <span className="text-gray-700 font-bold">
                           {course.name}
                         </span>
-                        <p className="text-gray-500 text-xs">2001 Enrolled</p>
+                        <p className="text-gray-500 text-xs">{course.erolled}</p>
                       </div>
                     </div>
                     <span className="text-gray-900 font-bold">

@@ -6,7 +6,11 @@ import FooterPart from "../../../footer/Footer";
 import Navbar from "../../../../Navbar";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
-import cardImage from "../../../../../assetss/student/cardImg.png";
+import card from "../../../../../assetss/fullstackwebdev/java/java1.avif";
+import card1 from "../../../../../assetss/fullstackwebdev/devops/devops2.avif";
+import card2 from "../../../../../assetss/fullstackwebdev/python/python1.avif";
+
+import Girl2 from "../../../../../assetss/profile/girl2.png";
 
 const NetworkSecurityArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -37,44 +41,41 @@ const NetworkSecurityArray = () => {
     {
       id: 1,
       title: "Network Security Fundamentals",
-      image: cardImage,
-
+      image: card,
       description:
         "Understand the basics of network security, including firewalls, intrusion detection systems, and VPNs.",
       link: "/network_security/network-security-fundamentals",
       rating: 4.3, // Add dummy rating
       price: "$29.99", // Add dummy price
-      profilePic:
-        "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "Jane Smith",
+      profilePic: Girl2,
+      name: "Ashwini Sharma",
+      enrolled: 1500, // Add dummy enrolled number
     },
     {
       id: 2,
       title: "Advanced Network Security",
-      image: cardImage,
-
+      image: card1,
       description:
         "Learn advanced network security techniques and strategies to protect against sophisticated cyber threats.",
       link: "/network_security/advance-network-secuity",
       rating: 4.7, // Add dummy rating
       price: "$39.99", // Add dummy price
-      profilePic:
-        "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "Jane Smith",
+      profilePic: Girl2,
+      name: "Ravi Kumar",
+      enrolled: 2000, // Add dummy enrolled number
     },
     {
       id: 3,
       title: "Network Security Best Practices",
-      image: cardImage,
-
+      image: card2,
       description:
         "Explore best practices for securing network infrastructure.",
       link: "/network_security/network-security-best-practices",
       rating: 4.6, // Add dummy rating
       price: "$24.99", // Add dummy price
-      profilePic:
-        "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "Jane Smith",
+      profilePic: Girl2,
+      name: "Shyam Gupta",
+      enrolled: 1800, // Add dummy enrolled number
     },
   ];
 
@@ -94,7 +95,7 @@ const NetworkSecurityArray = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center mb-4">
           <span className="bg-gradient-to-r text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
-            Expand CyberSecurityCourses
+            Expand Network Security Courses
           </span>
         </div>
 
@@ -148,7 +149,9 @@ const NetworkSecurityArray = () => {
                         <span className="text-gray-700 font-bold">
                           {course.name}
                         </span>
-                        <p className="text-gray-500 text-xs">2001 Enrolled</p>
+                        <p className="text-gray-500 text-xs">
+                          {course.enrolled} Enrolled
+                        </p>
                       </div>
                     </div>
                     <span className="text-gray-900 font-bold">

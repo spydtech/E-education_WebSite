@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../../Navbar";
 import Footer from "../../../footer/Footer";
-import cardImage from "../../../../../assetss/student/cardImg.png";
+import intro_CS from "../../../../../assetss/student/cyberSecurity/intro_CS.png";
+import CS_Essentials from "../../../../../assetss/student/cyberSecurity/CS_Essentials.png";
+import CS_Beginners from "../../../../../assetss/student/cyberSecurity/CS_Beginners.png";
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
+import Girl2 from "../../../../../assetss/profile/girl2.png"
 const CyberSecurityArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
@@ -35,44 +38,45 @@ const CyberSecurityArray = () => {
   const cybersecurityCourses = [
     {
       id: 1,
-      title: "Introduction to Cybersecurity",
+      title: "Introduction to Cyber security",
       description:
         "Learn the basic principles of cybersecurity, including risk management, threat detection, and security policies.",
       link: "/Cybersecurity/Cybersecurity_fundamentals",
-      image: cardImage,
+      image: intro_CS,
       rating: 4.5,
       price: "$24.99",
-      profilePic:
-        "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "John Doe",
+      profilePic: Girl2,
+      name: "Mohan Sharma",
+      enrolled: 2200, // Add dummy enrolled number
     },
     {
       id: 2,
-      title: "Cybersecurity Essentials",
+      title: "Cyber security Essentials",
       description:
         "Understand the core concepts of cybersecurity, including network security, cryptography, and incident response.",
       link: "/Cybersecurity/cybersecurity_essentials",
       rating: 4.7,
-      image: cardImage,
+      image: CS_Essentials,
       price: "$29.99",
-      profilePic:
-        "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "Jane Smith",
+      profilePic: Girl2,
+      name: "Ratna Priya",
+      enrolled: 2500, // Add dummy enrolled number
     },
     {
       id: 3,
-      image: cardImage,
-      title: "Cybersecurity for Beginners",
+      image: CS_Beginners,
+      title: "Cyber security for Beginners",
       description:
         "An introductory course for those new to the field of cybersecurity, covering fundamental concepts and best practices.",
       link: "/Cybersecurity/cybersecurity_beginners",
       rating: 4.6,
       price: "$27.50",
-      profilePic:
-        "https://s3-alpha-sig.figma.com/img/5412/a2bc/c1a0b62fe5e42bf0f9af1ac1d77a35ab?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SjFp6NNFNdrGO2NCr3vY5oMNMSTaBzKad2SumwgJ0JzXhSpcR6KrVg-dSamjoKkMxTwKZRTZG1YWJmJO67XxLYJFoRC4sRyBD22K-HuYjCF7opzXWwbRju6pu6KUEkMTrDOoAJ~ZRlSom8t3pk0Cz-rm1pXY6AoG4MuB-3I1cu6oVakyDNmA~alsUUGH744TroXuV83HB2XfjPBov9~kINFzjeu-H3tdqTDXTauy9qn3P02ouJq7agSoYBWRv2E-OwjspQZGsARxxoATPAwDE6XlLnapVzyLAWbBLYOd72-hOH6Vtb4aHwRUGOIuqT-MJArIJfv7e5rxDiI2MHkXmw__",
-      name: "Michael Brown",
+      profilePic: Girl2,
+      name: "Manish Sharma",
+      enrolled: 2100, // Add dummy enrolled number
     },
   ];
+  
 
   const filteredCourses = cybersecurityCourses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -111,7 +115,7 @@ const CyberSecurityArray = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center mb-4">
           <span className="bg-gradient-to-r text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
-            Expand CyberSecurityCourses
+            Expand Cyber Security Courses
           </span>
         </div>
 
@@ -137,7 +141,7 @@ const CyberSecurityArray = () => {
                   <img
                     src={course.image}
                     alt={course.title}
-                    className="w-full h-32 object-cover px-3 py-3"
+                    className="w-full h-36 px-3"
                   />
                 </div>
                 <div className="p-4">
@@ -165,7 +169,7 @@ const CyberSecurityArray = () => {
                         <span className="text-gray-700 font-bold">
                           {course.name}
                         </span>
-                        <p className="text-gray-500 text-xs">2001 Enrolled</p>
+                        <p className="text-gray-500 text-xs">{course.enrolled} Enrolled</p>
                       </div>
                     </div>
                     <span className="text-gray-900 font-bold">

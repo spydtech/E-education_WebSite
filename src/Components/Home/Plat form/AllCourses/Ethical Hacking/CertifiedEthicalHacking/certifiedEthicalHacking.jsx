@@ -3,9 +3,9 @@ import Navbar from "../../../../../Navbar";
 import FooterPart from "../../../../footer/Footer";
 
 import CertifiedEthicalHackingCard from "./CertifiedEthicalHackingCard";
-// import CertifiedEthicalHackingNavigation from "./CertifiedEthicalHackingAbout/CertifiedEthicalHackingNavigation";
 import CertifiedEthicalHackingHero from "./CertifiedEthicalHackingHero";
 import CertifiedEthicalHackingNavigation from "./CertifiedEthicalHackingAbout/certifiedEthicalHackingNavigation";
+import CertifiedEthicalHackingFoot from "./CertifiedEthicalHackingFoot";
 const CertifiedEthicalHacking = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,7 +16,7 @@ const CertifiedEthicalHacking = () => {
       <CertifiedEthicalHackingHero />
       <CertifiedEthicalHackingCard />
       <CertifiedEthicalHackingNavigation />
-      {/* <EthicalHackingHero /> */}
+      <CertifiedEthicalHackingFoot />
       <FooterPart />
     </>
   );

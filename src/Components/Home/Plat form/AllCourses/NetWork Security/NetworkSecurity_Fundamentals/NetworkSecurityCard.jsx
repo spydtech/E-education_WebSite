@@ -1,148 +1,99 @@
 import React from "react";
+import img1 from "../../../../../../assetss/professional/networkSecurity/fundamentals/image1.jpg";
+import img2 from "../../../../../../assetss/professional/networkSecurity/fundamentals/image2.jpg";
+import img3 from "../../../../../../assetss/professional/networkSecurity/fundamentals/image3.jpg";
+import img4 from "../../../../../../assetss/professional/networkSecurity/fundamentals/image4.jpg";
+import img5 from "../../../../../../assetss/professional/networkSecurity/fundamentals/image5.jpg";
+import img6 from "../../../../../../assetss/professional/networkSecurity/fundamentals/image6.jpg";
 
 const NetworkSecurityCard = () => {
+  const courseData = [
+    {
+      imgSrc: img1,
+      title: "Explore Course Catalog",
+      description:
+        "Browse our extensive catalog of Data Science courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
+    },
+    {
+      imgSrc: img2,
+      title: "Enroll in Foundational Courses",
+      description:
+        "Start with foundational courses covering basic concepts, algorithms, and tools essential for Data Science.",
+    },
+    {
+      imgSrc: img3,
+      title: "Practice with Real-world Projects",
+      description:
+        "Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience in data analysis, data processing, and visualization.",
+    },
+    {
+      imgSrc: img4,
+      title: "Track Your Progress",
+      description:
+        "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Data Science concepts as you advance through the courses.",
+    },
+    {
+      imgSrc: img5,
+      title: "Specialize and Advance",
+      description:
+        "Choose specialized tracks or advanced courses to delve deeper into specific areas of Data Science, such as data engineering, predictive analytics, or machine learning.",
+    },
+    {
+      imgSrc: img6,
+      title: "Earn Recognized Certifications",
+      description:
+        "Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.",
+    },
+  ];
+
   return (
-    <>
-      <section id="portfolio" className="portfolio-section py-16 px-4">
-        <div className="container mx-auto">
-          <div className=" mb-12">
-            <h2 className="text-2xl font-bold">
-              Mastering Network Security: Enhance Your Expertise
-            </h2>
-            <p className="text-lg text-[#f9ac13] font-semibold mt-2">
-              Elevate your skills with our Network Security courses. Dive deep
-              into principles and gain hands-on experience. Whether novice or
-              pro, unlock your potential.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a>
-                <img
-                  className="w-full h-60 object-cover"
-                  src="https://img.freepik.com/free-vector/network-security-abstract-concept-illustration_335657-3704.jpg?w=740"
-                  alt="Project 1"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-[#0077b6] to-[#03045e] opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
-                <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
-                    Explore Course Catalog
-                  </h3>
-                  <span className="text-sm font-bold text-[#f9ac13] group-hover:text-white pt-4">
-                    Browse our extensive catalog of Network Security courses.
-                    Discover beginner-friendly to advanced-level programs
-                    designed to accommodate learners of all backgrounds.
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a>
-                <img
-                  className="w-full h-60 object-cover"
-                  src="https://img.freepik.com/free-vector/network-protection-abstract-concept-illustration_335657-2097.jpg?w=740"
-                  alt="Project 2"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-[#0077b6] to-[#03045e] opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
-                <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
-                    Enroll in Foundational Courses
-                  </h3>
-                  <span className="text-sm font-bold text-[#f9ac13] group-hover:text-white pt-4">
-                    Start with foundational courses covering basic concepts,
-                    protocols, and tools essential for Network Security.
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a>
-                <img
-                  className="w-full h-60 object-cover"
-                  src="https://img.freepik.com/free-vector/network-administrator-abstract-concept-illustration_335657-2049.jpg?w=740"
-                  alt="Project 3"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-[#0077b6] to-[#03045e] opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
-                <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
-                    Practice with Real-world Projects
-                  </h3>
-                  <span className="text-sm font-bold text-[#f9ac13] group-hover:text-white pt-4">
-                    Apply your knowledge by working on hands-on projects
-                    tailored to real-world scenarios. Gain practical experience
-                    in network security, threat analysis, and mitigation under
-                    the guidance of industry experts.
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a>
-                <img
-                  className="w-full h-60 object-cover"
-                  src="https://img.freepik.com/free-vector/online-security-abstract-concept-illustration_335657-2074.jpg?w=740"
-                  alt="Project 4"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-[#0077b6] to-[#03045e] opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
-                <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
-                    Track Your Progress
-                  </h3>
-                  <span className="text-sm font-bold text-[#f9ac13] group-hover:text-white pt-4">
-                    Monitor your progress with intuitive dashboards and tracking
-                    tools. Set goals, track milestones, and measure your
-                    proficiency in various Network Security concepts as you
-                    advance through the courses.
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a>
-                <img
-                  className="w-full h-60 object-cover"
-                  src="https://img.freepik.com/free-vector/security-safeguard-abstract-concept-illustration_335657-3700.jpg?w=740"
-                  alt="Project 5"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-[#0077b6] to-[#03045e] opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
-                <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
-                    Specialize and Advance
-                  </h3>
-                  <span className="text-sm font-bold text-[#f9ac13] group-hover:text-white pt-4">
-                    Choose specialized tracks or advanced courses to delve
-                    deeper into specific areas of Network Security, such as
-                    ethical hacking, cryptography, or network defense. Customize
-                    your learning path to align with your interests and career
-                    goals.
-                  </span>
-                </div>
-              </a>
-            </div>
-            <div className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden">
-              <a>
-                <img
-                  className="w-full h-60 object-cover"
-                  src="https://img.freepik.com/free-vector/internet-security-abstract-concept-illustration_335657-3702.jpg?w=740"
-                  alt="Project 6"
-                />
-                <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-[#0077b6] to-[#03045e] opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
-                <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                  <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
-                    Earn Recognized Certifications
-                  </h3>
-                  <span className="text-sm font-bold text-[#f9ac13] group-hover:text-white pt-4">
-                    Upon successful completion of courses and projects, earn
-                    industry-recognized certifications to showcase your
-                    expertise to employers and enhance your career prospects.
-                  </span>
-                </div>
-              </a>
-            </div>
-          </div>
+    <section id="portfolio" className="portfolio-section py-10 px-4">
+      <div className="container mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl pb-2 md:text-4xl lg:text-5xl font-medium">
+            <span className="text-[#f6ac14]">The</span>
+            <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
+              {" "}
+              Future of{" "}
+            </span>
+            <span className="text-[#0098f1]"> Learning</span>
+          </h2>
         </div>
-      </section>
-    </>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {courseData.map((course, index) => (
+            <div
+              key={index}
+              className="group  border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
+            >
+              <a href="#">
+                {/* <div className="h-[210px] bg-[#0098f1]">
+                  <img
+                    className="w-full h-full object-cover"
+                    src={course.imgSrc}
+                    alt={`Project ${index + 1}`}
+                  />
+                </div> */}
+                <div className="h-[180px]">
+                  <img
+                    className="w-full h-full bg-cover"
+                    src={course.imgSrc}
+                    alt={`Project ${index + 1}`}
+                  />
+                </div>
+                <div className="p-4 flex flex-col items-center justify-between">
+                  <h3 className="text-lg font-medium text-gray-800 group-hover:text-gray-900">
+                    {course.title}
+                  </h3>
+                  <p className="text-md text-gray-600 pt-4">
+                    {course.description}
+                  </p>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

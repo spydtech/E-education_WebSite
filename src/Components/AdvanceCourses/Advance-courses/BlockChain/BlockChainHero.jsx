@@ -1,71 +1,42 @@
-// import React from "react";
-
 import React, { useState } from "react";
-// import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const BlockChainHero = () => {
-  const [courseName] = useState("Block Chain Development"); // Placeholder for course name
+  const [courseName] = useState("Block Chain Development");
   const [coursePrice] = useState(34999);
-
   const navigate = useNavigate();
+
   const handleEnroll = () => {
-    // Navigate to the card details page with course details as parameters
     navigate("/course-details", { state: { courseName, coursePrice } });
   };
 
   return (
     <>
-      {/* First Part */}
-
-      <div>
-        <img
-          src="https://wallpaper.forfun.com/fetch/e2/e26042c747d0c6131146b07d38104c46.jpeg"
-          className="w-full object-cover md:h-[500px]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
-      </div>
-
-      <div
-        className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5"
-        data-aos="fade-right"
-        data-aos-duration={800}
-      >
-        <div className="pr-2 md:mb-14 py-14 font md:py-0">
-          <h1 className="text-3xl font-semibold text-[#ff7000] xl:text-5xl lg:text-3xl">
-            <span className="block w-full">Explore Blockchain Technology</span>{" "}
-            and Build Innovative Solutions!
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center w-10/12 mx-auto overflow-x-hidden ">
+        <div className="order-2 lg:order-1 w-auto h-auto md:mb-14 font md:py-0 mx-auto">
+          <h1 className="text-[18px] md:text-[26px] lg:text-[28px] xl:text-[28px] font-semibold text-[#f6ac14] leading-tight text-start">
+            Master Block Chain Development with Our Expert Course!
           </h1>
-          <p className="py-4 text-lg text-gray-500 2xl:py-8 md:py-6 2xl:pr-5">
-            Empower yourself with the knowledge of blockchain technology.
-            Discover its potential to revolutionize industries and create
-            decentralized solutions. Our comprehensive resources will guide you
-            from understanding the basics to developing advanced blockchain
-            applications.
+          <p className="text-lg text-gray-500 flex items-center justify-center pl-3 leading-8 mt-4">
+            Explore blockchain technology and build innovative solutions! Our comprehensive resources will guide you from understanding the basics to developing advanced blockchain applications.
           </p>
-
-          <div className="mt-4">
-            <a
+          <div className="mt-6 md:w-[250px] md:h-[70px] w-auto h-auto lg:w-[160px] lg:h-[60px] flex justify-center items-center md:ml-48">
+            <button
               onClick={handleEnroll}
-              className="px-5 py-3 text-lg tracking-wider text-white bg-orange-300 rounded-lg md:px-8 hover:bg-orange-500 group"
+              className="px-5 w-auto font-sans h-full py-3 text-[26px] font-medium text-white bg-[#0098f1] rounded-[22px] md:px-6"
             >
-              <span>Enroll Now</span>
-            </a>
+              Enroll Now
+            </button>
           </div>
         </div>
-        <div className="pb-10 overflow-hidden md:p-10 lg:p-0 sm:pb-0">
+        <div className="order-1 lg:order-2 mt-4 md:mt-0 p-10  flex justify-center">
           <img
-            id="heroImg1"
-            className="transition-all duration-300 ease-in-out hover:scale-105 lg:w-full sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0"
-            src="https://img.freepik.com/free-vector/hand-drawn-flat-design-cryptocurrency-concept_23-2149180043.jpg?t=st=1717065815~exp=1717069415~hmac=6cc4cad3bf1710c004ca03d4be011c134bc667b27797b95a7c3bc2023cbc8ddc&w=740"
-            alt="Blockchain Technology hero image"
-            width={500}
-            height={488}
+            src="https://img.freepik.com/free-vector/blockchain-infographics_23-2147853635.jpg?t=st=1725009353~exp=1725012953~hmac=31d2602c46ccede58f992c90636fd155d5d8c5800e73f71dade952824b859c19&w=740"
+            alt="Hero"
+            className="w-full h-full max-w-md md:max-w-lg lg:max-w-xl"
           />
         </div>
       </div>
-
-      {/* Second Part */}
     </>
   );
 };

@@ -26,51 +26,37 @@ function Ui_UxSyllabus() {
   ];
 
   return (
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 bg-gradient-to-br to-[#0a0908] from-[#272640]">
-        <div className="flex items-center justify-center xl:lg:md:w-auto">
-          <div className="grid grid-cols-1 text-start px-20">
-            <div>
-              <p className="text-[#0070f3] text-xl font-medium">Syllabus</p>
-            </div>
-            <div className="py-5">
-              <p className="text-6xl font text-white">
-                Explore
-                <p className="text-[#0070f3] inline pl-2">UI/UX Design</p>
-              </p>
-            </div>
-            <div>
-              <p className="text-xl text-gray-300">
-                Dive into the world of UI/UX design with our comprehensive
-                syllabus covering the fundamental concepts, best practices, and
-                future trends in UI/UX design.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="space-y-5 flex justify-center px-10 p-4 my-2 mx-2 mb-2 border-2 border-opacity-15 rounded overflow-hidden bg-gray-200 shadow-2xl">
-          <div className="container mx-auto">
-            {data.map((category, index) => (
-              <div key={index} className="mb-6">
-                <h2 className="text-4xl font-semibold mb-2 text-[#0070f3]">
-                  {category.heading}
-                </h2>
-                <h3 className="text-2xl font-medium mb-2">
-                  {category.subheading}
-                </h3>
-                <ul className="list-disc ml-6 text-[16px]">
-                  {category.items.map((item, idx) => (
-                    <li key={idx} className="text-gray-700">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
+    <div className=" px-4 mb-2 flex flex-col md:flex-row md:justify-between md:items-center md:gap-4 md:px-10">
+      <div className=" mb-3 md:w-2/5">
+        <h2 className="md:text-2xl text-[#0098F1] font-bold mb-2">
+          Discover What You Will Learn
+        </h2>
+        <p className="md:text-lg text-gray-500">
+          Top-notch and up-to-date curriculum taught by renowned professors and
+          industry experts using videos, case studies, hands-on projects, and
+          live sessions.
+        </p>
       </div>
-    </>
+
+      {data.map((category, index) => (
+        <div
+          key={index}
+          className="text-white bg-[#0098f1] rounded-md p-3 md:w-2/4"
+        >
+          <h3 className="md:text-3xl font-semibold mb-2">{category.heading}</h3>
+          <h4 className=" md:text-xl font-medium mb-2">
+            {category.subheading}
+          </h4>
+          <ul className="list-disc ml-4">
+            {category.items.map((item, idx) => (
+              <li key={idx} className="mb-1">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
   );
 }
 

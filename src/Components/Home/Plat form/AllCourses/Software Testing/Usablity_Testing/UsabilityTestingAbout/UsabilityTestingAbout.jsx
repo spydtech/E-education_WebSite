@@ -1,57 +1,50 @@
 import React from "react";
-
 import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
 import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
 
 const UsabilityTestingAbout = () => {
+  const usabilityTestingInfo = [
+    {
+      title: "Student Support",
+      description:
+        "Learn about the latest techniques and get support for courses 24/7.",
+      imgSrc: programmer,
+      imgAlt: "student-support",
+    },
+    {
+      title: "Career Assistance",
+      description:
+        "Gain expertise in continuous network monitoring to detect anomalies and respond to incidents in real-time.",
+      imgSrc: assistance,
+      imgAlt: "career-assistance",
+    },
+  ];
+
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br  from-[#cca000] to-[#f5cc00]">
-      <div className="pt-0">
-        <p className="text-[#00509d] text-xl font-medium pl-4">
-          About The Usability Testing Course
-        </p>
-      </div>
-      <div className="py-2">
-        <p className="md:text-5xl text-2xl font pl-4">
-          Discover the
-          <p className="text-[#00509d] my-2 ">Usability Testing Program</p>
+    <div className="px-3 text-center">
+      <div className="">
+        <p className="md:text-2xl font-bold text-[#0098F1]">
+          Discover the Usability Testing Program
         </p>
       </div>
 
-      <div className="flex flex-wrap -mx-4 items-center pb-6">
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="md:flex justify-around ">
+        {usabilityTestingInfo.map((item, index) => (
+          <div
+            key={index}
+            className="md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
+          >
             <img
-              className="w-full h-52 object-cover object-center"
-              src={programmer}
-              alt="security-protection"
+              className=" md:w-full md:h-64 rounded-md"
+              src={item.imgSrc}
+              alt={item.imgAlt}
             />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Student Supoort</h2>
-              <p className="text-gray-700">
-                Learn about the latest techniques and get support for courses
-                24/7.
-              </p>
+            <div className="my-3">
+              <h2 className="md:text-xl font-bold">{item.title}</h2>
+              <p className="text-gray-700">{item.description}</p>
             </div>
           </div>
-        </div>
-
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              className="w-full h-52 object-cover"
-              src={assistance}
-              alt="network-monitoring"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Carrer Assistance</h2>
-              <p className="text-gray-700">
-                Gain expertise in continuous network monitoring to detect
-                anomalies and respond to incidents in real-time.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

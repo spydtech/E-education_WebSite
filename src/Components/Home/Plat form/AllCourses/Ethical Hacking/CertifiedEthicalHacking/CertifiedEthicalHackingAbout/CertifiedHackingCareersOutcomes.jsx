@@ -1,87 +1,59 @@
+import React from "react";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { FcPositiveDynamic } from "react-icons/fc";
 import { GrTransaction } from "react-icons/gr";
 
 function CertifiedEthicalHackingCareersOutcomes() {
+  const stats = [
+    {
+      icon: <BsGraphUpArrow className="w-10 h-10 text-green-700 mb-2" />,
+      stat: "57%",
+      description: "Average salary hike",
+    },
+    {
+      icon: <FaPeopleGroup className="w-10 h-10 text-blue-700 mb-2" />,
+      stat: "100+",
+      description: "Hiring partners",
+    },
+    {
+      icon: <FcPositiveDynamic className="w-10 h-10 text-green-700 mb-2" />,
+      stat: "5/6",
+      description: "career growth",
+    },
+    {
+      icon: <GrTransaction className="w-10 h-10 text-red-800 mb-2" />,
+      stat: "300+",
+      description: "Career Transitions",
+    },
+  ];
+
   return (
-    <>
-      <div
-        id="main"
-        className="bg-gradient-to-r from-yellow-400 to-red-500 mb-8 p-4"
-      >
-        <div id="headings" className="text-start px-4 md:px-20">
-          <div>
-            <p className="text-orange-600 text-xl font-medium">
-              Career Outcomes in Ethical Hacking Program
-            </p>
-          </div>
-          <div className="py-5">
-            <p className="text-4xl md:text-6xl font">
-              Discover What our{" "}
-              <span className="text-violet-800">Learners Have Achieved</span>
-            </p>
-          </div>
-          <div>
-            <p className="text-xl text-gray-500">
-              Snapshot of Alumni Placement Support
-            </p>
-          </div>
-        </div>
-        <div
-          id="subdiv"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-4 md:px-20"
-        >
+    <div className="flex flex-col md:flex-row items-center justify-around md:my-9 px-3 mb-4 md:px-10">
+    {/* Left Content */}
+    <div className="mb-8 ">
+      <p className="md:text-2xl font-bold text-[#0098F1]">
+        Discover What our Learners Have Achieved
+      </p>
+      <p className="md:text-xl text-gray-500 mt-4">
+        Snapshot of Alumni Placement Support
+      </p>
+    </div>
+
+    {/* Right Content */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+        {stats.map((item, index) => (
           <div
-            id="a"
-            className="grid grid-rows-2 grid-cols-2 gap-4 p-3 hover:cursor-pointer text-xl font-medium my-6 items-center border-2 border-opacity-15 rounded-md overflow-hidden shadow-lg shadow-gray-400"
+            key={index}
+            className="flex flex-col items-center p-3 cursor-pointer text-xl font-medium border-2 border-transparent hover:border-[#750e5c] bg-gray-100 rounded-md overflow-hidden shadow-lg"
           >
-            <div id="x" className="flex items-center flex-col md:flex-row space-x-4 gap-2">
-              <BsGraphUpArrow className="w-10 h-10 text-green-700 mr-6" />
-              <div>
-                <p>57%</p>
-                <p className="text-gray-500 text-[16px]">Average salary hike</p>
-              </div>
-            </div>
-            <div id="y" className="flex items-center flex-col md:flex-row space-x-4 gap-2">
-              <FaPeopleGroup className="w-10 h-10 text-blue-700" />
-              <div>
-                <p>100+</p>
-                <p className="text-gray-500 text-[16px]">Hiring partners</p>
-              </div>
-            </div>
-            <div id="z" className="flex items-center flex-col md:flex-row space-x-4 gap-2">
-              <FcPositiveDynamic className="w-10 h-10 text-green-700 mr-6" />
-              <div>
-                <p>5/6</p>
-                <p className="text-gray-500 text-[16px]">
-                   career growth
-                </p>
-              </div>
-            </div>
-            <div id="w" className="flex items-center flex-col md:flex-row space-x-4 gap-2">
-              <GrTransaction className="w-10 h-10 text-red-800" />
-              <div>
-                <p>300+</p>
-                <p className="text-gray-500 text-[16px]">Career Transitions</p>
-              </div>
-            </div>
+            {item.icon}
+            <p>{item.stat}</p>
+            <p className="text-gray-500 text-[16px]">{item.description}</p>
           </div>
-          <div
-            id="b"
-            className="p-3 hover:cursor-pointer text-xl font-medium my-6 items-center border-2 border-opacity-15 rounded-md overflow-hidden shadow-lg shadow-gray-400"
-          >
-            <p className="p-4 pt-0">Top Recruiters</p>
-            <div
-              id="list"
-              className="grid grid-rows-3 gap-y-4 md:gap-y-8 grid-cols-3"
-            >
-              {/* Add recruiter logos here */}
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 

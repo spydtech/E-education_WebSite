@@ -181,62 +181,72 @@ import {
 import { Link } from "react-router-dom";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
+import WebDev from "../../../assetss/Home/slider/web.png";
+import ReactIcon from "../../../assetss/Home/slider/react.png";
+import Python from "../../../assetss/Home/slider/pythonpic.png";
+import DataScience from "../../../assetss/Home/slider/ds.png";
+
+import Test from "../../../assetss/Home/slider/testing.png";
+import Js from "../../../assetss/Home/slider/js.png";
+import Ai from "../../../assetss/Home/slider/ai.png";
+
+import Machine from "../../../assetss/Home/slider/machine.png";
 
 const courses = [
   {
     title: "Generative AI",
     description: "Practical generative AI applications",
     bgColor: "bg-blue-300",
-    icon: <FaBrain className="text-[#18181b]" />,
+    icon: Ai,
     link: "/data_Science/machine-Learning",
   },
   {
     title: "Web Development",
     description: "Build dynamic, responsive websites",
     bgColor: "bg-green-300",
-    icon: <FaCode className="text-orange-400" />,
+    icon: WebDev, // Use the image path directly
     link: "/fullStack_WebDevelopment",
   },
   {
     title: "Data Science",
     description: "Introduction to data science concepts",
     bgColor: "bg-purple-300",
-    icon: <FaDatabase className="text-[#881337]" />,
+    icon: DataScience, // Use the image path directly
     link: "/data_Science/introduction-to-data-science",
   },
   {
     title: "React.js Mastery",
     description: "Master React.js for web development",
     bgColor: "bg-yellow-300",
-    icon: <FaReact className="text-[#312e81]" />,
+    icon: ReactIcon, // Use the image path directly
     link: "/reactjs",
   },
   {
     title: "Python Programming",
     description: "Learn Python for various applications",
     bgColor: "bg-red-300",
-    icon: <FaPython className="text-[#facc15]" />,
+    icon: Python, // Use the image path directly
     link: "/fullStack_WebDevelopment/fullStack-Python-Development",
   },
   {
     title: "JavaScript",
     description: "JavaScript programming skills",
     bgColor: "bg-indigo-300",
-    icon: <FaJs className="text-[#65a30d]" />,
+    icon: Js,
     link: "/fullStack_WebDevelopment/full-stack-javascript",
   },
   {
     title: "Machine Learning",
     description: "Study machine learning algorithms",
     bgColor: "bg-pink-300",
-    icon: <FaBrain className="text-[#dc2626]" />,
+    icon: Machine,
     link: "/data_Science/machine-Learning",
   },
   {
     title: "Software Testing",
     description: "Techniques for effective software testing",
     bgColor: "bg-orange-300",
-    icon: <FaDatabase className="text-[#475569]" />,
+    icon: Test,
     link: "/software_testing",
   },
 ];
@@ -290,27 +300,30 @@ export default function EducationCarousel() {
           }
         `}
       </style>
-      <div className="my-8">
-        <div className="text-xl text-gray-700 lg:text-5xl font-semibold pb-4 items-center text-center font-lora">
+      <div className="lg:my-16 md:my-8 my-4 text-center">
+        <div className="md:text-3xl text-2xl bg-gradient-to-r from-[#ff9b26] to-[#0098F1] inline-block text-transparent bg-clip-text lg:text-5xl  pb-4 font-bold font-lora">
           <span>Choose a course for you</span>
         </div>
       </div>
+
       <div className="glide relative mb-12 font-lora">
-        <div
-          className="glide__track overflow-hidden md:pl-80 sm:pl-64 lg:pl-80  pl-8"
-          data-glide-el="track"
-        >
-          <ul className="glide__slides  flex p-0 items-center justify-center">
+        <div className="glide__track overflow-hidden " data-glide-el="track">
+          <ul className="glide__slides  flex  items-center justify-center ">
             {courses.map((course, index) => (
-              <li key={index} className="glide__slide   flex-none pt-10">
+              <li
+                key={index}
+                className="glide__slide flex  items-center justify-center  pt-10"
+              >
                 <Link
                   to={course.link}
-                  className="group shadow-sm relative w-[268px]  h-[168px] m-4 bg-blue-600 hover:ring duration-400 hover:scale-105 flex flex-col items-center justify-center p-4 rounded-lg text-center cursor-pointer hover:shadow-md transform hover:-translate-y-2 transition-transform"
+                  className="group shadow-sm relative w-[268px] h-[168px] m-4 bg-[#0098F1] hover:ring duration-400 hover:scale-105 flex flex-col items-center justify-center p-4 rounded-lg text-center cursor-pointer hover:shadow-md transform hover:-translate-y-2 transition-transform"
                 >
                   <div className="flex justify-center items-center w-[87px] h-[87px] rounded-full absolute top-[-40px] border-2 border-blue-500 bg-white group-hover:shadow-md transform duration-300">
-                    <span className="text-3xl md:text-5xl transform duration-500">
-                      {course.icon}
-                    </span>
+                    <img
+                      src={course.icon}
+                      alt={course.title}
+                      className="w-16 h-16"
+                    />
                   </div>
                   <div className="flex flex-col text-white items-center justify-center mt-8 p-4">
                     <h2 className="text-xl capitalize font-bold text-shadesOfBlue dark:text-slate-800 my-4">

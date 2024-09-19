@@ -15,53 +15,28 @@ const DatavisualisationHero = () => {
   return (
     <>
       {/* First Part */}
-      <div className="">
-        <img
-          // src="https://t3.ftcdn.net/jpg/05/90/54/50/240_F_590545034_KBdVwbAy6i5kVQYht1oswK8c8D6oVabA.jpg"
-          src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2023_04_Understanding-Break-Statement-in-C-35.jpg"
-          className="w-full object-cover md:h-[500px]"
-        />
-      </div>
-      <div
-        className="items-center w-10/12 grid-cols-2 mx-auto overflow-x-hidden lg:grid md:py-14 lg:py-24 xl:py-14 lg:mt-3 xl:mt-5 md:gap-24"
-        data-aos="fade-right"
-        data-aos-duration={800}
-      >
-        <div className="pr-2 md:mb-14 py-14 font md:py-0">
-          <h1 className="text-3xl font-semibold text-[#ff206e] xl:text-5xl lg:text-3xl">
-            <span className="block w-full">
-              Unlock the Potential of Data Visualisation
-            </span>{" "}
-            to Drive Innovation and Growth!
-          </h1>
-          <p className="py-4 text-lg text-gray-500 md:py-6 2xl:py-8 2xl:pr-5">
-            Explore the power of data visualization in transforming complex
-            datasets into intuitive visual narratives. Our data visualization
-            solutions empower your business to uncover hidden patterns, trends,
-            and correlations, enabling data-driven decisions that drive success
-            and keep you ahead of the competition.
-          </p>
+      <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1726473780/WhatsApp_Image_2024-09-15_at_11.16.11_PM_2_pmcwvr.jpg")' }}>
+  <div className="absolute inset-0 flex items-center justify-center">
+  <p className="text-center text-white text-[16px] md:text-[20px] font-medium pb-5 leading-relaxed">
+  Explore the power of data visualization in transforming complex datasets into intuitive
+  <span className="hidden md:inline"> <br /></span>
+  empower success and keep you ahead of the competition.
+  <span className="hidden md:inline"> <br /></span>
+  visual narratives. Our data visualization solutions
+  
+</p>
 
-          <div className="mt-4">
-            <a
-              onClick={handleEnroll}
-              className="px-5 py-3 text-lg tracking-wider text-white bg-pink-500 rounded-lg md:px-8 hover:bg-pink-700 group"
-            >
-              <span>Enroll Now</span>{" "}
-            </a>
-          </div>
-        </div>
-        <div className="pb-10 overflow-hidden md:p-10 lg:p-0 sm:pb-0">
-          <img
-            id="heroImg1"
-            className="transition-all duration-300 ease-in-out hover:scale-105 lg:w-full sm:mx-auto sm:w-4/6 sm:pb-12 lg:pb-0"
-            alt="Data Science Introduction Image"
-            src="https://img.freepik.com/premium-vector/business-vector-elements-data-visualization-infographics-colorful-chart-design_412608-2041.jpg?w=1060"
-            width={500}
-            height={488}
-          />
-        </div>
-      </div>
+
+  </div>
+  <div className="absolute inset-0 flex items-end justify-center pb-10">
+    <button
+      onClick={handleEnroll}
+      className="px-6 py-3 text-[20px] font-medium text-white bg-[#0098f1] rounded-xl"
+    >
+      Enroll Now
+    </button>
+  </div>
+</div>
 
       {/* Second Part */}
     </>

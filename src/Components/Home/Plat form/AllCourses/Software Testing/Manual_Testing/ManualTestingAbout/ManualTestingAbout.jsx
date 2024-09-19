@@ -4,54 +4,48 @@ import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg
 import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
 
 const ManualTestingAbout = () => {
+  const ethicalHackingInfo = [
+    {
+      title: "Career Assistance",
+      description:
+        "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
+      imgSrc: "https://img.freepik.com/premium-vector/software-development-programming-language-coding-isometric-pc-computer-with-digital-application-white-background_284092-318.jpg?w=740",
+      imgAlt: "career-assistance",
+    },
+    {
+      title: "Student Support",
+      description:
+        'Access student support via support@manualtesting.com or through the "ask us?" option on our learning platform for urgent queries.',
+      imgSrc: "https://img.freepik.com/free-vector/hacker-activity-isometric-composition_1284-21475.jpg?t=st=1716550896~exp=1716554496~hmac=5802aeca8133c034a5da30c58e2e1eb86602a116a2c98b917ed68ea329193008&w=740",
+      imgAlt: "student-support",
+    },
+  ];
+
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-br  from-[#0077b6] to-[#00b4d8]">
-      <div className="pt-0">
-        <p className="text-[#fca311] text-xl font-medium pl-4">
-          About The Manual Testing Course
-        </p>
-      </div>
-      <div className="py-2">
-        <p className="md:text-5xl text-2xl font pl-4">
-          Discover the
-          <p className="text-[#fca311] my-2">Manual Testing Program</p>
+    <div className="px-3 text-center">
+      <div className="">
+        <p className="md:text-2xl font-bold text-[#0098F1]">
+          Discover the Manual Testing Program
         </p>
       </div>
 
-      <div className="flex flex-wrap -mx-4 items-center pb-6">
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="md:flex justify-around">
+        {ethicalHackingInfo.map((item, index) => (
+          <div
+            key={index}
+            className=" md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
+          >
             <img
-              className="w-full h-52 object-cover object-center"
-              src={programmer}
-              alt="Manual-protection"
+              className="md:w-full md:h-64 rounded-md"
+              src={item.imgSrc}
+              alt={item.imgAlt}
             />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Student Supoort</h2>
-              <p className="text-gray-700">
-                Learn about the latest techniques and get support for courses
-                24/7.
-              </p>
+            <div className="my-3">
+              <h2 className="md:text-xl font-bold">{item.title}</h2>
+              <p className="text-gray-700">{item.description}</p>
             </div>
           </div>
-        </div>
-
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              className="w-full h-52 object-cover"
-              src={assistance}
-              alt="network-monitoring"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Carrer Assistance</h2>
-              <p className="text-gray-700">
-                Gain expertise in continuous network monitoring to detect
-                anomalies and respond to incidents in real-time.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

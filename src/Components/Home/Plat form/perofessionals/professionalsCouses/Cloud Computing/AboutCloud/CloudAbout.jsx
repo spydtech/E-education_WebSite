@@ -1,61 +1,54 @@
-import React from 'react'
+
+import React from "react";
 import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
 import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
+
 const CloudAbout = () => {
+  const ethicalHackingInfo = [
+    {
+      title: "Student Support",
+      description:
+        "Learn about the latest techniques and get support for courses 24/7.",
+      imgSrc: programmer,
+      imgAlt: "student-support",
+    },
+    {
+      title: "Career Assistance",
+      description:
+        "Gain expertise in continuous network monitoring to detect anomalies and respond to incidents in real-time.",
+      imgSrc: assistance,
+      imgAlt: "career-assistance",
+    },
+  ];
+
   return (
-    <>
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-r from-rose-500 to-red-500">
-  <div className="pt-0">
-    <p className="text-[#f9ac13] text-xl font-medium">
-      About Cloud Computing Essentials
-    </p>
-  </div>
-  <div className="py-2">
-    <p className="text-6xl font">
-      Explore the
-      <p className="text-[#f9ac13] my-2">Cloud Computing Essentials Program</p>
-    </p>
-  </div>
+    <div className="px-3 text-center">
+      <div className="">
+        <p className="md:text-2xl font-bold text-[#0098F1]">
+        Explore the Cloud Computing Essentials Program
+        </p>
+      </div>
 
-  <div className="flex flex-wrap -mx-4 items-center pb-6">
-    <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-        <img
-          className="w-full h-52 object-cover object-center"
-          src={programmer}
-          alt="cloud-computing-essentials"
-        />
-        <div className="p-4">
-          <h2 className="text-xl font-bold mb-2">Expert Guidance</h2>
-          <p className="text-gray-700">
-            Learn from industry experts about fundamental concepts and
-            advanced practices in cloud computing to enhance your skillset.
-          </p>
-        </div>
+      <div className="md:flex justify-around ">
+        {ethicalHackingInfo.map((item, index) => (
+          <div
+            key={index}
+            className="md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
+          >
+            <img
+              className=" md:w-full md:h-64 rounded-md"
+              src={item.imgSrc}
+              alt={item.imgAlt}
+            />
+            <div className="my-3">
+              <h2 className="md:text-xl font-bold">{item.title}</h2>
+              <p className="text-gray-700">{item.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
-
-    <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-        <img
-          className="w-full h-52 object-cover"
-          src={assistance}
-          alt="cloud-career-assistance"
-        />
-        <div className="p-4">
-          <h2 className="text-xl font-bold mb-2">Career Support</h2>
-          <p className="text-gray-700">
-            Receive career guidance and support to navigate opportunities in
-            the rapidly growing field of cloud computing.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    </>
-  )
-}
+  );
+};
 
 export default CloudAbout

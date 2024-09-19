@@ -6,12 +6,12 @@ function CertifiedEthicalHackingIntroduction() {
   const Slide = ({ heading, items }) => {
     return (
       <div className="w-full flex-shrink-0 px-4 py-8">
-        <div className=" h-[400px] flex  justify-center">
+        <div className="h-auto flex justify-center">
           <div>
-            <h2 className="text-3xl font-medium mb-4 text-orange-600 font">
+            <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
               {heading}
             </h2>
-            <ul className="list-disc list-inside text-xl font">
+            <ul className="list-disc list-outside pl-5 text-md lg:text-xl text-white">
               {items.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -61,84 +61,67 @@ function CertifiedEthicalHackingIntroduction() {
   ];
 
   const goToPreviousSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? slidesData.length - 1 : prevSlide - 1
-    );
+    setCurrentSlide((prevSlide) => (prevSlide > 0 ? prevSlide - 1 : 0));
   };
 
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide === slidesData.length - 1 ? 0 : prevSlide + 1
+      prevSlide < slidesData.length - 1 ? prevSlide + 1 : prevSlide
     );
   };
 
   return (
-    <>
-      <div
-        id="subdiv"
-        className="grid grid-cols-1  w-fit   md:lg:grid-cols-2  h-full md:mb-20 bg-gradient-to-br from-yellow-300 via-orange-500 to-red-600"
-      >
-        <div
-          id="div1"
-          className="  flex items-center justify-center   xl:lg:md:w-auto "
-        >
-          <div
-            id="headings"
-            className="grid grid-cols-1 text-start md:px-10 font"
-          >
-            <div>
-              {" "}
-              <p className="text-orange-800 text-xl font-medium">
-                Introduction
-              </p>
-            </div>
-            <div className="py-5">
-              <p className="md:text-5xl text-2xl font ">
-                So what is
-                <p className="text-orange-800 inline pl-2">Ethical Hacking</p>
-              </p>
-            </div>
-            <div>
-              <p className="text-xl text-gray-500">
-                Brief overview of Ethical Hacking
-              </p>
-            </div>
-          </div>
+    <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center lg:h-[450px] px-3 md:mb-9 mb-5">
+      {/* Text Section */}
+      <div className="">
+        <div>
+          <p className="text-[#0098F1] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
+            Introduction
+          </p>
         </div>
-        <div id="div2" className=" md:px-10   ">
-          {/*  */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 ">
-            <div className="bg-white p-5 mb-2 overflow-hidden shadow-xl sm:rounded-lg">
-              <div className="relative w-full overflow-hidden">
-                <div className="flex">
-                  <Slide
-                    heading={slidesData[currentSlide].heading}
-                    items={slidesData[currentSlide].items}
-                  />
-                </div>
-              </div>
-              <div className="flex justify-between">
-                <button
-                  onClick={goToPreviousSlide}
-                  className=" hover:text-pink-700  text-black font-bold py-2 px-4 rounded"
-                >
-                  Previous
-                </button>
-                <div>
-                  Page {currentSlide + 1}/{slidesData.length}
-                </div>
-                <button
-                  onClick={goToNextSlide}
-                  className=" hover:text-pink-700 text-black font-bold py-2 px-4 rounded"
-                >
-                  Next
-                </button>
-              </div>
-            </div>
-          </div>
+        <div className="mt-2">
+          <p className="md:text-lg lg:text-3xl">
+            So what is
+            <span className="text-[#f6ac14] inline pl-2">Ethical Hacking</span>
+          </p>
+        </div>
+        <div>
+          <p className="md:text-lg lg:text-3xl mt-2">
+            Brief about Ethical Hacking
+          </p>
         </div>
       </div>
-    </>
+
+      {/* Slider Section */}
+      {/* <div className=" lg:h-[468px]"> */}
+      <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:p-5 lg:flex flex-col justify-between ">
+        <div className="flex text-white">
+          <Slide
+            heading={slidesData[currentSlide].heading}
+            items={slidesData[currentSlide].items}
+          />
+        </div>
+
+        <div className="flex justify-between max-md:p-4">
+          <button
+            onClick={goToPreviousSlide}
+            className="text-white hover:text-black font-bold  rounded"
+          >
+            Previous
+          </button>
+          <div className="text-white text-sm">{`Page ${currentSlide + 1}/${
+            slidesData.length
+          }`}</div>
+          <button
+            onClick={goToNextSlide}
+            className="text-white hover:text-black font-bold  rounded"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+      {/* </div> */}
+    </div>
   );
 }
 

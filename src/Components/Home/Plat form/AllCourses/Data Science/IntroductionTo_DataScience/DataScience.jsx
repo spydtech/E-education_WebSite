@@ -15,7 +15,7 @@ const DataScience = () => {
       <DataScienceHero />
       <DataScienceCard />
       <DataScienceNavigation />
-      <DataScienceFoot></DataScienceFoot>
+      <DataScienceFoot/>
       <Footer />
     </>
   );

@@ -1,35 +1,30 @@
 import React from "react";
-import certificate from "../../../../../../../assets/dataAnalatics/Certificate-PNG-Pic.png";
+import certificate from "../../../../../../../assetss/certficate1.png";
 
 function UnitTestingCertificate() {
   return (
     <>
-      <div
-        id="main"
-        className="grid  grid-cols-1 md:lg:grid-cols-2 pb-16 bg-gradient-to-br from-[#0077b6] to-[#03045e] mb-12"
-      >
-        <div id="content" className="flex justify-center items-center">
-          <div className="p-5 space-y-5 w-[450px] h-96">
-            <p className="text-[#f9ac13] text-xl font-medium">
-              Software Testing Certification
-            </p>
-            <p className="md:text-5xl text-2xl font">
-              Achieve{" "}
-              <p className="text-[#f9ac13]">Recognition and Credentials</p>
-            </p>
-            <p className="text-xl text-gray-500">
-              Successfully complete all course modules to obtain a Software
-              Testing Fundamentals certification, enhancing career prospects and
-              demonstrating proficiency in software testing techniques and
-              methodologies.
-            </p>
+      <div className="bg-white mb-20">
+        <div className="h-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 justify-center items-center">
+          <div className="flex justify-center items-center">
+            <img
+              src={certificate}
+              alt="certificate"
+              className="max-w-full h-auto"
+            />
           </div>
-        </div>
-        <div
-          id="certificate"
-          className="flex justify-center items-center p-10 pt-4"
-        >
-          <img src={certificate} alt="certificate" className="bg-transparent" />
+          <div className="flex justify-center items-center">
+            <div className="space-y-5 text-center md:text-left p-5">
+              <p className="text-2xl font-bold text-[#0098f1]">
+                Achieve Credentials and Recognition
+              </p>
+              <p className="text-xl text-gray-500">
+                Successfully complete all course modules to obtain a UnitTesting
+                certification, greatly enhancing career prospects and skill
+                development.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>

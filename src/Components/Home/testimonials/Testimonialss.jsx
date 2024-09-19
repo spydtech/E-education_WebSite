@@ -1,5 +1,3 @@
-
-
 import React, { useEffect } from "react";
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
@@ -63,7 +61,7 @@ export const newdata = [
     image_url: "https://randomuser.me/api/portraits/women/7.jpg",
   },
   {
-    name: "Tharun Mendi",
+    name: "Premchand Kanneboina",
     rating: 4.1,
     occupation: "Ethical Hacker",
     comment:
@@ -124,11 +122,14 @@ export default function Testimonialss() {
         </div>
       </div>
       <div className="glide-01 relative justify-center mb-12 font-lora w-full">
-        <div className="overflow-hidden" data-glide-el="track">
-          <ul className="glide__slides flex p-0 justify-center">
+        <div className="overflow-hidden " data-glide-el="track">
+          <ul className="glide__slides flex p-0 justify-center ">
             {newdata.map((user, index) => (
-              <li key={index} className="glide__slide flex-none pt-10">
-                <div className="group shadow-lg relative w-full lg:xl:w-[518px]  h-[258px] m-4 bg-white hover:border-none duration-400 hover:scale-105 flex flex-col items-center justify-center p-4 text-center cursor-pointer hover:shadow-md transform hover:-translate-y-2 transition-transform">
+              <li
+                key={index}
+                className="glide__slide flex-none pt-10 flex justify-center items-center"
+              >
+                <div className="group  shadow-lg relative  w-[300px] md:w-[518px]  h-[258px] m-4  hover:border-none duration-400 hover:scale-105 flex items-center justify-center px-3 text-center cursor-pointer hover:shadow-md transform hover:-translate-y-2 transition-transform">
                   <div className="w-[60px] left-4 rounded-full top-4 h-[60px] absolute group-hover:shadow-md transform duration-300">
                     <img
                       src={user.image_url}
@@ -137,7 +138,7 @@ export default function Testimonialss() {
                     />
                   </div>
                   <div className="absolute left-20 top-4 text-black ml-2">
-                    <h2 className="text-xl capitalize font-bold font-sans text-shadesOfBlue text-black">
+                    <h2 className=" text-[14px] md:text-lg capitalize font-bold font-sans  text-black">
                       {user.name}
                     </h2>
                     <p className="text-blue-500">
@@ -146,10 +147,10 @@ export default function Testimonialss() {
                       {user.rating % 1 !== 0 && "⭐"}
                     </p>
                   </div>
-                  <div className="flex flex-col text-black font-sans items-center justify-center mt-8 p-4">
+                  <div className="flex text-sm flex-col text-black font-sans items-center justify-center mt-8 p-2">
                     <p className="text-center mt-4">{user.comment}</p>
                   </div>
-                  <div className="left-0 absolute rounded-tr-xl bottom-0 w-80 sm:w-[441px] h-[23px] bg-gradient-to-r from-[#0098f1] via-green-500 to-[#f6ac14]"></div>
+                  <div className="left-0 absolute rounded-tr-xl bottom-0 w-[280px] md:w-[460px] h-[23px] bg-gradient-to-r from-[#0098f1] via-green-500 to-[#ff9b26]"></div>
                 </div>
               </li>
             ))}

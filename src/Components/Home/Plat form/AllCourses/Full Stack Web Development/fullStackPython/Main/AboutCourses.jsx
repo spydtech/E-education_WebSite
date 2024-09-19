@@ -4,6 +4,7 @@ import Outcomes from "./Outcomes";
 import FullStackPythonDevFQACourses from "./FullStackPythonDevFQACourses";
 import FullStackPythonDevelopmentTestimonioals from "./FullStackPythonDevelopmentTestimonioals";
 import { IoMenu } from "react-icons/io5";
+import { FaBars, FaTimes } from "react-icons/fa";
 const AboutCourses = () => {
   const [activeTab, setActiveTab] = useState("tab1");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,75 +21,52 @@ const AboutCourses = () => {
 
   return (
     <>
-      <div className="w-full pl-4"></div>
-      <div className="w-full  px-8">
-        {/* Menu Icon */}
-        <div className="block lg:hidden mb-4">
+       <div className="container mx-auto py-6">
+      <div className="flex justify-start text-2xl lg:hidden">
+        <button
+          className="px-4 py-2 font-semibold border rounded-lg text-[#F6AC14] focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      <div className={`w-full ${menuOpen ? "flex justify-center" : "hidden lg:flex"}  transition-all duration-300`}>
+      <div className="flex flex-col lg:justify-between lg:pl-20 w-5/6 justify-center  lg:flex-row  lg:items-start">
           <button
-            className="px-4 py-2 font-semibold border rounded-lg hover:bg-blue-800 hover:text-white focus:outline-none"
-            onClick={() => setMenuOpen(!menuOpen)}
+            className={`px-4 py-2 font-semibold text-xl lg:rounded-r-xl text-[#F6AC14] focus:outline-none tab-button ${
+              activeTab === "tab1" ? "bg-[#F6AC14] text-white" : ""
+            }`}
+            onClick={() => showTab("tab1")}
           >
-            <IoMenu />
+            About
+          </button>
+          <button
+            className={`px-4 py-2 font-semibold text-xl  lg:rounded-r-xl text-[#F6AC14] focus:outline-none tab-button ${
+              activeTab === "tab2" ? "bg-[#F6AC14] text-white" : ""
+            }`}
+            onClick={() => showTab("tab2")}
+          >
+            Outcomes
+          </button>
+          <button
+            className={`px-4 py-2 font-semibold text-xl lg:rounded-r-xl text-[#F6AC14] focus:outline-none tab-button ${
+              activeTab === "tab3" ? "bg-[#F6AC14] text-white" : ""
+            }`}
+            onClick={() => showTab("tab3")}
+          >
+            Courses
+          </button>
+          <button
+            className={`px-4 py-2 font-semibold text-xl  lg:rounded-r-xl text-[#F6AC14] focus:outline-none tab-button ${
+              activeTab === "tab4" ? "bg-[#F6AC14] text-white" : ""
+            }`}
+            onClick={() => showTab("tab4")}
+          >
+            Testimonials
           </button>
         </div>
-
-        {/* Tab Buttons */}
-        <div
-          className={`p-2 rounded-t-lg overflow-x-auto lg:flex lg:space-x-4 ${
-            menuOpen ? "block" : "hidden"
-          }`}
-        >
-          <div className="flex flex-col space-y-2 lg:space-y-0 lg:flex-row lg:space-x-4">
-            <button
-              className={`px-4 py-2 font-semibold border-b-4 border-blue-800 rounded-lg hover:bg-blue-800 hover:text-white focus:outline-none tab-button ${
-                activeTab === "tab1" ? "active" : ""
-              }`}
-              onClick={() => showTab("tab1")}
-              style={{
-                backgroundColor: activeTab === "tab1" ? "blue" : "",
-                color: activeTab === "tab1" ? "white" : "",
-              }}
-            >
-              About
-            </button>
-            <button
-              className={`px-4 py-2 font-semibold border-b-4 border-blue-800 rounded-lg hover:bg-blue-800 hover:text-white focus:outline-none tab-button ${
-                activeTab === "tab2" ? "active" : ""
-              }`}
-              onClick={() => showTab("tab2")}
-              style={{
-                backgroundColor: activeTab === "tab2" ? "blue" : "",
-                color: activeTab === "tab2" ? "white" : "",
-              }}
-            >
-              Outcomes
-            </button>
-            <button
-              className={`px-4 py-2 font-semibold border-b-4 border-blue-800 rounded-lg hover:bg-blue-800 hover:text-white focus:outline-none tab-button ${
-                activeTab === "tab3" ? "active" : ""
-              }`}
-              onClick={() => showTab("tab3")}
-              style={{
-                backgroundColor: activeTab === "tab3" ? "blue" : "",
-                color: activeTab === "tab3" ? "white" : "",
-              }}
-            >
-              Courses
-            </button>
-            <button
-              className={`px-4 py-2 font-semibold border-b-4 border-blue-800 rounded-lg hover:bg-blue-800 hover:text-white focus:outline-none tab-button ${
-                activeTab === "tab4" ? "active" : ""
-              }`}
-              onClick={() => showTab("tab4")}
-              style={{
-                backgroundColor: activeTab === "tab4" ? "blue" : "",
-                color: activeTab === "tab4" ? "white" : "",
-              }}
-            >
-              Testimonials
-            </button>
-          </div>
-        </div>
+      </div>
 
         {/* Tab Content */}
         <div className="rounded-lg pb-5">

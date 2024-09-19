@@ -15,7 +15,7 @@ const BestPracticesNetworkSecurity = () => {
       <BestPracticesNetworkSecurityHero />
       <BestPracticesNetworkSecurityCard />
       <BestPracticesNetworkSecurityNavigation />
-      <BestPracticesNetworkSecurityFoot></BestPracticesNetworkSecurityFoot>
+      <BestPracticesNetworkSecurityFoot/>
       <Footer />
     </>
   );

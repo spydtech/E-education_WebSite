@@ -1,48 +1,30 @@
-
 import React from "react";
-
-import certificate from "../../../../../../../assets//dataAnalatics/Certificate-PNG-Pic.png";
+import certificate from "../../../../../../../assetss/certficate.png";
 
 function CertifiedEthicalHackingCertificate() {
   return (
-    <>
-      <div
-        id="main"
-        className="grid grid-cols-1 md:grid-cols-2 pb-16 bg-gradient-to-r from-yellow-400 to-red-500 mb-8"
-      >
-        <div
-          id="content"
-          className="flex justify-center items-center p-4 md:p-10"
-        >
-          <div className="space-y-5 w-full max-w-md">
-            <p className="text-orange-600 text-lg md:text-xl font-medium">
-              Ethical Hacking Certification
-            </p>
-            <p className="md:md:text-5xl text-2xl font">
-              Achieve{" "}
-              <span className="text-violet-800 block md:inline">
-                Credentials and Recognition
-              </span>
-            </p>
-            <p className="text-lg md:text-xl text-gray-500">
-              Successfully complete all course modules to obtain an Ethical
-              Hacking certification, greatly enhancing career prospects and
-              skill development.
-            </p>
-          </div>
-        </div>
-        <div
-          id="certificate"
-          className="flex justify-center items-center p-4 md:p-10 pt-4 md:pt-14"
-        >
+    <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 p-4 justify-center items-center md:px-10 md:gap-8">
+        {/* Certificate Image */}
+        <div className="flex justify-center items-center">
           <img
             src={certificate}
             alt="certificate"
-            className="bg-transparent w-full max-w-md"
+            className=""
           />
         </div>
+        
+        {/* Text Content */}
+        <div className="space-y-3 text-center md:text-left">
+          <p className="md:text-2xl font-bold text-[#0098F1]">
+            Achieve Credentials and Recognition
+          </p>
+          <p className="md:text-xl text-gray-500">
+            Successfully complete all course modules to obtain an Ethical Hacking
+            Fundamentals certification, greatly enhancing career prospects and
+            skill development.
+          </p>
+        </div>
       </div>
-    </>
   );
 }
 

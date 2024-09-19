@@ -29,16 +29,16 @@ const Calendar = () => {
     const todayDate = dayjs().format('ddd, MMM D');
 
     return (
-        <div className="flex flex-col h-screen ">
+        <div className="flex flex-col h-screen  ">
             {/* Top Section */}
             <div className="flex items-center justify-between p-4 border-b border-gray-300">
                 <div className="flex items-center">
-                    <h1 className="text-2xl font-bold">Calendar</h1>
-                    <div className="ml-4 bg-gray-200 text-gray-700 px-4 py-2 rounded">
+                    <h1 className="text-4xl font-bold">Calendar</h1>
+                    <div className="ml-4 bg-white text-[#204349] px-4 py-2 rounded">
                         {todayDate}
                     </div>
                 </div>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition duration-150">
+                <button className="bg-[#204349] text-[#204349] px-4 py-2 rounded shadow hover:bg-[#204349] transition duration-150">
                     Today
                 </button>
             </div>
@@ -53,7 +53,7 @@ const Calendar = () => {
             </div>
 
             {/* Calendar Grid */}
-            <div className="flex flex-grow">
+            <div className="flex flex-grow bg-red-800">
                 <div className="w-1/6 p-4 border-r border-gray-300">
                     {hours.map(hour => (
                         <div key={hour} className="h-16 text-sm text-gray-500 flex items-center justify-end pr-2">
@@ -66,7 +66,7 @@ const Calendar = () => {
                         <div key={hour} className="relative h-16 border-b border-gray-300">
                             {events.map(event => (
                                 event.time.startsWith(hour.split(' ')[0]) && (
-                                    <div key={event.title} className="absolute top-1 left-1 right-1 bg-blue-500 text-white p-2 rounded shadow-md hover:bg-blue-600 transition duration-150">
+                                    <div key={event.title} className="absolute top-1 left-1 right-1 bg-[#204349] text-white p-2 rounded shadow-md hover:bg-[#204349] transition duration-150">
                                         {event.title}
                                     </div>
                                 )

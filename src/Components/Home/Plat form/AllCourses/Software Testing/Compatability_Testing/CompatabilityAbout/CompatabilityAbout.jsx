@@ -3,56 +3,48 @@ import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg
 import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
 
 const CompatabilityAbout = () => {
+  const compatabilityInfo = [
+    {
+      title: "Student Support",
+      description:
+        "Learn about the latest compatibility testing techniques and tools to ensure your applications are robust and reliable across various environments.",
+      imgSrc: programmer,
+      imgAlt: "student-support",
+    },
+    {
+      title: "Career Assistance",
+      description:
+        "Gain expertise in various compatibility testing methodologies and receive support to advance your career in this specialized field.",
+      imgSrc: assistance,
+      imgAlt: "career-assistance",
+    },
+  ];
+
   return (
-    <div className="mx-auto w-full md:lg:xl:px-10 p-1 bg-gradient-to-r from-orange-700 to-red-600">
-      <div className="pt-0 pl-4">
-        <p className="text-[#f9ac13] text-xl font-medium">
-          About The Compatibility Testing Course
-        </p>
-      </div>
-      <div className="py-2">
-        <p className="md:text-5xl text-2xl font pl-4">
-          Discover the
-          <p className="text-[#f9ac13] my-2">Compatibility Testing Program</p>
+    <div className="px-3 text-center">
+      <div className="">
+        <p className="md:text-2xl font-bold text-[#0098F1]">
+          Discover the Ethical Hacking Program
         </p>
       </div>
 
-      <div className="flex flex-wrap -mx-4 items-center pb-6">
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="md:flex justify-around ">
+        {compatabilityInfo.map((item, index) => (
+          <div
+            key={index}
+            className="md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
+          >
             <img
-              className="w-full h-52 object-cover object-center"
-              src={programmer}
-              alt="compatibility-testing"
+              className=" md:w-full md:h-64 rounded-md"
+              src={item.imgSrc}
+              alt={item.imgAlt}
             />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Student Support</h2>
-              <p className="text-gray-700">
-                Learn about the latest compatibility testing techniques and
-                tools to ensure your applications are robust and reliable across
-                various environments.
-              </p>
+            <div className="my-3">
+              <h2 className="md:text-xl font-bold">{item.title}</h2>
+              <p className="text-gray-700">{item.description}</p>
             </div>
           </div>
-        </div>
-
-        <div className="w-full md:w-1/2 lg:w-1/2 px-4 mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              className="w-full h-52 object-cover"
-              src={assistance}
-              alt="career-assistance"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2">Career Assistance</h2>
-              <p className="text-gray-700">
-                Gain expertise in various compatibility testing methodologies
-                and receive support to advance your career in this specialized
-                field.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
