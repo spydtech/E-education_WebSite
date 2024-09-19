@@ -5,7 +5,7 @@ function IntigrationCertificate() {
   return (
     <>
       <div className="bg-white mb-20">
-        <div className="h-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 justify-center items-start">
+        <div className="h-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 justify-center items-center">
           <div className="flex justify-center items-center">
             <img
               src={certificate}

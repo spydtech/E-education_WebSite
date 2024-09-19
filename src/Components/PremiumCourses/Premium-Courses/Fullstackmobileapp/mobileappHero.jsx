@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import img1 from '../../../../assetss/professionalimages/image13.png';
+import img1 from '../../../../assetss/professionalimages/image1.png';
 
 const MobileappHero = () => {
   const [courseName] = useState("Full Stack Mobile App");
