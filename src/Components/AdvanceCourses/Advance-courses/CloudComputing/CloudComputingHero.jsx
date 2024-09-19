@@ -20,7 +20,7 @@ const CloudComputingHero = () => {
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          <p className="text-center text-white text-[20px] font-medium px-4">
+          <p className="text-center text-white lg:text-[20px] text-[16px] font-medium px-4">
             Learn how to leverage the power of Amazon Web Services to build
             scalable, reliable, and secure cloud solutions.
             <br />

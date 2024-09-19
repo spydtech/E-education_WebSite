@@ -112,7 +112,7 @@ const BlockChainNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div>
+      <div className="mx-5">
         {currentSection === 0 && <BlockChainIntroduction />}
         {currentSection === 1 && <BlockChainKeyHighights />}
         {currentSection === 2 && <BlockChainCareersOutcomes />}

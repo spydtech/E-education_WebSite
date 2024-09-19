@@ -58,7 +58,7 @@ const LoginForm = () => {
 
   return (
     <div className="bg-[#ff9b26] bg-opacity-30  flex items-center justify-center ">
-      <div className="bg-white lg:my-6  md:flex-row flex-col-reverse rounded-lg w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 mx-2">
+      <div className="bg-white lg:my-6 my-4  md:flex-row flex-col-reverse rounded-lg w-full max-w-4xl grid grid-cols-1  md:grid-cols-2 mx-2">
         <div className="px-4 items-center flex justify-center py-10  ">
           <div className="">
             <h2 className="text-2xl font-bold mb-4">Hello! Welcome Back</h2>
@@ -153,11 +153,11 @@ const LoginForm = () => {
             </div>
           </div>
         </div>
-        <div className="p-8 flex  items-center justify-center ">
+        <div className="p-8  flex  items-center justify-center ">
           <img
             src={image}
             alt="Illustration of education and technology"
-            className="w-full h-auto"
+            className="hidden sm:block w-full h-auto"
           />
         </div>
       </div>

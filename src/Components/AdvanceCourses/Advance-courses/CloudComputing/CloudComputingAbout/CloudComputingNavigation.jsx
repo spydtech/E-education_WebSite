@@ -113,7 +113,7 @@ const CloudComputingNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div>
+      <div className="mx-5">
         {currentSection === 0 && <CloudComputingIntroduction />}
         {currentSection === 1 && <CloudComputingKeyHighights />}
         {currentSection === 2 && <CloudComputingCareersOutcomes />}
