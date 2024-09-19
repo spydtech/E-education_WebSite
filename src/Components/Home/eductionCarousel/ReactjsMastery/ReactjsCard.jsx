@@ -23,7 +23,7 @@ const ReactjsCard = () => {
         </div>
       </div>
       <div className="h-full min-h-screen w-full bg-white pt-8 p-4">
-        <div className="grid gap-14  md:grid-cols-3 mx-2 md:gap-5">
+        <div className="grid gap-14  md:grid-cols-2 lg:grid-cols-3 md:gap-y-10 mx-2 md:gap-5">
           <div
             data-aos-delay="150"
             className="rounded-xl bg-[#0098f1] h-80 p-2 py-4  text-center shadow-xl"
