@@ -5,6 +5,9 @@ import Certificate121 from "../WorkSpace1/Certificate121";
 // import Certificate121 from "../Profile/WorkSpace1/Certificate121";
 // import IMG from "../../assets/WorkSpace.png";
 // import FooterPart from "../Home/footer/Footer";
+// import certificate from "../../../../../../../assetss/certficate.png";
+// import certificate from "..";
+
 
 import IMG from "../../../assets/Wspace.png";
 import Footer from "../../Home/footer/Footer";
@@ -194,119 +197,115 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
                             out.
                           </div>
                         </div>
-                        <div className="bg-white  relative flex flex-col p-4 lg:p-8">
-                          <div className="mx-auto w-full h-auto max-w-[450px] bg-gray-100  shadow-sm-light shadow-[#0098f1]">
-                            <form className="py-4 px-9" onSubmit={handleSubmit}>
-                              <div className="mb-5">
-                                <label
-                                  htmlFor="description"
-                                  className="mb-3 block text-lg font-medium text-[#0098f1]"
-                                >
-                                  Description of file:
-                                </label>
-                                <input
-                                  type="text"
-                                  name="description"
-                                  id="description"
-                                  placeholder="Enter file description"
-                                  value={description}
-                                  onChange={(e) =>
-                                    setDescription(e.target.value)
-                                  }
-                                  className="w-full rounded-md border border-[#0098f1] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#0098f1] focus:shadow-md"
-                                />
-                              </div>
+                        <div className="bg-white border-[#0098f1]  relative flex flex-col p-4 lg:p-8">
+                       
+    <div className="mx-auto w-full border-2 border-[#0098f1] h-auto max-w-[450px] bg-white shadow-sm-light">
+  <form className="py-4 px-9" onSubmit={handleSubmit}>
+    <div className="mb-5">
+      <label
+        htmlFor="description"
+        className="mb-3 block text-lg font-medium text-[#0098f1]"
+      >
+        Description of file:
+      </label>
+      <input
+        type="text"
+        name="description"
+        id="description"
+        placeholder="Enter file description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+        className="w-full rounded-md border-2 border-[#0098f1] bg-white py-3 px-6 text-base font-medium placeholder:text-[#0098f1] outline-none focus:border-[#0098f1] focus:shadow-md"
+      />
+    </div>
 
-                              <div className="mb-6 pt-4">
-                                <label className="mb-5 block text-lg font-semibold text-[#0098f1]">
-                                  Upload File
-                                </label>
+    <div className="mb-6 pt-4">
+      <label className="mb-5 block text-lg font-semibold text-[#0098f1]">
+        Upload File
+      </label>
 
-                                <div
-                                  className={`relative bg-white flex min-h-[200px] items-center justify-center rounded-md border ${
-                                    isDragging
-                                      ? "border-solid border-[#6A64F1]"
-                                      : "border-dashed border-[#e0e0e0]"
-                                  }  p-12 text-center`}
-                                  onDragOver={handleDragOver}
-                                  onDragLeave={handleDragLeave}
-                                  onDrop={handleDrop}
-                                >
-                                  <input
-                                    type="file"
-                                    name="file"
-                                    id="file"
-                                    className="sr-only"
-                                    onChange={handleFileChange}
-                                  />
-                                  <label
-                                    htmlFor="file"
-                                    className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer"
-                                  >
-                                    <div>
-                                      <span className="mb-2 block text-lg font-semibold text-[#0098f1]">
-                                        {isDragging
-                                          ? "Drop files here"
-                                          : "Drag & drop files here"}
-                                      </span>
-                                      <span className="mb-2 block text-base font-medium text-[#0098f1]">
-                                        Or
-                                      </span>
-                                      <span className="inline-flex rounded border border-[#0098f1] py-2 px-7 text-base font-medium text-[#0098f1]">
-                                        Browse
-                                      </span>
-                                    </div>
-                                  </label>
-                                </div>
+      <div
+        className={`relative bg-white flex min-h-[200px] items-center justify-center rounded-md border ${
+          isDragging ? "border-solid border-[#6A64F1]" : "border-dashed border-[#6A64F1]"
+        } p-12 text-center`}
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDrop}
+      >
+        <input
+          type="file"
+          name="file"
+          id="file"
+          className="sr-only"
+          onChange={handleFileChange}
+        />
+        <label
+          htmlFor="file"
+          className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer"
+        >
+          <div>
+            <span className="mb-2 block text-lg font-semibold text-[#0098f1]">
+              {isDragging ? "Drop files here" : "Drag & drop files here"}
+            </span>
+            <span className="mb-2 block text-base font-medium text-[#0098f1]">
+              Or
+            </span>
+            <span className="inline-flex rounded border border-[#0098f1] py-2 px-7 text-base font-medium text-[#0098f1]">
+              Browse
+            </span>
+          </div>
+        </label>
+      </div>
 
-                                {selectedFile && (
-                                  <div className=" rounded-md bg-[#F5F7FB] py-4 px-8">
-                                    <div className="flex items-center justify-between">
-                                      <span className="truncate pr-3 text-base font-medium text-[#0098f1]">
-                                        {selectedFile.name}
-                                      </span>
-                                      <button
-                                        type="button"
-                                        className="text-[#0098f1]"
-                                        onClick={() => setSelectedFile(null)}
-                                      >
-                                        <svg
-                                          width="10"
-                                          height="10"
-                                          viewBox="0 0 10 10"
-                                          fill="none"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M0.279337 0.279338C0.651787 -0.0931121 1.25565 -0.0931121 1.6281 0.279338L9.72066 8.3719C10.0931 8.74435 10.0931 9.34821 9.72066 9.72066C9.34821 10.0931 8.74435 10.0931 8.3719 9.72066L0.279337 1.6281C-0.0931125 1.25565 -0.0931125 0.651788 0.279337 0.279338Z"
-                                            fill="currentColor"
-                                          />
-                                          <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M0.279337 9.72066C-0.0931125 9.34821 -0.0931125 8.74435 0.279337 8.3719L8.3719 0.279338C8.74435 -0.0931127 9.34821 -0.0931123 9.72066 0.279338C10.0931 0.651787 10.0931 1.25565 9.72066 1.6281L1.6281 9.72066C1.25565 10.0931 0.651787 10.0931 0.279337 9.72066Z"
-                                            fill="currentColor"
-                                          />
-                                        </svg>
-                                      </button>
-                                    </div>
-                                  </div>
-                                )}
-                              </div>
+      {selectedFile && (
+        <div className="rounded-md bg-[#F5F7FB] py-4 px-8">
+          <div className="flex items-center justify-between">
+            <span className="truncate pr-3 text-base font-medium text-[#0098f1]">
+              {selectedFile.name}
+            </span>
+            <button
+              type="button"
+              className="text-[#0098f1]"
+              onClick={() => setSelectedFile(null)}
+            >
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M0.279337 0.279338C0.651787 -0.0931121 1.25565 -0.0931121 1.6281 0.279338L9.72066 8.3719C10.0931 8.74435 10.0931 9.34821 9.72066 9.72066C9.34821 10.0931 8.74435 10.0931 8.3719 9.72066L0.279337 1.6281C-0.0931125 1.25565 -0.0931125 0.651788 0.279337 0.279338Z"
+                  fill="currentColor"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M0.279337 9.72066C-0.0931125 9.34821 -0.0931125 8.74435 0.279337 8.3719L8.3719 0.279338C8.74435 -0.0931127 9.34821 -0.0931123 9.72066 0.279338C10.0931 0.651787 10.0931 1.25565 9.72066 1.6281L1.6281 9.72066C1.25565 10.0931 0.651787 10.0931 0.279337 9.72066Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
 
-                              <div>
-                                <button
-                                  type="submit"
-                                  className="hover:shadow-form w-full rounded-md bg-[#0098f1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
-                                >
-                                  Send File
-                                </button>
-                              </div>
-                            </form>
-                          </div>
-                          <div className="flex mt-12 bg-gray-100 rounded-lg  shadow-sm-light shadow-[#0098f1] h-[480px] w-auto flex-col lg:w-4/6 sm:mx-auto sm:mb-2 -mx-2 p-2">
+    <div>
+      <button
+        type="submit"
+        className="hover:shadow-form w-full rounded-md bg-[#0098f1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
+      >
+        Send File
+      </button>
+    </div>
+  </form>
+</div>
+
+                          {/* <div className="flex mt-12 bg-white rounded-lg  shadow-sm-light  h-[480px] w-auto flex-col lg:w-4/6 sm:mx-auto sm:mb-2 -mx-2 p-2">
                             <p className="block text-xl font-semibold text-[#0098f1]">
                               Tasks From Trainee
                             </p>
@@ -358,7 +357,68 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
                                 </div>
                               </div>
                             ))}
-                          </div>
+                          </div> */}
+                          <div className="flex mt-12 bg-white rounded-lg shadow-sm-light h-[480px] w-auto flex-col lg:w-4/6 sm:mx-auto sm:mb-2 -mx-2 p-2 border-2 border-[#0098f1]">
+  <p className="block text-xl font-semibold text-[#0098f1]">
+    Tasks From Trainee
+  </p>
+  {files.map((file, index) => (
+    <div className="p-2 sm:w-1/2 w-full" key={index}>
+      <div
+        className=" rounded flex p-4 h-full cursor-pointer items-center justify-between"
+        onClick={() => handleDownload(file, index)}
+      >
+        <div className="flex items-center">
+          <FaArrowCircleDown className="text-[#0098f1] mr-2 " />
+          <div className="flex flex-col">
+            <span className="font-medium">{file.name}</span>
+            <span className="text-gray-500 text-sm">{file.description}</span>
+          </div>
+        </div>
+        <div className="flex items-center space-x-2 ml-6 lg:ml-20">
+          {/* {fileStatuses[index] === "accepted" ? (
+            <button
+              className="bg-green-500 text-white px-3 py-1 rounded"
+              onClick={(e) => handleAccept(index, e)}
+            >
+              Completed
+            </button>
+          ) : fileStatuses[index] === "rejected" ? (
+            <button
+              className="bg-red-500 text-white px-6 py-1 rounded"
+              onClick={(e) => handleReject(index, e)}
+            >
+              Rejected
+            </button>
+          ) : (
+            <>
+              <button
+                className="bg-green-500 text-white px-3 py-1 rounded"
+                onClick={(e) => handleAccept(index, e)}
+              >
+                Completed
+              </button>
+            </>
+          )} */}
+          {/* <select>
+          <option>Completed</option>
+          <option>pending</option>
+        </select> */}
+        <select
+                className="p-2 rounded-md border focus:border-[#0098f1] border-[#0098f1] focus:ring-[#0098f1] text-[#0098f1]"
+                onChange={(e) => handleAction(index, e.target.value)}
+                defaultValue=""
+              >
+                <option value="" disabled>Select Action</option>
+                <option value="Accepted">Completed</option>
+                <option value="Rejected">Pending</option>
+        </select>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
                           <div className="mt-4 text-white">
                             <button
                               className="bg-[#0098f1] p-2 w-[100px] text-white rounded-lg"

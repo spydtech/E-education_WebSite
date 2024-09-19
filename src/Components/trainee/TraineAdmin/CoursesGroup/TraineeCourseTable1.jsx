@@ -260,7 +260,7 @@ function TraineeCourseTable1() {
             placeholder="Search by name"
             value={search}
             onChange={handleSearchChange}
-            className="inline-block px-4 py-2 border-2 focus:outline-none focus:ring-[#204349] focus:border-[#204349] rounded-3xl placeholder:text-[#204349] border-[#204349]"
+            className="inline-block px-4 py-2 border-2 focus:outline-[#204349] focus:ring-[#204349] focus:border-[#204349] rounded-3xl placeholder:text-[#204349] border-[#204349]"
           />
           <div className="flex items-center space-x-2 mx-2">
             <span className="text-[#204349]">Trainee:</span>

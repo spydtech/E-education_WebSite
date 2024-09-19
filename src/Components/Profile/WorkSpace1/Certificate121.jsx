@@ -5,6 +5,8 @@ import html2canvas from "html2canvas";
 import Img from "../../../assets/newcertificate.png";
 import IMG from "../../../assets/Certfication.png";
 import IMG1 from "../../../assets/Certification12.png";
+// import certificate from "../../../../../../../assetss/certficate.png";
+import certificate from "../../../assetss/certficate.png";
 
 const Certificate121 = () => {
   const name = "John Doee"; // Constant data for the name
@@ -43,7 +45,7 @@ const Certificate121 = () => {
 
         <div className="px-2 py-4 pt-10 flex justify-center items-center">
           <img
-            src={Img}
+            src={certificate}
             className="bg-[#969ebe] w-auto h-auto lg:w-[700px] lg:h-[350px]"
             alt="Background"
           />
