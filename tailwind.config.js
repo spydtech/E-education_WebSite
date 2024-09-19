@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -19,6 +20,14 @@ module.exports = {
           },
         },
       },
+    },
+    colors: {
+      // Customize your themes
+      "theme-light": "#f5f5f5",
+      "theme-dark": "#333",
+      "theme-gradient1": "radial-gradient(circle, red, yellow)",
+      "theme-gradient2": "radial-gradient(circle, blue, green)",
+      "theme-gradient3": "radial-gradient(circle, purple, pink)",
     },
   },
   plugins: [
