@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import GroupTable from "./GroupTable";
@@ -149,11 +150,10 @@ function Tabs() {
                 >
                   <a
                     href="#"
-                    className={`bg-white inline-block py-2 px-4 font-semibold ${
-                      openTab === course.id
+                    className={`bg-white inline-block py-2 px-4 font-semibold ${openTab === course.id
                         ? "border-l border-t border-r rounded-t text-blue-700"
                         : "text-black hover:text-blue-700"
-                    }`}
+                      }`}
                   >
                     {course.name}
                   </a>
