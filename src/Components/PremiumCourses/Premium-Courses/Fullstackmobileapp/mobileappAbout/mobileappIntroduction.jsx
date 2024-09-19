@@ -93,8 +93,7 @@ function MobileappIntroduction() {
         </div>
       </div>
 
-      {/* Slider Section */}
-      <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:p-5 lg:flex flex-col justify-between"> {/* Coloring and padding */}
+      <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:p-5 lg:flex flex-col justify-between">
         <div className="flex text-white">
           <Slide
             heading={slidesData[currentSlide].heading}

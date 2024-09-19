@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // Add the image import to match the reference code style
-import img1 from '../../../../../../assetss/professionalimages/image13.png'; // Adjust the path accordingly
+import img1 from '../../../../../../assetss/professionalimages/image3.png'; // Adjust the path accordingly
 
 const DBhero = () => {
   const [courseName] = useState("DataBase Management");

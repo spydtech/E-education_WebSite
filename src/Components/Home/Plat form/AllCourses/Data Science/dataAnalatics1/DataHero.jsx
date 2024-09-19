@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import student from "../../../../../../assetss/Home/intro_DataScience/student.jpg";
-import img1 from '../../../../../../assetss/professionalimages/image13.png';
+import img1 from '../../../../../../assetss/professionalimages/image2.png';
 
 const DataHero = () => {
   const [courseName] = useState("Data Analytics");

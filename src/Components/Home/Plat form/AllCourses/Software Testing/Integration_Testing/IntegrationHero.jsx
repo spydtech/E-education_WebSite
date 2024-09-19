@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import student from "../../../../../../assetss/professionalimages/image13.png";
+import student from "../../../../../../assetss/professionalimages/image5.png";
 
 const IntigrationHero = () => {
   const [courseName] = useState("Integration Testing");

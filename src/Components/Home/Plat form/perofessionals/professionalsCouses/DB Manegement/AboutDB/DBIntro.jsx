@@ -5,7 +5,7 @@ function DBIntro() {
 
   const Slide = ({ heading, items }) => {
     return (
-      <div className="w-full flex-shrink-0 px-4 py-8">
+      <div className="w-full flex-shrink-0 px-4 pb-8 pt-6">
         <div className="h-auto flex justify-center">
           <div>
             <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
@@ -82,8 +82,8 @@ function DBIntro() {
         </div>
       </div>
 
-      <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:p-5 lg:flex flex-col justify-between">
-        <div className="flex text-white">
+      <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:h-[470px] mt-4 md:px-5 md:pb-3 lg:flex flex-col justify-between">
+        <div className="flex text-whitess">
           <Slide
             heading={slidesData[currentSlide].heading}
             items={slidesData[currentSlide].items}
