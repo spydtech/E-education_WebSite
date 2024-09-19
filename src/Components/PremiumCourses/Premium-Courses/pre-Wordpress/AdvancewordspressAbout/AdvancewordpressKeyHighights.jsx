@@ -19,70 +19,96 @@ function AdvancewordpressKeyHighlights() {
     switch (selectedItem) {
       case 0:
         return (
-          <ul className="space-y-2 pt-4 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">Overview</p>
-            <li>Introduction to advanced Wordpress programming and its importance.</li>
-            <li>Understanding modern Wordpress development practices.</li>
-            <li>Exploring Wordpress 7+ features and improvements.</li>
-            <li>Utilizing Wordpress in web development and beyond.</li>
-            <li>Integration with databases and other technologies.</li>
-            <li>Introduction to Wordpress frameworks and tools.</li>
-          </ul>
+          <div className="p-3 space-y-2 ">
+            <p className="text-xl font-medium text-white pl-2">Overview</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
+            <li>Advanced modules with Generative AI fusion</li>
+              <li>E-education certificate via upGrad collaboration</li>
+              <li>
+                Access to live training sessions by Meta Blueprint trainers
+              </li>
+              <li>15+ Case Studies, Live projects</li>
+              <li>Earn E-Eduction Executive Alumni Status</li>
+              <li>90+ Tool Video Library</li>
+              <li>Industry mentor-led fortnightly coaching</li>
+              <li>Tailored resume feedback</li>
+              <li>Mock Interview by managers</li>
+              <li>Explore ChatGPT in digital marketing tutorials</li>
+            </ul>
+          </div>
         );
       case 1:
         return (
-          <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">Key Concepts</p>
-            <li>Advanced Object-Oriented Programming (OOP) in Wordpress.</li>
-            <li>Namespaces and autoloading with Composer.</li>
-            <li>Traits and reusable code patterns.</li>
-            <li>Dependency Injection and Service Containers.</li>
-            <li>RESTful API development with Wordpress.</li>
-            <li>Security best practices in Wordpress.</li>
-            <li>Error handling and debugging techniques.</li>
-          </ul>
+          <div className="p-3 space-y-2 ">
+            <p className="text-xl font-medium text-white pl-2">Key Concepts</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
+            <li>Generative AI in digital marketing</li>
+              <li>SEO</li>
+              <li>Search and Display advertising</li>
+              <li>Social and Display advertising</li>
+              <li>Content Marketing</li>
+              <li>Branding</li>
+              <li>Web Analytics</li>
+            </ul>
+          </div>
         );
       case 2:
         return (
-          <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">Applications</p>
-            <li>Web Application Development</li>
-            <li>API Development and Integration</li>
-            <li>Command Line Interface (CLI) Scripts</li>
-            <li>Data Processing and ETL tasks</li>
-            <li>Content Management Systems (CMS)</li>
-            <li>E-commerce platforms</li>
-            <li>Microservices Architecture</li>
-            <li>Custom Frameworks and Libraries</li>
-          </ul>
+          <div className="p-3 space-y-2 ">
+            <p className="text-xl font-medium text-white pl-2">Applications</p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
+            <li>Digital Marketing Manager</li>
+              <li>SEM Manager</li>
+              <li>SEO Manager</li>
+              <li>Social Media and Content Manager</li>
+              <li>Associate</li>
+              <li>Consultant</li>
+              <li>Business Analyst</li>
+              <li>(Sr.)Associate-Digital Marketing</li>
+            </ul>
+          </div>
         );
       case 3:
         return (
-          <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">Skills Developed</p>
-            <li>Proficiency in modern Wordpress syntax and features.</li>
-            <li>Understanding of advanced OOP principles.</li>
-            <li>Ability to develop and consume RESTful APIs.</li>
-            <li>Experience with Wordpress frameworks like Laravel or Symfony.</li>
-            <li>Knowledge of security best practices in Wordpress.</li>
-            <li>Ability to write efficient and maintainable code.</li>
-            <li>Proficiency in database integration and ORM.</li>
-            <li>Understanding of testing and debugging techniques.</li>
-          </ul>
+          <div className="p-3 space-y-2 ">
+            <p className="text-xl font-medium text-white pl-2">
+              Skills Developed
+            </p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
+            <li>List of target audience goes here...</li>
+              <li>
+                Explore 2 tracks & 5 specializations for diverse learning.
+              </li>
+              <li>Experience seamless integration with Gen AI modules.</li>
+              <li>
+                Attain E-education Executive Alumni Status for exclusive
+                benefits.
+              </li>
+              <li>Access EMI at RS. 2,879/month for greater flexibility.</li>
+              <li>
+                A voucher worth $50 for Meta's "Digital Marketing Associate"
+                certificate exam, free of cost.
+              </li>
+            </ul>
+          </div>
         );
       case 4:
         return (
-          <ul className="space-y-3 pt-4 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">Target Audience</p>
-            <li>Wordpress Developers looking to deepen their knowledge.</li>
-            <li>Web Developers aiming to master backend development.</li>
-            <li>Software Engineers interested in Wordpress frameworks.</li>
-            <li>IT professionals transitioning to Wordpress development.</li>
-            <li>Students pursuing a career in web development.</li>
-            <li>Freelancers building complex Wordpress applications.</li>
-            <li>Project managers wanting to understand Wordpress development better.</li>
-            <li>Technology enthusiasts exploring server-side scripting.</li>
-          </ul>
+          <div className="p-3 space-y-2 ">
+            <p className="text-xl font-medium text-white pl-2">
+              Target Audience
+            </p>
+            <ul className="space-y-2 font-normal list-disc pl-6">
+            <li>
+                Utilise ChatGPT to assist in creative unique content,plan
+                strategies,build,calenders,and more
+              </li>
+              <li>Generative SEO-optimised content with chatGPT</li>
+              <li>
+                Gain insights into your social media analytics by using chatGPT
+              </li>
+            </ul>
+          </div>
         );
       default:
         return null;
@@ -90,39 +116,33 @@ function AdvancewordpressKeyHighlights() {
   };
 
   return (
-    <div className="md:px-20 px-10 mb-20 bg-white">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start justify-center">
-        <div className="w-auto h-auto md:lg:w-[500px] md:lg:h-[420px] mt-10 md:lg:pl-10 pl-0 text-xl">
-          {renderContent()}
-        </div>
-        <div className="md:lg:pl-20 pl-0">
-          <div className="pt-4">
-            <p className="font-bold underline-offset-2 underline text-xl  text-[#f6ac14]">
-              Advanced wordpress Key Highlights
-            </p>
-          {/*}  <div className="flex space-x-3 pt-4">
-              <p className="text-2xl font-bold">What does this</p>
-              <p className="text-2xl font-bold text-[#f6ac14]">Course have to offer?</p>
-            </div>*/}
-          </div>
-          <div className="pt-4 ">
-            {data.map((item, index) => (
-              <div
-                key={index}
-                onClick={() => handleClick(index)}
-                className={`p-5 text-center hover:cursor-pointer text-xl font-medium my-6 mx-4 h-16 w-[210px] flex items-center border-2 border-opacity-15 rounded-md overflow-hidden transition-transform duration-300 transform hover:scale-105 ${
-                  selectedItem === index
-                    ? "bg-[#0098f1] text-white border-none"
-                    : ""
-                }`}
-              >
-                <p className="text-center">{item.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+    <div className="px-3 md:mb-4">
+    <div className="md:flex justify-around  ">
+      <div className="bg-[#0098F1] text-white  pb-5 md:w-2/5">
+        {renderContent()}
+      </div>
+      <div className="my-3">
+        <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
+          E-Education Course Highlights
+        </p>
+        {data.map((item, index) => (
+          <ul className="">
+            <li
+              key={index}
+              onClick={() => handleClick(index)}
+              className={`pt-4 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md text-center  ${
+                selectedItem === index
+                  ? "bg-[#0098f1] text-white border-none"
+                  : ""
+              }`}
+            >
+              {item.label}
+            </li>
+          </ul>
+        ))}
       </div>
     </div>
+  </div>
   );
 }
 
