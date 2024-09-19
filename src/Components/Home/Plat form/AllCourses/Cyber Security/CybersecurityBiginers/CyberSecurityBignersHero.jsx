@@ -22,7 +22,7 @@ const CybersecurityBeginnersHero = () => {
   
        <>
     
-    <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725874356/image_13_oi7qfs.png")' }}>
+    <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/dfftgkkev/image/upload/v1726486586/image_7_p2utry.png")' }}>
   <div className="absolute inset-0 flex items-center justify-center">
     <p className="text-center text-white text-[20px] font-medium px-4">
     In today's interconnected world, cybersecurity stands as the first <br/>

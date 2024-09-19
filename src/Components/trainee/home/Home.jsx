@@ -1,226 +1,172 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, Link, useNavigate } from "react-router-dom";
-import { SiGooglemeet } from "react-icons/si";
-import MeetSlider from "../../Meeting/MeetSlider";
-import { MdOutlineDashboardCustomize } from "react-icons/md";
-import { SlCalender } from "react-icons/sl";
-import { FaLayerGroup } from "react-icons/fa";
-import { TbReportAnalytics } from "react-icons/tb";
-import ApprovalIcon from "@mui/icons-material/Approval";
-import Traineeprofile from "../../../assets/Calender/traineeprofile.png"
-import { FaUserAlt } from "react-icons/fa";
-import { IoSettingsSharp } from "react-icons/io5";
-import Trainee_Home from "../home/Home";
-import Navigation from "../TraineAdmin/navigation/navigation";
-import TraineUpload from "../UserTask/traineuploads";
-import COursesGroup from "../TraineAdmin/CoursesGroup/Tabs";
-import UserAccount from "../UsersSection/usernavigation/navigation";
-import { RiArrowRightSLine } from "react-icons/ri";
-import { IoMdLogOut } from "react-icons/io";
-import StatusPage from "../UserTask/StatusPage";
-import { getTrainee, logout } from "../../../State/Auth/Action";
-import { useDispatch, useSelector } from "react-redux";
-import Calendar from "../TraineeCalendar/Calendar";
-const TraineeDashboard = () => {
-  const location = useLocation();
-  const redirect = location?.state?.redirect;
-  const [isDrawerOpen, setDrawerOpen] = useState(false);
-  const [isLogoutOpen, setLogoutOpen] = useState(false); // State to manage logout options visibility
-  const jwt = localStorage.getItem("jwt")
-  const auth = useSelector((state) => state.auth);
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
-  const [activeTab, setActiveTab] = useState(redirect ? redirect : "home"); // State to manage active tab
-  const trainee = {
-    name: "Robin Huion", // Assuming one trainee for now
-  };
-  const toggleDrawer = () => {
-    setDrawerOpen(!isDrawerOpen);
-  };
 
-  const handleTabClick = (tabName) => {
-    setActiveTab(tabName);
-  };
-  const toggleLogoutOptions = () => {
-    setLogoutOpen(!isLogoutOpen);
-  };
-  useEffect(() => {
-    if (redirect) setActiveTab(redirect);
-  }, [redirect]);
 
-  const renderContent = () => {
-    switch (activeTab) {
-      case "home":
-        return <Trainee_Home />;
-      case "courses":
-        return <COursesGroup />;
-      case "calendar":
-        return <Calendar/>;
-      case "reports":
-        return <StatusPage />; 
-      case "approvals":
-        return <TraineUpload />;
-      case "user":
-        return <UserAccount />;
-      case "settings":
-        return <Navigation />;
-      default:
-        return null;
-    }
-  };
-  useEffect(() => {
-    if (jwt) {
-      dispatch(getTrainee(jwt));
-    }
-  }, [jwt, auth.jwt, dispatch]);
+import React from "react";
+import { TfiArrowTopRight } from "react-icons/tfi";
+import { Link } from "react-router-dom";
+import { RxDoubleArrowRight } from "react-icons/rx";
+import CourseCompletionTable from "./CourseCompletionTable";
 
-  const handleLogout = () => {
-    dispatch(logout());
-    localStorage.removeItem("jwt");
-    navigate("/trainee");
-  };
+function HomeTrainee() {
+  const filessent = localStorage.getItem("filessent") || 0;
+  const Activeusers = localStorage.getItem("Activeusers") || 0;
+  const Inactiveusers = localStorage.getItem("Inactiveusers") || 0;
+
+  const firstdata = [
+    {
+      title: "Courses",
+      value: "1",
+    },
+  ];
+  const users = [
+    {
+      title: "Active",
+      value: Activeusers.toString(),
+    },
+    {
+      title: "Inactive",
+      value: Inactiveusers.toString(),
+    },
+  ];
+  const userTasks = [
+    {
+      value: filessent.toString(),
+    },
+  ];
+
+  // Calculate the total value
+  const total = firstdata.reduce((acc, item) => acc + parseInt(item.value), 0);
+  const usertotal = users.reduce((acc, item) => acc + parseInt(item.value), 0);
+
   return (
-    <>
-      <div className="flex h-screen    w-auto">
-        {/* sidebar */}
-        <div className="hidden md:flex flex-col w-64 bg-gradient-to-r from-[#4CA1AF] to-[#204349]">
-          <div className="flex items-center justify-center h-16 bg-gradient-to-r from-[#4CA1AF] to-[#204349]">
-            {/* <span className="text-[#204349] text-[18px] font-bold uppercase">
-              Trainee Dashboard
-            </span> */}
-          </div>
-         
-          <div className="flex flex-col flex-1 overflow-y-auto">
-  <nav className="flex-1 px-2 py-4 ">
-    <a
-      href="#"
-      className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 
-        ${activeTab === "home" ? "bg-white text-[#204349] border-[#204349]  " : " border-transparent text-white"}`}
-      onClick={() => handleTabClick("home")}
-    >
-      <MdOutlineDashboardCustomize className="h-6 w-6 mr-2" />
-      Home
-    </a>
-    <a
-      href="#"
-      className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 
-        ${activeTab === "courses" ? "bg-white text-[#204349] border-[#204349]" : " border-transparent  text-white"}`}
-      onClick={() => handleTabClick("courses")}
-    >
-      <FaLayerGroup className="h-6 w-6 mr-2" />
-      Courses Group
-    </a>
-    <a
-      href="#"
-      className={`flex items-center space-x-2 px-4 py-4 rounded-tr-3xl rounded-br-3xl w-full border-l-8 transition-all duration-300 
-        ${activeTab === "calendar" ? "bg-white  text-[#204349] border-[#204349]" : " border-transparent  text-white"}`}
-      onClick={() => handleTabClick("calendar")}
-    >
-      <SlCalender className="h-6 w-6 mr-2" />
-      Calendar
-    </a>
-    <a
-      href="#"
-      className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 
-        ${activeTab === "reports" ? "bg-white text-[#204349] border-[#204349]" : "border-transparent  text-white"}`}
-      onClick={() => handleTabClick("reports")}
-    >
-      <TbReportAnalytics className="h-6 w-6 mr-2" />
-      Reports
-    </a>
-    <a
-      href="#"
-      className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 
-        ${activeTab === "approvals" ? "bg-white text-[#204349] border-[#204349]" : " border-transparent text-white"}`}
-      onClick={() => handleTabClick("approvals")}
-    >
-      <ApprovalIcon className="h-6 w-6 mr-2" />
-      Approvals
-    </a>
-    <a
-      href="#"
-      className={`flex items-center space-x-2 px-4 rounded-tr-3xl rounded-br-3xl py-4 w-full border-l-8 transition-all duration-300 
-        ${activeTab === "user" ? "bg-white text-[#204349] border-[#204349]" : " border-transparent  text-white"}`}
-      onClick={() => handleTabClick("user")}
-    >
-      <FaUserAlt className="h-6 w-6 mr-2" />
-      User
-    </a>
-    <a
-      href="#"
-      className={`flex items-center space-x-2 px-4 rounded-tr-3xl rounded-br-3xl py-4 w-full border-l-8 transition-all duration-300 
-        ${activeTab === "settings" ? "bg-white text-[#204349] border-[#204349]" : "hover:bg-[#204349] hover:bg-opacity-10 border-transparent hover:border-[#204349] text-white"}`}
-      onClick={() => handleTabClick("settings")}
-    >
-      <IoSettingsSharp className="h-6 w-6 mr-2" />
-      Settings
-    </a>
-  </nav>
-        </div>
+    <div id="container" className="  bg-white">
+      <div className="ml-2  ">
+        {/* <p className="text-[#4CA1AF] font-semibold pt-4 text-lg sm:text-xl lg:text-2xl">
+          DASHBOARD
+        </p> */}
+      </div>
 
-
-          {isLogoutOpen && (
-            <div className="w-auto h-14 mx-2 px-2 float-end  relative z-10">
-              <div className="flex items-end justify-end space-x-1 mt-2">
-                <IoMdLogOut className="h-8 w-8 mb-1  text-gray-300" />
-                {" "}
-                <button className=" p-2 bg-gray-800 text-[#FF9B26]  rounded-md hover:bg-gray-700" onClick={handleLogout}>
-                  Logout
-                </button>
-
-              </div>
+      {/* Container for the cards */}
+      <div className=" grid grid-cols-1  lg:grid-cols-3 gap-4 p-4">
+        <Link to="/traineedashboard" state={{ redirect: "courses" }}>
+          <div className="card1 lg:h-44   shadow-lg p-4 rounded-lg flex flex-col items-center justify-between">
+            <p className="text-[#4CA1AF] text-nowrap font-semibold text-sm sm:text-base lg:text-lg text-center">
+              Completed last 30 days
+            </p>
+            <ul className="list-none pl-4 text-[#4CA1AF] text-sm sm:text-base lg:text-lg text-center">
+              {firstdata.map((data, index) => (
+                <li key={index}>
+                  {data.title}: {data.value}
+                </li>
+              ))}
+            </ul>
+            <div className="text-xl bg-gray-200 font-semibold text-[#4CA1AF] w-20 h-20 md:w-16 md:h-16   border-4 border-[#4CA1AF] rounded-full flex items-center justify-center mt-4">
+              {total}
             </div>
-          )}
-
-          <div className=" flex mb-4 mx-2">
-            {auth.trainee && auth.trainee.firstName ? (
-              <>
-                <div className="rounded-full text-[#FF9B26] font-bold text-xl border-2 w-12 h-12 flex justify-center items-center ">
-                  {auth.trainee.firstName.charAt(0)}
-                </div>
-                <span className="px-2 mx-1 mt-3 flex text-[#FF9B26] font-bold">
-                  {auth.trainee.firstName} {auth.trainee.lastName}
-                </span>
-              </>
-            ) : (
-              <div className="flex items-center">
-                {/* <span className="text-[#204349] font-bold">Loading...</span> */}
-              </div>
-            )}
-            {/* <RiArrowRightSLine
-              className=" w-6 h-6 text-[#204349] mt-[13px] cursor-pointer"
-              onClick={toggleLogoutOptions}
-            /> */}
           </div>
-        </div>
-        {/* Main content */}
-        <div className="flex flex-col flex-1 overflow-y-auto">
-          <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200">
-            <div className="flex items-center px-4">
+        </Link>
+
+        <Link to="/traineedashboard" state={{ redirect: "user" }} className="">
+          <div className="card2 lg:h-44   shadow-lg p-4 rounded-lg flex flex-col items-center justify-between">
+            <p className="text-[#4CA1AF] font-semibold text-sm sm:text-base lg:text-lg">
+              User Accounts
+            </p>
+            <ul className=" flex list-none flex-wrap justify-center  text-[#4CA1AF] ">
+              {users.map((data, index) => (
+                <li
+                  key={index}
+                  className="flex-shrink-0 text-center list-t md:text-left px-2 py-1"
+                >
+                  {data.title}: {data.value}
+                </li>
+              ))}
+            </ul>
+            <div className="text-xl bg-gray-200 font-semibold text-[#4CA1AF] w-20 h-20 md:w-16 md:h-16  border-4 border-[#4CA1AF] rounded-full flex items-center justify-center mt-4">
+              {usertotal}
+            </div>
+          </div>
+        </Link>
+
+        <Link to="/traineedashboard" state={{ redirect: "approvals" }}>
+          <div
+            id="right-card"
+            className="shadow-lg text-white items-center  justify-center overflow-y-auto h-44 bg-gradient-to-r from-[#4CA1AF] to-[#204349]  rounded-lg flex flex-col  md:order-1"
+          >
+            <p className="text-white text-center text-nowrap font-semibold text-sm sm:text-base lg:text-md">
+              Submissions to Approve
+            </p>
+            <div className=" flex md:items-center mt-3 justify-center max-md:items-center gap-2 flex-wrap">
+              <TfiArrowTopRight className="text-white lg:size-5 " />
+              <p className="font-semibold text-sm sm:text-base lg:text-lg">
+                User Tasks
+              </p>
              
-              <div className=" flex h-10 w-10">
-                <img src={Traineeprofile}/>
-                <h2 className="text-nowrap pl-4 pt-2 font-bold text-[#204349] text-[20px]">TraineeName</h2>
-                </div>
             </div>
-            <div className="flex-1 flex items-center justify-center px-4 h-16">
-            </div>
-            <div className="flex items-center px-4">
-              <button
-                className="text-gray-500 hover:text-gray-600"
-                id="open-sidebar"
-                onClick={toggleDrawer}
-              >
-                <SiGooglemeet />
-              </button>
-              <MeetSlider isOpen={isDrawerOpen} onClose={toggleDrawer} />
-            </div>
+            {userTasks.map((data, index) => (
+                <p className=" mt-3 text-sm text-center sm:text-base text-nowrap" key={index}>
+                  {data.value} - Submissions to Approve
+                </p>
+              ))}
           </div>
-          <div className="p-4">{renderContent()}</div>
+        </Link>
+      </div>
+
+      {/* Container for the two remaining cards */}
+      <div className="  grid grid-cols-2 gap-2 px-4  max-lg:grid-cols-1">
+        <div className="card3   h-44 p-4 text-[#4CA1AF] shadow-lg rounded-lg">
+          <div className="flex justify-between  p-2">
+            <p className="text-[#4CA1AF] font-semibold text-sm sm:text-base lg:text-lg">
+              Saved Reports
+            </p>
+            <Link>
+              <p className="text-[#4CA1AF] text-sm sm:text-base lg:text-lg">
+                <RxDoubleArrowRight className="inline w-6 h-6" />
+                View All
+              </p>
+            </Link>
+          </div>
+          <div className="mt-4 text-[#4CA1AF] text-sm sm:text-base lg:text-lg">
+            <Link>
+              <p className="underline-offset-2 underline text-sm sm:text-base lg:text-lg">
+                <RxDoubleArrowRight className="inline w-6 h-6" />
+                Expiring Tasks within 30 days
+              </p>
+            </Link>
+            <Link>
+              <p className="underline-offset-2 underline text-sm sm:text-base lg:text-lg">
+                <RxDoubleArrowRight className="inline w-6 h-6" />
+                General Induction Status
+              </p>
+            </Link>
+          </div>
+        </div>
+        <div className="card4  p-4 h-44 shadow-lg rounded-lg">
+          <div className="flex  justify-between p-4 text-[#4CA1AF]">
+            <p className="text-[#4CA1AF] font-semibold text-sm sm:text-base lg:text-lg">
+              Scheduled Reports
+            </p>
+            <Link>
+              <p className="text-[#4CA1AF] text-sm sm:text-base lg:text-lg">
+                <RxDoubleArrowRight className="inline w-6 h-6" />
+                Manage
+              </p>
+            </Link>
+          </div>
+          <div className="mt-4 text-[#4CA1AF]   text-sm sm:text-base lg:text-lg">
+            <Link to="/todo">
+              <p className="underline-offset-2 underline text-sm sm:text-base lg:text-lg">
+                <RxDoubleArrowRight className="inline w-6 h-6" />
+                Schedule Monthly Tasks
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
-    </>
-  );
-};
 
-export default TraineeDashboard;
+      <div id="table-card" className="shadow-lg p-4 my-4   rounded-lg">
+        <CourseCompletionTable />
+      </div>
+    </div>
+  );
+}
+
+export default HomeTrainee;

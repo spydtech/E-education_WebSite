@@ -3,43 +3,37 @@ import React from "react";
 const AutomationTestingCard = () => {
   const courseData = [
     {
-      imgSrc:
-        "https://img.freepik.com/free-vector/pair-programming-concept-illustration_114360-2170.jpg?t=st=1716451287~exp=1716454887~hmac=cc991f9dacafb486a88efc45f1b6ab6d8d04e77495c9a8d56c3b1bc97ef7884d&w=740",
+      imgSrc: "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579678/image1_hef1sc.png",
       title: "Explore Course Catalog",
       description:
-        "Browse our extensive catalog of Data Science courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
+        "Browse our extensive catalog of Automation Testing courses Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
     },
     {
-      imgSrc:
-        "https://img.freepik.com/free-vector/pair-programming-concept-illustration_114360-2170.jpg?ga=GA1.2.481732087.1715859514&semt=ais_hybrid",
+      imgSrc: "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579681/image2_xdrrvu.png",
       title: "Enroll in Foundational Courses",
       description:
-        "Start with foundational courses covering basic concepts, algorithms, and tools essential for Data Science.",
+        "Start with foundational courses covering basic concepts algorithms, and programming languages essential for Automation Testing.",
     },
     {
-      imgSrc:
-        "https://img.freepik.com/free-vector/personal-digital-security_74855-4560.jpg?ga=GA1.1.481732087.1715859514&semt=ais_hybrid",
+      imgSrc: "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579686/image3_ih9nxv.jpg",
       title: "Practice with Real-world Projects",
       description:
-        "Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience in data analysis, data processing, and visualization.",
+        "Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience in data analysis, model building, and evaluation under the guidance of industry experts.",
     },
     {
-      imgSrc:
-      "https://img.freepik.com/free-vector/programmer-online-service-platform-coding-testing-writing-program-website-development-optimization-testing-program-isolated-vector-illustration_613284-3353.jpg?ga=GA1.2.481732087.1715859514&semt=ais_hybrid",
+      imgSrc: "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579693/image4_no3xea.jpg",
       title: "Track Your Progress",
       description:
-        "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Data Science concepts as you advance through the courses.",
+        "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Automation Testing concepts as you advance through the courses.",
     },
     {
-      imgSrc:
-        "https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866843.jpg?t=st=1716451464~exp=1716455064~hmac=b20bffd75cbf6f3c20c1d05348247ca261db387eb06c386f823603a08a890fd1&w=826",
+      imgSrc: "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579696/image5_yxs4dr.png",
       title: "Specialize and Advance",
       description:
-        "Choose specialized tracks or advanced courses to delve deeper into specific areas of Data Science, such as data engineering, predictive analytics, or machine learning.",
+        "Choose specialized tracks or advanced courses to delve deeper into specific areas of Automation Testing, such as deep learning, natural language processing, or computer vision. Customize your learning path to align with your interests and career goals.",
     },
     {
-      imgSrc:
-      "https://img.freepik.com/free-vector/hand-drawn-vpn-illustration_23-2149229495.jpg?ga=GA1.1.481732087.1715859514&semt=ais_hybrid",
+      imgSrc: "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579701/image6_md7ztw.jpg",
       title: "Earn Recognized Certifications",
       description:
         "Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.",
@@ -48,9 +42,9 @@ const AutomationTestingCard = () => {
 
   return (
     <section id="portfolio" className="portfolio-section py-10 px-4">
-      <div className="container mx-auto">
+        <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl pb-2 md:text-4xl lg:text-5xl font-medium">
+          <h2 className="text-3xl pb-2 md:text-4xl lg:text-4xl font-medium">
             <span className="text-[#f6ac14]">The</span>
             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
               {" "}
@@ -59,34 +53,34 @@ const AutomationTestingCard = () => {
             <span className="text-[#0098f1]"> Learning</span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {courseData.map((course, index) => (
-            <div
-              key={index}
-              className="group  border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
-            >
-              <a href="#">
-                <div className="h-[210px] bg-[#0098f1]">
-                  <img
-                    className="w-full h-full object-cover"
-                    src={course.imgSrc}
-                    alt={`Project ${index + 1}`}
-                  />
-                </div>
-                <div className="p-4 flex flex-col items-center justify-between">
-                  <h3 className="text-lg font-medium text-gray-800 group-hover:text-gray-900">
-                    {course.title}
-                  </h3>
-                  <p className="text-md text-gray-600 pt-4">
-                    {course.description}
-                  </p>
-                </div>
-              </a>
-            </div>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {courseData.map((course, index) => (
+              <div
+                key={index}
+                className="group  border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
+              >
+                <a href="#">
+                  <div className="h-[180px]">
+                    <img
+                      className="w-full h-full bg-cover"
+                      src={course.imgSrc}
+                      alt={`Project ${index + 1}`}
+                    />
+                  </div>
+                  <div className="p-4 flex flex-col items-center justify-between">
+                    <h3 className="text-lg font-medium text-[#FF9B26] group-hover:text-gray-900">
+                      {course.title}
+                    </h3>
+                    <p className="text-md text-gray-600 pt-4">
+                      {course.description}
+                    </p>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 };
 

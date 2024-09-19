@@ -46,8 +46,7 @@ function UnitTestingIntroduction() {
   };
 
   return (
-    <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center lg:h-[450px] px-3 md:mb-9 mb-5">
-      {/* Text Section */}
+    <div className="flex flex-col space-y-3 md:flex-row md:justify-between md:items-center lg:h-[450px] px-14 md:mb-9 mb-5">
       <div>
         <div>
           <p className="text-[#0098f1] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
@@ -65,8 +64,7 @@ function UnitTestingIntroduction() {
         </div>
       </div>
 
-      {/* Slider Section */}
-      <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:p-5 lg:flex flex-col justify-between">
+      <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:px-5 md:pt-1 md:pb-5 lg:flex flex-col justify-between">
         <div className="flex text-white">
           <Slide
             heading={slidesData[currentSlide].heading}

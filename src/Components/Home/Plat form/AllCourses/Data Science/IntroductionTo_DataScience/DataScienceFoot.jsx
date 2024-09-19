@@ -16,7 +16,9 @@ function DataScienceFoot() {
       <div className="flex mb-20 flex-1 font w-full flex-col items-center justify-center text-center px-4 py-20 bg-[#0098f1] dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
         <h1 className="mx-auto max-w-4xl font-display text-2xl font-md tracking-normal text-white-300 dark:text-gray-300 md:text-6xl">
           Unlock the Potential of &nbsp;
-          <span className="relative text-white-600 dark:text-gray-300"></span>
+          <span className="relative text-white-600 dark:text-gray-300">
+            Data Science with
+          </span>
           <span className="relative whitespace-nowrap text-orange-500 dark:text-orange-300">
             <svg
               aria-hidden="true"

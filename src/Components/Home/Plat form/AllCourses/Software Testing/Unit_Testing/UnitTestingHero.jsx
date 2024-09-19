@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import img1 from "../../../../../../assetss/professionalimages/image13.png"; // Using same image as in DataHero
+import img1 from "../../../../../../assetss/professionalimages/image4.png"; // Using same image as in DataHero
 
 const UnitTestingHero = () => {
   const [courseName] = useState("Unit Testing");

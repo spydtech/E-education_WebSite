@@ -7,7 +7,7 @@ import Certificates from "./Components/Home/Professional Certificates/Certificat
 import Profile from "./Components/Profile/Profile";
 import AdminRouter from "./Routers/AdminRouter";
 import WSpace from "./Components/Profile/WorkSpace1/WSpace";
-import TraineeSidebar from "./Components/trainee/TraineeDashboard/TraineeDashboard";
+// import TraineeSidebar from "./Components/trainee/TraineeDashboard/TraineeDashboard";
 // import WSpace from "./Components/trainee/UserTask/WSpace";
 import Settings from "./Components/Profile/Settings";
 import PostFeeds from "./Components/Home/post/PostFeeds";
@@ -102,10 +102,9 @@ import PowerBi from "./Components/AdvanceCourses/Advance-courses/PowerBI/PowerBi
 import ERP from "./Components/AdvanceCourses/Advance-courses/ERP Developement/ERP";
 import Options from "./Components/optionsPages/Options";
 import AdminLogin from "./Admin/Components/AdminLogin";
-import Trainee from "./Components/trainee/Trainee";
+// import Trainee from "./Components/trainee/Trainee";
 // import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
-// import TraineeSidebar from ""
-// import Tra
+
 // import Meeting from "./Components/Meeting/Meeting";
 import Tabs from "./Components/trainee/TraineAdmin/TraineComplateCourses/Tabs";
 import UserAccounts from "./Components/trainee/UsersSection/usernavigation/navigation";
@@ -127,6 +126,7 @@ import ProductsCount from "./Admin/Components/Reports/CountofProducts";
 import Todo from "./Components/trainee/SheduledReports/Todo";
 import Dashboard from "./Admin/Components/pymentData/MainDashBoard";
 import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
+
 function App() {
   return (
     <div>
@@ -155,8 +155,8 @@ function App() {
           {/* traine Login */}
 
           <Route path="/trainelogin" element={<Traine_Login />} />
-          <Route path="/trainee" element={<Trainee />} />
-          <Route path="/traineedashboard" element={<TraineeSidebar />} />
+          {/* <Route path="/trainee" element={<Trainee />} /> */}
+          {/* <Route path="/traineedashboard" element={<TraineeSidebar />} /> */}
           {/* <Route path="/meeting" element={<Meeting />} /> */}
           <Route path="/traine-home" element={<Traine_Home />} />
           {/* <Route path="/tabs" element={<Tabs />} /> */}

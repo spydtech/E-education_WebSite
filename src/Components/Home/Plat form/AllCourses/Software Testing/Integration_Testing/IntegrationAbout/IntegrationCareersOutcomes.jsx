@@ -7,15 +7,15 @@ function IntigrationCareersOutcomes() {
   return (
     <>
       <div className="bg-white px-20 mb-20">
-        <div className="flex flex-col lg:flex-row items-start justify-between">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
           {/* Left Content */}
           <div className="mb-8 lg:mb-0 lg:w-1/2">
             <div className="text-start">
               <div className="py-5">
-                <p className="text-2xl font-bold mt-2 text-[#0098f1]">
+                <p className="text-xl font-bold mt-2 text-[#0098f1]">
                   Discover What our Learners Have Achieved
                 </p>
-                <p className="text-xl text-gray-500 mt-2">
+                <p className="text-lg text-gray-500 mt-2">
                   Snapshot of Alumni Placement Support
                 </p>
               </div>
