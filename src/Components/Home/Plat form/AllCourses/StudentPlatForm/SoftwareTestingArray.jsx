@@ -917,7 +917,7 @@ const SoftwareTestingArray = () => {
   return (
     <div className="bg-gray-100 min-h-screen ">
       <Navbar />
-      <div className="md:px-20">
+      <div className="">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-center mb-4">
             <span className="bg-gradient-to-r text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent pb-5">
@@ -933,7 +933,8 @@ const SoftwareTestingArray = () => {
               className="px-4 py-2 border border-blue-600 rounded placeholder-blue-500"
             />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 justify-center items-center ">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:mx-5 ">
             {softwareTestingArray
               .filter((course) =>
                 course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -941,7 +942,7 @@ const SoftwareTestingArray = () => {
               .map((course) => (
                 <div
               key={course.id}
-              className="relative bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out w-[300px]  mx-auto"
+              className="relative bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out"
             >
               <a href={course.link} rel="noopener noreferrer">
                 <div className="relative">
@@ -985,6 +986,7 @@ const SoftwareTestingArray = () => {
                   </div>
                 </div>
               </a>
+              
             </div>
               ))}
           </div>

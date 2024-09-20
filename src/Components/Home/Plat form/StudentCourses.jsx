@@ -66,10 +66,7 @@ const StudentCourses = () => {
           <span className="text-[#0098f1]"> Programs</span>
         </div>
 
-        <div
-          id="maindiv"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-9 gap-6 justify-center items-cente m-4"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-9 gap-6 m-4">
           {courseData.map((course, index) => (
             <div
               key={index}
