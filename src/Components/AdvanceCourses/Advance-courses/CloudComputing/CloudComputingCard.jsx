@@ -1,45 +1,44 @@
 import React from "react";
-
+import img1 from "../../../../assetss/premium/cloudcomputing/image1.jpg";
+import img2 from "../../../../assetss/premium/cloudcomputing/image2.jpg";
+import img3 from "../../../../assetss/premium/cloudcomputing/image3.jpg";
+import img4 from "../../../../assetss/premium/cloudcomputing/image4.jpg";
+import img5 from "../../../../assetss/premium/cloudcomputing/image5.jpg";
+import img6 from "../../../../assetss/premium/cloudcomputing/image6.jpg";
 const CloudComputingCard = () => {
   const courseData = [
     {
-      imgSrc:
-        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579678/image1_hef1sc.png",
+      imgSrc: img1,
       title: "Explore Course Catalog",
       description:
         "Browse our extensive catalog of AWS courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
     },
     {
-      imgSrc:
-        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579686/image3_ih9nxv.jpg",
+      imgSrc: img2,
       title: "Enroll in Foundational Courses",
       description:
         "Start with foundational courses covering basic concepts, tools, and methodologies essential for AWS cloud computing.",
     },
     {
-      imgSrc:
-        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579693/image4_no3xea.jpg",
+      imgSrc: img3,
       title: "Practice with Real-world Projects",
       description:
         "Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience in AWS services, cloud architecture, and infrastructure design under the guidance of industry experts.",
     },
     {
-      imgSrc:
-        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579696/image5_yxs4dr.png",
+      imgSrc: img4,
       title: "Track Your Progress",
       description:
         "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various AWS services as you advance through the courses.",
     },
     {
-      imgSrc:
-        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579701/image6_md7ztw.jpg",
+      imgSrc: img5,
       title: "Specialize and Advance",
       description:
         "Choose specialized tracks or advanced courses to delve deeper into specific areas of AWS, such as machine learning, big data, or security. Customize your learning path to align with your interests and career goals.",
     },
     {
-      imgSrc:
-        "https://img.freepik.com/premium-photo/digital-cloud-computing-cyber-technology-mobile-concept_1036975-207638.jpg?ga=GA1.1.124895894.1693499002&semt=ais_hybrid",
+      imgSrc: img6,
       title: "Earn Recognized Certifications",
       description:
         "Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.",
@@ -66,9 +65,9 @@ const CloudComputingCard = () => {
               className="group  border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-                <div className="h-[180px]">
+                <div className="h-[180px] flex justify-center items-center">
                   <img
-                    className="w-full h-full bg-cover"
+                    className="w-[300px] h-[220px] p-2 bg-cover"
                     src={course.imgSrc}
                     alt={`Project ${index + 1}`}
                   />

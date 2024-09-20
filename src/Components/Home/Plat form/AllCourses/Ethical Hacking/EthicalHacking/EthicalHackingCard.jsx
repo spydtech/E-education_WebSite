@@ -1,10 +1,10 @@
 import React from "react";
-import img1 from '../../../../../../assetss/professional/ethicalHacking/basics/image1.jpg'
-import img2 from '../../../../../../assetss/professional/ethicalHacking/basics/image2.jpg'
-import img3 from '../../../../../../assetss/professional/ethicalHacking/basics/image3.jpg'
-import img4 from '../../../../../../assetss/professional/ethicalHacking/basics/image4.jpg'
-import img5 from '../../../../../../assetss/professional/ethicalHacking/basics/image5.jpg'
-import img6 from '../../../../../../assetss/professional/ethicalHacking/basics/image6.jpg'
+import img1 from "../../../../../../assetss/professional/ethicalHacking/basics/image1.jpg";
+import img2 from "../../../../../../assetss/professional/ethicalHacking/basics/image2.jpg";
+import img3 from "../../../../../../assetss/professional/ethicalHacking/basics/image3.jpg";
+import img4 from "../../../../../../assetss/professional/ethicalHacking/basics/image4.jpg";
+import img5 from "../../../../../../assetss/professional/ethicalHacking/basics/image5.jpg";
+import img6 from "../../../../../../assetss/professional/ethicalHacking/basics/image6.jpg";
 
 const EthicalHackingCard = () => {
   const courseData = [
