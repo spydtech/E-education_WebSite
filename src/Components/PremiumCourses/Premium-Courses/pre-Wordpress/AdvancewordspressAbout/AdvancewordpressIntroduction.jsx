@@ -4,7 +4,7 @@ function AdvanceWordPressIntroduction() {
 
 
   const Slide = ({ heading, items }) => (
-    <div className="w-full flex-shrink-0 px-4 py-8">
+    <div className="w-full flex-shrink-0 px-4 py-5">
         <div className="h-auto flex justify-center">
           <div>
             <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
@@ -75,7 +75,6 @@ function AdvanceWordPressIntroduction() {
   return (
 
     <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center lg:h-[450px] px-3 md:mb-9 mb-5 ">
-      {/* Text Section */}
       <div className="">
         <div>
           <p className="text-[#0098F1] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
@@ -98,10 +97,8 @@ function AdvanceWordPressIntroduction() {
         </div>
       </div>
 
-
-      {/* Slider Section */}
       {/* <div className=" lg:h-[468px]"> */}
-      <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:p-5 lg:flex flex-col justify-between ">
+      <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:px-3 md:pt-1 md:pb-5 lg:flex flex-col justify-between ">
 
         <div className="flex text-white">
           <Slide

@@ -14,10 +14,8 @@ const PowerBiHero = () => {
     <>
       <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1726473509/WhatsApp_Image_2024-09-15_at_11.16.11_PM_1_uilojh.jpg")' }}>
   <div className="absolute inset-0 flex items-center justify-center px-4">
-    <p className="text-center text-white text-base md:text-lg lg:text-xl font-medium">
-      Learn how to leverage the power of Power BI to create stunning data visualizations and insightful reports. <br />
-      Our comprehensive course will guide you through the essential features and <br />
-      best practices for data analysis and visualization with Power BI.
+    <p className="text-center text-white text-base md:text-lg lg:text-xl font-medium max-w-[800px]">
+      Learn how to leverage the power of Power BI to create stunning data visualizations and insightful reports. Our comprehensive course will guide you through the essential features and best practices for data analysis and visualization with Power BI.
     </p>
   </div>
   <div className="absolute inset-0 flex items-end justify-center pb-4 md:pb-6 lg:pb-10">

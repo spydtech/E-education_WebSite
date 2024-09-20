@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import ERPKeyHighights from "./ERPKeyHighights";
+import ERPKeyHighlights from "./ERPKeyHighights";
 import ERPCertificate from "./ERPCertificate";
 import ERPCareersOutcomes from "./ERPCareersOutcomes";
 import ERPAbout from "./ERPAbout";
-import { TbPlayerTrackNextFilled } from "react-icons/tb";
-import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for menu toggle
-import ERPSyallabus from "./ERPSyallabus";
+import ERPSyllabus from "./ERPSyallabus";
 import ERPIntroduction from "./ERPIntroduction";
+import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 
 const ERPNavigation = () => {
   const sections = [
@@ -18,7 +17,6 @@ const ERPNavigation = () => {
     "Syllabus",
   ];
   const [currentSection, setCurrentSection] = useState(0);
-  const [menuOpen, setMenuOpen] = useState(false); // State to control menu visibility
 
   useEffect(() => {
     const sectionId = sections[currentSection];
@@ -32,64 +30,108 @@ const ERPNavigation = () => {
     }
   }, [currentSection, sections]);
 
-  const handleNextSection = (index) => {
-    if (index === "next") {
+  const handleNextSection = (direction) => {
+    if (direction === "next") {
       setCurrentSection((prev) =>
         prev === sections.length - 1 ? 0 : prev + 1
       );
-    } else {
-      setCurrentSection(index);
+    } else if (direction === "prev") {
+      setCurrentSection((prev) =>
+        prev === 0 ? sections.length - 1 : prev - 1
+      );
     }
-    setMenuOpen(false); // Close the menu when a section is selected
-  };
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
   };
 
   return (
     <>
-      <nav className="flex bg-[#0098f1] rounded-t-2xl px-4 sm:px-6 py-4 mt-4 m-4">
-        <button className="text-black text-2xl lg:hidden" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes /> : <FaBars />}{" "}
-          {/* Toggle between menu and close icon */}
-        </button>
-        <ul
-          className={`${
-            menuOpen ? "block" : "hidden"
-          } lg:flex px-12 md:pl-56 lg:px-12 lg:flex-row flex-col text-nowrap overflow-x-auto xl:lg:md:text-[20px] text-16px text-white font-md space-y-2 lg:space-y-0 `}
+      <nav className="flex justify-between items-center p-2 bg-[#0098f1] shadow-xl rounded-t-2xl mb-5 lg:px-28 lg:py-1 mx-5">
+        <button
+          className={`text-white ${currentSection === 0 ? "invisible" : ""}`}
+          onClick={() => handleNextSection("prev")}
+          aria-label="Previous Section"
         >
+          <FaAngleDoubleLeft size={24} />
+        </button>
+
+        {/* Navigation Links */}
+        <ul className="text-md flex justify-center items-center w-full md:justify-around">
+          {/* Show only the current section on small screens */}
+          <li className="block md:hidden">
+            <button
+              className={`transition duration-300 text-white ${
+                currentSection === 0 ? "underline underline-offset-8" : ""
+              } rounded`}
+              onClick={() => setCurrentSection(currentSection)}
+              aria-label={`Go to ${sections[currentSection]}`}
+            >
+              {sections[currentSection]}
+            </button>
+          </li>
+
+          {/* Show current, previous, and next sections on medium screens */}
           {sections.map((section, index) => (
-            <li key={index} className="mt-2 text-center sm:mt-0">
+            <li
+              key={index}
+              className={`${
+                index === currentSection ||
+                index === currentSection - 1 ||
+                index === currentSection + 1
+                  ? "md:block"
+                  : "md:hidden"
+              } hidden lg:hidden`}
+            >
               <button
-                className={`text-white transition duration-300 ${
+                className={`transition duration-300 text-white ${
                   currentSection === index
-                    ? "text-white underline underline-offset-8"
+                    ? "underline underline-offset-8"
                     : ""
-                } px-2 py-1 sm:px-4 sm:py-2 rounded`}
-                onClick={() => handleNextSection(index)}
+                } rounded px-2 py-1 sm:px-4 sm:py-2`}
+                onClick={() => setCurrentSection(index)}
+                aria-label={`Go to ${section}`}
               >
                 {section}
               </button>
             </li>
           ))}
-          <li className="mt-2 sm:mt-0 flex items-center justify-center">
-            <button
-              className="text-white text-2xl hover:text-violet-700 transition duration-300"
-              onClick={() => handleNextSection("next")}
-            >
-              <TbPlayerTrackNextFilled />
-            </button>
-          </li>
+
+          {/* Show all sections on large screens */}
+          {sections.map((section, index) => (
+            <li key={index} className="hidden lg:block">
+              <button
+                className={`transition duration-300 text-white ${
+                  currentSection === index
+                    ? "underline underline-offset-8"
+                    : ""
+                } rounded px-2 py-1 sm:px-4 sm:py-2`}
+                onClick={() => setCurrentSection(index)}
+                aria-label={`Go to ${section}`}
+              >
+                {section}
+              </button>
+            </li>
+          ))}
         </ul>
+
+        {/* Right Button */}
+        <button
+          className={`text-white ${
+            currentSection === sections.length - 1 ? "invisible" : ""
+          }`}
+          onClick={() => handleNextSection("next")}
+          aria-label="Next Section"
+        >
+          <FaAngleDoubleRight size={24} />
+        </button>
       </nav>
+
+      {/* Main Content */}
       <div>
         {currentSection === 0 && <ERPIntroduction />}
-        {currentSection === 1 && <ERPKeyHighights />}
+        {currentSection === 1 && <ERPKeyHighlights />}
         {currentSection === 2 && <ERPCareersOutcomes />}
         {currentSection === 3 && <ERPAbout />}
         {currentSection === 4 && <ERPCertificate />}
-        {currentSection === 5 && <ERPSyallabus />}
+        {currentSection === 5 && <ERPSyllabus />}
       </div>
     </>
   );

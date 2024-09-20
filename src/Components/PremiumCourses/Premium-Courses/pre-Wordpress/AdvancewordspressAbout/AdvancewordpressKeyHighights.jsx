@@ -151,7 +151,7 @@ function AdvancewordpressKeyHighlights() {
           </ul>
         ))}
 
-    <div className="px-4 md:mb-4">
+    {/* <div className="px-4 md:mb-4">
       <div className="md:flex justify-around">
         <div className="bg-[#0098F1] text-white md:w-[380px] lg:w-[520px] p-2">
           {renderContent()}
@@ -177,7 +177,7 @@ function AdvancewordpressKeyHighlights() {
         </div>
 
       </div>
-    </div>
+    </div> */}
   </div>
   </div>
   </div>
