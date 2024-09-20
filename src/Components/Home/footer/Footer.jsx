@@ -178,7 +178,7 @@ function FooterPart() {
                 </h3>
                 <ul>
                   {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex} className="my-1 text-gray-200 text-[18px]">
+                    <li key={linkIndex} className="my-1 text-gray-200 text-[18px] hover:underline underline-offset-4">
                       <Link
                         to={link.Link}
                         className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
@@ -189,12 +189,12 @@ function FooterPart() {
                   ))}
                 </ul>
                 {section.socialIcons && (
-                  <div className="flex gap-4 mt-4">
+                  <div className="flex gap-2 mt-4">
                     {section.socialIcons.map((social, socialIndex) => (
                       <a
                         key={socialIndex}
                         href={social.Link}
-                        className="transition-colors duration-300 hover:opacity-75"
+                        className="transition-colors duration-300 hover:opacity-75 bg-white p-2 rounded-full"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
