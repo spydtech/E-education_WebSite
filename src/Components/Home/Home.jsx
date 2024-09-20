@@ -15,6 +15,8 @@ import Pricing from "./Pricing/Pricing";
 // import SlideInTimer from "./Timer/SlideInTimer";
 import ImageHomePage from "../Home/Plat form/AllCourses/ImageHomepage";
 import SingupHome from "../Home/SingUpHome/SignUpHome";
+
+import LoginForm from "./loginForm/LoginForm";
 import StartNewCarrer from "./StartNewCarrer/Carrer";
 import { useSelector } from "react-redux";
 function Home() {
@@ -160,6 +162,7 @@ function Home() {
       <Aurora />
 
       <Pricing />
+      <LoginForm></LoginForm>
       {/* <SlideInTimer /> */}
       {/* {!auth.user && <SingupHome />} */}
       <FinalTestimonials />

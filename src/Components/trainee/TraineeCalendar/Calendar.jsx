@@ -263,9 +263,7 @@ const Events = () => {
 
   return (
     <div className="p-4 mt-4  ">
-      <h2 className="text-[#204349] lg:text-lg text-sm  font-bold mb-4">
-        Hr / Events
-      </h2>
+      
       <div className="flex justify-end mb-4  ">
         <button
           className="bg-[#204349] text-white  flex justify-center  items-center py-3  p-4   rounded-lg"

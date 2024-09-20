@@ -19,8 +19,8 @@ function CertifiedEthicalHackingCertificate() {
             Achieve Credentials and Recognition
           </p>
           <p className="md:text-xl text-gray-500">
-            Successfully complete all course modules to obtain an Ethical Hacking
-            Fundamentals certification, greatly enhancing career prospects and
+            Successfully complete all course modules to obtain an Certified Ethical Hacking
+             certification, greatly enhancing career prospects and
             skill development.
           </p>
         </div>

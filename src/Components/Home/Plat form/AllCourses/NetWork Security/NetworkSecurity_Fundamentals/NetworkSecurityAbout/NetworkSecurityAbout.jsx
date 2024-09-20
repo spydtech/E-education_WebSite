@@ -1,6 +1,8 @@
 import React from "react";
-import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
-import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
+// import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
+// import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
+import career from '../../../../../../../assetss/career.png'
+import student from '../../../../../../../assetss/student.png'
 
 const NetworkSecurityAbout = () => {
   const networksecurityInfo = [
@@ -8,14 +10,14 @@ const NetworkSecurityAbout = () => {
       title: "Career Assistance",
       description:
         "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
-      imgSrc: assistance,
+      imgSrc: student,
       imgAlt: "career-assistance",
     },
     {
       title: "Student Support",
       description:
         'Access student support via support@datasciencecourse.com or through the "ask us?" option on our learning platform for urgent queries.',
-      imgSrc: programmer,
+      imgSrc: career,
       imgAlt: "student-support",
     },
   ];
@@ -24,7 +26,7 @@ const NetworkSecurityAbout = () => {
     <div className="px-3 text-center">
     <div className="">
       <p className="md:text-2xl font-bold text-[#0098F1]">
-        Discover the Ethical Hacking Program
+        Discover The Network Security Program
       </p>
     </div>
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../../Navbar";
 import Footer from "../../footer/Footer";
+import { Link } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 import { SiSemanticweb } from "react-icons/si";
 import { FaMobile } from "react-icons/fa";
@@ -18,6 +19,10 @@ import { MdOutlineNetworkCheck } from "react-icons/md";
 import { FaMixcloud } from "react-icons/fa";
 import image1 from "../../../../assetss/Home/FeaturesAssets/Professionalimage1.png";
 import ProfessionalsCourses from "./ProfessionalsCourses";
+import { motion } from "framer-motion";
+import { FiArrowRight } from "react-icons/fi";
+
+
 
 const Professionals = () => {
   // const courses = [
@@ -238,7 +243,7 @@ const Professionals = () => {
   return (
     <>
       <Navbar />
-      <div className=" px-4 sm:px-6 py-4">
+      <div className=" px-4 py-4">
         <div className="flex lg:px-10  flex-col-reverse lg:flex-row lg:justify-between">
           <div className="text-center lg:text-left my-4 lg:w-1/2">
             <div className=" lg:pt-10 sm:mx-10 lg:mx-0  pb-4">
@@ -255,8 +260,8 @@ const Professionals = () => {
               </p>
             </div>
 
-            <div className=" my-4  ">
-              <button className="bg-[#0098f1] text-white    p-4  rounded-lg hover:shadow-lg  font-medium text-sm">
+            <div className="my-4  ">
+              <button className="bg-[#0098f1] text-white text-lg    p-4  rounded-lg hover:shadow-lg  font-medium ">
                 Explore Course
               </button>
             </div>
@@ -293,7 +298,7 @@ const Professionals = () => {
           </button>
         </div> */}
 
-        <div className="text-center  my-8">
+        <div className="text-center my-8">
           <h2 className=" text:lg md:text-3xl pt-4 font-bold">
             <span className="text-[#f6ac14]">Highly</span>
             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
@@ -303,37 +308,37 @@ const Professionals = () => {
             <span className="text-[#0098f1]">Courses</span>
           </h2>
         </div>
-        <div className="flex  justify-center items-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-9  gap-4 pb-8">
-            {courses.map((course, index) => (
-              <div
-                key={index}
-                className=" w-full sm:w-[315px]  h-[360px]   rounded-lx group  duration-600 ease-out transform bg-[#0098f1] text-white relative rounded-2xl shadow-md p-4 flex flex-col justify-between transition-transform duration-500 hover:scale-105 before:absolute before:w-1/5 before:h-1/5 before:bg-[#f6ac14] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px] after:absolute after:w-1/5 after:h-1/5 after:bg-[#f6ac14] after:bg-opacity-0 after:transition-all after:duration-500 after:bottom-0 after:left-0 after:rounded-tl-[100%] after:rounded-br-[15px] hover:after:w-full hover:after:h-full hover:after:rounded-[15px]"
-              >
-                <div className="flex items-center mb-4 z-10">
-                  <div className="border-2 bg-white bg-opacity-50 rounded-full w-[80px] h-[80px] flex items-center justify-center  ">
-                    {course.icon}
-                  </div>
-                  <h3 className="text-lg lg:text-lg font-semibold ml-3">
-                    {course.title}
-                  </h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-9 gap-6  ">
+          {courses.map((course, index) => (
+            <div
+              key={index}
+              className=" w-full rounded-lx group duration-600 ease-out transform bg-[#0098f1] text-white relative rounded-2xl shadow-md p-4 flex flex-col justify-between transition-transform duration-500 hover:scale-105 before:absolute before:w-1/5 before:h-1/5 before:bg-[#f6ac14] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px] after:absolute after:w-1/5 after:h-1/5 after:bg-[#f6ac14] after:bg-opacity-0 after:transition-all after:duration-500 after:bottom-0 after:left-0 after:rounded-tl-[100%] after:rounded-br-[15px] hover:after:w-full hover:after:h-full hover:after:rounded-[15px]"
+            >
+              <div className="flex items-center mb-4 z-10">
+                <div className="border-2 bg-white bg-opacity-50 rounded-full w-[80px] h-[80px] flex items-center justify-center  ">
+                  {course.icon}
                 </div>
-                <p className="mt-4 z-10 text-base lg:text-lg">
-                  {course.description}
-                </p>
-                <div className="flex justify-center z-10 mt-4">
-                  <a
-                    href={course.link}
-                    className="flex bg-white bg-opacity-30 text-white hover:bg-[#0098f1] hover:bg-opacity-80 py-2 px-4 justify-center rounded-md w-full text-lg lg:text-xl font-medium"
-                  >
-                    Explore Now{" "}
-                    <MdArrowOutward className="text-white text-2xl  lg:text-3xl ml-2" />
-                  </a>
-                </div>
+                <h3 className="text-lg lg:text-lg font-semibold ml-3">
+                  {course.title}
+                </h3>
               </div>
-            ))}
-          </div>
+              <p className="mt-4 z-10 text-base lg:text-lg">
+                {course.description}
+              </p>
+              <div className="flex justify-center z-10 mt-4">
+                <Link
+                  to={course.link}
+                  className="flex bg-white bg-opacity-30 text-white hover:bg-[#0098f1] hover:bg-opacity-80 py-4 px-4 justify-center rounded-md w-full text-lg lg:text-xl font-medium"
+                >
+                  Explore Now{" "}
+                  <MdArrowOutward className="text-white text-2xl  lg:text-3xl ml-2" />
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
+  
       </div>
 
       <Footer />

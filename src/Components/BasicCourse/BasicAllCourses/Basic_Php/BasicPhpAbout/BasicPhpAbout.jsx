@@ -1,7 +1,6 @@
 import React from "react";
-import programmer from "../../../../../assets/dataAnalatics/programmer.jpg";
-import assistance from "../../../../../assets/dataAnalatics/assistance.jpg";
-
+import programmer from "../../../../../../src/assetss/Basic_Courses/BasicPHP/programmer1.jpg";
+import assistance from "../../../../../../src/assetss/Basic_Courses/BasicPHP/assistance1.jpg";
 const BasicPhpAbout = () => {
   const phpInfo = [
     {
@@ -24,18 +23,18 @@ const BasicPhpAbout = () => {
     <div className="px-3 text-center">
       <div className="">
         <p className="md:text-2xl font-bold text-[#0098F1]">
-          Discover the Basic PHP Program
+        Discover the PHP Program
         </p>
       </div>
-
-      <div className="md:flex justify-around">
+  
+      <div className="md:flex justify-around ">
         {phpInfo.map((item, index) => (
           <div
             key={index}
-            className="md:w-80 lg:w-2/5 bg-white rounded-lg shadow-lg p-3 my-4"
+            className="md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
           >
             <img
-              className="object-cover object-center rounded-md"
+              className=" md:w-full md:h-64 rounded-md"
               src={item.imgSrc}
               alt={item.imgAlt}
             />
@@ -48,6 +47,6 @@ const BasicPhpAbout = () => {
       </div>
     </div>
   );
-};
+  };
 
 export default BasicPhpAbout;

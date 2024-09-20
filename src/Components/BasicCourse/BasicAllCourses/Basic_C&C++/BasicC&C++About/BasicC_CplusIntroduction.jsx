@@ -76,6 +76,7 @@ function BasicC_CplusIntroduction() {
 
   return (
     <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center lg:h-[450px] px-3 md:mb-9 mb-5 ">
+      
       {/* Text Section */}
       <div className="">
         <div>
@@ -130,3 +131,7 @@ function BasicC_CplusIntroduction() {
 }
 
 export default BasicC_CplusIntroduction;
+
+
+
+
