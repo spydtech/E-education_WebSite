@@ -834,7 +834,7 @@ function UsersRolesTable() {
       (trainee.firstName + " " + trainee.lastName)
         .toLowerCase()
         .includes(searchTrainee.toLowerCase()) &&
-      trainee.courses.some((course) =>
+      trainee.courses?.some((course) =>
         course.toLowerCase().includes(searchTraineeCourse.toLowerCase())
       )
   );
@@ -866,101 +866,101 @@ function UsersRolesTable() {
           Add Trainee
         </button>
       </div>
- <div className="flex ">
-      {/* Group Form and Search Section */}
-      {showGroupForm && (
-      <div className="fixed inset-0 bg-black/50 flex  justify-center items-center z-50">
-          <div className="bg-white lg:min-w-[640px]  overflow-x-auto border-2 border-[#001510]  rounded-lg p-4 relative">
-          <div className="flex justify-between ">
-            <h1 className="text-[#001510] [#2C3E50] h-12 font-semibold mb-4  p-5 text-2xl">Create Group</h1>
-           <button
-              className=""
-              onClick={() => setShowGroupForm(false)}
-            >
-       <IoCloseCircle className=" text-3xl mb-6 text-[#001510]  " />
-            </button>
+      <div className="flex ">
+        {/* Group Form and Search Section */}
+        {showGroupForm && (
+          <div className="fixed inset-0 bg-black/50 flex  justify-center items-center z-50">
+            <div className="bg-white lg:min-w-[640px]  overflow-x-auto border-2 border-[#001510]  rounded-lg p-4 relative">
+              <div className="flex justify-between ">
+                <h1 className="text-[#001510] [#2C3E50] h-12 font-semibold mb-4  p-5 text-2xl">Create Group</h1>
+                <button
+                  className=""
+                  onClick={() => setShowGroupForm(false)}
+                >
+                  <IoCloseCircle className=" text-3xl mb-6 text-[#001510]  " />
+                </button>
+              </div>
+              <div className="p-4">
+                <input
+                  type="text"
+                  placeholder="Group Name"
+                  value={groupName}
+                  onChange={handleGroupNameChange}
+                  className="w-1/3 h-12 px-4 py-2 border border-[#001510]  rounded-md"
+                />
+              </div>
+              {error && (
+                <div className="text-#FF9B26 text-center pb-2">{error}</div>
+              )}
+              <div className="p-4">
+                <button
+                  className="px-4 py-2  h-12 text-white bg-gradient-to-r from-[#00BF8F] to-[#001510]    rounded-md "
+                  onClick={handleCreateGroup}>
+                  Save
+                </button>
+              </div>
             </div>
-          <div className="p-4">
-            <input
-              type="text"
-              placeholder="Group Name"
-              value={groupName}
-              onChange={handleGroupNameChange}
-              className="w-1/3 h-12 px-4 py-2 border border-[#001510]  rounded-md"
-            />
           </div>
-          {error && (
-            <div className="text-#FF9B26 text-center pb-2">{error}</div>
-          )}
-          <div className="p-4">
-            <button
-              className="px-4 py-2  h-12 text-white bg-gradient-to-r from-[#00BF8F] to-[#001510]    rounded-md "
-              onClick={handleCreateGroup}>
-              Save
-            </button>
-           </div>
-          </div>
-        </div>
-      )}
-      {/* Trainee Search Section */}
-      {showTraineeSearch && (
-       <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
+        )}
+        {/* Trainee Search Section */}
+        {showTraineeSearch && (
+          <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
 //           <div className="bg-white lg:min-w-[640px] overflow-x-auto border-2 border-[#0098f1] rounded-lg p-4 relative">
-           <div className="flex justify-between ">
-           <h1 className=" h-12 font-semibold text-[#001510] p-5 text-2xl">Add Trainee</h1>
-           <button
-              
-              onClick={() => setShowTraineeSearch(false)}
-            >
-         <IoCloseCircle className=" text-3xl mb-6 text-[#001510] "/>
-            </button>
-            </div>
-          <div className="p-4 grid gap-6">
-            <input
-              type="text"
-              placeholder="Search Trainee by name"
-              value={searchTrainee}
-              onChange={handleTraineeSearchChange}
-              className="w-1/3 px-4 h-12 py-2 border border-[#001510] rounded-md"
-            />
-            {/* <input
+              <div className="flex justify-between ">
+                <h1 className=" h-12 font-semibold text-[#001510] p-5 text-2xl">Add Trainee</h1>
+                <button
+
+                  onClick={() => setShowTraineeSearch(false)}
+                >
+                  <IoCloseCircle className=" text-3xl mb-6 text-[#001510] " />
+                </button>
+              </div>
+              <div className="p-4 grid gap-6">
+                <input
+                  type="text"
+                  placeholder="Search Trainee by name"
+                  value={searchTrainee}
+                  onChange={handleTraineeSearchChange}
+                  className="w-1/3 px-4 h-12 py-2 border border-[#001510] rounded-md"
+                />
+                {/* <input
               type="text"
               placeholder="Search Trainee by course"
               value={searchTraineeCourse}
               onChange={handleTraineeCourseChange}
               className="w-full px-4 h-12 py-2 mt-2 border border-[#0098f1]  rounded-md"
             /> */}
+              </div>
+              <div className="p-4">
+                <button
+                  className="px-4 py-2  text-white bg-gradient-to-r from-[#00BF8F] to-[#001510] rounded-md "
+                  onClick={() => setShowTraineeSearch(false)}
+                >
+                  Save
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="p-4">
-            <button
-              className="px-4 py-2  text-white bg-gradient-to-r from-[#00BF8F] to-[#001510] rounded-md "
-              onClick={() => setShowTraineeSearch(false)}
-            >
-              Save
-            </button>
-           </div>
-          </div>
-        </div>
-      )}
-</div>
+        )}
+      </div>
       {/* Table Section */}
       <div className="overflow-x-auto pt-4">
-      <div className="px-4 py-4 flex   gap-4">
-            <input
-              type="text"
-              placeholder="Search by name"
-              value={search}
-              onChange={handleSearchChange}
-              className="w-1/4 h-12 px-4 py-2 border border-[#001510] rounded-md"
-            />
-            <input
-              type="text"
-              placeholder="Search by course"
-              value={searchCourse}
-              onChange={handleSearchCourseChange}
-              className="w-1/4 h-12 px-4 py-2  border border-[#001510] rounded-md"
-            />
-          </div>
+        <div className="px-4 py-4 flex   gap-4">
+          <input
+            type="text"
+            placeholder="Search by name"
+            value={search}
+            onChange={handleSearchChange}
+            className="w-1/4 h-12 px-4 py-2 border border-[#001510] rounded-md"
+          />
+          <input
+            type="text"
+            placeholder="Search by course"
+            value={searchCourse}
+            onChange={handleSearchCourseChange}
+            className="w-1/4 h-12 px-4 py-2  border border-[#001510] rounded-md"
+          />
+        </div>
         <table className="min-w-full border-collapse border border-gray-300 text-start">
           <thead>
             <tr className="bg-[#001510] text-white">

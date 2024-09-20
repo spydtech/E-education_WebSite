@@ -21,7 +21,7 @@ function AdminLogin() {
       email: data.get("email"),
       password: data.get("password"),
     };
-    navigate("/");
+    navigate("/admin");
     dispatch(login(userData));
   };
   return (
