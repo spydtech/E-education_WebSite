@@ -6,7 +6,7 @@ const ReactjsCard = () => {
     <>
       <div>
         <div id="heading" className=" py-10  ">
-          <h1 className="text-center font-bold md:text-3xl text-2xl lg:text-4xl md:lg:sm:w-auto w-auto pb-1 bg-gradient-to-r  from-[#ff9b26] to-[#0098f1] bg-clip-text text-transparent">
+          <h1 className="mx-4 text-center font-bold md:text-3xl text-2xl lg:text-4xl md:lg:sm:w-auto w-auto pb-1 bg-gradient-to-r  from-[#ff9b26] to-[#0098f1] bg-clip-text text-transparent">
             Supercharge your web projects using ReactJS.
           </h1>
           <h1 className=" flex justify-center md:lg:sm:w-auto mt-4 w-auto text-[#0098f1]">

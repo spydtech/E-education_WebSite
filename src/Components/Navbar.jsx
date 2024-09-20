@@ -95,14 +95,16 @@ const Navbar = () => {
     <>
       <Disclosure
         as="nav"
-        className={`sticky top-0 z-50 ${isScrolled ? "bg-white " : "bg-white "
-          }`}
+        className={`sticky top-0 z-50 ${
+          isScrolled ? "bg-white " : "bg-white "
+        }`}
       >
         {({ open }) => (
           <>
             <div
-              className={`max-w-7xl mx-auto px-2 sm:px-6 lg:px-8${isScrolled ? "bg-white " : "bg-white "
-                }`}
+              className={`max-w-7xl mx-auto px-2 sm:px-6 lg:px-8${
+                isScrolled ? "bg-white " : "bg-white "
+              }`}
             >
               <div className="relative flex h-16 justify-between items-center">
                 {/* Mobile Menu Button */}
@@ -272,6 +274,17 @@ const Navbar = () => {
                                     <span className="flex pb-[2px]    text-white hover:text-black   ">
                                       <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
                                       Cyber Security
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/reactjs"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      ReactJs Mastery
                                     </span>
                                   </Link>
                                 </li>
@@ -846,6 +859,17 @@ const Navbar = () => {
                                   <span className="flex pb-[2px]    text-white hover:text-black   ">
                                     <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
                                     Cyber Security
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/reactjs"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    ReactJs Mastery
                                   </span>
                                 </Link>
                               </li>
