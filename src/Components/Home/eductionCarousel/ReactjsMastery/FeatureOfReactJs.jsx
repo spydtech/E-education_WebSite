@@ -4,10 +4,13 @@ const FeatureOfReactJs = () => {
   return (
     <>
       <section className="mt-6 ">
-        <div className="mx-2 md:pt-6 max-w-screen-xl flex flex-col lg:h-svh justify-center">
-          <div className="flex flex-col">
-            <div className="md:text-4xl  pb-1 tracking-tighter font-semibold bg-gradient-to-r  from-[#ff9b26] to-[#0098f1] bg-clip-text text-transparent text-balance text-center ">
-              ReactJS's Key Features
+        <div className="mx-2 md:pt-6  flex flex-col lg:h-svh justify-center">
+          <div className=" flex-col  flex ">
+            <div className="md:text-3xl lg:text-4xl text-2xl  pb-1 tracking-tighter font-semibold  text-balance text-center ">
+              <span className="bg-gradient-to-r  from-[#ff9b26] to-[#0098f1] bg-clip-text text-transparent">
+                {" "}
+                ReactJS's Key Features
+              </span>
             </div>{" "}
             {/* Starts component */}
             <div className=" pt-2 ">
@@ -20,7 +23,7 @@ const FeatureOfReactJs = () => {
                     className="shadow-box w-[300px] md:w-auto"
                   />{" "}
                 </div>
-                <div className="mx-4 flex justify-center items-center">
+                <div className="mx-4 md:ml-8 flex justify-center items-center">
                   <div>
                     {" "}
                     <p className="lg:text-3xl text-2xl  font-semibold text-gray-700 text-balance">

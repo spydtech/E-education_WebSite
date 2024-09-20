@@ -3,8 +3,8 @@ import React from "react";
 function ReactFeature2() {
   return (
     <>
-      <div className="mx-4 grid  grid-cols-1 gap-6 lg:grid-cols-2 md:gap-8 items-center ">
-        <div className="mx-4 justify-center flex items-center">
+      <div className="mx-4 grid  grid-cols-1 gap-6 lg:grid-cols-2 md:gap-8  items-center justify-center">
+        <div className="mx-4 justify-center p-2 flex items-center">
           <div>
             <p className="lg:text-3xl  text-2xl mt-6 tracking-tight font-semibold text-gray-700 text-balance">
               Virtual DOM for Enhanced Performance
