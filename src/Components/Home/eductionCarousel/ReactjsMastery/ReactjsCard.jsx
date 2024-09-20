@@ -4,8 +4,8 @@ import { IoReorderThreeOutline } from "react-icons/io5";
 const ReactjsCard = () => {
   return (
     <>
-      <div>
-        <div id="heading" className=" py-10  ">
+      <div className="mt-6 ">
+        <div id="heading" className="  ">
           <h1 className="mx-4 text-center font-bold md:text-3xl text-2xl lg:text-4xl md:lg:sm:w-auto w-auto pb-1 bg-gradient-to-r  from-[#ff9b26] to-[#0098f1] bg-clip-text text-transparent">
             Supercharge your web projects using ReactJS.
           </h1>
@@ -22,8 +22,8 @@ const ReactjsCard = () => {
           </p> */}
         </div>
       </div>
-      <div className="h-full min-h-screen w-full  justify-center items-center flex pt-8 p-4">
-        <div className="grid gap-14 justify-center items-center  md:grid-cols-1 lg:grid-cols-3 md:gap-y-10 mx-2 md:gap-5">
+      <div className="   justify-center items-center flex  p-4">
+        <div className="grid gap-4 my-6  justify-center items-center  md:grid-cols-1 lg:grid-cols-3  mx-2 ">
           <div
             data-aos-delay="150"
             className="rounded-xl bg-[#0098f1] h-80 md:w-96 lg:w-auto p-2 py-4  text-center shadow-xl"
