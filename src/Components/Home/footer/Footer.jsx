@@ -189,7 +189,7 @@ function FooterPart() {
                   ))}
                 </ul>
                 {section.socialIcons && (
-                  <div className="flex gap-2 mt-4">
+                  <div className="flex gap-2 mt-4 lg:flex-col lg:items-start">
                     {section.socialIcons.map((social, socialIndex) => (
                       <a
                         key={socialIndex}

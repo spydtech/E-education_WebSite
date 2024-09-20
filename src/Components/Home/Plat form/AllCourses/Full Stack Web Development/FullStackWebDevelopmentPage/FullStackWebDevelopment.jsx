@@ -27,8 +27,8 @@ const ParticularFullStack = () => {
   return (
     <>
       <Navbar />
-      <div className="pl-4">
-        <div className="w-full flex flex-col mb-8 p-6 lg:flex-row items-center md:justify-center gap-4 md:px-8 lg:px-16 2xl:px-32">
+      <div className="">
+        <div className="flex flex-col lg:flex-row items-center md:justify-center gap-4 px-6 md:px-8 lg:px-16">
           {/* Image Section */}
           <div className="order-1 lg:order-2 mt-4 md:mt-0 md:w-1/2 flex justify-center">
             <img

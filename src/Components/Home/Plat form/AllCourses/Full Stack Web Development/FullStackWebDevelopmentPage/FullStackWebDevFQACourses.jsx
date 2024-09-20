@@ -80,22 +80,19 @@ const Question = ({ title, info }) => {
 const FullStackWebDev = () => {
   const [questions, setQuestions] = useState(data);
   return (
-    <main className="bg-white min-h-screen flex items-center justify-center">
-      <div className="bg-white p-4 rounded w-full max-w-4xl  xl:max-w-5xl">
-        <h3 className=" text-xl pb-6 md:text-3xl lg:text-4xl text-[#0098F1] font-bold text-center">
-          Courses We Are Covered in{" "}
-          <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
-           this Course
-          </span>{" "}
-          <span className="text-[#F6AC14]"></span>
-        </h3>
-        <section className="space-y-4 text-[#0098F1]">
-          {questions.map((question) => (
-            <Question key={question.id} {...question} />
-          ))}
-        </section>
-      </div>
-    </main>
+    <div className="px-2 md:px-5">
+      <h3 className="text-xl text-[#0098F1] font-bold text-center my-3">
+        Courses we are covered in{" "}
+        <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
+          this course
+        </span>
+      </h3>
+      <section className="space-y-4 text-[#0098F1]">
+        {questions.map((question) => (
+          <Question key={question.id} {...question} />
+        ))}
+      </section>
+    </div>
   );
 };
 

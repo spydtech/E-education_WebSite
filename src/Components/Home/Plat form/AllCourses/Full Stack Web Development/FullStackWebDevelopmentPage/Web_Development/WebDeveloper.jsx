@@ -24,79 +24,65 @@ const WebDeveloper = () => {
   return (
     <>
       <WebDevelopmentCard />
-      <div className="container mx-auto ">
-        <h2 className=" font-bold text-gray-900 py-4 mb-4 sm:text-xl text-xl md:text-3xl lg:text-4xl text-center ">
+      <div className=" ">
+        <h2 className=" font-bold text-gray-900 my-5 text-lg md:text-2xl  text-center ">
           Full Stack <span className="text-[#F6AC14]">Web Development</span>{" "}
           Skills
         </h2>
-        <div className="flex flex-col lg:flex-row  md:justify-center gap-8">
-          <div className="bg-[#0098F1] rounded-lg lg:xl:w-[480px] lg:xl:h-80 mb-6 md:mb-0  flex flex-col lg:items-start lg:flex-row md:items-center ">
+        <div className="flex flex-col lg:flex-row lg:justify-center gap-8 m-4 ">
+          <div className="bg-[#0098F1] rounded-lg flex flex-col md:flex-row ">
             <img
               src={skillsImg}
               alt="Soft Skills"
-              className="w-full h-auto mb-4 md:mb-0 md:w-48 md:h-44"
+              className=" md:w-48 md:h-44"
             />
-            <div className="flex  justify-start  flex-col items-start ">
-              <div>
-                <h3 className="text-2xl font-bold text-white px-10 pt-6 mb-4">
-                  Soft Skills
-                </h3>
-              </div>
-
+            <div className="flex justify-start flex-col items-start p-7">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Soft Skills
+              </h3>
               {softSkills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex pl-4  items-center  justify-between mb-2"
+                  className="flex items-center gap-x-2 mb-2"
                 >
                   <p>
-                    {" "}
-                    <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14] mx-2" />
+                    <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14]" />
                   </p>
-
                   <p className="text-xl text-white">{skill.name}</p>
                 </div>
               ))}
             </div>
           </div>
-          <div className="bg-[#0098F1] rounded-lg lg:xl:w-[480px] lg:xl:h-80 mb-6 md:mb-0 flex flex-col lg:items-start lg:flex-row md:items-center ">
+          <div className="bg-[#0098F1] rounded-lg flex flex-col md:flex-row ">
             <img
               src={requirementsImg}
               alt="STechnical Skills"
-              className="w-full h-auto mb-4 md:mb-0 md:w-48 md:h-44"
+              className="md:w-48 md:h-44"
             />
-            <div className="flex  justify-start  flex-col items-start">
-              <div>
-                <h3 className="text-2xl font-bold text-white px-6 pt-6 mb-4">
-                  Technical Skills
-                </h3>
-              </div>
-
+            <div className="flex justify-start flex-col items-start p-7">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Technical Skills
+              </h3>
               {technicalSkills.map((skill, index) => (
                 <div
                   key={index}
-                  className="flex pl-4  items-center  justify-between mb-2"
+                  className="flex items-center gap-x-2 mb-2"
                 >
                   <p>
-                    {" "}
-                    <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14] inline mx-2" />
+                    <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14]" />
                   </p>
-
                   <p className="text-xl text-white">{skill.name}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
-
       </div>
     </>
   );
 };
 
 export default WebDeveloper;
-
-
-
 
 // import React from "react";
 // import { FaArrowAltCircleRight } from "react-icons/fa";
@@ -164,5 +150,4 @@ export default WebDeveloper;
 //   )
 // }
 
-            
 // export default WebDeveloper;
