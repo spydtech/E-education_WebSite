@@ -66,7 +66,7 @@
 //                 className="md:w-[550px] md:h-[450px] w-[300] h-[300] py-10"
 //                 // src={images[currentSlide]}
 //                 src="https://www.shutterstock.com/image-vector/3d-web-vector-illustrations-online-600nw-2152289507.jpg"
-               
+
 //               />
 //             </div>
 //             {/* <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-between px-4">
@@ -96,6 +96,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import hero from "../../../assetss/student/hero.png";
 import Rectangle from "../../../assetss/student/studentHome.png";
 import Footer from "../footer/Footer";
 import Navbar from "../../Navbar";
@@ -106,11 +107,11 @@ import { motion } from "framer-motion";
 const Student = () => {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div
         id="main"
         className="flex justify-center items-center bg-cover bg-center h-[582px] w-full"
-        style={{ backgroundImage: `url(${Rectangle})` }}
+        style={{ backgroundImage: `url(${hero})` }}
       >
         <div className="flex flex-col justify-center items-center h-auto space-y-4 p-4 md:p-8 lg:p-12">
           <div className="w-full max-w-xl md:max-w-2xl lg:max-w-3xl h-[58px] flex justify-center items-center">
