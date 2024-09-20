@@ -40,8 +40,8 @@ const ParticularFullStack = () => {
           {/* Content Section */}
           <div className="lg:w-2/3 text-center lg:text-left order-2 lg:order-1">
             <h3 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight sm:leading-none tracking-tight text-gray-900">
-              Master{" "}
-              <span className="text-[#F6AC14]">Full Stack</span> Web Development
+              Master <span className="text-[#F6AC14]">Full Stack</span> Web
+              Development
             </h3>
             <p className="mt-4 text-base md:text-lg lg:text-xl text-gray-600">
               Accelerate your tech skills with comprehensive courses designed to
@@ -51,7 +51,7 @@ const ParticularFullStack = () => {
             </p>
             <button
               onClick={handleEnroll}
-              className="mt-6 bg-gradient-to-tl to-[#F6AC14] via-[#89C63E] from-[#0098F1] text-white md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[180px] xl:lg:h-[60px] md:text-xl"
+              className="mt-6 bg-[#0098F1] text-white md:w-auto py-3 px-6 rounded transition-all  active:scale-95 xl:lg:text-2xl xl:lg:w-[180px] xl:lg:h-[60px] md:text-xl"
             >
               Enroll Now
             </button>
@@ -70,9 +70,6 @@ const ParticularFullStack = () => {
 };
 
 export default ParticularFullStack;
-
-
-
 
 // import React, { useState, useEffect } from "react";
 // import { useNavigate } from "react-router-dom";

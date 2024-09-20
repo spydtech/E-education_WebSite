@@ -38,7 +38,7 @@ function HomeTrainee() {
   const usertotal = users.reduce((acc, item) => acc + parseInt(item.value), 0);
 
   return (
-    <div id="container" className="  bg-white">
+    <div id="container" >
       <div className="ml-2  ">
         {/* <p className="text-[#4CA1AF] font-semibold pt-4 text-lg sm:text-xl lg:text-2xl">
           DASHBOARD
@@ -162,7 +162,7 @@ function HomeTrainee() {
         </div>
       </div>
 
-      <div id="table-card" className="shadow-lg p-4 my-4   rounded-lg">
+      <div id="table-card" className=" p-4 my-4   rounded-lg">
         <CourseCompletionTable />
       </div>
     </div>

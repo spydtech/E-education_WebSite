@@ -40,7 +40,7 @@ function DBSyllabus() {
             </p>
           </div>
         </div>
-        <div className="lg:w-[700px] w-full bg-[#0098f1] p-6 pl-20 rounded-lg">
+        <div className="lg:w-[700px] w-full bg-[#0098f1] p-6 pl-10 rounded-lg">
           <div className="container mx-auto">
             {data.map((category, index) => (
               <div key={index} className="mb-6">

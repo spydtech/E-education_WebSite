@@ -28,6 +28,7 @@ function AdvancewordpressCareersOutcomes() {
   ];
 
   return (
+
     <div className="flex flex-col md:flex-row items-center justify-around md:my-9 px-3 mb-4 md:px-10">
       {/* Left Content */}
       <div className="mb-8 ">
@@ -49,6 +50,7 @@ function AdvancewordpressCareersOutcomes() {
             {item.icon}
             <p>{item.stat}</p>
             <p className="text-gray-500 text-[16px]">{item.description}</p>
+
           </div>
         ))}
       </div>

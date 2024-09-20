@@ -6,27 +6,29 @@ const ReactjsCard = () => {
     <>
       <div>
         <div id="heading" className=" py-10  ">
-          <h1 className="text-center font-bold text-4xl md:lg:sm:w-auto w-auto text-violet-800 font">
-            Unleash the Power of Dynamic Web Development with ReactJS
+          <h1 className="text-center font-bold md:text-3xl text-2xl lg:text-4xl md:lg:sm:w-auto w-auto pb-1 bg-gradient-to-r  from-[#ff9b26] to-[#0098f1] bg-clip-text text-transparent">
+            Supercharge your web projects using ReactJS.
           </h1>
-          <h1 className=" flex justify-center md:lg:sm:w-auto w-auto text-cyan-500">
+          <h1 className=" flex justify-center md:lg:sm:w-auto mt-4 w-auto text-[#0098f1]">
             <IoRemoveOutline className="text-[40px]" />
             <IoReorderThreeOutline className="text-[40px]" />{" "}
             <IoRemoveOutline className="text-[40px]" />
           </h1>
-          <p className="text-center text-lg md:lg:sm:w-full w-auto font">
-            ReactJS: Transforming Web Development. With its declarative and
-            component-based structure, ReactJS simplifies UI creation, ensuring
-            high performance. Ideal for all developers, it enables the crafting
-            of responsive, scalable, and maintainable web apps effortlessly.
-            Explore ReactJS for dynamic web development today!
-          </p>
+          {/* <p className="text-center px-10 text-lg md:lg:sm:w-full w-auto font">
+            ReactJS: Transforming Web Development. Its declarative,
+            component-based structure simplifies UI creation and enhances
+            performance, enabling responsive and scalable apps. Explore ReactJS
+            today!
+          </p> */}
         </div>
       </div>
-      <div className="h-full min-h-screen w-full bg-white pt-12 p-4">
-        <div className="grid gap-14 md:grid-cols-3 md:gap-5">
-          <div className="rounded-xl bg-gray-800 p-6 text-center shadow-xl">
-            <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-teal-400 shadow-lg shadow-teal-500/40">
+      <div className="h-full min-h-screen w-full bg-white pt-8 p-4">
+        <div className="grid gap-14  md:grid-cols-2 lg:grid-cols-3 md:gap-y-10 mx-2 md:gap-5">
+          <div
+            data-aos-delay="150"
+            className="rounded-xl bg-[#0098f1] h-80 p-2 py-4  text-center shadow-xl"
+          >
+            <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-[#ff9b26] shadow-lg shadow-teal-500/40">
               <svg
                 viewBox="0 0 33 46"
                 fill="none"
@@ -39,7 +41,7 @@ const ReactjsCard = () => {
                 ></path>
               </svg>
             </div>
-            <h1 className="text-white mb-3 text-xl font-medium lg:px-14">
+            <h1 className="text-white mb-3 text-xl font-medium lg:px-2">
               Master JavaScript Basics
             </h1>
             <p className="px-4 text-white">
@@ -51,9 +53,9 @@ const ReactjsCard = () => {
           </div>
           <div
             data-aos-delay="150"
-            className="rounded-xl bg-gray-800 p-6 text-center shadow-xl"
+            className="rounded-xl bg-[#0098f1] h-80  p-2 py-4 text-center shadow-xl"
           >
-            <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-rose-500 shadow-rose-500/40">
+            <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-[#ff9b26] shadow-rose-500/40">
               <svg
                 viewBox="0 0 48 48"
                 fill="none"
@@ -66,7 +68,7 @@ const ReactjsCard = () => {
                 ></path>
               </svg>
             </div>
-            <h1 className="text-white mb-3 text-xl font-medium lg:px-14 ">
+            <h1 className="text-white mb-3 text-xl font-medium lg:px-2 ">
               Dive into JSX Syntax
             </h1>
             <p className="px-4 text-white">
@@ -78,9 +80,9 @@ const ReactjsCard = () => {
           </div>
           <div
             data-aos-delay="300"
-            className="rounded-xl bg-gray-800 p-6 text-center shadow-xl"
+            className="rounded-xl bg-[#0098f1] h-80  p-2 py-4  text-center shadow-xl"
           >
-            <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-sky-500 shadow-sky-500/40">
+            <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-[#ff9b26] shadow-sky-500/40">
               <svg
                 viewBox="0 0 55 44"
                 fill="none"
@@ -93,14 +95,13 @@ const ReactjsCard = () => {
                 ></path>
               </svg>
             </div>
-            <h1 className="text-white mb-3 pt-3 text-xl font-medium lg:h-14 lg:px-14">
+            <h1 className="text-white  text-xl font-medium lg:h-14 lg:px-2">
               Understand React Core Concepts
             </h1>
             <p className="px-4 text-white">
               Delve into React's core principles, including components, state
               management, and props. Gain a deep understanding of how React
-              manages UI state and data flow, laying the groundwork for building
-              dynamic and interactive web applications!
+              manages UI state and data flow.
             </p>
           </div>
         </div>

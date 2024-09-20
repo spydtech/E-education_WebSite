@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { FaBars, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-import IMG from "../assets/logo/E-eLogo.png";
+import IMG from "../assets/logo/E-educationlogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, logout } from "../State/Auth/Action";
@@ -95,16 +95,14 @@ const Navbar = () => {
     <>
       <Disclosure
         as="nav"
-        className={`sticky top-0 z-50 ${
-          isScrolled ? "bg-white " : "bg-white "
-        }`}
+        className={`sticky top-0 z-50 ${isScrolled ? "bg-white " : "bg-white "
+          }`}
       >
         {({ open }) => (
           <>
             <div
-              className={`max-w-7xl mx-auto px-2 sm:px-6 lg:px-8${
-                isScrolled ? "bg-white " : "bg-white "
-              }`}
+              className={`max-w-7xl mx-auto px-2 sm:px-6 lg:px-8${isScrolled ? "bg-white " : "bg-white "
+                }`}
             >
               <div className="relative flex h-16 justify-between items-center">
                 {/* Mobile Menu Button */}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-
 function AdvanceWordPressIntroduction() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
 
   const Slide = ({ heading, items }) => (
     <div className="w-full flex-shrink-0 px-4 py-8">
@@ -16,6 +16,7 @@ function AdvanceWordPressIntroduction() {
               ))}
             </ul>
           </div>
+
         </div>
       </div>
   );
@@ -72,15 +73,18 @@ function AdvanceWordPressIntroduction() {
   };
 
   return (
+
     <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center lg:h-[450px] px-3 md:mb-9 mb-5 ">
       {/* Text Section */}
       <div className="">
         <div>
           <p className="text-[#0098F1] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
+
             Introduction
           </p>
         </div>
         <div className="mt-2">
+
           <p className="md:text-lg lg:text-3xl">
             So what is
             <span className="text-[#f6ac14] inline pl-2">Word press</span>
@@ -89,13 +93,16 @@ function AdvanceWordPressIntroduction() {
         <div>
           <p className="md:text-lg lg:text-3xl mt-2">
             Brief about Word press
+
           </p>
         </div>
       </div>
 
+
       {/* Slider Section */}
       {/* <div className=" lg:h-[468px]"> */}
       <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:p-5 lg:flex flex-col justify-between ">
+
         <div className="flex text-white">
           <Slide
             heading={slidesData[currentSlide].heading}
@@ -103,10 +110,12 @@ function AdvanceWordPressIntroduction() {
           />
         </div>
 
+
         <div className="flex justify-between max-md:p-4">
           <button
             onClick={goToPreviousSlide}
             className="text-white hover:text-black font-bold  rounded"
+
           >
             Previous
           </button>
@@ -115,7 +124,9 @@ function AdvanceWordPressIntroduction() {
           }`}</div>
           <button
             onClick={goToNextSlide}
+
             className="text-white hover:text-black font-bold  rounded"
+
           >
             Next
           </button>

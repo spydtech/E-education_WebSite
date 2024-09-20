@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import student from "../../../../../../assetss/Home/intro_DataScience/student.jpg";
-import img1 from '../../../../../../assetss/professionalimages/image13.png'; // Replace with the appropriate image for System Testing
+import img1 from '../../../../../../assetss/professionalimages/image6.png'; // Replace with the appropriate image for System Testing
 
 const SystemTestingHero = () => {
   const [courseName] = useState("System Testing");

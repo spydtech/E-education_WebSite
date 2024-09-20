@@ -34,11 +34,13 @@ function AdvancewordpressKeyHighlights() {
               <li>Tailored resume feedback</li>
               <li>Mock Interview by managers</li>
               <li>Explore ChatGPT in digital marketing tutorials</li>
+
             </ul>
           </div>
         );
       case 1:
         return (
+
           <div className="p-3 space-y-2 ">
             <p className="text-xl font-medium text-white pl-2">Key Concepts</p>
             <ul className="space-y-2 font-normal list-disc pl-6">
@@ -49,11 +51,13 @@ function AdvancewordpressKeyHighlights() {
               <li>Content Marketing</li>
               <li>Branding</li>
               <li>Web Analytics</li>
+
             </ul>
           </div>
         );
       case 2:
         return (
+
           <div className="p-3 space-y-2 ">
             <p className="text-xl font-medium text-white pl-2">Applications</p>
             <ul className="space-y-2 font-normal list-disc pl-6">
@@ -65,11 +69,13 @@ function AdvancewordpressKeyHighlights() {
               <li>Consultant</li>
               <li>Business Analyst</li>
               <li>(Sr.)Associate-Digital Marketing</li>
+
             </ul>
           </div>
         );
       case 3:
         return (
+
           <div className="p-3 space-y-2 ">
             <p className="text-xl font-medium text-white pl-2">
               Skills Developed
@@ -89,11 +95,13 @@ function AdvancewordpressKeyHighlights() {
                 A voucher worth $50 for Meta's "Digital Marketing Associate"
                 certificate exam, free of cost.
               </li>
+
             </ul>
           </div>
         );
       case 4:
         return (
+
           <div className="p-3 space-y-2 ">
             <p className="text-xl font-medium text-white pl-2">
               Target Audience
@@ -107,6 +115,7 @@ function AdvancewordpressKeyHighlights() {
               <li>
                 Gain insights into your social media analytics by using chatGPT
               </li>
+
             </ul>
           </div>
         );
@@ -116,6 +125,7 @@ function AdvancewordpressKeyHighlights() {
   };
 
   return (
+
     <div className="px-3 md:mb-4">
     <div className="md:flex justify-around  ">
       <div className="bg-[#0098F1] text-white  pb-5 md:w-2/5">
@@ -140,6 +150,32 @@ function AdvancewordpressKeyHighlights() {
             </li>
           </ul>
         ))}
+
+    <div className="px-4 md:mb-4">
+      <div className="md:flex justify-around">
+        <div className="bg-[#0098F1] text-white md:w-[380px] lg:w-[520px] p-2">
+          {renderContent()}
+        </div>
+        <div className="my-3">
+          <p className="font-bold underline-offset-2 text-wrap underline text-xl text-[#0098F1]">
+            Advanced Wordpress Key Highlights
+          </p>
+          {data.map((item, index) => (
+            <ul key={index}>
+              <li
+                onClick={() => handleClick(index)}
+                className={`p-5 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md ${
+                  selectedItem === index
+                    ? "bg-[#0098f1] text-white border-none"
+                    : ""
+                }`}
+              >
+                {item.label}
+              </li>
+            </ul>
+          ))}
+        </div>
+
       </div>
     </div>
   </div>

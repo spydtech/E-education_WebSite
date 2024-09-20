@@ -1,4 +1,13 @@
 import React from "react";
+import { GoArrowUpRight } from "react-icons/go";
+
+// Import local images
+import Img1 from "../../../../assetss/Professionals/image1.jpg";
+import Img2 from "../../../../assetss/Professionals/image2.jpg";
+import Img3 from "../../../../assetss/Professionals/image3.jpg";
+import Img4 from "../../../../assetss/Professionals/image4.jpg";
+import Img5 from "../../../../assetss/Professionals/image5.jpg";
+import Img6 from "../../../../assetss/Professionals/image6.jpg";
 
 const AdvancewordpressCard = () => {
   const courseData = [
@@ -37,10 +46,12 @@ const AdvancewordpressCard = () => {
       title: "Earn Recognized Certifications",
       description:
         "Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.",
+
     },
   ];
   
   return (
+
       <section id="portfolio" className="portfolio-section py-10 px-4">
         <div className="container mx-auto">
         <div className="text-center mb-12">
@@ -79,6 +90,7 @@ const AdvancewordpressCard = () => {
               </div>
             ))}
           </div>
+
         </div>
       </section>
   );

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/solid";
-
 const data = [
   {
     avatar: "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-9.png",

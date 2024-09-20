@@ -1,5 +1,5 @@
 import React from "react";
-import Nextgen from "../../../../../../../assetss/fullstackwebdev/java/devops2.jpg";
+import Nextgen from "../../../../../../../assetss/fullstackwebdev/java/java11.png";
 
 const FullStackJavaDevelopmentCard = () => {
   return (

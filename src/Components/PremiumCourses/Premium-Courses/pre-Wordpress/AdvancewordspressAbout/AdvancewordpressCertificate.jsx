@@ -1,8 +1,9 @@
 import React from "react";
-import certificate from "../../../../../assets/dataAnalatics/Certificate-PNG-Pic.png";
+import certificate from "../../../../../assetss/certficate1.png";
 
 function AdvanceWordpressCertificate() {
   return (
+
     <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 p-4 justify-center items-center md:px-10 md:gap-8">
     {/* Certificate Image */}
     <div className="flex justify-center items-center">
@@ -11,6 +12,7 @@ function AdvanceWordpressCertificate() {
         alt="certificate"
         className=""
       />
+
     </div>
     
     {/* Text Content */}

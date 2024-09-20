@@ -268,7 +268,7 @@ function Login() {
                   </div>
                   <div>
                     <Link
-                      to="/forgotPassword"
+                      to="/forgot-Password"
                       className="text-sm text-indigo-600 hover:underline cursor-pointer"
                     >
                       Forgot Password?

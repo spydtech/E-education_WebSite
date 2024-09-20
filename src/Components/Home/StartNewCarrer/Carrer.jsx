@@ -7,35 +7,35 @@ import { Link } from "react-router-dom";
 const Carrer = () => {
   return (
     <>
-      <div class="text-center md:mt-32 mt-8  w-full px-12 ">
+      <div class="text-center md:mt-32 mt-8  w-full px-12">
         <div class="md:text-4xl text-xl font-bold    font text-center">
           Start a new{" "}
-          <span class="bg-gradient-to-r from-[#F19E22] to-[#0098F1] inline-block text-transparent bg-clip-text">
+          <span class="bg-gradient-to-r from-[#ff9b26] to-[#0098F1] inline-block text-transparent bg-clip-text">
             career
           </span>{" "}
           with E-education &#8594;
         </div>
       </div>
-      <div className="flex lg:flex-row flex-col justify-center items-center md:px-16 md:mb-24 md:gap-x-8 md:mx-16 mt-6">
-        <div className="w-60 h-60 md:w-full md:h-full ">
+      <div className="flex lg:flex-row flex-col justify-center items-center  md:mx-20 md:mb-24  mt-6">
+        <div className="w-60 h-60 md:w-auto md:h-auto ">
           <img src={Carrerimg} />
         </div>
-        <div className="ml-6 px-6">
-          <div className="flex  flex-col items-start justify-start md:min-w-[400px] gap-4">
+        <div className="ml-6 px-4 mt-4">
+          <div className="flex  flex-col items-start justify-start w-auto  gap-4">
             <div className="font font-bold  text-xl md:text-3xl ">
-              Unlocking Career Horizons: Navigating New Paths With E-education
+              Unlocking Career Horizons
             </div>
             <div className="font md:text-md text-base mb-8 ">
               Embracing E-education for a new career path offers flexible
-              learning opportunities accessible anytime, anywhere. In today's
-              digital era, online platforms provide vast resources for skill
-              acquisition and career development. With dedication and curiosity,
-              individuals can explore diverse fields and chart their
-              professional journey with the convenience of E-education.
+              learning opportunities accessible anytime, anywhere. This
+              platforms provide vast resources for skill acquisition and career
+              development. With dedication and curiosity, individuals can
+              explore diverse fields and start their professional journey with
+              the convenience of E-education.
             </div>
           </div>
           <div className="mb-10">
-            <motion.button className=" group relative flex w-fit items-center gap-1.5 bg-[#0098F1] px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50">
+            <motion.button className=" group relative flex rounded-lg w-fit items-center gap-1.5 bg-[#0098F1] px-4 py-3 text-gray-50 transition-colors ">
               <Link to="/pricing">Start Now</Link>
               <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
             </motion.button>

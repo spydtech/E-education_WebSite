@@ -175,7 +175,7 @@ function CourseCompletionTable() {
   );
 
   return (
-    <div className="p-4 bg-white  ">
+    <div className="p-4 ">
       <h2 className="text-xl text-[#204349] font-bold mb-4">
         Course Completion Within 30 Days
       </h2>
@@ -196,7 +196,7 @@ function CourseCompletionTable() {
         />
       </div>
       <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border  ">
+        <table className="min-w-full  border  ">
           <thead>
             <tr>
               <th className="border  bg-[#204349] text-white px-4 py-4">Course Name</th>

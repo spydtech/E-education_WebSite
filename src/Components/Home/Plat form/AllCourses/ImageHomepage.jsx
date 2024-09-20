@@ -23,18 +23,18 @@ const data = [
     altText: "Fun",
     title: "It's Fun",
     description:
-      "Join With Interest, Collaborate Into Passion With Your Creativity And Skills To Experience Something New Every Day",
+      " Collaborate Into Passion With Your Creativity To Experience Something New Every Day",
   },
 ];
 
 const ImageHomePage = () => {
   return (
-    <div className="container mx-auto px-4 py-10 my-20">
+    <div className="container mx-auto px-4 py-10 my-6 md:my-14">
       <div className="grid grid-cols-1 sm:grid-cols-1 md:lg:xl:grid-cols-3 gap-6 justify-items-center">
         {data.map((item, index) => (
           <div
             key={index}
-            className="bg-white  border-2 border-[#F19E22]  hover:border-[#F19E22] border-opacity-20 px-6 shadow-md text-center w-[350px] h-[250px] flex flex-col items-center"
+            className="bg-white  border-2 border-[#F19E22]  hover:border-[#F19E22] border-opacity-30 px-6 shadow-md text-center w-[300px]   sm:w-[350px] h-[250px] flex flex-col items-center"
           >
             <img
               src={item.imgSrc}
