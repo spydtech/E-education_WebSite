@@ -118,7 +118,7 @@ const BasicC_CplusNavigation = () => {
       </nav>
 
       {/* Section Content */}
-      <div>
+      <div className="mx-5">
         {currentSection === 0 && <BasicC_CplusIntroduction />}
         {currentSection === 1 && <BasicC_CplusKeyHighights />}
         {currentSection === 2 && <BasicC_CplusCareersOutcomes />}
@@ -131,3 +131,6 @@ const BasicC_CplusNavigation = () => {
 };
 
 export default BasicC_CplusNavigation;
+
+
+
