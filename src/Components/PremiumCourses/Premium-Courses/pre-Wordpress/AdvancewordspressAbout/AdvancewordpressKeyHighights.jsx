@@ -179,6 +179,8 @@ function AdvancewordpressKeyHighlights() {
       </div>
     </div>
   </div>
+  </div>
+  </div>
   );
 }
 
