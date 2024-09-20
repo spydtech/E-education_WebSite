@@ -17,10 +17,10 @@ const ReactJsHero = () => {
 
   return (
     <>
-      <div className="flex py-2  px-6 md:px-20  items-center justify-center bg-white  overflow-hidden">
+      <div className="flex py-2 mt-4 px-6 md:px-20  items-center justify-center bg-white  overflow-hidden">
         <div className="flex flex-col-reverse mx-2  gap-6 md:flex-row items-center max-w-8xl">
           <div className="w-full md:w-1/2 ">
-            <h2 className=" text-3xl md:text-4xl lg:text-5xl text-center md:text-left text-[#0098f1] leading-tight font-medium">
+            <h2 className=" text-3xl md:text-4xl lg:text-5xl text-center md:text-left text-black leading-tight font-medium">
               Revolutionize Web Development!
             </h2>
             <h3 className="mt-6 mx-3 md:mt-10 text-md lg:text-xl text-center md:text-left  ">

@@ -6,7 +6,7 @@ const FeatureOfReactJs = () => {
       <section className="mt-6 ">
         <div className="mx-2 md:pt-6 max-w-screen-xl flex flex-col lg:h-svh justify-center">
           <div className="flex flex-col">
-            <div className="md:text-4xl mt-8 tracking-tighter font-semibold text-gray-700 text-balance text-center ">
+            <div className="md:text-4xl  pb-1 tracking-tighter font-semibold bg-gradient-to-r  from-[#ff9b26] to-[#0098f1] bg-clip-text text-transparent text-balance text-center ">
               ReactJS's Key Features
             </div>{" "}
             {/* Starts component */}
