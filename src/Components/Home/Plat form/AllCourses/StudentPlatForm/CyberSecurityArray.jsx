@@ -9,7 +9,7 @@ import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
-import Girl2 from "../../../../../assetss/profile/girl2.png"
+import Girl2 from "../../../../../assetss/profile/girl2.png";
 const CyberSecurityArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
@@ -76,7 +76,6 @@ const CyberSecurityArray = () => {
       enrolled: 2100, // Add dummy enrolled number
     },
   ];
-  
 
   const filteredCourses = cybersecurityCourses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -113,8 +112,8 @@ const CyberSecurityArray = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
       <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center justify-center mb-4">
-          <span className="bg-gradient-to-r text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
+        <div className="flex items-center justify-center   mb-4">
+          <span className="bg-gradient-to-r text-4xl  py-1 font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
             Expand Cyber Security Courses
           </span>
         </div>
@@ -128,11 +127,11 @@ const CyberSecurityArray = () => {
             className="px-4 py-2 border border-blue-600 rounded placeholder-blue-500"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:mx-5">
           {filteredCourses.map((course, index) => (
             <div
               key={course.id}
-              className={`relative bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out max-w-[320px] mx-auto ${
+              className={`relative bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out ${
                 index >= 3 ? "mt-6" : "" // Add top margin for the second row
               }`}
             >
@@ -169,7 +168,9 @@ const CyberSecurityArray = () => {
                         <span className="text-gray-700 font-bold">
                           {course.name}
                         </span>
-                        <p className="text-gray-500 text-xs">{course.enrolled} Enrolled</p>
+                        <p className="text-gray-500 text-xs">
+                          {course.enrolled} Enrolled
+                        </p>
                       </div>
                     </div>
                     <span className="text-gray-900 font-bold">

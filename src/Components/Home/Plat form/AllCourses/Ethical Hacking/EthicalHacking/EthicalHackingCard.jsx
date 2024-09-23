@@ -66,11 +66,11 @@ const EthicalHackingCard = () => {
               className="group border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-                <div className="h-[180px]">
+                <div className="h-[180px] flex justify-center items-center">
                   <img
-                    className="w-full h-full bg-cover"
+                    className="w-[300px] h-[220px] p-2 bg-cover"
                     src={course.imgSrc}
-                    alt={`Course ${index + 1}`}
+                    alt={`Project ${index + 1}`}
                   />
                 </div>
                 <div className="p-4 flex flex-col items-center justify-between">

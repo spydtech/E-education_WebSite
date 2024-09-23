@@ -5,7 +5,7 @@ import AdvancewordpressCareersOutcomes from "./AdvancewordpressCareersOutcomes";
 import AdvancewordpressAbout from "./AdvancewordpressAbout";
 import AdvancewordpressSyllabus from "./AdvancewordpressSyallabus";
 import AdvancewordpressIntroduction from "./AdvancewordpressIntroduction";
-import { TbPlayerTrackNextFilled } from "react-icons/tb";
+
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 
 const AdvancewordpressNavigation = () => {
@@ -17,6 +17,7 @@ const AdvancewordpressNavigation = () => {
     "Certificate",
     "Syllabus",
   ];
+
   const [currentSection, setCurrentSection] = useState(0);
 
   useEffect(() => {
@@ -48,9 +49,9 @@ const AdvancewordpressNavigation = () => {
       <nav className="flex justify-between items-center p-2 bg-[#0098f1] shadow-xl rounded-t-2xl mb-5 lg:px-28 lg:py-3 mx-5">
         {/* Left button */}
         <button
-          className={`text-white ${
-            currentSection === 0 ? "invisible" : ""
-          }`}
+
+          className={`text-white ${currentSection === 0 ? "invisible" : ""}`}
+
           onClick={() => handleNextSection("prev")}
         >
           <FaAngleDoubleLeft size={24} />
@@ -68,6 +69,7 @@ const AdvancewordpressNavigation = () => {
           </li>
 
           {/* Show current, previous, and next sections on medium screens */}
+
           {sections.map((section, index) => (
             <li
               key={index}
@@ -91,11 +93,14 @@ const AdvancewordpressNavigation = () => {
           {/* Show all sections on large screens */}
           {sections.map((section, index) => (
             <li key={index} className="hidden lg:block">
+
               <button
                 className={`transition duration-300 text-white ${
                   currentSection === index ? "underline underline-offset-8" : ""
                 } rounded`}
                 onClick={() => setCurrentSection(index)}
+
+           
               >
                 {section}
               </button>

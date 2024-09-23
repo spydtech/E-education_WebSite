@@ -454,60 +454,59 @@ const FullStackWebDevelopmentArray = () => {
           />
           {/* <button className="absolute"> <IoIosSearch className=" text-4xl pt-2 pr-2 font-semibold" /></button> */}
         </div>
-        <div className="flex justify-center ">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 justify-center items-center">
-            {filteredCourses.map((course) => (
-              <div
-                key={course.id}
-                className="relative bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out max-w-[320px] mx-auto"
-              >
-                <a href={course.link} rel="noopener noreferrer">
-                  <div className="relative">
-                    <img
-                      src={course.image}
-                      alt={course.title}
-                      className="w-full h-32 object-cover px-3 "
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-xl font-semibold mb-2 flex items-center text-nowrap justify-between">
-                      {course.title}
-                      <MdArrowOutward className="text-gray-500 text-2xl" />
-                    </h3>
-                    <p className="text-gray-600 text-sm mb-4">
-                      {course.description}
-                    </p>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center text-gray-900">
-                        <span className="mr-2 font-bold">{course.rating}</span>
-                        {renderStarRating(course.rating)}
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center">
-                        <img
-                          src={course.profilePic}
-                          alt={course.name}
-                          className="w-8 h-8 rounded-full mr-2"
-                        />
-                        <div>
-                          <span className="text-gray-700 font-bold">
-                            {course.name}
-                          </span>
-                          <p className="text-gray-500 text-xs">
-                            {course.enrolled} Enrolled
-                          </p>
-                        </div>
-                      </div>
-                      <span className="text-gray-900 font-bold">
-                        {course.price}
-                      </span>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:mx-5">
+          {filteredCourses.map((course) => (
+            <div
+              key={course.id}
+              className="relative bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out"
+            >
+              <a href={course.link} rel="noopener noreferrer">
+                <div className="relative">
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-32 object-cover px-3 "
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold mb-2 flex items-center text-nowrap justify-between">
+                    {course.title}
+                    <MdArrowOutward className="text-gray-500 text-2xl" />
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    {course.description}
+                  </p>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center text-gray-900">
+                      <span className="mr-2 font-bold">{course.rating}</span>
+                      {renderStarRating(course.rating)}
                     </div>
                   </div>
-                </a>
-              </div>
-            ))}
-          </div>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center">
+                      <img
+                        src={course.profilePic}
+                        alt={course.name}
+                        className="w-8 h-8 rounded-full"
+                      />
+                      <div>
+                        <span className="text-gray-700 font-bold">
+                          {course.name}
+                        </span>
+                        <p className="text-gray-500 text-xs">
+                          {course.enrolled} Enrolled
+                        </p>
+                      </div>
+                    </div>
+                    <span className="text-gray-900 font-bold">
+                      {course.price}
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
       <Footer />

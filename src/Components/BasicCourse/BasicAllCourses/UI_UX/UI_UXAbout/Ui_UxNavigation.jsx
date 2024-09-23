@@ -113,7 +113,7 @@ const Ui_UxNavigation = () => {
         </button>
       </nav>
       {/* Section Content */}
-      <div>
+      <div className="mx-5">
         {currentSection === 0 && <Ui_UxIntroduction />}
         {currentSection === 1 && <Ui_UxKeyHighights />}
         {currentSection === 2 && <Ui_UxCareersOutcomes />}
