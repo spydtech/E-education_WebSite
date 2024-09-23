@@ -8,7 +8,7 @@ import CybersecurityBiginersSyllabus from "./CybersecurityBiginerssyllabus";
 // import { TbPlayerTrackNextFilled } from "react-icons/tb";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for menu toggle
-const  CybersecurityBiginersNavigation = () => {
+const CybersecurityBiginersNavigation = () => {
   const sections = [
     "Introduction",
     "Key Highlights",
@@ -112,7 +112,7 @@ const  CybersecurityBiginersNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div>
+      <div className="mx-5">
         {" "}
         {currentSection === 0 && <CybersecurityBeginnersIntroduction />}
         {currentSection === 1 && <CybersecurityBiginersKeyHighlights />}
