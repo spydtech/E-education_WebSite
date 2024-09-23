@@ -32,7 +32,7 @@ const CybersecurityHero = () => {
       <div className="absolute inset-0 flex items-end justify-center pb-10">
         <button
           onClick={handleEnroll}
-          className="px-6 py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl hover:bg-[#007bb5] transition duration-200"
+          className="px-6 py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl  transition duration-200"
         >
           Enroll Now
         </button>
