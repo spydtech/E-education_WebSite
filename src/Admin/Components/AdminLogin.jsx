@@ -21,7 +21,7 @@ function AdminLogin() {
       email: data.get("email"),
       password: data.get("password"),
     };
-    navigate("/");
+    navigate("/admin");
     dispatch(login(userData));
   };
   return (
@@ -34,7 +34,7 @@ function AdminLogin() {
             </div>
             <div className="mt-12 flex flex-col items-center">
               <h1 className="text-2xl xl:text-3xl font-extrabold">
-                Welcome Ratnapriya
+                Welcome Admin
               </h1>
               <form onSubmit={handleSubmit} className="w-full flex-1 mt-8">
                 <div className="mx-auto max-w-xs">
