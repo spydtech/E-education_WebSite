@@ -109,7 +109,7 @@ const WordpressNavigation = () => {
       </nav>
 
       {/* Section Content */}
-      <div className="">
+      <div className="mx-5">
         {currentSection === 0 && <WordpressIntroduction />}
         {currentSection === 1 && <WordpressKeyHighlights />}
         {currentSection === 2 && <WordpressCareersOutcomes />}

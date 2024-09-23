@@ -74,20 +74,20 @@ const AnnualSalesLineGraph = () => {
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
+    <div className="container h-[400px] shadow-xl rounded-xl relative mx-auto p-4">
+      <h1 className=" font-bold text-center text-[#001510] mb-6">
         Annual Sales - Total: ₹{totalSales}
       </h1>
-      <div className="flex justify-center mb-4">
+      <div className="flex  absolute justify-center mt-6">
         <label
           htmlFor="year-select"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-[#001510]"
         ></label>
         <select
           id="year-select"
           value={selectedYear}
           onChange={handleYearChange}
-          className="mt-1 block w-52 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 block w-24 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
         >
           {Object.keys(data).map((year) => (
             <option key={year} value={year}>

@@ -109,7 +109,7 @@ const BasicJavaScriptNavigation = () => {
       </nav>
 
       {/* Section Content */}
-      <div className="">
+      <div className="mx-5">
         {currentSection === 0 && <BasicJavaScriptIntroduction />}
         {currentSection === 1 && <BasicJavaScriptKeyHighights />}
         {currentSection === 2 && <BasicJavaScriptCareersOutcomes />}

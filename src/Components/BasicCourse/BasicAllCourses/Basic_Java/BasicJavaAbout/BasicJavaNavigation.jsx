@@ -109,7 +109,7 @@ const BasicJavaNavigation = () => {
       </nav>
 
       {/* Section Content */}
-      <div className="">
+      <div className="mx-5">
         {currentSection === 0 && <BasicJavaIntroduction />}
         {currentSection === 1 && <BasicJavaKeyHighights />}
         {currentSection === 2 && <BasicJavaCareersOutcomes />}
