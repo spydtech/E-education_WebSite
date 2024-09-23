@@ -46,7 +46,7 @@ function UnitTestingIntroduction() {
   };
 
   return (
-    <div className="flex flex-col space-y-3 md:flex-row md:justify-between md:items-center lg:h-[450px] px-14 md:mb-9 mb-5">
+    <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center lg:h-[450px] px-14 md:mb-9 mb-5">
       <div>
         <div>
           <p className="text-[#0098f1] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
