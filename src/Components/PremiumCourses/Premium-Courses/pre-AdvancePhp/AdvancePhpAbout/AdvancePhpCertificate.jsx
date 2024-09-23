@@ -3,7 +3,7 @@ import certificate from "../../../../../assets/dataAnalatics/Certificate-PNG-Pic
 
 function AdvancePhpCertificate() {
   return (
-    <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 p-4 justify-center items-center md:px-10 md:gap-8">
+    <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 p-4 justify-center items-center mb-5 md:px-10 md:gap-8">
     {/* Certificate Image */}
     <div className="flex justify-center items-center">
       <img

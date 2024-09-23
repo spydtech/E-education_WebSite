@@ -5,7 +5,7 @@ function MobileappIntroduction() {
 
   const Slide = ({ heading, items }) => {
     return (
-      <div className="w-full flex-shrink-0 px-4 py-8">
+      <div className="w-full flex-shrink-0 px-4 py-4">
         <div className="h-auto flex justify-center">
           <div>
             <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans"> 
