@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import hero from "../../../../../../assetss/premium/cybersecurity/hero.jpg";
 const CybersecurityHero = () => {
   const [courseName] = useState("Introduction To CyberSecurity"); // Placeholder for course name
   const [coursePrice] = useState(34999);
@@ -18,8 +18,7 @@ const CybersecurityHero = () => {
     <div
       className="relative w-full h-[370px] bg-cover bg-center"
       style={{
-        backgroundImage:
-          'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1726477157/WhatsApp_Image_2024-09-15_at_11.16.12_PM_1_dlktrs.jpg")',
+        backgroundImage: `url(${hero})`,
       }}
     >
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
