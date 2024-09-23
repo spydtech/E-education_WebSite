@@ -26,7 +26,7 @@ const WebDevelopmentCard = () => {
             </p>
 
             <div className="mt-5 flex justify-center lg:justify-start">
-              <button className=" bg-[#0098F1] text-white px-6 py-2 rounded transition-all active:scale-95 text-nowrap ">
+              <button className=" bg-[#0098F1] text-white px-6 py-3 rounded transition-all active:scale-95 text-nowrap md:text-xl ">
                 <a href="/" className="">
                   Explore Now
                 </a>
