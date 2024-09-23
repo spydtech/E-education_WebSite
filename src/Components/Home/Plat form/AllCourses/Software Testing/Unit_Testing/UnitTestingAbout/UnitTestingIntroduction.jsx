@@ -24,13 +24,41 @@ function UnitTestingIntroduction() {
 
   const slidesData = [
     {
-      heading: "Introduction to Software Development",
+      heading: "Introduction to Unit Testing",
       items: [
-        "Software development involves designing, creating, and maintaining applications, frameworks, or other software components.",
-        "Key Concepts: Understand the software development lifecycle and its phases.",
+        "Unit testing involves testing individual components or functions of software in isolation.",
+        "Key Concepts: Ensure that each unit of the software works as expected independently from other parts.",
       ],
     },
-    // Add other slides here...
+    {
+      heading: "Benefits of Unit Testing",
+      items: [
+        "Early Bug Detection: Identify and fix bugs in individual units during the development phase.",
+        "Code Refactoring: Supports safe refactoring by ensuring changes don’t break existing functionality.",
+      ],
+    },
+    {
+      heading: "Types of Unit Testing",
+      items: [
+        "Manual Unit Testing: Performed manually by the developer without the use of automation tools.",
+        "Automated Unit Testing: Tests are written and executed using automated testing frameworks like JUnit or Mocha.",
+      ],
+    },
+    {
+      heading: "Tools and Frameworks for Unit Testing",
+      items: [
+        "JUnit: A popular testing framework for Java.",
+        "Mocha: A JavaScript testing framework that runs on Node.js.",
+        "NUnit: A testing framework for all .NET languages.",
+      ],
+    },
+    {
+      heading: "Challenges in Unit Testing",
+      items: [
+        "Mocking Dependencies: Simulating the behavior of complex dependencies to isolate the unit being tested.",
+        "Test Coverage: Ensuring adequate coverage without writing redundant or ineffective tests.",
+      ],
+    },
   ];
 
   const goToPreviousSlide = () => {
@@ -60,7 +88,9 @@ function UnitTestingIntroduction() {
           </p>
         </div>
         <div>
-          <p className="md:text-lg lg:text-3xl mt-2">Brief about Unit Testing</p>
+          <p className="md:text-lg lg:text-3xl mt-2">
+            Brief about Unit Testing
+          </p>
         </div>
       </div>
 
@@ -79,7 +109,9 @@ function UnitTestingIntroduction() {
           >
             Previous
           </button>
-          <div className="text-white text-sm">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+          <div className="text-white text-sm">{`Page ${currentSlide + 1}/${
+            slidesData.length
+          }`}</div>
           <button
             onClick={goToNextSlide}
             className="text-white hover:text-black font-bold rounded"

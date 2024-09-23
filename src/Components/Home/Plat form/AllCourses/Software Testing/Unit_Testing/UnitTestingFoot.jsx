@@ -14,15 +14,10 @@ function UnitTestingFoot() {
 
   return (
     <>
-  
-      <div className="flex mb-20 flex-1 font w-full flex-col items-center justify-center text-center px-4 py-20 bg-[#0098f1] dark:from-gray-800 dark:via-gray-700 dark:to-gray-800">
-
-        <h1 className="mx-auto max-w-4xl font-display text-2xl font-md tracking-normal text-white-300 dark:text-gray-300 md:text-6xl">
-        Elevating Software Quality with &nbsp;
-          <span className="relative text-white-600 dark:text-gray-300">
-          Expertise in
-          </span>
-          <span className="relative whitespace-nowrap text-orange-500 dark:text-orange-300">
+      <div className="flex mb-10 flex-1 w-full flex-col items-center justify-center text-center px-4 py-10 bg-[#0098f1] dark:bg-gray-800">
+        <h1 className="mx-auto max-w-4xl font-display text-2xl font-md tracking-normal text-white-300 dark:text-gray-300 md:text-4xl lg:text-5xl">
+          Elevating Software Quality with &nbsp;
+          <span className="relative whitespace-nowrap text-white">
             <svg
               aria-hidden="true"
               viewBox="0 0 418 42"
@@ -37,25 +32,20 @@ function UnitTestingFoot() {
             </span>
           </span>
         </h1>
-        <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-white-400 text-white-500 dark:text-gray-300 leading-7">
-        Discover essential software testing practices for ensuring product
+        <h2 className="mt-5 md:mt-10 max-w-xl text-lg lg:text-xl text-white-500 dark:text-gray-300 leading-7">
+          Discover essential software testing practices for ensuring product
           quality. Our courses offer in-depth knowledge to detect bugs, automate
           tests, and enhance software reliability.
         </h2>
         <a
-          className="bg-white text-[26px] dark:bg-gray-800 rounded-xl text-[#0998f1]  font-medium px-10 py-3 sm:mt-10 mt-8  dark:hover:bg-gray-600 transition mb-0"
+          className="bg-white text-[#0098f1] rounded-xl font-medium px-10 py-3 mt-5 dark:bg-gray-800 dark:text-[#0098f1] dark:hover:bg-gray-600 transition"
           href=""
           onClick={handleEnroll}
         >
           Get started
         </a>
-      
       </div>
     </>
-
-
-
- 
   );
 }
 

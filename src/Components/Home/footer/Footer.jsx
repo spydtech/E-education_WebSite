@@ -6,8 +6,8 @@ import { FiTwitter } from "react-icons/fi";
 import { BsInstagram } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
 import IMG from "../../../assets/E- education logo .png";
-import footerImg from '../../../assetss/footer_img.jpg'
-import footerPic from '../../../assetss/footer_pic.jpg'
+import footerImg from "../../../assetss/footer_img.jpg";
+import footerPic from "../../../assetss/footer_pic.jpg";
 
 const sections = [
   {
@@ -178,7 +178,10 @@ function FooterPart() {
                 </h3>
                 <ul>
                   {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex} className="my-1 text-gray-200 text-[18px] hover:underline underline-offset-4">
+                    <li
+                      key={linkIndex}
+                      className="my-1 text-gray-200 text-[18px] hover:underline underline-offset-4"
+                    >
                       <Link
                         to={link.Link}
                         className="transition-colors duration-300 hover:text-emerald-500 focus:text-emerald-600"
