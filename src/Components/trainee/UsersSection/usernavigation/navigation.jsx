@@ -9,11 +9,11 @@ const UserNavigation = () => {
   const handleSectionChange = (index) => {
     setCurrentSection(index);
   };
-
+  const themes= localStorage.getItem("theme")
   return (
     <>
       <div className="flex flex-col items-center min-h-screen pt-4">
-        <nav className="flex flex-col sm:flex-row w-full sm:w-auto max-w-full md:max-w-xl mx-4 rounded-lg shadow-lg bg-white overflow-hidden">
+        <nav className=" flex flex-col sm:flex-row w-full sm:w-auto max-w-full md:max-w-xl mx-4 rounded-lg  overflow-hidden">
           {/* {sections.map((section, index) => (
             <button
               key={index}
@@ -34,7 +34,7 @@ const UserNavigation = () => {
             </button>
           ))} */}
         </nav>
-        <div className="container mx-auto p-4 mt-4 bg-white shadow-lg rounded-lg">
+        <div className={`${themes==="dark"&&"bg-black"} container mx-auto p-4 mt-4  shadow-lg rounded-lg`}>
           {currentSection === 0 && <ActiveUsers />}
           {/* {currentSection === 1 && <InactiveUsers />} */}
         </div>

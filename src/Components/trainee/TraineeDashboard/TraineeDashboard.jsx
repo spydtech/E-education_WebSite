@@ -314,8 +314,8 @@ import StatusPage from "../UserTask/StatusPage";
 import Calendar from "../TraineeCalendar/Calendar";
 import { getTrainee, logout } from "../../../State/Auth/Action";
 import { useDispatch, useSelector } from "react-redux";
-
-const TraineeDashboard = ({ changeTheme, theme }) => {
+import ThemeToggle from "./Theamtoggle";
+const TraineeDashboard = () => {
   const location = useLocation();
   const redirect = location?.state?.redirect;
   const [isDrawerOpen, setDrawerOpen] = useState(false);
@@ -326,7 +326,12 @@ const TraineeDashboard = ({ changeTheme, theme }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState(redirect ? redirect : "home"); // State to manage active tab
+  const [isMeetSidebarOpen, setMeetSidebarOpen] = useState(false);
 
+  // Function to toggle the meet sidebar
+  const toggleMeetSidebar = () => {
+      setMeetSidebarOpen(!isMeetSidebarOpen);
+  };
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
   };
@@ -345,7 +350,7 @@ const TraineeDashboard = ({ changeTheme, theme }) => {
   const handleLogout = () => {
     dispatch(logout());
     localStorage.removeItem("jwt");
-    // navigate("/trainee"); // Redirect to the login page
+    navigate("/trainee"); // Redirect to the login page
   };
 
   useEffect(() => {
@@ -378,17 +383,33 @@ const TraineeDashboard = ({ changeTheme, theme }) => {
         return null;
     }
   };
+  const themes= localStorage.getItem("theme")
+  //${themes==="dark"&&"bg-black"}
+  
+  const [profilePic, setProfilePic] = useState(null); // State to store the profile picture
 
+  // Function to handle image upload
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setProfilePic(URL.createObjectURL(file)); // Create a URL for the uploaded image
+    }
+  };
+
+  // Function to trigger the file input click
+  const handleProfileClick = () => {
+    document.getElementById('profileInput').click(); // Trigger the hidden file input
+  };
   return (
     <>
-      <div className="flex h-screen">
+      <div className={` ${themes==="dark"&&"bg-black text-white"}  bg-gradient-to-b from-[#4CA1AF] to-[#204349] flex h-screen`}>
         {/* Sidebar for larger screens */}
-        <div className={`hidden md:flex flex-col w-64 bg-gradient-to-r from-[#4CA1AF] to-[#204349]`}>
-          <div className="flex items-center justify-center h-16 bg-gradient-to-r from-[#4CA1AF] to-[#204349]">
+        <div className={`${themes==="dark"&&"bg-black text-white"} hidden md:flex flex-col w-64  `}>
+          <div className={` ${themes==="dark"&&"bg-black"} flex items-center  justify-center h-16`}>
             <img src={Eeducationlogo} className="h-24 w-auto" alt="E-Education Logo" />
           </div>
-          <div className="flex flex-col flex-1 overflow-y-auto">
-            <nav className="flex-1 px-2 py-4">
+          <div className={` ${themes==="dark"&&"bg-black"} flex flex-col flex-1 overflow-y-auto`}>
+            <nav className={`  flex-1 px-2 py-4`}>
               <a
                 href="#"
                 className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 ${activeTab === "home" ? "bg-white text-[#204349] border-[#204349]" : "border-transparent text-white"}`}
@@ -444,20 +465,17 @@ const TraineeDashboard = ({ changeTheme, theme }) => {
               >
                 <IoSettingsSharp className="h-6 w-6 mr-2" />
                 Settings
-              </a>
-              {/* <button
-              className="p-2 bg-white px-16  py-2 text-[#4CA1AF] rounded-md hover:bg-white"
-             
-            >
-             ChangeTheme
-            </button> */}
+              </a> 
+              <div className="pt-10">
+              <ThemeToggle/>
+              </div>
             </nav>
             
           </div>
 
           {/* Logout Button */} 
           <Link to="/trainelogin">
-          <div className="flex items-end justify-center p-4">
+          <div className={ ` ${themes==="dark"&&"bg-black"} flex items-end justify-center p-4`}>
             <button
               className="p-2 bg-white  px-20 py-2 text-[#4CA1AF] rounded-md hover:bg-white"
               onClick={handleLogout}
@@ -468,7 +486,7 @@ const TraineeDashboard = ({ changeTheme, theme }) => {
           </Link>
 
           {/* Trainee Info */}
-          <div className="flex mb-4 mx-2">
+          <div className={`  flex mb-4 mx-2`}>
             {auth.trainee && auth.trainee.firstName ? (
               <>
                 <div className="rounded-full text-[#FF9B26] font-bold text-xl border-2 w-12 h-12 flex justify-center items-center">
@@ -482,50 +500,10 @@ const TraineeDashboard = ({ changeTheme, theme }) => {
           </div>
         </div>
 
-        {/* Main Content */}
-        {/* <div className="flex flex-col flex-1 overflow-y-auto">
-          <div className="flex items-center justify-between h-56 py-4 bg-white border-b border-gray-200 px-4">
-          
-            <div className="flex items-center">
-              <button
-                className="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none"
-                onClick={toggleSidebar}
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
-              </button>
-                <div className=" flex h-10 w-10">
-                 <img src={Traineeprofile}/>
-                <h2 className="text-nowrap pl-4 pt-2 font-bold text-[#204349] text-[20px]">TraineeName</h2>
-                </div> 
-            </div>
-
-        
-            <div className="flex items-center">
-              <SiGooglemeet className="h-6 w-6 text-[#0098F1]" />
-            </div>
-          </div>
-
-        
-          <div className="flex-1 p-4 bg-gray-100">
-            {renderContent()}
-          </div>
-        </div> */} 
+       
         <div className="flex flex-col flex-1 overflow-y-auto">
-  <div className="flex flex-col md:flex-row items-center justify-between h-56 py-4 bg-white border-b border-gray-200 px-4">
-    <div className="flex items-center md:justify-start  justify-between w-full">
+  <div className={` ${themes==="dark"&&"bg-black"}   bg-white flex flex-col md:flex-row items-center  h-20 py-4 border-b border-gray-200 px-4`}>
+    <div className="flex items-center md:justify-start  w-full">
       <button
         className="md:hidden text-gray-500  hover:text-gray-700 focus:outline-none"
         onClick={toggleSidebar}
@@ -545,27 +523,57 @@ const TraineeDashboard = ({ changeTheme, theme }) => {
           />
         </svg>
       </button>
-      <div className="flex items-center justify-center md:ml-4 mt-4 md:mt-0">
-        <img src={Traineeprofile} className="h-10 w-10 rounded-full" alt="Trainee Profile" />
-        <h2 className="pl-4 font-bold text-[#204349] text-[20px]">TraineeName</h2>
+      <div className={` ${themes==="dark"&&" text-[#204349] "} flex items-center justify-center md:ml-4 mt-4 md:mt-0`}>
+        {/* <img src={Traineeprofile} className="h-10 w-10 rounded-full" alt="Trainee Profile" /> */}
+         {/* Make profile image clickable */}
+         <img
+              src={profilePic || Traineeprofile} // Display dynamic or default profile image
+              className="h-10 w-10 rounded-full cursor-pointer" // Cursor pointer to indicate clickable
+              alt="Profile"
+              onClick={handleProfileClick} // Trigger file input on click
+            />
+        <h2 className={` ${themes==="dark"&&" "} pl-4 font-bold  text-[#204349] text-[20px]`}>TraineeName</h2>
+         {/* Hidden file input for image upload */}
+         <input
+            type="file"
+            id="profileInput"
+            accept="image/*"
+            className="hidden" // Hide the input
+            onChange={handleImageUpload} // Handle the file upload
+          />
       </div>
-    </div>
-
-    {/* Mobile Menu Toggle */}
-    {/* <div className="items-center md:visible   mt-4">
-      <SiGooglemeet className="h-6 w-6 text-[#0098F1 ]  " />
-    </div> */}
+    </div> 
+    
+    
     <div className="items-center hidden md:flex mt-4">
-  <SiGooglemeet className="h-6 w-6 text-[#0098F1]" />
+  
+  <SiGooglemeet className="h-6 w-6 text-black "  onClick={toggleMeetSidebar} />
 </div>
 
   </div>
+  
 
-  {/* Render Content based on active tab */}
-  <div className="flex-1 p-4 bg-gray-100">
-    {renderContent()}
-  </div>
-</div>
+                  {/* Render Content based on active tab */}
+                  <div className={`  ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} flex-1 p-4 bg-gray-100`}>
+                    {renderContent()}
+                  </div>
+                  {isMeetSidebarOpen && (
+                    <div className="fixed inset-0 z-40  transition-opacity">
+                        <div className="fixed inset-y-0 right-0 bg-white w-64 p-4 overflow-y-auto">
+                            <h2 className="text-lg font-bold">Meet Sidebar</h2> 
+                            
+                            <button
+                                onClick={toggleMeetSidebar}
+                                className="text-gray-500 hover:text-gray-700"
+                            >
+                                Close
+                            </button>
+                            {/* Add more sidebar content as needed */}
+                            
+                        </div>
+                    </div>
+                )}
+        </div>
 
 
         {/* Sidebar for small screens */}

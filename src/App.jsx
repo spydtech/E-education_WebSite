@@ -1,3 +1,6 @@
+import { useState,useEffect } from "react";
+import { useSelector } from 'react-redux';
+
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
@@ -126,16 +129,25 @@ import ProductsCount from "./Admin/Components/Reports/CountofProducts";
 import Todo from "./Components/trainee/SheduledReports/Todo";
 import Dashboard from "./Admin/Components/pymentData/MainDashBoard";
 import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
+import ThemeToggle from "./Components/trainee/TraineeDashboard/Theamtoggle";
 
 function App() {
+  const theme = useSelector((state) => state.theme.theme);
+
+  useEffect(() => {
+    // Apply the theme to the document
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  }, [theme]);
   return (
+    <>
     <div>
       <BrowserRouter>
      
         <Routes>
-          
+        
           {/* <Route path="" element={<SidebarMain/>} /> */}
           <Route path="/" element={<Home />} />
+          <Route path="/theme" element={<ThemeToggle />} />
           <Route path="/traineedashbord" element={<TraineeDashboard />} />
           <Route path="/admin_login" element={<AdminLogin />} />
           <Route path="/about_us" element={<AboutUs />} />
@@ -430,7 +442,9 @@ function App() {
        
       </BrowserRouter>
     </div>
+    </>
   );
+ 
 }
 
 export default App;
