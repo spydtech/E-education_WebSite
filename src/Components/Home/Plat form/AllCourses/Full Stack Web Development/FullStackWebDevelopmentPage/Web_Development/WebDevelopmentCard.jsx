@@ -5,8 +5,8 @@ import Nextgen from "../../../../../../../assetss/fullstackwebdev/webdev/nextGen
 const WebDevelopmentCard = () => {
   return (
     <>
-      <div className="max-w-screen  px-4 mx-auto  sm:px-6 mb-12 ">
-        <div className="  lg:grid lg:grid-cols-12 lg:gap-8">
+      <div className="">
+        <div className="lg:flex items-center text-center">
           <div className="relative mt-8 pl-8 sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
             <img src={Nextgen} alt="" className="" />
           </div>
@@ -25,8 +25,8 @@ const WebDevelopmentCard = () => {
               with cutting-edge technologies and seamless user experiences.
             </p>
 
-            <div className="mt-5 sm:mt-8 flex sm:justify-center lg:justify-start">
-              <button className="mt-4 bg-[#0098F1] text-white   md:w-auto  px-6 rounded transition-all  active:scale-95 text-nowrap lg:text-2xl lg:w-[180px] lg:h-[60px] md:text-xl">
+            <div className="mt-5 flex justify-center lg:justify-start">
+              <button className=" bg-[#0098F1] text-white px-6 py-3 rounded transition-all active:scale-95 text-nowrap md:text-xl ">
                 <a href="/" className="">
                   Explore Now
                 </a>
