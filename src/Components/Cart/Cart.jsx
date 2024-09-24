@@ -123,11 +123,17 @@ const Cart = ({ history }) => {
       <Navbar />
       <div className=" mb-10 p-2">
         <div className="grid    grid-cols-1 md:grid-cols-2 md:px-4 relative mt-4">
-          <div className=" flex  justify-start p-4 items-center flex-col space-y-2  ">
+          {/* <div className=" flex  justify-start p-4 items-center flex-col space-y-2  ">
             {cartItems.map((item, index) => (
               <CartItem key={index} item={item} />
             ))}
+          </div> */}
+          <div className="flex justify-start p-4 items-center flex-col space-y-2">
+            {cartItems.map((item, index) => (
+              <CartItem key={index} item={item} index={index} />
+            ))}
           </div>
+
           <div className="  flex  justify-center lg:px-4    ">
             <div className="py-4 md:w-[500px] w-[300px] h-[400px]  shadow-xl">
               <p className="uppercase text-white bg-[#0098f1] font-bold px-4 py-4 ">
