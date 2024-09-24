@@ -112,6 +112,7 @@ function ActiveUsers({ updateUsersCount }) {
   const filteredData = data.filter((user) =>
     user.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  const themes= localStorage.getItem("theme")
 
   const rows = filteredData.map((item) => (
     <tr key={item.name} className="border-b text-[#204349]">
@@ -123,14 +124,14 @@ function ActiveUsers({ updateUsersCount }) {
             alt={`Avatar of ${item.name}`}
           />
           <div className="ml-4">
-            <div className="text-sm font-medium text-[#204349]">{item.name}</div>
+            <div className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} text-sm font-medium text-[#204349]`}>{item.name}</div>
           </div>
         </div>
       </td>
-      <td className="px-6 py-4 whitespace-nowrap">
+      <td className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"}  px-6 py-4 whitespace-nowrap`}>
         {item.job}
       </td>
-      <td className="px-6 py-4 whitespace-nowrap">{item.lastActive}</td>
+      <td className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} px-6 py-4 whitespace-nowrap`}>{item.lastActive}</td>
       <td className="px-6 py-4 whitespace-nowrap">
         {item.active ? (
           <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
@@ -146,11 +147,11 @@ function ActiveUsers({ updateUsersCount }) {
       </td>
     </tr>
   ));
-
+  // const themes= localStorage.getItem("theme")
   return (
-    <div className="overflow-x-auto  ml-4 mr-4 sm:ml-10 sm:mr-10">
-      <div className="min-w-full overflow-hidden rounded-lg">
-        <h1 className="text-center text-2xl font-semibold  text-[#204349]">Active Users</h1>
+    <div className={`  overflow-x-auto  ml-4 mr-4 sm:ml-10 sm:mr-10`}>
+      <div >
+        <h1 className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} text-center text-2xl font-semibold  text-[#204349]`}>Active Users</h1>
         <div className="flex justify-center mb-4">
           <input
             type="search"
@@ -178,11 +179,12 @@ function ActiveUsers({ updateUsersCount }) {
               </th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">{rows}</tbody>
+          <tbody className={ ` ${themes==="dark"&&"bg-black"} divide-y divide-gray-200`}>{rows}</tbody>
         </table>
         </div>
       </div>
-    </div>
+    </div> 
+   
   );
 }
 

@@ -43,11 +43,11 @@ const StatusPage = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
+  const themes= localStorage.getItem("theme")
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex flex-col md:flex-row md:justify-between items-center mb-4">
-        <h1 className="text-2xl font-bold text-[#204349] mb-2 md:mb-0">File Status</h1>
+    <div className={` ${themes==="dark"&&"bg-black"}  h-screen container mx-auto p-4`}>
+      <div className={`  flex flex-col md:flex-row md:justify-between items-center mb-4`}>
+        <h1 className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} text-2xl font-bold text-[#204349] mb-2 md:mb-0`}>File Status</h1>
         <div className="relative" ref={dropdownRef}>
           <button
             onClick={toggleDropdown}
@@ -83,7 +83,7 @@ const StatusPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {selectedOption === "accepted" ? (
           <div>
-            <h2 className="text-xl font-semibold mb-2 text-[#204349]">Accepted Files</h2>
+            <h2 className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} text-xl font-semibold mb-2 text-[#204349]`}>Accepted Files</h2>
             {acceptedFiles.length > 0 ? (
               acceptedFiles.map((file, index) => (
                 <div className="p-2" key={index}>
