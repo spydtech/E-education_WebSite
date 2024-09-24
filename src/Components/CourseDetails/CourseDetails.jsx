@@ -4,6 +4,7 @@ import Navbar from "../Navbar";
 import { useLocation, useNavigate } from "react-router-dom";
 import { CartContext } from "../../CartContext";
 import img from "../../assetss/cart/bg-cart.png";
+import FooterPart from "../Home/footer/Footer";
 export default function CourseDetails({ course }) {
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -77,7 +78,7 @@ export default function CourseDetails({ course }) {
         </div>
       </div> */}
 
-      <div className="mt-6 flex md:justify-start justify-center rounded-lg md:mx-10 w-auto h-auto gap-x-0  ">
+      <div className="mb-10 h-screen items-start mt-6 flex md:justify-start justify-center rounded-lg md:mx-10 w-auto  gap-x-0  ">
         <div className="rounded-lg md:gap-x-6 justify-center items-center  flex flex-col md:flex-row">
           {" "}
           <div
@@ -117,6 +118,7 @@ export default function CourseDetails({ course }) {
           </div>
         </div>
       </div>
+      <FooterPart />
     </>
   );
 }
