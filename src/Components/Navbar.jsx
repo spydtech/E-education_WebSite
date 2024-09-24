@@ -166,7 +166,7 @@ const Navbar = () => {
                     </button>
                     <button
                       onClick={toggleDropdown} // Toggle dropdown on Explore click
-                      className="absolute right-[1px] p-2 py-[6px] top-1/2 transform -translate-y-1/2 bg-[#0098F1]   rounded-lg text-[#0098F1]  flex items-center space-x-1"
+                      className="absolute right-[1px] mr-[1px] p-2 py-[6px] top-1/2 transform -translate-y-1/2 bg-[#0098F1]   rounded-lg text-[#0098F1]  flex items-center space-x-1"
                     >
                       <span className="text-white">Explore</span>
                       {showDropdown ? (
@@ -321,6 +321,17 @@ const Navbar = () => {
                                     <span className="flex pb-[2px]    text-white hover:text-black   ">
                                       <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
                                       DevOps Mastery
+                                    </span>
+                                  </Link>
+                                </li>
+                                <li className="py-[2px]">
+                                  <Link
+                                    className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                    to="/reactjs"
+                                  >
+                                    <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                      <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                      ReactJs Mastery
                                     </span>
                                   </Link>
                                 </li>
@@ -563,7 +574,7 @@ const Navbar = () => {
                           </p>
 
                           <svg
-                            className={`relative top-[1px] ml-1 h-5 w-5 ease-out duration-300 ${
+                            className={`relative top-[1px] text-[#0098f1] ml-1 h-5 w-5 ease-out duration-300 ${
                               navigationMenuOpen &&
                               navigationMenu === "getting-started"
                                 ? "-rotate-180"
@@ -997,6 +1008,17 @@ const Navbar = () => {
                                   <span className="flex pb-[2px]    text-white hover:text-black   ">
                                     <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
                                     DevOps Mastery
+                                  </span>
+                                </Link>
+                              </li>
+                              <li className="py-[2px]">
+                                <Link
+                                  className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                                  to="/reactjs"
+                                >
+                                  <span className="flex pb-[2px]    text-white hover:text-black   ">
+                                    <MdKeyboardArrowRight className="text-[#ff9b26]  mt-1 w-5 h-5 text-center" />{" "}
+                                    ReactJs Mastery
                                   </span>
                                 </Link>
                               </li>

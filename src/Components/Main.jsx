@@ -1,6 +1,7 @@
 import React from "react";
 import home from "../assetss/Home/Homebg.png";
-import Girl from "../assetss/Home/girl.png";
+// import Girl from "../assetss/Home/girl.png";
+import Girl from "../assetss/Home/girlimage.png";
 import { Link } from "react-router-dom";
 
 function Main() {
@@ -49,7 +50,7 @@ function Main() {
                 </Link>
                 <Link
                   to="/try-a-demo"
-                  className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#0098F1] bg-[#0098F11A] md:py-4 md:text-lg md:px-10"
+                  className="w-full  sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#0098F1] bg-[#0098F11A] md:py-4 md:text-lg md:px-10"
                 >
                   Try demo
                 </Link>
