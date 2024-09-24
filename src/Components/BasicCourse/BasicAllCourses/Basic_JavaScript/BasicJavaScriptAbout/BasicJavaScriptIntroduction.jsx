@@ -6,7 +6,7 @@ function BasicJavaScriptIntroduction() {
   const Slide = ({ heading, items }) => {
     return (
       <div className="w-full flex-shrink-0 px-4 py-8">
-        <div className="h-auto flex justify-center">
+        <div className="h-auto flex">
           <div>
             <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
               {heading}

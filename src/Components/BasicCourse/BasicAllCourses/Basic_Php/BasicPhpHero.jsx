@@ -22,7 +22,7 @@ const WordPhpHero = () => {
     <div className="absolute inset-0 flex items-center justify-center">
       <p className="text-center text-white max-md:text-[16px] text-[20px] font-medium px-4">
       Empower yourself with the skills to create dynamic and interactive websites using PHP. 
-      <br/>  Our comprehensive course will guide you from the basics to advanced concepts,   <br/>
+      Our comprehensive course will guide you from the basics to advanced concepts
       ensuring you're ready to build robust web applications.
       </p>
     </div>
