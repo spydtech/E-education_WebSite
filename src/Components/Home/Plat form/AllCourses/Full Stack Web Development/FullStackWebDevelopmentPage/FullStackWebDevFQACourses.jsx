@@ -87,7 +87,7 @@ const FullStackWebDev = () => {
           this course
         </span>
       </h3>
-      <section className="space-y-4 text-[#0098F1]">
+      <section className="space-y-4 text-[#0098F1] mb-5">
         {questions.map((question) => (
           <Question key={question.id} {...question} />
         ))}
