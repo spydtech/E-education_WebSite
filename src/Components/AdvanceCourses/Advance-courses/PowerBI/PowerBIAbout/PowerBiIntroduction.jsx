@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function PowerBiIntroduction() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const Slide = ({ heading, items }) => (
-    <div className="w-full flex-shrink-0 px-4 py-8">
+    <div className="w-full flex-shrink-0 px-4 py-4">
         <div className="h-auto flex justify-center">
           <div>
             <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">

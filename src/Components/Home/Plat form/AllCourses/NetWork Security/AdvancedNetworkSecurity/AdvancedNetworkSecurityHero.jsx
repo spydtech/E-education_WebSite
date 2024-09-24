@@ -24,11 +24,10 @@ const AdvancedNetworkSecurityHero = () => {
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          <p className="text-center text-white max-md:text-[16px] text-[20px] font-medium px-4">
+          <p className="text-center text-white max-md:text-[16px] text-[20px] font-medium px-4 max-w-[800px]">
             Secure Your Networks with Advanced Network Security Solutions!
-            Empowering you to <br /> implement advanced security measures and
-            defend against cyber attacks,
-            <br /> we provide comprehensive solutions to keep your networks
+            Empowering you to implement advanced security measures and
+            defend against cyber attacks, we provide comprehensive solutions to keep your networks
             safe...
           </p>
         </div>
