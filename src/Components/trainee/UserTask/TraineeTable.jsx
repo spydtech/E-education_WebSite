@@ -121,6 +121,7 @@ function TraineeTable({ updateUsersCount }) {
   const filteredData = data.filter((user) =>
     user.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  const themes= localStorage.getItem("theme")
 
   const rows = filteredData.map((item) => (
     <tr key={item.name} className="border-b ">
@@ -138,14 +139,14 @@ function TraineeTable({ updateUsersCount }) {
             alt={`Avatar of ${item.name}`}
           />
           <div className="ml-4">
-            <div className="text-sm font-medium text-[#204349]">{item.name}</div>
+            <div className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} text-sm font-medium text-[#204349]`}>{item.name}</div>
           </div>
         </div>
       </td>
-      <td className="px-6 py-4  text-[#204349] whitespace-nowrap">
+      <td className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"}  px-6 py-4  text-[#204349] whitespace-nowrap`}>
         <h1>React js</h1>
       </td>
-      <td className="px-6 py-4 whitespace-nowrap text-[#204349] ">{item.lastActive}</td>
+      <td className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} px-6 py-4 whitespace-nowrap text-[#204349] `}>{item.lastActive}</td>
       <td className="px-6 py-4 whitespace-nowrap flex items-center justify-between">
         {item.active ? (
           <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
@@ -167,9 +168,9 @@ function TraineeTable({ updateUsersCount }) {
       </td>
     </tr>
   ));
-
+  // const themes= localStorage.getItem("theme")
   return (
-    <div className=" mt-10 lg:m-8 bg-white shadow-xl rounded-lg">
+    <div className={` ${themes==="dark"&&"bg-black"} mt-10 lg:m-8  shadow-xl rounded-lg`}>
       <div className=" overflow-x-auto   text-lg scrollbar-thin scrollbar-track-white scrollbar-thumb-[#204349] pt-4 mx-4 rounded-lg">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center p-4">
           <input
@@ -193,7 +194,7 @@ function TraineeTable({ updateUsersCount }) {
               <th className="px-6 py-4  bg-[#204349] text-left text-xs font-medium text-white uppercase tracking-wider">
                 Employee
               </th>
-              <th className="px-6 py-4  bg-[#204349] text-left text-xs font-medium text-white uppercase tracking-wider">
+              <th className={`  px-6 py-4  bg-[#204349] text-left text-xs font-medium text-white uppercase tracking-wider`}>
                 Role
               </th>
               <th className="px-6 py-4  bg-[#204349] text-left text-xs font-medium text-white uppercase tracking-wider">
@@ -204,7 +205,7 @@ function TraineeTable({ updateUsersCount }) {
               </th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">{rows}</tbody>
+          <tbody className={` ${themes==="dark"&&"bg-black"}   divide-y divide-gray-200`}>{rows}</tbody>
         </table>
       </div>
       </div>

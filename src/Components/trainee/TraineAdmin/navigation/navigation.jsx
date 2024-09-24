@@ -10,7 +10,7 @@ const TraineeNavigation = () => {
   const handleSectionChange = (index) => {
     setCurrentSection(index);
   };
-
+  const themes= localStorage.getItem("theme")
   return (
     <>
       <div className="flex flex-col items-center min-h-screen  ">
@@ -19,7 +19,7 @@ const TraineeNavigation = () => {
         
           </nav>
         </div>
-        <div className="container mx-auto p-2   rounded-lg">
+        <div className={`${themes==="dark"&&"bg-black"}  shadow-lg container mx-auto py-3   rounded-lg`}>
           {currentSection === 0 && <ProfileSection />}
           {/* {currentSection === 1 && <TraineForgotPassword />} */}
           {currentSection === 1 && <TraineeUpdatePassword />}

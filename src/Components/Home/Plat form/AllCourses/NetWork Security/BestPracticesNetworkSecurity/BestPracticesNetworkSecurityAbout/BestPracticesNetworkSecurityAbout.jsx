@@ -1,41 +1,38 @@
 import React from "react";
 import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
 import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
-// import support from "../../../../../assets/Platform/support.jpg";
-import career from '../../../../../../../assetss/career.png'
-import student from '../../../../../../../assetss/student.png'
 
 const BestPracticesNetworkSecurityAbout = () => {
-  const networksecurityInfo = [
+  const BestPracticesNetworkSecurity = [
     {
       title: "Career Assistance",
       description:
         "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
-      imgSrc: student,
+      imgSrc: assistance,
       imgAlt: "career-assistance",
     },
     {
       title: "Student Support",
       description:
         'Access student support via support@datasciencecourse.com or through the "ask us?" option on our learning platform for urgent queries.',
-      imgSrc: career,
+      imgSrc: programmer,
       imgAlt: "student-support",
-    },
+    }
   ];
 
   return (
     <div className="px-3 text-center">
-      <div className="">
+      <div>
         <p className="md:text-2xl font-bold text-[#0098F1]">
           Discover the Network Security Program
         </p>
       </div>
 
       <div className="md:flex justify-around">
-        {networksecurityInfo.map((item, index) => (
+        {BestPracticesNetworkSecurity.map((item, index) => (
           <div
             key={index}
-            className=" md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
+            className="md:w-2/5 bg-white rounded-lg shadow-lg p-3 my-4"
           >
             <img
               className="md:w-full md:h-64 rounded-md"

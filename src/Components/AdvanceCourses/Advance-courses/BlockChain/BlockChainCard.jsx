@@ -1,44 +1,45 @@
 import React from "react";
+
+import img1 from "../../../../assetss/premium/blockchain/image1.jpg";
+import img2 from "../../../../assetss/premium/blockchain/image2.jpg";
+import img3 from "../../../../assetss/premium/blockchain/image3.jpg";
+import img4 from "../../../../assetss/premium/blockchain/image4.jpg";
+import img5 from "../../../../assetss/premium/blockchain/image5.jpg";
+import img6 from "../../../../assetss/premium/blockchain/image6.jpg";
 const BlockChainCard = () => {
   const courseData = [
     {
-      imgSrc:
-        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579678/image1_hef1sc.png",
+      imgSrc: img1,
       title: "Explore Course Catalog",
       description:
         "Browse our extensive catalog of Machine Learning courses Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
     },
     {
-      imgSrc:
-        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579681/image2_xdrrvu.png",
+      imgSrc: img2,
       title: "Enroll in Foundational Courses",
       description:
         "Start with foundational courses that cover blockchain basics, tools, and methodologies essential for development.",
     },
     {
-      imgSrc:
-        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579686/image3_ih9nxv.jpg",
+      imgSrc: img3,
       title: "Practice with Real-world Projects",
       description:
         "Apply your knowledge with hands-on projects that mirror real-world scenarios. Gain practical experience in blockchain development and smart contracts.",
     },
     {
-      imgSrc:
-        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579693/image4_no3xea.jpg",
+      imgSrc: img4,
       title: "Track Your Progress",
       description:
         "Monitor your progress with intuitive dashboards. Set goals, track milestones, and measure your expertise as you advance through the courses.",
     },
     {
-      imgSrc:
-        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579696/image5_yxs4dr.png",
+      imgSrc: img5,
       title: "Specialize and Advance",
       description:
         "Choose specialized tracks or advanced courses to deepen your knowledge in areas like smart contracts, blockchain frameworks, or performance optimization. Customize your learning path to fit your interests and career goals.",
     },
     {
-      imgSrc:
-        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726579701/image6_md7ztw.jpg",
+      imgSrc: img6,
       title: "Earn Recognized Certifications",
       description:
         "Upon completing courses and projects, earn industry-recognized certifications to showcase your expertise and enhance your career prospects.",
@@ -65,9 +66,9 @@ const BlockChainCard = () => {
               className="group  border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-                <div className="h-[180px]">
+                <div className="h-[180px] flex justify-center items-center">
                   <img
-                    className="w-full h-full bg-cover"
+                    className="w-[300px] h-[220px] p-2 bg-cover"
                     src={course.imgSrc}
                     alt={`Project ${index + 1}`}
                   />

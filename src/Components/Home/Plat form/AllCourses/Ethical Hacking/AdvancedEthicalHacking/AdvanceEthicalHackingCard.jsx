@@ -1,10 +1,10 @@
 import React from "react";
-import img1 from '../../../../../../assetss/professional/ethicalHacking/advanced/image1.jpg'
-import img2 from '../../../../../../assetss/professional/ethicalHacking/advanced/image2.jpg'
-import img3 from '../../../../../../assetss/professional/ethicalHacking/advanced/image3.jpg'
-import img4 from '../../../../../../assetss/professional/ethicalHacking/advanced/image4.jpg'
-import img5 from '../../../../../../assetss/professional/ethicalHacking/advanced/image5.jpg'
-import img6 from '../../../../../../assetss/professional/ethicalHacking/advanced/image6.jpg'
+import img1 from "../../../../../../assetss/professional/ethicalHacking/advanced/image1.jpg";
+import img2 from "../../../../../../assetss/professional/ethicalHacking/advanced/image2.jpg";
+import img3 from "../../../../../../assetss/professional/ethicalHacking/advanced/image3.jpg";
+import img4 from "../../../../../../assetss/professional/ethicalHacking/advanced/image4.jpg";
+import img5 from "../../../../../../assetss/professional/ethicalHacking/advanced/image5.jpg";
+import img6 from "../../../../../../assetss/professional/ethicalHacking/advanced/image6.jpg";
 
 const AdvanceEthicalHackingCard = () => {
   const cardData = [
@@ -66,9 +66,9 @@ const AdvanceEthicalHackingCard = () => {
               className="group border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-                <div className="h-[180px]">
+                <div className="h-[180px] flex justify-center items-center">
                   <img
-                    className="w-full h-full bg-cover"
+                    className="w-[300px] h-[220px] p-2 bg-cover"
                     src={item.imgSrc}
                     alt={`item ${index + 1}`}
                   />

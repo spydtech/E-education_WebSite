@@ -70,11 +70,11 @@ const data = [
     course: course,
   },
 ];
-
 const courseColor = "bg-red-100 text-red-400"; // Example color for courses
 
 function TraineeCourseTable2() {
   const [search, setSearch] = useState("");
+  const themes = localStorage.getItem("theme");
 
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
@@ -85,70 +85,103 @@ function TraineeCourseTable2() {
   );
 
   const rows = filteredData.map((item, index) => (
-    <tr key={index} className="border-b bg-[#204349] bg-opacity-10">
+    <tr
+      key={index}
+      className={`${
+        themes === "dark" ? "bg-black text-white border-white" : ""
+      } border-b bg-[#204349] bg-opacity-10`}
+    >
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
           <div className="flex-shrink-0 h-10 w-10">
             <img className="h-10 w-10 rounded-full" src={item.avatar} alt="" />
           </div>
           <div className="ml-4">
-            <div className="text-sm font-medium text-[#204349]">{item.name}</div>
+            <h1
+              className={`${
+                themes === "dark" ? "bg-black text-white border-white" : ""
+              } text-sm font-medium text-[#204349]`}
+            >
+              {item.name}
+            </h1>
           </div>
         </div>
       </td>
       <td className="px-6 py-4 whitespace-nowrap">
-        <span
-          className={`px-2 inline-flex text-[16px] leading-5 font-semibold text-[#204349] rounded-full `}
+        <h1
+          className={`${
+            themes === "dark" ? "bg-black text-white border-white" : ""
+          } px-2 inline-flex text-[16px] leading-5 font-semibold text-[#204349] rounded-full`}
         >
           {item.course}
-        </span>
+        </h1>
       </td>
     </tr>
   ));
 
   return (
     <div className="overflow-x-auto">
-      <div className="min-w-full shadow-md overflow-hidden rounded-lg">
+      <div className="min-w-full shadow-md overflow-x-auto rounded-lg">
         <div className="p-3 flex flex-col md:flex-row justify-between m-3 space-y-3 md:space-y-0">
           <input
             type="text"
             placeholder="Search by name"
             value={search}
             onChange={handleSearchChange}
-            className="inline-block  px-4 py-2  placeholder:text-[#204349]  border-2 border-[#204349] rounded-3xl"
+            className="inline-block px-4 py-2 placeholder:text-[#204349] border-2 border-[#204349] rounded-3xl"
           />
           <div className="flex items-center space-x-2 mx-2">
-            <span className="text-[#204349]"> Trainee:</span>
+            <h3
+              className={`${
+                themes === "dark" ? "bg-black text-white border-white" : ""
+              } text-[#204349]`}
+            >
+              Trainee:
+            </h3>
             {trainee.map((traineeItem, index) => (
-              <span key={index} className="px-2 py-1  text-[#204349] rounded-md">
+              <span
+                key={index}
+                className={`${
+                  themes === "dark" ? "bg-black text-white border-white" : ""
+                } px-2 py-1 text-[#204349] rounded-md`}
+              >
                 {traineeItem.name}
               </span>
             ))}
           </div>
         </div>
 
-        <table className="min-w-full divide-y ">
-          <thead className="bg-[#204349]">
-            <tr>
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
-              >
-                User
-              </th>
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
-              >
-                Course
-              </th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">{rows}</tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y">
+            <thead className="bg-[#204349]">
+              <tr>
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                >
+                  User
+                </th>
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                >
+                  Course
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              className={`${
+                themes === "dark" ? "bg-black" : ""
+              } divide-y divide-gray-200`}
+            >
+              {rows}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
 }
 
 export default TraineeCourseTable2;
+

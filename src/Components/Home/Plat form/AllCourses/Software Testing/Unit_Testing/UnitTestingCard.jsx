@@ -8,46 +8,45 @@ import Img4 from "../../../../../../assetss/Professionals/image4.jpg";
 import Img5 from "../../../../../../assetss/Professionals/image5.jpg";
 import Img6 from "../../../../../../assetss/Professionals/image6.jpg";
 
-
 const SoftwareTestingCard = () => {
   const courseData = [
     {
-      imgSrc:Img1,
+      imgSrc: Img1,
       title: "Explore Course Catalog",
       description:
-        "Browse our extensive catalog of Data Science courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
+        "Browse our extensive catalog of Software Testing courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
     },
     {
-      imgSrc:Img2,
+      imgSrc: Img2,
       title: "Enroll in Foundational Courses",
       description:
-        "Start with foundational courses covering basic concepts, algorithms, and tools essential for Data Science.",
+        "Start with foundational courses covering basic concepts, algorithms, and tools essential for Software Testing.",
     },
     {
-      imgSrc:Img3,
+      imgSrc: Img3,
       title: "Practice with Real-world Projects",
       description:
-        "Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience in data analysis, data processing, and visualization.",
+        "Apply your knowledge by working on hands-on projects tailored to real-world scenarios. Gain practical experience Software Testing.",
     },
     {
-      imgSrc:Img4,
+      imgSrc: Img4,
       title: "Track Your Progress",
       description:
-        "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Data Data Analytics concepts as you advance through the courses.",
+        "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Software Testing concepts as you advance through the courses.",
     },
     {
-      imgSrc:Img5,
+      imgSrc: Img5,
       title: "Specialize and Advance",
       description:
-        "Choose specialized tracks or advanced courses to delve deeper into specific areas of Data Analytics, such as data engineering, predictive analytics, or machine learning.",
+        "Choose specialized tracks or advanced courses to delve deeper into specific areas of Software Testing.",
     },
     {
-      imgSrc:Img6,
+      imgSrc: Img6,
       title: "Earn Recognized Certifications",
       description:
         "Upon successful completion of courses and projects, earn industry-recognized certifications to showcase your expertise to employers and enhance your career prospects.",
     },
-  ]
+  ];
   return (
     <section id="portfolio" className="portfolio-section py-10 px-4">
       <div className="container mx-auto">
@@ -68,7 +67,7 @@ const SoftwareTestingCard = () => {
               className="group border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-              <div className="h-[180px] justify-center items-center flex">
+                <div className="h-[180px] justify-center items-center flex">
                   <img
                     className="w-[300px] h-[220px] p-2 bg-cover"
                     src={course.imgSrc}

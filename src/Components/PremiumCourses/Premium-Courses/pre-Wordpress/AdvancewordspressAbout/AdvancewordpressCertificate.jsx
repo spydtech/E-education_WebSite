@@ -4,7 +4,7 @@ import certificate from "../../../../../assetss/certficate1.png";
 function AdvanceWordpressCertificate() {
   return (
 
-    <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 p-4 justify-center items-center md:px-10 md:gap-8">
+    <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 p-4 justify-center items-center md:px-10 md:gap-8 mb-5">
     {/* Certificate Image */}
     <div className="flex justify-center items-center">
       <img

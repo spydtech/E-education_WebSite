@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import hero from "../../../../assetss/premium/cloudcomputing/hero.jpg";
 const CloudComputingHero = () => {
   const [courseName] = useState("Cloud with AWS");
   const [coursePrice] = useState(34999);
@@ -15,8 +15,7 @@ const CloudComputingHero = () => {
       <div
         className="relative w-full h-[370px] bg-cover bg-center"
         style={{
-          backgroundImage:
-            'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1726473509/WhatsApp_Image_2024-09-15_at_11.16.11_PM_1_uilojh.jpg")',
+          backgroundImage: `url(${hero})`,
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">

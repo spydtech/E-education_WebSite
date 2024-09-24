@@ -4,11 +4,11 @@ import { IoReorderThreeOutline } from "react-icons/io5";
 const ReactjsCard = () => {
   return (
     <>
-      <div>
-        <div id="heading" className=" py-10  ">
-          <h1 className="text-center font-bold md:text-3xl text-2xl lg:text-4xl md:lg:sm:w-auto w-auto pb-1 bg-gradient-to-r  from-[#ff9b26] to-[#0098f1] bg-clip-text text-transparent">
+      <div className="mt-6 ">
+        <div id="heading" className="  ">
+          <p className="mx-4 text-center font-bold md:text-3xl text-2xl lg:text-4xl  pb-1 bg-gradient-to-r  from-[#ff9b26] to-[#0098f1] bg-clip-text text-transparent">
             Supercharge your web projects using ReactJS.
-          </h1>
+          </p>
           <h1 className=" flex justify-center md:lg:sm:w-auto mt-4 w-auto text-[#0098f1]">
             <IoRemoveOutline className="text-[40px]" />
             <IoReorderThreeOutline className="text-[40px]" />{" "}
@@ -22,11 +22,11 @@ const ReactjsCard = () => {
           </p> */}
         </div>
       </div>
-      <div className="h-full min-h-screen w-full bg-white pt-8 p-4">
-        <div className="grid gap-14  md:grid-cols-2 lg:grid-cols-3 md:gap-y-10 mx-2 md:gap-5">
+      <div className="   justify-center items-center flex  p-4">
+        <div className="grid gap-4 my-6 gap-y-12  justify-center items-center  md:grid-cols-1 lg:grid-cols-3  mx-2 ">
           <div
             data-aos-delay="150"
-            className="rounded-xl bg-[#0098f1] h-80 p-2 py-4  text-center shadow-xl"
+            className="rounded-xl bg-[#0098f1] h-80 md:w-96 lg:w-auto p-2 py-4  text-center shadow-xl"
           >
             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full bg-[#ff9b26] shadow-lg shadow-teal-500/40">
               <svg
@@ -53,7 +53,7 @@ const ReactjsCard = () => {
           </div>
           <div
             data-aos-delay="150"
-            className="rounded-xl bg-[#0098f1] h-80  p-2 py-4 text-center shadow-xl"
+            className="rounded-xl bg-[#0098f1] md:w-96 lg:w-auto h-80  p-2 py-4 text-center shadow-xl"
           >
             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-[#ff9b26] shadow-rose-500/40">
               <svg
@@ -80,7 +80,7 @@ const ReactjsCard = () => {
           </div>
           <div
             data-aos-delay="300"
-            className="rounded-xl bg-[#0098f1] h-80  p-2 py-4  text-center shadow-xl"
+            className="rounded-xl bg-[#0098f1] md:w-96 lg:w-auto h-80  p-2 py-4  text-center shadow-xl"
           >
             <div className="mx-auto flex h-16 w-16 -translate-y-12 transform items-center justify-center rounded-full shadow-lg bg-[#ff9b26] shadow-sky-500/40">
               <svg

@@ -30,11 +30,11 @@ const Tabs = () => {
     setOpenTab(tabNumber);
     setIsMenuOpen(false); // Close menu when a tab is clicked
   };
-
+  const themes= localStorage.getItem("theme")
   return (
-    <div className="p-4 sm:p-6 overflow-x-auto bg-white">
+    <div className={`p-4 sm:p-6 overflow-x-auto ${themes==="dark"&&"bg-black"}`}>
       <div className="flex items-center justify-between mb-4">
-      <h1 className="text-[#204349] font-semibold text-[16px] sm:text-xl md:text-3xl p-2 sm:p-4">
+      <h1 className={`${themes === "dark" ? "bg-black text-white border-white" : ""} text-[#204349] font-semibold text-[16px] sm:text-xl md:text-3xl p-2 sm:p-4`}>
   Trainee name - Sumithra
 </h1>
 
@@ -44,7 +44,7 @@ const Tabs = () => {
         >
           <MenuIcon className="w-6 h-6 text-[#FF9B26]" />
         </button> */}
-        <p className="text-[#204349] text-sm sm:text-base">
+        <p className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} text-[#204349] text-sm sm:text-base`}>
           Number of Courses: {numberOfCourses}
         </p>
       </div> 
@@ -55,7 +55,7 @@ const Tabs = () => {
           <MenuIcon className="w-6 h-6 text-[#204349]" />
         </button>
       <div className={`flex flex-col  sm:flex-row border-b ${isMenuOpen ? 'block' : 'hidden'} sm:block`}>
-        <ul className="flex flex-col sm:flex-row">
+        <ul className="flex flex-col  text-white sm:flex-row">
           {courses.map((course) => (
             <li
               key={course.id}
@@ -74,7 +74,7 @@ const Tabs = () => {
           ))}
         </ul>
       </div>
-      <div className="w-full mt-4">
+      <div className={`  ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"}  w-full mt-4`}>
         {openTab === 1 && <TraineeCourseTable1 />}
         {openTab === 2 && <TraineeCourseTable2 />}
         {openTab === 3 && <TraineeCourseTable3 />}

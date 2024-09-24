@@ -2,7 +2,7 @@ import React from "react";
 import certificate from "../../../../../assetss/certficate1.png";
 function MobileappCertificate() {
   return (
-    <div className="bg-white mb-20 pt-10">
+    <div className="bg-white mb-5 pt-10">
       <div className="h-auto grid grid-cols-1 md:grid-cols-2 gap-8 p-4 justify-center items-center">
         <div className="flex justify-center items-center">
           <img

@@ -61,7 +61,7 @@ const ParticularFullStack = () => {
         <WebDeveloper />
         <AboutCourses />
         <Community />
-        <hr className="text-white" />
+        {/* <hr className="text-white" /> */}
         <SuccessStory />
         <Footer />
       </div>

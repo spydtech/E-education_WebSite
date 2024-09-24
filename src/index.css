@@ -65,3 +65,6 @@ html.theme-green {
 html.theme-purple {
   background: var(--gradient-purple);
 }
+html {
+  @apply text-black dark:text-white;
+}
