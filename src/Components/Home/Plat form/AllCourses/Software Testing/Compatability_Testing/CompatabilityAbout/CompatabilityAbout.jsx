@@ -1,6 +1,8 @@
 import React from "react";
-import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
-import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
+// import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
+// import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
+import career from '../../../../../../../assetss/career.png'
+import student from '../../../../../../../assetss/student.png'
 
 const CompatabilityAbout = () => {
   const compatabilityInfo = [
@@ -8,14 +10,14 @@ const CompatabilityAbout = () => {
       title: "Student Support",
       description:
         "Learn about the latest compatibility testing techniques and tools to ensure your applications are robust and reliable across various environments.",
-      imgSrc: programmer,
+      imgSrc: student,
       imgAlt: "student-support",
     },
     {
       title: "Career Assistance",
       description:
         "Gain expertise in various compatibility testing methodologies and receive support to advance your career in this specialized field.",
-      imgSrc: assistance,
+      imgSrc: career,
       imgAlt: "career-assistance",
     },
   ];
@@ -24,7 +26,7 @@ const CompatabilityAbout = () => {
     <div className="px-3 text-center">
       <div className="">
         <p className="md:text-2xl font-bold text-[#0098F1]">
-          Discover the Ethical Hacking Program
+          Discover The Compatibility Testing Program
         </p>
       </div>
 

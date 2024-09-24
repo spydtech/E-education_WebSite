@@ -3,9 +3,9 @@ import CommunityImg from "../../../../../../../../assetss/fullstackwebdev/commun
 
 const Community = () => {
   return (
-    <div className=" px-4 p-6 relative flex justify-center mb-4 max-w-full">
+    <div className=" px-4 p-6 relative flex justify-center mb-4 max-w-full my-5">
       <div
-        className="absolute inset-0 bg-cover bg-center h-full "
+        className="absolute inset-0 bg-cover bg-center h-4/5 "
         style={{
           backgroundImage: `url(${CommunityImg})`,
         }}

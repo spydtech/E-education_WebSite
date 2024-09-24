@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Disclosure } from "@headlessui/react";
 import { FaBars, FaChevronDown, FaChevronUp } from "react-icons/fa";
-// import IMG 
 import { IoCloseSharp } from "react-icons/io5";
-// import IMG from "../assets/logo/E-eLogo.png";
+import IMG from "../assets/logo/E-educationlogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, logout } from "../State/Auth/Action";
@@ -17,7 +16,8 @@ const Navbar = () => {
   const [isAdvanceCoursesOpen, setIsAdvanceCoursesOpen] = useState(false);
   const [isPremiumCoursesOpen, setIsPremiumCoursesOpen] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
-
+  const [navigationMenu, setNavigationMenu] = useState(null);
+  const [navigationMenuOpen, setNavigationMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
   const jwt = localStorage.getItem("jwt");
@@ -79,13 +79,24 @@ const Navbar = () => {
     setShowSidebar(!showSidebar);
   };
 
+  const toggleSidebarDropdown = () => {
+    setSidebarDropdown(!sidebarDropdown); // Toggle the sidebar dropdown
+  };
+
+  const toggleNavigationMenu = (menuName) => {
+    if (navigationMenuOpen && navigationMenu === menuName) {
+      setNavigationMenuOpen(false);
+      setNavigationMenu(null);
+    } else {
+      setNavigationMenuOpen(true);
+      setNavigationMenu(menuName);
+    }
+  };
+
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown); // Toggle the dropdown
   };
 
-  const toggleSidebarDropdown = () => {
-    setSidebarDropdown(!sidebarDropdown); // Toggle the sidebar dropdown
-  };
   const toggleBasicCourses = () => setIsBasicCoursesOpen(!isBasicCoursesOpen);
   const toggleAdvanceCourses = () =>
     setIsAdvanceCoursesOpen(!isAdvanceCoursesOpen);
@@ -124,13 +135,13 @@ const Navbar = () => {
 
                 {/* Logo */}
                 <div className="flex items-center lg:justify-between flex-1 pl-8 justify-center">
-                  {/* <Link to="/" className="flex-shrink-0 ">
+                  <Link to="/" className="flex-shrink-0 ">
                     <img
                       className="h-12 w-40 lg:h-16 lg:w-56"
                       src={IMG}
                       alt="Logo"
                     />
-                  </Link> */}
+                  </Link>
 
                   {/* Desktop Search Bar */}
                   <div className="hidden lg:flex relative w-full max-w-lg items-center ml-10">
@@ -492,54 +503,156 @@ const Navbar = () => {
 
                 {/* User Action Buttons */}
                 <div className="hidden  lg:flex items-center ml-2 px-2 space-x-3">
-                  {auth.user ? (
+                  {auth.user && auth.user.firstName ? (
                     <>
-                      <Link
+                      {/* <Link
                         className="group  text-blue-400 transition-all duration-100 ease-in-out"
                         to="/mylearning"
                       >
                         <span className="block pb-[2px] hover:text-[#0098f1]   text-black   bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                           My Learning
                         </span>
-                      </Link>
+                      </Link> */}
 
                       <Link
                         className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                        to="/Mycourse"
+                        to="/QuestionForm"
                       >
                         <span className="block pb-[2px] hover:text-[#0098f1]   text-black  bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                          Course
+                          Ask Me Later
                         </span>
                       </Link>
 
                       <Link
                         className="group  text-blue-400 transition-all duration-100 ease-in-out"
-                        to="/about_us"
+                        to="/PostFeeds"
                       >
                         <span className="block pb-[2px] hover:text-[#0098f1]   text-black   bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                          About Us
+                          Feeds
                         </span>
                       </Link>
+                      {/* <Link
+                        className="group  text-blue-400 transition-all duration-100 ease-in-out"
+                        to="/mylearning"
+                      >
+                        <span className="block pb-[2px] hover:text-[#0098f1]   text-black   bg-left-bottom ml-1 bg-gradient-to-r from-[#0098f1] to-[#0098f1] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                          My Learning
+                        </span>
+                      </Link> */}
 
-                      <span className="p-2 w-10 h-10 rounded-full bg-[#0098F1]  text-white text-center font-bold">
-                        {auth.user.firstName[0].toUpperCase()}
-                      </span>
+                      {/* <Link
+                        to="/QuestionForm"
+                        className="hidden md:block text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                      ></Link> */}
+                      <div className="relative  inline-block">
+                        <button
+                          className={`inline-flex items-center justify-center h-14 px-4 py-2 text-sm font-medium transition-colors rounded-md ${
+                            navigationMenu === "getting-started"
+                              ? "border-2 border-[#0098f1]"
+                              : "border-2 border-transparent"
+                          }`}
+                          onClick={() =>
+                            toggleNavigationMenu("getting-started")
+                          }
+                        >
+                          {/* <span className="p-3 w-12 rounded-full bg-blue-400 text-white font-bold text-center cursor-pointer">
+                            {auth.user.firstName[0].toUpperCase()}
+                          </span> */}
+                          <p className=" flex justify-center items-center w-10 h-10 rounded-full bg-[#0098F1]  text-white cursor-pointer text-center font-bold">
+                            {auth.user.firstName[0].toUpperCase()}
+                          </p>
+
+                          <svg
+                            className={`relative top-[1px] ml-1 h-5 w-5 ease-out duration-300 ${
+                              navigationMenuOpen &&
+                              navigationMenu === "getting-started"
+                                ? "-rotate-180"
+                                : ""
+                            }`}
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            aria-hidden="true"
+                          >
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                          </svg>
+                        </button>
+
+                        {navigationMenuOpen &&
+                          navigationMenu === "getting-started" && (
+                            <div className="absolute z-10 mt-1 w-48 -ml-20 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                              <a
+                                href="/MyCourse"
+                                className="block mr-4 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                              >
+                                My Courses
+                              </a>
+                              <a
+                                href="/Purchases"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                              >
+                                Purchases
+                              </a>
+                              <a
+                                href="/Profile"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                              >
+                                Profile
+                              </a>
+                              <a
+                                href="/Settings"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                              >
+                                Settings
+                              </a>
+                              <a
+                                href="/"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                              >
+                                Updates
+                              </a>
+                              <a
+                                href="/WSpace"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                              >
+                                WorkSpace
+                              </a>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                              >
+                                Accomplishments
+                              </a>
+                              <a
+                                href="#"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                              >
+                                Help Center
+                              </a>
+                              <a
+                                href="/login"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                onClick={handleLogout}
+                              >
+                                Logout
+                              </a>
+                            </div>
+                          )}
+                      </div>
                       <NotificationAdd
                         onMouseOver={() => setShowTooltip(true)}
                         onMouseOut={() => setShowTooltip(false)}
                         className="text-[#0098f1] cursor-pointer"
                       />
                       {showTooltip && (
-                        <div className="absolute  right-11  z-50  top-16 mt-1 transform  mb-2 px-2 py-1 bg-[#0098f1] text-white text-sm rounded shadow-lg">
+                        <div className="absolute  right-0  z-50  top-16 mt-1 transform  mb-2 px-2 py-1 bg-[#0098f1] text-white text-sm rounded shadow-lg">
                           Notifications
                         </div>
                       )}
-                      <button
-                        onClick={handleLogout}
-                        className="bg-[#0098F1] px-2 py-2 rounded-lg text-white"
-                      >
-                        Logout
-                      </button>
                     </>
                   ) : (
                     <>
@@ -570,11 +683,11 @@ const Navbar = () => {
                 ></div>
                 <div className="   bg-white w-80 h-16 shadow-lg">
                   <div className="flex items-center justify-between px-4 py-3">
-                    {/* <div className="ml-24 h-10">
+                    <div className="ml-24 h-10">
                       <Link to="/" className="flex-shrink-0 hidden  ">
                         <img className="h-10 w-auto" src={IMG} alt="Logo" />
                       </Link>
-                    </div> */}
+                    </div>
                     <button
                       onClick={toggleSidebar}
                       className="text-[#0098F1] hover:text-[#0098F1] focus:outline-none"
@@ -947,34 +1060,129 @@ const Navbar = () => {
 
                     {/* width below 1024 */}
                     <div className="flex-col space-y-4     ml-1 px-2">
-                      {auth.user ? (
+                      {auth.user && auth.user.firstName ? (
                         <>
-                          {" "}
-                          <span className="absolute top-3 p-2 w-10 h-10 rounded-full bg-[#0098f1]  text-white text-center font-bold">
-                            {auth.user.firstName[0].toUpperCase()}
+                          <span className="block">
+                            <button
+                              className={`absolute top-1   text-[#0098f1] text-center  inline-flex items-center justify-center h-14 px-4 py-2 text-sm font-medium transition-colors rounded-md ${
+                                navigationMenu === "getting-started"
+                                  ? "border-2 border-[#0098f1]"
+                                  : "border-2 border-transparent"
+                              }`}
+                              onClick={() =>
+                                toggleNavigationMenu("getting-started")
+                              }
+                            >
+                              {/* <span className="p-3 w-12 rounded-full bg-blue-400 text-white font-bold text-center cursor-pointer">
+                              {auth.user.firstName[0].toUpperCase()}
+                            </span> */}
+                              <p className=" flex justify-center items-center w-10 h-10 rounded-full text-white  bg-[#0098f1] cursor-pointer text-center font-bold">
+                                {auth.user.firstName[0].toUpperCase()}
+                              </p>
+                              <svg
+                                className={`relative top-[1px] ml-1 h-5 w-5 ease-out duration-300 ${
+                                  navigationMenuOpen &&
+                                  navigationMenu === "getting-started"
+                                    ? "-rotate-180"
+                                    : ""
+                                }`}
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                aria-hidden="true"
+                              >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                              </svg>
+                            </button>
                           </span>
+                          {navigationMenuOpen &&
+                            navigationMenu === "getting-started" && (
+                              <div className="absolute z-10 top-14 mt-1 w-48  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                <a
+                                  href="/MyCourse"
+                                  className="block mr-4 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                >
+                                  My Courses
+                                </a>
+                                <a
+                                  href="/Purchases"
+                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                >
+                                  Purchases
+                                </a>
+                                <a
+                                  href="/Profile"
+                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                >
+                                  Profile
+                                </a>
+                                <a
+                                  href="/Settings"
+                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                >
+                                  Settings
+                                </a>
+                                <a
+                                  href="/"
+                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                >
+                                  Updates
+                                </a>
+                                <a
+                                  href="/WSpace"
+                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                >
+                                  WorkSpace
+                                </a>
+                                <a
+                                  href="#"
+                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                >
+                                  Accomplishments
+                                </a>
+                                <a
+                                  href="#"
+                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                >
+                                  Help Center
+                                </a>
+                                <a
+                                  href="/login"
+                                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                  onClick={handleLogout}
+                                >
+                                  Logout
+                                </a>
+                              </div>
+                            )}
+
                           <span className="text-white">
                             Notifications{" "}
                             {/* <NotificationAdd className="text-white cursor-pointer" /> */}
                           </span>
+
                           <Link
-                            to="/mylearning"
+                            to="/QuestionForm"
+                            className="block hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
+                          >
+                            Ask Me Later
+                          </Link>
+                          <Link
+                            to="/PostFeeds"
                             className="block  hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
                           >
-                            My Learning
+                            Feeds
                           </Link>
-                          <Link
-                            to="/Mycourse"
+                          {/* <Link
+                            to="/QuestionForm"
                             className="block hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
                           >
-                            Course
-                          </Link>
-                          <Link
-                            to="/about_us"
-                            className="block hover:text-gray-700 hover:bg-[#0098F1] text-white  rounded-lg"
-                          >
-                            About Us
-                          </Link>
+                            Ask Me
+                          </Link> */}
                         </>
                       ) : (
                         <></>
@@ -1028,4 +1236,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

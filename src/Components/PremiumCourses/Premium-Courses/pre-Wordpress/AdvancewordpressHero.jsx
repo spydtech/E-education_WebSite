@@ -12,26 +12,28 @@ const AdvanceWordpressHero = () => {
   };
 
   return (
-    <div className="relative w-full h-[500px] lg:h-[408px] flex items-center justify-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${student})`,
-        }}
-      ></div>
 
-      <div className="relative z-10 text-center text-white p-6 md:p-10">
-        <p className="text-[18px] md:text-[20px] font-medium text-white px-4 mb-10 max-w-[1000px] mx-auto">
-        Dive deep into advanced WordPress concepts, including custom theme development, plugin creation, performance optimization, and security best practices. Enhance your website development expertise with cutting-edge WordPress techniques.
-        </p>
-        <button
-          onClick={handleEnroll}
-          className="px-6 py-3 text-[20px] font-medium text-white bg-[#0098f1] rounded-xl"
-        >
-          Enroll Now
-        </button>
-      </div>
-    </div>
+    <>
+     <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1726473509/WhatsApp_Image_2024-09-15_at_11.16.11_PM_1_uilojh.jpg")' }}>
+  <div className="absolute inset-0 flex items-center justify-center">
+    <p className="text-center text-white text-[20px] font-medium px-4 max-w-[800px]">
+      Discover how WordPress can transform using data and algorithms
+       to enable AI to imitate the way that humans learn, gradually
+       improving its accuracy.
+    </p>
+  </div>
+  <div className="absolute inset-0 flex items-end justify-center pb-10">
+    <button
+      onClick={handleEnroll}
+      className="px-6 py-3 text-[20px] font-medium text-white bg-[#0098f1] rounded-xl"
+    >
+      Enroll Now
+    </button>
+  </div>
+</div>
+
+    </>
+
   );
 };
 

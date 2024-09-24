@@ -2,38 +2,24 @@ import React, { useState } from "react";
 
 function CloudComputingIntroduction() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  // const [currentSlide, setCurrentSlide] = useState(0);
 
-  const Slide = ({ heading, items }) => {
-    return (
-      <div className="w-full flex-shrink-0 px-2 py-8 flex flex-col h-full relative overflow-hidden">
-        <div className="flex-grow ">
-          <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
+  const Slide = ({ heading, items }) => (
+    <div className="w-full flex-shrink-0 px-4 py-8">
+      <div className="h-auto flex justify-center">
+        <div>
+          <h2 className="text-lg md:text-2xl lg:text-3xl font-medium mb-4 text-white font-sans">
             {heading}
           </h2>
-          <ul className="list-disc list-outside text-lg lg:text-xl pl-10 text-start text-white">
+          <ul className="list-disc list-outside pl-5 text-md lg:text-xl text-white">
             {items.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
           </ul>
         </div>
-        <div className="absolute left-0 right-0 bottom-0 flex justify-between">
-          <button
-            onClick={goToPreviousSlide}
-            className="hover:text-[#f6ac14] text-white font-bold rounded px-4"
-          >
-            Previous
-          </button>
-          <div className="text-white">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
-          <button
-            onClick={goToNextSlide}
-            className="hover:text-[#f6ac14] text-white font-bold rounded px-4"
-          >
-            Next
-          </button>
-        </div>
       </div>
-    );
-  };
+    </div>
+  );
 
   const slidesData = [
     {
@@ -79,39 +65,50 @@ function CloudComputingIntroduction() {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-auto overflow-x-hidden h-auto mb-16">
-      <div className="flex items-center justify-center">
-        <div className="text-start px-4 lg:px-10">
-          <div>
-            <p className="text-[#f6ac14] underline-offset-2 underline text-2xl lg:text-[24px] font-bold">
-              Introduction
-            </p>
-          </div>
-          <div className="py-5">
-            <p className="text-xl lg:text-5xl font">
-              So what is
-              <span className="text-[#f6ac14] inline pl-2">
-                Cloud Computing?
-              </span>
-            </p>
-          </div>
-          <div>
-            <p className="text-lg lg:text-xl text-gray-500">
-              Brief overview of Cloud Computing with AWS
-            </p>
-          </div>
+    <div className="flex flex-col space-y-3 md:flex-row md:justify-around md:items-center lg:h-[450px] px-3 md:mb-9 mb-5">
+      <div className="">
+        <div>
+          <p className="text-[#0098F1] underline-offset-2 underline md:text-2xl lg:text-4xl font-bold">
+            Introduction
+          </p>
+        </div>
+        <div className="mt-2">
+          <p className="md:text-lg lg:text-3xl">
+            Discover
+            <span className="text-[#f6ac14] inline pl-2"> Cloud Computing</span>
+          </p>
+        </div>
+        <div>
+          <p className="md:text-lg lg:text-3xl mt-2">
+            Brief about Cloud Computing with AWS
+          </p>
         </div>
       </div>
-      <div className="h-auto lg:h-[650px] flex justify-center">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-4 lg:px-14 xl:px-36 sm:mt-8 lg:mt-0 lg:mr-32">
-          <div className="bg-[#0098f1] relative w-full lg:w-[500px] lg:h-[520px] md:h-[400px] sm:h-[450px] h-[620px] p-5 mt-10 mb-2 shadow-xl sm:rounded-lg">
-            <div className="relative w-full h-full">
-              <Slide
-                heading={slidesData[currentSlide].heading}
-                items={slidesData[currentSlide].items}
-              />
-            </div>
-          </div>
+
+      <div className="bg-[#0098f1] md:w-[400px] lg:w-[550px] lg:min-h-[420px] md:p-5 lg:flex flex-col justify-between ">
+        <div className="flex text-white">
+          <Slide
+            heading={slidesData[currentSlide].heading}
+            items={slidesData[currentSlide].items}
+          />
+        </div>
+
+        <div className="flex justify-between max-md:p-4">
+          <button
+            onClick={goToPreviousSlide}
+            className="text-white hover:text-black font-bold  rounded"
+          >
+            Previous
+          </button>
+          <div className="text-white text-sm">{`Page ${currentSlide + 1}/${
+            slidesData.length
+          }`}</div>
+          <button
+            onClick={goToNextSlide}
+            className="text-white hover:text-black font-bold  rounded"
+          >
+            Next
+          </button>
         </div>
       </div>
     </div>

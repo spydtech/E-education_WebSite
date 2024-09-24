@@ -93,7 +93,7 @@ function Tabs() {
           <>
             {group.groupName}
             <span
-              className="ml-2 mt-1 text-gray-500 hover:text-gray-700 cursor-pointer"
+              className="ml-2  text-[#001510] hover:text-[#001510] cursor-pointer"
               onClick={() => handleEditGroup(group.id, group.groupName)}
             >
               <FaPencilAlt />
@@ -103,18 +103,18 @@ function Tabs() {
           <>
             <input
               type="text"
-              className="border border-gray-300 rounded px-2 py-1"
+              className="border border-gray-300 text-[#001510] rounded px-2 py-1"
               value={editedGroupName}
               onChange={(e) => setEditedGroupName(e.target.value)}
             />
             <button
-              className="ml-2 bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600"
+              className="ml-2 bg-gradient-to-r from-[#00BF8F] to-[#001510] hover:bg-green-500 text-white px-2 py-1 rounded "
               onClick={() => handleSaveEdit(group.id)}
             >
               Save
             </button>
             <span
-              className="ml-2 mt-1 text-red-500 hover:text-red-700 cursor-pointer"
+              className="ml-2 mt-1 text-[#001510] hover:text-red-700 cursor-pointer"
               onClick={() => handleDeleteGroup(group.id)}
             >
               <FaTrashAlt />
@@ -151,8 +151,8 @@ function Tabs() {
                     href="#"
                     className={`bg-white inline-block py-2 px-4 font-semibold ${
                       openTab === course.id
-                        ? "border-l border-t border-r rounded-t text-blue-700"
-                        : "text-black hover:text-blue-700"
+                        ? "border-l border-t border-r rounded-t text-[#001510]"
+                        : "text-black hover:text-[#001510]"
                     }`}
                   >
                     {course.name}
@@ -173,7 +173,7 @@ function Tabs() {
           </div>
         </>
       ) : (
-        <p className="text-center text-gray-500">No existing groups</p>
+        <p className="text-center text-[#001510]">No existing groups</p>
       )}
     </div>
   );

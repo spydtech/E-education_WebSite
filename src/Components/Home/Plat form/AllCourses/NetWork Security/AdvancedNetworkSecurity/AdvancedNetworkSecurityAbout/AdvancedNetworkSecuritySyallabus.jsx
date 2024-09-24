@@ -24,7 +24,7 @@ function AdvancedNetworkSecuritySyallabus() {
 
   return (
     <>
-      <div className=" px-4 mb-2 flex flex-col md:flex-row md:justify-between md:items-center md:gap-4 md:px-10">
+      <div className=" px-4 mb-5 flex flex-col md:flex-row md:justify-between md:items-center md:gap-4 md:px-10">
         <div className=" mb-3 md:w-2/5">
           <h2 className="md:text-2xl text-[#0098F1] font-bold mb-2">
             Discover What You Will Learn
@@ -39,7 +39,7 @@ function AdvancedNetworkSecuritySyallabus() {
         {data.map((category, index) => (
           <div
             key={index}
-            className="text-white bg-[#0098f1] rounded-md p-3 md:w-2/4"
+            className="text-white bg-[#0098f1] rounded-md p-4 md:w-2/4"
           >
             <h3 className="md:text-3xl font-semibold mb-2">
               {category.heading}

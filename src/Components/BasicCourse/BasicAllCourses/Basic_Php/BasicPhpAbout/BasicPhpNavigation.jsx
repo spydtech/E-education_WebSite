@@ -109,7 +109,7 @@ const BasicPhpNavigation = () => {
       </nav>
 
       {/* Section Content */}
-      <div className="">
+      <div className="mx-5">
         {currentSection === 0 && <BasicPhpIntroduction />}
         {currentSection === 1 && <BasicPhpKeyHighights />}
         {currentSection === 2 && <BasicPhpCareersOutcomes />}

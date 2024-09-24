@@ -22,7 +22,7 @@ const Delivery_Methods = () => {
   };
 
   const ImageComponent = ({ src, isVisible, title, onClick }) => {
-    const sizeClass = isVisible ? "w-full md:w-1/3 h-full" : "w-1/2 md:w-1/6 h-64";
+    const sizeClass = isVisible ? " w-full md:w-1/3 h-full" : "w-1/2 md:w-1/6 h-64";
     const opacityClass = isVisible ? "opacity-100" : "opacity-20";
     return (
       <div
@@ -54,8 +54,8 @@ const Delivery_Methods = () => {
   const titles = ["Training", "Guided", "Autodidac", "Clarificat"];
 
   return (
-    <div className="container mx-auto py-10 px-4">
-      <h2 className="sm:text-lg text-xl md:text-4xl lg:text-5xl font-semibold text-[#0098F1] text-center mb-6 whitespace-nowrap">
+    <div className=" px-4">
+      <h2 className=" font-semibold text-[#0098F1] text-center mb-6 whitespace-nowrap md:text-xl lg:text-2xl">
         Our{" "}
         <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
           Available Delivery Methods
@@ -72,8 +72,8 @@ const Delivery_Methods = () => {
           />
         ))}
       </div>
-      <div className="flex sm:hidden justify-center items-center space-x-4">
-        <button className="p-2 rounded-full text-white" onClick={handlePrev}>
+      <div className="flex sm:hidden justify-center items-center space-x-2">
+        <button className=" rounded-full text-white" onClick={handlePrev}>
           <IoIosArrowBack className="text-2xl text-[#F6AC14]" />
         </button>
         <ImageComponent
@@ -82,7 +82,7 @@ const Delivery_Methods = () => {
           title={titles[visibleImage - 1]}
           onClick={() => handleImageClick(visibleImage)}
         />
-        <button className="p-2 rounded-full text-white" onClick={handleNext}>
+        <button className=" rounded-full text-white" onClick={handleNext}>
           <IoIosArrowForward className="text-2xl text-[#F6AC14]" />
         </button>
       </div>

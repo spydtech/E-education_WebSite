@@ -112,7 +112,7 @@ const CybersecurityEssentialsNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div>
+      <div className="mx-5">
         {" "}
         {currentSection === 0 && <Cybersecurityintroduction />}
         {currentSection === 1 && <CybersecurityKeyHighelets />}

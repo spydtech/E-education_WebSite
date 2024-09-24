@@ -132,8 +132,8 @@ const TraineeTable = () => {
   }, [groupedData]);
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
+    <div className="container  relative h-[400px] rounded-xl shadow-xl mx-auto p-4">
+      <h1 className=" font-bold text-center text-[#001510] mb-6">
         Count of Courses Purchased - Total: {totalCoursesYear}
         {selectedMonth !== "All Months" && (
           <span>
@@ -142,16 +142,16 @@ const TraineeTable = () => {
           </span>
         )}
       </h1>
-      <div className="mb-4 flex justify-center">
+      <div className="mt-4 absolute flex justify-center">
         <label
           htmlFor="year-select"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-[#001510]"
         ></label>
         <select
           id="year-select"
           value={selectedYear}
           onChange={handleYearChange}
-          className="mt-1 block w-52 pl-3 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 block w-30 pl-3 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
         >
           {Object.keys(data).map((year) => (
             <option key={year} value={year}>
@@ -161,16 +161,16 @@ const TraineeTable = () => {
         </select>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex mt-14 absolute justify-center">
         <label
           htmlFor="month-select"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-[#001510]"
         ></label>
         <select
           id="month-select"
           value={selectedMonth}
           onChange={handleMonthChange}
-          className="mt-1 block w-52 pl-3 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          className="mt-1 block w-30 pl-3 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
         >
           <option value="All Months">All Months</option>
           {Object.keys(data[selectedYear]).map((month) => (

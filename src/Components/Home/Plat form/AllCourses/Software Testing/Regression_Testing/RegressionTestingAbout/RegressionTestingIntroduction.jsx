@@ -84,13 +84,13 @@ function RegressionTestingIntroduction() {
             <p className="md:text-lg lg:text-3xl">
               So what is
               <span className="text-[#f6ac14] inline pl-2">
-                Compatibility Testing?
+                Regression Testing?
               </span>
             </p>
           </div>
           <div>
             <p className="md:text-lg lg:text-3xl mt-2">
-              Brief about Compatibility Testing
+              Brief about Regression Testing
             </p>
           </div>
         </div>

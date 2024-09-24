@@ -5,6 +5,7 @@ const AllPaymentsTable = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const jwt = localStorage.getItem("jwt");
   const [userData, setUserData] = useState([]);
+  const [searchBy, setSearchBy] = useState("userId");
 
   useEffect(() => {
     axios
@@ -14,7 +15,6 @@ const AllPaymentsTable = () => {
         },
       })
       .then((response) => {
-        console.log("API response:", response);
         if (Array.isArray(response.data)) {
           setUserData(response.data);
         } else {
@@ -45,31 +45,69 @@ const AllPaymentsTable = () => {
     setSearchTerm(event.target.value);
   };
 
+  const handleSearchByChange = (event) => {
+    setSearchBy(event.target.value);
+  };
+
+  // Updated filtering logic
   const filteredData = userData.filter((item) => {
     const lowerCaseSearchTerm = searchTerm.toLowerCase();
-    return (
-      item.userId.toLowerCase().includes(lowerCaseSearchTerm) ||
-      item.TransactionId.toLowerCase().includes(lowerCaseSearchTerm) ||
-      item.fullName.toLowerCase().includes(lowerCaseSearchTerm) ||
-      item.email.toLowerCase().includes(lowerCaseSearchTerm) ||
-      item.Date.toLowerCase().includes(lowerCaseSearchTerm) ||
-      item.paymentMethod.toLowerCase().includes(lowerCaseSearchTerm)
-    );
+
+    // Convert the search term based on the field type
+    if (searchBy === "userId") {
+      return String(item.userId).toLowerCase().includes(lowerCaseSearchTerm); // Convert to string
+    } else if (searchBy === "TransactionId") {
+      return String(item.razorpayPaymentId)
+        .toLowerCase()
+        .includes(lowerCaseSearchTerm); // Convert to string
+    } else if (searchBy === "fullName") {
+      return item.userName.toLowerCase().includes(lowerCaseSearchTerm); // Ensure it’s a string
+    } else if (searchBy === "email") {
+      return item.userEmail.toLowerCase().includes(lowerCaseSearchTerm); // Ensure it’s a string
+    } else if (searchBy === "Date") {
+      return item.createdAt.toLowerCase().includes(lowerCaseSearchTerm); // Ensure it’s a string
+    }
+    return true;
   });
+
+  const formatToIndianDateTime = (dateString) => {
+    const date = new Date(dateString);
+    return date.toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true, // For 12-hour format
+    });
+  };
 
   return (
     <div className="overflow-x-auto">
-      <div className="flex w-[250px] rounded-lg  items-center mb-4 bg-[#f6ac14]">
+      <div className="flex w-[500px] rounded-lg items-center mb-4 bg-[#f6ac14] p-2">
+        <select
+          value={searchBy}
+          onChange={handleSearchByChange}
+          className="mr-2 border border-gray-400 focus:border-green-500 rounded"
+        >
+          <option value="userId">Search by UserId</option>
+          <option value="TransactionId">Search by TransactionId</option>
+          <option value="fullName">Search by Full Name</option>
+          <option value="email">Search by Email</option>
+          <option value="Date">Search by Date</option>
+        </select>
         <input
           type="text"
           value={searchTerm}
           onChange={handleSearch}
-          className="p-3 border w-[250px] bg-[#f6ac14] text-[15px] text-white placeholder:text-gray-500 outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none rounded-lg"
-          placeholder="Search Here...."
+          className="p-3 w-full bg-[#001510] text-center text-[15px] text-white placeholder:text-white outline-none focus:ring-0 focus:border-none border-none rounded-lg"
+          placeholder="Search here"
         />
       </div>
       <table className="min-w-full text-nowrap">
-        <thead className="bg-[#0098f1] text-white">
+        <thead className="bg-[#001510] text-white">
           <tr className="h-12">
             <th className="px-4 py-2 text-left">Date</th>
             <th className="px-4 py-2 text-left">UserId</th>
@@ -83,18 +121,18 @@ const AllPaymentsTable = () => {
           </tr>
         </thead>
         <tbody>
-          {filteredData.map((item, index) => (
+          {[...filteredData].reverse().map((item, index) => (
             <tr
               key={index}
-              className="hover:bg-[#0098f1] hover:bg-opacity-10 text-[#0098f1]"
+              className="hover:bg-[#2C3E50] hover:bg-opacity-10 text-[#001510]"
             >
-              <td className="px-4 py-2">{item.Date}</td>
+              <td className="px-4 py-2">{formatToIndianDateTime(item.createdAt)}</td>
               <td className="px-4 py-2">{item.userId}</td>
-              <td className="px-4 text-nowrap py-2">{item.fullName}</td>
-              <td className="px-4 py-2">{item.email}</td>
+              <td className="px-4 text-nowrap py-2">{item.userName}</td>
+              <td className="px-4 py-2">{item.userEmail}</td>
               <td className="px-4 py-2">{item.courseDetails}</td>
               <td className="px-4 py-2">{item.paymentMethod}</td>
-              <td className="px-4 py-2">{item.TransactionId}</td>
+              <td className="px-4 py-2">{item.razorpayPaymentId}</td>
               <td className="px-4 py-2">{item.totalAmount}</td>
               <td className={`px-4 py-2 ${getStatusClass(item.status)}`}>
                 {item.status}

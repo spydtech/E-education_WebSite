@@ -3,25 +3,19 @@ import React from "react";
 function CompatabilitySyllabus() {
   const data = [
     {
-      heading: "Introduction to Cloud Computing",
+      heading: "Introduction to Compatibility Testing",
       subheading: "Topics (16)",
       items: [
-        "Overview of Cloud Computing",
-        "Cloud Service Models (IaaS, PaaS, SaaS)",
-        "Cloud Deployment Models (Public, Private, Hybrid)",
-        "Cloud Infrastructure Components",
-        "Virtualization in Cloud Computing",
-        "Scalability and Elasticity",
-        "Security in Cloud Computing",
-        "Identity and Access Management (IAM)",
-        "Data Privacy and Compliance",
-        "Cloud Networking Fundamentals",
-        "Load Balancing and Content Delivery Networks (CDNs)",
-        "High Availability and Disaster Recovery",
-        "Serverless Computing",
-        "Big Data and Analytics in the Cloud",
-        "Artificial Intelligence and Machine Learning in the Cloud",
-        "Future Trends in Cloud Computing",
+        "Overview of Compatibility Testing",
+        "Types of Compatibility Testing",
+        "Cross-Browser Compatibility",
+        "Cross-Platform Compatibility",
+        "Mobile Device Compatibility",
+        "Backward Compatibility",
+        "Forward Compatibility",
+        "Browser Version Compatibility",
+        "Localization and Internationalization",
+        "Tools for Compatibility Testing"
       ],
     },
   ];
@@ -34,7 +28,7 @@ function CompatabilitySyllabus() {
         </h2>
         <p className="md:text-lg text-gray-500">
           Dive into the comprehensive curriculum covering key concepts,
-          practical applications, and advanced topics in cloud computing.
+          practical applications, and advanced topics in compatibility testing.
         </p>
       </div>
 
