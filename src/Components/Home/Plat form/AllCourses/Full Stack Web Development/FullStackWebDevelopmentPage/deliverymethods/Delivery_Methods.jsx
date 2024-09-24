@@ -22,14 +22,20 @@ const Delivery_Methods = () => {
   };
 
   const ImageComponent = ({ src, isVisible, title, onClick }) => {
-    const sizeClass = isVisible ? " w-full md:w-1/3 h-full" : "w-1/2 md:w-1/6 h-64";
+    const sizeClass = isVisible
+      ? " w-full md:w-1/3 h-full"
+      : "w-1/2 md:w-1/6 h-64";
     const opacityClass = isVisible ? "opacity-100" : "opacity-20";
     return (
       <div
-        className={`relative transition-transform duration-500 ease-in-out transform ${sizeClass} ${opacityClass} flex-shrink-0 cursor-pointer`}
+        className={`relative mb-5 md:mb-8 transition-transform duration-500 ease-in-out transform ${sizeClass} ${opacityClass} flex-shrink-0 cursor-pointer`}
         onClick={onClick}
       >
-        <img src={src} alt={title} className="w-full h-96 object-cover transition-all duration-500 ease-in-out" />
+        <img
+          src={src}
+          alt={title}
+          className="w-full h-96 object-cover transition-all duration-500 ease-in-out"
+        />
         {isVisible && (
           <div
             className="absolute bottom-0 left-0 bg-[#F6AC14] h-28 text-white p-4 w-full md:w-40 transition-all duration-500 ease-in-out"
