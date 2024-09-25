@@ -1,6 +1,6 @@
 import React from "react";
-import programmer from "../../../../../assets/dataAnalatics/programmer.jpg";
-import assistance from "../../../../../assets/dataAnalatics/assistance.jpg";
+import programmer from "../../../../../assetss/student/AboutProgram/programmer.jpg";
+import assistance from "../../../../../assetss/student/AboutProgram/assistance.jpg";
 
 const PowerBiAbout = () => {
   const PowerBiInfo = [
@@ -8,14 +8,14 @@ const PowerBiAbout = () => {
       title: "Career Assistance",
       description:
         "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
-      imgSrc: programmer, 
+      imgSrc: programmer,
       imgAlt: "career-assistance",
     },
     {
       title: "Student Support",
       description:
         'Access student support via support@machinelearning.com or through the "ask us?" option on our learning platform for urgent queries.',
-      imgSrc: assistance,  
+      imgSrc: assistance,
       imgAlt: "student-support",
     },
   ];
