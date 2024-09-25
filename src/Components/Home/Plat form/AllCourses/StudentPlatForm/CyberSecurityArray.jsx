@@ -112,8 +112,8 @@ const CyberSecurityArray = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
       <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center justify-center mb-4">
-          <span className="bg-gradient-to-r text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
+        <div className="flex items-center justify-center   mb-4">
+          <span className="bg-gradient-to-r text-4xl  py-1 font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
             Expand Cyber Security Courses
           </span>
         </div>

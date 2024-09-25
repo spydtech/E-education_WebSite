@@ -25,7 +25,7 @@ function MobileAppSyllabus() {
   ];
 
   return (
-    <div className="py-1">
+    <div className="py-1 mb-5">
       <div className="flex flex-col lg:flex-row items-center justify-between px-4">
         <div className="lg:w-1/2 w-full mb-8 lg:mb-0 px-10">
           <div className="text-start">

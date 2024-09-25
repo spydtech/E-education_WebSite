@@ -84,7 +84,9 @@ function IntegrationIntroduction() {
         <div className="mt-2">
           <p className="md:text-lg lg:text-3xl">
             So what is
-            <span className="text-[#f6ac14] inline pl-2">Integration Testing</span>
+            <span className="text-[#f6ac14] inline pl-2">
+              Integration Testing
+            </span>
           </p>
         </div>
         <div>
@@ -110,7 +112,9 @@ function IntegrationIntroduction() {
           >
             Previous
           </button>
-          <div className="text-white text-sm">{`Page ${currentSlide + 1}/${slidesData.length}`}</div>
+          <div className="text-white text-sm">{`Page ${currentSlide + 1}/${
+            slidesData.length
+          }`}</div>
           <button
             onClick={goToNextSlide}
             className="text-white hover:text-black font-bold  rounded"

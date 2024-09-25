@@ -6,7 +6,84 @@ const MyLearningHero = () => {
   return (
     <>
       <Navbar />
-      <div className="h-screen w-screen bg-black">
+ 
+      <div className="grid grid-cols-1 md:grid-cols-10 gap-4 p-5 md:p-10">
+        <div className="col-span-1 md:col-span-6 flex flex-col justify-center">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-tight whitespace-nowrap text-center sm:text-left">
+  Learn Anything Anywhere My <br />
+  <span className="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] text-transparent bg-clip-text">
+    Learning Expands 
+  </span> Your
+  <br />
+  Knowledge.
+</h1>
+
+
+          <p className="mt-4 text-lg md:text-2xl">
+            My Learning My Learning My Learning My Learning My Learning My Learning My Learning My Learning My Learning My Learning My Learning My Learning
+          </p>
+        </div>
+
+        <div className="col-span-1 md:col-span-4 flex justify-center items-center">
+  <img 
+    src="https://res.cloudinary.com/dfftgkkev/image/upload/v1727165273/image_10_bzzp6u.png" 
+    alt="Main Image" 
+    className="max-w-[350px] w-full h-auto object-contain border-2 border-blue-500 rounded-full p-1" 
+  />
+</div>
+
+<div className="col-span-1 md:col-span-10">
+  <div className="flex items-center justify-center md:justify-start ml-4">
+    {[...Array(5)].map((_, index) => (
+      <img
+        key={index}
+        src="https://res.cloudinary.com/dfftgkkev/image/upload/v1727169533/image_11_ev10kg.png"
+        alt={`Image ${index + 1}`}
+        className="w-[60px] h-[60px] object-cover rounded-full -ml-3"
+        style={{ zIndex: 5 - index }} // Adjust zIndex to maintain overlap
+      />
+    ))}
+    <h1 className="text-2xl ml-3">+1200</h1>
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* <div className="h-screen w-screen bg-black">
         <div className="mx-auto max-w-7xl pt-16 sm:pt-24">
           <div className="space-y-8 lg:space-y-0 lg:grid lg:grid-cols-12 lg:gap-8">
             <div className="px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
@@ -120,7 +197,7 @@ const MyLearningHero = () => {
                 height={54}
               />
             </a> */}
-                </div>
+                {/* </div>
               </div>
             </div>
             <div className="flex items-center w-full col-span-6">
@@ -142,8 +219,7 @@ const MyLearningHero = () => {
             </div>
           </div>
         </div>
-      </div>
-
+      </div> */}
       <MyLearning />
       <FooterPart />
     </>

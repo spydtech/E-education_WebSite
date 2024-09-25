@@ -1,7 +1,6 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
-import fullstack from "../../assetss/student/studentCourses/full_stack.png"
+import fullstack from "../../assetss/student/studentCourses/full_stack.png";
 import science from "../../assetss/student/studentCourses/data-science.png";
 import cyber from "../../assetss/student/studentCourses/cyber-security (1).png";
 import ethical from "../../assetss/student/studentCourses/hacker.png";
@@ -10,67 +9,64 @@ import security from "../../assetss/student/studentCourses/cyber-security.png";
 import { FiArrowRight } from "react-icons/fi";
 import { motion } from "framer-motion";
 
-
 const CourseCard = () => {
-  
   const courses = [
     {
       title: " Web Development",
       image: fullstack,
-      description:"Build and maintain websites using various programming languages and frameworks.",
+      description:
+        "Build and maintain websites using various programming languages and frameworks.",
       link: "/fullStack_WebDevelopment/fullStack-Web-Development",
     },
     {
-     
       title: "Software Testing",
       image: science,
       description:" Master techniques and tools for effective software testing and quality assurance.",
       link: "/software_Testing",
     },
     {
-  
       title: " Php",
-      image:  cyber,
-      description:" Develop dynamic and server-side applications using the PHP scripting language.",
+      image: cyber,
+      description:
+        " Develop dynamic and server-side applications using the PHP scripting language.",
       link: "/php",
     },
     {
-      
       title: " Java",
-      image:  ethical ,
-      description:"Write platform-independent applications using the robust and versatile Java programming language.",
+      image: ethical,
+      description:
+        "Write platform-independent applications using the robust and versatile Java programming language.",
       link: "/java",
     },
     {
-    
       title: "Wordpress",
       image: testing,
-      description:"Create and manage websites and blogs with the WordPress content management system.",
+      description:
+        "Create and manage websites and blogs with the WordPress content management system.",
       link: "/wordpress",
     },
     {
-    
       title: " JavaScript",
       image: security,
-      description:" Enhance web interactivity and functionality using the versatile JavaScript language.",
+      description:
+        " Enhance web interactivity and functionality using the versatile JavaScript language.",
       link: "/javaScript",
     },
     {
-     
       title: " C/C++",
       image: testing,
-      description:"Develop high-performance applications and system software with C and C++.",
+      description:
+        "Develop high-performance applications and system software with C and C++.",
       link: "/c_c++",
     },
     {
-     
       title: "UI/UX Design",
       image: testing,
-      description:" Design user interfaces and experiences that are intuitive, engaging, and visually appealing.",
+      description:
+        " Design user interfaces and experiences that are intuitive, engaging, and visually appealing.",
       link: "/ui_ux_design",
-    }
-    
-  ]
+    },
+  ];
 
   return (
 
@@ -132,6 +128,5 @@ const CourseCard = () => {
 
     </>
   );
-   
-  };
-  export default CourseCard;
+};
+export default CourseCard;

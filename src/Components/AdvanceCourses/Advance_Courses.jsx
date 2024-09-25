@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import Rectangle from "../../assetss/student/studentHome.png";
+import Rectangle from "../../assetss/professionalimages/image5.png";
 import Footer from "../Home/footer/Footer";
 import Navbar from "../Navbar";
 import { FiArrowRight } from "react-icons/fi";

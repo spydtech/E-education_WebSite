@@ -71,9 +71,9 @@ const AdvancewordpressCard = () => {
                 className="group  border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
               >
                 <a href="#">
-                  <div className="h-[180px]">
+                  <div className="h-[180px] justify-center items-center flex">
                     <img
-                      className="w-full h-full bg-cover"
+                      className="w-[300px] h-[220px] p-2 bg-cover"
                       src={course.imgSrc}
                       alt={`Project ${index + 1}`}
                     />
