@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import hero from "../../../../../../assetss/student/dataScience/bigdata/hero.jpg";
 const BigDataHero = () => {
   const [courseName] = useState("Big Data"); // Placeholder for course name
   const [coursePrice] = useState(14999);
@@ -14,31 +14,31 @@ const BigDataHero = () => {
   };
   const navigate = useNavigate();
   return (
-    <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1726473975/WhatsApp_Image_2024-09-15_at_11.16.12_PM_nvvaj5.jpg")' }}>
-    <div className="absolute inset-0 flex items-center justify-center">
-      <p className="text-center text-white text-[16px] md:text-[20px] font-medium px-4 leading-relaxed">
-        Explore the power of data visualization in transforming complex datasets into intuitive  visual
-        <span className="hidden md:inline"> <br /></span>
-        narratives. Our data visualization solutions empower your business to uncover
-        <span className="hidden md:inline"> <br /></span>
-          hidden patterns, trends, and correlations, enabling data-driven decisions
-        <span className="hidden md:inline"> <br /></span>
-        that drive success and keep you ahead of the competition.
-      </p>
-    </div>
-    <div className="absolute inset-0 flex items-end justify-center pb-5 md:pb-10">
-      <button
-        onClick={handleEnroll}
-        className="px-4 py-2 text-[16px] md:text-[20px] font-medium text-white bg-[#0098f1] rounded-xl"
-      >
-        Enroll Now
-      </button>
-    </div>
-  </div>
-  
-  
+    <div className="relative">
+      <div
+        className=" w-full h-[370px] bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${hero})`,
+        }}
+      ></div>
+      <div className="absolute inset-0 flex items-center justify-center px-[40px] md:px-[120px] lg:px-[200px]">
+        <div className="text-white text-lg md:text-xl lg:text-2xl font-medium  text-center">
+          {" "}
+          Explore the power of data visualization in transforming complex
+          datasets into intuitive visual narratives. Data visualization
+          solutions empower your business enabling data-driven decisions that
+          drive success.
+        </div>
 
-  )
+        <button
+          onClick={handleEnroll}
+          className="absolute bottom-5 lg:bottom-12 px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl  transition duration-200"
+        >
+          Enroll Now
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default BigDataHero;
