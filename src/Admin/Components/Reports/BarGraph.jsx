@@ -132,7 +132,7 @@ const TraineeTable = () => {
   }, [groupedData]);
 
   return (
-    <div className="container  relative h-[400px] rounded-xl shadow-xl mx-auto p-4">
+    <div className=" md:w-[350px] w-[310px]  relative h-[400px] rounded-xl shadow-xl mx-auto p-4">
       <h1 className=" font-bold text-center text-[#001510] mb-6">
         Count of Courses Purchased - Total: {totalCoursesYear}
         {selectedMonth !== "All Months" && (
@@ -191,11 +191,11 @@ const TraineeTable = () => {
         )}
       </div> */}
 
-      <div className="mb-4 text-white w-auto h-[400px] flex justify-center items-center">
+      <div className="mb-4 text-white lg:h-[380px]  flex justify-center items-center">
         <canvas
           ref={chartRef}
           id="courseChart"
-          width="400"
+          width="300"
           height="200"
         ></canvas>
       </div>

@@ -286,11 +286,11 @@ const TraineeTable = () => {
   const groupedData = groupDataByCourse(dataToDisplay);
 
   return (
-    <div className="container mx-auto p-4">
+    <div className=" p-4">
       <h1 className="text-3xl text-center font-bold text-[#001510]">
         User Information{" "}
       </h1>
-      <div className=" flex gap-2">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-2">
       <div className="mb-4 ">
         <label
           htmlFor="year-select"

@@ -1,5 +1,7 @@
 import React from 'react';
-
+import { useDispatch, useSelector } from "react-redux";
+// import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle"; 
+import ThemeToggle from '../../Components/trainee/TraineeDashboard/Theamtoggle';
 const PaymentData = () => {
   // Sample data array
   const paymentData = [
@@ -9,11 +11,11 @@ const PaymentData = () => {
     { date: '5/6/2024', userId: '42322', fullName: 'User D', email: 'userd@email.com', course: 'React', paymentMethod: 'UPI' },
     { date: '6/7/2024', userId: '42326', fullName: 'User E', email: 'usere@email.com', course: 'Node.js', paymentMethod: 'Cash' }
   ];
-
+  const themes= localStorage.getItem("theme")
   return (
-    <div className="flex flex-col justify-center overflow-x-auto p-4">
+    <div className={` flex flex-col justify-center overflow-x-auto p-4`}>
       <h1 className='text-[#001510] font-semibold text-xl py-2'>Payment Method</h1>
-      <div className="max-w-6xl">
+      <div className={` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "}  max-w-[1140px]`}>
         <table className="min-w-full border-collapse overflow-hidden">
           <thead>
             <tr className="bg-[#001510] text-white">
@@ -27,7 +29,7 @@ const PaymentData = () => {
           </thead>
           <tbody>
             {paymentData.map((data, index) => (
-              <tr key={index} className="bg-white text-[#001510]">
+              <tr key={index}>
                 <td className="px-4 py-2 border">{data.date}</td>
                 <td className="px-4 py-2 border">{data.userId}</td>
                 <td className="px-4 py-2 border">{data.fullName}</td>
