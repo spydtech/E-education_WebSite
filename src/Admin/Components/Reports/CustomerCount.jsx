@@ -85,7 +85,7 @@ const MonthlyCustomerBarGraph = () => {
   };
 
   return (
-    <div className="container relative h-[400px] shadow-xl rounded-xl mx-auto p-4">
+    <div className="md:w-[350px] w-[310px] relative h-[400px] shadow-xl rounded-xl  mx-auto p-4 ">
       <h1 className=" font-bold text-center text-[#001510] mb-6">
         Customer Growth - Total: {totalCustomers}
       </h1>
@@ -112,7 +112,7 @@ const MonthlyCustomerBarGraph = () => {
       </div> */}
 
       <div className="my-4 h-[400px] w-auto justify-center items-center flex">
-        <Bar data={data} options={options} />
+        <Bar data={data} options={options}  />
       </div>
     </div>
   );

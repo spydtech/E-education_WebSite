@@ -117,7 +117,7 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
       setShowTraineeDetails(false);
       setShowWarning(false);
     }
-  };
+  };save
 
   const handleAddUser = (user) => {
     onAddUser(user);
@@ -247,14 +247,14 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-500 bg-opacity-50">
             <div className="bg-white rounded-lg p-2 px-4 w-full pb-8 max-w-3xl max-h-screen overflow-y-auto">
               <div className=" flex  justify-between">
-                <h2 className="text-lg pt-6 font-medium  text-[#001510] mb-4">
-                  Select Trainee
-                </h2>
+              <h2 className="text-lg pt-6 font-medium  text-[#001510] mb-4">
+                Select Trainee
+              </h2>
                 <button
                   className=" text-white  mb-4 rounded-md hover:bg-[#001510]"
                   onClick={closeTraineeDetailsModal}
                 >
-                  <IoCloseCircle className=" text-3xl mb-4  text-[#001510] " />
+                 <IoCloseCircle className=" text-3xl mb-4  text-[#001510] " />
                 </button>
               </div>
               <input
@@ -282,7 +282,7 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
                   {traineeRows}
                 </tbody>
               </table>
-
+             
             </div>
           </div>
         )}
@@ -291,16 +291,16 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
         {showUserDetails && (
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-500 bg-opacity-50">
             <div className="bg-white rounded-lg px-4 p-2 w-full pb-8 max-w-3xl max-h-screen overflow-y-auto">
-
+              
               <div className=" flex  justify-between ">
-                <h2 className="text-lg pt-6 font-medium text-[#001510] mb-4">
-                  Select User to Add
-                </h2>
+              <h2 className="text-lg pt-6 font-medium text-[#001510] mb-4">
+                Select User to Add
+              </h2>
                 <button
                   className="mb-4 text-white rounded-md "
                   onClick={closeUserDetailsModal}
                 >
-                  <IoCloseCircle className=" text-3xl mb-4 text-[#001510] " />
+                 <IoCloseCircle className=" text-3xl mb-4 text-[#001510] " />
                 </button>
               </div>
               <input
@@ -333,7 +333,7 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
                   {userRows}
                 </tbody>
               </table>
-
+             
             </div>
           </div>
         )}
