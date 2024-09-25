@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../../Navbar";
 import Footer from "../../../footer/Footer";
-import intro_CS from "../../../../../assetss/student/cyberSecurity/intro_CS.png";
-import CS_Essentials from "../../../../../assetss/student/cyberSecurity/CS_Essentials.png";
-import CS_Beginners from "../../../../../assetss/student/cyberSecurity/CS_Beginners.png";
+import intro_CS from "../../../../../assetss/student/cyberSecurity/cyberArray/img1.png";
+import CS_Essentials from "../../../../../assetss/student/cyberSecurity/cyberArray/img2.png";
+import CS_Beginners from "../../../../../assetss/student/cyberSecurity/cyberArray/img3.png";
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
@@ -162,7 +162,7 @@ const CyberSecurityArray = () => {
                       <img
                         src={course.profilePic}
                         alt={course.name}
-                        className="w-8 h-8 rounded-full mr-2"
+                        className="w-8 h-8 object-contain  rounded-full mr-2"
                       />
                       <div>
                         <span className="text-gray-700 font-bold">

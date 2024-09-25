@@ -960,7 +960,7 @@ const SoftwareTestingArray = () => {
                       <img
                         src={course.image}
                         alt={course.title}
-                        className="w-full h-[170px] object-cover px-3 "
+                        className="w-full h-[170px] object-contain px-3 "
                       />
                     </div>
                     <div className="p-4">

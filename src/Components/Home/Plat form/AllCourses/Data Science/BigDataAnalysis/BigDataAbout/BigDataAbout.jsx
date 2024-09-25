@@ -35,7 +35,7 @@ const BigDataAbout = () => {
             className=" md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
           >
             <img
-              className="md:w-full md:h-64 rounded-md"
+              className="md:w-full  object-contain md:h-64 rounded-md"
               src={item.imgSrc}
               alt={item.imgAlt}
             />

@@ -17,24 +17,25 @@ const AdvancedNetworkSecurityHero = () => {
 
   return (
     <>
-      <div
-        className="relative w-full h-[370px] bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${hero})`,
-        }}
-      >
-        <div className="absolute inset-0 flex items-center justify-center">
-          <p className="text-center text-white max-md:text-[16px] text-[20px] font-medium px-4 max-w-[800px]">
-            Secure Your Networks with Advanced Network Security Solutions!
-            Empowering you to implement advanced security measures and
-            defend against cyber attacks, we provide comprehensive solutions to keep your networks
-            safe...
-          </p>
-        </div>
-        <div className="absolute inset-0 flex items-end justify-center pb-10">
+      <div className="relative">
+        <div
+          className=" w-full h-[370px] bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${hero})`,
+          }}
+        ></div>
+        <div className="absolute inset-0 flex items-center justify-center px-[40px] md:px-[120px] lg:px-[200px]">
+          <div className="text-white text-lg md:text-xl lg:text-2xl font-medium  text-center">
+            {" "}
+            Network security serves as the backbone of protection against a wide
+            range of cyber threats. As network breaches become more robust
+            security measures are essential to safeguard critical data and
+            infrastructure
+          </div>
+
           <button
             onClick={handleEnroll}
-            className="px-6 py-3 text-[20px] font-medium text-white bg-[#0098f1] rounded-xl"
+            className="absolute bottom-5 lg:bottom-12 px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl  transition duration-200"
           >
             Enroll Now
           </button>

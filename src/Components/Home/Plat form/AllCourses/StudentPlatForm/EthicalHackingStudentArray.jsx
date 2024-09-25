@@ -129,7 +129,7 @@ const EthicalHackingStudentArray = () => {
                 </div> */}
                 <div className="h-[180px]">
                   <img
-                    className="w-full h-full bg-cover"
+                    className="w-full h-full object-contain bg-cover"
                     src={course.image}
                     alt={course.title}
                   />
