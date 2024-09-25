@@ -118,7 +118,7 @@ const DatavisualisationNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div className="px-4 sm:px-6">
+      <div className="mx-5">
         {currentSection === 0 && <DatavisualisationIntroduction />}
         {currentSection === 1 && <DatavisualisationKeyHighights />}
         {currentSection === 2 && <DatavisualisationOutcomes />}
