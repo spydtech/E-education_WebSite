@@ -14,8 +14,6 @@ const DataScienceWithPythonHero = () => {
   const navigate = useNavigate();
   return (
     <>
-      {/* First Part */}
-
       <div className="relative">
         <div
           className=" w-full h-[370px] bg-cover bg-center"
@@ -39,8 +37,6 @@ const DataScienceWithPythonHero = () => {
           </button>
         </div>
       </div>
-
-      {/* Second Part */}
     </>
   );
 };

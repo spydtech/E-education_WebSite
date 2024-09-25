@@ -82,7 +82,7 @@ export default function CourseDetails({ course }) {
         <div className="rounded-lg md:gap-x-6 justify-center items-center  flex flex-col md:flex-row">
           {" "}
           <div
-            className="p-4 text-center rounded-lg md:w-[400px] w-[300px] h-[250px] bg-red-500 bg-cover bg-center flex justify-center items-center text-white capitalize text-xl font-bold"
+            className="p-4 text-center rounded-lg md:w-[400px] w-[300px] h-[250px] bg-cover bg-center flex justify-center items-center text-white capitalize text-xl font-bold"
             style={{ backgroundImage: `url(${img})` }}
           >
             {courseName}
