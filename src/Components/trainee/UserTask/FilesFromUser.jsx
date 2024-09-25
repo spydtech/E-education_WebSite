@@ -1,145 +1,4 @@
-// import React, { useState } from "react";
-// import { FaArrowCircleDown } from "react-icons/fa";
-// import { Link } from "react-router-dom";
 
-// const FileFromUser = ({ setSelectedUsers }) => {
-//   const [files, setFiles] = useState([
-//     {
-//       name: "Priya",
-//       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIsEH9evsckWldIq8ca1TW74RGPc2FoxWHmg&s",
-//       type: "image",
-//       accepted: false,
-//     },
-//     {
-//       name: "Ashwini",
-//       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU0mQ6LNpCev-YtUXUff0T7gQn6aW_S7FD3A&s",
-//       type: "image",
-//       accepted: false,
-//     },
-//     {
-//       name: "Anjani",
-//       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdSq5Nz20K1tTq5wvQKkWjnNvHAK05jE-EtQ&s",
-//       type: "image",
-//       accepted: false,
-//     },
-//     {
-//       name: "Prem",
-//       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOG5A9de3kG4I_OsnRtb9iX6e7UuRy9Wrgg&s",
-//       type: "image",
-//       accepted: false,
-//     },
-//     {
-//       name: "Prem",
-//       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOG5A9de3kG4I_OsnRtb9iX6e7UuRy9Wrgg&s",
-//       type: "image",
-//       accepted: false,
-//     },
-//     {
-//       name: "Prem",
-//       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOG5A9de3kG4I_OsnRtb9iX6e7UuRy9Wrgg&s",
-//       type: "image",
-//       accepted: false,
-//     },
-//     {
-//       name: "Prem",
-//       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOG5A9de3kG4I_OsnRtb9iX6e7UuRy9Wrgg&s",
-//       type: "image",
-//       accepted: false,
-//     },
-//     {
-//       name: "Prem",
-//       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAOG5A9de3kG4I_OsnRtb9iX6e7UuRy9Wrgg&s",
-//       type: "image",
-//       accepted: false,
-//     },
-//   ]);
-
-//   const handleDownload = (file, index) => {
-//     fetch(file.url)
-//       .then((res) => res.blob())
-//       .then((blob) => {
-//         const url = window.URL.createObjectURL(blob);
-//         const link = document.createElement("a");
-//         link.href = url;
-//         link.download = file.url.split("/").pop();
-//         document.body.appendChild(link);
-//         link.click();
-//         document.body.removeChild(link);
-//       });
-//   };
-
-//   const handleAction = (index, action) => {
-//     const selectedFile = files[index];
-//     let updatedFiles = [...files];
-//     updatedFiles.splice(index, 1); // Remove the file from the current list
-//     setFiles(updatedFiles);
-
-//     if (action === "Accepted") {
-//       // Add to accepted files in localStorage
-//       const acceptedFiles = JSON.parse(localStorage.getItem("acceptedFiles")) || [];
-//       localStorage.setItem("acceptedFiles", JSON.stringify([...acceptedFiles, { ...selectedFile, accepted: true }]));
-//     } else if (action === "Rejected") {
-//       // Add to rejected files in localStorage
-//       const rejectedFiles = JSON.parse(localStorage.getItem("rejectedFiles")) || [];
-//       localStorage.setItem("rejectedFiles", JSON.stringify([...rejectedFiles, { ...selectedFile, rejected: true }]));
-//     }
-//   };
-
-
-//   return (
-//     <>
-//       <div className="p-4">
-//         <h1 className="text-[#204349] font-semibold text-2xl">
-//           <span className="border-b-2 text-[20px] border-[#204349]">
-//             Tasks From Trainee
-//           </span>
-//         </h1>
-//       </div>
-  
-//       {/* Set a max height, enable scroll, and hide the scrollbar */}
-//       <div className="max-w-full bg-white md:p-1 rounded-lg md:w-[500px] h-[400px] overflow-y-auto scrollbar-hide">
-//         <div className="flex flex-col gap-4">
-//           {files.map((file, index) => (
-//             <div
-//               className="rounded-lg p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 cursor-pointer transition-transform transform"
-//               key={index}
-//               onClick={() => handleDownload(file, index)}
-//             >
-//               <div className="flex items-center gap-4 flex-grow">
-//                 <FaArrowCircleDown className="text-[#204349] w-8 h-8" />
-//                 <div className="flex flex-col flex-grow">
-//                   <span className="text-lg font-medium text-[#204349]">
-//                     {file.name}
-//                   </span>
-//                   <span className="text-[#204349] text-sm">
-//                     {file.description || "No description"}
-//                   </span>
-//                 </div>
-//               </div>
-//               <select
-//                 className="p-2 rounded-md border border-[#204349] text-[#204349]"
-//                 onChange={(e) => handleAction(index, e.target.value)}
-//                 defaultValue=""
-//               >
-//                 <option value="" disabled>Select Action</option>
-//                 <option value="Accepted">Accept</option>
-//                 <option value="Rejected">Reject</option>
-//               </select>
-//             </div>
-//           ))}
-//         </div>
-//         <div className="mt-6 flex justify-center">
-//           <Link className="text-[#204349] hover:underline">View All</Link>
-//         </div>
-//       </div>
-//     </>
-//   );
-  
-  
-  
-// };
-
-// export default FileFromUser;
 import React, { useState } from "react";
 import { FaArrowCircleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -229,19 +88,19 @@ const FileFromUser = ({ setSelectedUsers }) => {
       localStorage.setItem("rejectedFiles", JSON.stringify([...rejectedFiles, { ...selectedFile, rejected: true }]));
     }
   };
-
+  const themes= localStorage.getItem("theme")
   return (
     <>
-      <div className="p-4">
-        <h1 className="text-[#204349] font-semibold text-2xl">
-          <span className="border-b-2 text-[20px] border-[#204349]">
+      <div className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} p-4`}>
+        <h1 className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} text-[#204349] font-semibold text-2xl`}>
+          <p className={` ${themes === "dark" ? "bg-black w-44 text-white border-white" : "text-[#204349]"} border-b-2 text-[20px] border-[#204349]`}>
             Tasks From Trainee
-          </span>
+          </p>
         </h1>
-      </div>
+     
 
       {/* Set a max height, enable scroll, and hide the scrollbar */}
-      <div className="max-w-full bg-white md:p-1 rounded-lg md:w-[500px] h-[400px] overflow-y-auto scrollbar-hide">
+      <div className={`  max-w-full  md:p-1 rounded-lg md:w-[500px] h-[400px] overflow-y-auto scrollbar-hide`}>
         <div className="flex flex-col gap-4">
           {files.map((file, index) => (
             <div
@@ -249,12 +108,12 @@ const FileFromUser = ({ setSelectedUsers }) => {
               key={index}
             >
               <div className="flex items-center gap-4 flex-grow">
-                <FaArrowCircleDown className="text-[#204349] w-8 h-8" />
+                <FaArrowCircleDown className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} text-[#204349] w-8 h-8`} />
                 <div className="flex flex-col flex-grow">
-                  <span className="text-lg font-medium text-[#204349]">
+                  <h1 className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} text-lg font-medium text-[#204349]`}>
                     {file.name}
-                  </span>
-                  <span className="text-[#204349] text-sm">
+                  </h1>
+                  <span className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} text-[#204349] text-sm`}>
                     {file.description || "No description"}
                   </span>
                 </div>
@@ -271,8 +130,9 @@ const FileFromUser = ({ setSelectedUsers }) => {
             </div>
           ))}
         </div>
+        </div>
         <div className="mt-6 flex justify-center">
-          <Link className="text-[#204349] hover:underline">View All</Link>
+          <Link className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} text-[#204349] hover:underline`}>View All</Link>
         </div>
       </div>
     </>

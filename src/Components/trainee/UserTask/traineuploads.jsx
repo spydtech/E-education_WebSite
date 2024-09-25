@@ -39,21 +39,21 @@ function FileUploadForm() {
     console.log("Description:", description);
     console.log("Selected file:", selectedFile);
   };
-
+  const themes= localStorage.getItem("theme")
   return (
     <>
     <div className="grid grid-cols-1 gap-4 md:grid-cols-1  lg:grid-cols-2 lg:px-8">
       {/* Container for the File Upload Form */}
-      <div className="flex-1 bg-white rounded-lg  border-[#204349] border-2 border-solid shadow-lg">
+      <div className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} flex-1  rounded-lg  border-[#204349] border-2 border-solid shadow-lg`}>
         <div className="p-4">
           <h1 className="text-[#204349] font-semibold text-lg mb-4">
-            <span className="border-b-2 border-[#204349]">Upload Tasks</span>
+            <h1 className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} border-b-2 border-[#204349] w-28`}>Upload Tasks</h1>
           </h1>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="description"
-                className="block text-base mb-2 font-medium text-[#204349]"
+                className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} block text-base mb-2 font-medium text-[#204349]`}
               >
                 Description of file:
               </label>
@@ -69,7 +69,7 @@ function FileUploadForm() {
             </div>
   
             <div>
-              <label className="block text-xl font-semibold text-[#204349] mb-4">
+              <label className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} block text-xl font-semibold text-[#204349] mb-4`}>
                 Upload File
               </label>
   
@@ -158,7 +158,7 @@ function FileUploadForm() {
       </div>
   
       {/* FileFromUser Component */}
-      <div className="flex-1 bg-white rounded-lg  border-[#204349] border-2 border-solid">
+      <div className={`  flex-1 bg-white rounded-lg  border-[#204349] border-2 border-solid`}>
         <FileFromUser />
       </div> 
      

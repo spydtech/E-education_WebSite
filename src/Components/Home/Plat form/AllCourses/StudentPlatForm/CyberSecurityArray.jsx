@@ -105,12 +105,12 @@ const CyberSecurityArray = () => {
   return (
     <>
       <Navbar />
-      <img
+      {/* <img
         src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg?ga=GA1.1.1671979702.1717669022&semt=sph"
         className="object-cover w-full md:h-[490px]"
         alt="Background Image"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
+      /> */}
+      {/* <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center   mb-4">
           <span className="bg-gradient-to-r text-4xl  py-1 font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">

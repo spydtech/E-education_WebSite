@@ -735,7 +735,7 @@ import Navbar from "../../../../Navbar";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import cardImage from "../../../../../assets/cardImage.png";
-import Girl2 from "../../../../../assetss/profile/girl2.png"
+import Girl2 from "../../../../../assetss/profile/girl2.png";
 
 const SoftwareTestingArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -752,7 +752,8 @@ const SoftwareTestingArray = () => {
       title: "Unit Testing",
       description: "Testing individual components in isolation.",
       link: "/software-testing/unit-testing",
-      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726657254/image_daa9b7.png",
+      image:
+        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726657254/image_daa9b7.png",
       profilePic: Girl2,
       name: "Anjali Sharma",
       rating: 4.3, // Add dummy rating
@@ -761,7 +762,8 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 2,
-      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726657258/image_1_yslvgz.png",
+      image:
+        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726657258/image_1_yslvgz.png",
       title: "Integration Testing",
       description: "Testing software components together.",
       link: "/software-testing/integration-testing",
@@ -773,7 +775,8 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 3,
-      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726657263/image_2_jn8sm5.png",
+      image:
+        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726657263/image_2_jn8sm5.png",
       title: "System Testing",
       description: "Testing the complete integrated software.",
       link: "/software-testing/system-testing",
@@ -785,7 +788,8 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 4,
-      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658495/image_3_sxipex.png",
+      image:
+        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726658495/image_3_sxipex.png",
       title: "Acceptance Testing",
       description: "Testing if software meets user needs.",
       link: "/software-testing/acceptance-testing",
@@ -797,7 +801,8 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 5,
-      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658501/image_4_tmsbbg.png",
+      image:
+        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726658501/image_4_tmsbbg.png",
       title: "Performance Testing",
       description: "Testing speed and stability.",
       link: "/software-testing/performance-testing",
@@ -809,7 +814,8 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 6,
-      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658509/image_5_ojh05n.png",
+      image:
+        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726658509/image_5_ojh05n.png",
       title: "Security Testing",
       description: "Testing for vulnerabilities.",
       link: "/software-testing/security-testing",
@@ -821,7 +827,8 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 7,
-      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658513/image_6_jiwvdm.png",
+      image:
+        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726658513/image_6_jiwvdm.png",
       title: "Usability Testing",
       description: "Testing user-friendliness.",
       link: "/software-testing/usability-testing",
@@ -833,7 +840,8 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 8,
-      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658519/image_7_w4eh1o.png",
+      image:
+        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726658519/image_7_w4eh1o.png",
       title: "Compatibility Testing",
       description: "Testing across different environments.",
       link: "/software-testing/compatibility-testing",
@@ -845,7 +853,8 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 9,
-      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658531/image_9_ricc7a.png",
+      image:
+        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726658531/image_9_ricc7a.png",
       title: "Regression Testing",
       description: "Testing recent changes for new issues.",
       link: "/software-testing/regression-testing",
@@ -857,7 +866,8 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 10,
-      image:"https://res.cloudinary.com/dfftgkkev/image/upload/v1726658524/image_8_zuhlts.png",
+      image:
+        "https://res.cloudinary.com/dfftgkkev/image/upload/v1726658524/image_8_zuhlts.png",
       title: "Stress Testing",
       description: "Testing under extreme conditions.",
       link: "/software-testing/stress-testing",
@@ -869,7 +879,8 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 11,
-      image:"https://img.freepik.com/free-vector/devops-team-abstract-concept-vector-illustration-software-development-team-member-agile-workflow-devops-team-model-it-teamwork-project-management-integrated-practice-abstract-metaphor_335657-2299.jpg?t=st=1725620802~exp=1725624402~hmac=3c91abe1913c777cb6eeef31fe437afc6975c60f2a571621822994a0a50541ce&w=740",
+      image:
+        "https://img.freepik.com/free-vector/devops-team-abstract-concept-vector-illustration-software-development-team-member-agile-workflow-devops-team-model-it-teamwork-project-management-integrated-practice-abstract-metaphor_335657-2299.jpg?t=st=1725620802~exp=1725624402~hmac=3c91abe1913c777cb6eeef31fe437afc6975c60f2a571621822994a0a50541ce&w=740",
       title: "Manual Testing",
       description: "Testing done manually by testers.",
       link: "/software-testing/manual-testing",
@@ -881,7 +892,8 @@ const SoftwareTestingArray = () => {
     },
     {
       id: 12,
-      image:"https://img.freepik.com/premium-vector/code-typing-concept-illustration_86047-934.jpg?w=740",
+      image:
+        "https://img.freepik.com/premium-vector/code-typing-concept-illustration_86047-934.jpg?w=740",
       title: "Automated Testing",
       description: "Testing using automation tools.",
       link: "/software-testing/automation-testing",
@@ -892,7 +904,6 @@ const SoftwareTestingArray = () => {
       enrolled: 2000, // Add dummy enrolled number
     },
   ];
-  
 
   const renderStarRating = (rating) => {
     const stars = [];
@@ -915,13 +926,13 @@ const SoftwareTestingArray = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen ">
+    <div className="  ">
       <Navbar />
       <div className="">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-center mb-4">
             <span className="bg-gradient-to-r text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent pb-5">
-            Expand Software Testing Courses
+              Expand Software Testing Courses
             </span>
           </div>
           <div className="mb-4 flex justify-end ">
@@ -941,53 +952,56 @@ const SoftwareTestingArray = () => {
               )
               .map((course) => (
                 <div
-              key={course.id}
-              className="relative bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out"
-            >
-              <a href={course.link} rel="noopener noreferrer">
-                <div className="relative">
-                  <img
-                    src={course.image}
-                    alt={course.title}
-                    className="w-full h-[170px] object-cover px-3 "
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2 flex items-center text-nowrap justify-between">
-                    {course.title}
-                    <MdArrowOutward className="text-gray-500 text-2xl" />
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {course.description}
-                  </p>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center text-gray-900">
-                      <span className="mr-2 font-bold">{course.rating}</span>
-                      {renderStarRating(course.rating)}
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center">
+                  key={course.id}
+                  className="relative bg-white border rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-in-out"
+                >
+                  <a href={course.link} rel="noopener noreferrer">
+                    <div className="relative">
                       <img
-                        src={course.profilePic}
-                        alt={course.name}
-                        className="w-8 h-8 rounded-full mr-2"
+                        src={course.image}
+                        alt={course.title}
+                        className="w-full h-[170px] object-cover px-3 "
                       />
-                      <div>
-                        <span className="text-gray-700 font-bold">
-                          {course.name}
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-xl font-semibold mb-2 flex items-center text-nowrap justify-between">
+                        {course.title}
+                        <MdArrowOutward className="text-gray-500 text-2xl" />
+                      </h3>
+                      <p className="text-gray-600 text-sm mb-4">
+                        {course.description}
+                      </p>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center text-gray-900">
+                          <span className="mr-2 font-bold">
+                            {course.rating}
+                          </span>
+                          {renderStarRating(course.rating)}
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center">
+                          <img
+                            src={course.profilePic}
+                            alt={course.name}
+                            className="w-8 h-8 rounded-full mr-2"
+                          />
+                          <div>
+                            <span className="text-gray-700 font-bold">
+                              {course.name}
+                            </span>
+                            <p className="text-gray-500 text-xs">
+                              {course.enrolled} Enrolled
+                            </p>
+                          </div>
+                        </div>
+                        <span className="text-gray-900 font-bold">
+                          {course.price}
                         </span>
-                        <p className="text-gray-500 text-xs">{course.enrolled} Enrolled</p>
                       </div>
                     </div>
-                    <span className="text-gray-900 font-bold">
-                      {course.price}
-                    </span>
-                  </div>
+                  </a>
                 </div>
-              </a>
-              
-            </div>
               ))}
           </div>
         </div>

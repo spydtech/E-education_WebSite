@@ -73,6 +73,86 @@ const data = [
 
 const courseColor = "bg-yellow-100 text-yellow-600";
 
+// function TraineeCourseTable3() {
+//   const [search, setSearch] = useState("");
+
+//   const handleSearchChange = (event) => {
+//     setSearch(event.target.value);
+//   };
+
+//   const filteredData = data.filter((item) =>
+//     item.name.toLowerCase().includes(search.toLowerCase())
+//   );
+//   const themes= localStorage.getItem("theme")
+//   const rows = filteredData.map((item, index) => (
+//     <tr key={index} className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} border-b  bg-opacity-10`}>
+//       <td className="px-6 py-4 whitespace-nowrap">
+//         <div className="flex items-center">
+//           <div className="flex-shrink-0 h-10 w-10">
+//             <img className="h-10 w-10 rounded-full" src={item.avatar} alt="" />
+//           </div>
+//           <div className="ml-4">
+//             <h1 className={`${themes === "dark" ? "bg-black text-white border-white" : ""}  text-sm font-medium text-[#204349]`}>{item.name}</h1>
+//           </div>
+//         </div>
+//       </td>
+//       <td className="px-6 py-4 whitespace-nowrap">
+//         <h2
+//           className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} px-2 inline-flex text-[16px] text-[#204349] leading-5 font-semibold rounded-full `}
+//         >
+//           {item.course}
+//         </h2>
+//       </td>
+//     </tr>
+//   ));
+
+//   return (
+//     <div className="overflow-x-auto">
+//       <div className="min-w-full shadow-md overflow-hidden rounded-lg">
+//         <div className="p-3 flex flex-col md:flex-row justify-between m-3 space-y-3 md:space-y-0 ">
+//           <input
+//             type="text"
+//             placeholder="Search by name"
+//             value={search}
+//             onChange={handleSearchChange}
+//             className="inline-block  px-4 py-2  placeholder:text-[#204349]  border-2 border-[#204349] rounded-3xl"
+//           />
+//           <div className="flex items-center bg-opacity-10  space-x-2 mx-2">
+//             <span className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} text-[#204349]`}> Trainee:</span>
+//             {trainee.map((traineeItem, index) => (
+//               <span key={index} className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} px-2 py-1  text-[#204349] rounded-md`}>
+//                 {traineeItem.name}
+//               </span>
+//             ))}
+//           </div>
+//         </div>
+
+//         <table className="min-w-full divide-y bg-[#204349]  bg-opacity-10 divide-white">
+//           <thead className="bg-[#204349]  text-white">
+//             <tr >
+//               <th
+//                 scope="col"
+//                 className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+//               >
+//                 User
+//               </th>
+//               <th
+//                 scope="col"
+//                 className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+//               >
+//                 Course
+//               </th>
+//             </tr>
+//           </thead>
+//           <tbody className=" divide-y divide-gray-200">{rows}</tbody>
+//         </table>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default TraineeCourseTable3;
+
 function TraineeCourseTable3() {
   const [search, setSearch] = useState("");
 
@@ -84,68 +164,96 @@ function TraineeCourseTable3() {
     item.name.toLowerCase().includes(search.toLowerCase())
   );
 
+  const themes = localStorage.getItem("theme");
+
   const rows = filteredData.map((item, index) => (
-    <tr key={index} className="border-b  bg-opacity-10">
+    <tr
+      key={index}
+      className={`${
+        themes === "dark" ? "bg-black text-white border-white" : ""
+      } border-b bg-opacity-10`}
+    >
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
           <div className="flex-shrink-0 h-10 w-10">
             <img className="h-10 w-10 rounded-full" src={item.avatar} alt="" />
           </div>
           <div className="ml-4">
-            <div className="text-sm font-medium text-[#204349]">{item.name}</div>
+            <h1
+              className={`${
+                themes === "dark" ? "bg-black text-white border-white" : ""
+              } text-sm font-medium text-[#204349]`}
+            >
+              {item.name}
+            </h1>
           </div>
         </div>
       </td>
       <td className="px-6 py-4 whitespace-nowrap">
-        <span
-          className={`px-2 inline-flex text-[16px] text-[#204349] leading-5 font-semibold rounded-full `}
+        <h2
+          className={`${
+            themes === "dark" ? "bg-black text-white border-white" : ""
+          } px-2 inline-flex text-[16px] text-[#204349] leading-5 font-semibold rounded-full`}
         >
           {item.course}
-        </span>
+        </h2>
       </td>
     </tr>
   ));
 
   return (
     <div className="overflow-x-auto">
-      <div className="min-w-full shadow-md overflow-hidden rounded-lg">
-        <div className="p-3 flex flex-col md:flex-row justify-between m-3 space-y-3 md:space-y-0 ">
+      <div className="min-w-full shadow-md rounded-lg">
+        <div className="p-3 flex flex-col md:flex-row justify-between m-3 space-y-3 md:space-y-0">
           <input
             type="text"
             placeholder="Search by name"
             value={search}
             onChange={handleSearchChange}
-            className="inline-block  px-4 py-2  placeholder:text-[#204349]  border-2 border-[#204349] rounded-3xl"
+            className="inline-block px-4 py-2 placeholder:text-[#204349] border-2 border-[#204349] rounded-3xl"
           />
-          <div className="flex items-center bg-opacity-10  space-x-2 mx-2">
-            <span className="text-[#204349]"> Trainee:</span>
+          <div className="flex items-center bg-opacity-10 space-x-2 mx-2">
+            <span
+              className={`${
+                themes === "dark" ? "bg-black text-white border-white" : ""
+              } text-[#204349]`}
+            >
+              Trainee:
+            </span>
             {trainee.map((traineeItem, index) => (
-              <span key={index} className="px-2 py-1  text-[#204349] rounded-md">
+              <span
+                key={index}
+                className={`${
+                  themes === "dark" ? "bg-black text-white border-white" : ""
+                } px-2 py-1 text-[#204349] rounded-md`}
+              >
                 {traineeItem.name}
               </span>
             ))}
           </div>
         </div>
 
-        <table className="min-w-full divide-y bg-[#204349]  bg-opacity-10 divide-white">
-          <thead className="bg-[#204349]  text-white">
-            <tr >
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
-              >
-                User
-              </th>
-              <th
-                scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
-              >
-                Course
-              </th>
-            </tr>
-          </thead>
-          <tbody className=" divide-y divide-gray-200">{rows}</tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y bg-[#204349] bg-opacity-10 divide-white">
+            <thead className="bg-[#204349] text-white">
+              <tr>
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                >
+                  User
+                </th>
+                <th
+                  scope="col"
+                  className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider"
+                >
+                  Course
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-200">{rows}</tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

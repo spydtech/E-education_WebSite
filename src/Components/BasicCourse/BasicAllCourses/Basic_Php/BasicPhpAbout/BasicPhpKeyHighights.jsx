@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function BasicPhpKeyHighlights() {
   const [selectedItem, setSelectedItem] = useState(0);
 
-  const data = [
+    const data = [
     { label: "Overview" },
     { label: "Key Concepts" },
     { label: "Applications" },
@@ -22,7 +22,7 @@ function BasicPhpKeyHighlights() {
           <div className="p-3 space-y-2 ">
             <p className="text-xl font-medium text-white pl-2">Overview</p>
             <ul className="space-y-2 font-normal list-disc pl-6">
-              <li>Introduction to PHP programming</li>
+            <li>Introduction to PHP programming</li>
               <li>Basics of server-side scripting</li>
               <li>Database integration with MySQL</li>
               <li>Building dynamic websites</li>
@@ -33,11 +33,9 @@ function BasicPhpKeyHighlights() {
       case 1:
         return (
           <div className="p-3 space-y-2 ">
-            <p className="text-xl font-medium text-white pl-2">
-              Key Concepts
-            </p>
+            <p className="text-xl font-medium text-white pl-2">Key Concepts</p>
             <ul className="space-y-2 font-normal list-disc pl-6">
-              <li>PHP Syntax and Operators</li>
+            <li>PHP Syntax and Operators</li>
               <li>Control Structures</li>
               <li>Functions and Arrays</li>
               <li>Sessions and Cookies</li>
@@ -49,11 +47,9 @@ function BasicPhpKeyHighlights() {
       case 2:
         return (
           <div className="p-3 space-y-2 ">
-            <p className="text-xl font-medium text-white pl-2">
-              Applications
-            </p>
+            <p className="text-xl font-medium text-white pl-2">Applications</p>
             <ul className="space-y-2 font-normal list-disc pl-6">
-              <li>Web Application Development</li>
+            <li>Web Application Development</li>
               <li>Content Management Systems (CMS)</li>
               <li>E-commerce Platforms</li>
               <li>Custom Web Solutions</li>
@@ -68,7 +64,7 @@ function BasicPhpKeyHighlights() {
               Skills Developed
             </p>
             <ul className="space-y-2 font-normal list-disc pl-6">
-              <li>Develop dynamic and interactive websites</li>
+            <li>Develop dynamic and interactive websites</li>
               <li>Integrate PHP with databases</li>
               <li>Implement security measures in web applications</li>
               <li>Debug and troubleshoot PHP code</li>
@@ -83,9 +79,9 @@ function BasicPhpKeyHighlights() {
               Target Audience
             </p>
             <ul className="space-y-2 font-normal list-disc pl-6">
-              <li>Beginner programmers interested in server-side scripting</li>
+            <li>Beginner programmers interested in server-side scripting</li>
               <li>Web developers looking to enhance their skills with PHP</li>
-              <li>Individuals aiming to build dynamic web applications</li>
+              <li>Individuals aiming to build dynamic web applications</li> 
             </ul>
           </div>
         );
@@ -96,30 +92,32 @@ function BasicPhpKeyHighlights() {
 
   return (
     <div className="px-3 md:mb-4">
-      <div className="md:flex justify-around">
-        <div className="bg-[#0098F1] text-white">{renderContent()}</div>
-        <div className="my-3">
-          <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
-            E-Education Course Highlights
-          </p>
-          {data.map((item, index) => (
-            <ul key={index}>
-              <li
-                onClick={() => handleClick(index)}
-                className={`p-5 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md ${
-                  selectedItem === index
-                    ? "bg-[#0098f1] text-white border-none"
-                    : ""
-                }`}
-              >
-                {item.label}
-              </li>
-            </ul>
-          ))}
-        </div>
+    <div className="md:flex justify-around  ">
+      <div className="bg-[#0098F1] text-white  pb-5 md:w-2/5">
+        {renderContent()}
+      </div>
+      <div className="my-3">
+        <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
+          E-Education Course Highlights
+        </p>
+        {data.map((item, index) => (
+          <ul className="">
+            <li
+              key={index}
+              onClick={() => handleClick(index)}
+              className={`pt-4 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md text-center  ${
+                selectedItem === index
+                  ? "bg-[#0098f1] text-white border-none"
+                  : ""
+              }`}
+            >
+              {item.label}
+            </li>
+          </ul>
+        ))}
       </div>
     </div>
+  </div>
   );
 }
-
 export default BasicPhpKeyHighlights;
