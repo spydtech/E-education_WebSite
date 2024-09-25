@@ -1,24 +1,22 @@
 import React from "react";
-// import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
-// import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
-import career from '../../../../../../../assetss/career.png'
-import student from '../../../../../../../assetss/student.png'
+import programmer from "../../../../../../../assetss/student/AboutProgram/programmer.jpg";
+import assistance from "../../../../../../../assetss/student/AboutProgram//assistance.jpg";
 
 const EthicalHackingAbout = () => {
   const ethicalHackingInfo = [
     {
-      title: "Student Support",
-      description:
-        "Learn about the latest techniques and get support for courses 24/7.",
-      imgSrc: student,
-      imgAlt: "student-support",
-    },
-    {
       title: "Career Assistance",
       description:
-        "Gain expertise in continuous network monitoring to detect anomalies and respond to incidents in real-time.",
-      imgSrc: career,
+        "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
+      imgSrc: programmer,
       imgAlt: "career-assistance",
+    },
+    {
+      title: "Student Support",
+      description:
+        'Access student support via support@E_education.com or through the "ask us?" option on our learning platform for urgent queries.',
+      imgSrc: assistance,
+      imgAlt: "student-support",
     },
   ];
 
@@ -26,18 +24,18 @@ const EthicalHackingAbout = () => {
     <div className="px-3 text-center">
       <div className="">
         <p className="md:text-2xl font-bold text-[#0098F1]">
-          Discover The Ethical Hacking Program
+          Discover the Ethical Hacking Program
         </p>
       </div>
 
-      <div className="md:flex justify-around ">
+      <div className="md:flex justify-around">
         {ethicalHackingInfo.map((item, index) => (
           <div
             key={index}
-            className="md:w-2/5 bg-white rounded-lg shadow-lg p-3 my-4"
+            className=" md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
           >
             <img
-              className=" md:w-full md:h-64 rounded-md"
+              className="md:w-full md:h-64 rounded-md"
               src={item.imgSrc}
               alt={item.imgAlt}
             />
@@ -51,5 +49,4 @@ const EthicalHackingAbout = () => {
     </div>
   );
 };
-
 export default EthicalHackingAbout;

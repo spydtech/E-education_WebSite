@@ -1,6 +1,6 @@
 import React from "react";
-import career from '../../../../../../../assetss/career.png'
-import student from '../../../../../../../assetss/student.png'
+import programmer from "../../../../../../../assetss/student/AboutProgram/programmer.jpg";
+import assistance from "../../../../../../../assetss/student/AboutProgram//assistance.jpg";
 
 const EthicalHackingAbout = () => {
   const ethicalHackingInfo = [
@@ -8,14 +8,14 @@ const EthicalHackingAbout = () => {
       title: "Career Assistance",
       description:
         "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
-      imgSrc: student,
+      imgSrc: programmer,
       imgAlt: "career-assistance",
     },
     {
       title: "Student Support",
       description:
-        'Access student support via support@machinelearning.com or through the "ask us?" option on our learning platform for urgent queries.',
-      imgSrc: career,
+        'Access student support via support@E_education.com or through the "ask us?" option on our learning platform for urgent queries.',
+      imgSrc: assistance,
       imgAlt: "student-support",
     },
   ];
@@ -24,7 +24,7 @@ const EthicalHackingAbout = () => {
     <div className="px-3 text-center">
       <div className="">
         <p className="md:text-2xl font-bold text-[#0098F1]">
-          Discover The Advanced Ethical Hacking Program
+          Discover the Advanced Ethical Hacking Program
         </p>
       </div>
 
@@ -49,5 +49,4 @@ const EthicalHackingAbout = () => {
     </div>
   );
 };
-
 export default EthicalHackingAbout;
