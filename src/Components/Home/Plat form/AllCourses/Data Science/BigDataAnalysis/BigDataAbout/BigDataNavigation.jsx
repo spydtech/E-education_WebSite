@@ -112,7 +112,7 @@ const BigDataNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div className=" ">
+      <div className="mx-5 ">
         {currentSection === 0 && <BigDataIntroduction />}
         {currentSection === 1 && <BigDataKeyHighights />}
         {currentSection === 2 && <BigDataCareersOutcomes />}
