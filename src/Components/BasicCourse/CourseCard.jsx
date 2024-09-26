@@ -21,10 +21,8 @@ const CourseCard = () => {
     {
       title: "Software Testing",
       image: science,
-
       description:" Master techniques and tools for effective software testing and quality assurance.",
       link: "/software_Testing",
-
     },
     {
       title: " Php",
@@ -72,7 +70,6 @@ const CourseCard = () => {
 
   return (
 
-
      <>
     <div className="my-10 mb-16">
   <div className="text-center text-black text-3xl font-bold m-4 my-10">
@@ -115,7 +112,6 @@ const CourseCard = () => {
               <Link
                 to={link}
                 className="flex items-center gap-1.5 group-hover:text-white"
-
               >
                 Start Learning
                 <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
