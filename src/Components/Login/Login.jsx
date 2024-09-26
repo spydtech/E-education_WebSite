@@ -136,12 +136,12 @@
 //                 </button>
 //               </form>
 
-              // <p className="mt-6 text-xs mr-20 text-gray-600 text-center">
-              //   <Link to="/signup" className="text-blue-600 hover:underline ">
-              //     Not registered yet? Create an account{" "}
-              //     <span className="text-[#F6AC14]  font-bold">Signup</span>
-              //   </Link>
-              // </p>
+// <p className="mt-6 text-xs mr-20 text-gray-600 text-center">
+//   <Link to="/signup" className="text-blue-600 hover:underline ">
+//     Not registered yet? Create an account{" "}
+//     <span className="text-[#F6AC14]  font-bold">Signup</span>
+//   </Link>
+// </p>
 //             </div>
 //           </div>
 //           <div className="flex-1 mt-64  text-center hidden lg:flex">
@@ -161,13 +161,6 @@
 
 // export default Login;
 
-
-
-
-
-
-
-
 // import React from "react";
 // import { Link, useNavigate } from "react-router-dom";
 // import { useDispatch } from "react-redux";
@@ -185,7 +178,6 @@
 //       email: data.get("email"),
 //       password: data.get("password"),
 //     };
-
 
 //     navigate("/");
 //     dispatch(login(userData));
@@ -327,13 +319,11 @@
 
 // export default Login;
 
-
-
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import IMG from "../../assets/E- education logo .png";
-import BackgroundIMG from "../../../src/assetss/login/loginimg.jpg"; 
+import BackgroundIMG from "../../../src/assetss/login/loginimg.jpg";
 import { login } from "../../State/Auth/Action";
 
 function Login() {
@@ -355,13 +345,12 @@ function Login() {
   return (
     <div className="relative flex justify-center items-center min-h-screen bg-gray-100">
       <div className="w-full max-w-6xl bg-white shadow-md rounded-lg flex flex-col lg:flex-row">
-        
         {/* Login Section */}
         <div className="w-full lg:w-1/2 p-8 lg:px-16 flex flex-col justify-center relative">
           <img
             src={IMG}
             // className="w-[200px] h-[119px] sm:w-[250px] md:w-[300px] lg:w-[350px] mb-6"
-             className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] mb-0"
+            className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] mb-0"
             alt="Logo"
           />
 
@@ -450,12 +439,9 @@ function Login() {
           className="hidden lg:block w-1/2 bg-cover bg-center"
           style={{ backgroundImage: `url(${BackgroundIMG})` }}
         ></div>
-  
-
       </div>
     </div>
   );
 }
 
 export default Login;
-
