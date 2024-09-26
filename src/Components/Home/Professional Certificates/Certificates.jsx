@@ -2,13 +2,16 @@ import React from "react";
 import Navbar from "../../Navbar";
 import Professional from "./Professional";
 import Footer from "../footer/Footer";
+import img1 from '../../../assetss/certifications_images/image1.png'
+import img2 from '../../../assetss/certifications_images/image2.png'
+import { LuArrowUpRight } from "react-icons/lu";
 
 function Certificates() {
   return (
     <div>
       <Navbar />
-      <div className="bg-blue-200">
-        <nav class="flex p-10 " aria-label="Breadcrumb">
+      <div className="">
+        {/* <nav class="flex p-10 " aria-label="Breadcrumb">
           <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
             <li class="inline-flex items-center">
               <a
@@ -53,99 +56,118 @@ function Certificates() {
               </div>
             </li>
           </ol>
-        </nav>
+        </nav> */}
 
-        <div class="px-7 lg:px-10 max-w-6xl mx-auto flex flex-col gap-y-10 lg:flex-row items-center gap-x-10 justify-center py-10 lg:py-14 dark:bg-gray-800">
-          <div class="lg:w-[650px] lg:px-5 flex flex-col gap-y-5">
-            <h1 class="text-4xl md:text-5xl xl:text-[50px] leading-[1.2] md:max-w-xl md:mx-auto md:text-center lg:text-left lg:mx-0 lg:max-w-full font-semibold dark:text-white">
-              Professional Certificates
-            </h1>
-            <p class="text-sm md:max-w-xl md:mx-auto lg:mx-0 lg:max-w-full md:text-center lg:text-left dark:text-gray-300">
+        <div class=" max-w-7xl mx-auto flex flex-col gap-y-10 lg:flex-row items-center gap-x-12 justify-center py-10 lg:py-14 dark:bg-gray-800">
+          <div class="lg:w-[650px] lg:px-5 flex flex-col gap-y-6">
+          <h1 class="text-2xl md:text-5xl xl:text-[50px] space-x-2 leading-[1.2] md:max-w-xl md:mx-auto text-center md:text-center lg:mb-[90px] lg:text-left lg:mx-0 lg:max-w-full font-semibold dark:text-white">
+  <span>Professional</span> 
+  <span class="text-2xl md:text-5xl xl:text-[50px] leading-[1.2] font-semibold dark:text-white">
+    <span class="text-[#f6ac14]">Cert</span>
+    <span class="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
+      ificate
+    </span>
+  </span>
+  <p class="md:text-lg text-base font-normal md:max-w-xl mt-4 md:mx-auto lg:mx-0 lg:max-w-full md:text-center lg:text-left dark:text-gray-300">
               Get job-ready for an in-demand career
             </p>
+</h1>
+            
             <div class="flex gap-x-5 flex-col gap-y-2.5 lg:flex-row">
               <a
                 href="#"
-                class="flex w-full lg:w-fit items-center text-white justify-center rounded-lg bg-[#1053F3] px-6 py-2.5 font-semibold hover:shadow-lg hover:drop-shadow transition duration-200"
+                class="flex w-full lg:w-fit items-center text-white justify-center rounded-md bg-gradient-to-r from-[#0098F1] to-[#00588B] px-12 py-2.5 font-semibold hover:shadow-lg hover:drop-shadow transition duration-200"
               >
-                <span>Get started</span>
+                <span>Get Start</span>
               </a>
               <a
                 href="#"
-                class="flex w-full lg:w-fit items-center text-[#1053F3] justify-center rounded-lg border border-[#6A65FF] px-6 py-2.5 font-semibold hover:shadow-lg hover:drop-shadow transition duration-200 bg-[#5138EE]/10 dark:text-white dark:bg-transparent dark:border-gray-500/50"
+                class="flex w-full lg:w-fit items-center text-[#0098F1] justify-center rounded-md border border-[#0098F1] px-10 py-2.5 font-semibold hover:shadow-lg hover:drop-shadow transition duration-200 bg-[#5138EE]/10 dark:text-white dark:bg-transparent dark:border-gray-500/50"
               >
                 <span>Learn more</span>
               </a>
             </div>
           </div>
-          <div class="hero-image md:px-5 lg:px-0 w-full lg:w-1/2 rounded-3xl md:pt-2 lg:pt-0 relative isolate z-10">
+          <div class="hero-image md:px-5 lg:px-0 w-[75%] mb-10 md:mb-4 lg:w-[40%] rounded-3xl md:pt-2 lg:pt-0 relative isolate z-10">
             <img
               class="rounded-3xl w-full"
-              src="https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMnx8c2VydmljZXxlbnwwfDB8fHwxNzEyMjIyNjQ3fDA&ixlib=rb-4.0.3&q=80&w=1080"
+              src={img1}
               alt=""
             />
           </div>
         </div>
       </div>
 
-      <div class="flex justify-start items-center h-screen">
+      <div class="flex justify-center lg:justify-start items-center h-screen md:mt-24 xl:mt-20 mb-[240px] md:mb-[110px] xl:mb-20 mt-[240px]">
         <div class="">
           {/* <!-- Card 1 --> */}
-          <div class="bg-white shadow-lg rounded-lg p-4 mb-4 flex">
+          <div class="bg-white md:flex-row px-4 flex-col justify-center items-center space-x-6 rounded-lg pt-10 pb-14 gap-x-3 flex">
             <img
-              src="https://img.freepik.com/free-vector/woman-vr-with-template-character_603843-3541.jpg?t=st=1717402354~exp=1717405954~hmac=9738ae110246dff7d6a6d7aa4b642b3a686145153fcc3f45ff4fe5b01a0ad0be&w=740"
+              src={img2}
               alt="Map 1"
-              class="w-32 h-32 object-cover rounded-t-lg mr-4"
+              class="w-[260px] h-[180px] object-cover rounded-t-lg md:mr-4"
             />
-            <div>
-              <div class="flex items-center mb-2">
-                <h2 class="text-xl font-semibold">
+            <div className="flex flex-col justify-center text-center md:text-start">
+              <div class="flex md:justify-start justify-center items-center mb-3">
+                <h2 class="text-xl md:text-start text-center font-semibold text-[#0098F1]">
                   Data Analyst Professional Certificate
                 </h2>
               </div>
               <p>6 months at 10 hours per week</p>
               <p>prepare an a entry-level job as Data Analyst</p>
-              <h1 className="text-blue-500 font-bold  hover:underline cursor-pointer">
-                click on go for Certificate
-              </h1>
+              <a
+                href="#"
+                class="flex w-1/2 mx-auto md:mx-0 mt-7 lg:w-fit items-center text-white justify-center rounded-md bg-gradient-to-r from-[#0098F1] to-[#00588B] px-7 py-2.5 font-semibold hover:shadow-lg hover:drop-shadow transition duration-200"
+              >
+                <span className="flex justify-center items-center gap-x-2">Certificate<LuArrowUpRight /></span>
+              </a>
             </div>
           </div>
 
           {/* <!-- Card 2 --> */}
-          <div class="bg-white shadow-lg rounded-lg p-4 mb-4 flex">
+          <div class="bg-white md:flex-row px-4 flex-col justify-center items-center space-x-6 rounded-lg pt-10 pb-14 gap-x-3 flex">
             <img
-              src="https://img.freepik.com/premium-vector/digital-marketing-poster-with-words-digital-marketing-it_136558-97926.jpg?w=740"
+              src={img2}
               alt="Map 2"
-              class="w-32 h-32 object-cover rounded-t-lg mr-4"
+              class="w-[260px] h-[180px] object-cover rounded-t-lg md:mr-4"
             />
-            <div>
-              <div class="flex items-center mb-2">
-                <h2 class="text-xl font-semibold">Digital Marketing</h2>
+            <div className="flex flex-col justify-center text-center md:text-start">
+              <div class="flex md:justify-start justify-center items-center mb-3">
+                <h2 class="text-xl md:text-start text-center font-semibold text-[#0098F1]">
+                Digital Marketing
+                </h2>
               </div>
               <p>5 to 6 months 6-10 hours</p>
-              <p>Prepare for an entry-level job as a social media marketer.</p>
-              <h1 className="text-blue-500 font-bold  hover:underline cursor-pointer">
-                click on go for Certificate
-              </h1>
+              <p>Prepare for an entry-level job as a social media<p className="inline md:block"> marketer</p></p>
+              <a
+                href="#"
+                class="flex w-1/2 mx-auto md:mx-0 mt-7 lg:w-fit items-center text-white justify-center rounded-md bg-gradient-to-r from-[#0098F1] to-[#00588B] px-7 py-2.5 font-semibold hover:shadow-lg hover:drop-shadow transition duration-200"
+              >
+                <span className="flex justify-center items-center gap-x-2">Certificate<LuArrowUpRight /></span>
+              </a>
             </div>
           </div>
-
           {/* <!-- Card 3 --> */}
-          <div class="bg-white shadow-lg rounded-lg p-4 flex">
+          <div class="bg-white md:flex-row px-4 flex-col justify-center items-center space-x-6 rounded-lg pt-10 pb-14 gap-x-3 flex">
             <img
-              src="https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg?t=st=1717402471~exp=1717406071~hmac=601f9e88e7c956df21e371ad392e0348ee546628ef8b620927d319a830ad4022&w=740"
-              alt="Map 3"
-              class="w-32 h-32 object-cover rounded-t-lg mr-4"
+              src={img2}
+              alt="Map 2"
+              class="w-[260px] h-[180px] object-cover rounded-t-lg mr-4"
             />
-            <div>
-              <div class="flex items-center mb-2">
-                <h2 class="text-xl font-semibold">IT Support Specialist</h2>
+            <div className="flex flex-col justify-center md:text-start text-center">
+              <div class="flex items-center md:justify-start justify-center mb-3">
+                <h2 class="text-xl md:text-start text-center font-semibold text-[#0098F1]">
+                IT Support Specialist
+                </h2>
               </div>
-              <p>Prepare for an entry-level job as an IT support specialist.</p>
               <p>6 months at 10 hours</p>
-              <h1 className="text-blue-500 font-bold  hover:underline cursor-pointer">
-                click on go for Certificate
-              </h1>
+              <p>Prepare for an entry-level job as an IT support<p className="inline md:block">  specialist </p></p>
+              <a
+                href="#"
+                class="flex w-1/2 mx-auto md:mx-0 mt-7 lg:w-fit items-center text-white justify-center rounded-md bg-gradient-to-r from-[#0098F1] to-[#00588B] px-7 py-2.5 font-semibold hover:shadow-lg hover:drop-shadow transition duration-200"
+              >
+                <span className="flex justify-center items-center gap-x-2">Certificate<LuArrowUpRight /></span>
+              </a>
             </div>
           </div>
         </div>
