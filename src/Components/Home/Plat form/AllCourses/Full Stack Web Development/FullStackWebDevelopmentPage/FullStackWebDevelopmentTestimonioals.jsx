@@ -25,7 +25,7 @@ const Card = ({
           isFlipped ? "opacity-100" : "opacity-0"
         }`}
       >
-        <p className="text-center text-[#0098F1] p-4">{text}</p>
+        <p className="text-center text-[#0098F1] text-xs px-3 ">{text}</p>
       </div>
       <button
         className={`absolute bottom-6 right-4 rounded-full p-2 transition-colors duration-300 ${
