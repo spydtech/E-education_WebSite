@@ -172,7 +172,7 @@ function SuccessStory() {
         >
           The Success Story of{" "}
           <span className="text-[#0098F1] " style={{ fontFamily: "Arial" }}>
-            James
+            Rahul
           </span>
         </h1>
 
