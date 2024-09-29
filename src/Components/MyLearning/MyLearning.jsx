@@ -1,269 +1,68 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 
 const MyLearning = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
   const dummyVideos = [
     {
       id: 1,
       title: "Sample Video 1",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
+        "Sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video.",
+      url: "https://res.cloudinary.com/dfftgkkev/image/upload/v1727173712/Rectangle_1_z6u7pa.png",
     },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-
     {
       id: 2,
       title: "Sample Video 2",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample2.mp4",
+        "Sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video.",
+      url: "https://res.cloudinary.com/dfftgkkev/image/upload/v1727173712/Rectangle_1_z6u7pa.png",
     },
     {
-      id: 1,
-      title: "Sample Video 1",
+      id: 3,
+      title: "Sample Video 3",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
+        "Sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video sample video.",
+      url: "https://res.cloudinary.com/dfftgkkev/image/upload/v1727173712/Rectangle_1_z6u7pa.png",
     },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-    {
-      id: 1,
-      title: "Sample Video 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample1.mp4",
-    },
-
-    {
-      id: 2,
-      title: "Sample Video 2",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum, nisi id consequat vestibulum, nunc ligula laoreet nisi, eu dictum lorem est vel eros. Nulla facilisi. Integer ut augue ut arcu consequat vulputate nec eget velit.",
-      url: "https://www.samplevideo.com/sample2.mp4",
-    },
-    // Add more dummy videos as needed
   ];
+  
   return (
     <>
-      <h2 className="text-2xl font-bold text-center  font py-8 my-10">
-        Embark on Your Learning Journey with MyLearning Courses
-      </h2>
-      <div className="video-container mt-4- ml-5">
-        {dummyVideos.map((video, index) => (
-          <div
-            key={index}
-            className="video-wrapper bg-white shadow-md rounded-md p-4 flex flex-col sm:flex-row items-center mb-4"
-          >
-            <div className="video mb-4 sm:mr-4">
-              <video
-                className="w-full h-auto"
-                style={{ height: "32vh" }}
-                controls
-              >
-                <source src={video.url} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div className="video-details flex-grow">
-              <h3 className="text-lg font-semibold mb-2">{video.title}</h3>
-              <p className="text-sm text-gray-500 mb-2">{video.description}</p>
-              <button className="bg-blue-400 text-white px-4 py-2 rounded-md">
-                Start Now
-              </button>
-            </div>
-          </div>
-        ))}
+    <h2 className="text-4xl font-bold text-center py-8 my-10">
+  Embark on Your <span className="bg-gradient-to-r from-[#F6AC14] to-[#0098F1] bg-clip-text text-transparent">Learning Journey</span> with MyLearning Courses
+</h2>
+
+<div className="video-container mt-4 mx-4 sm:mx-5">
+  {dummyVideos.map((video, index) => (
+    <div
+      key={index}
+      className="video-wrapper rounded-md p-4 flex flex-col sm:flex-row items-start mb-4"
+    >
+      <div className="image mb-4 sm:mb-0 sm:mr-4 flex-shrink-0 w-full sm:w-2/5">
+        <img
+          src={video.url}
+          alt={video.title}
+          className="w-full h-auto rounded-md lg:h-[220px] sm:h-auto" // Adjust height on large screens
+          style={{ aspectRatio: "16 / 9" }} // Maintain aspect ratio
+        />
       </div>
+      <div className="video-details flex-grow flex flex-col justify-between w-full sm:w-3/5">
+        <div>
+          <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-[#0098F1]">{video.title}</h3>
+          <p className="text-base sm:text-lg text-gray-500 mb-2">{video.description}</p>
+        </div>
+        <button className="bg-gradient-to-r from-[#0098F1] to-[#00588B] text-white h-[40px] w-full sm:w-[120px] mt-4">
+          Start Now
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
+
+
     </>
   );
 };

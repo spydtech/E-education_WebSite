@@ -112,7 +112,7 @@ const DataScienceNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div className=" ">
+      <div className="mx-5 ">
         {currentSection === 0 && <DataScienceIntroduction />}
         {currentSection === 1 && <DataScienceKeyHighights />}
         {currentSection === 2 && <DataScienceCareersOutcomes />}

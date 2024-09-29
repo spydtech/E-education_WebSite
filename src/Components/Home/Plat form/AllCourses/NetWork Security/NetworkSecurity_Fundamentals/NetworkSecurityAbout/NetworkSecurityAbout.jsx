@@ -17,7 +17,7 @@ const NetworkSecurityAbout = () => {
         'Access student support via support@datasciencecourse.com or through the "ask us?" option on our learning platform for urgent queries.',
       imgSrc: programmer,
       imgAlt: "student-support",
-    }
+    },
   ];
 
   return (
@@ -35,7 +35,7 @@ const NetworkSecurityAbout = () => {
             className="md:w-2/5 bg-white rounded-lg shadow-lg p-3 my-4"
           >
             <img
-              className="md:w-full md:h-64 rounded-md"
+              className="md:w-full  object-contain md:h-64 rounded-md"
               src={item.imgSrc}
               alt={item.imgAlt}
             />

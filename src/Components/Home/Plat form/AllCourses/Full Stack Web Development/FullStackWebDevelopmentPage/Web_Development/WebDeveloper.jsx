@@ -36,8 +36,8 @@ const WebDeveloper = () => {
               alt="Soft Skills"
               className=" md:w-48 md:h-44"
             />
-            <div className="flex justify-start flex-col items-start p-7">
-              <h3 className="text-2xl font-bold text-white mb-4">
+            <div className="flex justify-start flex-col items-start p-7 md:ml-28 lg:ml-5">
+              <h3 className="text-2xl font-bold text-white mb-4 ">
                 Soft Skills
               </h3>
               {softSkills.map((skill, index) => (
@@ -59,7 +59,7 @@ const WebDeveloper = () => {
               alt="STechnical Skills"
               className="md:w-48 md:h-44"
             />
-            <div className="flex justify-start flex-col items-start p-7">
+            <div className="flex justify-start flex-col items-start p-7 md:ml-28 lg:ml-5">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Technical Skills
               </h3>

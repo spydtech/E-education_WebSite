@@ -1,6 +1,7 @@
 // import React from "react";
 import React, { useState } from "react";
 // import axios from "axios";
+import hero from "../../../../../../assetss/student/dataScience/visualization/hero.jpg";
 import { useNavigate } from "react-router-dom";
 const DatavisualisationHero = () => {
   const [courseName] = useState("Data Visualization"); // Placeholder for course name
@@ -14,8 +15,7 @@ const DatavisualisationHero = () => {
 
   return (
     <>
-      {/* First Part */}
-      <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1726473780/WhatsApp_Image_2024-09-15_at_11.16.11_PM_2_pmcwvr.jpg")' }}>
+      {/* <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1726473780/WhatsApp_Image_2024-09-15_at_11.16.11_PM_2_pmcwvr.jpg")' }}>
   <div className="absolute inset-0 flex items-center justify-center">
   <p className="text-center text-white text-[16px] md:text-[20px] font-medium pb-5 leading-relaxed">
   Explore the power of data visualization in transforming complex datasets into intuitive
@@ -36,9 +36,31 @@ const DatavisualisationHero = () => {
       Enroll Now
     </button>
   </div>
-</div>
+</div> */}
 
-      {/* Second Part */}
+      <div className="relative">
+        <div
+          className=" w-full h-[370px] bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${hero})`,
+          }}
+        ></div>
+        <div className="absolute inset-0 flex items-center justify-center px-[40px] md:px-[120px] lg:px-[200px]">
+          <div className="text-white text-lg md:text-xl lg:text-2xl font-medium  text-center">
+            {" "}
+            Explore the power of data visualization in transforming complex
+            datasets into intuitive empower success and keep you ahead of the
+            competition. visual narratives. Our data visualization solutions
+          </div>
+
+          <button
+            onClick={handleEnroll}
+            className="absolute bottom-5 lg:bottom-12 px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl  transition duration-200"
+          >
+            Enroll Now
+          </button>
+        </div>
+      </div>
     </>
   );
 };
