@@ -41,10 +41,7 @@ const WebDeveloper = () => {
                 Soft Skills
               </h3>
               {softSkills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-x-2 mb-2"
-                >
+                <div key={index} className="flex items-center gap-x-2 mb-2">
                   <p>
                     <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14]" />
                   </p>
@@ -64,10 +61,7 @@ const WebDeveloper = () => {
                 Technical Skills
               </h3>
               {technicalSkills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-x-2 mb-2"
-                >
+                <div key={index} className="flex items-center gap-x-2 mb-2">
                   <p>
                     <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14]" />
                   </p>
