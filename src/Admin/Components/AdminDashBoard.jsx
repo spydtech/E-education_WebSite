@@ -28,17 +28,16 @@ const statistics = [
 const AdminDashBoard = () => {
   // const theme = useTheme();
   const [darkMode, setDarkMode] = useState(false);
-  // const themes= localStorage.getItem("theme");
   const dispatch = useDispatch();
   const themes= localStorage.getItem("theme")
   return (
     
      
         <div className="  grid   ">
-           <div id="main" className="grid justify-center md:lg:justify-normal items-center  ">
+          
         <div
           id="div1"
-          className={` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "}   h-auto   rounded-lg  sm:ml-5 mt-8  lg:ml-3 p-3 text-start  lg:w-auto max-w-[1140px] md:w-[500px]  `}
+          className={`  ${themes === "dark" ? "bg-black text-white" : "text-white bg-gradient-to-l from-[#001510] to-[#00BF8F]   "}   h-auto     rounded-lg  sm:ml-5 mt-8  lg:ml-3 p-3 text-start  lg:w-auto max-w-[1140px] md:w-[500px]  `}
         >
           <p className="text-xl text-white px-3">Monthly Overview</p>
           <span className="text-[14px]  text-white px-3 pt-4 flex items-center">
@@ -48,15 +47,15 @@ const AdminDashBoard = () => {
             {data.map((item, index) => (
               <div
                 key={index}
-                className={` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "} p-8 flex items-center sm:justify-center justify-between w-auto md:w-[250px] h-auto md:h-[100px] lg:w-[180px] lg:h-[100px] text-white space-x-2`}
+                className={`  p-8 flex items-center sm:justify-center justify-between w-auto md:w-[250px] h-auto md:h-[100px] lg:w-[180px] lg:h-[100px] text-white space-x-2`}
               >
-                <div className="">
+              
                 <img
                   src={item.img}
                   alt={item.alt}
                   className="w-14 h-14 md:w-16 md:h-16 border-white border-2 rounded-full"
                 />
-                </div>
+              
                 <div>
                   <p className="text-sm md:text-lg text-white">{item.text}</p>
                   <p className="text-sm md:text-lg text-white">{item.value}</p>
@@ -80,7 +79,7 @@ const AdminDashBoard = () => {
             </div>
           ))}
            </div>
-        </div>
+       
         <PaymentData  className="w-full"/>
       </div>
     

@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { Box, CssBaseline, useMediaQuery, useTheme } from "@mui/material";
@@ -124,7 +121,7 @@ const Admin = () => {
         height: "100vh",
         width: drawerWidth,
       }}
-      className={` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "}  max-w-62 lg:block border-[#001510] border-opacity-10 border-r-2 `}
+      className={` ${themes === "dark" ? "bg-black text-white" : "text-white  bg-gradient-to-b from-[#001510] to-[#00BF8F] "}       max-w-62 lg:block    border-[#001510] border-opacity-10 border-r-2  `}
     >
       {/* Sidebar Logo */}
       <div className="py-4 flex relative">
@@ -152,7 +149,7 @@ const Admin = () => {
                 onChange={handleProfilePicChange}
               />
             </div>
-            <span className="text-white font-medium text-xl ml-2">Admin Name</span>
+            <h1 className={` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "} text-white font-medium text-xl ml-2`}>Admin Name</h1>
           </div>
         </div>
       )}
@@ -198,7 +195,7 @@ const Admin = () => {
             </li>
           ))}
            {!isSmallScreen && (
-        <div className="flex relative justify-center">
+        <div className="flex p-5 relative justify-center">
          <ThemeToggle/>
         </div>
       )}
@@ -209,9 +206,9 @@ const Admin = () => {
       <div className="p-4">
         <button
           onClick={handleLogout}
-          className="flex items-center px-4 py-2 w-full text-red-600 hover:bg-white hover:text-black transition-all duration-300 rounded-md"
+          className="flex items-center px-4 py-2 w-full text-red-600 bg-white hover:text-black transition-all duration-300 rounded-md"
         >
-          <span className="font-semibold">Logout</span>
+           Logout
         </button>
       </div>
 
@@ -254,9 +251,9 @@ const Admin = () => {
                   onChange={handleProfilePicChange}
                 />
               </div>
-              <span className="bg-gradient-to-r from-[#00BF8F] to-[#001510] text-transparent bg-clip-text font-semibold text-lg">
+              <h3 className={` ${themes === "dark" ? "bg-black text-white" : "bg-gradi ent-to-r from-[#00BF8F] to-[#001510] "}  text-transparent bg-clip-text font-semibold text-lg`}>
                 Admin Name
-              </span>
+              </h3>
             </div>
           )}
 
@@ -274,8 +271,8 @@ const Admin = () => {
           <Route path="/orders" element={<Orders />} />
           <Route path="/payment-data" element={<PaymentDashboard />} />
           <Route path="/sales-report" element={<SealsReports />} />
-          <Route path="/create-group" element={<CreateGroup />} />
-          <Route path="/existing-group" element={<ExistingGroup />} />
+          <Route path="/users/create-group" element={<CreateGroup />} />
+          <Route path="/users/existing-group" element={<ExistingGroup />} />
           <Route path="/accessField" element={<AccessField />} />
           <Route path="/register-employee" element={<RegisterEmployee />} />
           <Route path="/register-trainee" element={<RegisterTrainee />} />

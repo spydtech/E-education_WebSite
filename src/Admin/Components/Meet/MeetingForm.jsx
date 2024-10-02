@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import girl from "../../../assetss/Home/Admin.png";
-
+import { useDispatch, useSelector } from "react-redux";
 const MeetingForm = ({ addMeeting, meetings }) => {
   const [title, setTitle] = useState("");
   const [fromDate, setFromDate] = useState("");
@@ -66,10 +66,10 @@ const MeetingForm = ({ addMeeting, meetings }) => {
     setShowMeetings(true);
     setShowForm(false);
   };
-
+  const themes= localStorage.getItem("theme");
   return (
     <div className="grid gap-4 px-2">
-      <div className="w-full grid gap-4  pr-4">
+      <div className="w-full  grid gap-4  pr-4">
         <nav className="mb-6">
           <a
             href="#"
@@ -99,9 +99,9 @@ const MeetingForm = ({ addMeeting, meetings }) => {
       </div>
 
       {showForm && (
-        <div className="w-full md:w-auto gap-4">
+        <div className={` ${themes === "dark" ? "bg-black text-black" : "text-white bg-gradient-to-l from-[#001510] to-[#00BF8F]   "} w-full  md:w-auto gap-4`}>
           <form onSubmit={handleSubmit} className="p-6 border rounded-lg shadow-md">
-            <div className="grid gap-4 lg:grid-cols-4 md:grid-cols-2 ">
+            <div className="grid  gap-4 lg:grid-cols-4 md:grid-cols-2 ">
               <div className="mb-4">
                 <label
                   htmlFor="groupSelect"

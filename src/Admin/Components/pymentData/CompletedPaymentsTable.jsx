@@ -12,17 +12,7 @@ const completedData = [
     email: "john.doe@example.com",
     paymentMethod: "Credit Card",
   },
-  // {
-  //   fullName: "Bob Brown",
-  //   userId: "126",
-  //   transactionId: "rzp_4",
-  //   totalAmount: "450",
-  //   status: "Completed",
-  //   Date: "24/june/2024",
-  //   email: "bob.brown@example.com",
-  //   paymentMethod: "Net Banking",
-  // },
-  // Add more sample data if needed
+  
 ];
 
 const CompletedPaymentsTable = () => {

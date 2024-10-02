@@ -130,7 +130,8 @@ import Todo from "./Components/trainee/SheduledReports/Todo";
 import Dashboard from "./Admin/Components/pymentData/MainDashBoard";
 import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
 import ThemeToggle from "./Components/trainee/TraineeDashboard/Theamtoggle";
-
+import ReportsAndMasters from "./Components/Meeting/hospita/reports";
+import Sarvices from "./Components/Meeting/hospita/sarvices";
 function App() {
   const theme = useSelector((state) => state.theme.theme);
 
@@ -155,6 +156,8 @@ function App() {
           <Route path="/pricing" element={<Pricing2 />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
           <Route path="/main-post" element={<MainPost />} />
+          <Route path="/reports-masters" element={<ReportsAndMasters />} />
+          <Route path="/sarvices" element={<Sarvices />} />
 
           {/* Graph  */}
           <Route path="/table" element={<Sam />} />

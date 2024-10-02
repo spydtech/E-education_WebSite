@@ -1,6 +1,5 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import { useDispatch, useSelector } from "react-redux";
-// import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle"; 
 import ThemeToggle from '../../Components/trainee/TraineeDashboard/Theamtoggle';
 const PaymentData = () => {
   // Sample data array
@@ -12,6 +11,9 @@ const PaymentData = () => {
     { date: '6/7/2024', userId: '42326', fullName: 'User E', email: 'usere@email.com', course: 'Node.js', paymentMethod: 'Cash' }
   ];
   const themes= localStorage.getItem("theme")
+  const [darkMode, setDarkMode] = useState(false);
+  const dispatch = useDispatch();
+  // const themes= localStorage.getItem("theme")
   return (
     <div className={` flex flex-col justify-center overflow-x-auto p-4`}>
       <h1 className='text-[#001510] font-semibold text-xl py-2'>Payment Method</h1>

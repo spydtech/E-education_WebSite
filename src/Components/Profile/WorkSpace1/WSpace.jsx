@@ -52,7 +52,7 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
   const [Status, setStatus] = useState(0);
-
+  const [selectedAction, setSelectedAction] = useState("");
   useEffect(() => {
     const storedFiles = JSON.parse(localStorage.getItem("uploadedFiles")) || [];
     setUploadedFiles(storedFiles);
@@ -92,7 +92,29 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
     }
   };
 
-  const handleDownload = (file, index) => {
+  // const handleDownload = (file) => {
+  //   fetch(file.url)
+  //     .then((res) => res.blob())
+  //     .then((blob) => {
+  //       const url = window.URL.createObjectURL(blob);
+  //       const link = document.createElement("a");
+  //       link.href = url;
+  //       link.download = file.url.split("/").pop();
+  //       document.body.appendChild(link);
+  //       link.click();
+  //       document.body.removeChild(link);
+  //     });
+  // };
+
+  // const handleAction = (index, action) => {
+  //   if (action === "download") {
+  //     handleDownload(files);
+  //   } else {
+  //     console.log(`Action "${action}" selected for file at index ${index}`);
+  //   }
+  // };
+  
+  const handleDownload = (file) => {
     fetch(file.url)
       .then((res) => res.blob())
       .then((blob) => {
@@ -106,6 +128,16 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
       });
   };
 
+  const handleAction = (e) => {
+    const action = e.target.value;
+    setSelectedAction(action); // Update the state with the selected action
+
+    if (action === "download") {
+      handleDownload(file); // Only trigger download when the "download" option is selected
+    } else {
+      console.log(`Action "${action}" selected for file at index ${index}`);
+    }
+  };
   const handleAccept = (index, e) => {
     e.stopPropagation();
     setFileStatuses((prev) => {
@@ -160,18 +192,15 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
     console.log("Selected file:", selectedFile);
   };
 
-  const progressBarWidth = `${(Status / files.length) * 100}%`; // Calculate width based on Status
+  // const progressBarWidth = `${(Status / files.length) * 100}%`; // Calculate width based on Status
 
   return (
     <div className="">
       <Navbar />
-      {/* <h1 className="text-2xl font-bold py-10 px-10 text-[#1e3a8a] text-center hover:underline">
-        WorkSpace
-      </h1> */}
-      {/* <p className="">{Status}</p> */}
+     
       <div className="flex justify-center items-center">
         <div className="flex flex-col-reverse md:flex-row justify-center  md:items-start items-center md:justify-between  p-4">
-          <div className="p-4 border bg-white lg:w-[500px] w-[300px]  h-[340px]  mt-10  rounded-lg  shadow-sm-light shadow-[#0098f1]">
+        <div className="p-4 border bg-white lg:w-[500px] w-[300px]  h-[340px]  mt-10  rounded-lg  shadow-sm-light shadow-[#0098f1]">
             <div className="flex items-center ">
               <div className=" h-[300px] space-y-16">
                 <div className="">
@@ -186,7 +215,7 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
                   {isBrowseProjectOpen && (
                     <div className="fixed rounded-md inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
                       <div className="relative h-96 w-auto max-w-3xl m-4 overflow-y-auto max-h-full">
-                        <div className="bg-[#0098f1] rounded-lg">
+                        <div className="bg-[#0098f1]  rounded-lg">
                           <div className=" text-white text-xl p-2">
                             Browse Projects
                           </div>
@@ -199,7 +228,15 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
                         </div>
                         <div className="bg-white border-[#0098f1]  relative flex flex-col p-4 lg:p-8">
                        
-    <div className="mx-auto w-full border-2 border-[#0098f1] h-auto max-w-[450px] bg-white shadow-sm-light">
+    <div className="mx-auto w-full border-2 border-[#0098f1] h-auto max-w-[450px] bg-white shadow-sm-light"> 
+      <div className="bg-[#0098f1] h-32">
+      <h1 className="font-bold text-xl text-white p-4"> Browse Projects</h1>
+      </div> 
+      <div className="flex p-3 justify-between">
+  <h1 className="text-[#F6AC14] text-xl border-b-2 border-[#F6AC14]">upload tasks</h1>
+  <h2 className="text-[#F6AC14] text-xl border-b-2 border-[#F6AC14]">Tasks From Trainee</h2>
+</div>
+
   <form className="py-4 px-9" onSubmit={handleSubmit}>
     <div className="mb-5">
       <label
@@ -305,63 +342,19 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
   </form>
 </div>
 
-                          {/* <div className="flex mt-12 bg-white rounded-lg  shadow-sm-light  h-[480px] w-auto flex-col lg:w-4/6 sm:mx-auto sm:mb-2 -mx-2 p-2">
-                            <p className="block text-xl font-semibold text-[#0098f1]">
-                              Tasks From Trainee
-                            </p>
-                            {files.map((file, index) => (
-                              <div className="p-2 sm:w-1/2 w-full" key={index}>
-                                <div
-                                  className="bg-gray-100 rounded flex p-4 h-full cursor-pointer items-center justify-between"
-                                  onClick={() => handleDownload(file, index)}
-                                >
-                                  <div className="flex items-center">
-                                    <FaArrowCircleDown className="text-[#0098f1]  mr-2 " />
-                                    <div className="flex flex-col">
-                                      <span className="font-medium">
-                                        {file.name}
-                                      </span>
-                                      <span className="text-gray-500 text-sm">
-                                        {file.description}
-                                      </span>
-                                    </div>
-                                  </div>
-                                  <div className="flex items-center space-x-2 ml-6 lg:ml-20">
-                                    {fileStatuses[index] === "accepted" ? (
-                                      <button
-                                        className="bg-green-500 text-white px-3 py-1 rounded"
-                                        onClick={(e) => handleAccept(index, e)}
-                                      >
-                                        Completed
-                                      </button>
-                                    ) : fileStatuses[index] === "rejected" ? (
-                                      <button
-                                        className="bg-red-500 text-white px-6 py-1 rounded"
-                                        onClick={(e) => handleReject(index, e)}
-                                      >
-                                        Rejected
-                                      </button>
-                                    ) : (
-                                      <>
-                                        <button
-                                          className="bg-green-500 text-white px-3 py-1 rounded"
-                                          onClick={(e) =>
-                                            handleAccept(index, e)
-                                          }
-                                        >
-                                          Completed
-                                        </button>
-                                      </>
-                                    )}
-                                  </div>
-                                </div>
-                              </div>
-                            ))}
-                          </div> */}
-                          <div className="flex mt-12 bg-white rounded-lg shadow-sm-light h-[480px] w-auto flex-col lg:w-4/6 sm:mx-auto sm:mb-2 -mx-2 p-2 border-2 border-[#0098f1]">
-  <p className="block text-xl font-semibold text-[#0098f1]">
+                      
+  <div className="flex mt-5 bg-white rounded-lg shadow-sm-light h-auto w-auto flex-col lg:w-4/6 sm:mx-auto sm:mb-2 -mx-2  border-2 border-[#0098f1]">
+  <div className="bg-[#0098f1] h-32">
+      <h1 className="font-bold text-xl text-white p-4"> Browse Projects</h1>
+    </div>
+      
+  {/* <p className="block text-xl pl-4  font-semibold text-[#0098f1]">
     Tasks From Trainee
-  </p>
+  </p> */}
+    <div className="flex p-3 justify-between">
+  <h1 className="text-[#F6AC14] text-xl border-b-2 border-[#F6AC14]">upload tasks</h1>
+  <h2 className="text-[#F6AC14] text-xl border-b-2 border-[#F6AC14]">Tasks From Trainee</h2>
+</div>
   {files.map((file, index) => (
     <div className="p-2 sm:w-1/2 w-full" key={index}>
       <div
@@ -376,43 +369,31 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
           </div>
         </div>
         <div className="flex items-center space-x-2 ml-6 lg:ml-20">
-          {/* {fileStatuses[index] === "accepted" ? (
-            <button
-              className="bg-green-500 text-white px-3 py-1 rounded"
-              onClick={(e) => handleAccept(index, e)}
-            >
-              Completed
-            </button>
-          ) : fileStatuses[index] === "rejected" ? (
-            <button
-              className="bg-red-500 text-white px-6 py-1 rounded"
-              onClick={(e) => handleReject(index, e)}
-            >
-              Rejected
-            </button>
-          ) : (
-            <>
-              <button
-                className="bg-green-500 text-white px-3 py-1 rounded"
-                onClick={(e) => handleAccept(index, e)}
-              >
-                Completed
-              </button>
-            </>
-          )} */}
-          {/* <select>
-          <option>Completed</option>
-          <option>pending</option>
-        </select> */}
-        <select
-                className="p-2 rounded-md border focus:border-[#0098f1] border-[#0098f1] focus:ring-[#0098f1] text-[#0098f1]"
-                onChange={(e) => handleAction(index, e.target.value)}
-                defaultValue=""
-              >
-                <option value="" disabled>Select Action</option>
-                <option value="Accepted">Completed</option>
-                <option value="Rejected">Pending</option>
-        </select>
+      
+        {/* <select
+      className="p-2 rounded-md border focus:border-[#0098f1] border-[#0098f1] focus:ring-[rgb(0,152,241)] text-[#0098f1]"
+      onChange={(e) => handleDownload(index, e.target.value)}
+      defaultValue=""
+    >
+      <option value="" disabled>
+        Select Action
+      </option>
+      <option value="Accepted">Completed</option>
+      <option value="Rejected">Pending</option>
+      <option value="download" onClick={handleAction}>Download</option>
+    </select> */}
+    <select
+      className="p-2 rounded-md border focus:border-[#0098f1] border-[#0098f1] focus:ring-[rgb(0,152,241)] text-[#0098f1]"
+      onChange={handleAction}
+      value={selectedAction}
+    >
+      <option value="" disabled>
+        Select Action
+      </option>
+      <option value="Accepted">Completed</option>
+      <option value="Rejected">Pending</option>
+      <option value="download">Download</option>
+    </select>
         </div>
       </div>
     </div>
@@ -449,7 +430,7 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
                       id="progressBarWidth"
                       className="h-full bg-[#0098f1] rounded-lg"
                       style={{
-                        width: progressBarWidth,
+                        // width: progressBarWidth,
                         transition: "width 0.5s",
                       }}
                     ></div>

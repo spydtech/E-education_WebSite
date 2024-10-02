@@ -10,7 +10,8 @@ import {
   CategoryScale,
   LinearScale,
 } from "chart.js";
-
+// import { sampleData } from "./Sample";
+import { useDispatch, useSelector } from "react-redux";
 // Register necessary Chart.js components
 ChartJS.register(
   Title,
@@ -23,7 +24,8 @@ ChartJS.register(
 
 const MonthlyCustomerBarGraph = () => {
   const [selectedYear, setSelectedYear] = useState("2021");
-
+  const [activeTab, setActiveTab] = useState("All");
+  const themes= localStorage.getItem("theme")
   // Handle year change
   const handleYearChange = (event) => {
     setSelectedYear(event.target.value);
@@ -85,8 +87,8 @@ const MonthlyCustomerBarGraph = () => {
   };
 
   return (
-    <div className="md:w-[350px] w-[310px] relative h-[400px] shadow-xl rounded-xl  mx-auto p-4 ">
-      <h1 className=" font-bold text-center text-[#001510] mb-6">
+    <div className={` ${themes === "dark" ? "bg-black text-black" : "text-black   "} md:w-[350px] w-[310px] relative h-[400px] shadow-xl rounded-xl  mx-auto p-4 `}>
+      <h1 className= {` ${themes === "dark" ? "bg-black text-white" : "text-black   "} font-bold text-center text-[#001510] mb-6`}>
         Customer Growth - Total: {totalCustomers}
       </h1>
       <div className="flex absolute justify-center mt-6">
