@@ -20,7 +20,7 @@ function AutomationTestingKeyHighights() {
       case 0:
         return (
           <ul className="space-y-2 pt-4 pl-8 font-normal text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">Overview</p>
+            <p className="text-2xl font-medium text-white py-4">Overview</p>
             <li>Advanced modules with Generative AI fusion</li>
             <li>E-education certificate via upGrad collaboration</li>
             <li>Access to live training sessions by Meta Blueprint trainers</li>
@@ -36,9 +36,7 @@ function AutomationTestingKeyHighights() {
       case 1:
         return (
           <ul className="space-y-3 pt-4 font-normal pl-8 text-[16px] list-disc">
-            <p className="text-xl font-medium text-[#f6ac14] ">
-              Key Concepts
-            </p>
+            <p className="text-xl font-medium text-white ">Key Concepts</p>
             <li>Generative AI in digital marketing</li>
             <li>SEO</li>
             <li>Search and Display advertising</li>
@@ -51,9 +49,7 @@ function AutomationTestingKeyHighights() {
       case 2:
         return (
           <ul className="space-y-3 pt-4 font-normal pl-8 text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">
-              Applications
-            </p>
+            <p className="text-2xl font-medium text-white py-4">Applications</p>
             <li>Digital Marketing Manager</li>
             <li>SEM Manager</li>
             <li>SEO Manager</li>
@@ -67,7 +63,7 @@ function AutomationTestingKeyHighights() {
       case 3:
         return (
           <ul className="space-y-3 pt-4 font-normal pl-8 text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">
+            <p className="text-2xl font-medium text-white py-4">
               Skills Developed
             </p>
             <li>List of target audience goes here...</li>
@@ -86,7 +82,7 @@ function AutomationTestingKeyHighights() {
       case 4:
         return (
           <ul className="space-y-3 pt-4 font-normal pl-8 text-[16px] list-disc">
-            <p className="text-2xl font-medium text-[#f6ac14] py-4">
+            <p className="text-2xl font-medium text-white py-4">
               Target Audience
             </p>
             <li>
@@ -101,39 +97,39 @@ function AutomationTestingKeyHighights() {
         );
       default:
         return null;
-      }
+    }
   };
 
   return (
     <>
-   <div className="px-3 md:mb-4">
-      <div className="md:flex justify-around  ">
-        <div className="bg-[#0098F1] text-white  pb-5 md:w-2/5">
-          {renderContent()}
-        </div>
-        <div className="my-3">
-          <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
-            E-Education Course Highlights
-          </p>
-          {data.map((item, index) => (
-            <ul className="">
-              <li
-                key={index}
-                onClick={() => handleClick(index)}
-                className={`pt-4 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md text-center  ${
-                  selectedItem === index
-                    ? "bg-[#0098f1] text-white border-none"
-                    : ""
-                }`}
-              >
-                {item.label}
-              </li>
-            </ul>
-          ))}
+      <div className="px-3 md:mb-4">
+        <div className="md:flex justify-around  ">
+          <div className="bg-[#0098F1] text-white  pb-5 md:w-2/5">
+            {renderContent()}
+          </div>
+          <div className="my-3">
+            <p className="font-bold underline-offset-2 underline text-xl text-[#0098F1]">
+              E-Education Course Highlights
+            </p>
+            {data.map((item, index) => (
+              <ul className="">
+                <li
+                  key={index}
+                  onClick={() => handleClick(index)}
+                  className={`pt-4 hover:cursor-pointer text-xl my-2 md:h-16 md:w-[210px] border-2 rounded-md text-center  ${
+                    selectedItem === index
+                      ? "bg-[#0098f1] text-white border-none"
+                      : ""
+                  }`}
+                >
+                  {item.label}
+                </li>
+              </ul>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-   </>
+    </>
   );
 }
 

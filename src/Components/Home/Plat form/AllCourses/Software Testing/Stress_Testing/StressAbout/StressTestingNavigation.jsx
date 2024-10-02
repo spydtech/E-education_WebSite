@@ -113,7 +113,7 @@ const StressTestingNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div className=" ">
+      <div className="mx-5 ">
         {currentSection === 0 && <StressTestingIntroduction />}
         {currentSection === 1 && <StressTestingKeyHighlights />}
         {currentSection === 2 && <StressTestingCareersOutcomes />}

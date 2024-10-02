@@ -112,7 +112,7 @@ const ManualTestingNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div className="">
+      <div className="mx-5">
         {currentSection === 0 && <ManualTestingIntroduction />}
         {currentSection === 1 && <ManualTestingKeyHighights />}
         {currentSection === 2 && <ManualTestingCareersOutcomes />}

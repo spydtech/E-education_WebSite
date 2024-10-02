@@ -87,7 +87,7 @@ const SalesLineChart = () => {
   };
 
   return (
-    <div className="container h-[400px] shadow-xl rounded-xl relative mx-auto p-4">
+    <div className="md:w-[350px] w-[310px] h-[400px] shadow-xl  rounded-xl relative mx-auto p-4">
       <h1 className=" font-bold text-center text-[#001510] mb-6">
         Sales of Each Course
       </h1>

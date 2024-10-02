@@ -262,8 +262,8 @@ const CourseBarGraph = () => {
   };
 
   return (
-    <div className="container relative h-[400px]  shadow-xl rounded-xl  mx-auto p-4 ">
-      <h1 className=" font-bold text-center text-nowrap text-[#001510] mb-6">
+    <div className="md:w-[350px] w-[310px] relative h-[400px]  shadow-xl rounded-xl  mx-auto p-4 ">
+      <h1 className=" font-bold text-center text-wrap sm:text-nowrap text-[#001510] mb-6">
         Courses Added in Each Month by Admin
       </h1>
       <div className="flex absolute justify-center mt-4">

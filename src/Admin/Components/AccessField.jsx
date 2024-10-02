@@ -13,23 +13,23 @@ const AccessField = () => {
   };
 //#001510  #00BF8F 
   return (
-    <div className="flex items-center justify-center  min-h-screen  shadow-lg ">
-      <div className=" bg-white rounded-lg shadow-lg w-[700px] h-[420px] ">
-        <div className="w-auto h-[100px] bg-[#001510]  rounded-t-lg flex justify-center items-center">
-          <h2 className="text-2xl font-bold  text-white">Choose Access Type</h2>
+    <div className="flex justify-center p-8 px-6 min-h-screen">
+      <div className=" bg-white rounded-lg shadow-lg w-68 h-80 md:w-[700px]  md:h-[420px]  ">
+        <div className="w-auto h-24 bg-[#001510]  rounded-t-lg flex justify-center items-center">
+          <h2 className="md:lg:text-2xl font-bold text-xl  text-white ">Choose Access Type</h2>
         </div>
 
-        <div className=" justify-center items-center flex mt-10">
+        <div className=" justify-center items-center px-6 flex mt-10">
           <button
-            className="w-[350px] h-[60px] text-xl font-medium px-4 py-3 mb-4 text-white bg-[#00BF8F]   rounded-md focus:outline-none transition duration-300 ease-in-out transform hover:scale-105"
+            className="w-[250px] h-[60px] lg:h-[80px] lg:w-[350px] md:lg:text-xl px-8 font-medium lg:px-4 py-3 mb-4 text-white bg-[#00BF8F]   rounded-md focus:outline-none transition duration-300 ease-in-out transform hover:scale-105"
             onClick={handleNavigateToTrainee}
           >
             Register As A Trainee
           </button>
         </div>
-        <div className=" justify-center items-center flex mt-5">
+        <div className=" justify-center items-center px-6 flex mt-5">
           <button
-            className="w-[350px] h-[60px] text-xl font-medium px-4 py-3 text-white bg-[#00BF8F]  rounded-md focus:outline-none transition duration-300 ease-in-out transform hover:scale-105"
+            className="w-[250px] h-[60px] lg:h-[80px] lg:w-[350px] md:lg:text-xl text-base px-8 font-medium lg:px-4 py-3 text-white bg-[#00BF8F]  rounded-md focus:outline-none transition duration-300 ease-in-out transform hover:scale-105"
             onClick={handleNavigateToEmployee}
           >
             Register As A Employee

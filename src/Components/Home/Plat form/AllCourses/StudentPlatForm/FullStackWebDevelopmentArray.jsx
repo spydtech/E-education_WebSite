@@ -261,7 +261,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import cardImage from "../../../../../assetss/fullstackwebdev/webdev/nextGen.png";
+import cardImage from "../../../../../assetss/fullstackwebdev/webdev/nextGen.jpg";
 import Navbar from "../../../../Navbar";
 import Footer from "../../../footer/Footer";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";

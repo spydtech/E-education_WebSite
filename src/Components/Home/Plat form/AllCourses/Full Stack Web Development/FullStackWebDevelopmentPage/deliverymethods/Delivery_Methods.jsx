@@ -46,6 +46,7 @@ const Delivery_Methods = () => {
               href="#"
               className="text-[#F6AC14] bg-white flex pt-2 h-12 items-center mt-2 p-1 font-semibold"
               style={{ borderTopRightRadius: "18px" }}
+              onClick={(e) => e.stopPropagation()}
             >
               Explore Now <FiArrowUpRight />
             </a>

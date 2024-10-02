@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import img1 from "../../../../../../assetss/professionalimages/image4.png"; // Using same image as in DataHero
+import hero from "../../../../../../assetss/professionalimages/image4.png"; // Using same image as in DataHero
 
 const UnitTestingHero = () => {
   const [courseName] = useState("Unit Testing");
@@ -12,26 +12,24 @@ const UnitTestingHero = () => {
   };
 
   return (
-    <div className="relative w-full h-[500px] lg:h-[408px] flex items-center justify-center overflow-hidden">
+    <div className="relative">
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className=" w-full h-[370px] bg-cover bg-center"
         style={{
-          backgroundImage: `url(${img1})`,
+          backgroundImage: `url(${hero})`,
         }}
       ></div>
-
-      <div className="relative z-10 text-center text-white p-6 md:p-10">
-        {/* <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0098f1] mb-6">
-          Master the Art of Stress Testing to Ensure Software Quality!
-        </h1> */}
-        <p className="text-[20px] md:text-[24px] font-medium text-white px-4 mb-10 max-w-[800px] mx-auto">
+      <div className="absolute inset-0 flex items-center justify-center px-[40px] md:px-[120px] lg:px-[200px]">
+        <div className="text-white text-lg md:text-xl lg:text-2xl font-medium  text-center">
+          {" "}
           Empower your team with efficient acceptance testing procedures,
           ensuring your software meets stakeholder requirements and
-          expectations...
-        </p>
+          expectations.
+        </div>
+
         <button
           onClick={handleEnroll}
-          className="px-6 py-3 text-[20px] font-medium text-white bg-[#0098f1] rounded-xl"
+          className="absolute bottom-5 lg:bottom-12 px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl  transition duration-200"
         >
           Enroll Now
         </button>
