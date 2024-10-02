@@ -80,7 +80,7 @@ const Admin = () => {
   const [profilePic, setProfilePic] = useState(); // State for profile picture
   const dispatch = useDispatch();
   // const navigate = useNavigate();
-  const drawerWidth = 230;
+  const drawerWidth = 235;
   const themes= localStorage.getItem("theme");
 
   const toggleSubMenu = (index) => {
@@ -139,7 +139,7 @@ const Admin = () => {
       {isSmallScreen && (
         <div className="p-2">
           <div className="flex items-center mb-4">
-            <div className="w-[60px] h-[60px] rounded-full bg-white cursor-pointer">
+            <div className="w-[60px] h-[60px] rounded-full bg-white shadow-lg cursor-pointer">
               <img className="w-[60px] h-[60px] rounded-full" src={profilePic} onClick={() => document.getElementById('fileInput').click()} />
               <input
                 type="file"
@@ -196,17 +196,17 @@ const Admin = () => {
           ))}
            {!isSmallScreen && (
         <div className="flex p-5 relative justify-center">
-         <ThemeToggle/>
+         {/* <ThemeToggle/> */}
         </div>
       )}
         </ul>
       </div>
 
       {/* Logout Button */}
-      <div className="p-4">
+      <div className="px-4 py-4 ">
         <button
           onClick={handleLogout}
-          className="flex items-center px-4 py-2 w-full text-red-600 bg-white hover:text-black transition-all duration-300 rounded-md"
+          className="  px-4 py-2 w-full text-[#4CA1AF]  bg-white  transition-all duration-300 rounded-md"
         >
            Logout
         </button>
@@ -238,32 +238,42 @@ const Admin = () => {
 
       {/* Navbar */}
       <div className="flex-grow h-screen overflow-auto ">
-        <Box component="header" className={` ${themes==="dark"&&"bg-black text-white"} p-4 flex items-center justify-between `}>
+        <Box component="header" className={` ${themes==="dark"&&"bg-black text-white"} p-4 flex items-center  shadow-lg justify-between `}>
           {!isSmallScreen && (
-            <div className="flex items-center px-4  space-x-2">
-              <div className="w-[60px] h-[60px] rounded-full bg-white cursor-pointer">
-                <img className="w-[60px] h-[60px] rounded-full" src={profilePic} onClick={() => document.getElementById('fileInput').click()} />
-                <input
-                  type="file"
-                  id="fileInput"
-                  style={{ display: 'none' }}
-                  accept="image/*"
-                  onChange={handleProfilePicChange}
-                />
-              </div>
-              <h3 className={` ${themes === "dark" ? "bg-black text-white" : "bg-gradi ent-to-r from-[#00BF8F] to-[#001510] "}  text-transparent bg-clip-text font-semibold text-lg`}>
-                Admin Name
-              </h3>
+          <div className="flex items-center justify-between px-4 space-x-2 w-full">
+          <div className="flex items-center space-x-2">
+            <div className="w-[60px] h-[60px] rounded-full bg-white cursor-pointer">
+              <img className="w-[60px] h-[60px] rounded-full" src={profilePic} onClick={() => document.getElementById('fileInput').click()} />
+              <input
+                type="file"
+                id="fileInput"
+                style={{ display: 'none' }}
+                accept="image/*"
+                onChange={handleProfilePicChange}
+              />
             </div>
+            <h3 className={` ${themes === "dark" ? "bg-black text-white" : "bg-gradient-to-r from-[#00BF8F] to-[#001510] text-[#00BF8F] "} text-transparent bg-clip-text font-semibold text-lg`}>
+              Admin Name
+            </h3>
+          </div>
+          
+          <div className="items-end justify-end">
+            <ThemeToggle/>
+          </div>
+        </div>
+        
+
+       
           )}
 
           {/* Dark Mode Switch for Small Screens */}
           {isSmallScreen && (
             <div className="relative flex w-full justify-end">
-              <span className="text-xl mr-2">Dark Mode:</span>
+              {/* <span className="text-xl mr-2">Dark Mode:</span> */}
              <ThemeToggle/>
             </div>
           )}
+          {/* ` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "} */}
         </Box>
 
         <Routes>
