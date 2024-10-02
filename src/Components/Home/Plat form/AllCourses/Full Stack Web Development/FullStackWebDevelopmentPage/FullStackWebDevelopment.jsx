@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../../../Navbar";
-import Hero from "../../../../../../assetss/fullstackwebdev/webdev/hero.png";
+import Hero from "../../../../../../assetss/fullstackwebdev/webdev/hero.jpg";
 import Footer from "../../../../footer/Footer";
 import WebDeveloper from "./Web_Development/WebDeveloper";
 import AboutCourses from "./AboutCourses";
@@ -28,22 +28,16 @@ const ParticularFullStack = () => {
     <>
       <Navbar />
       <div className="">
-        <div className="flex flex-col lg:flex-row items-center md:justify-center gap-4 px-6 md:px-8 lg:px-16">
-          {/* Image Section */}
-          <div className="order-1 lg:order-2 mt-4 md:mt-0 md:w-1/2 flex justify-center">
-            <img
-              src={Hero}
-              alt="Hero"
-              className="w-full h-full max-w-md md:max-w-lg lg:max-w-xl"
-            />
+        <div className="m-5 text-center lg:flex justify-around">
+          <div className="md:flex justify-center lg:order-2">
+            <img src={Hero} alt="Hero" className="md:w-96 " />
           </div>
-          {/* Content Section */}
-          <div className="lg:w-2/3 text-center lg:text-left order-2 lg:order-1">
-            <h3 className="text-xl md:text-3xl lg:text-4xl font-bold leading-tight sm:leading-none tracking-tight text-gray-900">
+          <div className="lg:w-[50%] lg:text-start">
+            <h2 className="tracking-tight text-gray-900 leading-6 text-xl font-bold">
               Master <span className="text-[#F6AC14]">Full Stack</span> Web
               Development
-            </h3>
-            <p className="mt-4 text-base md:text-lg lg:text-xl text-gray-600">
+            </h2>
+            <p className="mt-4 text-base md:text-lg lg:text-xl text-gray-600 text-md">
               Accelerate your tech skills with comprehensive courses designed to
               cover front-end and back-end development. Gain expertise in
               JavaScript frameworks, databases, server-side scripting, and more.
@@ -55,7 +49,7 @@ const ParticularFullStack = () => {
             >
               Enroll Now
             </button>
-            <div className="mt-4 text-gray-600">11,095 already enrolled</div>
+            <p className="mt-4 text-gray-600">11,095 already enrolled</p>
           </div>
         </div>
         <WebDeveloper />

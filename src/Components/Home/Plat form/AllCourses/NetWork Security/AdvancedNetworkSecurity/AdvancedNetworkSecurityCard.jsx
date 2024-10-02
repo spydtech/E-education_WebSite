@@ -12,13 +12,13 @@ const AdvancedNetworkSecurityCard = () => {
       imgSrc: img1,
       title: "Explore Course Catalog",
       description:
-        "Browse our extensive catalog of Data Science courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
+        "Browse our extensive catalog of Network Security courses. Discover beginner-friendly to advanced-level programs designed to accommodate learners of all backgrounds.",
     },
     {
       imgSrc: img2,
       title: "Enroll in Foundational Courses",
       description:
-        "Start with foundational courses covering basic concepts, algorithms, and tools essential for Data Science.",
+        "Start with foundational courses covering basic concepts, algorithms, and tools essential for Network Security.",
     },
     {
       imgSrc: img3,
@@ -30,13 +30,13 @@ const AdvancedNetworkSecurityCard = () => {
       imgSrc: img4,
       title: "Track Your Progress",
       description:
-        "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Data Science concepts as you advance through the courses.",
+        "Monitor your progress with intuitive dashboards and tracking tools. Set goals, track milestones, and measure your proficiency in various Network Security concepts as you advance through the courses.",
     },
     {
       imgSrc: img5,
       title: "Specialize and Advance",
       description:
-        "Choose specialized tracks or advanced courses to delve deeper into specific areas of Data Science, such as data engineering, predictive analytics, or machine learning.",
+        "Choose specialized tracks or advanced courses to delve deeper into specific areas of Network Security, such as data engineering, predictive analytics, or machine learning.",
     },
     {
       imgSrc: img6,
@@ -66,9 +66,9 @@ const AdvancedNetworkSecurityCard = () => {
               className="group  border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-              <div className="h-[180px] justify-center items-center flex">
-                    <img
-                      className="w-[300px] h-[220px] p-2 bg-cover"
+                <div className="h-[180px] justify-center items-center flex">
+                  <img
+                    className="w-[300px] h-[220px] p-2 bg-cover"
                     src={course.imgSrc}
                     alt={`Project ${index + 1}`}
                   />

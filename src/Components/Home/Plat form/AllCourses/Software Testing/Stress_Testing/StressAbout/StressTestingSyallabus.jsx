@@ -1,28 +1,25 @@
 import React from "react";
 
-
 function StressTestingSyllabus() {
   const data = [
     {
-      heading: "Introduction to Cloud Computing",
-      subheading: "Topics (16)",
+      heading: "Introduction to Stress Testing",
+      subheading: "Topics (14)",
       items: [
-        "Overview of Cloud Computing",
-        "Cloud Service Models (IaaS, PaaS, SaaS)",
-        "Cloud Deployment Models (Public, Private, Hybrid)",
-        "Cloud Infrastructure Components",
-        "Virtualization in Cloud Computing",
-        "Scalability and Elasticity",
-        "Security in Cloud Computing",
-        "Identity and Access Management (IAM)",
-        "Data Privacy and Compliance",
-        "Cloud Networking Fundamentals",
-        "Load Balancing and Content Delivery Networks (CDNs)",
-        "High Availability and Disaster Recovery",
-        "Serverless Computing",
-        "Big Data and Analytics in the Cloud",
-        "Artificial Intelligence and Machine Learning in the Cloud",
-        "Future Trends in Cloud Computing",
+        "Overview of Stress Testing",
+        "Purpose of Stress Testing in Software Development",
+        "Types of Stress Testing (Load, Spike, Soak)",
+        "Stress Testing vs. Performance Testing",
+        "Common Tools for Stress Testing",
+        "Identifying Stress Test Scenarios",
+        "Setting Up the Testing Environment",
+        "Defining System Capacity and Limits",
+        "Monitoring System Behavior Under Stress",
+        "Analyzing Stress Test Results",
+        "Mitigating Bottlenecks and System Failures",
+        "Stress Testing for Web Applications",
+        "Best Practices for Effective Stress Testing",
+        "Future Trends in Stress Testing",
       ],
     },
   ];

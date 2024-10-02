@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import student from "../../../../../../assetss/Home/intro_DataScience/student.jpg";
-import img1 from '../../../../../../assetss/professionalimages/image2.png';
+import hero from "../../../../../../assetss/professionalimages/image2.png";
 
 const DataHero = () => {
   const [courseName] = useState("Data Analytics");
@@ -13,21 +13,25 @@ const DataHero = () => {
   };
 
   return (
-    <div className="relative w-full h-[500px] lg:h-[408px] flex items-center justify-center overflow-hidden">
+    <div className="relative">
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className=" w-full h-[370px] bg-cover bg-center"
         style={{
-          backgroundImage: `url(${img1})`,
+          backgroundImage: `url(${hero})`,
         }}
       ></div>
+      <div className="absolute inset-0 flex items-center justify-center px-[40px] md:px-[120px] lg:px-[200px]">
+        <div className="text-white text-lg md:text-xl lg:text-2xl font-medium  text-center">
+          {" "}
+          Explore the power of data visualization in transforming complex
+          datasets into intuitive visual narratives. Data visualization
+          solutions empower your business enabling data-driven decisions that
+          drive success.
+        </div>
 
-      <div className="relative z-10 text-center text-white p-6 md:p-10">
-        <p className="text-center text-white text-[20px] font-medium px-4 mb-10 max-w-[800px]">
-          Dive deep into data analytics, a multifaceted field encompassing data cleaning, visualization, statistical analysis, and predictive modeling. With a focus on practical skills and real-world applications.
-        </p>
         <button
           onClick={handleEnroll}
-          className="px-6 py-3 text-[20px] font-medium text-white bg-[#0098f1] rounded-xl"
+          className="absolute bottom-5 lg:bottom-12 px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl  transition duration-200"
         >
           Enroll Now
         </button>

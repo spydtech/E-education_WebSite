@@ -261,7 +261,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import cardImage from "../../../../../assetss/fullstackwebdev/webdev/nextGen.png";
+import cardImage from "../../../../../assetss/fullstackwebdev/webdev/nextGen.jpg";
 import Navbar from "../../../../Navbar";
 import Footer from "../../../footer/Footer";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
@@ -466,7 +466,7 @@ const FullStackWebDevelopmentArray = () => {
                   <img
                     src={course.image}
                     alt={course.title}
-                    className="w-full h-32 object-cover px-3 "
+                    className="w-full h-32 object-contain  px-3 "
                   />
                 </div>
                 <div className="p-4">

@@ -6,15 +6,15 @@ import FooterPart from "../../../footer/Footer";
 // import cardImage from "../../../../../assetss/fullstackwebdev/java/java1.avif";
 // import  cardImage1  from "../../../../../assetss/fullstackwebdev/dotnet/dotnet1.jpg";
 // import  cardImage2  from "../../../../../assetss/fullstackwebdev/javaScript/javascript1.avif";
-import basicsCard from '../../../../../assetss/professional/ethicalHacking/basicsCard.png'
-import advancedCard from '../../../../../assetss/professional/ethicalHacking/advancedCard.png'
-import certifiedCard from '../../../../../assetss/professional/ethicalHacking/certifiedCard.png'
-import hero from '../../../../../assetss/professional/ethicalHacking/hero.png'
+import basicsCard from "../../../../../assetss/professional/ethicalHacking/basicsCard.png";
+import advancedCard from "../../../../../assetss/professional/ethicalHacking/advancedCard.png";
+import certifiedCard from "../../../../../assetss/professional/ethicalHacking/certifiedCard.png";
+import hero from "../../../../../assetss/professional/ethicalHacking/hero.png";
 import { FaStar } from "react-icons/fa6";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaRegStar } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
-import Girl2 from "../../../../../assetss/profile/girl2.png"
+import Girl2 from "../../../../../assetss/profile/girl2.png";
 const EthicalHackingStudentArray = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [wishlist, setWishlist] = useState([]);
@@ -52,7 +52,7 @@ const EthicalHackingStudentArray = () => {
       price: "₹1499", // Add dummy price
       profilePic: Girl2,
       name: "Rohan Patel",
-      erolled: "1500 Enrolled"
+      erolled: "1500 Enrolled",
     },
     {
       id: 2,
@@ -65,8 +65,7 @@ const EthicalHackingStudentArray = () => {
       price: "₹1899", // Add dummy price
       profilePic: Girl2,
       name: "Neeraj Malhotra",
-      erolled: "1000 Enrolled"
-
+      erolled: "1000 Enrolled",
     },
     {
       id: 3,
@@ -79,10 +78,9 @@ const EthicalHackingStudentArray = () => {
       price: "₹2499", // Add dummy price
       profilePic: Girl2,
       name: "Sakshi Agarwal",
-      erolled: "2000 Enrolled"
+      erolled: "2000 Enrolled",
     },
   ];
-  
 
   const filteredCourses = ethicalHackingCourses.filter((course) =>
     course.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -91,15 +89,15 @@ const EthicalHackingStudentArray = () => {
   return (
     <>
       <Navbar />
-      <img
+      {/* <img
         src={hero}
         className="object-cover w-full md:h-[490px]"
         alt="Background Image"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center mb-4">
-          <span className="bg-gradient-to-r text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r pb-1 text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
             Expand Ethical Hacking Courses
           </span>
         </div>
@@ -131,7 +129,7 @@ const EthicalHackingStudentArray = () => {
                 </div> */}
                 <div className="h-[180px]">
                   <img
-                    className="w-full h-full bg-cover"
+                    className="w-full h-full object-contain bg-cover"
                     src={course.image}
                     alt={course.title}
                   />
@@ -161,7 +159,9 @@ const EthicalHackingStudentArray = () => {
                         <span className="text-gray-700 font-bold">
                           {course.name}
                         </span>
-                        <p className="text-gray-500 text-xs">{course.erolled}</p>
+                        <p className="text-gray-500 text-xs">
+                          {course.erolled}
+                        </p>
                       </div>
                     </div>
                     <span className="text-gray-900 font-bold">
