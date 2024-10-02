@@ -51,11 +51,12 @@ const CompatabilityCard = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl pb-2 md:text-4xl lg:text-5xl font-medium">
-            <span className="text-[#f6ac14]">Mastering </span>
+            <span className="text-[#f6ac14]">The</span>
             <span className="bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent">
-              Software Testing
+              {" "}
+              Future of{" "}
             </span>
-            <span className="text-[#0098f1]"> Expertise</span>
+            <span className="text-[#0098f1]"> Learning</span>
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -65,11 +66,11 @@ const CompatabilityCard = () => {
               className="group border-2 hover:border-[#f6ac14] shadow-lg rounded-lg overflow-hidden"
             >
               <a href="#">
-                <div className="h-[180px]">
+                <div className="h-[180px] justify-center items-center flex">
                   <img
-                    className="w-full h-full bg-cover"
+                    className="w-[300px] h-[220px] p-2 bg-cover"
                     src={course.imgSrc}
-                    alt={`Course ${index + 1}`}
+                    alt={`Project ${index + 1}`}
                   />
                 </div>
                 <div className="p-4 flex flex-col items-center justify-between">
