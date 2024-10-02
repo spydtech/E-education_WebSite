@@ -31,7 +31,7 @@ function Certificates() {
               </a>
             </li>
             <li>
-              <div class="flex items-center">
+              <div class="flex items-center">  
                 <svg    
                   class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
                   aria-hidden="true"
