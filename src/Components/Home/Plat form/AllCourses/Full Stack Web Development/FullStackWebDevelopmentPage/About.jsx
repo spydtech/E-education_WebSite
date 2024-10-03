@@ -12,7 +12,9 @@ const About = () => {
         entails:
       </p>
       <div className="my-3 md:text-lg">
-        <h1 className="text-[#0098F1] font-bold md:text-2xl">Front-End Development:</h1>
+        <h1 className="text-[#0098F1] font-bold md:text-2xl">
+          Front-End Development:
+        </h1>
         <p className="  text-[#0098F1] my-2">
           <span className=" text-[#F6AC14] font-semibold">
             HTML/CSS : &nbsp;
@@ -39,7 +41,9 @@ const About = () => {
       </div>
 
       <div className="my-3 md:text-lg ">
-        <h1 className="text-[#0098F1] font-bold md:text-2xl">Back-End Development:</h1>
+        <h1 className="text-[#0098F1] font-bold md:text-2xl">
+          Back-End Development:
+        </h1>
         <p className="  text-[#0098F1] my-2">
           <span className=" text-[#F6AC14] font-semibold">
             Programming Languages : &nbsp;
@@ -66,10 +70,15 @@ const About = () => {
       </div>
 
       <div className="md:text-lg">
-        <h1 className="font-bold text-[#0098F1] md:text-2xl">What you'll learn</h1>
+        <h1 className="font-bold text-[#0098F1] md:text-2xl">
+          What you'll learn
+        </h1>
         <div className="flex my-2 gap-x-2">
           <div>
-            <MdOutlineKeyboardDoubleArrowRight size={30} className=" font-bold text-[#F6AC14]" />
+            <MdOutlineKeyboardDoubleArrowRight
+              size={30}
+              className=" font-bold text-[#F6AC14]"
+            />
           </div>
           <p className="text-[#0098F1]">
             Prepare for the Full Stack Web Development interview
@@ -77,7 +86,10 @@ const About = () => {
         </div>
         <div className="flex my-2 gap-x-2">
           <div>
-            <MdOutlineKeyboardDoubleArrowRight size={30} className=" font-bold text-[#F6AC14]" />
+            <MdOutlineKeyboardDoubleArrowRight
+              size={30}
+              className=" font-bold text-[#F6AC14]"
+            />
           </div>
           <p className="text-[#0098F1]">
             Learn about Full Stack Web Development including managing access,
@@ -87,7 +99,10 @@ const About = () => {
         </div>
         <div className="flex my-2 gap-x-2">
           <div>
-            <MdOutlineKeyboardDoubleArrowRight size={30} className=" font-bold text-[#F6AC14]" />
+            <MdOutlineKeyboardDoubleArrowRight
+              size={30}
+              className=" font-bold text-[#F6AC14]"
+            />
           </div>
           <p className="text-[#0098F1]">
             Learn the skills needed to be successful in a Full Stack Web

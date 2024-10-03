@@ -26,10 +26,10 @@ const JavascriptDeveloperSkills = () => {
     <>
       <JavascriptDevelopmentCard />
 
-      <div className="container mx-auto ">
-        <h2 className=" font-bold text-gray-900  mb-4 sm:text-xl text-xl md:text-3xl lg:text-4xl text-center">
-          Full Stack <span className="text-[#F6AC14]">Javascript Development</span>{" "}
-          Skills
+      <div className="my-10">
+        <h2 className=" font-bold text-gray-900 my-5 text-lg md:text-2xl text-center">
+          Full Stack
+          <span className="text-[#F6AC14]"> Javascript Development</span> Skills
         </h2>
         <div className="flex flex-col lg:flex-row  md:justify-center gap-8">
           <div className="bg-[#0098F1] rounded-lg lg:xl:w-[480px] lg:xl:h-80 mb-6 md:mb-0  flex flex-col lg:items-start lg:flex-row md:items-center ">
@@ -89,7 +89,6 @@ const JavascriptDeveloperSkills = () => {
             </div>
           </div>
         </div>
-
       </div>
     </>
   );

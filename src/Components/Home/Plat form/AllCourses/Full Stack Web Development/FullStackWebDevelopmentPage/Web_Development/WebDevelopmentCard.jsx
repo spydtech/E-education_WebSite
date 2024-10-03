@@ -10,10 +10,10 @@ const WebDevelopmentCard = () => {
           <img src={Nextgen} alt="" className="md:w-96" />
         </div>
         <div className="lg:w-[50%] lg:text-start">
-          <h2 className="">
+          <h2 className="my-2 text-lg md:text-xl lg:text-2xl ">
             Full Stack Web Development
           </h2>
-          <h1 className="tracking-tight text-gray-900 leading-6 text-xl font-bold">
+          <h1 className="tracking-tight text-gray-900 leading-6 text-xl md:text-2xl lg:text-3xl font-bold">
             Next-Gen <span className="text-[#F6AC14]">Full Stack</span> Web
             Development
           </h1>
