@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { Box, CssBaseline, useMediaQuery, useTheme } from "@mui/material";
@@ -30,7 +27,7 @@ import { IoCloseCircle } from "react-icons/io5";
 import Switch from "@mui/material/Switch";
 // import girl from "../../assetss/Home/Admin.png";
 import { useDispatch, useSelector } from "react-redux";
-import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle"; 
+import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle";
 const menu = [
   {
     name: "Dashboard",
@@ -84,7 +81,7 @@ const Admin = () => {
   const dispatch = useDispatch();
   // const navigate = useNavigate();
   const drawerWidth = 230;
-  const themes= localStorage.getItem("theme");
+  const themes = localStorage.getItem("theme");
 
   const toggleSubMenu = (index) => {
     setOpenSubMenu(openSubMenu === index ? null : index);
@@ -124,7 +121,9 @@ const Admin = () => {
         height: "100vh",
         width: drawerWidth,
       }}
-      className={` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "}  max-w-62 lg:block border-[#001510] border-opacity-10 border-r-2 `}
+      className={` ${
+        themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "
+      }  max-w-62 lg:block border-[#001510] border-opacity-10 border-r-2 `}
     >
       {/* Sidebar Logo */}
       <div className="py-4 flex relative">
@@ -143,16 +142,22 @@ const Admin = () => {
         <div className="p-2">
           <div className="flex items-center mb-4">
             <div className="w-[60px] h-[60px] rounded-full bg-white cursor-pointer">
-              <img className="w-[60px] h-[60px] rounded-full" src={profilePic} onClick={() => document.getElementById('fileInput').click()} />
+              <img
+                className="w-[60px] h-[60px] rounded-full"
+                src={profilePic}
+                onClick={() => document.getElementById("fileInput").click()}
+              />
               <input
                 type="file"
                 id="fileInput"
-                style={{ display: 'none' }}
+                style={{ display: "none" }}
                 accept="image/*"
                 onChange={handleProfilePicChange}
               />
             </div>
-            <span className="text-white font-medium text-xl ml-2">Admin Name</span>
+            <span className="text-white font-medium text-xl ml-2">
+              Admin Name
+            </span>
           </div>
         </div>
       )}
@@ -197,11 +202,11 @@ const Admin = () => {
               )}
             </li>
           ))}
-           {!isSmallScreen && (
-        <div className="flex relative justify-center">
-         <ThemeToggle/>
-        </div>
-      )}
+          {!isSmallScreen && (
+            <div className="flex relative justify-center">
+              <ThemeToggle />
+            </div>
+          )}
         </ul>
       </div>
 
@@ -216,7 +221,6 @@ const Admin = () => {
       </div>
 
       {/* Dark Mode Switch for Large Screens */}
-     
     </Box>
   );
   // const themes= localStorage.getItem("theme")
@@ -232,7 +236,9 @@ const Admin = () => {
 
       {(isSmallScreen ? sideBarVisible : true) && (
         <div
-          className={`fixed inset-0 z-40 ${sideBarVisible || !isSmallScreen ? "block" : "hidden"} md:static md:block`}
+          className={`fixed inset-0 z-40 ${
+            sideBarVisible || !isSmallScreen ? "block" : "hidden"
+          } md:static md:block`}
           style={{ width: drawerWidth }}
         >
           {drawer}
@@ -241,15 +247,24 @@ const Admin = () => {
 
       {/* Navbar */}
       <div className="flex-grow h-screen overflow-auto ">
-        <Box component="header" className={` ${themes==="dark"&&"bg-black text-white"} p-4 flex items-center justify-between `}>
+        <Box
+          component="header"
+          className={` ${
+            themes === "dark" && "bg-black text-white"
+          } p-4 flex items-center justify-between `}
+        >
           {!isSmallScreen && (
             <div className="flex items-center px-4  space-x-2">
               <div className="w-[60px] h-[60px] rounded-full bg-white cursor-pointer">
-                <img className="w-[60px] h-[60px] rounded-full" src={profilePic} onClick={() => document.getElementById('fileInput').click()} />
+                <img
+                  className="w-[60px] h-[60px] rounded-full"
+                  src={profilePic}
+                  onClick={() => document.getElementById("fileInput").click()}
+                />
                 <input
                   type="file"
                   id="fileInput"
-                  style={{ display: 'none' }}
+                  style={{ display: "none" }}
                   accept="image/*"
                   onChange={handleProfilePicChange}
                 />
@@ -264,7 +279,7 @@ const Admin = () => {
           {isSmallScreen && (
             <div className="relative flex w-full justify-end">
               <span className="text-xl mr-2">Dark Mode:</span>
-             <ThemeToggle/>
+              <ThemeToggle />
             </div>
           )}
         </Box>
@@ -287,6 +302,3 @@ const Admin = () => {
 };
 
 export default Admin;
-
-
-
