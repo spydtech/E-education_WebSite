@@ -3,40 +3,38 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 
 const data = [
- 
-    {
-      id: 1,
-      title: "Front-end Development with React",
-      info: " Master the fundamentals of React for building dynamic user interfaces.Learn state management using hooks and context API.Explore advanced topics like Redux for managing complex application states.",
-    },
+  {
+    id: 1,
+    title: "Front-end Development with React",
+    info: " Master the fundamentals of React for building dynamic user interfaces.Learn state management using hooks and context API.Explore advanced topics like Redux for managing complex application states.",
+  },
 
-    {
-      id: 2,
-      title: "Back-end Development with Node.js",
-      info: "Delve into server-side development using Node.js. Build RESTful APIs using Express.js framework. Integrate MongoDB or other databases for data persistence.",
-    },
-    {
-      id: 3,
-      title: "Database Management with MongoDB",
-      info: "Get introduced to NoSQL databases with MongoDB. Learn to design and manage databases using MongoDB. Explore data modeling, schema design, and CRUD operations in MongoDB.",
-    },
-    {
-      id: 4,
-      title: "Full Stack Application Development",
-      info: "Integrate React, Node.js, and MongoDB to build full stack applications. Implement RESTful APIs to connect front-end and back-end components. Develop, test, and deploy fullstack JavaScript applications.",
-    },
-    {
-      id: 5,
-      title: "Version Control with Git",
-      info: "Understand the basics of version control with Git. Learn to manage your codebase with Git and GitHub. Collaborate on projects using branching and merging techniques.",
-    },
-    {
-      id: 6,
-      title: "Project Management and Collaboration Tools",
-      info: "Get introduced to project management methodologies and tools. Learn to use tools like JIRA, Trello, and Slack for effective team collaboration. Manage project timelines, tasks, and communication efficiently.",
-    },
-  ];
-
+  {
+    id: 2,
+    title: "Back-end Development with Node.js",
+    info: "Delve into server-side development using Node.js. Build RESTful APIs using Express.js framework. Integrate MongoDB or other databases for data persistence.",
+  },
+  {
+    id: 3,
+    title: "Database Management with MongoDB",
+    info: "Get introduced to NoSQL databases with MongoDB. Learn to design and manage databases using MongoDB. Explore data modeling, schema design, and CRUD operations in MongoDB.",
+  },
+  {
+    id: 4,
+    title: "Full Stack Application Development",
+    info: "Integrate React, Node.js, and MongoDB to build full stack applications. Implement RESTful APIs to connect front-end and back-end components. Develop, test, and deploy fullstack JavaScript applications.",
+  },
+  {
+    id: 5,
+    title: "Version Control with Git",
+    info: "Understand the basics of version control with Git. Learn to manage your codebase with Git and GitHub. Collaborate on projects using branching and merging techniques.",
+  },
+  {
+    id: 6,
+    title: "Project Management and Collaboration Tools",
+    info: "Get introduced to project management methodologies and tools. Learn to use tools like JIRA, Trello, and Slack for effective team collaboration. Manage project timelines, tasks, and communication efficiently.",
+  },
+];
 
 const Question = ({ title, info }) => {
   const [expanded, setExpanded] = useState(false);
@@ -65,32 +63,25 @@ const Question = ({ title, info }) => {
   );
 };
 
-
 export default function MeanStackDev() {
   const [questions, setQuestions] = useState(data);
   return (
-    <main className="bg-white min-h-screen flex items-center justify-center">
-      <div className="bg-white p-8 rounded w-full max-w-4xl">
-        <h3 className="sm:text-xl text-xl md:text-3xl lg:text-4xl font-bold mb-6 text-[#0098F1] text-center">
-        Courses We Covered in this{" "}
-          <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
-           Fullstack JavaScript
-          </span>{" "}
-          <span className="text-[#F6AC14]">   Development Program</span>
-        </h3>
-        <section className="space-y-4 text-[#0098F1]">
-          {questions.map((question) => (
-            <Question key={question.id} {...question} />
-          ))}
-        </section>
-      </div>
-    </main>
+    <div className="px-2 md:px-5">
+      <h3 className="text-xl text-[#0098F1] font-bold text-center my-3">
+        Courses We Covered in this
+        <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
+          Fullstack JavaScript
+        </span>{" "}
+        <span className="text-[#F6AC14]"> Development Program</span>
+      </h3>
+      <section className="space-y-4 text-[#0098F1] mb-5">
+        {questions.map((question) => (
+          <Question key={question.id} {...question} />
+        ))}
+      </section>
+    </div>
   );
 }
-
-
-
-
 
 // import React from "react";
 // import Faq from "react-faq-component";
