@@ -68,9 +68,9 @@ export default function MeanStackDev() {
   return (
     <div className="px-2 md:px-5">
       <h3 className="text-xl text-[#0098F1] font-bold text-center my-3">
-        Courses We Covered in this
+        Courses We Covered in this&nbsp;
         <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
-          Fullstack JavaScript
+           Fullstack JavaScript
         </span>{" "}
         <span className="text-[#F6AC14]"> Development Program</span>
       </h3>

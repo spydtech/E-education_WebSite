@@ -11,6 +11,7 @@ const About = () => {
         databases, and deployment techniques. Here's a breakdown of what it
         entails:
       </p>
+      
       <div className="my-3 md:text-lg">
         <h1 className="text-[#0098F1] font-bold md:text-2xl">
           Front-End Development:
