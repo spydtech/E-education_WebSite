@@ -82,10 +82,11 @@ const FullStackWebDev = () => {
   return (
     <div className="px-2 md:px-5">
       <h3 className="text-xl text-[#0098F1] font-bold text-center my-3">
-        Courses we are covered in{" "}
+        Courses We{" "}
         <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
-          this course
-        </span>
+          Covered in this Full Stack
+        </span>{" "}
+        <span className="text-[#F6AC14]"> Web Development Program</span>
       </h3>
       <section className="space-y-4 text-[#0098F1] mb-5">
         {questions.map((question) => (
