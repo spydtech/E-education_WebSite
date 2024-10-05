@@ -57,7 +57,7 @@ const Question = ({ title,  description }) => {
           )}
         </button>
       </header>
-      {expanded && <p className="mt-4 text-[#0098F1]">{ description}</p>}
+      {expanded && <p className="mt-4 text-[#0098F1]">{info}</p>}
     </article>
   );
 };
@@ -66,22 +66,21 @@ const Question = ({ title,  description }) => {
 export default function FullStackDevopsDevFQACourses() {
   const [questions, setQuestions] = useState(data);
   return (
-    <main className="bg-white min-h-screen flex items-center justify-center">
-      <div className="bg-white p-8 rounded w-full max-w-4xl">
-        <h3 className="sm:text-xl text-xl md:text-4xl lg:text-4xl font-bold mb-6 text-[#0098F1] text-center">
-          Courses We{" "}
-          <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
+
+    <div className="px-2 md:px-5">
+      <h3 className="text-xl text-[#0098F1] font-bold text-center my-3">
+        Courses We{" "}
+        <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
           Covered in this Full Stack
-          </span>{" "}
-          <span className="text-[#F6AC14]">DevOps Development Program</span>
-        </h3>
-        <section className="space-y-4 text-[#0098F1]">
-          {questions.map((question) => (
-            <Question key={question.id} {...question} />
-          ))}
-        </section>
-      </div>
-    </main>
+        </span>{" "}
+        <span className="text-[#F6AC14]">DevOps Development Program</span>
+      </h3>
+      <section className="space-y-4 text-[#0098F1] mb-5">
+        {questions.map((question) => (
+          <Question key={question.id} {...question} />
+        ))}
+      </section>
+    </div>
   );
 };
 
