@@ -12,14 +12,14 @@ function HeroSection() {
         style={{ backgroundImage: `url(${ImgUrl})` }}>
         <Navbar/>
         <div className="bg-white bg-opacity-5 p-6 rounded-lg flex flex-col justify-center items-center h-full ">
-          <h2 className="  text-3xl absolute top-32  font-medium lg:text-4xl">
+          <h2 className="  text-2xl absolute top-36  font-medium md:text-4xl">
             The features of learning
           </h2>
         
-          <p className="mt-16 max-w-lg pt-20 text-wrap text-opacity-80 ">
+          <p className="mt-16 max-w-lg text-wrap text-opacity-80 ">
             In a world where information is at our fingertips, E-education offers limitless opportunities for personal and professional growth. Embrace the convenience and flexibility of online learning and unlock your potential from anywhere in the world.
           </p>
-          <a href="#" className="inline-block w-[300px]  h-[60px] text-lg font-medium text-gray-100 bg-[#0098F1] rounded-lg p-2 mt-20 py-4 hover:bg-[#f6ac14] hover:shadow-md md:w-48"> Join the Courses</a>
+          <a href="#" className="inline-block w-[300px]  h-[60px] text-lg font-medium text-gray-100 bg-[#0098F1] rounded-lg p-2 mt-20 mb-10 md:mb-0 py-4 hover:bg-[#f6ac14] hover:shadow-md md:w-48"> Join the Courses</a>
         </div>
       </div>
       <h1 className=" relative text-4xl  text-center py-20">
