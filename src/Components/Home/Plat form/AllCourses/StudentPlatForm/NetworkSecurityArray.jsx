@@ -56,7 +56,7 @@ const NetworkSecurityArray = () => {
       title: "Advanced Network Security",
       image: card1,
       description:
-        "Learn advanced network security techniques and strategies to protect against sophisticated cyber threats.",
+        "Learn advanced network security techniques , strategies to protect against  cyber threats.",
       link: "/network_security/advance-network-secuity",
       rating: 4.7, // Add dummy rating
       price: "$39.99", // Add dummy price
@@ -74,7 +74,7 @@ const NetworkSecurityArray = () => {
       rating: 4.6, // Add dummy rating
       price: "$24.99", // Add dummy price
       profilePic: Girl2,
-      name: "Shyam Gupta",
+      name: "Raghavendra Kommula",
       enrolled: 1800, // Add dummy enrolled number
     },
   ];
@@ -86,15 +86,15 @@ const NetworkSecurityArray = () => {
   return (
     <>
       <Navbar />
-      <img
+      {/* <img
         src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg?ga=GA1.1.1671979702.1717669022&semt=sph"
         className="object-cover w-full md:h-[490px]"
         alt="Background Image"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-70"></div> */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center mb-4">
-          <span className="bg-gradient-to-r text-4xl font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r text-4xl pb-1 font-bold from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
             Expand Network Security Courses
           </span>
         </div>
@@ -108,7 +108,7 @@ const NetworkSecurityArray = () => {
             className="px-4 py-2 border border-blue-600 rounded placeholder-blue-500"
           />
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:mx-5">
           {filteredCourses.map((course, index) => (
             <div
@@ -122,7 +122,7 @@ const NetworkSecurityArray = () => {
                   <img
                     src={course.image}
                     alt={course.title}
-                    className="w-full h-32 object-cover px-3 py-3"
+                    className="w-full h-32 object-contain  px-3 py-3"
                   />
                 </div>
                 <div className="p-4">

@@ -1,22 +1,21 @@
 import React from "react";
-import programmer from "../../../../../../assets/dataAnalatics/programmer.jpg";
-import assistance from "../../../../../../assets/dataAnalatics/assistance.jpg";
+import programmer from "../../../../../../assetss/student/AboutProgram/programmer.jpg";
+import assistance from "../../../../../../assetss/student/AboutProgram//assistance.jpg";
 
 const CybersecurityAbout = () => {
-
   const ethicalHackingInfo = [
     {
       title: "Career Assistance",
       description:
         "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
-      imgSrc: "https://img.freepik.com/premium-vector/software-development-programming-language-coding-isometric-pc-computer-with-digital-application-white-background_284092-318.jpg?w=740",
+      imgSrc: programmer,
       imgAlt: "career-assistance",
     },
     {
       title: "Student Support",
       description:
         'Access student support via support@cybersecurityessentials.com or through the "ask us?" option on our learning platform for urgent queries.',
-      imgSrc: "https://img.freepik.com/free-vector/hacker-activity-isometric-composition_1284-21475.jpg?t=st=1716550896~exp=1716554496~hmac=5802aeca8133c034a5da30c58e2e1eb86602a116a2c98b917ed68ea329193008&w=740",
+      imgSrc: assistance,
       imgAlt: "student-support",
     },
   ];
@@ -36,7 +35,7 @@ const CybersecurityAbout = () => {
             className=" md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
           >
             <img
-              className="md:w-full md:h-64 rounded-md"
+              className="md:w-full  object-contain md:h-64 rounded-md"
               src={item.imgSrc}
               alt={item.imgAlt}
             />

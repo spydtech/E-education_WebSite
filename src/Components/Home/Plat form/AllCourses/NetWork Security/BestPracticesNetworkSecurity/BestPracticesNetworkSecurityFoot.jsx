@@ -20,7 +20,7 @@ function NetworkSecurityBestPracticesFoot() {
   // field of network security.
 
   return (
-    <div className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 py-10 bg-[#0098f1] dark:bg-gray-800 mb-20">
+    <div className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 py-10 bg-[#0098f1] dark:bg-gray-800 mb-10">
       <h1 className="mx-auto max-w-4xl font-display text-2xl font-md tracking-normal text-white-300 dark:text-gray-300 md:text-4xl lg:text-5xl">
         Strengthening Your Security Posture with Best Practices in <br />
         <span className="relative whitespace-nowrap text-white top-1">

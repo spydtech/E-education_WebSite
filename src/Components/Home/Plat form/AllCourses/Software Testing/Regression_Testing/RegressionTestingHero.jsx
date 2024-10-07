@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 // import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import hero from "../../../../../../assetss/student/testing/regression/hero.png";
 const RegressionTestingHero = () => {
   const [courseName] = useState("Regression Testing"); // Placeholder for course name
   const [coursePrice] = useState(14999);
@@ -15,26 +15,22 @@ const RegressionTestingHero = () => {
 
   return (
     <>
-      <div
-        className="relative w-full h-[370px] bg-cover bg-center"
-        style={{
-          backgroundImage:
-            'url("https://res.cloudinary.com/ds5ooz2ve/image/upload/v1725874356/image_13_oi7qfs.png")',
-        }}
-      >
-        <div className="absolute inset-0 flex items-center justify-center">
-          <p className="text-center text-white max-md:text-[16px] text-[20px] font-medium px-4">
-            {/* Ensure Consistent Qualit with Comprehensive Regression Testing! */}
-            Understand the importance of  regression testing  in maintaining
-            software stability and <br /> functionality after updates and enhancements. 
-            Learn best practices  and strategies<br /> to effectively implement
-            regression testing in your projects...
-          </p>
-        </div>
-        <div className="absolute inset-0 flex items-end justify-center pb-10">
+      <div className="relative">
+        <div
+          className=" w-full h-[370px] bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${hero})`,
+          }}
+        ></div>
+        <div className="absolute inset-0 flex items-center justify-center px-[40px] md:px-[120px] lg:px-[200px]">
+          <div className="text-white text-lg md:text-xl lg:text-2xl font-medium  text-center">
+            Understand the importance of regression testing in maintaining
+            software stability and functionality after updates and enhancements.
+          </div>
+
           <button
             onClick={handleEnroll}
-            className="px-6 py-3 text-[20px] font-medium text-white bg-[#0098f1] rounded-xl"
+            className="absolute bottom-5 lg:bottom-12 px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl  transition duration-200"
           >
             Enroll Now
           </button>

@@ -19,17 +19,17 @@ function SuccessStory() {
   }, []);
 
   return (
-    <div className="relative  flex flex-col justify-center items-center bg-white m-3">
+    <div className="relative  flex flex-col justify-center items-center bg-white m-3 md:m-5">
       {/* Background Image */}
 
       {/* Content */}
-      <div className=" bg-white rounded-lg shadow-lg border border-gray-200 p-2 flex flex-col">
+      <div className=" bg-white rounded-lg shadow-lg border border-gray-200 p-2 md:p-5 flex flex-col">
         <h1
           className="md:text-4xl text-xl text-[#F6AC14] italic text-center my-2 "
         >
           The Success Story of{" "}
           <span className="text-[#0098F1] ">
-            Alex
+            Vishnu
           </span>
         </h1>
 

@@ -24,7 +24,7 @@ const WebDeveloper = () => {
   return (
     <>
       <WebDevelopmentCard />
-      <div className=" ">
+      <div className=" mt-5">
         <h2 className=" font-bold text-gray-900 my-5 text-lg md:text-2xl  text-center ">
           Full Stack <span className="text-[#F6AC14]">Web Development</span>{" "}
           Skills

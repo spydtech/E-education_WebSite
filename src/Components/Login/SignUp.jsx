@@ -76,7 +76,6 @@
 //       });
 //   };
 
-
 //   return (
 //     <>
 //       <Navbar />
@@ -227,21 +226,18 @@
 //       </div>
 //     </>
 
-
 //   );
 // }
 
 // export default SignUp;
 
-
-
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import IMG from "../../assets/E- education logo .png"; 
+import IMG from "../../assets/E- education logo .png";
 import { register, verifyOtp, getUser } from "../../State/Auth/Action";
 import Navbar from "../Navbar";
-import BackgroundIMG from "../../../src/assetss/login/signupimg.jpg"; 
+import BackgroundIMG from "../../../src/assetss/login/signupimg.jpg";
 
 function SignUp() {
   const dispatch = useDispatch();
@@ -307,26 +303,27 @@ function SignUp() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen flex justify-center items-center bg-gray-100"> 
-         <div className="bg-white w-full max-w-[1150px] shadow-lg rounded-lg overflow-hidden flex flex-col lg:flex-row">
-       
+      <div className="min-h-screen flex justify-center items-center bg-gray-100">
+        <div className="bg-white w-full max-w-[1150px] shadow-lg rounded-lg overflow-hidden flex flex-col lg:flex-row">
           {/* Form Section */}
           <div className="p-12 w-full lg:w-1/2">
             <img
               src={IMG}
               alt="Logo"
               className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px] mb-0"
-              />
+            />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gradient mb-4">
-            <span className="bg-gradient-to-r text-2xl sm:text-3xl md:text-4xl font-bold pb-2 from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
-                   Sign Up now
-                  </span>
+              <span className="bg-gradient-to-r text-2xl sm:text-3xl md:text-4xl font-bold pb-2 from-[#0098f1] to-[#f6ac14] bg-clip-text text-transparent">
+                Sign Up now
+              </span>
             </h2>
             <p className="text-sm mb-6">Hi, Welcome 👋</p>
 
             <form onSubmit={handleSubmit} className="space-y-3">
               <div>
-                <label className="text-sm font-bold text-[#F6AC14]">First Name</label>
+                <label className="text-sm font-bold text-[#F6AC14]">
+                  First Name
+                </label>
                 <input
                   type="text"
                   name="firstName"
@@ -337,7 +334,9 @@ function SignUp() {
                 />
               </div>
               <div>
-                <label className="text-sm font-bold text-[#F6AC14]">Last Name</label>
+                <label className="text-sm font-bold text-[#F6AC14]">
+                  Last Name
+                </label>
                 <input
                   type="text"
                   name="lastName"
@@ -348,7 +347,9 @@ function SignUp() {
                 />
               </div>
               <div>
-                <label className="text-sm font-bold text-[#F6AC14]  background: #FF9B26">Email</label>
+                <label className="text-sm font-bold text-[#F6AC14]  background: #FF9B26">
+                  Email
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -359,7 +360,9 @@ function SignUp() {
                 />
               </div>
               <div>
-                <label className="text-sm font-bold text-[#F6AC14]">Password</label>
+                <label className="text-sm font-bold text-[#F6AC14]">
+                  Password
+                </label>
                 <input
                   type="password"
                   name="password"
@@ -376,7 +379,9 @@ function SignUp() {
                 Send OTP
               </button>
               {registrationStatus === "failure" && registrationError && (
-                <p className="text-red-500 text-center mt-4">{registrationError}</p>
+                <p className="text-red-500 text-center mt-4">
+                  {registrationError}
+                </p>
               )}
             </form>
 
@@ -403,18 +408,18 @@ function SignUp() {
                 >
                   Verify OTP & Register
                 </button>
-                {error && <p className="text-red-500 text-center mt-2">{error}</p>}
+                {error && (
+                  <p className="text-red-500 text-center mt-2">{error}</p>
+                )}
               </div>
             )}
           </div>
 
           {/* Image Section */}
           <div
-          className="hidden lg:block w-1/2 bg-cover bg-center"
-          style={{ backgroundImage: `url(${BackgroundIMG})` }}  // Local image reference
-        >
-          
-        </div>
+            className="hidden lg:block w-1/2 bg-cover bg-center"
+            style={{ backgroundImage: `url(${BackgroundIMG})` }} // Local image reference
+          ></div>
         </div>
       </div>
     </>

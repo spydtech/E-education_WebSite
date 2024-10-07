@@ -60,12 +60,12 @@ const DataScienceHero = () => {
           {" "}
           Discover how Data Science can transform raw data into actionable
           insights, empowering your business to make data-driven decisions and
-          stay ahead of the competition...
+          stay ahead of the competition
         </div>
 
         <button
           onClick={handleEnroll}
-          className="absolute bottom-5 lg:bottom-12 px-3 py-1 md:px-5 md:py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl hover:bg-[#007bb5] transition duration-200"
+          className="absolute bottom-5 lg:bottom-12 px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl  transition duration-200"
         >
           Enroll Now
         </button>
