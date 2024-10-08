@@ -4,11 +4,10 @@ import CompletedPaymentsTable from "./CompletedPaymentsTable";
 import RejectedPaymentsTable from "./RejectedPaymentsTable";
 import PendingPaymentsTable from "./PendingPaymentsTable";
 import ProcessingPaymentsTable from "./ProcessingPaymentTable";
-// import girl from "../../../assetss/Home/Admin.png";
-
+import { useDispatch, useSelector } from "react-redux";
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("All");
-
+  const themes= localStorage.getItem("theme")
   const handleTabChange = (event) => {
     setActiveTab(event.target.value);
   };
@@ -59,12 +58,12 @@ const Dashboard = () => {
   return (
     <div className="p-4 max-w-full "> {/* Prevent horizontal overflow */}
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+      <div className={`  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6`}>
         {/* Total Earnings Card */}
         {totalEarningsCard.map((card, index) => (
           <div
             key={index}
-            className="w-full text-white bg-[#ff259d] h-[160px] rounded-lg grid grid-cols-[1fr_auto] relative"
+            className={` ${themes === "dark" ? "bg-black text-white" : "text-white   "} w-full  text-white bg-[#ff259d] h-[160px] rounded-lg grid grid-cols-[1fr_auto] relative`}
           >
             <div className="flex flex-col justify-center p-4 pl-6">
               <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>
@@ -84,7 +83,7 @@ const Dashboard = () => {
         {pendingPaymentsCard.map((card, index) => (
           <div
             key={index}
-            className="w-full text-white bg-[#0098f1] h-[160px] rounded-lg grid grid-cols-[1fr_auto] relative"
+            className={` ${themes === "dark" ? "bg-black text-white" : "text-white bg-[#0098f1]   "} w-full text-white  h-[160px] rounded-lg grid grid-cols-[1fr_auto] relative`}
           >
             <div className="flex flex-col justify-center p-4 pl-6">
               <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>
@@ -104,7 +103,7 @@ const Dashboard = () => {
         {withdrawalMethodCard.map((card, index) => (
           <div
             key={index}
-            className="w-full text-white bg-[#ff2f6a] h-[160px] rounded-lg grid grid-cols-[1fr_auto] relative"
+            className={`  ${themes === "dark" ? "bg-black text-white" : "text-white bg-[#ff2f6a]   "} w-full text-white  h-[160px] rounded-lg grid grid-cols-[1fr_auto] relative`}
           >
             <div className="flex flex-col justify-center p-4 pl-6">
               <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>

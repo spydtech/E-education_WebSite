@@ -80,8 +80,10 @@ const Admin = () => {
   const [profilePic, setProfilePic] = useState(); // State for profile picture
   const dispatch = useDispatch();
   // const navigate = useNavigate();
-  const drawerWidth = 230;
-  const themes = localStorage.getItem("theme");
+
+  const drawerWidth = 235;
+  const themes= localStorage.getItem("theme");
+
 
   const toggleSubMenu = (index) => {
     setOpenSubMenu(openSubMenu === index ? null : index);
@@ -121,9 +123,9 @@ const Admin = () => {
         height: "100vh",
         width: drawerWidth,
       }}
-      className={` ${
-        themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "
-      }  max-w-62 lg:block border-[#001510] border-opacity-10 border-r-2 `}
+
+      className={` ${themes === "dark" ? "bg-black text-white" : "text-white  bg-gradient-to-b from-[#001510] to-[#00BF8F] "}       max-w-62 lg:block    border-[#001510] border-opacity-10 border-r-2  `}
+
     >
       {/* Sidebar Logo */}
       <div className="py-4 flex relative">
@@ -141,12 +143,10 @@ const Admin = () => {
       {isSmallScreen && (
         <div className="p-2">
           <div className="flex items-center mb-4">
-            <div className="w-[60px] h-[60px] rounded-full bg-white cursor-pointer">
-              <img
-                className="w-[60px] h-[60px] rounded-full"
-                src={profilePic}
-                onClick={() => document.getElementById("fileInput").click()}
-              />
+
+            <div className="w-[60px] h-[60px] rounded-full bg-white shadow-lg cursor-pointer">
+              <img className="w-[60px] h-[60px] rounded-full" src={profilePic} onClick={() => document.getElementById('fileInput').click()} />
+
               <input
                 type="file"
                 id="fileInput"
@@ -155,9 +155,8 @@ const Admin = () => {
                 onChange={handleProfilePicChange}
               />
             </div>
-            <span className="text-white font-medium text-xl ml-2">
-              Admin Name
-            </span>
+            <h1 className={` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "} text-white font-medium text-xl ml-2`}>Admin Name</h1>
+
           </div>
         </div>
       )}
@@ -202,21 +201,23 @@ const Admin = () => {
               )}
             </li>
           ))}
-          {!isSmallScreen && (
-            <div className="flex relative justify-center">
-              <ThemeToggle />
-            </div>
-          )}
+
+           {!isSmallScreen && (
+        <div className="flex p-5 relative justify-center">
+         {/* <ThemeToggle/> */}
+        </div>
+      )}
+
         </ul>
       </div>
 
       {/* Logout Button */}
-      <div className="p-4">
+      <div className="px-4 py-4 ">
         <button
           onClick={handleLogout}
-          className="flex items-center px-4 py-2 w-full text-red-600 hover:bg-white hover:text-black transition-all duration-300 rounded-md"
+          className="  px-4 py-2 w-full text-[#4CA1AF]  bg-white  transition-all duration-300 rounded-md"
         >
-          <span className="font-semibold">Logout</span>
+           Logout
         </button>
       </div>
 
@@ -247,41 +248,46 @@ const Admin = () => {
 
       {/* Navbar */}
       <div className="flex-grow h-screen overflow-auto ">
-        <Box
-          component="header"
-          className={` ${
-            themes === "dark" && "bg-black text-white"
-          } p-4 flex items-center justify-between `}
-        >
+
+        <Box component="header" className={` ${themes==="dark"&&"bg-black text-white"} p-4 flex items-center  shadow-lg justify-between `}>
           {!isSmallScreen && (
-            <div className="flex items-center px-4  space-x-2">
-              <div className="w-[60px] h-[60px] rounded-full bg-white cursor-pointer">
-                <img
-                  className="w-[60px] h-[60px] rounded-full"
-                  src={profilePic}
-                  onClick={() => document.getElementById("fileInput").click()}
-                />
-                <input
-                  type="file"
-                  id="fileInput"
-                  style={{ display: "none" }}
-                  accept="image/*"
-                  onChange={handleProfilePicChange}
-                />
-              </div>
-              <span className="bg-gradient-to-r from-[#00BF8F] to-[#001510] text-transparent bg-clip-text font-semibold text-lg">
-                Admin Name
-              </span>
+          <div className="flex items-center justify-between px-4 space-x-2 w-full">
+          <div className="flex items-center space-x-2">
+            <div className="w-[60px] h-[60px] rounded-full bg-white cursor-pointer">
+              <img className="w-[60px] h-[60px] rounded-full" src={profilePic} onClick={() => document.getElementById('fileInput').click()} />
+              <input
+                type="file"
+                id="fileInput"
+                style={{ display: 'none' }}
+                accept="image/*"
+                onChange={handleProfilePicChange}
+              />
+
             </div>
+            <h3 className={` ${themes === "dark" ? "bg-black text-white" : "bg-gradient-to-r from-[#00BF8F] to-[#001510] text-[#00BF8F] "} text-transparent bg-clip-text font-semibold text-lg`}>
+              Admin Name
+            </h3>
+          </div>
+          
+          <div className="items-end justify-end">
+            <ThemeToggle/>
+          </div>
+        </div>
+        
+
+       
           )}
 
           {/* Dark Mode Switch for Small Screens */}
           {isSmallScreen && (
             <div className="relative flex w-full justify-end">
-              <span className="text-xl mr-2">Dark Mode:</span>
-              <ThemeToggle />
+
+              {/* <span className="text-xl mr-2">Dark Mode:</span> */}
+             <ThemeToggle/>
+
             </div>
           )}
+          {/* ` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "} */}
         </Box>
 
         <Routes>
@@ -289,8 +295,8 @@ const Admin = () => {
           <Route path="/orders" element={<Orders />} />
           <Route path="/payment-data" element={<PaymentDashboard />} />
           <Route path="/sales-report" element={<SealsReports />} />
-          <Route path="/create-group" element={<CreateGroup />} />
-          <Route path="/existing-group" element={<ExistingGroup />} />
+          <Route path="/users/create-group" element={<CreateGroup />} />
+          <Route path="/users/existing-group" element={<ExistingGroup />} />
           <Route path="/accessField" element={<AccessField />} />
           <Route path="/register-employee" element={<RegisterEmployee />} />
           <Route path="/register-trainee" element={<RegisterTrainee />} />

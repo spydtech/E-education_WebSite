@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 import { sampleData } from "./Sample";
-
+import { useDispatch, useSelector } from "react-redux";
 const TraineeTable = () => {
   const [selectedYear, setSelectedYear] = useState("2021");
   const [selectedMonth, setSelectedMonth] = useState("All Months");
   const [data, setData] = useState(sampleData);
   const chartRef = useRef(null);
-
+  const [activeTab, setActiveTab] = useState("All");
+  const themes= localStorage.getItem("theme")
   useEffect(() => {
     const storedData = localStorage.getItem("traineeData");
     if (storedData) {
@@ -132,8 +133,8 @@ const TraineeTable = () => {
   }, [groupedData]);
 
   return (
-    <div className=" md:w-[350px] w-[310px]  relative h-[400px] rounded-xl shadow-xl mx-auto p-4">
-      <h1 className=" font-bold text-center text-[#001510] mb-6">
+    <div className={`  ${themes === "dark" ? "bg-black text-black" : "text-black   "}  md:w-[350px] w-[310px]  relative h-[400px] rounded-xl shadow-xl mx-auto p-4`}>
+      <h1 className={ `  ${themes === "dark" ? "bg-black text-white" : "text-black   "}font-bold text-center  mb-6`}>
         Count of Courses Purchased - Total: {totalCoursesYear}
         {selectedMonth !== "All Months" && (
           <span>

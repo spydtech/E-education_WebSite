@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import { sampleData } from "./Sample";
+import { useDispatch, useSelector } from "react-redux";
 
 const AnnualSalesLineGraph = () => {
   const [selectedYear, setSelectedYear] = useState("2021");
   const [data, setData] = useState(null);
   const [totalSales, setTotalSales] = useState(0);
-
+  const [activeTab, setActiveTab] = useState("All");
+  const themes= localStorage.getItem("theme")
   useEffect(() => {
     const storedData = localStorage.getItem("traineeData");
     if (storedData) {
@@ -74,8 +76,8 @@ const AnnualSalesLineGraph = () => {
   }
 
   return (
-    <div className="md:w-[350px] w-[310px] h-[400px]  shadow-xl rounded-xl relative mx-auto p-4">
-      <h1 className=" font-bold text-center text-[#001510] mb-6">
+    <div className={` ${themes === "dark" ? "bg-black text-black" : "text-black   "} md:w-[350px] w-[310px] h-[400px]  shadow-xl rounded-xl relative mx-auto p-4`}>
+      <h1 className={` ${themes === "dark" ? "bg-black text-white" : "text-black   "} font-bold text-center text-[#001510] mb-6`}>
         Annual Sales - Total: ₹{totalSales}
       </h1>
       <div className="flex  absolute justify-center mt-6">

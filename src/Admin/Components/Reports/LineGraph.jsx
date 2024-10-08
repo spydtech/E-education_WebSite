@@ -5,7 +5,8 @@ import { sampleData } from "./Sample";
 const SalesLineChart = () => {
   const [selectedYear, setSelectedYear] = useState("2021");
   const [selectedMonth, setSelectedMonth] = useState("All Months");
-
+  const [activeTab, setActiveTab] = useState("All");
+  const themes= localStorage.getItem("theme")
   const calculateMonthlySales = (year, month) => {
     const data = sampleData[year][month];
     const monthlySales = {};
@@ -87,8 +88,8 @@ const SalesLineChart = () => {
   };
 
   return (
-    <div className="md:w-[350px] w-[310px] h-[400px] shadow-xl  rounded-xl relative mx-auto p-4">
-      <h1 className=" font-bold text-center text-[#001510] mb-6">
+    <div className={` ${themes === "dark" ? "bg-black text-black" : "text-black   "} md:w-[350px] w-[310px] h-[400px] shadow-xl  rounded-xl relative mx-auto p-4`}>
+      <h1 className={` ${themes === "dark" ? "bg-black text-black" : "text-black   "}  font-bold text-center  mb-6`}>
         Sales of Each Course
       </h1>
       <div className="flex absolute justify-center mt-4">
