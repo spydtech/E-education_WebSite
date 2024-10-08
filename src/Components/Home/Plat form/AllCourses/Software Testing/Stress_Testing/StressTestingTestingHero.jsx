@@ -29,7 +29,7 @@ const StressTestingHero = () => {
           <div className="text-white text-lg md:text-xl lg:text-2xl font-medium  text-center">
             Empower your team with efficient acceptance testing procedures,
             ensuring your software meets stakeholder requirements and
-            expectations...
+            expectations.
           </div>
 
           <button

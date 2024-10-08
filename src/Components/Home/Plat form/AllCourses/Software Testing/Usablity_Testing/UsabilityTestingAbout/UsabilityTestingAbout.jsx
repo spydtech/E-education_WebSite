@@ -5,18 +5,18 @@ import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg
 const UsabilityTestingAbout = () => {
   const usabilityTestingInfo = [
     {
-      title: "Student Support",
-      description:
-        "Learn about the latest techniques and get support for courses 24/7.",
-      imgSrc: programmer,
-      imgAlt: "student-support",
-    },
-    {
       title: "Career Assistance",
       description:
-        "Gain expertise in continuous network monitoring to detect anomalies and respond to incidents in real-time.",
+        "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
       imgSrc: assistance,
       imgAlt: "career-assistance",
+    },
+    {
+      title: "Student Support",
+      description:
+        'Access student support via support@E-education.com or through the "ask us?" option on our learning platform for urgent queries.',
+      imgSrc: programmer,
+      imgAlt: "student-support",
     },
   ];
 
@@ -35,7 +35,7 @@ const UsabilityTestingAbout = () => {
             className="md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
           >
             <img
-              className=" md:w-full md:h-64 rounded-md"
+              className=" md:w-full object-contain md:h-64 rounded-md"
               src={item.imgSrc}
               alt={item.imgAlt}
             />

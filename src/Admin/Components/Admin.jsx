@@ -27,7 +27,7 @@ import { IoCloseCircle } from "react-icons/io5";
 import Switch from "@mui/material/Switch";
 // import girl from "../../assetss/Home/Admin.png";
 import { useDispatch, useSelector } from "react-redux";
-import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle"; 
+import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle";
 const menu = [
   {
     name: "Dashboard",
@@ -80,8 +80,10 @@ const Admin = () => {
   const [profilePic, setProfilePic] = useState(); // State for profile picture
   const dispatch = useDispatch();
   // const navigate = useNavigate();
+
   const drawerWidth = 235;
   const themes= localStorage.getItem("theme");
+
 
   const toggleSubMenu = (index) => {
     setOpenSubMenu(openSubMenu === index ? null : index);
@@ -121,7 +123,9 @@ const Admin = () => {
         height: "100vh",
         width: drawerWidth,
       }}
+
       className={` ${themes === "dark" ? "bg-black text-white" : "text-white  bg-gradient-to-b from-[#001510] to-[#00BF8F] "}       max-w-62 lg:block    border-[#001510] border-opacity-10 border-r-2  `}
+
     >
       {/* Sidebar Logo */}
       <div className="py-4 flex relative">
@@ -139,17 +143,20 @@ const Admin = () => {
       {isSmallScreen && (
         <div className="p-2">
           <div className="flex items-center mb-4">
+
             <div className="w-[60px] h-[60px] rounded-full bg-white shadow-lg cursor-pointer">
               <img className="w-[60px] h-[60px] rounded-full" src={profilePic} onClick={() => document.getElementById('fileInput').click()} />
+
               <input
                 type="file"
                 id="fileInput"
-                style={{ display: 'none' }}
+                style={{ display: "none" }}
                 accept="image/*"
                 onChange={handleProfilePicChange}
               />
             </div>
             <h1 className={` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "} text-white font-medium text-xl ml-2`}>Admin Name</h1>
+
           </div>
         </div>
       )}
@@ -194,11 +201,13 @@ const Admin = () => {
               )}
             </li>
           ))}
+
            {!isSmallScreen && (
         <div className="flex p-5 relative justify-center">
          {/* <ThemeToggle/> */}
         </div>
       )}
+
         </ul>
       </div>
 
@@ -213,7 +222,6 @@ const Admin = () => {
       </div>
 
       {/* Dark Mode Switch for Large Screens */}
-     
     </Box>
   );
   // const themes= localStorage.getItem("theme")
@@ -229,7 +237,9 @@ const Admin = () => {
 
       {(isSmallScreen ? sideBarVisible : true) && (
         <div
-          className={`fixed inset-0 z-40 ${sideBarVisible || !isSmallScreen ? "block" : "hidden"} md:static md:block`}
+          className={`fixed inset-0 z-40 ${
+            sideBarVisible || !isSmallScreen ? "block" : "hidden"
+          } md:static md:block`}
           style={{ width: drawerWidth }}
         >
           {drawer}
@@ -238,6 +248,7 @@ const Admin = () => {
 
       {/* Navbar */}
       <div className="flex-grow h-screen overflow-auto ">
+
         <Box component="header" className={` ${themes==="dark"&&"bg-black text-white"} p-4 flex items-center  shadow-lg justify-between `}>
           {!isSmallScreen && (
           <div className="flex items-center justify-between px-4 space-x-2 w-full">
@@ -251,6 +262,7 @@ const Admin = () => {
                 accept="image/*"
                 onChange={handleProfilePicChange}
               />
+
             </div>
             <h3 className={` ${themes === "dark" ? "bg-black text-white" : "bg-gradient-to-r from-[#00BF8F] to-[#001510] text-[#00BF8F] "} text-transparent bg-clip-text font-semibold text-lg`}>
               Admin Name
@@ -269,8 +281,10 @@ const Admin = () => {
           {/* Dark Mode Switch for Small Screens */}
           {isSmallScreen && (
             <div className="relative flex w-full justify-end">
+
               {/* <span className="text-xl mr-2">Dark Mode:</span> */}
              <ThemeToggle/>
+
             </div>
           )}
           {/* ` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "} */}
@@ -294,6 +308,3 @@ const Admin = () => {
 };
 
 export default Admin;
-
-
-

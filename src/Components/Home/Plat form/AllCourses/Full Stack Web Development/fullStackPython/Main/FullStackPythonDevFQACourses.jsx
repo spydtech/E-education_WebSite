@@ -2,45 +2,52 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 
-const data =  [
-    {
-      id: 1,
-      title: "Front-end Development with React",
-      description: "Learn the essentials of React for building dynamic user interfaces. Explore component-based architecture and state management in React. Implement modern web development techniques using React."
-    },
-    {
-      id: 2,
-      title: "Back-end Development with Django",
-      description: "Master the fundamentals of Django for building robust web applications. Learn to create RESTful APIs using Django REST Framework. Explore Django's ORM for database interactions and authentication mechanisms."
-    },
-    {
-      id: 3,
-      title: "Database Management with PostgreSQL",
-      description: "Get introduced to relational databases with PostgreSQL. Learn to design and manage databases using SQL and PostgreSQL. Explore data modeling, transactions, and queries in PostgreSQL."
-    },
-    {
-      id: 4,
-      title: "Full Stack Application Development",
-      description: "Integrate React, Django, and PostgreSQL to build full stack applications. Implement RESTful APIs to connect front-end and back-end components. Develop, test, and deploy Python stack applications."
-    },
-    {
-      id: 5,
-      title: "Version Control with Git",
-      description: "Understand the basics of version control with Git. Learn to manage your codebase with Git and GitHub. Collaborate on projects using branching and merging techniques."
-    },
-    {
-      id: 6,
-      title: "Project Management and Collaboration Tools",
-      description: "Get introduced to project management methodologies and tools. Learn to use tools like JIRA, Trello, and Slack for effective team collaboration. Manage project timelines, tasks, and communication efficiently."
-    },
-    {
-      id: 7,
-      title: "Software Development Life Cycle (SDLC)",
-      description: "Understand the phases of the software development life cycle. Learn about Agile and Waterfall methodologies. Implement best practices for software development."
-    }
-  ];
+const data = [
+  {
+    id: 1,
+    title: "Front-end Development with React",
+    description:
+      "Learn the essentials of React for building dynamic user interfaces. Explore component-based architecture and state management in React. Implement modern web development techniques using React.",
+  },
+  {
+    id: 2,
+    title: "Back-end Development with Django",
+    description:
+      "Master the fundamentals of Django for building robust web applications. Learn to create RESTful APIs using Django REST Framework. Explore Django's ORM for database interactions and authentication mechanisms.",
+  },
+  {
+    id: 3,
+    title: "Database Management with PostgreSQL",
+    description:
+      "Get introduced to relational databases with PostgreSQL. Learn to design and manage databases using SQL and PostgreSQL. Explore data modeling, transactions, and queries in PostgreSQL.",
+  },
+  {
+    id: 4,
+    title: "Full Stack Application Development",
+    description:
+      "Integrate React, Django, and PostgreSQL to build full stack applications. Implement RESTful APIs to connect front-end and back-end components. Develop, test, and deploy Python stack applications.",
+  },
+  {
+    id: 5,
+    title: "Version Control with Git",
+    description:
+      "Understand the basics of version control with Git. Learn to manage your codebase with Git and GitHub. Collaborate on projects using branching and merging techniques.",
+  },
+  {
+    id: 6,
+    title: "Project Management and Collaboration Tools",
+    description:
+      "Get introduced to project management methodologies and tools. Learn to use tools like JIRA, Trello, and Slack for effective team collaboration. Manage project timelines, tasks, and communication efficiently.",
+  },
+  {
+    id: 7,
+    title: "Software Development Life Cycle (SDLC)",
+    description:
+      "Understand the phases of the software development life cycle. Learn about Agile and Waterfall methodologies. Implement best practices for software development.",
+  },
+];
 
-const Question = ({ title,  description }) => {
+const Question = ({ title, description }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -62,7 +69,7 @@ const Question = ({ title,  description }) => {
           )}
         </button>
       </header>
-      {expanded && <p className="mt-4 text-[#0098F1]">{ description}</p>}
+      {expanded && <p className="mt-4 text-[#0098F1]">{description}</p>}
     </article>
   );
 };
@@ -70,24 +77,22 @@ const Question = ({ title,  description }) => {
 export default function MeanStackDev() {
   const [questions, setQuestions] = useState(data);
   return (
-    <main className="bg-white min-h-screen flex items-center justify-center">
-      <div className="bg-white p-8 rounded w-full max-w-4xl">
-        <h3 className="sm:text-xl text-xl md:text-4xl lg:text-4xl font-bold mb-6 text-[#0098F1] text-center">
-          Courses We{" "}
-          <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
-          Covered in this Full Stack 
-          </span>{" "}
-          <span className="text-[#F6AC14]">Python Development Program</span>
-        </h3>
-        <section className="space-y-4 text-[#0098F1]">
-          {questions.map((question) => (
-            <Question key={question.id} {...question} />
-          ))}
-        </section>
-      </div>
-    </main>
+    <div className="px-2 md:px-5">
+      <h3 className="text-xl text-[#0098F1] font-bold text-center my-3">
+        Courses We{" "}
+        <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
+          Covered in this Full Stack
+        </span>{" "}
+        <span className="text-[#F6AC14]">Python Development Program</span>
+      </h3>
+      <section className="space-y-4 text-[#0098F1] mb-5">
+        {questions.map((question) => (
+          <Question key={question.id} {...question} />
+        ))}
+      </section>
+    </div>
   );
-};
+}
 
 // import React from "react";
 // import Faq from "react-faq-component";

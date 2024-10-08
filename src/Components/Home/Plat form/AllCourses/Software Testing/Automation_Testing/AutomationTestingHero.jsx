@@ -24,10 +24,9 @@ const AutomationTestingHero = () => {
         ></div>
         <div className="absolute inset-0 flex items-center justify-center px-[40px] md:px-[120px] lg:px-[200px]">
           <div className="text-white text-lg md:text-xl lg:text-2xl font-medium  text-center">
-            {" "}
-            In today's interconnected world, cybersecurity stands as the first{" "}
-            line of defense against an array of digital threats. With cyber
-            attacks becoming increasingly sophisticated,
+            Automation testing is key to ensuring software reliability and
+            efficiency. It helps detect defects early, speeding up development
+            cycles and improving product quality.
           </div>
 
           <button

@@ -94,13 +94,13 @@ function AdvancedNetworkSecurityIntroduction() {
             <p className="md:text-lg lg:text-3xl">
               So what is
               <span className="text-[#f6ac14] inline pl-2">
-                Network Security
+                Advanced Network Security
               </span>
             </p>
           </div>
           <div>
             <p className="md:text-lg lg:text-3xl mt-2">
-              Brief about Network Security
+              Brief about Advanced Network Security
             </p>
           </div>
         </div>

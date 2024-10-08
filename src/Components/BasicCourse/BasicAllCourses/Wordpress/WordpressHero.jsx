@@ -21,8 +21,9 @@ const WordpressHero = () => {
       >
         <div className="absolute inset-0 flex items-center justify-center">
           <p className="text-center text-white max-md:text-[16px] text-[20px] font-medium px-4">
-          Master WordPress, the most popular content management system, and gain the skills to create flexible,
-          <br/>  user-friendly websites. Whether you're a beginner or looking to enhance your skills, <br/>
+          Master WordPress, the most popular content management system, and gain the skills to <br/> 
+           flexible,
+           user-friendly websites. Whether you're a beginner  to enhance your skills, <br/>
           our course has you covered.
           </p>
         </div>

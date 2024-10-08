@@ -3,10 +3,10 @@ import React from 'react'
 function Features2() {
   return (
     <div className="">
-    <h1 className="text-4xl font-lora text-center py-10">
+    <h1 className="text-2xl md:text-4xl font-lora text-center py-10">
       Start your <span className='bg-gradient-to-r bg-clip-text from-[#f6ac14] to-[#0098f1] text-transparent'>Learning</span> journey
     </h1>
-    <div className="flex flex-col sm:flex-row flex-wrap gap-5 justify-center items-center">
+    <div className="flex sm:flex-row flex-wrap gap-5 justify-center items-center">
       <div className="w-[293px] h-[400px] bg-[#0098f1] text-white flex flex-col items-center">
         <img src="https://s3-alpha-sig.figma.com/img/2fd8/f063/24ac1a4412736b72859c85570a113ee7?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Zn0yCHZ~rqJaIb6AmF4x~C8U-XLbakqGM9KJb57fEa8I-RgcohrPSVBrf050Q1w3b6rODd7C20NhRIQAPSF~vq0rB~5ODvOqKM8B6kOPCGE0hKtkl4N8-R9fQzNPm1Fcm-NiN6joTtQQliSUAwTcVDghv-JAo0C~h1vEA9IgKOhs4sM2w7gtqCmoJu9~45YU0kdEcnK7kFLkku7qmJHQB0Zt228P-CySWBFkkBsEkcdux~owZ6UDIBiCPG9n0jDV0szY6UMHb8QbEw4e9aPNCFzrwIns6X4OBaKeCquGyVfxpOxoKWOrteuohSqZAk0dJPhzFB6En18pnfvw50OcnQ__" alt="Explore" className="w-full h-52 object-cover" />
         <div className="p-4">

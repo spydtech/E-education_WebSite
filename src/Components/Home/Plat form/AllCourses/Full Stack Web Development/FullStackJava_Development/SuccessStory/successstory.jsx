@@ -18,33 +18,27 @@ function SuccessStory() {
   }, []);
 
   return (
-    <div className="relative  flex flex-col justify-center items-center bg-white ">
-    {/* Background Image */}
-  
-    {/* Content */}
-    <div className="text-center mb-8 bg-white rounded-lg p-8 shadow-lg border border-gray-200">
-      <h1
-        className="text-4xl  pb-4"
-          style={{ fontStyle: "italic", color: "#F6AC14", fontSize: "30px" }}
-        >
-          The Success Story of{" "}
-          <span className="text-[#0098F1]" style={{ fontFamily: "Arial" }}>
-            Emma
-          </span>
+    <div className="relative  flex flex-col justify-center items-center bg-white m-3 md:m-5">
+      {/* Background Image */}
+
+      {/* Content */}
+      <div className=" bg-white rounded-lg shadow-lg border border-gray-200 p-2 md:p-5 flex flex-col">
+        <h1 className="md:text-4xl text-xl text-[#F6AC14] italic text-center my-2 ">
+          The Success Story of <span className="text-[#0098F1] ">Vishnu</span>
         </h1>
 
-        <p className="text-[#0098F1] mb-4 mx-4 text-justify">
-          Emma embarked on her journey with a vivid dream and unyielding
+        <p className="text-[#0098F1]">
+          Vishnu embarked on their journey with a clear vision and unyielding
           determination.
-          <br /> Despite facing numerous trials, she remained resolute.
-          <br /> Through relentless perseverance and unwavering resolve, she
-          triumphed over adversity.
-          <br /> Emma's unwavering dedication motivates us all to pursue our
-          ambitions.
-          <br /> She initiated her quest with passion and unwavering resolve.
-          <br /> In the face of challenges, she stood tall and persevered.
+          <br /> Despite facing countless hurdles, they remained resolute.
+          <br /> Through persistent effort and resilience,they surmounted every
+          obstacle.
+          <br /> Vishnu's unwavering commitment inspires us all to pursue our
+          aspirations.
+          <br /> They commenced their adventure with a dream and fierce resolve.
+          <br /> Confronted by adversity,they stood firm and persevered.
         </p>
-        <button className="bg-[#0098F1] hover:bg-[#f6ac14] text-white py-2 px-4 rounded-md">
+        <button className="bg-[#0098F1] hover:bg-[#F6AC14] text-white py-2 px-4 rounded-md self-center my-2">
           Start your success story
         </button>
       </div>
@@ -53,7 +47,6 @@ function SuccessStory() {
 }
 
 export default SuccessStory;
-
 
 // <div
 //         className="relative bg-cover bg-center w-96 h-96 mb-4 mt-4 sm:w-80 sm:h-80 md:w-96 md:h-96"

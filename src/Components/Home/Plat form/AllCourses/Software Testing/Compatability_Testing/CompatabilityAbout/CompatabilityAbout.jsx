@@ -1,24 +1,24 @@
 import React from "react";
-// import programmer from "../../../../../../../assets/dataAnalatics/programmer.jpg";
-// import assistance from "../../../../../../../assets/dataAnalatics/assistance.jpg";
-import career from '../../../../../../../assetss/career.png'
-import student from '../../../../../../../assetss/student.png'
+import assistance from "../../../../../../../assets/dataAnalatics/programmer.jpg";
+import programmer from "../../../../../../../assets/dataAnalatics/assistance.jpg";
+// import career from '../../../../../../../assetss/career.png'
+// import student from '../../../../../../../assetss/student.png'
 
 const CompatabilityAbout = () => {
   const compatabilityInfo = [
     {
-      title: "Student Support",
-      description:
-        "Learn about the latest compatibility testing techniques and tools to ensure your applications are robust and reliable across various environments.",
-      imgSrc: student,
-      imgAlt: "student-support",
-    },
-    {
       title: "Career Assistance",
       description:
-        "Gain expertise in various compatibility testing methodologies and receive support to advance your career in this specialized field.",
-      imgSrc: career,
+        "Stay ahead with access to one-on-one career counseling sessions and mock interviews with industry professionals.",
+      imgSrc: assistance,
       imgAlt: "career-assistance",
+    },
+    {
+      title: "Student Support",
+      description:
+        'Access student support via support@E-education.com or through the "ask us?" option on our learning platform for urgent queries.',
+      imgSrc: programmer,
+      imgAlt: "student-support",
     },
   ];
 
@@ -37,7 +37,7 @@ const CompatabilityAbout = () => {
             className="md:w-2/5 md:h-96 bg-white rounded-lg shadow-lg p-3 my-4"
           >
             <img
-              className=" md:w-full md:h-64 rounded-md"
+              className=" md:w-full object-contain md:h-64 rounded-md"
               src={item.imgSrc}
               alt={item.imgAlt}
             />

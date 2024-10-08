@@ -1,6 +1,7 @@
 // import React from "react";
 import React, { useState } from "react";
 // import axios from "axios";
+import hero from "../../../../../../assetss/student/testing/acceptance/hero.png";
 import { useNavigate } from "react-router-dom";
 // import student from "../../../../../../assetss/Home/intro_DataScience/student.jpg";
 const AcceptanceTestingHero = () => {
@@ -15,26 +16,29 @@ const AcceptanceTestingHero = () => {
 
   return (
     <>
- <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/dfftgkkev/image/upload/v1726484672/image_1_jtkxdd.png")' }}>
-  <div className="absolute inset-0 flex items-center justify-center">
-    <p className="text-center text-white text-[20px] font-medium px-4">
-           Empower your team with efficient acceptance testing procedures,<br/>
-            ensuring your software meets stakeholder requirements  <br/>
-            and expectations...
-    </p>
-  </div>
-  <div className="absolute inset-0 flex items-end justify-center pb-10">
-    <button
-      onClick={handleEnroll}
-      className="px-6 py-3 text-[20px] font-medium text-white bg-[#0098f1] rounded-xl"
-    >
-      Enroll Now
-    </button>
-  </div>
-</div>
+      <div className="relative">
+        <div
+          className=" w-full h-[370px] bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${hero})`,
+          }}
+        ></div>
+        <div className="absolute inset-0 flex items-center justify-center px-[40px] md:px-[120px] lg:px-[200px]">
+          <div className="text-white text-lg md:text-xl lg:text-2xl font-medium  text-center">
+            Acceptance testing verifies that a system meets business
+            requirements and is ready for release. It ensures the product
+            functions as expected for end users.
+          </div>
 
-  </>
-   
+          <button
+            onClick={handleEnroll}
+            className="absolute bottom-5 lg:bottom-12 px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl  transition duration-200"
+          >
+            Enroll Now
+          </button>
+        </div>
+      </div>
+    </>
   );
 };
 

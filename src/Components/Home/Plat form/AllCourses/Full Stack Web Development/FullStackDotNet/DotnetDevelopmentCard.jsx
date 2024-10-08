@@ -4,50 +4,42 @@ import Nextgen from "../../../../../../assetss/fullstackwebdev/dotnet/dotnet2.pn
 const DotnetDevelopmentCard = () => {
   return (
     <>
-     <div className="max-w-screen  px-4 mx-auto  sm:px-6 mb-12">
-        <div className="  lg:grid lg:grid-cols-12 lg:gap-8">
-          <div className="relative mt-8 pl-8 sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-            <img src={Nextgen} alt="" className="" />
-          </div>
-          <div className="sm:text-center pt-6 md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left pl-4 mb-8">
-            <div className="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base xl:text-base font">
-            .Net Full Stack  Development
-            </div>
-            <h2 className="mt-1   leading-10 tracking-tight text-gray-900 sm:leading-none sm:text-xl text-xl md:text-4xl lg:text-5xl font-bold font">
-              Next-Gen <span className="text-[#F6AC14]">Full Stack .Net</span>   Development
-            </h2>
-            <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-md lg:text-lg xl:text-xl font">
-            Elevate your web development skills with our robust .NET
-              full-stack solutions. From powerful backend services with ASP.NET
-              Core to dynamic front-end experiences with Blazor, we provide the
-              tools and technologies you need to build scalable and efficient
-              applications .NET supports the following cross-platform scenarios:
-              ASP.NET Core web apps, command-lineconsole apps, libraries and
-              Universal Windows Platform apps.
-              </p>
-            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <button
-            className="mt-6 bg-[#0098F1] text-white   md:w-auto py-3 px-6 rounded transition-all hover:bg-[#007acc] active:scale-95 xl:lg:text-2xl xl:lg:w-[280px] xl:lg:h-[80px] md:text-xl">
-            <a href="/"
-               className=""
-                >
-                  Explore Now
-                </a>
-          </button>
-              </div>
-            </div>
+      <div className="m-5 text-center lg:flex justify-around">
+        <div className="md:flex justify-center">
+          <img src={Nextgen} alt="" className="md:w-96" />
+        </div>
+        <div className="lg:w-[50%] lg:text-start">
+          <h2 className="my-2 text-lg md:text-xl lg:text-2xl ">
+            .Net Full Stack Development
+          </h2>
+          <h1 className="tracking-tight text-gray-900 leading-6 text-xl md:text-2xl lg:text-3xl font-bold">
+            Next-Gen <span className="text-[#F6AC14]">Full Stack .Net&nbsp;</span>
+            Development
+          </h1>
+          <p className="mt-4 text-base md:text-lg lg:text-xl text-gray-600 text-md">
+            Elevate your web development skills with our robust .NET full-stack
+            solutions. From powerful backend services with ASP.NET Core to
+            dynamic front-end experiences with Blazor, we provide the tools and
+            technologies you need to build scalable and efficient applications
+            .NET supports the following cross-platform scenarios: ASP.NET Core
+            web apps, command-lineconsole apps, libraries and Universal Windows
+            Platform apps.
+          </p>
+
+          <div className="mt-5 flex justify-center lg:justify-start">
+            <button className=" bg-[#0098F1] text-white px-6 py-3 rounded transition-all active:scale-95 text-nowrap md:text-xl ">
+              <a href="/" className="">
+                Explore Now
+              </a>
+            </button>
           </div>
         </div>
-    
+      </div>
     </>
   );
 };
 
 export default DotnetDevelopmentCard;
-
-
-
-
 
 // import React from "react";
 

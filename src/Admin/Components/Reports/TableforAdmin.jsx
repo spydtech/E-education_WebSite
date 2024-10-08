@@ -44,9 +44,6 @@ function TableforAdmin() {
 
 export default TableforAdmin;
 
-
-
-
 // import React, { useState } from "react";
 // import { FaProductHunt, FaUserGraduate } from "react-icons/fa";
 // import { BsGraphUpArrow } from "react-icons/bs";
@@ -88,22 +85,22 @@ export default TableforAdmin;
 
 //   return (
 //     <div className="container mx-auto p-4  min-h-screen">
-    
+
 //       <h1 className="text-xl h-12 px-4 py-2 font-semibold rounded-lg text-white bg-[#001510] mb-4 ">
 //            Overview
 //           </h1>
 //       <div className="flex flex-col md:flex-row">
 //         {/* Left Sidebar */}
 //         <div className="bg-white p-6 rounded-lg  w-full  mb-4 md:mb-0">
-          
+
 //           <div className=" grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1  gap-y-4 gap-x-2">
 //           <CountofProducts />
 //           <CustomerCount />
-         
+
 //           <AnnualSalesGraph />
 //           <CoursePurchased />
 //           <CourseSales />
-      
+
 //           </div>
 //           {/* <div className="flex flex-col gap-6">
 //             <div
@@ -158,7 +155,7 @@ export default TableforAdmin;
 //             </div>
 //           </div> */}
 //         </div>
-// {/* 
+// {/*
 //         <div className="flex-1 px-4 ">
 //           <div className=" p-4  ">{renderActiveComponent()}</div>
 //         </div> */}
@@ -172,12 +169,6 @@ export default TableforAdmin;
 // }
 
 // export default TableforAdmin;
-
-
-
-
-
-
 
 // import React, { useState } from "react";
 // import { FaProductHunt, FaUserGraduate } from "react-icons/fa";
