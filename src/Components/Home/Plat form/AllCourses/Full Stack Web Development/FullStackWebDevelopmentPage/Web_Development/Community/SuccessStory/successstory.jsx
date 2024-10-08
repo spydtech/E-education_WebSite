@@ -24,22 +24,17 @@ function SuccessStory() {
 
       {/* Content */}
       <div className=" bg-white rounded-lg shadow-lg border border-gray-200 p-2 md:p-5 flex flex-col">
-        <h1
-          className="md:text-4xl text-xl text-[#F6AC14] italic text-center my-2 "
-        >
-          The Success Story of{" "}
-          <span className="text-[#0098F1] ">
-            Vishnu
-          </span>
+        <h1 className="md:text-4xl text-xl text-[#F6AC14] italic text-center my-2 ">
+          The Success Story of <span className="text-[#0098F1] ">Vishnu</span>
         </h1>
 
         <p className="text-[#0098F1]">
-          Alex embarked on their journey with a clear vision and unyielding
+          Vishnu embarked on their journey with a clear vision and unyielding
           determination.
           <br /> Despite facing countless hurdles, they remained resolute.
           <br /> Through persistent effort and resilience,they surmounted every
           obstacle.
-          <br /> Alex's unwavering commitment inspires us all to pursue our
+          <br /> Vishnu's unwavering commitment inspires us all to pursue our
           aspirations.
           <br /> They commenced their adventure with a dream and fierce resolve.
           <br /> Confronted by adversity,they stood firm and persevered.

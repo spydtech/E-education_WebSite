@@ -137,9 +137,6 @@
 
 // export default CourseBarGraph;
 
-
-
-
 import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import {
@@ -281,7 +278,7 @@ const CourseBarGraph = () => {
         </select>
       </div>
       <div className="my-4 h-[400px]  w-auto justify-center items-center flex ">
-        <Bar data={data} options={options}  className="  "/>
+        <Bar data={data} options={options} className="  " />
       </div>
     </div>
   );

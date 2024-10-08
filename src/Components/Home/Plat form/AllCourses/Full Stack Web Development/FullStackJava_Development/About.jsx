@@ -1,99 +1,105 @@
 import React from "react";
-import {MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const About = () => {
   return (
     <>
-      <div className=" lg:pl-20  w-5/6">
-      <div className=" text-[#0098F1] lg:text-4xl font-bold text-2xl">
+      <div className="px-2 md:px-5">
+        <h1 className="font-bold text-2xl text-[#0098F1] ">
           About this Course
-        </div>
-        <div className="pt-2 lg:text-lg text-base text-[#0098F1] font">
+        </h1>
+        <p className="pt-2 leading-1 text-gray-700 md:text-lg">
           Mastering Full Stack Java Development involves becoming proficient in
           both front-end and back-end aspects using Java and its associated
           technologies. Here's a breakdown of what it entails:
-        </div>        
-        <div className="py-2 leading-2 gap-4">
-          <div className="mt-1 tracking-tight text-[#0098F1] sm:leading-none sm:text-xl pb-2 lg:text-2xl font-bold">
+        </p>
+
+        <div className="my-3 md:text-lg">
+          <h1 className="text-[#0098F1] font-bold md:text-2xl">
             Front-End Development
-          </div>
-          <div className="text-[#0098F1] leading-2 md:text-lg text-base ">
-            <span className="mt-3  text-[#F6AC14] sm:mt-5 text-lg font-medium">
-              HTML/CSS:
-            </span>{" "}
+          </h1>
+          <p className="  text-[#0098F1] my-2">
+            <span className=" text-[#F6AC14] font-semibold">HTML/CSS:</span>{" "}
             Mastery of HTML and CSS is essential for structuring web pages and
             applying styles to create visually appealing and responsive designs.
-          </div>
-          <div className="text-[#0098F1] leading-2  md:text-lg text-base ">
-            <span className="mt-3  text-[#F6AC14] sm:mt-5 text-lg font-medium">
-              JavaScript:
-            </span>{" "}
-            A deep understanding of JavaScript is necessary for building
+          </p>
+          <p className="  text-[#0098F1] my-2">
+            <span className=" text-[#F6AC14] font-semibold">JavaScript:</span> A
+            deep understanding of JavaScript is necessary for building
             interactive web applications and enhancing frontend development.
-          </div>
-          <div className="text-[#0098F1] leading-2 md:text-lg text-base ">
-            <span className="mt-3 text-[#F6AC14] sm:mt-5 text-lg font-medium">
+          </p>
+          <p className="  text-[#0098F1] my-2">
+            <span className=" text-[#F6AC14] font-semibold">
               Angular/React:
             </span>{" "}
             Expertise in Angular or React allows for the creation of dynamic and
             efficient user interfaces for web applications.
-          </div>
+          </p>
         </div>
-        <div className="py-2 gap-4">
-          <div className="mt-1  tracking-tight text-[#0098F1] sm:leading-none sm:text-xl pb-2 lg:text-2xl font-bold">
+
+        <div className="my-3 md:text-lg">
+          <h1 className="text-[#0098F1] font-bold md:text-2xl">
             Back-End Development
-          </div>
-          <div className="text-[#0098F1] leading-2 md:text-lg text-base ">
-            <span className="mt-3  text-[#F6AC14] sm:mt-5 text-lg font-medium">
-              Java:
-            </span>{" "}
+          </h1>
+          <p className="  text-[#0098F1] my-2">
+            <span className=" text-[#F6AC14] font-semibold">Java:</span>{" "}
             Proficiency in Java is vital for building scalable server-side
             applications and handling complex business logic efficiently.
-          </div>
-          <div className="text-[#0098F1] leading-2 md:text-lg text-base ">
-            <span className="mt-3 text-lg font-medium text-[#F6AC14] sm:mt-5 ">
+          </p>
+          <p className="  text-[#0098F1] my-2">
+            <span className=" text-[#F6AC14] font-semibold">
               Spring Framework:
             </span>{" "}
             Understanding the Spring framework is important for creating robust
             APIs and handling HTTP requests efficiently in Java.
-          </div>
-          <div className="text-[#0098F1] leading-2 md:text-lg text-base ">
-            <span className="mt-3  text-[#F6AC14] sm:mt-5 text-lg font-medium">
+          </p>
+          <p className="  text-[#0098F1] my-2">
+            <span className=" text-[#F6AC14] font-semibold">
               Database Management:
             </span>{" "}
             Knowledge of SQL or NoSQL databases and their integration with Java
             is essential for managing data and performing CRUD operations.
-          </div>
+          </p>
         </div>
-        <div className="mt-3  text-[#0098F1] sm:mt-5 sm:text-xl pb-2 lg:text-2xl font-bold">
-          What you'll learn
-        </div>
-        <div>
-          <div className="flex justify-start items-center font mt-2">
+
+        <div className="md:text-lg">
+          <h1 className="font-bold text-[#0098F1] md:text-2xl">
+            What you'll learn
+          </h1>
+          <div className="flex my-2 gap-x-2">
             <div>
-            <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]"/>
+              <MdOutlineKeyboardDoubleArrowRight
+                size={30}
+                className=" font-bold text-[#F6AC14]"
+              />
             </div>
-            <div className="text-[#0098F1]  md:text-lg text-base ">
+            <p className="text-[#0098F1]">
               Prepare for Full Stack Java Development interviews
-            </div>
+            </p>
           </div>
-          <div className="flex justify-start items-center font mt-2">
+          <div className="flex my-2 gap-x-2">
             <div>
-            <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]"/>
+              <MdOutlineKeyboardDoubleArrowRight
+                size={30}
+                className=" font-bold text-[#F6AC14]"
+              />
             </div>
-            <div className="text-[#0098F1]  md:text-lg text-base ">
+            <p className="text-[#0098F1]">
               Learn about Java web development including managing databases,
               handling user authentication, and deploying web applications.
-            </div>
+            </p>
           </div>
-          <div className="flex justify-start items-center font mt-2">
+          <div className="flex my-2 gap-x-2">
             <div>
-            <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]"/>
+              <MdOutlineKeyboardDoubleArrowRight
+                size={30}
+                className=" font-bold text-[#F6AC14]"
+              />
             </div>
-            <div className="text-[#0098F1]  md:text-lg text-base ">
+            <p className="text-[#0098F1]">
               Gain the skills needed to excel in a Full Stack Java Development
               role
-            </div>
+            </p>
           </div>
         </div>
       </div>
