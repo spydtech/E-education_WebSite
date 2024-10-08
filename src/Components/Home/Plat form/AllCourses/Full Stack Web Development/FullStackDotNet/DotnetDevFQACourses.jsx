@@ -2,41 +2,46 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 
-const data = 
- [
-    {
-      id: 1,
-      title: "C# Programming Fundamentals",
-      description: "Learn the basics of C# programming language. Understand object-oriented programming (OOP) concepts in C#. Explore data types, control structures, and functions in C#."
-    },
-    {
-      id: 2,
-      title: "ASP.NET Web Development",
-      description: "Build dynamic web applications using ASP.NET framework. Understand the MVC (Model-View-Controller) architecture in ASP.NET. Implement server-side logic and data validation in ASP.NET."
-    },
-    {
-      id: 3,
-      title: "Database Management with Entity Framework",
-      description: "Learn to interact with databases using Entity Framework. Understand ORM (Object-Relational Mapping) concepts. Perform CRUD operations using Entity Framework."
-    },
-    {
-      id: 4,
-      title: "Web API Development with .NET Core",
-      description: "Build RESTful APIs using .NET Core framework. Implement authentication and authorization in Web APIs. Handle HTTP requests and responses in .NET Core."
-    },
-    {
-      id: 5,
-      title: "Version Control with Git",
-      description: "Understand the basics of version control with Git. Learn to manage your codebase with Git and GitHub. Collaborate on projects using branching and merging techniques."
-    },
-    {
-      id: 6,
-      title: "Software Development Life Cycle (SDLC)",
-      description: "Understand the phases of the software development life cycle. Learn about Agile and Waterfall methodologies. Implement best practices for software development."
-    },
-  ];
+const data = [
+  {
+    id: 1,
+    title: "C# Programming Fundamentals",
+    description:
+      "Learn the basics of C# programming language. Understand object-oriented programming (OOP) concepts in C#. Explore data types, control structures, and functions in C#.",
+  },
+  {
+    id: 2,
+    title: "ASP.NET Web Development",
+    description:
+      "Build dynamic web applications using ASP.NET framework. Understand the MVC (Model-View-Controller) architecture in ASP.NET. Implement server-side logic and data validation in ASP.NET.",
+  },
+  {
+    id: 3,
+    title: "Database Management with Entity Framework",
+    description:
+      "Learn to interact with databases using Entity Framework. Understand ORM (Object-Relational Mapping) concepts. Perform CRUD operations using Entity Framework.",
+  },
+  {
+    id: 4,
+    title: "Web API Development with .NET Core",
+    description:
+      "Build RESTful APIs using .NET Core framework. Implement authentication and authorization in Web APIs. Handle HTTP requests and responses in .NET Core.",
+  },
+  {
+    id: 5,
+    title: "Version Control with Git",
+    description:
+      "Understand the basics of version control with Git. Learn to manage your codebase with Git and GitHub. Collaborate on projects using branching and merging techniques.",
+  },
+  {
+    id: 6,
+    title: "Software Development Life Cycle (SDLC)",
+    description:
+      "Understand the phases of the software development life cycle. Learn about Agile and Waterfall methodologies. Implement best practices for software development.",
+  },
+];
 
-const Question = ({ title,  description}) => {
+const Question = ({ title, description }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -58,7 +63,7 @@ const Question = ({ title,  description}) => {
           )}
         </button>
       </header>
-      {expanded && <p className="mt-4 text-[#0098F1]">{ description}</p>}
+      {expanded && <p className="mt-4 text-[#0098F1]">{description}</p>}
     </article>
   );
 };
@@ -66,26 +71,22 @@ const Question = ({ title,  description}) => {
 export default function MeanStackDev() {
   const [questions, setQuestions] = useState(data);
   return (
-    <main className="bg-white min-h-screen flex items-center justify-center">
-      <div className="bg-white p-8 rounded w-full max-w-4xl">
-        <h3 className="sm:text-xl text-xl md:text-4xl lg:text-4xl font-bold mb-6 text-[#0098F1] text-center">
-          Courses We{" "}
-          <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
+    <div className="px-2 md:px-5">
+      <h3 className="text-xl text-[#0098F1] font-bold text-center my-3">
+        Courses We{" "}
+        <span className="bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
           Covered in this
-          </span>{" "}
-          <span className="text-[#F6AC14]"> .NET Development Program</span>
-        </h3>
-        <section className="space-y-4 text-[#0098F1]">
-          {questions.map((question) => (
-            <Question key={question.id} {...question} />
-          ))}
-        </section>
-      </div>
-    </main>
+        </span>{" "}
+        <span className="text-[#F6AC14]"> .NET Development Program</span>
+      </h3>
+      <section className="space-y-4 text-[#0098F1] mb-5">
+        {questions.map((question) => (
+          <Question key={question.id} {...question} />
+        ))}
+      </section>
+    </div>
   );
-};
-
-
+}
 
 // import React from "react";
 // import Faq from "react-faq-component";

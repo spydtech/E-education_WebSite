@@ -5,21 +5,30 @@ import DeliveryMethods from './../../deliverymethods/Delivery_Methods';
 
 const Card = ({ imageSrc, text, isFlipped, isArrowClicked, toggleCard, isMobile }) => {
   return (
-    <div className="relative w-72 h-72 md:w-56 md:h-56 rounded-full border-8 border-[#0098F1] flex items-center justify-center">
+    <div className="relative w-48 h-48 lg:w-56 lg:h-56  rounded-full border-8 border-[#0098F1] flex items-center justify-center">
       <img
         src={imageSrc}
-        alt="Front "
-        className={`rounded-full transition-opacity duration-300 ${isFlipped ? 'opacity-0' : 'opacity-100'}`} />
+        alt="Front Imagee"
+        className={`rounded-full transition-opacity duration-300 ${
+          isFlipped ? "opacity-0" : "opacity-100"
+        }`}
+      />
       <div
-        className={`absolute inset-0 flex items-center justify-center bg-white rounded-full transition-opacity duration-300 ${isFlipped ? 'opacity-100' : 'opacity-0'}`}>
-        <p className="text-center text-[#0098F1] p-4">
-          {text}</p>
+        className={`absolute inset-0 flex items-center justify-center bg-white rounded-full transition-opacity duration-300 ${
+          isFlipped ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <p className="text-center text-[#0098F1] text-xs px-3 ">{text}</p>
       </div>
       <button
-        className={`absolute bottom-6 right-4 rounded-full p-2 transition-colors duration-300 ${isArrowClicked ? 'bg-[#F6AC14] text-white' : 'bg-white shadow-lg text-[#F6AC14]'}`}
+        className={`absolute bottom-6 right-4 rounded-full p-2 transition-colors duration-300 ${
+          isArrowClicked
+            ? "bg-[#F6AC14] text-white"
+            : "bg-white shadow-lg text-[#F6AC14]"
+        }`}
         onClick={toggleCard}
       >
-        <HiCursorArrowRays className='text-3xl' />
+        <HiCursorArrowRays className="text-3xl" />
       </button>
     </div>
   );
@@ -58,21 +67,29 @@ const JavascriptDevelopmentTestimonioals = () => {
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
     setIsFlipped(false);
     setIsArrowClicked(false);
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    );
     setIsFlipped(false);
     setIsArrowClicked(false);
   };
 
   return (
-    <div className="flex flex-col items-center pt-4 space-y-8">
-      <h2 className="sm:text-xl text-xl md:text-4xl lg:text-5xl font-semibold text-[#0098F1] text-center mb-4">
-        Why{" "}<span className=" bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">People Choose </span>{" "}<span className=" text-[#F6AC14]"> Us</span>
+    <div className="flex flex-col items-center space-y-8">
+      <h2 className="text-xl md:text-4xl lg:text-5xl font-semibold text-[#0098F1] text-center">
+        Why{" "}
+        <span className=" bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
+          People Choose
+        </span>
+        <span className=" text-[#F6AC14]"> Us</span>
       </h2>
       <div className="hidden md:flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
         {testimonials.map((testimonial, index) => (

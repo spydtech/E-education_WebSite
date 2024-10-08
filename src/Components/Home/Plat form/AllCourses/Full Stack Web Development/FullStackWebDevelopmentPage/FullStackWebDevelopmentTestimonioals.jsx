@@ -95,7 +95,7 @@ const FullStackWebDevelopmentTestimonials = () => {
   return (
     <div className="flex flex-col items-center space-y-8">
       <h2 className="text-xl md:text-4xl lg:text-5xl font-semibold text-[#0098F1] text-center">
-        Why
+        Why&nbsp;
         <span className=" bg-gradient-to-r bg-clip-text from-[#0098f1] to-[#f6ac14] text-transparent">
           People Choose
         </span>

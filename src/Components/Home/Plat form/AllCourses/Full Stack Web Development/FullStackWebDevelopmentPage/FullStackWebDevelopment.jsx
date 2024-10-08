@@ -33,7 +33,7 @@ const ParticularFullStack = () => {
             <img src={Hero} alt="Hero" className="md:w-96 " />
           </div>
           <div className="lg:w-[50%] lg:text-start">
-            <h2 className="tracking-tight text-gray-900 leading-6 text-xl font-bold">
+            <h2 className="tracking-tight text-gray-900 leading-6 text-xl md:text-2xl lg:text-3xl font-bold">
               Master <span className="text-[#F6AC14]">Full Stack</span> Web
               Development
             </h2>

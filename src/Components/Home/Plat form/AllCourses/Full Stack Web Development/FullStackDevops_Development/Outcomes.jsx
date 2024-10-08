@@ -1,102 +1,133 @@
 import React from "react";
-import {MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const Outcomes = () => {
   return (
     <>
-    <div className="lg:pl-20">
-      <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4">
-        <div className="w-full ">
-          <div className="mt-3 font-bold text-[#0098F1] text-xl md:text-2xl lg:text-xl xl:text-2xl font">
+      <div className="px-2 md:px-5">
+        <div className="md:text-lg lg:text-xl my-5">
+          <h1 className="font-bold text-[#0098F1] md:text-2xl">
             Elevate your career with sought-after skills in DevOps development
+          </h1>
+          <div className="flex my-2 gap-x-2">
+            <div>
+              <MdOutlineKeyboardDoubleArrowRight
+                size={30}
+                className=" font-bold text-[#F6AC14]"
+              />
+            </div>
+            <p className="text-[#0098F1]">
+              Acquire DevOps skills. Industry-recognized certification. Excel in
+              tech.
+            </p>
           </div>
-          <div className="pl-4">
-            <div className="flex justify-start items-center gap-2 mt-2">
-            <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base lg:text-lg text-[#0098F1] font">
-                Acquire DevOps skills. Industry-recognized certification. Excel
-                in tech.
-              </div>
+          <div className="flex my-2 gap-x-2">
+            <div>
+              <MdOutlineKeyboardDoubleArrowRight
+                size={30}
+                className=" font-bold text-[#F6AC14]"
+              />
             </div>
-            <div className="flex justify-start items-center gap-2 mt-2">
-            <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base lg:text-lg text-[#0098F1] font">
-                Master infrastructure as code, automation, and collaboration.
-                Real-world projects. Career-ready in DevOps.
-              </div>
+            <p className="text-[#0098F1]">
+              Master infrastructure as code, automation, and collaboration.
+              Real-world projects. Career-ready in DevOps.
+            </p>
+          </div>
+          <div className="flex my-2 gap-x-2">
+            <div>
+              <MdOutlineKeyboardDoubleArrowRight
+                size={30}
+                className=" font-bold text-[#F6AC14]"
+              />
             </div>
-            <div className="flex justify-start items-center gap-2 mt-2">
-            <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base lg:text-lg text-[#0098F1] font">
-                Elevate career with DevOps expertise. Industry-endorsed. Prepare
-                for industry. Success awaits.
-              </div>
-            </div>
+            <p className="text-[#0098F1]">
+              Elevate career with DevOps expertise. Industry-endorsed. Prepare
+              for industry. Success awaits.
+            </p>
           </div>
         </div>
-        
-      </div>
 
-      <div className="flex flex-col md:flex-row-reverse justify-center items-center md:space-x-4 mt-8">
-       
-        <div className="w-full ">
-          <div className="mt-3 font-bold text-[#0098F1] text-xl md:text-2xl lg:text-xl xl:text-2xl font pl-0 ">
+        <div className="md:text-lg lg:text-xl my-5">
+          <h1 className="font-bold text-[#0098F1] md:text-2xl">
             Master DevOps Practices for Career Advancement
+          </h1>
+          <div className="flex my-2 gap-x-2">
+            <div>
+              <MdOutlineKeyboardDoubleArrowRight
+                size={30}
+                className=" font-bold text-[#F6AC14]"
+              />
+            </div>
+            <p className="text-[#0098F1]">
+              Acquire comprehensive DevOps skills for industry recognition.
+            </p>
           </div>
-          <div className="pl-4">
-            <div className="flex justify-start items-center gap-2 mt-2">
-            <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base lg:text-lg text-[#0098F1] font">
-                Acquire comprehensive DevOps skills for industry recognition.
-              </div>
+          <div className="flex my-2 gap-x-2">
+            <div>
+              <MdOutlineKeyboardDoubleArrowRight
+                size={30}
+                className=" font-bold text-[#F6AC14]"
+              />
             </div>
-            <div className="flex justify-start items-center gap-2 mt-2">
-            <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base lg:text-lg text-[#0098F1] font">
-                Excel in infrastructure automation, continuous integration, and
-                deployment with real-world projects.
-              </div>
+            <p className="text-[#0098F1]">
+              Excel in infrastructure automation, continuous integration, and
+              deployment with real-world projects.
+            </p>
+          </div>
+          <div className="flex my-2 gap-x-2">
+            <div>
+              <MdOutlineKeyboardDoubleArrowRight
+                size={30}
+                className=" font-bold text-[#F6AC14]"
+              />
             </div>
-            <div className="flex justify-start items-center gap-2 mt-2">
-            <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base lg:text-lg text-[#0098F1] font">
-                Elevate your career with industry-endorsed training, preparing
-                you for industry success.
-              </div>
-            </div>
+            <p className="text-[#0098F1]">
+              Elevate your career with industry-endorsed training, preparing you
+              for industry success.
+            </p>
           </div>
         </div>
-      </div>
 
-      <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4 mt-8">
-        <div className="w-full">
-          <div className=" font-bold text-[#0098F1] text-xl md:text-2xl lg:text-xl xl:text-2xl font">
+        <div className="md:text-lg lg:text-xl my-5">
+          <h1 className="font-bold text-[#0098F1] md:text-2xl">
             Unlock Career Opportunities with DevOps Expertise
+          </h1>
+          <div className="flex my-2 gap-x-2">
+            <div>
+              <MdOutlineKeyboardDoubleArrowRight
+                size={30}
+                className=" font-bold text-[#F6AC14]"
+              />
+            </div>
+            <p className="text-[#0098F1]">
+              Master infrastructure as code, continuous integration and
+              delivery, and cloud technologies for diverse job roles.
+            </p>
           </div>
-          <div className="pl-4">
-            <div className="flex justify-start items-center gap-2 mt-2">
-            <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base lg:text-lg text-[#0098F1] font">
-                Master infrastructure as code, continuous integration and
-                delivery, and cloud technologies for diverse job roles.
-              </div>
+          <div className="flex my-2 gap-x-2">
+            <div>
+              <MdOutlineKeyboardDoubleArrowRight
+                size={30}
+                className=" font-bold text-[#F6AC14]"
+              />
             </div>
-            <div className="flex justify-start items-center gap-2 mt-2">
-            <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base lg:text-lg text-[#0098F1] font">
-                Gain hands-on experience through real-world projects and case
-                studies.
-              </div>
-            </div>
-            <div className="flex justify-start items-center gap-2 mt-2">
-            <MdOutlineKeyboardDoubleArrowRight className="text-3xl font-bold text-[#F6AC14]" />
-              <div className="text-base lg:text-lg text-[#0098F1] font">
-                Prepare for success with industry-recognized certification and
-                endorsed training.
-              </div>
-            </div>
+            <p className="text-[#0098F1]">
+              Gain hands-on experience through real-world projects and case
+              studies.
+            </p>
           </div>
-        </div>
+          <div className="flex my-2 gap-x-2">
+            <div>
+              <MdOutlineKeyboardDoubleArrowRight
+                size={30}
+                className=" font-bold text-[#F6AC14]"
+              />
+            </div>
+            <p className="text-[#0098F1]">
+              Prepare for success with industry-recognized certification and
+              endorsed training.
+            </p>
+          </div>
         </div>
       </div>
     </>
@@ -104,8 +135,6 @@ const Outcomes = () => {
 };
 
 export default Outcomes;
-
-
 
 // import React from "react";
 // import { FaCaretRight } from "react-icons/fa";

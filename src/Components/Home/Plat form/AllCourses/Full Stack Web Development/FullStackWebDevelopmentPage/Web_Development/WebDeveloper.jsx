@@ -24,27 +24,24 @@ const WebDeveloper = () => {
   return (
     <>
       <WebDevelopmentCard />
-      <div className=" mt-5">
-        <h2 className=" font-bold text-gray-900 my-5 text-lg md:text-2xl  text-center ">
+      <div className=" my-10">
+        <h2 className=" font-bold text-gray-900 my-5 text-lg md:text-2xl text-center">
           Full Stack <span className="text-[#F6AC14]">Web Development</span>{" "}
           Skills
         </h2>
-        <div className="flex flex-col lg:flex-row lg:justify-center gap-8 m-4 ">
+        <div className="flex flex-col md:flex-row md:justify-center gap-8 m-4 ">
           <div className="bg-[#0098F1] rounded-lg flex flex-col md:flex-row ">
             <img
               src={skillsImg}
               alt="Soft Skills"
-              className=" md:w-48 md:h-44"
+              className=" md:w-32 md:h-32 lg:w-48 lg:h-44"
             />
-            <div className="flex justify-start flex-col items-start p-7">
+            <div className="flex flex-col p-5 lg:p-7">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Soft Skills
               </h3>
               {softSkills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-x-2 mb-2"
-                >
+                <div key={index} className="flex items-center gap-x-2 mb-2">
                   <p>
                     <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14]" />
                   </p>
@@ -57,17 +54,14 @@ const WebDeveloper = () => {
             <img
               src={requirementsImg}
               alt="STechnical Skills"
-              className="md:w-48 md:h-44"
+              className="md:w-32 md:h-32 lg:w-48 lg:h-44"
             />
-            <div className="flex justify-start flex-col items-start p-7">
+            <div className="flex flex-col md:items-start p-5 lg:p-7">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Technical Skills
               </h3>
               {technicalSkills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-x-2 mb-2"
-                >
+                <div key={index} className="flex items-center gap-x-2 mb-2">
                   <p>
                     <FaArrowAltCircleRight className="text-white hover:text-[#F6AC14]" />
                   </p>
