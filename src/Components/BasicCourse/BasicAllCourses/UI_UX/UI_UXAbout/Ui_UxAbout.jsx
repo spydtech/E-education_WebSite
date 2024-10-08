@@ -1,7 +1,6 @@
 import React from "react";
 import programmer from "../../../../../../src/assetss/Basic_Courses/BasicPHP/programmer1.jpg";
 import assistance from "../../../../../../src/assetss/Basic_Courses/BasicPHP/assistance1.jpg";
-
 const Ui_UxAbout = () => {
   const uiUxInfo = [
     {
