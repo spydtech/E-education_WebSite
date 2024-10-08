@@ -21,10 +21,9 @@ const UnitTestingHero = () => {
       ></div>
       <div className="absolute inset-0 flex items-center justify-center px-[40px] md:px-[120px] lg:px-[200px]">
         <div className="text-white text-lg md:text-xl lg:text-2xl font-medium  text-center">
-          {" "}
-          Empower your team with efficient acceptance testing procedures,
-          ensuring your software meets stakeholder requirements and
-          expectations.
+          Unit testing focuses on verifying individual components or functions
+          of a software. It helps detect bugs early by ensuring each part works
+          as expected in isolation.
         </div>
 
         <button

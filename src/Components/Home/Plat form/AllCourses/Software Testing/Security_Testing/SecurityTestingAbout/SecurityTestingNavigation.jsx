@@ -112,7 +112,7 @@ const SecurityTestingNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div className="px-4 sm:px-6">
+      <div className="mx-5">
         {currentSection === 0 && <SecurityTestingIntroduction />}
         {currentSection === 1 && <SecurityTestingKeyHighights />}
         {currentSection === 2 && <SecurityTestingCareersOutcomes />}

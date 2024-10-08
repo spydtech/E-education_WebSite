@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import student from "../../../../../../assetss/professionalimages/image5.png";
+import hero from "../../../../../../assetss/professionalimages/image5.png";
 
 const IntigrationHero = () => {
   const [courseName] = useState("Integration Testing");
@@ -12,21 +12,23 @@ const IntigrationHero = () => {
   };
 
   return (
-    <div className="relative w-full h-[500px] lg:h-[408px] flex items-center justify-center overflow-hidden">
+    <div className="relative">
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className=" w-full h-[370px] bg-cover bg-center"
         style={{
-          backgroundImage: `url(${student})`,
+          backgroundImage: `url(${hero})`,
         }}
       ></div>
+      <div className="absolute inset-0 flex items-center justify-center px-[40px] md:px-[120px] lg:px-[200px]">
+        <div className="text-white text-lg md:text-xl lg:text-2xl font-medium  text-center">
+          Integration testing checks the interaction between different modules
+          or components of a system. It ensures that they work together
+          correctly and smoothly as a whole.
+        </div>
 
-      <div className="relative z-10 text-center text-white p-6 md:p-10">
-        <p className="text-[20px] md:text-[24px] font-medium text-white px-4 mb-10 max-w-[800px] mx-auto">
-          Empower your team with efficient acceptance testing procedures, ensuring your software meets stakeholder requirements and expectations...
-        </p>
         <button
           onClick={handleEnroll}
-          className="px-6 py-3 text-[20px] font-medium text-white bg-[#0098f1] rounded-xl"
+          className="absolute bottom-5 lg:bottom-12 px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl  transition duration-200"
         >
           Enroll Now
         </button>

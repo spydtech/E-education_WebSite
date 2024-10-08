@@ -112,7 +112,7 @@ const AcceptanceTestingNavigation = () => {
           <FaAngleDoubleRight size={24} />
         </button>
       </nav>
-      <div className="">
+      <div className="mx-5">
         {currentSection === 0 && <AcceptanceTestingIntroduction />}
         {currentSection === 1 && <AcceptanceTestingKeyHighights />}
         {currentSection === 2 && <AcceptanceTestingCareersOutcomes />}

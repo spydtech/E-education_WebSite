@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import hero from "../../../../../../assetss/student/testing/performance/hero.png";
 
 const PerformanceTestingHero = () => {
   const [courseName] = useState("Performance Testing");
@@ -12,27 +13,28 @@ const PerformanceTestingHero = () => {
 
   return (
     <>
-     <div className="relative w-full h-[370px] bg-cover bg-center" style={{ backgroundImage: 'url("https://res.cloudinary.com/dfftgkkev/image/upload/v1726485732/image_5_ijvlan.png")' }}>
-  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-    <p className="text-white text-lg md:text-xl lg:text-2xl font-medium mb-6"> {/* Responsive text sizes and margin */}
-      Empowering you to rigorously test and optimize your systems,
-      <span className="hidden md:inline"> <br /></span>
-      ensuring unparalleled performance and reliability for 
-      <span className="hidden md:inline"> <br /></span>
-      your business...
-    </p>
-  </div>
-  <div className="absolute inset-0 flex items-end justify-center pb-10">
-    <button
-      onClick={handleEnroll}
-      className="px-6 py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl hover:bg-[#007bb5] transition duration-200"
-    >
-      Enroll Now
-    </button>
-  </div>
-</div>
+      <div className="relative">
+        <div
+          className=" w-full h-[370px] bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${hero})`,
+          }}
+        ></div>
+        <div className="absolute inset-0 flex items-center justify-center px-[40px] md:px-[120px] lg:px-[200px]">
+          <div className="text-white text-lg md:text-xl lg:text-2xl font-medium  text-center">
+            Security testing ensures that software is protected against
+            vulnerabilities and threats. It identifies potential risks,
+            safeguarding data integrity and user privacy.
+          </div>
 
-
+          <button
+            onClick={handleEnroll}
+            className="absolute bottom-5 lg:bottom-12 px-3 py-2 md:px-5 md:py-3 text-lg md:text-xl font-medium text-white bg-[#0098f1] rounded-xl  transition duration-200"
+          >
+            Enroll Now
+          </button>
+        </div>
+      </div>
     </>
   );
 };
