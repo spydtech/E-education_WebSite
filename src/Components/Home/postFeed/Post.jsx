@@ -431,6 +431,10 @@ export default function Post() {
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const [commentData, setCommentData] = useState("");
   const [editTweetId, setEditTweetId] = useState(null);
+  const tailwindModalStyle =
+    "fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50";
+  const tailwindBoxStyle =
+    "bg-white p-6 w-[400px] border-2 border-black shadow-lg";
 
   useEffect(() => {
     localStorage.setItem("tweets", JSON.stringify(tweets));
@@ -538,7 +542,7 @@ export default function Post() {
         </div>
         <div className="flex justify-between  items-center mt-4">
           <div className="flex flex-row-reverse justify-center items-center gap-2">
-            <div>Photo</div>
+            <div className="hidden md:block">Photo</div>
             <div>
               <label>
                 <CiCamera className="w-[25px] h-[25px] cursor-pointer text-green-800" />
@@ -552,19 +556,19 @@ export default function Post() {
             </div>
           </div>
           <div className="flex flex-row-reverse justify-center items-center gap-2">
-            <div>Video</div>
+            <div className="hidden md:block">Video</div>
             <div>
               <AiOutlineVideoCamera className="w-5 h-5 cursor-pointer text-blue-800" />
             </div>
           </div>
           <div className="flex flex-row-reverse justify-center items-center gap-2">
-            <div>Event</div>
+            <div className="hidden md:block">Event</div>
             <div>
               <AiOutlineCalendar className="w-5 h-5 cursor-pointer text-orange-700" />
             </div>
           </div>
           <div className="flex flex-row-reverse justify-center items-center gap-2">
-            <div>Write Articles</div>
+            <div className="hidden md:block"> Articles</div>
             <div>
               <FaRegPenToSquare className="w-5 h-5 cursor-pointer text-red-800" />
             </div>
@@ -572,7 +576,7 @@ export default function Post() {
         </div>
       </div>
 
-      <Modal
+      {/* <Modal
         open={open}
         onClose={() => setOpen(false)}
         aria-labelledby="modal-title"
@@ -617,6 +621,52 @@ export default function Post() {
             </button>
           </div>
         </Box>
+      </Modal> */}
+      <Modal
+        open={open}
+        onClose={() => setOpen(false)}
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+        className={tailwindModalStyle}
+      >
+        <div className={tailwindBoxStyle}>
+          <textarea
+            placeholder="Write your post..."
+            rows={12}
+            cols={28}
+            className="w-full border border-blue-600 text-blue-700 outline-none resize-none text-lg"
+            onChange={handleChange}
+            value={tweetData.content}
+          />
+          <div className="mt-2 flex justify-between items-center">
+            <label className="cursor-pointer">
+              <CiCamera className="w-[25px] h-[25px] text-green-800" />
+              <input
+                type="file"
+                accept="image/*"
+                className="hidden"
+                onChange={handleAddImage}
+              />
+            </label>
+            <button
+              className="bg-blue-600 text-white py-2 px-4 rounded"
+              onClick={() => setShowEmojiPicker(!showEmojiPicker)}
+            >
+              Emoji
+            </button>
+            {showEmojiPicker && (
+              <div className="absolute bottom-16 right-8 z-10">
+                <EmojiPicker onEmojiClick={onEmojiClick} />
+              </div>
+            )}
+            <button
+              className="bg-blue-600 text-white py-2 px-4 rounded"
+              onClick={handlePost}
+            >
+              {editTweetId ? "Update" : "Post"}
+            </button>
+          </div>
+        </div>
       </Modal>
 
       <div className="bg-white mt-3 overflow-y-auto h-screen overflow-hidden ">

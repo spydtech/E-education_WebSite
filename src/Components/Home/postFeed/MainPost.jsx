@@ -31,7 +31,7 @@ const MainPost = () => {
       <Navbar></Navbar>
       <div className="grid grid-cols-1 lg:grid-cols-4   lg:w-auto  p-2 gap-4">
         {/* Left Side */}
-        <div className="">
+        <div className=" lg:mt-0 mt-20 ld:block flex justify-center ">
           <LeftSide />
         </div>
 

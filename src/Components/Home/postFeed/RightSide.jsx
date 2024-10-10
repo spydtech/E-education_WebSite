@@ -11,7 +11,7 @@ const Rightside = () => {
 
   return (
     <div
-      className={`z-50 flex flex-col w-auto lg:w-[235px] xl:w-80 bg-[#0098F1]   rounded-md transition-all duration-300 ease-in-out ${
+      className={`z-50 flex flex-col w-[300px] lg:w-[235px] xl:w-80 bg-[#0098F1]   rounded-md transition-all duration-300 ease-in-out ${
         isExpanded ? "h-[250px]" : "h-[75px]"
       }`}
     >
@@ -28,7 +28,7 @@ const Rightside = () => {
       </div>
 
       {isExpanded && (
-        <div className="w-full bg-[#0098f1] rounded-lg  text-white p-4 flex flex-col gap-4">
+        <div className="w-full bg-[#0098f1] rounded-lg text-white p-4 flex flex-col gap-4 h-40 overflow-y-auto">
           <div>More notifications 1</div>
           <div>More notifications 2</div>
           <div>More notifications 3</div>
