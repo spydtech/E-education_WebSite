@@ -140,7 +140,7 @@
 // }
 
 // export default Payment;
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { FaRobot } from "react-icons/fa";
 
 function Payment() {
@@ -166,95 +166,82 @@ function Payment() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center min-h-screen ">
-      <div className="bg-white w-full max-w-lg p-10 rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold  text-center">Payment</h1>
-
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
+    <div className="">
+      <div className=" relative ">
+        <img
+          src="src/assetss/payments/image.png"
+          className="w-full h-80 object-cover "
+        />
+        <div className="absolute inset-0 bg-[#FF9B2659] opacity-35"></div>
+      </div>
+      <div className="my-6">
+        <h1 className="text-2xl font-bold text-center text-[#0098F1]">
+          Payment
+        </h1>
+        <form onSubmit={handleSubmit} className="grid grid-cols-2 mx-20">
+          <div className="m-4 space-y-1">
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-gray-700 mb-1"
+              className="block text-sm font-medium text-[#969696]"
             >
-              Name on card:
+              Name on card
             </label>
             <input
               type="text"
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-md"
-              placeholder={Names}
+              className="w-full p-2 border border-[#0098F18C] rounded-md"
               required
             />
           </div>
 
-          <div className="mb-4">
-            <label
-              htmlFor="cardNumber"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Card Number:
-            </label>
-            <input
-              type="text"
-              id="cardNumber"
-              placeholder="Enter your card number"
-              value={cardNumber}
-              onChange={(e) => setCardNumber(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-md"
-              required
-            />
-          </div>
-
-          <div className="mb-4">
-            <label
-              htmlFor="expiryDate"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Expiry Date (MM/YY):
-            </label>
-            <input
-              type="text"
-              id="expiryDate"
-              placeholder="MM/YY"
-              value={expiryDate}
-              onChange={(e) => setExpiryDate(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-md"
-              required
-            />
-          </div>
-
-          <div className="mb-4">
+          <div className="m-4 space-y-1">
             <label
               htmlFor="cvv"
-              className="block text-sm font-medium text-gray-700 mb-1"
+              className="block text-sm font-medium text-[#969696]"
             >
-              CVV:
+              CVV
             </label>
             <input
               type="text"
               id="cvv"
-              placeholder="CVV"
               value={cvv}
               onChange={(e) => setCvv(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-md"
+              className="w-full p-2 border border-[#0098F18C] rounded-md"
               required
             />
           </div>
 
-          <div className="mb-4">
+          <div className="m-4 space-y-1">
+            <label
+              htmlFor="cardNumber"
+              className="block text-sm font-medium text-[#969696]"
+            >
+              Card Number
+            </label>
+            <input
+              type="text"
+              id="cardNumber"
+              value={cardNumber}
+              onChange={(e) => setCardNumber(e.target.value)}
+              className="w-full p-2 border border-[#0098F18C] rounded-md"
+              required
+            />
+          </div>
+
+          <div className="m-4 space-y-1">
             <label
               htmlFor="country"
-              className="block text-sm font-medium text-gray-700 mb-1"
+              className="block text-sm font-medium text-[#969696]"
             >
-              Country:
+              Country
             </label>
             <select
               id="country"
               value={country}
               onChange={(e) => setCountry(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-md"
+              className="w-full p-2 border border-[#0098F18C] rounded-md"
               required
             >
               <option value="">Select Country</option>
@@ -264,28 +251,47 @@ function Payment() {
             </select>
           </div>
 
-          <div className="flex items-center mb-6">
-            <FaRobot className="text-blue-500 mr-4" />
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                id="robotVerification"
-                checked={robotVerification}
-                onChange={(e) => setRobotVerification(e.target.checked)}
-                className="mr-2"
-              />
-              <label htmlFor="robotVerification" className="text-sm">
-                I'm not a robot
-              </label>
-            </div>
+          <div className="m-4 space-y-1">
+            <label
+              htmlFor="expiryDate"
+              className="block text-sm font-medium text-[#969696]"
+            >
+              Expiry Date (MM/YY)
+            </label>
+            <input
+              type="text"
+              id="expiryDate"
+              value={expiryDate}
+              onChange={(e) => setExpiryDate(e.target.value)}
+              className="w-full p-2 border border-[#0098F18C] rounded-md"
+              required
+            />
           </div>
 
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600"
-          >
-            Submit
-          </button>
+          <div className="flex items-center m-4 space-y-1">
+            <input
+              type="checkbox"
+              id="robotVerification"
+              checked={robotVerification}
+              onChange={(e) => setRobotVerification(e.target.checked)}
+              className="mr-2"
+            />
+            <label
+              htmlFor="robotVerification"
+              className="text-sm font-semibold text-[#969696]"
+            >
+              I'M NOT A ROBOT
+            </label>
+          </div>
+
+          <div className="col-span-2 flex justify-center my-5">
+            <button
+              type="submit"
+              className="bg-[#0098F1] text-white font-semibold w-60 h-10 rounded hover:bg-blue-500"
+            >
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     </div>
