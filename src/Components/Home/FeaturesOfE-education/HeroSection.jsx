@@ -16,10 +16,10 @@ function HeroSection() {
             The features of learning
           </h2>
         
-          <p className="mt-16 max-w-lg text-wrap text-opacity-80 ">
+          <p className="mt-5 md:mt-0 max-w-2xl text-wrap text-opacity-80 ">
             In a world where information is at our fingertips, E-education offers limitless opportunities for personal and professional growth. Embrace the convenience and flexibility of online learning and unlock your potential from anywhere in the world.
           </p>
-          <a href="#" className="inline-block w-[300px]  h-[60px] text-lg font-medium text-gray-100 bg-[#0098F1] rounded-lg p-2 mt-20 mb-10 md:mb-0 py-4 hover:bg-[#f6ac14] hover:shadow-md md:w-48"> Join the Courses</a>
+          <a href="#" className="inline-block w-[300px]  h-[60px] text-lg font-medium text-gray-100 bg-[#0098F1] rounded-lg p-2 mt-20 md:mt-24 mb-10 md:mb-0 py-4 hover:bg-[#f6ac14] hover:shadow-md md:w-48"> Join the Courses</a>
         </div>
       </div>
       <h1 className=" relative text-4xl  text-center py-20">
@@ -27,7 +27,7 @@ function HeroSection() {
       </h1>
       
       <div className="flex flex-col sm:flex-row text-white gap-10 justify-center items-center sm:items-stretch">
-        <div className="relative border-l-8 border-l-[#f6ac14] group w-full sm:w-[501px] h-auto sm:h-[477px] bg-[#0098f1] rounded-xl overflow-hidden">
+        <div className="relative border-l-8 border-l-[#f6ac14] group w-full sm:w-[501px] h-auto sm:h-[425px] bg-[#0098f1] rounded-xl overflow-hidden">
       <div className="absolute inset-0 bg-[#f6ac14] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
       <div className="relative z-10  ">
         <h1 className="text-2xl font-bold pb-8 h-16 pt-4 pl-4 relative w-60  overflow-hidden "style={{ borderBottomRightRadius: '1.0rem' }}>
@@ -39,7 +39,7 @@ function HeroSection() {
         </p>
       </div>
     </div>
-        <div className="relative border-l-8 border-l-[#f6ac14] group w-full sm:w-[501px] h-auto sm:h-[477px] bg-[#0098f1] rounded-xl overflow-hidden">
+        <div className="relative border-l-8 border-l-[#f6ac14] group w-full sm:w-[501px] h-auto sm:h-[425px] bg-[#0098f1] rounded-xl overflow-hidden">
           <div className="absolute inset-0 bg-[#f6ac14] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
           <div className="relative z-10 ">
             <h1 className="text-2xl pb-8 h-16 font-bold pt-4 pl-4 relative w-60 overflow-hidden " style={{ borderBottomRightRadius: '1.0rem' }}>
