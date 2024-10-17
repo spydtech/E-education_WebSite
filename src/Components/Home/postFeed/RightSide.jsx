@@ -11,10 +11,9 @@ const Rightside = () => {
 
   return (
     <div
-      className={`flex flex-col border border-blue-500 bg-[#0098F1] absolute top-[32px] right-[8px] rounded-md transition-all duration-300 ease-in-out ${
+      className={`z-50 flex flex-col w-[300px] lg:w-[235px] xl:w-80 bg-[#0098F1]   rounded-md transition-all duration-300 ease-in-out ${
         isExpanded ? "h-[250px]" : "h-[75px]"
       }`}
-      style={{ width: '333px' }} 
     >
       <div className="flex justify-between items-center text-white px-8 py-2">
         <div className="flex items-center gap-2">
@@ -29,7 +28,7 @@ const Rightside = () => {
       </div>
 
       {isExpanded && (
-        <div className="w-full bg-[#007bb5] text-white p-4 flex flex-col gap-4">
+        <div className="w-full bg-[#0098f1] rounded-lg text-white p-4 flex flex-col gap-4 h-40 overflow-y-auto">
           <div>More notifications 1</div>
           <div>More notifications 2</div>
           <div>More notifications 3</div>
