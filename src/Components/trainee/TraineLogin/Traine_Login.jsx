@@ -89,7 +89,7 @@ const Traine_Login = () => {
       password: data.get("password"),
     };
 
-    navigate("/traineedashboard");
+    navigate("/traineedashbord");
     dispatch(trainee(traineeData));
   };
 

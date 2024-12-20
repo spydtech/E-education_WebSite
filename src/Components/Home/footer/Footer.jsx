@@ -147,7 +147,7 @@ const sections = [
 function FooterPart() {
   return (
     <footer
-      className="p-5 relative"
+      className="p-5 relative  "
       style={{
         backgroundImage: `url(${footerImg})`,
         backgroundSize: "cover",
@@ -156,7 +156,8 @@ function FooterPart() {
     >
       <div
 
-       className="absolute inset-0 bg-[#0098F1]  opacity-65"
+       
+ className="absolute inset-0 bg-[#0098F1]  opacity-70"
 
         aria-hidden="true"
       ></div>

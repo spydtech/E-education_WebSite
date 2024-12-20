@@ -29,7 +29,7 @@ function AdminLogin() {
     // Store user data in local storage
     localStorage.setItem("userData", JSON.stringify(userData));
 
-    navigate("/");
+    navigate("/admin/*");
     dispatch(login(userData));
   };
 

@@ -37,11 +37,11 @@ function Main() {
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl md:mt-5 md:text-xl">
-<<<<<<< HEAD
+
                 Kickstart, switch, or elevate your career with over 6,900
-=======
+
                 Kickstart, switch, or elevate your career with Our
->>>>>>> b6ac7ce (updatng the code)
+
                 courses, professional certificates, and degrees from leading
                 universities and top companies.
               </p>
