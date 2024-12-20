@@ -155,7 +155,9 @@ function FooterPart() {
       }}
     >
       <div
-        className="absolute inset-0 bg-gray-500 opacity-55"
+
+       className="absolute inset-0 bg-[#0098F1]  opacity-65"
+
         aria-hidden="true"
       ></div>
       <div className="relative z-10">

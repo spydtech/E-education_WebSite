@@ -137,6 +137,7 @@ const Navbar = () => {
                 <div className="flex items-center lg:justify-between flex-1 pl-8 justify-center">
                   <Link to="/" className="flex-shrink-0 ">
                     <img
+
                       className="h-12 w-40 lg:h-16 lg:w-56"
                       src={IMG}
                       alt="Logo"

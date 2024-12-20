@@ -676,6 +676,9 @@ import axios from "axios";
 import profilebg from "../../assetss/profile/profilebg.jpg";
 import dp from "../../assets/women2.png";
 
+import Navbar from "../Navbar";
+
+
 const UserProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({});
@@ -683,6 +686,7 @@ const UserProfile = () => {
   const dispatch = useDispatch();
   const jwt = localStorage.getItem("jwt");
   console.log(auth + ": " + jwt);
+
 
   // useEffect(() => {
   //   const fetchUserProfile = async () => {
@@ -715,6 +719,38 @@ const UserProfile = () => {
 
   //   fetchUserProfile();
   // }, [jwt]);
+
+  useEffect(() => {
+    const fetchUserProfile = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/api/users/profile", {
+          headers: {
+            Authorization: `Bearer ${jwt}`,
+          },
+        });
+        const user = response.data;
+        const fullName = `${user.firstName} ${user.lastName}`;
+        setFormData({
+          fullName,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          bio: user.bio || "",
+          gender: user.gender || "",
+          email: user.email,
+          phoneNumber: user.phoneNumber || "",
+          location: user.location || "",
+          dateOfBirth: user.dateOfBirth || "",
+          website: user.website || "",
+          profileImage: user.profileImage || "",
+          coverImage: user.coverImage || "",
+        });
+      } catch (error) {
+        console.error("Error fetching user profile data:", error);
+      }
+    };
+
+    fetchUserProfile();
+  }, [jwt])
 
   const handleSave = async () => {
     console.log("Saving data:", formData); // Log the data being sent
@@ -780,6 +816,9 @@ const UserProfile = () => {
 
   return (
     <div>
+
+      <Navbar />
+
       <div
         style={{
           backgroundImage: `url(${formData.coverImage || profilebg})`,
