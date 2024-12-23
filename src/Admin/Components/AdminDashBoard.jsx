@@ -40,7 +40,7 @@ const AdminDashBoard = () => {
           className={`  ${themes === "dark" ? "bg-black text-white" : "text-white bg-gradient-to-l from-[#001510] to-[#00BF8F]   "}   h-auto     rounded-lg  sm:ml-5 mt-8  lg:ml-3 p-3 text-start  lg:w-auto max-w-[1140px] md:w-[500px]  `}
         >
           <p className="text-xl text-white px-3">Monthly Overview</p>
-          <span className="text-[14px]  text-white px-3 pt-4 flex items-center">
+          <span className="text-base  text-white px-3 pt-4 flex items-center">
             Total 25% <TfiStatsUp className=" text-green-400 px-2" /> this month
           </span>
           <div id="subdiv1" className={`   flex flex-wrap justify-around mt-6`}>
@@ -57,8 +57,8 @@ const AdminDashBoard = () => {
                 />
               
                 <div>
-                  <p className="text-sm md:text-lg text-white">{item.text}</p>
-                  <p className="text-sm md:text-lg text-white">{item.value}</p>
+                  <p className="text-sm md:text-base text-white">{item.text}</p>
+                  <p className="text-sm md:text-base text-white">{item.value}</p>
                 </div>
               </div>
             ))}
@@ -74,8 +74,8 @@ const AdminDashBoard = () => {
               key={index}
               className={` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "} flex flex-col items-center  rounded-lg w-72 sm:w-64  md:m-2 lg:m-0 xl:w-[240px]  lg:w-[180px] md:w-[240px] md:h-[100px]  h-36 mb-4 ${stat.bgColor}`}
             >
-              <p className="text-white text-base pt-6 sm:text-lg font-semibold">{stat.title}</p>
-              <p className="text-white text-lg sm:text-xl">{stat.value}</p>
+              <p className="text-white md:text-base pt-6 sm:text-lg font-semibold">{stat.title}</p>
+              <p className="text-white md:text-base sm:text-xl">{stat.value}</p>
             </div>
           ))}
            </div>

@@ -155,7 +155,7 @@ function App() {
           <Route path="/options" element={<Options />} />
           <Route path="/pricing" element={<Pricing2 />} />
           <Route path="/try-a-demo" element={<TryADemo />} />
-          <Route path="/main-post" element={<MainPost />} />
+          <Route path="/PostFeeds" element={<MainPost />} />
           {/* <Route path="/reports-masters" element={<ReportsAndMasters />} /> */}
           {/* <Route path="/sarvices" element={<Sarvices />} /> */}
 
@@ -199,7 +199,7 @@ function App() {
           <Route path="/signUp" element={<SignUp />} />
           {/*  */}
           <Route path="/Profile" element={<Profile />} />
-          <Route path="/PostFeeds" element={<PostFeeds />} />
+          {/* <Route path="/PostFeeds" element={<PostFeeds />} /> */}
           <Route path="/QuestionForm" element={<QuestionForm />} />
           <Route path="/Settings" element={<Settings />} />
           {/*  */}

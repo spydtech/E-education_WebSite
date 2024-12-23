@@ -338,7 +338,7 @@ function Login() {
       password: data.get("password"),
     };
 
-    navigate("/");
+    navigate("/mylearning");
     dispatch(login(userData));
   };
 

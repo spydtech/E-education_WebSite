@@ -18,9 +18,15 @@ const MyLearningHero = () => {
       Knowledge.
     </h1>
 
-    <p className="mt-4 text-lg md:text-xl">
-      My Learning My Learning My Learning My Learning My Learning My Learning My Learning My Learning My Learning My Learning My Learning My Learning
-    </p>
+    <p className="mt-4 text-sm md:text-base text-justify">
+  Dive into a world of endless learning possibilities with MyLearning. 
+  Explore a vast range of courses designed to enhance your skills, knowledge, 
+  and career prospects. Whether you're a student, professional, or lifelong 
+  learner, our platform offers flexible, accessible, and engaging education 
+  tailored to your needs. Expand your horizons anytime, anywhere, with 
+  MyLearning's innovative and comprehensive e-education solutions.
+</p>
+
 
     <div className="col-span-1 md:col-span-10 mt-5">
       <div className="flex items-center justify-center md:justify-start ml-4">
@@ -33,7 +39,7 @@ const MyLearningHero = () => {
             style={{ zIndex: 5 - index }} // Adjust zIndex to maintain overlap
           />
         ))}
-        <h1 className="text-2xl ml-3">+1200</h1>
+        <h1 className="text-2xl ml-3"></h1>
       </div>
     </div>
   </div>
