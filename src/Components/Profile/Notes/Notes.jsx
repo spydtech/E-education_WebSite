@@ -11,7 +11,7 @@ function Notes() {
         <div className="py-10 flex">
           <h1 className="text-sm font-bold">Notes & Highlights</h1>
           <div className="flex space-x-2  md:ml-52">
-            <p>Do not allow...</p>
+            <p>Do not allow.</p>
 
             <label class="relative mb-5 cursor-pointer ">
               <input type="checkbox" value="" class="peer sr-only" />
