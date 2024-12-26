@@ -1,37 +1,79 @@
-import React,{useEffect} from "react";
+import React, { useState } from "react";
+import { IoSearchOutline } from "react-icons/io5";
 
 function Notes() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [text, setText] = useState("");
+  const [notesList, setNotesList] = useState([]);
+
+  const handleSave = () => {
+    if (text.trim() !== "") {
+      setNotesList([...notesList, text]);
+      setText("");
+    }
+  };
+
+  const handleClear = () =>{
+    setText("");
+  }
+
   return (
     <div>
-      <div className="bg-white p-10  md:-mt-5 border   rounded-lg shadow relative mx-auto w-full ">
-        <h2 className="text-lg font-bold text-gray-800">Notes & Highlights</h2>
-        <div className="py-10 flex">
-          <h1 className="text-sm font-bold">Notes & Highlights</h1>
-          <div className="flex space-x-2  md:ml-52">
-            <p>Do not allow.</p>
-
-            <label class="relative mb-5 cursor-pointer ">
-              <input type="checkbox" value="" class="peer sr-only" />
-              <div class="peer h-5 w-9 rounded-full bg-gray-400 after:absolute after:top-[2px] after:left-[2px] after:h-4 after:w-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-indigo-900 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-200"></div>
-            </label>
-
-            <p>Allow</p>
+      <div className="bg-white p-3 border shadow-lg rounded-lg">
+        {/* <img
+          src="https://s3-alpha-sig.figma.com/img/b578/d598/bf7db1ac2066e31feacce4204c190918?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TUG4Fem8rh-lNxYyz6DB3gEf7OfNpBDWvWLs4LiQMCEJecVOhiVadO37orRC5E1PGu6B4xGG0ZHQq2hR0BAdhBsqR8yZ35IANYat5iEkPjU95asG-rZ7XsPNAevFXQWs2g8mXW1tUW1qP3uHPtT7sgnOmn6QxFn17Uqp3WvR8-d7QxGWe33sTVfug0Z7WYDCeGFEQcDc~n3y8El8ybjnrOJNaV2YgceOTEC5s98TGEmADePbpER3wE6O~bBkqTG1ON5fQRxhddoxuzg0uKridHfjuNYK0DIak1ZhlsqOqVS1WDHWRV7763EQwbRpHknDTeGBzHB2MN3slJ-jthePug__"
+          alt="image-notes"
+          className="md:h-40 md:w-40 lg:w-60 lg:h-60"
+        /> */}
+        <div className="md:flex md:gap-3 max-md:space-y-5">
+          <div className="bg-pink-50 md:w-56 p-2">
+            <div className="border bg-white flex items-center px-1 ">
+              <span>
+                <IoSearchOutline />
+              </span>
+              <input
+                type="search"
+                className="w-full text-xs border-none outline-none focus:outline-none"
+                placeholder="Search Notes"
+              />
+            </div>
+            <ul className="my-1 h-40">
+              {notesList.map((each) => (
+                <li key={each.id} className="text-sm">{each}</li>
+              ))}
+            </ul>
           </div>
-        </div>
-        <div>
-          <p className="text-sm pb-5">
-            Your highlighting and note-taking activity can be used in
-            combination with that of other learners in the course to determine
-            the most highlighted phrases. No personal information is displayed
-            to other learners.
-          </p>
-          <hr className="py-5 " />
-          <a className="p-2 px-6 rounded hover:bg-blue-200 border border-2 text-blue-500 border-blue-500">
-            Save
-          </a>
+
+          <div className="bg-[#FBF4B1] w-full space-y-2 py-2">
+            <div className="flex justify-end items-center gap-2 px-2">
+              <button onClick={handleSave}>Save</button>
+              <div className="w-px h-4 bg-gray-800"></div>
+              <button onClick={handleClear}>Clear</button>
+            </div>
+            <textarea
+              placeholder="Start typing here..."
+              onChange={(e) => setText(e.target.value)}
+              value={text}
+              className="w-full h-32 bg-[#FDF7E5] outline-none text-sm text-gray-800"
+            ></textarea>
+            <div className="flex items-center gap-3 text-gray-600">
+              <button className="hover:text-black">
+                <b>B</b>
+              </button>
+              <button className="hover:text-black italic">
+                <i>I</i>
+              </button>
+              <button className="hover:text-black underline">
+                <u>U</u>
+              </button>
+              <button className="hover:text-black">Aa</button>
+              <button className="hover:text-black">
+                T<sub>T</sub>
+              </button>
+              <button className="hover:text-black">
+                <span>&#61;</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
