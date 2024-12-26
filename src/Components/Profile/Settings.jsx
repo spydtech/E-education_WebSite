@@ -141,7 +141,7 @@ function Settings({ usernameFirstLetter }) {
   return (
     <div>
       {/* <Navbar /> */}
-      <div className="bg-blue-100">
+      <div className="bg-blue-100 h-screen">
         <div className="w-full max-w-md mx-auto md:max-w-none md:flex md:gap-10  p-4">
           <div className="grid-fix space-y-5 md:w-1/4 p-10">
             <button
