@@ -4,6 +4,7 @@ import { IoSearchOutline } from "react-icons/io5";
 function Notes() {
   const [text, setText] = useState("");
   const [notesList, setNotesList] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   const handleSave = () => {
     if (text.trim() !== "") {
@@ -12,9 +13,17 @@ function Notes() {
     }
   };
 
-  const handleClear = () =>{
+  const onClickClear = () => {
+    setNotesList([]);
+  };
+
+  const handleClear = () => {
     setText("");
-  }
+  };
+
+  const filteredNotes = notesList.filter((note) =>
+    note.toLowerCase().includes(searchText.toLowerCase())
+  );
 
   return (
     <div>
@@ -32,18 +41,35 @@ function Notes() {
               </span>
               <input
                 type="search"
+                onChange={(e) => setSearchText(e.target.value)}
+                value={searchText}
                 className="w-full text-xs border-none outline-none focus:outline-none"
                 placeholder="Search Notes"
               />
             </div>
-            <ul className="my-1 h-40">
-              {notesList.map((each) => (
-                <li key={each.id} className="text-sm">{each}</li>
-              ))}
+            <ul className="my-1 h-40 overflow-y-auto">
+              {notesList.length === 0 ? (
+                <li className="text-sm text-gray-500 italic text-center">Add a note...</li>
+              ) : (
+                filteredNotes.map((each, i) => (
+                  <li key={i} className="text-sm my-1">
+                    <span className="mr-1 text-gray-800">•</span>
+                    {each}
+                  </li>
+                ))
+              )}
             </ul>
+            <div className="flex justify-end">
+              <button
+                className=" border border-black bg-[#FBF4B1] px-2"
+                onClick={onClickClear}
+              >
+                Clear
+              </button>
+            </div>
           </div>
 
-          <div className="bg-[#FBF4B1] w-full space-y-2 py-2">
+          <div className="bg-[#FBF4B1] w-full space-y-2 py-2 shadow-lg">
             <div className="flex justify-end items-center gap-2 px-2">
               <button onClick={handleSave}>Save</button>
               <div className="w-px h-4 bg-gray-800"></div>
@@ -55,7 +81,7 @@ function Notes() {
               value={text}
               className="w-full h-32 bg-[#FDF7E5] outline-none text-sm text-gray-800"
             ></textarea>
-            <div className="flex items-center gap-3 text-gray-600">
+            <div className="flex items-center gap-3 text-gray-600 pl-3">
               <button className="hover:text-black">
                 <b>B</b>
               </button>
