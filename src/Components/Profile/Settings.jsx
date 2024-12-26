@@ -140,7 +140,6 @@ function Settings({ usernameFirstLetter }) {
 
   return (
     <div>
-      {/* <Navbar /> */}
       <div className="bg-blue-100 h-screen">
         <div className="w-full max-w-md mx-auto md:max-w-none md:flex md:gap-10  p-4">
           <div className="grid-fix space-y-5 md:w-1/4 p-10">
@@ -206,7 +205,6 @@ function Settings({ usernameFirstLetter }) {
                 activeTab === "tab1" ? "" : "hidden"
               }`}
             >
-              {/* <Account /> */}
             </div>
             <div
               id="tab2"
@@ -214,7 +212,6 @@ function Settings({ usernameFirstLetter }) {
                 activeTab === "tab2" ? "" : "hidden"
               }`}
             >
-              {/* <Payment /> */}
             </div>
             <div
               id="tab3"
@@ -222,7 +219,6 @@ function Settings({ usernameFirstLetter }) {
                 activeTab === "tab3" ? "" : "hidden"
               }`}
             >
-              {/* <UpdatePassword /> */}
             </div>
             <div
               id="tab4"
@@ -230,7 +226,6 @@ function Settings({ usernameFirstLetter }) {
                 activeTab === "tab4" ? "" : "hidden"
               }`}
             >
-              {/* <Communication /> */}
             </div>
             <div
               id="tab5"
@@ -246,7 +241,6 @@ function Settings({ usernameFirstLetter }) {
                 activeTab === "tab6" ? "" : "hidden"
               }`}
             >
-              {/* <Calendar /> */}
             </div>
           </div>
         </div>
