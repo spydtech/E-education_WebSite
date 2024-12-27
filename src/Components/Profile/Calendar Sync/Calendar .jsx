@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const holidays = {
   "2024-01-01": "New Year's Day",
@@ -41,7 +40,10 @@ const Calendar = () => {
   };
 
   const handleDayClick = (day) => {
-    const dateKey = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    const dateKey = `${currentYear}-${String(currentMonth + 1).padStart(
+      2,
+      "0"
+    )}-${String(day).padStart(2, "0")}`;
     setSelectedDate(dateKey);
     setNewEvent(events[dateKey]?.event || "");
     setEventTime(events[dateKey]?.time || "");
@@ -59,22 +61,20 @@ const Calendar = () => {
   };
 
   const getDayClass = (day) => {
-    const dateKey = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    const dateKey = `${currentYear}-${String(currentMonth + 1).padStart(
+      2,
+      "0"
+    )}-${String(day).padStart(2, "0")}`;
     if (holidays[dateKey]) return "bg-red-200 text-red-800";
     if (new Date(currentYear, currentMonth, day).getDay() === 0)
       return "bg-blue-100 text-blue-800";
     return "bg-gray-100 hover:bg-gray-200";
   };
-=======
-import React, { useEffect } from "react";
->>>>>>> e7ba3ce9cbe1e03664d35dc8a8523ef9d2126af7
 
   return (
-<<<<<<< HEAD
     <div className="p-5 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold text-center mb-5">Calendar</h1>
 
-      {/* Month & Year Selector */}
       <div className="flex justify-between items-center mb-5">
         <button
           className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
@@ -94,32 +94,9 @@ import React, { useEffect } from "react";
         >
           Next
         </button>
-=======
-    <div>
-      <div className="bg-white  relative mx-auto w-full md:h-[17rem] h-full ">
-        <h2 className="text-lg font-bold text-gray-800 p-10">Calendar Sync</h2>
-        <p className="px-10">
-          Automatically sync all the deadlines and other related items from all
-          active courses to your calendar.
-        </p>
-        <h2 className="px-10 pt-2 font-semibold ">Add to my calendar</h2>
-        <div className="px-10 md:space-x-10 md:pb-0 pb-5  space-y-2 md:space-y-0 text-sm pt-2 flex flex-col md:flex-row">
-          <a className="border border-2 p-2  border-blue-600 rounded hover:bg-blue-100 cursor-pointer">
-            Calendar
-          </a>
-          {/* <a className="border border-2 p-2 border-blue-600 rounded hover:bg-blue-100 cursor-pointer">
-            Apple Calendar
-          </a>
-          <a className="border border-2 p-2 border-blue-600 rounded hover:bg-blue-100 cursor-pointer">
-            Other Calendar
-          </a> */}
-        </div>
->>>>>>> e7ba3ce9cbe1e03664d35dc8a8523ef9d2126af7
       </div>
 
-      {/* Calendar Grid */}
       <div className="grid grid-cols-7 gap-2 border p-3 rounded-lg bg-gray-50 shadow-md">
-        {/* Weekdays */}
         {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
           <div
             key={day}
@@ -129,17 +106,14 @@ import React, { useEffect } from "react";
           </div>
         ))}
 
-        {/* Empty Days */}
         {Array.from({ length: startDay }).map((_, i) => (
           <div key={i} className="p-3"></div>
         ))}
 
-        {/* Days */}
         {days.map((day) => {
-          const dateKey = `${currentYear}-${String(currentMonth + 1).padStart(
-            2,
-            "0"
-          )}-${String(day).padStart(2, "0")}`;
+          const dateKey = `${currentYear}-${String(
+            currentMonth + 1
+          ).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
           return (
             <div
               key={day}
@@ -162,7 +136,6 @@ import React, { useEffect } from "react";
         })}
       </div>
 
-      {/* Event Form */}
       {selectedDate && (
         <div className="mt-5 p-4 border rounded-lg bg-white shadow-lg">
           <h2 className="text-lg font-semibold mb-3">
