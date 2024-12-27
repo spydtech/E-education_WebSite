@@ -172,7 +172,7 @@ function FooterPart() {
             {sections.map((section, index) => (
               <div key={index} className="">
                 <h3
-                  className="mb-2 text-[20px] font-bold text-white"
+                  className="mb-2 text-lg font-bold text-white"
                   id={`footer-${section.title
                     .toLowerCase()
                     .replace(/\s+/g, "-")}`}
@@ -183,7 +183,7 @@ function FooterPart() {
                   {section.links.map((link, linkIndex) => (
                     <li
                       key={linkIndex}
-                      className="my-1 text-gray-200 text-[18px] hover:underline underline-offset-4"
+                      className="my-1 text-gray-200 text-base hover:underline underline-offset-4"
                     >
                       <Link
                         to={link.Link}

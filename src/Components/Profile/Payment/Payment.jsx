@@ -174,15 +174,16 @@ function Payment() {
         />
         <div className="absolute inset-0 bg-[#FF9B2659] opacity-35"></div>
       </div>
-      <div className="my-6">
-        <h1 className="text-2xl font-bold text-center text-[#0098F1]">
-          Payment
-        </h1>
-        <form onSubmit={handleSubmit} className="grid grid-cols-2 mx-20">
+      <div className="lg:my-10">
+        {/* <h1 className="text-2xl  text-center text-[#0098F1]">Payment</h1> */}
+        <form
+          onSubmit={handleSubmit}
+          className=" grid grid-cols-2 justify-center items-center mx-4"
+        >
           <div className="m-4 space-y-1">
             <label
               htmlFor="name"
-              className="block text-sm font-medium text-[#969696]"
+              className="block text-sm font-medium text-black"
             >
               Name on card
             </label>
@@ -199,7 +200,7 @@ function Payment() {
           <div className="m-4 space-y-1">
             <label
               htmlFor="cvv"
-              className="block text-sm font-medium text-[#969696]"
+              className="block text-sm font-medium text-black"
             >
               CVV
             </label>
@@ -216,7 +217,7 @@ function Payment() {
           <div className="m-4 space-y-1">
             <label
               htmlFor="cardNumber"
-              className="block text-sm font-medium text-[#969696]"
+              className="block text-sm font-medium text-black"
             >
               Card Number
             </label>
@@ -233,7 +234,7 @@ function Payment() {
           <div className="m-4 space-y-1">
             <label
               htmlFor="country"
-              className="block text-sm font-medium text-[#969696]"
+              className="block text-sm font-medium text-black"
             >
               Country
             </label>
@@ -254,7 +255,7 @@ function Payment() {
           <div className="m-4 space-y-1">
             <label
               htmlFor="expiryDate"
-              className="block text-sm font-medium text-[#969696]"
+              className="block text-sm font-medium text-black"
             >
               Expiry Date (MM/YY)
             </label>
@@ -278,7 +279,7 @@ function Payment() {
             />
             <label
               htmlFor="robotVerification"
-              className="text-sm font-semibold text-[#969696]"
+              className="text-sm font-semibold text-black"
             >
               I'M NOT A ROBOT
             </label>

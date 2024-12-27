@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 
 function Communication() {
   useEffect(() => {
@@ -6,7 +6,7 @@ function Communication() {
   }, []);
   return (
     <div>
-      <div className="bg-white p-10  md:-mt-5 border   rounded-lg shadow relative mx-auto w-full ">
+      <div className="bg-white p-10      relative mx-auto w-full ">
         <h2 className="text-lg font-bold text-gray-800">
           Communication Preferences
         </h2>

@@ -32,7 +32,7 @@ const menu = [
   {
     name: "Dashboard",
     path: "/admin",
-    icon: <DashboardIcon className="w-6 h-6 mr-2" />,
+    icon: <DashboardIcon className="w-2 h-2 mr-2" />,
   },
   {
     name: "Access Field",
@@ -116,7 +116,8 @@ const Admin = () => {
   const drawer = (
     <Box
       sx={{
-        overflow: "auto",
+        overflow: "hidden",
+        overflowY: "auto",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -124,7 +125,7 @@ const Admin = () => {
         width: drawerWidth,
       }}
 
-      className={` ${themes === "dark" ? "bg-black text-white" : "text-white  bg-gradient-to-b from-[#001510] to-[#00BF8F] "}       max-w-62 lg:block    border-[#001510] border-opacity-10 border-r-2  `}
+      className={` ${themes === "dark" ? "bg-black text-white" : "text-white  bg-gradient-to-b from-[#001510] to-[#00BF8F] "}       max-w-46 lg:block    border-[#001510] border-opacity-10 border-r-0  `}
 
     >
       {/* Sidebar Logo */}
@@ -175,8 +176,8 @@ const Admin = () => {
                 }}
                 className="flex items-center px-4 py-3 hover:bg-white hover:text-black hover:bg-opacity-80 w-full border-l-8 border-transparent hover:border-[#001510] transition-all duration-300 rounded-r-2xl"
               >
-                <span className="text-lg">{item.icon}</span>
-                <span className="font-semibold">{item.name}</span>
+                <span className="text-base">{item.icon}</span>
+                <span className="text-sm">{item.name}</span>
                 {item.subMenu && (
                   <span className="ml-auto">
                     {openSubMenu === index ? <ExpandLess /> : <ExpandMore />}
@@ -191,7 +192,7 @@ const Admin = () => {
                         onClick={() => navigate(subItem.path)}
                         className="flex items-center space-x-2 px-4 py-3 hover:bg-white hover:text-black hover:bg-opacity-80 w-full border-l-8 border-transparent hover:border-[#001510] transition-all duration-300 rounded-r-2xl"
                       >
-                        <span className="font-semibold text-nowrap pl-10">
+                        <span className=" text-sm pl-8">
                           {subItem.name}
                         </span>
                       </button>
@@ -249,7 +250,7 @@ const Admin = () => {
       {/* Navbar */}
       <div className="flex-grow h-screen overflow-auto ">
 
-        <Box component="header" className={` ${themes==="dark"&&"bg-black text-white"} p-4 flex items-center  shadow-lg justify-between `}>
+        <Box component="header" className={` ${themes==="dark"&&"bg-black text-white"} p-2 flex items-center   justify-between `}>
           {!isSmallScreen && (
           <div className="flex items-center justify-between px-4 space-x-2 w-full">
           <div className="flex items-center space-x-2">
@@ -264,13 +265,13 @@ const Admin = () => {
               />
 
             </div>
-            <h3 className={` ${themes === "dark" ? "bg-black text-white" : "bg-gradient-to-r from-[#00BF8F] to-[#001510] text-[#00BF8F] "} text-transparent bg-clip-text font-semibold text-lg`}>
+            <h3 className={` ${themes === "dark" ? "bg-black text-white" : "bg-gradient-to-r from-[#00BF8F] to-[#001510] text-[#00BF8F] "} text-transparent bg-clip-text font-semibold text-base`}>
               Admin Name
             </h3>
           </div>
           
-          <div className="items-end justify-end">
-            <ThemeToggle/>
+          <div className="items-end  justify-end">
+            <ThemeToggle className=""/>
           </div>
         </div>
         

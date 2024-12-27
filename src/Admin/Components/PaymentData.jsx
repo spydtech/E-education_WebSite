@@ -20,18 +20,20 @@ const PaymentData = () => {
       <div className={` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "}  max-w-[1140px]`}>
         <table className="min-w-full border-collapse overflow-hidden">
           <thead>
-            <tr className="bg-[#001510] text-white">
-              <th className="px-4 py-2 border">Date</th>
-              <th className="px-4 py-2 border">User Id</th>
-              <th className="px-4 py-2 border">Full Name</th>
-              <th className="px-4 py-2 border">E-Mail ID</th>
-              <th className="px-4 py-2 border">Course</th>
-              <th className="px-4 py-2 border">Payment Method</th>
+            <tr className="bg-[#001510] text-base text-white ">
+              <th className="px-4 py-2 border text-start">Date</th>
+              <th className="px-4 py-2 border text-start">User Id</th>
+              <th className="px-4 py-2 border text-start">Full Name</th>
+              <th className="px-4 py-2 border text-start">E-Mail ID</th>
+              <th className="px-4 py-2 border text-start">Course</th>
+              <th className="px-4 py-2 border text-start">Payment Method</th>
             </tr>
           </thead>
           <tbody>
             {paymentData.map((data, index) => (
-              <tr key={index}>
+              <tr 
+              className='text-sm'
+              key={index}>
                 <td className="px-4 py-2 border">{data.date}</td>
                 <td className="px-4 py-2 border">{data.userId}</td>
                 <td className="px-4 py-2 border">{data.fullName}</td>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-
+import { FiEdit, FiCheck } from "react-icons/fi";
+import { CiEdit } from "react-icons/ci";
 function Account() {
   const [formData, setFormData] = useState({});
   const [editMode, setEditMode] = useState(false);
@@ -9,10 +10,11 @@ function Account() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   useEffect(() => {
     if (auth.user) {
       const { firstName, lastName, email, phoneNumber, location } = auth.user;
-      const fullName = `${firstName}` + `${lastName}`;
+      const fullName = `${firstName} ${lastName}`;
       setFormData({
         fullName,
         emailAddress: email,
@@ -41,41 +43,22 @@ function Account() {
   };
 
   return (
-    <div className="flex justify-center py-8 px-4 sm:px-6 lg:px-8 ">
-      <div className="bg-white rounded-lg shadow-md w-full max-w-4xl">
+    <div className="flex justify-center lg:px-8">
+      <div className="bg-white w-full max-w-4xl">
         <div className="flex items-start justify-between p-5 border-b rounded-t">
           <h3 className="text-xl font-semibold">Account</h3>
-          <div>
+          <button
+            className="text-white bg-green-500 p-3 rounded-full  focus:outline-none focus:ring-4 focus:ring-blue-300"
+            onClick={editMode ? handleSubmit : toggleEditMode}
+          >
             {editMode ? (
-              <button
-                className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 ml-2"
-                onClick={handleSubmit}
-              >
-                Save
-              </button>
+              <FiCheck size={20} className="text-black" />
             ) : (
-              <button
-                className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
-                onClick={toggleEditMode}
-              >
-                Edit
-                <svg
-                  className="w-5 h-5 ml-1"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </button>
+              <CiEdit size={20} className="text-black" />
             )}
-          </div>
+          </button>
         </div>
-        <div className="p-6 space-y-6">
+        <div className="lg:p-6 p-2 lg:space-y-6">
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
@@ -102,7 +85,7 @@ function Account() {
                   htmlFor="emailAddress"
                   className="text-sm font-medium text-gray-900 block mb-2"
                 >
-                  Email address
+                  Email Address
                 </label>
                 <input
                   type="email"

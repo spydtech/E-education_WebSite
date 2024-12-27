@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 
 function Calendar() {
   useEffect(() => {
@@ -6,7 +6,7 @@ function Calendar() {
   }, []);
   return (
     <div>
-      <div className="bg-white md:-mt-5 border   rounded-lg shadow relative mx-auto w-full md:h-[17rem] h-full ">
+      <div className="bg-white  relative mx-auto w-full md:h-[17rem] h-full ">
         <h2 className="text-lg font-bold text-gray-800 p-10">Calendar Sync</h2>
         <p className="px-10">
           Automatically sync all the deadlines and other related items from all
