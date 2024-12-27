@@ -1,12 +1,32 @@
-import React, { useEffect } from "react";
+import React,{useEffect} from "react";
 
 function Notes() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [text, setText] = useState("");
+  const [notesList, setNotesList] = useState([]);
+  const [searchText, setSearchText] = useState("");
+
+  const handleSave = () => {
+    if (text.trim() !== "") {
+      setNotesList([...notesList, text]);
+      setText("");
+    }
+  };
+
+  const onClickClear = () => {
+    setNotesList([]);
+  };
+
+  const handleClear = () => {
+    setText("");
+  };
+
+  const filteredNotes = notesList.filter((note) =>
+    note.toLowerCase().includes(searchText.toLowerCase())
+  );
+
   return (
     <div>
-      <div className="bg-white p-10  relative mx-auto w-full ">
+      <div className="bg-white p-10  md:-mt-5 border   rounded-lg shadow relative mx-auto w-full ">
         <h2 className="text-lg font-bold text-gray-800">Notes & Highlights</h2>
         <div className="py-10 flex">
           <h1 className="text-sm font-bold">Notes & Highlights</h1>
@@ -20,18 +40,6 @@ function Notes() {
 
             <p>Allow</p>
           </div>
-        </div>
-        <div>
-          <p className="text-sm pb-5">
-            Your highlighting and note-taking activity can be used in
-            combination with that of other learners in the course to determine
-            the most highlighted phrases. No personal information is displayed
-            to other learners.
-          </p>
-          <hr className="py-5 " />
-          <a className="p-2 px-6 rounded hover:bg-blue-200 border border-2 text-blue-500 border-blue-500">
-            Save
-          </a>
         </div>
       </div>
     </div>

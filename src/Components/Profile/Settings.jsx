@@ -139,11 +139,11 @@ function Settings({ usernameFirstLetter }) {
   };
 
   return (
-    <>
-      <Navbar />
-      <div className="bg-blue-100 min-h-screen bg-[#0098f1] bg-opacity-60">
-        <div className="w-full max-w-md mx-auto md:max-w-none md:flex md:gap-10 p-4">
-          <div className="grid-fix text-black space-y-5 lg:space-y-10 md:w-1/4 p-10">
+    <div>
+      {/* <Navbar /> */}
+      <div className="bg-blue-100">
+        <div className="w-full max-w-md mx-auto md:max-w-none md:flex md:gap-10  p-4">
+          <div className="grid-fix space-y-5 md:w-1/4 p-10">
             <button
               className={`flex gap-x-2 hover:underline text-start font-medium ${
                 activeTab === "tab1" && "text-white"
@@ -206,7 +206,7 @@ function Settings({ usernameFirstLetter }) {
                 activeTab === "tab1" ? "" : "hidden"
               }`}
             >
-              <Account />
+              {/* <Account /> */}
             </div>
             <div
               id="tab2"
@@ -214,7 +214,7 @@ function Settings({ usernameFirstLetter }) {
                 activeTab === "tab2" ? "" : "hidden"
               }`}
             >
-              <Payment />
+              {/* <Payment /> */}
             </div>
             <div
               id="tab3"
@@ -222,7 +222,7 @@ function Settings({ usernameFirstLetter }) {
                 activeTab === "tab3" ? "" : "hidden"
               }`}
             >
-              <UpdatePassword />
+              {/* <UpdatePassword /> */}
             </div>
             <div
               id="tab4"
@@ -230,7 +230,7 @@ function Settings({ usernameFirstLetter }) {
                 activeTab === "tab4" ? "" : "hidden"
               }`}
             >
-              <Communication />
+              {/* <Communication /> */}
             </div>
             <div
               id="tab5"
@@ -246,7 +246,7 @@ function Settings({ usernameFirstLetter }) {
                 activeTab === "tab6" ? "" : "hidden"
               }`}
             >
-              <Calendar />
+              {/* <Calendar /> */}
             </div>
           </div>
         </div>
