@@ -1,33 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { Box, CssBaseline, useMediaQuery, useTheme } from "@mui/material";
 import { AiOutlineMenu } from "react-icons/ai";
+import axios from "axios";
+import { IoCloseCircle } from "react-icons/io5";
+import { useDispatch } from "react-redux";
 import AdminDashBoard from "./AdminDashBoard";
 import Orders from "../Views/Orders";
-import { TbLockAccess } from "react-icons/tb";
-import { MdOutlinePayment } from "react-icons/md";
-import { TbReport } from "react-icons/tb";
-import { SiGooglemeet } from "react-icons/si";
 import PaymentDashboard from "./pymentData/MainDashBoard";
 import SealsReports from "./Reports/TableforAdmin";
-import IMG from "../../assets/logo/E-educationlogo.png";
 import CreateGroup from "../Views/FilterUsers";
 import ExistingGroup from "../Views/TraineeCourses";
-import { AccountCircle, ExpandLess, ExpandMore } from "@mui/icons-material";
 import AccessField from "./AccessField";
 import RegisterEmployee from "./Register/RegisterEmployee";
 import RegisterTrainee from "./Register/RegisterTraniee";
 import Meeting from "./Meet/Meeting";
+import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle";
+import IMG from "../../assets/logo/E-educationlogo.png";
+import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import {
   Dashboard as DashboardIcon,
   People as UsersIcon,
   Settings as SettingsIcon,
 } from "@mui/icons-material";
-import { IoCloseCircle } from "react-icons/io5";
-import Switch from "@mui/material/Switch";
-// import girl from "../../assetss/Home/Admin.png";
-import { useDispatch, useSelector } from "react-redux";
-import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle";
+import { TbLockAccess, TbReport } from "react-icons/tb";
+import { MdOutlinePayment } from "react-icons/md";
+import { SiGooglemeet } from "react-icons/si";
+
 const menu = [
   {
     name: "Dashboard",
@@ -75,15 +74,36 @@ const Admin = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [sideBarVisible, setSideBarVisible] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
+  const [adminName, setAdminName] = useState("Admin Name");
+  const [profilePic, setProfilePic] = useState(null);
   const navigate = useNavigate();
   const [darkMode, setDarkMode] = useState(false);
-  const [profilePic, setProfilePic] = useState(); // State for profile picture
-  const dispatch = useDispatch();
-  // const navigate = useNavigate();
-
   const drawerWidth = 235;
-  const themes= localStorage.getItem("theme");
+  const themes = localStorage.getItem("theme");
 
+  // Fetch admin name and image
+  useEffect(() => {
+    const fetchAdminData = async () => {
+      try {
+        const jwt = localStorage.getItem("jwt");
+        if (!jwt) return;
+
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/auth/signin`, {
+          headers: {
+            Authorization: `Bearer ${jwt}`,
+          },
+        });
+
+        const { name, profilePic } = response.data; // Adjust this based on your API response
+        setAdminName(name || "Admin Name");
+        setProfilePic(profilePic);
+      } catch (error) {
+        console.error("Error fetching admin data:", error);
+      }
+    };
+
+    fetchAdminData();
+  }, []);
 
   const toggleSubMenu = (index) => {
     setOpenSubMenu(openSubMenu === index ? null : index);
@@ -98,19 +118,8 @@ const Admin = () => {
   };
 
   const handleLogout = () => {
-    // Perform logout actions (e.g., clear auth tokens)
-    navigate("/admin_login"); // Navigate to the login page
-  };
-
-  const handleProfilePicChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setProfilePic(reader.result); // Update the profile picture
-      };
-      reader.readAsDataURL(file);
-    }
+    localStorage.removeItem("jwt");
+    navigate("/admin_login");
   };
 
   const drawer = (
@@ -124,9 +133,11 @@ const Admin = () => {
         height: "100vh",
         width: drawerWidth,
       }}
-
-      className={` ${themes === "dark" ? "bg-black text-white" : "text-white  bg-gradient-to-b from-[#001510] to-[#00BF8F] "}       max-w-46 lg:block    border-[#001510] border-opacity-10 border-r-0  `}
-
+      className={` ${
+        themes === "dark"
+          ? "bg-black text-white"
+          : "text-white bg-gradient-to-b from-[#001510] to-[#00BF8F]"
+      } max-w-46 lg:block border-[#001510] border-opacity-10 border-r-0`}
     >
       {/* Sidebar Logo */}
       <div className="py-4 flex relative">
@@ -140,27 +151,25 @@ const Admin = () => {
         )}
       </div>
 
-      {/* Sidebar Admin Info for Small Screen */}
-      {isSmallScreen && (
-        <div className="p-2">
-          <div className="flex items-center mb-4">
-
-            <div className="w-[60px] h-[60px] rounded-full bg-white shadow-lg cursor-pointer">
-              <img className="w-[60px] h-[60px] rounded-full" src={profilePic} onClick={() => document.getElementById('fileInput').click()} />
-
-              <input
-                type="file"
-                id="fileInput"
-                style={{ display: "none" }}
-                accept="image/*"
-                onChange={handleProfilePicChange}
-              />
-            </div>
-            <h1 className={` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "} text-white font-medium text-xl ml-2`}>Admin Name</h1>
-
+      {/* Sidebar Admin Info */}
+      <div className="p-2">
+        <div className="flex items-center mb-4">
+          <div className="w-[60px] h-[60px] rounded-full bg-white shadow-lg cursor-pointer">
+            <img
+              className="w-[60px] h-[60px] rounded-full"
+              src={profilePic || "https://via.placeholder.com/60"}
+              alt="Profile"
+            />
           </div>
+          <h1
+            className={`${
+              themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF]"
+            } text-white font-medium text-xl ml-2`}
+          >
+            {adminName}
+          </h1>
         </div>
-      )}
+      </div>
 
       <div className="flex-grow">
         <ul>
@@ -192,9 +201,7 @@ const Admin = () => {
                         onClick={() => navigate(subItem.path)}
                         className="flex items-center space-x-2 px-4 py-3 hover:bg-white hover:text-black hover:bg-opacity-80 w-full border-l-8 border-transparent hover:border-[#001510] transition-all duration-300 rounded-r-2xl"
                       >
-                        <span className=" text-sm pl-8">
-                          {subItem.name}
-                        </span>
+                        <span className="text-sm pl-8">{subItem.name}</span>
                       </button>
                     </li>
                   ))}
@@ -202,30 +209,21 @@ const Admin = () => {
               )}
             </li>
           ))}
-
-           {!isSmallScreen && (
-        <div className="flex p-5 relative justify-center">
-         {/* <ThemeToggle/> */}
-        </div>
-      )}
-
         </ul>
       </div>
 
       {/* Logout Button */}
-      <div className="px-4 py-4 ">
+      <div className="px-4 py-4">
         <button
           onClick={handleLogout}
-          className="  px-4 py-2 w-full text-[#4CA1AF]  bg-white  transition-all duration-300 rounded-md"
+          className="px-4 py-2 w-full text-[#4CA1AF] bg-white transition-all duration-300 rounded-md"
         >
-           Logout
+          Logout
         </button>
       </div>
-
-      {/* Dark Mode Switch for Large Screens */}
     </Box>
   );
-  // const themes= localStorage.getItem("theme")
+
   return (
     <div className="flex h-screen relative">
       <CssBaseline />
@@ -235,7 +233,6 @@ const Admin = () => {
           className="text-3xl md:hidden mt-4 ml-4 font-medium absolute flex text-black"
         />
       )}
-
       {(isSmallScreen ? sideBarVisible : true) && (
         <div
           className={`fixed inset-0 z-40 ${
@@ -247,48 +244,38 @@ const Admin = () => {
         </div>
       )}
 
-      {/* Navbar */}
-      <div className="flex-grow h-screen overflow-auto ">
-
-        <Box component="header" className={` ${themes==="dark"&&"bg-black text-white"} p-2 flex items-center   justify-between `}>
+      <div className="flex-grow h-screen overflow-auto">
+        <Box
+          component="header"
+          className={`${
+            themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF]"
+          } p-2 flex items-center justify-between`}
+        >
           {!isSmallScreen && (
-          <div className="flex items-center justify-between px-4 space-x-2 w-full">
-          <div className="flex items-center space-x-2">
-            <div className="w-[60px] h-[60px] rounded-full bg-white cursor-pointer">
-              <img className="w-[60px] h-[60px] rounded-full" src={profilePic} onClick={() => document.getElementById('fileInput').click()} />
-              <input
-                type="file"
-                id="fileInput"
-                style={{ display: 'none' }}
-                accept="image/*"
-                onChange={handleProfilePicChange}
-              />
-
-            </div>
-            <h3 className={` ${themes === "dark" ? "bg-black text-white" : "bg-gradient-to-r from-[#00BF8F] to-[#001510] text-[#00BF8F] "} text-transparent bg-clip-text font-semibold text-base`}>
-              Admin Name
-            </h3>
-          </div>
-          
-          <div className="items-end  justify-end">
-            <ThemeToggle className=""/>
-          </div>
-        </div>
-        
-
-       
-          )}
-
-          {/* Dark Mode Switch for Small Screens */}
-          {isSmallScreen && (
-            <div className="relative flex w-full justify-end">
-
-              {/* <span className="text-xl mr-2">Dark Mode:</span> */}
-             <ThemeToggle/>
-
+            <div className="flex items-center justify-between px-4 space-x-2 w-full">
+              <div className="flex items-center space-x-2">
+                <div className="w-[60px] h-[60px] rounded-full bg-white">
+                  <img
+                    className="w-[60px] h-[60px] rounded-full"
+                    src={profilePic || "https://via.placeholder.com/60"}
+                    alt="Profile"
+                  />
+                </div>
+                <h3
+                  className={`${
+                    themes === "dark"
+                      ? "bg-black text-white"
+                      : "bg-gradient-to-r from-[#00BF8F] to-[#001510] text-[#00BF8F]"
+                  } text-transparent bg-clip-text font-semibold text-base`}
+                >
+                  {adminName}
+                </h3>
+              </div>
+              <div className="items-end justify-end">
+                <ThemeToggle />
+              </div>
             </div>
           )}
-          {/* ` ${themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF] "} */}
         </Box>
 
         <Routes>

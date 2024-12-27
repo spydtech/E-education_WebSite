@@ -23,13 +23,13 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
       status: "accepted", // Add status to each file
     },
     {
-      name: "priya",
+      name: "radha",
       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIsEH9evsckWldIq8ca1TW74RGPc2FoxWHmg&s",
       type: "image",
       status: "rejected",
     },
     {
-      name: "priya",
+      name: "krishna",
       url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIsEH9evsckWldIq8ca1TW74RGPc2FoxWHmg&s",
       type: "image",
       status: "accepted",
@@ -92,27 +92,13 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
     }
   };
 
-  // const handleDownload = (file) => {
-  //   fetch(file.url)
-  //     .then((res) => res.blob())
-  //     .then((blob) => {
-  //       const url = window.URL.createObjectURL(blob);
-  //       const link = document.createElement("a");
-  //       link.href = url;
-  //       link.download = file.url.split("/").pop();
-  //       document.body.appendChild(link);
-  //       link.click();
-  //       document.body.removeChild(link);
-  //     });
-  // };
+ 
 
-  // const handleAction = (index, action) => {
-  //   if (action === "download") {
-  //     handleDownload(files);
-  //   } else {
-  //     console.log(`Action "${action}" selected for file at index ${index}`);
-  //   }
-  // };
+  const [activeTab, setActiveTab] = useState("uploadTasks");
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
   
   const handleDownload = (file) => {
     fetch(file.url)
@@ -121,21 +107,25 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
         const url = window.URL.createObjectURL(blob);
         const link = document.createElement("a");
         link.href = url;
-        link.download = file.url.split("/").pop();
+        link.download = file.name; // Ensure it downloads with the correct name
         document.body.appendChild(link);
         link.click();
-        document.body.removeChild(link);
+        document.body.removeChild(link); // Remove the link after download
+        window.URL.revokeObjectURL(url); // Clean up the object URL
+      })
+      .catch((error) => {
+        console.error("Error downloading the file", error);
       });
   };
 
-  const handleAction = (e) => {
+  const handleAction = (e, file) => {
     const action = e.target.value;
     setSelectedAction(action); // Update the state with the selected action
 
     if (action === "download") {
-      handleDownload(file); // Only trigger download when the "download" option is selected
+      handleDownload(file); // Trigger the download when the "download" option is selected
     } else {
-      console.log(`Action "${action}" selected for file at index ${index}`);
+      console.log(`Action "${action}" selected for file ${file.name}`);
     }
   };
   const handleAccept = (index, e) => {
@@ -213,208 +203,169 @@ function WSpace({ acceptedFilesCount, totalFiles }) {
                   </button>
 
                   {isBrowseProjectOpen && (
-                    <div className="fixed rounded-md inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
-                      <div className="relative h-96 w-auto max-w-3xl m-4 overflow-y-auto max-h-full">
-                        <div className="bg-[#0098f1]  rounded-lg">
-                          <div className=" text-white text-xl p-2">
-                            Browse Projects
-                          </div>
-                          <div className="text-white lg:text-lg text-sm p-2">
-                            Projects give you real-world challenges to solve
-                            with industry tools, and produce work samples that
-                            help you demonstrate your capabilities and stand
-                            out.
-                          </div>
-                        </div>
-                        <div className="bg-white border-[#0098f1]  relative flex flex-col p-4 lg:p-8">
-                       
-    <div className="mx-auto w-full border-2 border-[#0098f1] h-auto max-w-[450px] bg-white shadow-sm-light"> 
-      <div className="bg-[#0098f1] h-32">
-      <h1 className="font-bold text-xl text-white p-4"> Browse Projects</h1>
-      </div> 
-      <div className="flex p-3 justify-between">
-  <h1 className="text-[#F6AC14] text-xl border-b-2 border-[#F6AC14]">upload tasks</h1>
-  <h2 className="text-[#F6AC14] text-xl border-b-2 border-[#F6AC14]">Tasks From Trainee</h2>
-</div>
-
-  <form className="py-4 px-9" onSubmit={handleSubmit}>
-    <div className="mb-5">
-      <label
-        htmlFor="description"
-        className="mb-3 block text-lg font-medium text-[#0098f1]"
-      >
-        Description of file:
-      </label>
-      <input
-        type="text"
-        name="description"
-        id="description"
-        placeholder="Enter file description"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-        className="w-full rounded-md border-2 border-[#0098f1] bg-white py-3 px-6 text-base font-medium placeholder:text-[#0098f1] outline-none focus:border-[#0098f1] focus:shadow-md"
-      />
-    </div>
-
-    <div className="mb-6 pt-4">
-      <label className="mb-5 block text-lg font-semibold text-[#0098f1]">
-        Upload File
-      </label>
-
-      <div
-        className={`relative bg-white flex min-h-[200px] items-center justify-center rounded-md border ${
-          isDragging ? "border-solid border-[#6A64F1]" : "border-dashed border-[#6A64F1]"
-        } p-12 text-center`}
-        onDragOver={handleDragOver}
-        onDragLeave={handleDragLeave}
-        onDrop={handleDrop}
-      >
-        <input
-          type="file"
-          name="file"
-          id="file"
-          className="sr-only"
-          onChange={handleFileChange}
-        />
-        <label
-          htmlFor="file"
-          className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer"
-        >
-          <div>
-            <span className="mb-2 block text-lg font-semibold text-[#0098f1]">
-              {isDragging ? "Drop files here" : "Drag & drop files here"}
-            </span>
-            <span className="mb-2 block text-base font-medium text-[#0098f1]">
-              Or
-            </span>
-            <span className="inline-flex rounded border border-[#0098f1] py-2 px-7 text-base font-medium text-[#0098f1]">
-              Browse
-            </span>
-          </div>
-        </label>
+  <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
+    <div className="relative w-full max-w-4xl p-4 sm:p-6 lg:p-8 bg-white rounded-lg shadow-xl overflow-auto max-h-[90vh]">
+      {/* Modal Header */}
+      <div className="bg-[#0098f1] h-20 rounded-t-lg flex items-center px-4">
+        <h1 className="text-white text-xl font-bold">Browse Projects</h1>
       </div>
 
-      {selectedFile && (
-        <div className="rounded-md bg-[#F5F7FB] py-4 px-8">
-          <div className="flex items-center justify-between">
-            <span className="truncate pr-3 text-base font-medium text-[#0098f1]">
-              {selectedFile.name}
-            </span>
-            <button
-              type="button"
-              className="text-[#0098f1]"
-              onClick={() => setSelectedFile(null)}
-            >
-              <svg
-                width="10"
-                height="10"
-                viewBox="0 0 10 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+      {/* Tab System */}
+      <div className="p-4">
+        {/* Tab Headers */}
+        <div className="flex justify-between border-b border-gray-300 mb-4">
+          <button
+            className={`text-lg sm:text-xl font-medium px-4 py-2 border-b-2 transition-all duration-300 ${
+              activeTab === "uploadTasks"
+                ? "text-[#F6AC14] border-[#F6AC14]"
+                : "text-gray-600 border-transparent"
+            }`}
+            onClick={() => handleTabChange("uploadTasks")}
+          >
+            Upload Tasks
+          </button>
+          <button
+            className={`text-lg sm:text-xl font-medium px-4 py-2 border-b-2 transition-all duration-300 ${
+              activeTab === "tasksFromTrainee"
+                ? "text-[#F6AC14] border-[#F6AC14]"
+                : "text-gray-600 border-transparent"
+            }`}
+            onClick={() => handleTabChange("tasksFromTrainee")}
+          >
+            Tasks From Trainee
+          </button>
+        </div>
+
+        {/* Tab Content */}
+        <div className="mt-4">
+          {activeTab === "uploadTasks" && (
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              {/* Description Input */}
+              <div>
+                <label
+                  htmlFor="description"
+                  className="block text-lg font-medium text-[#0098f1] mb-2"
+                >
+                  Description of file:
+                </label>
+                <input
+                  type="text"
+                  id="description"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  placeholder="Enter file description"
+                  className="w-full rounded-md border-2 border-[#0098f1] py-2 px-4 text-base placeholder-[#0098f1] outline-none focus:border-[#0098f1] focus:ring-2 focus:ring-[#0098f1]"
+                />
+              </div>
+
+              {/* File Upload */}
+              <div>
+                <label className="block text-lg font-medium text-[#0098f1] mb-2">
+                  Upload File
+                </label>
+                <div
+                  className={`relative flex items-center justify-center h-32 border-2 rounded-md p-4 ${
+                    isDragging
+                      ? "border-solid border-[#6A64F1]"
+                      : "border-dashed border-[#6A64F1]"
+                  }`}
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                  onDrop={handleDrop}
+                >
+                  <input
+                    type="file"
+                    id="file"
+                    className="absolute inset-0 opacity-0 cursor-pointer"
+                    onChange={handleFileChange}
+                  />
+                  <div className="text-center">
+                    <p className="text-lg font-medium text-[#0098f1]">
+                      {isDragging ? "Drop files here" : "Drag & drop files here"}
+                    </p>
+                    <p className="text-sm text-gray-500">or</p>
+                    <span className="inline-block mt-2 px-4 py-2 bg-[#0098f1] text-white rounded-md cursor-pointer">
+                      Browse
+                    </span>
+                  </div>
+                </div>
+
+                {selectedFile && (
+                  <div className="mt-4 p-4 bg-[#F5F7FB] rounded-md flex justify-between items-center">
+                    <span className="text-[#0098f1] truncate">
+                      {selectedFile.name}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedFile(null)}
+                      className="text-[#0098f1] hover:text-red-500"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full bg-[#0098f1] text-white py-3 rounded-md hover:bg-[#0078c1]"
               >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M0.279337 0.279338C0.651787 -0.0931121 1.25565 -0.0931121 1.6281 0.279338L9.72066 8.3719C10.0931 8.74435 10.0931 9.34821 9.72066 9.72066C9.34821 10.0931 8.74435 10.0931 8.3719 9.72066L0.279337 1.6281C-0.0931125 1.25565 -0.0931125 0.651788 0.279337 0.279338Z"
-                  fill="currentColor"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M0.279337 9.72066C-0.0931125 9.34821 -0.0931125 8.74435 0.279337 8.3719L8.3719 0.279338C8.74435 -0.0931127 9.34821 -0.0931123 9.72066 0.279338C10.0931 0.651787 10.0931 1.25565 9.72066 1.6281L1.6281 9.72066C1.25565 10.0931 0.651787 10.0931 0.279337 9.72066Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
+                Send File
+              </button>
+            </form>
+          )}
 
-    <div>
-      <button
-        type="submit"
-        className="hover:shadow-form w-full rounded-md bg-[#0098f1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
-      >
-        Send File
-      </button>
-    </div>
-  </form>
-</div>
-
-                      
-  <div className="flex mt-5 bg-white rounded-lg shadow-sm-light h-auto w-auto flex-col lg:w-4/6 sm:mx-auto sm:mb-2 -mx-2  border-2 border-[#0098f1]">
-  <div className="bg-[#0098f1] h-32">
-      <h1 className="font-bold text-xl text-white p-4"> Browse Projects</h1>
-    </div>
-      
-  {/* <p className="block text-xl pl-4  font-semibold text-[#0098f1]">
-    Tasks From Trainee
-  </p> */}
-    <div className="flex p-3 justify-between">
-  <h1 className="text-[#F6AC14] text-xl border-b-2 border-[#F6AC14]">upload tasks</h1>
-  <h2 className="text-[#F6AC14] text-xl border-b-2 border-[#F6AC14]">Tasks From Trainee</h2>
-</div>
-  {files.map((file, index) => (
-    <div className="p-2 sm:w-1/2 w-full" key={index}>
-      <div
-        className=" rounded flex p-4 h-full cursor-pointer items-center justify-between"
-        onClick={() => handleDownload(file, index)}
-      >
-        <div className="flex items-center">
-          <FaArrowCircleDown className="text-[#0098f1] mr-2 " />
-          <div className="flex flex-col">
-            <span className="font-medium">{file.name}</span>
-            <span className="text-gray-500 text-sm">{file.description}</span>
-          </div>
-        </div>
-        <div className="flex items-center space-x-2 ml-6 lg:ml-20">
-      
-        {/* <select
-      className="p-2 rounded-md border focus:border-[#0098f1] border-[#0098f1] focus:ring-[rgb(0,152,241)] text-[#0098f1]"
-      onChange={(e) => handleDownload(index, e.target.value)}
-      defaultValue=""
-    >
-      <option value="" disabled>
-        Select Action
-      </option>
-      <option value="Accepted">Completed</option>
-      <option value="Rejected">Pending</option>
-      <option value="download" onClick={handleAction}>Download</option>
-    </select> */}
-    <select
-      className="p-2 rounded-md border focus:border-[#0098f1] border-[#0098f1] focus:ring-[rgb(0,152,241)] text-[#0098f1]"
-      onChange={handleAction}
-      value={selectedAction}
-    >
-      <option value="" disabled>
-        Select Action
-      </option>
-      <option value="Accepted">Completed</option>
-      <option value="Rejected">Pending</option>
-      <option value="download">Download</option>
-    </select>
+          {activeTab === "tasksFromTrainee" && (
+            <div className="space-y-4">
+              {files.map((file, index) => (
+                <div
+                key={index}
+                className="flex justify-between items-center bg-gray-100 p-4 rounded-md cursor-pointer hover:shadow-lg"
+              >
+                <div className="flex items-center space-x-3">
+                  <FaArrowCircleDown className="text-[#0098f1]" />
+                  <div>
+                    <p className="text-base font-medium">{file.name}</p>
+                    <p className="text-sm text-gray-500">{file.description}</p>
+                  </div>
+                </div>
+                <select
+                  className="p-2 rounded-md border border-[#0098f1] text-[#0098f1]"
+                  onChange={(e) => handleAction(e, file)} // Pass the file to handleAction
+                  value={selectedAction}
+                >
+                  <option value="" disabled>
+                    Select Action
+                  </option>
+                  <option value="Accepted">Completed</option>
+                  <option value="Rejected">Pending</option>
+                  <option value="download">Download</option>
+                </select>
+              </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
-    </div>
-  ))}
-</div>
 
-                          <div className="mt-4 text-white">
-                            <button
-                              className="bg-[#0098f1] p-2 w-[100px] text-white rounded-lg"
-                              onClick={() => {
-                                closeBrowseProject();
-                                awardCertificate();
-                              }}
-                            >
-                              Close
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
+      {/* Modal Footer */}
+      <div className="mt-4 flex justify-end">
+        <button
+          className="bg-[#0098f1] text-white py-2 px-4 rounded-md hover:bg-[#0078c1]"
+          onClick={() => {
+            closeBrowseProject();
+            awardCertificate();
+          }}
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
+
                   <p className="lg:text-lg text-sm text-[#0098f1]">
                     Showcase your skills to recruiters with job-relevant
                     projects Add projects here to demonstrate your technical
