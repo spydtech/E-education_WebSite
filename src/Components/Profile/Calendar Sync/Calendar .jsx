@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 
 const holidays = {
@@ -64,8 +65,12 @@ const Calendar = () => {
       return "bg-blue-100 text-blue-800";
     return "bg-gray-100 hover:bg-gray-200";
   };
+=======
+import React, { useEffect } from "react";
+>>>>>>> e7ba3ce9cbe1e03664d35dc8a8523ef9d2126af7
 
   return (
+<<<<<<< HEAD
     <div className="p-5 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold text-center mb-5">Calendar</h1>
 
@@ -89,6 +94,27 @@ const Calendar = () => {
         >
           Next
         </button>
+=======
+    <div>
+      <div className="bg-white  relative mx-auto w-full md:h-[17rem] h-full ">
+        <h2 className="text-lg font-bold text-gray-800 p-10">Calendar Sync</h2>
+        <p className="px-10">
+          Automatically sync all the deadlines and other related items from all
+          active courses to your calendar.
+        </p>
+        <h2 className="px-10 pt-2 font-semibold ">Add to my calendar</h2>
+        <div className="px-10 md:space-x-10 md:pb-0 pb-5  space-y-2 md:space-y-0 text-sm pt-2 flex flex-col md:flex-row">
+          <a className="border border-2 p-2  border-blue-600 rounded hover:bg-blue-100 cursor-pointer">
+            Calendar
+          </a>
+          {/* <a className="border border-2 p-2 border-blue-600 rounded hover:bg-blue-100 cursor-pointer">
+            Apple Calendar
+          </a>
+          <a className="border border-2 p-2 border-blue-600 rounded hover:bg-blue-100 cursor-pointer">
+            Other Calendar
+          </a> */}
+        </div>
+>>>>>>> e7ba3ce9cbe1e03664d35dc8a8523ef9d2126af7
       </div>
 
       {/* Calendar Grid */}
