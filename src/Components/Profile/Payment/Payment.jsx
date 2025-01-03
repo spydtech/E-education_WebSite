@@ -174,7 +174,10 @@ function Payment() {
         />
         <div className="absolute inset-0 bg-[#FF9B2659] opacity-35"></div>
       </div>
-      <div className="lg:my-10">
+      <div className="">
+        <div className="flex items-start justify-between p-5 border-b rounded-t">
+          <h3 className="text-xl font-semibold">Payment</h3>
+        </div>
         {/* <h1 className="text-2xl  text-center text-[#0098F1]">Payment</h1> */}
         <form
           onSubmit={handleSubmit}

@@ -43,8 +43,16 @@ function Account() {
   };
 
   return (
-    <div className="flex justify-center lg:px-8">
-      <div className="bg-white w-full max-w-4xl">
+    <div className=" ">
+      <div className=" relative ">
+        <img
+          src="https://img.freepik.com/free-photo/top-view-paper-cut-family-with-clipboard_23-2148488245.jpg?t=st=1735891301~exp=1735894901~hmac=1470efacdc10de78617a872b90701a9160e76abda75b525d36dbc5c5096745ac&w=826"
+          className="w-full h-80 object-cover "
+        />
+        <div className="absolute inset-0 bg-[#FF9B2659] opacity-35"></div>
+      </div>
+
+      <div className="bg-white w-full max-w-5xl">
         <div className="flex items-start justify-between p-5 border-b rounded-t">
           <h3 className="text-xl font-semibold">Account</h3>
           <button

@@ -202,7 +202,7 @@ function Settings({ usernameFirstLetter }) {
           <div className="md:w-3/4 bg-white  h-auto lg:min-h-screen">
             <div
               id="tab1"
-              className={`tabcontent p-4  md:py-0 ${
+              className={`tabcontent py-4 md:py-0 ${
                 activeTab === "tab1" ? "" : "hidden"
               }`}
             >
