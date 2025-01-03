@@ -109,15 +109,15 @@ function Account() {
               </div>
               <div>
                 <label
-                  htmlFor="mobileNumber"
+                  htmlFor="phoneNumber"
                   className="text-sm font-medium text-gray-900 block mb-2"
                 >
                   Mobile Number
                 </label>
                 <input
                   type="text"
-                  name="mobileNumber"
-                  id="mobileNumber"
+                  name="phoneNumber"
+                  id="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleInputChange}
                   className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded focus:ring-cyan-600 focus:border-cyan-600 block w-full p-2.5"
