@@ -1,22 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 
+const API_BASE_URL = "http://localhost:8080/report";
+
 function Notes() {
   const [text, setText] = useState("");
   const [notesList, setNotesList] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [editIndex, setEditIndex] = useState(null);
+  const jwt = localStorage.getItem("jwt"); // Replace with actual JWT token
 
+  // Fetch notes from the backend
   useEffect(() => {
-    const storedNotes = JSON.parse(localStorage.getItem("notesList"));
-    if (storedNotes) {
-      setNotesList(storedNotes);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("notesList", JSON.stringify(notesList));
-  }, [notesList]);
+    const fetchNotes = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/get`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${jwt}`, // Pass the JWT token in the Authorization header
+          },
+        });
+        if (!response.ok) {
+          console.error(`HTTP Error: ${response.status} - ${response.statusText}`);
+          const errorDetails = await response.text();
+          console.error("Error details:", errorDetails);
+        } else {
+          const notes = await response.json();
+          setNotesList(Array.isArray(notes) ? notes : [notes]);
+        }
+      } catch (error) {
+        console.error("Error fetching reports:", error.message);
+      }
+    };
+    fetchNotes();
+  }, [jwt]); // The dependency array will trigger this effect whenever the jwt changes
 
   const stripHtmlTags = (html) => {
     const div = document.createElement("div");
@@ -24,19 +42,46 @@ function Notes() {
     return div.textContent || div.innerText || "";
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (text.trim() !== "") {
       const plainText = stripHtmlTags(text);
-      if (editIndex !== null) {
-        const updatedNotes = [...notesList];
-        updatedNotes[editIndex] = plainText;
-        setNotesList(updatedNotes);
-        setEditIndex(null);
-      } else {
-        setNotesList([...notesList, plainText]);
+      try {
+        if (editIndex !== null) {
+          const noteToUpdate = notesList[editIndex];
+          const response = await fetch(`${API_BASE_URL}/updateReport/${noteToUpdate.id}`, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${jwt}`, // Include JWT for authentication
+            },
+            body: JSON.stringify({ report: plainText }),
+          });
+          if (response.ok) {
+            const updatedNote = await response.json();
+            const updatedNotes = [...notesList];
+            updatedNotes[editIndex] = updatedNote;
+            setNotesList(updatedNotes);
+            setEditIndex(null);
+          }
+        } else {
+          const response = await fetch(`${API_BASE_URL}/createReport`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${jwt}`, // Include JWT for authentication
+            },
+            body: JSON.stringify({ report: plainText }),
+          });
+          if (response.ok) {
+            const newNote = await response.json();
+            setNotesList([...notesList, newNote]);
+          }
+        }
+        setText("");
+        document.getElementById("note-textarea").innerHTML = "";
+      } catch (error) {
+        console.error("Error saving report:", error);
       }
-      setText("");
-      document.getElementById("note-textarea").innerHTML = "";
     }
   };
 
@@ -48,20 +93,33 @@ function Notes() {
 
   const handleEdit = (index) => {
     setEditIndex(index);
-    setText(notesList[index]);
-    document.getElementById("note-textarea").innerHTML = notesList[index];
+    setText(notesList[index].report);
+    document.getElementById("note-textarea").innerHTML = notesList[index].report;
   };
 
-  const handleDelete = (index) => {
-    const updatedNotes = notesList.filter((_, i) => i !== index);
-    setNotesList(updatedNotes);
-    if (editIndex === index) {
-      handleClear();
+  const handleDelete = async (index) => {
+    const noteToDelete = notesList[index];
+    try {
+      const response = await fetch(`${API_BASE_URL}/delete/${noteToDelete.id}`, {
+        method: "DELETE",
+        headers: {
+          "Authorization": `Bearer ${jwt}`, // Include JWT for authentication
+        },
+      });
+      if (response.ok) {
+        const updatedNotes = notesList.filter((_, i) => i !== index);
+        setNotesList(updatedNotes);
+        if (editIndex === index) {
+          handleClear();
+        }
+      }
+    } catch (error) {
+      console.error("Error deleting report:", error);
     }
   };
 
   const filteredNotes = notesList.filter((note) =>
-    note.toLowerCase().includes(searchText.toLowerCase())
+    note.report.toLowerCase().includes(searchText.toLowerCase())
   );
 
   const applyFormatting = (tag) => {
@@ -108,8 +166,8 @@ function Notes() {
                 </li>
               ) : (
                 filteredNotes.map((each, i) => (
-                  <li key={i} className="text-sm my-1 flex justify-between items-center">
-                    <span className="mr-1 text-gray-800">• {each}</span>
+                  <li key={each.id} className="text-sm my-1 flex justify-between items-center">
+                    <span className="mr-1 text-gray-800">• {each.report}</span>
                     <div className="flex gap-2">
                       <button
                         className="text-blue-500 underline text-xs"

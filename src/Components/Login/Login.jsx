@@ -319,28 +319,57 @@
 
 // export default Login;
 
-import React from "react";
+import React,{ useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import IMG from "../../assets/E- education logo .png";
 import BackgroundIMG from "../../../src/assetss/login/loginimg.jpg";
 import { login } from "../../State/Auth/Action";
+import axios from 'axios';
+
 
 function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [error, setError] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.currentTarget);
+  //   const userData = {
+  //     email: data.get("email"),
+  //     password: data.get("password"),
+  //   };
+
+  //   navigate("/mylearning");
+  //   dispatch(login(userData));
+  // };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
     const userData = {
       email: data.get("email"),
       password: data.get("password"),
     };
 
-    navigate("/mylearning");
-    dispatch(login(userData));
+    try {
+      const response = await axios.post("http://localhost:8080/auth/signin", userData);
+      const { jwt, role, status } = response.data;
+
+      if (status && role === "user") {
+        localStorage.setItem("jwt", jwt);
+        localStorage.setItem("role", role);
+        dispatch(login(userData));
+        navigate("/mylearning");
+      } else {
+        setError("Unauthorized access. This login is for users only.");
+      }
+    } catch (err) {
+      setError("An error occurred while logging in. Please try again.");
+    }
   };
+  
 
   return (
     <div className="relative flex justify-center items-center min-h-screen bg-gray-100">

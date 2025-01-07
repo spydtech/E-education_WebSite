@@ -5,10 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 import IMG from "../../assets/E- education logo .png";
 import { useDispatch } from "react-redux";
 import { login } from "../../State/Auth/Action";
+import axios from 'axios';
 // import admin from "../../assetss/admindashboard/login.png";
 function AdminLogin() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [error, setError] = useState('');
   
   // States to toggle between Login and Forgot Password
   const [isForgotPassword, setIsForgotPassword] = useState(false);
@@ -18,19 +20,42 @@ function AdminLogin() {
   const [newPassword, setNewPassword] = useState("");
 
   // Handle Login Form Submission
-  const handleSubmitLogin = (event) => {
+  // const handleSubmitLogin = (event) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.currentTarget);
+  //   const userData = {
+  //     email: data.get("email"),
+  //     password: data.get("password"),
+  //   };
+
+  //   // Store user data in local storage
+  //   localStorage.setItem("userData", JSON.stringify(userData));
+
+  //   navigate("/admin/*");
+  //   dispatch(login(userData));
+  // };
+
+  const handleSubmitLogin = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const userData = {
-      email: data.get("email"),
-      password: data.get("password"),
+      email: data.get('email'),
+      password: data.get('password'),
     };
 
-    // Store user data in local storage
-    localStorage.setItem("userData", JSON.stringify(userData));
-
-    navigate("/admin/*");
-    dispatch(login(userData));
+    try {
+      const response = await axios.post('http://localhost:8080/auth/signin', userData);
+      if (response.data.status) {
+        localStorage.setItem('jwt', response.data.jwt);
+        dispatch(login(userData));
+        navigate('/admin/*');
+      } else {
+        setError(response.data.message || 'Invalid credentials.');
+      }
+    } catch (err) {
+      console.error(err);
+      setError('An error occurred while logging in. Please try again.');
+    }
   };
 
   // Handle Forgot Password - Send OTP

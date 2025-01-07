@@ -5,6 +5,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import axios from "axios";
 import { IoCloseCircle } from "react-icons/io5";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux"; 
 import AdminDashBoard from "./AdminDashBoard";
 import Orders from "../Views/Orders";
 import PaymentDashboard from "./pymentData/MainDashBoard";
@@ -26,6 +27,8 @@ import {
 import { TbLockAccess, TbReport } from "react-icons/tb";
 import { MdOutlinePayment } from "react-icons/md";
 import { SiGooglemeet } from "react-icons/si";
+import { getUser, logout } from "../../State/Auth/Action";
+import AdminSettings from "./adminsettings/AdminSettings ";
 
 const menu = [
   {
@@ -74,36 +77,25 @@ const Admin = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const [sideBarVisible, setSideBarVisible] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
-  const [adminName, setAdminName] = useState("Admin Name");
+  // const [adminName, setAdminName] = useState("Admin Name");
   const [profilePic, setProfilePic] = useState(null);
   const navigate = useNavigate();
   const [darkMode, setDarkMode] = useState(false);
   const drawerWidth = 235;
   const themes = localStorage.getItem("theme");
+   const jwt = localStorage.getItem("jwt");
+   const auth = useSelector((state) => state.auth);
+
+  const dispatch = useDispatch();
 
   // Fetch admin name and image
   useEffect(() => {
-    const fetchAdminData = async () => {
-      try {
-        const jwt = localStorage.getItem("jwt");
-        if (!jwt) return;
-
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/auth/signin`, {
-          headers: {
-            Authorization: `Bearer ${jwt}`,
-          },
-        });
-
-        const { name, profilePic } = response.data; // Adjust this based on your API response
-        setAdminName(name || "Admin Name");
-        setProfilePic(profilePic);
-      } catch (error) {
-        console.error("Error fetching admin data:", error);
-      }
-    };
-
-    fetchAdminData();
-  }, []);
+    if (jwt) {
+      dispatch(getUser(jwt));
+    }
+  }, [jwt, auth.jwt, dispatch]);
+  
+  console.log("User Data:", auth.user);
 
   const toggleSubMenu = (index) => {
     setOpenSubMenu(openSubMenu === index ? null : index);
@@ -162,12 +154,10 @@ const Admin = () => {
             />
           </div>
           <h1
-            className={`${
-              themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF]"
-            } text-white font-medium text-xl ml-2`}
-          >
-            {adminName}
-          </h1>
+      className={themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF]"}
+    >
+      {auth.user ? `${auth.user.firstName} ${auth.user.lastName}` : "Loading..."}
+    </h1>
         </div>
       </div>
 
@@ -262,14 +252,10 @@ const Admin = () => {
                   />
                 </div>
                 <h3
-                  className={`${
-                    themes === "dark"
-                      ? "bg-black text-white"
-                      : "bg-gradient-to-r from-[#00BF8F] to-[#001510] text-[#00BF8F]"
-                  } text-transparent bg-clip-text font-semibold text-base`}
-                >
-                  {adminName}
-                </h3>
+      className={themes === "dark" ? "bg-black text-white" : "text-[#4CA1AF]"}
+    >
+      {auth.user ? `${auth.user.firstName} ${auth.user.lastName}` : "Loading..."}
+    </h3>
               </div>
               <div className="items-end justify-end">
                 <ThemeToggle />
@@ -289,6 +275,7 @@ const Admin = () => {
           <Route path="/register-employee" element={<RegisterEmployee />} />
           <Route path="/register-trainee" element={<RegisterTrainee />} />
           <Route path="/meeting" element={<Meeting />} />
+          <Route path="/settings" element={<AdminSettings />} />
         </Routes>
       </div>
     </div>

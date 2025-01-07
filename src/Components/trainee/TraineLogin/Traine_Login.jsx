@@ -74,24 +74,42 @@ import { useDispatch } from 'react-redux';
 import { trainee } from '../../../State/Auth/Action';
 import traineloginpageimage from "../../../assetss/login/traineloginpageimage.png";
 import Eeducationlogo from "../../../assets/logo/E-educationlogo.png";
+import axios from 'axios';
+
+const API_URL = "http://localhost:8080/trainee/signin"; // Backend API URL
 
 const Traine_Login = () => {
-
   const [errorMessage, setErrorMessage] = useState('');
+  const [loading, setLoading] = useState(false); // To manage loading state
+  const [error, setError] = useState('');
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleLogin = (event) => {
+  const handleLogin = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const traineeData = {
-      userId: data.get("userId"),
-      password: data.get("password"),
+    const traineeData  = {
+      userId: data.get('userId'), // Ensure this matches what the backend expects
+      password: data.get('password'), // Ensure this matches what the backend expects
     };
-
-    navigate("/traineedashbord");
-    dispatch(trainee(traineeData));
+  
+    try {
+      const response = await axios.post('http://localhost:8080/trainee/signin', traineeData);
+      console.log(response);
+      if (response.data.status) {
+        localStorage.setItem('jwt', response.data.jwt);
+        dispatch(trainee(traineeData));
+        navigate('/traineedashbord');
+      } else {
+        setError(response.data.message || 'Invalid credentials.');
+      }
+    } catch (err) {
+      console.error(err);
+      setError('An error occurred while logging in. Please try again.');
+    }
   };
+  
+
 
   return (
     <div className="flex flex-col-reverse md:flex-row h-screen px-4 py-8 md:px-8 md:py-8">
@@ -114,7 +132,7 @@ const Traine_Login = () => {
               name="userId"
               type="text"
               placeholder="Enter your User ID"
-              className="shadow appearance-none border-[#4CA1AF] border-2 focus:outline-none focus:ring-[#204349] focus:border-[#204349] focus:border-none focus:border placeholder:text-[#4CA1AF]  rounded w-full py-3 md:py-4 px-3 text-[#4CA1AF] leading-tight focus:outline-[#4CA1AF] focus:shadow-outline"
+              className="shadow appearance-none border-[#4CA1AF] border-2 focus:outline-none focus:ring-[#204349] focus:border-[#204349] focus:border-none focus:border placeholder:text-[#4CA1AF] rounded w-full py-3 md:py-4 px-3 text-[#4CA1AF] leading-tight focus:outline-[#4CA1AF] focus:shadow-outline"
             />
           </div>
           <div className="mb-6">
@@ -124,10 +142,21 @@ const Traine_Login = () => {
               name="password"
               type="password"
               placeholder="Enter your password"
-               className="shadow appearance-none border-[#4CA1AF] border-2 focus:outline-none focus:ring-[#204349] focus:border-[#204349] focus:border-none placeholder:text-[#4CA1AF]  rounded w-full py-3 md:py-4 px-3 text-[#4CA1AF] leading-tight focus:outline-[#4CA1AF] focus:shadow-outline"
+              className="shadow appearance-none border-[#4CA1AF] border-2 focus:outline-none focus:ring-[#204349] focus:border-[#204349] focus:border-none placeholder:text-[#4CA1AF] rounded w-full py-3 md:py-4 px-3 text-[#4CA1AF] leading-tight focus:outline-[#4CA1AF] focus:shadow-outline"
             />
           </div>
-          <button className="bg-[#4CA1AF] text-white w-full py-3 md:py-4 rounded">Log In</button>
+          {errorMessage && (
+            <p className="text-red-500 text-sm mb-4">{errorMessage}</p>
+          )}
+          <button
+            type="submit"
+            disabled={loading}
+            className={`${
+              loading ? "bg-gray-400" : "bg-[#4CA1AF]"
+            } text-white w-full py-3 md:py-4 rounded`}
+          >
+            {loading ? "Logging in..." : "Log In"}
+          </button>
         </form>
       </div>
     </div>
