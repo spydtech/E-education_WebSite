@@ -94,11 +94,11 @@ const traineeLoginRequest = () => ({ type: TRAINEE_LOGIN_REQUEST });
 const traineeLoginSuccess = (trainee) => ({ type: TRAINEE_LOGIN_SUCCESS, payload: trainee });
 const traineeLoginFailure = (error) => ({ type: TRAINEE_LOGIN_FAILURE, payload: error });
 
-export const trainee = (userData) => async (dispatch) => {
+export const trainee = (traineeData) => async (dispatch) => {
   dispatch(traineeLoginRequest);
 
   try {
-    const response = await axios.post(`${API_BASE_URL}/trainee/signin`, userData);
+    const response = await axios.post(`${API_BASE_URL}/trainee/signin`, traineeData);
     const trainee = response.data;
     if (trainee.jwt) {
       localStorage.setItem('jwt', trainee.jwt);
@@ -163,11 +163,12 @@ export const getTrainee = (jwt) => async (dispatch) => {
         Authorization: `Bearer ${jwt}`,
       },
     });
+
     const trainee = response.data;
-    localStorage.setItem('trainee', JSON.stringify(trainee));
-    dispatch(getTraineeSuccess(trainee));
+    localStorage.setItem("trainee", JSON.stringify(trainee));  // Save trainee data to localStorage
+    dispatch(getTraineeSuccess(trainee));  // Dispatch success action with the trainee data
   } catch (error) {
-    dispatch(getTraineeFailure(error.message));
+    dispatch(getTraineeFailure(error.message));  // Dispatch failure action with error message
   }
 };
 

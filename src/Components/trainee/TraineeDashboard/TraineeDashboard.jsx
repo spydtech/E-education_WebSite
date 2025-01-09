@@ -19,7 +19,8 @@ import UserAccount from "../UsersSection/usernavigation/navigation";
 import StatusPage from "../UserTask/StatusPage";
 import Calendar from "../TraineeCalendar/Calendar";
 import { getTrainee, logout } from "../../../State/Auth/Action";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux"; 
 import ThemeToggle from "./Theamtoggle";
 const TraineeDashboard = () => {
   const location = useLocation();
@@ -28,11 +29,25 @@ const TraineeDashboard = () => {
   const [isLogoutOpen, setLogoutOpen] = useState(false); // State to manage logout options visibility
   const [isSidebarOpen, setSidebarOpen] = useState(false); // State for mobile sidebar
   const jwt = localStorage.getItem("jwt");
-  const auth = useSelector((state) => state.auth);
+   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState(redirect ? redirect : "home"); // State to manage active tab
   const [isMeetSidebarOpen, setMeetSidebarOpen] = useState(false);
+
+
+
+  useEffect(() => {
+     if (jwt) {
+       dispatch(getTrainee(jwt));
+     }
+   }, [jwt, dispatch]);
+   
+  
+ 
+
+
+   
 
   // Function to toggle the meet sidebar
   const toggleMeetSidebar = () => {
@@ -63,12 +78,7 @@ const TraineeDashboard = () => {
     if (redirect) setActiveTab(redirect);
   }, [redirect]);
 
-  useEffect(() => {
-    if (jwt) {
-      dispatch(getTrainee(jwt));
-    }
-  }, [jwt, auth.jwt, dispatch]);
-
+  
   const renderContent = () => {
     switch (activeTab) {
       case "home":
@@ -243,18 +253,7 @@ const TraineeDashboard = () => {
           </Link>
 
           {/* Trainee Info */}
-          <div className={`  flex mb-4 mx-2`}>
-            {auth.trainee && auth.trainee.firstName ? (
-              <>
-                <div className="rounded-full text-[#FF9B26] font-bold text-xl border-2 w-12 h-12 flex justify-center items-center">
-                  {auth.trainee.firstName.charAt(0)}
-                </div>
-                <span className="px-2 mx-1 mt-3 flex text-[#FF9B26] font-bold">
-                  {auth.trainee.firstName} {auth.trainee.lastName}
-                </span>
-              </>
-            ) : null}
-          </div>
+         
         </div>
 
         <div className="flex flex-col flex-1 overflow-y-auto">
@@ -296,12 +295,12 @@ const TraineeDashboard = () => {
                   alt="Profile"
                   onClick={handleProfileClick} // Trigger file input on click
                 />
-                <h2
-                  className={` ${
-                    themes === "dark" && " "
-                  } pl-4 font-bold  text-[#204349] text-[20px]`}
+             <h2
+                  className={`${
+                    themes === "dark" && ""
+                  } pl-4 font-bold text-[#FF9B26]`}
                 >
-                  TraineeName
+               {auth.trainee ? `${auth.trainee.firstName} ${auth.trainee.lastName}` : "Loading..."}
                 </h2>
                 {/* Hidden file input for image upload */}
                 <input

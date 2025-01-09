@@ -15,7 +15,7 @@ const CoursesPurchased = () => <CoursePurchased />;
 function TableforAdmin() {
   return (
     <div className=" p-4 min-h-screen ">
-      <h1 className="text-lg md:text-xl lg:text-2xl font-semibold text-white bg-[#001510] px-8  py-2 rounded-lg mb-4">
+      <h1 className="text-lg md:text-xl lg:text-2xl font-semibold text-white bg-[#153243] px-8  py-2 rounded-lg mb-4">
         Overview
       </h1>
 
@@ -86,7 +86,7 @@ export default TableforAdmin;
 //   return (
 //     <div className="container mx-auto p-4  min-h-screen">
 
-//       <h1 className="text-xl h-12 px-4 py-2 font-semibold rounded-lg text-white bg-[#001510] mb-4 ">
+//       <h1 className="text-xl h-12 px-4 py-2 font-semibold rounded-lg text-white bg-[#153243] mb-4 ">
 //            Overview
 //           </h1>
 //       <div className="flex flex-col md:flex-row">

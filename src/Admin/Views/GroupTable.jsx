@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios'
+import axios from "axios";
 import { IoCloseCircle } from "react-icons/io5";
 
 function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
@@ -11,9 +11,9 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   const [userSearchQuery, setUserSearchQuery] = useState("");
   const [userSearchQueryByCourse, setUserSearchQueryByCourse] = useState("");
   const [showWarning, setShowWarning] = useState(false);
-  const jwt = localStorage.getItem("jwt")
-  const [userData, setUserData] = useState([])
-  const [traineeData, setTraineeData] = useState([])
+  const jwt = localStorage.getItem("jwt");
+  const [userData, setUserData] = useState([]);
+  const [traineeData, setTraineeData] = useState([]);
 
   useEffect(() => {
     axios
@@ -56,7 +56,10 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   }, [jwt]);
 
   const traineeName = trainees.map((trainee) => (
-    <tr key={trainee.firstName + " " + trainee.lastName} className="border-b hover:bg-gray-100">
+    <tr
+      key={trainee.firstName + " " + trainee.lastName}
+      className="border-b hover:bg-gray-100"
+    >
       <td className="whitespace-nowrap">
         <div className="flex items-center">
           <div className="ml-4 flex">
@@ -108,7 +111,9 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
 
   const setTrainee = (trainee) => {
     const traineeExists = trainees.some(
-      (existingTrainee) => existingTrainee.firstName + existingTrainee.lastName === trainee.firstName + trainee.lastName
+      (existingTrainee) =>
+        existingTrainee.firstName + existingTrainee.lastName ===
+        trainee.firstName + trainee.lastName
     );
     if (traineeExists) {
       setShowWarning(true);
@@ -117,7 +122,8 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
       setShowTraineeDetails(false);
       setShowWarning(false);
     }
-  };save
+  };
+  save;
 
   const handleAddUser = (user) => {
     onAddUser(user);
@@ -129,22 +135,26 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
   );
 
   const filteredTrainees = traineeData.filter((trainee) =>
-    (trainee.firstName + " " + trainee.lastName).toLowerCase().includes(traineeSearchQuery.toLowerCase())
+    (trainee.firstName + " " + trainee.lastName)
+      .toLowerCase()
+      .includes(traineeSearchQuery.toLowerCase())
   );
 
-  const filteredAddUsers = userData
-    .filter(
-      (user) =>
-        user.userName.toLowerCase().includes(userSearchQuery.toLowerCase()) &&
-        user.courses.some(course => course.toLowerCase().includes(userSearchQueryByCourse.toLowerCase())
-        )
-    )
+  const filteredAddUsers = userData.filter(
+    (user) =>
+      user.userName.toLowerCase().includes(userSearchQuery.toLowerCase()) &&
+      user.courses.some((course) =>
+        course.toLowerCase().includes(userSearchQueryByCourse.toLowerCase())
+      )
+  );
 
   const traineeRows = filteredTrainees.map((trainee) => (
-    <tr key={trainee.firstName + " " + trainee.lastName} className="border-b hover:bg-gray-100 ">
+    <tr
+      key={trainee.firstName + " " + trainee.lastName}
+      className="border-b hover:bg-gray-100 "
+    >
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
-
           <div className="ml-4">
             <div className="text-sm font-medium text-gray-900">
               {trainee.firstName + " " + trainee.lastName}
@@ -169,8 +179,10 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
           <div className="ml-4">
-            <div className="text-sm font-medium text-[#001510]">{user.userName}</div>
-            <div className="text-sm text-[#001510]">{user.email}</div>
+            <div className="text-sm font-medium text-[#153243]">
+              {user.userName}
+            </div>
+            <div className="text-sm text-[#153243]">{user.email}</div>
           </div>
         </div>
       </td>
@@ -191,13 +203,15 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
           <div className="ml-4">
-            <div className="text-sm font-medium text-[#001510]">{user.userName}</div>
-            <div className="text-sm text-[#001510]">{user.email}</div>
+            <div className="text-sm font-medium text-[#153243]">
+              {user.userName}
+            </div>
+            <div className="text-sm text-[#153243]">{user.email}</div>
           </div>
         </div>
       </td>
       <td className="px-6 py-4 whitespace-nowrap">
-        <div className="text-sm text-[#001510]">{user.courses}</div>
+        <div className="text-sm text-[#153243]">{user.courses}</div>
       </td>
       <td className="px-6 py-4 whitespace-nowrap">
         <button
@@ -229,7 +243,7 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
             </span>
           </div>
           <button
-            className="px-4 py-2 text-white bg-[#001510] rounded-md hover:bg-[#001510]"
+            className="px-4 py-2 text-white bg-[#153243] rounded-md hover:bg-[#153243]"
             onClick={showTraineeDetailsModal}
           >
             Update Trainee
@@ -247,14 +261,14 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-500 bg-opacity-50">
             <div className="bg-white rounded-lg p-2 px-4 w-full pb-8 max-w-3xl max-h-screen overflow-y-auto">
               <div className=" flex  justify-between">
-              <h2 className="text-lg pt-6 font-medium  text-[#001510] mb-4">
-                Select Trainee
-              </h2>
+                <h2 className="text-lg pt-6 font-medium  text-[#153243] mb-4">
+                  Select Trainee
+                </h2>
                 <button
-                  className=" text-white  mb-4 rounded-md hover:bg-[#001510]"
+                  className=" text-white  mb-4 rounded-md hover:bg-[#153243]"
                   onClick={closeTraineeDetailsModal}
                 >
-                 <IoCloseCircle className=" text-3xl mb-4  text-[#001510] " />
+                  <IoCloseCircle className=" text-3xl mb-4  text-[#153243] " />
                 </button>
               </div>
               <input
@@ -272,7 +286,7 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
               <table className="min-w-full bg-white  divide-y divide-gray-200">
                 <thead>
                   <tr>
-                    <th className="px-6 py-3 bg-[#4CA1AF] bg-opacity-30 text-left  text-xs font-medium text-[#001510] uppercase tracking-wider">
+                    <th className="px-6 py-3 bg-[#4CA1AF] bg-opacity-30 text-left  text-xs font-medium text-[#153243] uppercase tracking-wider">
                       Name
                     </th>
                     <th className="px-6 py-3 bg-[#4CA1AF] bg-opacity-30"></th>
@@ -282,7 +296,6 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
                   {traineeRows}
                 </tbody>
               </table>
-             
             </div>
           </div>
         )}
@@ -291,16 +304,15 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
         {showUserDetails && (
           <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-500 bg-opacity-50">
             <div className="bg-white rounded-lg px-4 p-2 w-full pb-8 max-w-3xl max-h-screen overflow-y-auto">
-              
               <div className=" flex  justify-between ">
-              <h2 className="text-lg pt-6 font-medium text-[#001510] mb-4">
-                Select User to Add
-              </h2>
+                <h2 className="text-lg pt-6 font-medium text-[#153243] mb-4">
+                  Select User to Add
+                </h2>
                 <button
                   className="mb-4 text-white rounded-md "
                   onClick={closeUserDetailsModal}
                 >
-                 <IoCloseCircle className=" text-3xl mb-4 text-[#001510] " />
+                  <IoCloseCircle className=" text-3xl mb-4 text-[#153243] " />
                 </button>
               </div>
               <input
@@ -308,22 +320,22 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
                 placeholder="Search User by name"
                 value={userSearchQuery}
                 onChange={handleUserSearchChange}
-                className="px-4 py-2 border border-[#001510] rounded-md mb-4"
+                className="px-4 py-2 border border-[#153243] rounded-md mb-4"
               />
               <input
                 type="text"
                 placeholder="Search User by Course"
                 value={userSearchQueryByCourse}
                 onChange={handleUserSearchChangeByCourse}
-                className="px-4 float-end py-2 border border-[#001510] rounded-md mb-4"
+                className="px-4 float-end py-2 border border-[#153243] rounded-md mb-4"
               />
               <table className="min-w-full bg-white divide-y divide-gray-300">
                 <thead>
                   <tr>
-                    <th className="px-6 py-3 bg-[#4CA1AF] bg-opacity-30 text-left text-xs font-medium text-[#001510] uppercase tracking-wider">
+                    <th className="px-6 py-3 bg-[#4CA1AF] bg-opacity-30 text-left text-xs font-medium text-[#153243] uppercase tracking-wider">
                       Name
                     </th>
-                    <th className="px-6 py-3 bg-[#4CA1AF] bg-opacity-30 text-left text-xs font-medium text-[#001510] uppercase tracking-wider">
+                    <th className="px-6 py-3 bg-[#4CA1AF] bg-opacity-30 text-left text-xs font-medium text-[#153243] uppercase tracking-wider">
                       Course
                     </th>
                     <th className="px-6 py-3 bg-[#4CA1AF] bg-opacity-30"></th>
@@ -333,7 +345,6 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
                   {userRows}
                 </tbody>
               </table>
-             
             </div>
           </div>
         )}
@@ -341,13 +352,13 @@ function GroupTable({ users, onRemoveUser, onAddUser, trainees }) {
         <table className="min-w-full h-14 bg-white divide-y divide-gray-300">
           <thead>
             <tr>
-              <th className="px-6 py-3 bg-[#001510] text-left text-xs font-medium text-white uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#153243] text-left text-xs font-medium text-white uppercase tracking-wider">
                 Name
               </th>
-              <th className="px-6 py-3 bg-[#001510] text-left text-xs font-medium text-white uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#153243] text-left text-xs font-medium text-white uppercase tracking-wider">
                 Course
               </th>
-              <th className="px-6 py-3 bg-[#001510]"></th>
+              <th className="px-6 py-3 bg-[#153243]"></th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">{rows}</tbody>

@@ -92,7 +92,7 @@ const RegisterEmployee = () => {
         id="main"
         className="bg-white rounded-lg shadow-lg w-68  md:w-[700px]  h-[480px] lg:h-[420px] relative"
       >
-        <div className="w-full h-24 bg-[#001510] rounded-t-lg flex justify-center items-center">
+        <div className="w-full h-24 bg-[#153243] rounded-t-lg flex justify-center items-center">
           <h2 className="text-2xl font-bold text-white">Register Employee</h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:space-x-4 space-x-0 p-8">
@@ -144,7 +144,7 @@ const RegisterEmployee = () => {
         <div className="flex items-center justify-center mb-8">
           <button
             onClick={handleAddEmployee}
-            className="bg-gradient-to-r from-[#00BF8F] to-[#001510] w-auto max-w-xs lg:max-w-md h-12 lg:h-16 px-8 text-white font-bold rounded focus:outline-none focus:shadow-outline"
+            className="bg-[#153243] w-auto max-w-xs lg:max-w-md h-12 lg:h-16 px-8 text-white font-bold rounded focus:outline-none focus:shadow-outline"
           >
             Generate Credentials
           </button>
@@ -158,7 +158,9 @@ const RegisterEmployee = () => {
                 onClick={handleCloseSuccess}
               />
               <BsCheck2Circle className="text-4xl mb-4" />
-              <h2 className="text-2xl font-medium mb-4">Generated Credentials</h2>
+              <h2 className="text-2xl font-medium mb-4">
+                Generated Credentials
+              </h2>
               <ul>
                 <li className="mb-3">
                   <p>
@@ -178,7 +180,6 @@ const RegisterEmployee = () => {
 };
 
 export default RegisterEmployee;
-
 
 // import React, { useState } from "react";
 // import { BsCheck2Circle } from "react-icons/bs";
@@ -308,4 +309,3 @@ export default RegisterEmployee;
 // };
 
 // export default RegisterEmployee;
-

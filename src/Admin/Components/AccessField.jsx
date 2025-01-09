@@ -1,24 +1,28 @@
-import React ,{useState} from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 const AccessField = () => {
   const navigate = useNavigate();
   const [darkMode, setDarkMode] = useState(false);
   const dispatch = useDispatch();
-  const themes= localStorage.getItem("theme")
+  const themes = localStorage.getItem("theme");
   const handleNavigateToTrainee = () => {
     navigate("/admin/register-trainee");
   };
 
-  const handleNavigateToEmployee = () => { 
+  const handleNavigateToEmployee = () => {
     navigate("/admin/register-employee");
   };
-//#001510  #00BF8F 
+  //#001510  #00BF8F
   return (
     <div className="flex justify-center p-8 px-6 min-h-screen">
-      <div className={` ${themes === "dark" ? "bg-black text-white" : "text-white  bg-white "}  rounded-lg shadow-lg w-68 h-80 md:w-[700px]  md:h-[420px]  `}>
-        <div className="w-auto h-24 bg-[#001510]  rounded-t-lg flex justify-center items-center">
-          <h2 className="md:lg:text-2xl font-bold text-xl  text-white ">Choose Access Type</h2>
+      <div
+        className={`   rounded-lg shadow-lg w-68 h-80 md:w-[700px]  md:h-[420px]  `}
+      >
+        <div className="w-auto h-24 bg-[#153243]  rounded-t-lg flex justify-center items-center">
+          <h2 className="md:lg:text-2xl font-bold text-xl  text-white ">
+            Choose Access Type
+          </h2>
         </div>
 
         <div className=" justify-center items-center px-6 flex mt-10">
