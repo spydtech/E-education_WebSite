@@ -345,28 +345,26 @@ function Login() {
   //   dispatch(login(userData));
   // };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = new FormData(e.currentTarget);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
     const userData = {
-      email: data.get("email"),
-      password: data.get("password"),
+      email: data.get('email'),
+      password: data.get('password'),
     };
 
     try {
-      const response = await axios.post("http://localhost:8080/auth/signin", userData);
-      const { jwt, role, status } = response.data;
-
-      if (status && role === "user") {
-        localStorage.setItem("jwt", jwt);
-        localStorage.setItem("role", role);
+      const response = await axios.post('http://localhost:8080/auth/signin', userData);
+      if (response.data.status) {
+        localStorage.setItem('jwt', response.data.jwt);
         dispatch(login(userData));
-        navigate("/mylearning");
+        navigate('/mylearning');
       } else {
-        setError("Unauthorized access. This login is for users only.");
+        setError(response.data.message || 'Invalid credentials.');
       }
     } catch (err) {
-      setError("An error occurred while logging in. Please try again.");
+      console.error(err);
+      setError('An error occurred while logging in. Please try again.');
     }
   };
   

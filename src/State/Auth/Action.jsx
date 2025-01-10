@@ -76,17 +76,34 @@ const loginSuccess = (user) => ({ type: LOGIN_SUCCESS, payload: user });
 const loginFailure = (error) => ({ type: LOGIN_FAILURE, payload: error });
 
 export const login = (userData) => async (dispatch) => {
-  dispatch(loginRequest);
+  dispatch(loginRequest());
 
   try {
-    const response = await axios.post(`${API_BASE_URL}/auth/signin`, userData);
-    const user = response.data;
-    if (user.jwt) {
-      localStorage.setItem('jwt', user.jwt);
+    // API call
+    const response = await axios.post(
+      `${process.env.REACT_APP_API_BASE_URL}/auth/signin`,
+      userData
+    );
+
+    const { jwt, role, status } = response.data;
+
+    // Validate the response
+    if (jwt && status && (role === "CUSTOMER" || role === "ADMIN")) {
+      // Store JWT and role in localStorage
+      localStorage.setItem("jwt", jwt);
+      localStorage.setItem("UserRole", role);
+
+      // Dispatch success action
+      dispatch(loginSuccess(userData));
+    } else {
+      // Unauthorized access
+      throw new Error("Unauthorized access. This login is for valid roles only.");
     }
-    dispatch(loginSuccess(user.jwt));
   } catch (error) {
-    dispatch(loginFailure(error.message));
+    // Handle errors
+    const errorMessage =
+      error.response?.data?.message || "An error occurred while logging in.";
+    dispatch(loginFailure(errorMessage));
   }
 };
 

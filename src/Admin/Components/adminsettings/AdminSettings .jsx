@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 // Simulate an API call to fetch profile data
 const fetchProfileData = async () => {
@@ -20,7 +22,7 @@ const updateProfileData = async (profile) => {
 };
 
 function AdminSettings() {
-  const [currentPassword, setCurrentPassword] = useState("");
+  const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [profile, setProfile] = useState({
@@ -32,6 +34,9 @@ function AdminSettings() {
   });
   const [theme, setTheme] = useState("light");
   const [activeTab, setActiveTab] = useState("password");
+  const { auth } = useSelector((state) => state);
+    const jwt = localStorage.getItem("jwt");
+  
 
   const themes = [
     {
@@ -72,7 +77,7 @@ function AdminSettings() {
   ];
   
   
-  
+  const [message, setMessage] = useState("");
   // Fetch profile data on component mount
   useEffect(() => {
     const loadProfile = async () => {
@@ -82,21 +87,45 @@ function AdminSettings() {
     loadProfile();
   }, []);
 
-  const handlePasswordUpdate = () => {
+  const handlePasswordUpdate = async (e) => {
+    e.preventDefault();
     if (newPassword !== confirmPassword) {
-      alert("Passwords do not match!");
+      setMessage("New passwords do not match");
       return;
     }
-    if (!newPassword.trim()) {
-      alert("Password cannot be empty!");
-      return;
+
+    try {
+      const email = auth.user.email; // Get the user's email dynamically
+      const response = await axios.put(
+        `http://localhost:8080/api/users/password/${email}`,
+        {
+          oldPassword,
+          newPassword,
+          confirmPassword,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${jwt}`, // Pass the JWT token in the Authorization header
+          },
+        }
+      );
+      if (response.data === "password updated successfully") {
+        alert(response.data);
+        setMessage("");
+      } else {
+        setMessage(response.data);
+      }
+    } catch (error) {
+      if (error.response && error.response.data) {
+        setMessage(
+          "Error updating password: " + JSON.stringify(error.response.data)
+        );
+      } else {
+        setMessage("Error updating password: " + error.message);
+      }
     }
-    console.log("Password updated:", newPassword);
-    alert("Password updated successfully!");
-    setCurrentPassword("");
-    setNewPassword("");
-    setConfirmPassword("");
   };
+
 
   const handleProfileUpdate = async () => {
     if (!profile.name.trim() || !profile.email.trim() || !profile.mobile.trim()) {
@@ -186,8 +215,8 @@ function AdminSettings() {
             <div className="space-y-4 mt-4">
               <input
                 type="password"
-                value={currentPassword}
-                onChange={(e) => setCurrentPassword(e.target.value)}
+                value={oldPassword}
+                onChange={(e) => setOldPassword(e.target.value)}
                 className="w-full p-3 border rounded-lg"
                 placeholder="Current Password"
               />
@@ -211,6 +240,9 @@ function AdminSettings() {
               >
                 Update Password
               </button>
+              {message && (
+                <p className="text-red-500 mt-2">{message}</p> // Display the message if it exists
+              )}
             </div>
           </div>
         )}

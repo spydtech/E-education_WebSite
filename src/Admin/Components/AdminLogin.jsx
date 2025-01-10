@@ -41,12 +41,17 @@ function AdminLogin() {
     const userData = {
       email: data.get('email'),
       password: data.get('password'),
+      
     };
 
     try {
       const response = await axios.post('http://localhost:8080/auth/signin', userData);
-      if (response.data.status) {
-        localStorage.setItem('jwt', response.data.jwt);
+      const { jwt, role, status } = response.data;
+      // console.log(response.data)
+      if (jwt && status && (role === "ADMIN"))
+         {
+        localStorage.setItem('jwt', jwt);
+        localStorage.setItem('role', role);
         dispatch(login(userData));
         navigate('/admin/*');
       } else {
