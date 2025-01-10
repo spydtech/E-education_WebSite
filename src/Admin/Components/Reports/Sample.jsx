@@ -287,73 +287,73 @@ const TraineeTable = () => {
 
   return (
     <div className=" p-4">
-      <h1 className="text-3xl text-center font-bold text-[#001510]">
+      <h1 className="text-3xl text-center font-bold text-[#153243]">
         User Information{" "}
       </h1>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-2">
-      <div className="mb-4 ">
-        <label
-          htmlFor="year-select"
-          className="block text-sm font-medium text-white"
-        >
-          Select Year:
-        </label>
-        <select
-          id="year-select"
-          value={selectedYear}
-          onChange={handleYearChange}
-          className="mt-1 block w-52 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-        >
-          {Object.keys(data).map((year) => (
-            <option key={year} value={year}>
-              {year}
-            </option>
-          ))}
-        </select>
-      </div>
+        <div className="mb-4 ">
+          <label
+            htmlFor="year-select"
+            className="block text-sm font-medium text-white"
+          >
+            Select Year:
+          </label>
+          <select
+            id="year-select"
+            value={selectedYear}
+            onChange={handleYearChange}
+            className="mt-1 block w-52 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          >
+            {Object.keys(data).map((year) => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      <div className="mb-4">
-        <label
-          htmlFor="month-select"
-          className="block text-sm font-medium text-white"
-        >
-          Select Month:
-        </label>
-        <select
-          id="month-select"
-          value={selectedMonth}
-          onChange={handleMonthChange}
-          className="mt-1 block w-52 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-        >
-          <option value="All Months">All Months</option>
-          {Object.keys(data[selectedYear]).map((month) => (
-            <option key={month} value={month}>
-              {month}
-            </option>
-          ))}
-        </select>
+        <div className="mb-4">
+          <label
+            htmlFor="month-select"
+            className="block text-sm font-medium text-white"
+          >
+            Select Month:
+          </label>
+          <select
+            id="month-select"
+            value={selectedMonth}
+            onChange={handleMonthChange}
+            className="mt-1 block w-52 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+          >
+            <option value="All Months">All Months</option>
+            {Object.keys(data[selectedYear]).map((month) => (
+              <option key={month} value={month}>
+                {month}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
- </div>
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-[#001510]">
+          <thead className="bg-[#153243]">
             <tr className="">
-              <th className="px-6 py-3 bg-[#001510] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#153243] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
                 Username
               </th>
-              <th className="px-6 py-3 bg-[#001510] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#153243] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
                 UserID
               </th>
-              <th className="px-6 py-3 bg-[#001510] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#153243] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
                 Course
               </th>
-              <th className="px-6 py-3 bg-[#001510] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#153243] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
                 Price
               </th>
-              <th className="px-6 py-3 bg-[#001510] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#153243] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
                 Course Count
               </th>
-              <th className="px-6 py-3 bg-[#001510] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
+              <th className="px-6 py-3 bg-[#153243] text-left h-12 text-xs font-medium text-white uppercase tracking-wider">
                 Aggregate Total
               </th>
             </tr>
@@ -364,7 +364,7 @@ const TraineeTable = () => {
                 <tr className="bg-gray-100">
                   <td
                     colSpan="6"
-                    className="px-6 py-3 text-xs font-bold text-[#001510] uppercase tracking-wider"
+                    className="px-6 py-3 text-xs font-bold text-[#153243] uppercase tracking-wider"
                   >
                     {course}
                   </td>

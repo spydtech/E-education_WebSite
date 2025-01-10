@@ -42,42 +42,47 @@ function AdminSettings() {
     {
       name: "grey-light",
       value: "grey-light",
-      colorClass: "bg-gradient-to-b from-[#FFFFFF] to-grey-200 text-black",
+      colorClass: "bg-gradient-to-b from-[#FFFFFF] to-[#FFFFFF] text-[#000000]",
     },
     {
       name: "Light",
       value: "light",
-      colorClass: "bg-gradient-to-b from-[#4B6CB7] to-[#182848] text-black",
+      colorClass: "bg-gradient-to-b from-[#4B6CB7] to-[#182848] text-[#ffffff]",
     },
     {
       name: "Liner Blue",
       value: "liner-blue",
-      colorClass: "bg-gradient-to-b from-[#C04848]  to-[#480048] text-black",
+      colorClass:
+        "bg-gradient-to-b from-[#C04848]  to-[#480048] text-[#ffffff]",
     },
     {
       name: "Linear",
       value: "linear",
-      colorClass: "bg-gradient-to-b from-[#40E0D0] via-[#FF8C00] to-[#FF0080] text-black",
+      colorClass:
+        "bg-gradient-to-b from-[#40E0D0] via-[#FF8C00] to-[#FF0080]  text-[#ffffff]",
     },
     {
       name: "Green",
       value: "green",
-      colorClass: "bg-gradient-to-b from-[#00BF8F]  to-[#001510] text-black",
+      colorClass:
+        "bg-gradient-to-b from-[#00BF8F]  to-[#001510]  text-[#ffffff]",
     },
     {
       name: "Red",
       value: "red",
-      colorClass: "bg-gradient-to-b from-[#2980B9] to-[#2C3E50] text-black",
+      colorClass:
+        "bg-gradient-to-b from-[#007adf] to-[#00ecbc]  text-[#ffffff]",
     },
     {
       name: "Linear",
       value: "linear-blue",
-      colorClass: "bg-gradient-to-b from-[#2C3E50] to-[#4CA1AF] text-black",
+      colorClass:
+        "bg-gradient-to-b from-[#2C3E50] to-[#4CA1AF]  text-[#ffffff]",
     },
   ];
   
   
-  const [message, setMessage] = useState("");
+  
   // Fetch profile data on component mount
   useEffect(() => {
     const loadProfile = async () => {
@@ -128,7 +133,11 @@ function AdminSettings() {
 
 
   const handleProfileUpdate = async () => {
-    if (!profile.name.trim() || !profile.email.trim() || !profile.mobile.trim()) {
+    if (
+      !profile.name.trim() ||
+      !profile.email.trim() ||
+      !profile.mobile.trim()
+    ) {
       alert("Name, Email, and Mobile cannot be empty!");
       return;
     }
@@ -145,14 +154,13 @@ function AdminSettings() {
   const handleThemeChange = (newTheme) => {
     setTheme(newTheme); // Update state
     localStorage.setItem("theme", newTheme); // Persist theme to localStorage
-  
+
     // Find the selected theme
     const selectedTheme = themes.find((t) => t.value === newTheme);
     if (selectedTheme) {
       document.body.className = selectedTheme.colorClass; // Apply the theme dynamically
     }
   };
-  
 
   // Handle image change (file upload for profile picture)
   const handleImageChange = (e) => {
@@ -248,7 +256,7 @@ function AdminSettings() {
         )}
 
         {activeTab === "profile" && (
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white text-black p-6 rounded-lg shadow-md">
             <h2 className="text-lg font-semibold">Profile Settings</h2>
             <div className="space-y-4 mt-4">
               {/* Profile Image Upload */}
@@ -268,7 +276,9 @@ function AdminSettings() {
               <input
                 type="text"
                 value={profile.name}
-                onChange={(e) => setProfile({ ...profile, name: e.target.value })}
+                onChange={(e) =>
+                  setProfile({ ...profile, name: e.target.value })
+                }
                 className="w-full p-3 border rounded-lg"
                 placeholder="Name"
               />
@@ -276,7 +286,9 @@ function AdminSettings() {
               <input
                 type="email"
                 value={profile.email}
-                onChange={(e) => setProfile({ ...profile, email: e.target.value })}
+                onChange={(e) =>
+                  setProfile({ ...profile, email: e.target.value })
+                }
                 className="w-full p-3 border rounded-lg"
                 placeholder="Email"
               />
@@ -284,7 +296,9 @@ function AdminSettings() {
               <input
                 type="text"
                 value={profile.mobile}
-                onChange={(e) => setProfile({ ...profile, mobile: e.target.value })}
+                onChange={(e) =>
+                  setProfile({ ...profile, mobile: e.target.value })
+                }
                 className="w-full p-3 border rounded-lg"
                 placeholder="Mobile"
               />
@@ -293,12 +307,12 @@ function AdminSettings() {
                 type="text"
                 value={profile.id}
                 disabled
-                className="w-full p-3 border rounded-lg bg-gray-100"
+                className="w-full p-3 border rounded-lg "
                 placeholder="User ID"
               />
               <button
                 onClick={handleProfileUpdate}
-                className="w-full bg-green-500 text-white py-2 rounded-lg"
+                className="w-full bg-blue-500 text-white py-3 rounded-lg"
               >
                 Update Profile
               </button>
@@ -310,7 +324,7 @@ function AdminSettings() {
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-lg font-semibold">Theme Settings</h2>
             <div className="space-y-4 mt-4">
-              <div className="flex flex-wrap gap-4">
+              <div className="flex justify-between gap-4">
                 {themes.map((themeOption) => (
                   <button
                     key={themeOption.value}
@@ -326,7 +340,7 @@ function AdminSettings() {
                 ))}
               </div>
               <button
-                className="w-full bg-gray-500 text-white py-2 rounded-lg"
+                className="w-full bg-blue-500 text-white py-2 rounded-lg"
                 onClick={() => alert(`Current theme: ${theme}`)}
               >
                 Apply Theme

@@ -1,6 +1,6 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setTheme } from '../../../State/Theme/Theme';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setTheme } from "../../../State/Theme/Theme";
 
 const ThemeSelector = () => {
   const dispatch = useDispatch();
@@ -9,12 +9,18 @@ const ThemeSelector = () => {
   const handleThemeChange = (e) => {
     const newTheme = e.target.value;
     dispatch(setTheme(newTheme));
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
   return (
-    <div className={`pb-5 pl-5 ${currentTheme === 'dark' ? 'text-white' : 'text-black'}`}>
-      <label htmlFor="theme-selector" className="mr-3">Select Theme:</label>
+    <div
+      className={`pb-5 pl-5 ${
+        currentTheme === "dark" ? "text-white" : "text-black"
+      }`}
+    >
+      <label htmlFor="theme-selector" className="mr-3">
+        Select Theme:
+      </label>
       <select
         id="theme-selector"
         value={currentTheme}

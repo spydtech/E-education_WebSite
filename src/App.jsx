@@ -1,5 +1,5 @@
-import { useState,useEffect } from "react";
-import { useSelector } from 'react-redux';
+import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./Components/Home/Home";
@@ -137,317 +137,318 @@ function App() {
 
   useEffect(() => {
     // Apply the theme to the document
-    document.documentElement.classList.toggle('dark', theme === 'dark');
+    document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
   return (
     <>
-    <div>
-      <BrowserRouter>
-     
-        <Routes>
-        
-          {/* <Route path="" element={<SidebarMain/>} /> */}
-          <Route path="/" element={<Home />} />
-          <Route path="/theme" element={<ThemeToggle />} />
-          <Route path="/traineedashbord" element={<TraineeDashboard />} />
-          <Route path="/admin_login" element={<AdminLogin />} />
-          <Route path="/about_us" element={<AboutUs />} />
-          <Route path="/options" element={<Options />} />
-          <Route path="/pricing" element={<Pricing2 />} />
-          <Route path="/try-a-demo" element={<TryADemo />} />
-          <Route path="/PostFeeds" element={<MainPost />} />
-          {/* <Route path="/reports-masters" element={<ReportsAndMasters />} /> */}
-          {/* <Route path="/sarvices" element={<Sarvices />} /> */}
+      <div>
+        <BrowserRouter>
+          <Routes>
+            {/* <Route path="" element={<SidebarMain/>} /> */}
+            <Route path="/" element={<Home />} />
+            <Route path="/theme" element={<ThemeToggle />} />
+            <Route path="/traineedashbord" element={<TraineeDashboard />} />
+            <Route path="/admin_login" element={<AdminLogin />} />
+            <Route path="/about_us" element={<AboutUs />} />
+            <Route path="/options" element={<Options />} />
+            <Route path="/pricing" element={<Pricing2 />} />
+            <Route path="/try-a-demo" element={<TryADemo />} />
+            <Route path="/PostFeeds" element={<MainPost />} />
+            {/* <Route path="/reports-masters" element={<ReportsAndMasters />} /> */}
+            {/* <Route path="/sarvices" element={<Sarvices />} /> */}
 
-          {/* Graph  */}
-          <Route path="/table" element={<Sam />} />
-          <Route path="/bargraph" element={<BarGraph />} />
-          <Route path="/linegraph" element={<LineGraph />} />
-          <Route path="/saleslinegraph" element={<SalesLineGraph />} />
-          <Route path="/customercount" element={<CustomerCount />} />
-          <Route path="/productscount" element={<ProductsCount />} />
-          <Route path="/tableforadmin" element={<TableforAdmin />} />
-          {/* traine Login */}
+            {/* Graph  */}
+            <Route path="/table" element={<Sam />} />
+            <Route path="/bargraph" element={<BarGraph />} />
+            <Route path="/linegraph" element={<LineGraph />} />
+            <Route path="/saleslinegraph" element={<SalesLineGraph />} />
+            <Route path="/customercount" element={<CustomerCount />} />
+            <Route path="/productscount" element={<ProductsCount />} />
+            <Route path="/tableforadmin" element={<TableforAdmin />} />
+            {/* traine Login */}
 
-          <Route path="/trainelogin" element={<Traine_Login />} />
-          {/* <Route path="/trainee" element={<Trainee />} /> */}
-          {/* <Route path="/traineedashboard" element={<TraineeSidebar />} /> */}
-          {/* <Route path="/meeting" element={<Meeting />} /> */}
-          <Route path="/traine-home" element={<Traine_Home />} />
-          {/* <Route path="/tabs" element={<Tabs />} /> */}
-          {/* <Route path="/user-accounts" element={<UserAccounts />} /> */}
-          {/* <Route path="/traine-upload" element={<TraineUpload />} /> */}
-          <Route path="/status-page" element={<StatusPage />} />
+            <Route path="/trainelogin" element={<Traine_Login />} />
+            {/* <Route path="/trainee" element={<Trainee />} /> */}
+            {/* <Route path="/traineedashboard" element={<TraineeSidebar />} /> */}
+            {/* <Route path="/meeting" element={<Meeting />} /> */}
+            <Route path="/traine-home" element={<Traine_Home />} />
+            {/* <Route path="/tabs" element={<Tabs />} /> */}
+            {/* <Route path="/user-accounts" element={<UserAccounts />} /> */}
+            {/* <Route path="/traine-upload" element={<TraineUpload />} /> */}
+            <Route path="/status-page" element={<StatusPage />} />
 
-          <Route path="/todo" element={<Todo />} />
+            <Route path="/todo" element={<Todo />} />
 
-          {/* admin */}
-          <Route path="/admin/*" element={<AdminRouter />} />
-          <Route path="/trainee-courses" element={<TraineeCourses />} />
-          <Route path="/linechart" element={<CountOfSeals />} />
-          <Route path="/countofproducts" element={<CountOfProduct />} />
-          <Route path="/countofcustomers" element={<CountOfCustomers />} />
+            {/* admin */}
+            <Route path="/admin/*" element={<AdminRouter />} />
+            <Route path="/trainee-courses" element={<TraineeCourses />} />
+            <Route path="/linechart" element={<CountOfSeals />} />
+            <Route path="/countofproducts" element={<CountOfProduct />} />
+            <Route path="/countofcustomers" element={<CountOfCustomers />} />
 
-          {/* WSpace */}
-          <Route path="/WSpace" element={<WSpace />} />
-          <Route path="/googleCalender" element={<GoogleCalendar />} />
-          <Route path="/mylearning" element={<MyLearning />} />
-          <Route path="/Certificates" element={<Certificates />} />
-          <Route path="/features" element={<Features />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/signUp" element={<SignUp />} />
-          {/*  */}
-          <Route path="/Profile" element={<Profile />} />
-          {/* <Route path="/PostFeeds" element={<PostFeeds />} /> */}
-          <Route path="/QuestionForm" element={<QuestionForm />} />
-          <Route path="/Settings" element={<Settings />} />
-          {/*  */}
-          <Route path="/Payment" element={<Payment />} />
-          <Route path="/Purchases" element={<Purchases />} />
-          <Route path="/mycourse" element={<MyCourse />} />
-          <Route path="/student" element={<Student />} />
-          {/* <Route path="/googlecalender" element={<GoogleCalender />} /> */}
-          {/*  */}
-          <Route path="/artsandHumanities" element={<ArtsandHumanities />} />
-          <Route path="/business" element={<Business />} />
-          <Route path="/computerscience" element={<ComputerScience />} />
-          <Route path="/professional" element={<Professional />} />
-          {/*  */}
-          <Route path="/reactjs" element={<Reactjs />} />
-          <Route path="/health" element={<Health />} />
-          <Route path="/database" element={<DataBase />} />
-          <Route path="/course-details" element={<CourseDetails />} />
+            {/* WSpace */}
+            <Route path="/WSpace" element={<WSpace />} />
+            <Route path="/googleCalender" element={<GoogleCalendar />} />
+            <Route path="/mylearning" element={<MyLearning />} />
+            <Route path="/Certificates" element={<Certificates />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/signUp" element={<SignUp />} />
+            {/*  */}
+            <Route path="/Profile" element={<Profile />} />
+            {/* <Route path="/PostFeeds" element={<PostFeeds />} /> */}
+            <Route path="/QuestionForm" element={<QuestionForm />} />
+            <Route path="/Settings" element={<Settings />} />
+            {/*  */}
+            <Route path="/Payment" element={<Payment />} />
+            <Route path="/Purchases" element={<Purchases />} />
+            <Route path="/mycourse" element={<MyCourse />} />
+            <Route path="/student" element={<Student />} />
+            {/* <Route path="/googlecalender" element={<GoogleCalender />} /> */}
+            {/*  */}
+            <Route path="/artsandHumanities" element={<ArtsandHumanities />} />
+            <Route path="/business" element={<Business />} />
+            <Route path="/computerscience" element={<ComputerScience />} />
+            <Route path="/professional" element={<Professional />} />
+            {/*  */}
+            <Route path="/reactjs" element={<Reactjs />} />
+            <Route path="/health" element={<Health />} />
+            <Route path="/database" element={<DataBase />} />
+            <Route path="/course-details" element={<CourseDetails />} />
 
-          {/* Data Science */}
-          <Route path="/data_Science" element={<DataScienceArray />} />
-          <Route path="/course/Data Science" element={<DataAnalytics />} />
-          <Route
-            path="/data_Science/data-Analatics"
-            element={<DataAnalatics />}
-          />
-          <Route
-            path="/data_Science/machine-Learning"
-            element={<MachineLearning />}
-          />
-          <Route
-            path="/data_Science/introduction-to-data-science"
-            element={<DataScience />}
-          />
-          <Route
-            path="/data_Science/data-science-with-python"
-            element={<DataScienceWithPython />}
-          />
-          <Route
-            path="/data_Science/big-data-analysis"
-            element={<BigDataAnalysis />}
-          />
+            {/* Data Science */}
+            <Route path="/data_Science" element={<DataScienceArray />} />
+            <Route path="/course/Data Science" element={<DataAnalytics />} />
+            <Route
+              path="/data_Science/data-Analatics"
+              element={<DataAnalatics />}
+            />
+            <Route
+              path="/data_Science/machine-Learning"
+              element={<MachineLearning />}
+            />
+            <Route
+              path="/data_Science/introduction-to-data-science"
+              element={<DataScience />}
+            />
+            <Route
+              path="/data_Science/data-science-with-python"
+              element={<DataScienceWithPython />}
+            />
+            <Route
+              path="/data_Science/big-data-analysis"
+              element={<BigDataAnalysis />}
+            />
 
-          <Route
-            path="/data_Science/data-visualization"
-            element={<Datavisualisation />}
-          />
-          {/* done */}
-          {/* Cyber Security */}
-          <Route path="/cyber_security" element={<CyberSecurityArray />} />
-          <Route
-            path="/Cybersecurity/Cybersecurity_fundamentals"
-            element={<Cybersecurity />}
-          />
-          <Route
-            path="/Cybersecurity/cybersecurity_beginners"
-            element={<CybersecurityBiginers />}
-          />
-          <Route
-            path="/Cybersecurity/cybersecurity_essentials"
-            element={<CybersecurityEssentials />}
-          />
+            <Route
+              path="/data_Science/data-visualization"
+              element={<Datavisualisation />}
+            />
+            {/* done */}
+            {/* Cyber Security */}
+            <Route path="/cyber_security" element={<CyberSecurityArray />} />
+            <Route
+              path="/Cybersecurity/Cybersecurity_fundamentals"
+              element={<Cybersecurity />}
+            />
+            <Route
+              path="/Cybersecurity/cybersecurity_beginners"
+              element={<CybersecurityBiginers />}
+            />
+            <Route
+              path="/Cybersecurity/cybersecurity_essentials"
+              element={<CybersecurityEssentials />}
+            />
 
-          {/* Network Security */}
-          <Route path="/network_security" element={<NetworkSecurityArray />} />
-          <Route
-            path="/network_security/network-security-fundamentals"
-            element={<NetworkSecurity />}
-          />
-          <Route
-            path="/network_security/advance-network-secuity"
-            element={<AdvanceNetworkSecuity />}
-          />
+            {/* Network Security */}
+            <Route
+              path="/network_security"
+              element={<NetworkSecurityArray />}
+            />
+            <Route
+              path="/network_security/network-security-fundamentals"
+              element={<NetworkSecurity />}
+            />
+            <Route
+              path="/network_security/advance-network-secuity"
+              element={<AdvanceNetworkSecuity />}
+            />
 
-          <Route
-            path="/network_security/network-security-best-practices"
-            element={<BestPracticesNetworkSecurity />}
-          />
-          {/* BestPracticesNetworkSecurity */}
-          {/* /student/student_network_security/network-security-best-practices */}
+            <Route
+              path="/network_security/network-security-best-practices"
+              element={<BestPracticesNetworkSecurity />}
+            />
+            {/* BestPracticesNetworkSecurity */}
+            {/* /student/student_network_security/network-security-best-practices */}
 
-          {/* Software Testing */}
-          <Route path="/software_testing" element={<SoftwareTestingArray />} />
+            {/* Software Testing */}
+            <Route
+              path="/software_testing"
+              element={<SoftwareTestingArray />}
+            />
 
-          <Route
-            path="/software-testing/performance-testing"
-            element={<PerformanceTesting />}
-          />
+            <Route
+              path="/software-testing/performance-testing"
+              element={<PerformanceTesting />}
+            />
 
-          <Route
-            path="/software-testing/security-testing"
-            element={<SecurityTesting />}
-          />
-          <Route
-            path="/software-testing/usability-testing"
-            element={<UsabilityTesting />}
-          />
+            <Route
+              path="/software-testing/security-testing"
+              element={<SecurityTesting />}
+            />
+            <Route
+              path="/software-testing/usability-testing"
+              element={<UsabilityTesting />}
+            />
 
-          <Route
-            path="/software-testing/unit-testing"
-            element={<UnitTesting />}
-          />
+            <Route
+              path="/software-testing/unit-testing"
+              element={<UnitTesting />}
+            />
 
-          <Route
-            path="/software-testing/compatibility-testing"
-            
-            element={<CompatabilityTesting />}
-          />
+            <Route
+              path="/software-testing/compatibility-testing"
+              element={<CompatabilityTesting />}
+            />
 
-          <Route
-            path="/software-testing/acceptance-testing"
-            element={<AcceptanceTesting />}
-          />
+            <Route
+              path="/software-testing/acceptance-testing"
+              element={<AcceptanceTesting />}
+            />
 
-          <Route
-            path="/software-testing/stress-testing"
-            element={<StressTesting />}
-          />
-          {/* IntigrationTesting */}
-          <Route
-            path="/software-testing/integration-testing"
-            element={<IntigrationTesting />}
-          />
+            <Route
+              path="/software-testing/stress-testing"
+              element={<StressTesting />}
+            />
+            {/* IntigrationTesting */}
+            <Route
+              path="/software-testing/integration-testing"
+              element={<IntigrationTesting />}
+            />
 
-          <Route
-            path="/software-testing/system-testing"
-            element={<SystemTesting />}
-          />
+            <Route
+              path="/software-testing/system-testing"
+              element={<SystemTesting />}
+            />
 
-          <Route
-            path="/software-testing/manual-testing"
-            element={<ManualTesting />}
-          />
+            <Route
+              path="/software-testing/manual-testing"
+              element={<ManualTesting />}
+            />
 
-          <Route
-            path="/software-testing/automation-testing"
-            element={<AutomationTesting />}
-          />
-          <Route
-            path="/software-testing/regression-testing"
-            element={<RegressionTesting />}
-          />
+            <Route
+              path="/software-testing/automation-testing"
+              element={<AutomationTesting />}
+            />
+            <Route
+              path="/software-testing/regression-testing"
+              element={<RegressionTesting />}
+            />
 
-          <Route path="/cloud-testing" element={<CloudTesting />} />
+            <Route path="/cloud-testing" element={<CloudTesting />} />
 
-          {/* Ethical Hacking */}
-          <Route
-            path="/ethical_Hacking"
-            element={<EthicalHackingStudentArray />}
-          />
-          <Route
-            path="/Ethical_Hacking/basic_ethical_Hacking"
-            element={<EthicalHacking />}
-          />
-          <Route
-            path="/Ethical_Hacking/advance_Ethical_Hacking"
-            element={<AdvanceEthicalHacking />}
-          />
-          <Route
-            path="/Ethical-Hacking/certified_Ethical_Hacking"
-            element={<CertifiedEthicalHacking />}
-          />
-          {/*  */}
-          {/* Full Stack */}
-          <Route
-            path="/fullStack_WebDevelopment/mean-Stack-Developer"
-            element={<MeanStackDeveloper />}
-          />
-          <Route
-            path="/fullStack_WebDevelopment"
-            element={<FullStackWebDevelopmentArray />}
-          />
-          <Route
-            path="/fullStack_WebDevelopment/fullStack-Devops"
-            element={<FullStackDevops />}
-          />
-          <Route
-            path="/fullStack_WebDevelopment/fullStack-Web-Development"
-            element={<FullStackWebDevelopment />}
-          />
-          <Route
-            path="/fullStack_WebDevelopment/fullStack-Python-Development"
-            element={<FullStackPythonDevelopment />}
-          />
-          <Route
-            path="/fullStack_WebDevelopment/fullStack-Java-Development"
-            element={<FullStackJava />}
-          />
-          <Route
-            path="/fullStack_WebDevelopment/full-stack-javascript"
-            element={<FullStackJavaScript />}
-          />
-          <Route
-            path="/fullStack_WebDevelopment/dot-net-development"
-            element={<DotnetDevelopment />}
-          />
-          {/* DotnetDevelopment */}
-          {/* /student/student_fullStack_WebDevelopment/fullStack-DotNet */}
+            {/* Ethical Hacking */}
+            <Route
+              path="/ethical_Hacking"
+              element={<EthicalHackingStudentArray />}
+            />
+            <Route
+              path="/Ethical_Hacking/basic_ethical_Hacking"
+              element={<EthicalHacking />}
+            />
+            <Route
+              path="/Ethical_Hacking/advance_Ethical_Hacking"
+              element={<AdvanceEthicalHacking />}
+            />
+            <Route
+              path="/Ethical-Hacking/certified_Ethical_Hacking"
+              element={<CertifiedEthicalHacking />}
+            />
+            {/*  */}
+            {/* Full Stack */}
+            <Route
+              path="/fullStack_WebDevelopment/mean-Stack-Developer"
+              element={<MeanStackDeveloper />}
+            />
+            <Route
+              path="/fullStack_WebDevelopment"
+              element={<FullStackWebDevelopmentArray />}
+            />
+            <Route
+              path="/fullStack_WebDevelopment/fullStack-Devops"
+              element={<FullStackDevops />}
+            />
+            <Route
+              path="/fullStack_WebDevelopment/fullStack-Web-Development"
+              element={<FullStackWebDevelopment />}
+            />
+            <Route
+              path="/fullStack_WebDevelopment/fullStack-Python-Development"
+              element={<FullStackPythonDevelopment />}
+            />
+            <Route
+              path="/fullStack_WebDevelopment/fullStack-Java-Development"
+              element={<FullStackJava />}
+            />
+            <Route
+              path="/fullStack_WebDevelopment/full-stack-javascript"
+              element={<FullStackJavaScript />}
+            />
+            <Route
+              path="/fullStack_WebDevelopment/dot-net-development"
+              element={<DotnetDevelopment />}
+            />
+            {/* DotnetDevelopment */}
+            {/* /student/student_fullStack_WebDevelopment/fullStack-DotNet */}
 
-          {/* WishList/ Cart */}
-          <Route path="/wishLists" element={<WishLists />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route
-            path="/personaldevelopment"
-            element={<PersonalDevelopment />}
-          />
-          <Route path="/socialscience" element={<SocialScience />} />
+            {/* WishList/ Cart */}
+            <Route path="/wishLists" element={<WishLists />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route
+              path="/personaldevelopment"
+              element={<PersonalDevelopment />}
+            />
+            <Route path="/socialscience" element={<SocialScience />} />
 
-          {/* Basic Advance Preminum Cousrses here */}
-          {/* Basic Courses */}
-          <Route path="/basic-courses" element={<BasicCourses />} />
-          <Route path="/java" element={<Java />} />
-          <Route path="/wordpress" element={<Wordpress />} />
-          <Route path="/php" element={<Php />} />
-          <Route path="/javaScript" element={<JavaScript />} />
-          <Route path="/c_c++" element={<C_Cplus />} />
+            {/* Basic Advance Preminum Cousrses here */}
+            {/* Basic Courses */}
+            <Route path="/basic-courses" element={<BasicCourses />} />
+            <Route path="/java" element={<Java />} />
+            <Route path="/wordpress" element={<Wordpress />} />
+            <Route path="/php" element={<Php />} />
+            <Route path="/javaScript" element={<JavaScript />} />
+            <Route path="/c_c++" element={<C_Cplus />} />
 
-          <Route path="/ui_ux_design" element={<UiUx />} />
-          <Route path="/javaScript" element={<JavaScript />} />
-          <Route path="/c_c++" element={<C_Cplus />} />
-          {/* Advance courses */}
+            <Route path="/ui_ux_design" element={<UiUx />} />
+            <Route path="/javaScript" element={<JavaScript />} />
+            <Route path="/c_c++" element={<C_Cplus />} />
+            {/* Advance courses */}
 
-          <Route path="/premium-courses" element={<PremiumCourses />} />
+            <Route path="/premium-courses" element={<PremiumCourses />} />
 
-          <Route path="/advance-courses" element={<AdvanceCourses />} />
-          <Route path="/advance-php" element={<AdvancePhp />} />
-          <Route path="/blockchain" element={<BlockChain />} />
-          <Route path="/cloud-computing" element={<CloudComputing />} />
-          <Route path="/power-bi" element={<PowerBi />} />
-          <Route path="/erp" element={<ERP />} />
-          {/* Premium Courses */}
-          <Route path="/premium-courses" element={<PremiumCourses />} />
-          <Route
-            path="/fullStackMobileAppDevelopment"
-            element={<FullStackMobileApp />}
-          />
-          <Route path="/advancedPhpProgramming" element={<PreAdvancePhp />} />
-          <Route
-            path="/masteringWordPressDevelopment"
-            element={<PreWordPress />}
-          />
-        </Routes>
-       
-      </BrowserRouter>
-    </div>
+            <Route path="/advance-courses" element={<AdvanceCourses />} />
+            <Route path="/advance-php" element={<AdvancePhp />} />
+            <Route path="/blockchain" element={<BlockChain />} />
+            <Route path="/cloud-computing" element={<CloudComputing />} />
+            <Route path="/power-bi" element={<PowerBi />} />
+            <Route path="/erp" element={<ERP />} />
+            {/* Premium Courses */}
+            <Route path="/premium-courses" element={<PremiumCourses />} />
+            <Route
+              path="/fullStackMobileAppDevelopment"
+              element={<FullStackMobileApp />}
+            />
+            <Route path="/advancedPhpProgramming" element={<PreAdvancePhp />} />
+            <Route
+              path="/masteringWordPressDevelopment"
+              element={<PreWordPress />}
+            />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
   );
- 
 }
 
 export default App;

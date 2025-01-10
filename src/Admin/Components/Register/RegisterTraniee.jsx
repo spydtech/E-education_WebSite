@@ -148,8 +148,6 @@
 
 // export default RegisterTrainee;
 
-
-
 // import React, { useState } from "react";
 // import axios from "axios";
 // import { BsCheck2Circle } from "react-icons/bs";
@@ -398,11 +396,18 @@ const RegisterTrainee = () => {
 
   const handleAddTrainee = async () => {
     if (!validateInputs()) return;
-  
+
     const userId = generateUsername(); // Generate the username and use it as userId
     const password = generatePassword(); // Generate the password
-    const newTrainee = { firstName, lastName, phoneNumber, email, userId, password }; // Include userId
-  
+    const newTrainee = {
+      firstName,
+      lastName,
+      phoneNumber,
+      email,
+      userId,
+      password,
+    }; // Include userId
+
     try {
       const response = await fetch(API_URL, {
         method: "POST",
@@ -411,11 +416,11 @@ const RegisterTrainee = () => {
         },
         body: JSON.stringify(newTrainee),
       });
-  
+
       if (response.ok) {
         setTrainee({ userId, password }); // Save the generated credentials
         setShowSuccess(true);
-  
+
         // Clear inputs
         setFirstName("");
         setLastName("");
@@ -424,50 +429,58 @@ const RegisterTrainee = () => {
       } else {
         const errorResponse = await response.json();
         console.error("Failed to register trainee:", errorResponse);
-        alert(errorResponse.message || "Failed to register trainee. Please try again.");
+        alert(
+          errorResponse.message ||
+            "Failed to register trainee. Please try again."
+        );
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred while registering the trainee. Please try again later.");
+      alert(
+        "An error occurred while registering the trainee. Please try again later."
+      );
     }
   };
-  
 
   const handleCloseSuccess = () => {
     setShowSuccess(false);
   };
 
   return (
-    <div className="flex justify-center min-h-screen mx-auto p-8 bg-gray-100">
+    <div className="flex justify-center min-h-screen mx-auto p-8 ">
       <div
         id="main"
-        className="bg-white rounded-lg shadow-lg w-full max-w-3xl relative"
+        className="bg-white rounded-lg shadow-lg w-68  md:w-[700px]  h-[480px] lg:h-[420px] relative"
       >
         {/* Header */}
-        <div className="w-full h-24 bg-[#001510] rounded-t-lg flex justify-center items-center">
+        <div className="w-full h-24 bg-[#153243] rounded-t-lg flex justify-center items-center">
           <h2 className="text-2xl font-bold text-white">Register Trainee</h2>
         </div>
 
         {/* Form Inputs */}
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 p-8">
-          <div>
+          <div className="flex flex-col items-center lg:items-start">
             <input
               type="text"
               placeholder="First Name"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="shadow border rounded w-full h-12 px-4 text-gray-700 focus:outline-none mb-2"
+              className="shadow appearance-none border rounded w-full max-w-xs lg:max-w-md h-12 lg:h-16 px-4 text-[#001510] focus:outline-none focus:shadow-outline mb-3 mb-2"
             />
-            {firstNameError && <p className="text-red-500 text-sm">{firstNameError}</p>}
+            {firstNameError && (
+              <p className="text-red-500 text-sm">{firstNameError}</p>
+            )}
 
             <input
               type="number"
               placeholder="phone Number "
               value={phoneNumber}
               onChange={(e) => setMobileNumber(e.target.value)}
-              className="shadow border rounded w-full h-12 px-4 text-gray-700 focus:outline-none"
+              className="shadow appearance-none border rounded w-full max-w-xs lg:max-w-md h-12 lg:h-16 px-4 text-[#001510] focus:outline-none focus:shadow-outline mb-3"
             />
-            {phoneNumberError && <p className="text-red-500 text-sm">{phoneNumberError}</p>}
+            {phoneNumberError && (
+              <p className="text-red-500 text-sm">{phoneNumberError}</p>
+            )}
           </div>
 
           <div>
@@ -476,16 +489,18 @@ const RegisterTrainee = () => {
               placeholder="Last Name"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className="shadow border rounded w-full h-12 px-4 text-gray-700 focus:outline-none mb-2"
+              className="shadow appearance-none border rounded w-full max-w-xs lg:max-w-md h-12 lg:h-16 px-4 text-[#001510] focus:outline-none focus:shadow-outline mb-3"
             />
-            {lastNameError && <p className="text-red-500 text-sm">{lastNameError}</p>}
+            {lastNameError && (
+              <p className="text-red-500 text-sm">{lastNameError}</p>
+            )}
 
             <input
               type="email"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="shadow border rounded w-full h-12 px-4 text-gray-700 focus:outline-none"
+              className="shadow appearance-none border rounded w-full max-w-xs lg:max-w-md h-12 lg:h-16 px-4 text-[#001510] focus:outline-none focus:shadow-outline mb-3"
             />
             {emailError && <p className="text-red-500 text-sm">{emailError}</p>}
           </div>
@@ -495,7 +510,7 @@ const RegisterTrainee = () => {
         <div className="flex items-center pb-6 justify-center">
           <button
             onClick={handleAddTrainee}
-            className="bg-gradient-to-r from-[#00BF8F] to-[#001510] w-[300px] h-[60px] text-white font-bold py-2 px-4 rounded focus:outline-none"
+            className="bg-[#153243] w-[300px] h-[60px] text-white font-bold py-2 px-4 rounded focus:outline-none"
           >
             Generate Credentials
           </button>
@@ -503,30 +518,29 @@ const RegisterTrainee = () => {
 
         {/* Success Modal */}
         {trainee && showSuccess && (
-  <div className="absolute inset-0 bg-[#001510] bg-opacity-10 flex justify-center items-center rounded-lg">
-    <div className="bg-white border-[#001510] border-2 w-[320px] sm:w-[440px] py-8 px-4 rounded-lg relative">
-      <IoClose
-        className="absolute top-2 right-2 text-2xl text-gray-700 cursor-pointer"
-        onClick={handleCloseSuccess}
-      />
-      <BsCheck2Circle className="text-4xl text-[#001510] mb-4" />
-      <h2 className="text-2xl text-[#001510] font-medium mb-4">
-        Generated Credentials
-      </h2>
-      <ul>
-        <li className="mb-2">
-          <p>
-            <strong>Username (UserId):</strong> {trainee.userId}
-          </p>
-          <p>
-            <strong>Password:</strong> {trainee.password}
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-)}
-
+          <div className="absolute inset-0 bg-[#001510] bg-opacity-10 flex justify-center items-center rounded-lg">
+            <div className="bg-white border-[#001510] border-2 w-[320px] sm:w-[440px] py-8 px-4 rounded-lg relative">
+              <IoClose
+                className="absolute top-2 right-2 text-2xl text-gray-700 cursor-pointer"
+                onClick={handleCloseSuccess}
+              />
+              <BsCheck2Circle className="text-4xl text-[#001510] mb-4" />
+              <h2 className="text-2xl text-[#001510] font-medium mb-4">
+                Generated Credentials
+              </h2>
+              <ul>
+                <li className="mb-2">
+                  <p>
+                    <strong>Username (UserId):</strong> {trainee.userId}
+                  </p>
+                  <p>
+                    <strong>Password:</strong> {trainee.password}
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

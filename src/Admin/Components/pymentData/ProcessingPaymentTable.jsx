@@ -41,12 +41,12 @@ const ProcessingPaymentsTable = () => {
           type="text"
           value={searchTerm}
           onChange={handleSearch}
-          className="p-3 border w-[250px] bg-[#001510] text-[15px] text-white placeholder:text-w outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none rounded-lg"
+          className="p-3 border w-[250px] bg-[#153243] text-[15px] text-white placeholder:text-w outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none rounded-lg"
           placeholder="Search Here...."
         />
       </div>
       <table className="min-w-full">
-        <thead className="bg-[#001510] text-nowrap text-white">
+        <thead className="bg-[#153243] text-nowrap text-white">
           <tr className="h-12">
             <th className="px-4 py-2 text-left">Date</th>
             <th className="px-4 py-2 text-left">UserId</th>
@@ -63,7 +63,7 @@ const ProcessingPaymentsTable = () => {
           {filteredData.map((item, index) => (
             <tr
               key={index}
-              className="hover:bg-[#001510]  hover:bg-opacity-10 text-[#001510]"
+              className="hover:bg-[#153243]  hover:bg-opacity-10 text-[#153243]"
             >
               <td className="px-4 py-2">{item.Date}</td>
               <td className="px-4 py-2">{item.userId}</td>

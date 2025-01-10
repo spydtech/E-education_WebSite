@@ -24,12 +24,12 @@ function Settings({ usernameFirstLetter }) {
   return (
     <>
       <Navbar />
-      <div className="bg-blue-100 min-h-screen bg-[#0098f1] bg-opacity-60">
+      <div className="bg-blue-100 min-h-screen ">
         <div className="w-full max-w-md mx-auto md:max-w-none md:flex md:gap-10 p-4">
           <div className="grid-fix text-black space-y-5 lg:space-y-10 md:w-1/4 p-10">
             <button
               className={`flex gap-x-2 hover:underline text-start font-medium ${
-                activeTab === "tab1" && "text-white"
+                activeTab === "tab1" && "text-[#0098f1]"
               }`}
               onClick={() => openTab("tab1")}
             >
@@ -38,7 +38,7 @@ function Settings({ usernameFirstLetter }) {
             </button>
             <button
               className={`flex gap-x-2 hover:underline text-start font-medium ${
-                activeTab === "tab2" && "text-white"
+                activeTab === "tab2" && "text-[#0098f1]"
               }`}
               onClick={() => openTab("tab2")}
             >
@@ -47,7 +47,7 @@ function Settings({ usernameFirstLetter }) {
             </button>
             <button
               className={`flex gap-x-2 hover:underline text-start font-medium ${
-                activeTab === "tab3" && "text-white"
+                activeTab === "tab3" && "text-[#0098f1]"
               }`}
               onClick={() => openTab("tab3")}
             >
@@ -56,7 +56,7 @@ function Settings({ usernameFirstLetter }) {
             </button>
             <button
               className={`flex gap-x-2 hover:underline text-start font-medium ${
-                activeTab === "tab4" && "text-white"
+                activeTab === "tab4" && "text-[#0098f1]"
               }`}
               onClick={() => openTab("tab4")}
             >
@@ -65,7 +65,7 @@ function Settings({ usernameFirstLetter }) {
             </button>
             <button
               className={`flex gap-x-2 hover:underline text-start font-medium ${
-                activeTab === "tab5" && "text-white"
+                activeTab === "tab5" && "text-[#0098f1]"
               }`}
               onClick={() => openTab("tab5")}
             >
@@ -74,7 +74,7 @@ function Settings({ usernameFirstLetter }) {
             </button>
             <button
               className={`flex gap-x-2 hover:underline text-start font-medium ${
-                activeTab === "tab6" && "text-white"
+                activeTab === "tab6" && "text-[#0098f1]"
               }`}
               onClick={() => openTab("tab6")}
             >
@@ -85,7 +85,7 @@ function Settings({ usernameFirstLetter }) {
           <div className="md:w-3/4 bg-white h-auto lg:min-h-screen">
             <div
               id="tab1"
-              className={`tabcontent p-4 md:py-0 ${
+              className={`tabcontent py-4 md:py-0 ${
                 activeTab === "tab1" ? "" : "hidden"
               }`}
             >

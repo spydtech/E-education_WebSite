@@ -7,7 +7,7 @@ import ProcessingPaymentsTable from "./ProcessingPaymentTable";
 import { useDispatch, useSelector } from "react-redux";
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("All");
-  const themes= localStorage.getItem("theme")
+  const themes = localStorage.getItem("theme");
   const handleTabChange = (event) => {
     setActiveTab(event.target.value);
   };
@@ -56,14 +56,22 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="p-4 max-w-full "> {/* Prevent horizontal overflow */}
+    <div className="p-4 max-w-full ">
+      {" "}
+      {/* Prevent horizontal overflow */}
       {/* Cards Grid */}
-      <div className={`  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6`}>
+      <div
+        className={`  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6`}
+      >
         {/* Total Earnings Card */}
         {totalEarningsCard.map((card, index) => (
           <div
             key={index}
-            className={` ${themes === "dark" ? "bg-black text-white" : "text-white   "} w-full  text-white bg-[#ff259d] h-[160px] rounded-lg grid grid-cols-[1fr_auto] relative`}
+            className={`
+
+                ${themes === "dark" ? "bg-black text-white" : "text-white   "} 
+            
+            w-full  text-white bg-[#ff259d] h-[160px] rounded-lg grid grid-cols-[1fr_auto] relative`}
           >
             <div className="flex flex-col justify-center p-4 pl-6">
               <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>
@@ -83,7 +91,7 @@ const Dashboard = () => {
         {pendingPaymentsCard.map((card, index) => (
           <div
             key={index}
-            className={` ${themes === "dark" ? "bg-black text-white" : "text-white bg-[#0098f1]   "} w-full text-white  h-[160px] rounded-lg grid grid-cols-[1fr_auto] relative`}
+            className={` w-full bg-[#0098f1]  text-white  h-[160px] rounded-lg grid grid-cols-[1fr_auto] relative`}
           >
             <div className="flex flex-col justify-center p-4 pl-6">
               <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>
@@ -103,7 +111,7 @@ const Dashboard = () => {
         {withdrawalMethodCard.map((card, index) => (
           <div
             key={index}
-            className={`  ${themes === "dark" ? "bg-black text-white" : "text-white bg-[#ff2f6a]   "} w-full text-white  h-[160px] rounded-lg grid grid-cols-[1fr_auto] relative`}
+            className={`   bg-[#ff2f6a] w-full text-white  h-[160px] rounded-lg grid grid-cols-[1fr_auto] relative`}
           >
             <div className="flex flex-col justify-center p-4 pl-6">
               <h2 className="text-xs md:text-xl font-semibold">{card.title}</h2>
@@ -118,16 +126,15 @@ const Dashboard = () => {
           </div>
         ))}
       </div>
-
       {/* Payment History Section */}
       <div className="flex flex-col sm:flex-row items-center justify-between px-2 py-4 mb-4">
-        <h2 className="text-lg sm:text-xl md:text-2xl text-[#001510] font-semibold">
+        <h2 className="text-lg sm:text-xl md:text-2xl text-[#153243] font-semibold">
           Payment History
         </h2>
         <select
           value={activeTab}
           onChange={handleTabChange}
-          className="w-full sm:w-[190px] mt-2 sm:mt-0 p-3 bg-[#001510] text-white rounded-lg"
+          className="w-full sm:w-[190px] mt-2 sm:mt-0 p-3 bg-[#153243] text-white rounded-lg"
         >
           <option value="All">Status</option>
           <option value="Completed">Completed</option>
@@ -136,17 +143,14 @@ const Dashboard = () => {
           <option value="Rejected">Rejected</option>
         </select>
       </div>
-
       {/* Table Section */}
-      <div className="p-4 overflow-x-auto max-w-full">{renderTable()}</div> {/* Add max-w-full */}
+      <div className="p-4 overflow-x-auto max-w-full">{renderTable()}</div>{" "}
+      {/* Add max-w-full */}
     </div>
   );
 };
 
 export default Dashboard;
-
-
-
 
 // import React, { useState } from "react";
 // import AllPaymentsTable from "./TotalPayments";
@@ -216,7 +220,7 @@ export default Dashboard;
 //           alt="Admin"
 //           className="w-12 h-12 rounded-full  mr-3"
 //         />
-//         <h2 className=" bg-gradient-to-r from-[#00BF8F] to-[#001510]   text-transparent bg-clip-text text-lg font-semibold">Admin Name</h2>
+//         <h2 className=" bg-gradient-to-r from-[#00BF8F] to-[#153243]   text-transparent bg-clip-text text-lg font-semibold">Admin Name</h2>
 //       </div>
 //       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
 //         {/* Total Earnings Card */}
@@ -281,13 +285,13 @@ export default Dashboard;
 
 //       {/* Payment History Section */}
 //       <div className="flex items-center justify-between px-2 py-4 mb-4">
-//         <h2 className="text-xl sm:text-sm md:text-2xl text-[#001510] font-semibold">
+//         <h2 className="text-xl sm:text-sm md:text-2xl text-[#153243] font-semibold">
 //           Payment History
 //         </h2>
 //         <select
 //           value={activeTab}
 //           onChange={handleTabChange}
-//           className="w-full md:w-[190px] p-3 bg-[#001510] outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none text-white rounded-lg"
+//           className="w-full md:w-[190px] p-3 bg-[#153243] outline-none focus:outline-none focus:ring-0 focus:border-transparent border-none text-white rounded-lg"
 //         >
 //           <option value="All">Status</option>
 //           <option value="Completed">Completed</option>
@@ -304,4 +308,3 @@ export default Dashboard;
 // };
 
 // export default Dashboard;
-
