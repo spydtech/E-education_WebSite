@@ -10,7 +10,7 @@ import PaymentData from "./PaymentData";
 import { setTheme } from "../../State/Theme/Theme";
 // import adminimg from "../../assetss/Home/Admin.png";
 import { useDispatch, useSelector } from "react-redux";
-import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle";
+import ThemeToggle from "../../Components/trainee/TraineeDashboard/Themetoggle";
 const data = [
   { img: sales, alt: "Sales", value: "2,42,000", text: "Sales" },
   { img: courses, alt: "Courses", value: "90", text: "Courses" },

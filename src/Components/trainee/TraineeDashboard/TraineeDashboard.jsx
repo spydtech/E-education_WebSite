@@ -3,6 +3,7 @@ import { useLocation, useNavigate, Link } from "react-router-dom";
 import { SiGooglemeet } from "react-icons/si";
 import MeetSlider from "../../Meeting/MeetSlider";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
+import { useTheme } from "@mui/material";
 import { SlCalender } from "react-icons/sl";
 import { FaLayerGroup, FaUserAlt } from "react-icons/fa";
 import { TbReportAnalytics } from "react-icons/tb";
@@ -20,35 +21,44 @@ import StatusPage from "../UserTask/StatusPage";
 import Calendar from "../TraineeCalendar/Calendar";
 import { getTrainee, logout } from "../../../State/Auth/Action";
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux"; 
-import ThemeToggle from "./Theamtoggle";
+import { useSelector } from "react-redux";
+import ThemeToggle from "./Themetoggle";
 const TraineeDashboard = () => {
+  const theme = useTheme();
   const location = useLocation();
   const redirect = location?.state?.redirect;
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [isLogoutOpen, setLogoutOpen] = useState(false); // State to manage logout options visibility
   const [isSidebarOpen, setSidebarOpen] = useState(false); // State for mobile sidebar
   const jwt = localStorage.getItem("jwt");
-   const auth = useSelector((state) => state.auth);
+  const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState(redirect ? redirect : "home"); // State to manage active tab
   const [isMeetSidebarOpen, setMeetSidebarOpen] = useState(false);
 
+  const themesBackGroundColor = [
+    { value: "light", colorClass: "bg-light-theme" },
+    { value: "dark", colorClass: "bg-dark-theme" },
+  ];
 
+  const [themeBg, setThemeBg] = useState(() => {
+    // Get the theme from localStorage or default to 'light'
+    return localStorage.getItem("theme") || "light";
+  });
+  useEffect(() => {
+    if (jwt) {
+      dispatch(getTrainee(jwt));
+    }
+  }, [jwt, dispatch]);
 
   useEffect(() => {
-     if (jwt) {
-       dispatch(getTrainee(jwt));
-     }
-   }, [jwt, dispatch]);
-   
-  
- 
-
-
-   
-
+    // Apply the theme on mount
+    const selectedTheme = themesBackGroundColor.find((t) => t.value === theme);
+    if (selectedTheme) {
+      document.body.className = selectedTheme.colorClass;
+    }
+  }, [themeBg]);
   // Function to toggle the meet sidebar
   const toggleMeetSidebar = () => {
     setMeetSidebarOpen(!isMeetSidebarOpen);
@@ -78,7 +88,6 @@ const TraineeDashboard = () => {
     if (redirect) setActiveTab(redirect);
   }, [redirect]);
 
-  
   const renderContent = () => {
     switch (activeTab) {
       case "home":
@@ -119,39 +128,30 @@ const TraineeDashboard = () => {
   return (
     <>
       <div
-        className={` ${
-          themes === "dark" && "bg-black text-white"
-        }  bg-gradient-to-b from-[#4CA1AF] to-[#204349] flex h-screen`}
+        className={`${
+          themesBackGroundColor.find((t) => t.value === theme)?.colorClass || ""
+        }  flex h-screen `}
+        // className={` ${
+        //   themes === "dark" && "bg-black text-white"
+        // }  bg-gradient-to-b from-[#4CA1AF] to-[#204349] flex h-screen`}
       >
         {/* Sidebar for larger screens */}
-        <div
-          className={`${
-            themes === "dark" && "bg-black text-white"
-          } hidden md:flex flex-col w-64  `}
-        >
-          <div
-            className={` ${
-              themes === "dark" && "bg-black"
-            } flex items-center  justify-center h-16`}
-          >
+        <div className={` hidden md:flex flex-col w-64  `}>
+          <div className={` flex items-center  justify-center h-16`}>
             <img
               src={Eeducationlogo}
               className="h-24 w-auto"
               alt="E-Education Logo"
             />
           </div>
-          <div
-            className={` ${
-              themes === "dark" && "bg-black"
-            } flex flex-col flex-1 overflow-y-auto`}
-          >
+          <div className={`  flex flex-col flex-1 overflow-y-auto`}>
             <nav className={`  flex-1 px-2 py-4`}>
               <a
                 href="#"
                 className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 ${
                   activeTab === "home"
-                    ? "bg-white text-[#204349] border-[#204349]"
-                    : "border-transparent text-white"
+                    ? " border-[#204349]"
+                    : "border-transparent"
                 }`}
                 onClick={() => handleTabClick("home")}
               >
@@ -162,8 +162,8 @@ const TraineeDashboard = () => {
                 href="#"
                 className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 ${
                   activeTab === "courses"
-                    ? "bg-white text-[#204349] border-[#204349]"
-                    : "border-transparent text-white"
+                    ? "  border-[#204349]"
+                    : "border-transparent "
                 }`}
                 onClick={() => handleTabClick("courses")}
               >
@@ -174,8 +174,8 @@ const TraineeDashboard = () => {
                 href="#"
                 className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 ${
                   activeTab === "calendar"
-                    ? "bg-white text-[#204349] border-[#204349]"
-                    : "border-transparent text-white"
+                    ? "  border-[#204349]"
+                    : "border-transparent "
                 }`}
                 onClick={() => handleTabClick("calendar")}
               >
@@ -186,8 +186,8 @@ const TraineeDashboard = () => {
                 href="#"
                 className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 ${
                   activeTab === "reports"
-                    ? "bg-white text-[#204349] border-[#204349]"
-                    : "border-transparent text-white"
+                    ? " border-[#204349]"
+                    : "border-transparent "
                 }`}
                 onClick={() => handleTabClick("reports")}
               >
@@ -198,8 +198,8 @@ const TraineeDashboard = () => {
                 href="#"
                 className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 ${
                   activeTab === "approvals"
-                    ? "bg-white text-[#204349] border-[#204349]"
-                    : "border-transparent text-white"
+                    ? "  border-[#204349]"
+                    : "border-transparent "
                 }`}
                 onClick={() => handleTabClick("approvals")}
               >
@@ -210,8 +210,8 @@ const TraineeDashboard = () => {
                 href="#"
                 className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 ${
                   activeTab === "user"
-                    ? "bg-white text-[#204349] border-[#204349]"
-                    : "border-transparent text-white"
+                    ? "  border-[#204349]"
+                    : "border-transparent "
                 }`}
                 onClick={() => handleTabClick("user")}
               >
@@ -222,29 +222,25 @@ const TraineeDashboard = () => {
                 href="#"
                 className={`flex items-center space-x-2 px-4 py-4 w-full rounded-tr-3xl rounded-br-3xl border-l-8 transition-all duration-300 ${
                   activeTab === "settings"
-                    ? "bg-white text-[#204349] border-[#204349]"
-                    : "border-transparent text-white"
+                    ? "  border-[#204349]"
+                    : "border-transparent "
                 }`}
                 onClick={() => handleTabClick("settings")}
               >
                 <IoSettingsSharp className="h-6 w-6 mr-2" />
                 Settings
               </a>
-              <div className="pt-10">
+              {/* <div className="pt-10">
                 <ThemeToggle />
-              </div>
+              </div> */}
             </nav>
           </div>
 
           {/* Logout Button */}
           <Link to="/trainelogin">
-            <div
-              className={` ${
-                themes === "dark" && "bg-black"
-              } flex items-end justify-center p-4`}
-            >
+            <div className={`  flex items-end justify-center p-4`}>
               <button
-                className="p-2 bg-white  px-20 py-2 text-[#4CA1AF] rounded-md hover:bg-white"
+                className="p-2 bg-[#204349] px-20 py-2 text-white rounded-md "
                 onClick={handleLogout}
               >
                 Logout
@@ -253,14 +249,11 @@ const TraineeDashboard = () => {
           </Link>
 
           {/* Trainee Info */}
-         
         </div>
 
         <div className="flex flex-col flex-1 overflow-y-auto">
           <div
-            className={` ${
-              themes === "dark" && "bg-black"
-            }   bg-white flex flex-col md:flex-row items-center  h-20 py-4 border-b border-gray-200 px-4`}
+            className={`  flex flex-col md:flex-row items-center  h-20 py-4  px-4`}
           >
             <div className="flex items-center md:justify-start  w-full">
               <button
@@ -283,9 +276,7 @@ const TraineeDashboard = () => {
                 </svg>
               </button>
               <div
-                className={` ${
-                  themes === "dark" && " text-[#204349] "
-                } flex items-center justify-center md:ml-4 mt-4 md:mt-0`}
+                className={` flex items-center justify-center md:ml-4 mt-4 md:mt-0`}
               >
                 {/* <img src={Traineeprofile} className="h-10 w-10 rounded-full" alt="Trainee Profile" /> */}
                 {/* Make profile image clickable */}
@@ -295,12 +286,10 @@ const TraineeDashboard = () => {
                   alt="Profile"
                   onClick={handleProfileClick} // Trigger file input on click
                 />
-             <h2
-                  className={`${
-                    themes === "dark" && ""
-                  } pl-4 font-bold text-[#FF9B26]`}
-                >
-               {auth.trainee ? `${auth.trainee.firstName} ${auth.trainee.lastName}` : "Loading..."}
+                <h2 className={` pl-4 font-bold text-[#FF9B26]`}>
+                  {auth.trainee
+                    ? `${auth.trainee.firstName} ${auth.trainee.lastName}`
+                    : "Loading..."}
                 </h2>
                 {/* Hidden file input for image upload */}
                 <input
@@ -315,31 +304,25 @@ const TraineeDashboard = () => {
 
             <div className="items-center hidden md:flex mt-4">
               <SiGooglemeet
-                className="h-6 w-6 text-black "
+                className="h-6 w-6 text-black  "
                 onClick={toggleMeetSidebar}
               />
             </div>
           </div>
 
           {/* Render Content based on active tab */}
-          <div
-            className={`  ${
-              themes === "dark"
-                ? "bg-black text-white border-white"
-                : "text-[#204349]"
-            } flex-1 p-4 bg-gray-100`}
-          >
-            {renderContent()}
-          </div>
+          <div className={`   flex-1 p-4`}>{renderContent()}</div>
           {isMeetSidebarOpen && (
-            <div className="fixed inset-0 z-40  transition-opacity">
-              <div className="fixed inset-y-0 right-0 bg-white w-64 p-4 overflow-y-auto">
+            <div className="fixed  text-black inset-0 z-40   ">
+              <div
+                className={`${
+                  themesBackGroundColor.find((t) => t.value === theme)
+                    ?.colorClass || ""
+                }  fixed inset-y-0 bg-white right-0  w-64 p-4 overflow-y-auto `}
+              >
                 <h2 className="text-lg font-bold">Meet Sidebar</h2>
 
-                <button
-                  onClick={toggleMeetSidebar}
-                  className="text-gray-500 hover:text-gray-700"
-                >
+                <button onClick={toggleMeetSidebar} className="">
                   Close
                 </button>
                 {/* Add more sidebar content as needed */}
@@ -467,7 +450,7 @@ const TraineeDashboard = () => {
               </a>
               <Link to="/trainelogin">
                 <button
-                  className="w-auto mt-4 px-20 py-2 bg-gray-800 text-[#FF9B26] rounded-md hover:bg-gray-700"
+                  className="w-auto mt-4 px-20 py-2 bg-[#204349] text-white rounded-md "
                   onClick={handleLogout}
                 >
                   Logout

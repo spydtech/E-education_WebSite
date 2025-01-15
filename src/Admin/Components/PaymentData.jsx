@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle";
+import ThemeToggle from "../../Components/trainee/TraineeDashboard/Themetoggle";
 const PaymentData = () => {
   // Sample data array
   const paymentData = [

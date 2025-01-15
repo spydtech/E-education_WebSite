@@ -129,7 +129,7 @@ import ProductsCount from "./Admin/Components/Reports/CountofProducts";
 import Todo from "./Components/trainee/SheduledReports/Todo";
 import Dashboard from "./Admin/Components/pymentData/MainDashBoard";
 import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
-import ThemeToggle from "./Components/trainee/TraineeDashboard/Theamtoggle";
+import ThemeToggle from "./Components/trainee/TraineeDashboard/Themetoggle";
 // import ReportsAndMasters from "./Components/Meeting/hospita/reports";
 // import Sarvices from "./Components/Meeting/hospita/sarvices";
 function App() {
@@ -147,7 +147,7 @@ function App() {
             {/* <Route path="" element={<SidebarMain/>} /> */}
             <Route path="/" element={<Home />} />
             <Route path="/theme" element={<ThemeToggle />} />
-            <Route path="/traineedashbord" element={<TraineeDashboard />} />
+            <Route path="/traineedashboard" element={<TraineeDashboard />} />
             <Route path="/admin_login" element={<AdminLogin />} />
             <Route path="/about_us" element={<AboutUs />} />
             <Route path="/options" element={<Options />} />

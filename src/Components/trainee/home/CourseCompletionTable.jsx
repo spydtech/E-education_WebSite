@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 function CourseCompletionTable() {
@@ -173,50 +172,86 @@ function CourseCompletionTable() {
       item.courseName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       item.username.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  const themes= localStorage.getItem("theme")
+  const themes = localStorage.getItem("theme");
 
   return (
-    <div className={` ${themes==="dark"&&"bg-black"} p-4 `}>
-      <h2 className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} text-xl text-[#204349] font-bold mb-4`}>
+    <div className={`  p-4 `}>
+      <h2 className={` text-xl text-black font-bold mb-4`}>
         Course Completion Within 30 Days
       </h2>
       <div className="mb-4 flex flex-col md:flex-row justify-between items-center gap-2">
         <input
           type="text"
-          className="border-[#204349] border-2 focus:ring-[#204349]  p-2 focus:border-[#204349] rounded-3xl placeholder:text-[#204349] w-full md:w-auto"
+          className="border-[#204349] border-2 focus:ring-[#204349]  p-2 focus:border-[#204349] rounded-3xl placeholder:text-black w-full md:w-auto"
           placeholder="Search courses"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <input
           type="number"
-          className="border-[#204349] border-2 focus:ring-[#204349] focus:border-[#204349] p-2 text-[#204349] placeholder:text-[#204349] rounded w-full md:w-auto"
+          className="border-[#204349] border-2 focus:ring-[#204349] focus:border-[#204349] p-2 text-black placeholder:text-black rounded w-full md:w-auto"
           placeholder="Show rows"
           value={rowsToShow}
           onChange={(e) => setRowsToShow(Number(e.target.value))}
         />
       </div>
       <div className="overflow-x-auto">
-        <table className="min-w-full  border  ">
-          <thead>
+        <table className="min-w-full divide-y border-[#204349] border-2   ">
+          <thead className="bg-[#204349] text-white">
             <tr>
-              <th className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} border  bg-[#204349] text-white px-4 py-4`}>Course Name</th>
-              <th className={` ${themes === "dark" ? "bg-black text-white border-white" : ""}border  bg-[#204349] text-white px-4 py-4`}>Issue Date</th>
-              <th className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} border  bg-[#204349] text-white px-4 py-4`}>Expiry Date</th>
-              <th className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} border  bg-[#204349] text-white px-4 py-4`}>Username</th>
-              <th className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} border  bg-[#204349] text-white px-4 py-4`}>First Name</th>
-              <th className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} border  bg-[#204349] text-white px-4 py-4`}>Last Name</th>
+              <th
+                className={` px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider`}
+              >
+                Course Name
+              </th>
+              <th
+                className={` px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider`}
+              >
+                Issue Date
+              </th>
+              <th
+                className={` px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider`}
+              >
+                Expiry Date
+              </th>
+              <th
+                className={` px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider`}
+              >
+                Username
+              </th>
+              <th
+                className={`  px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider`}
+              >
+                First Name
+              </th>
+              <th
+                className={` px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider`}
+              >
+                Last Name
+              </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="divide-y text-black divide-[#204349]">
             {filteredData.slice(0, rowsToShow).map((item, index) => (
-              <tr key={index} className="border">
-                <td className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} border-white bg-[#204349] text-center text-[#204349] bg-opacity-10 px-4 py-2`}>{item.courseName}</td>
-                <td className={`${themes === "dark" ? "bg-black text-white border-white" : ""}border-white bg-[#204349] text-center text-[#204349] bg-opacity-10  px-4 py-2`}>{item.issueDate}</td>
-                <td className={ `${themes === "dark" ? "bg-black text-white border-white" : ""}border-white bg-[#204349] text-center text-[#204349] bg-opacity-10  px-4 py-2`}>{item.expiryDate}</td>
-                <td className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} border-white bg-[#204349] text-center text-[#204349] bg-opacity-10  px-4 py-2`}>{item.username}</td>
-                <td className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} border-white bg-[#204349] text-center text-[#204349] bg-opacity-10  px-4 py-2`}>{item.firstName}</td>
-                <td className={`  ${themes === "dark" ? "bg-black text-white border-white" : ""}border-white  bg-[#204349] text-center text-[#204349] bg-opacity-10 px-4 py-2`}>{item.lastName}</td>
+              <tr key={index} className="border-b-[#204349]">
+                <td className={`    px-6 py-4 whitespace-nowrap`}>
+                  {item.courseName}
+                </td>
+                <td className={` px-6 py-4 whitespace-nowrap`}>
+                  {item.issueDate}
+                </td>
+                <td className={` px-6 py-4 whitespace-nowrap`}>
+                  {item.expiryDate}
+                </td>
+                <td className={`  px-6 py-4 whitespace-nowrap`}>
+                  {item.username}
+                </td>
+                <td className={` px-6 py-4 whitespace-nowrap`}>
+                  {item.firstName}
+                </td>
+                <td className={`   text-center text-black  px-4 py-2`}>
+                  {item.lastName}
+                </td>
               </tr>
             ))}
           </tbody>

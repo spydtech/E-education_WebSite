@@ -16,7 +16,7 @@ import AccessField from "./AccessField";
 import RegisterEmployee from "./Register/RegisterEmployee";
 import RegisterTrainee from "./Register/RegisterTraniee";
 import Meeting from "./Meet/Meeting";
-import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle";
+// import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle";
 import IMG from "../../assets/logo/E-educationlogo.png";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import {

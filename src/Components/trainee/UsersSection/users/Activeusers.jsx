@@ -1,9 +1,5 @@
-
-
-
 import React, { useState } from "react";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/solid";
-
 
 const data = [
   {
@@ -112,26 +108,24 @@ function ActiveUsers({ updateUsersCount }) {
   const filteredData = data.filter((user) =>
     user.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  const themes= localStorage.getItem("theme")
+  const themes = localStorage.getItem("theme");
 
   const rows = filteredData.map((item) => (
-    <tr key={item.name} className="border-b text-[#204349]">
+    <tr key={item.name} className=" border-[#204349]  ">
       <td className="px-6 py-4 whitespace-nowrap">
         <div className="flex items-center">
           <img
-            className="h-10 w-10 rounded-full text-[#204349]"
+            className="h-10 w-10 rounded-full "
             src={item.avatar}
             alt={`Avatar of ${item.name}`}
           />
           <div className="ml-4">
-            <div className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} text-sm font-medium text-[#204349]`}>{item.name}</div>
+            <div className={`  text-sm font-medium `}>{item.name}</div>
           </div>
         </div>
       </td>
-      <td className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"}  px-6 py-4 whitespace-nowrap`}>
-        {item.job}
-      </td>
-      <td className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} px-6 py-4 whitespace-nowrap`}>{item.lastActive}</td>
+      <td className={`  px-6 py-4 whitespace-nowrap`}>{item.job}</td>
+      <td className={`  px-6 py-4 whitespace-nowrap`}>{item.lastActive}</td>
       <td className="px-6 py-4 whitespace-nowrap">
         {item.active ? (
           <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
@@ -149,9 +143,13 @@ function ActiveUsers({ updateUsersCount }) {
   ));
   // const themes= localStorage.getItem("theme")
   return (
-    <div className={`  overflow-x-auto  ml-4 mr-4 sm:ml-10 sm:mr-10`}>
-      <div >
-        <h1 className={` ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"} text-center text-2xl font-semibold  text-[#204349]`}>Active Users</h1>
+    <div
+      className={`bg-white text-black  overflow-x-auto  ml-4 mr-4 sm:ml-10 sm:mr-10`}
+    >
+      <div>
+        <h1 className={` text-center text-2xl font-semibold  `}>
+          Active Users
+        </h1>
         <div className="flex justify-center mb-4">
           <input
             type="search"
@@ -162,29 +160,30 @@ function ActiveUsers({ updateUsersCount }) {
           />
         </div>
         <div className="overflow-x-auto scrollbar-thin scrollbar-track-white scrollbar-thumb-[#204349]">
-        <table className="min-w-full divide-y divide-gray-200 overflow-x-scroll">
-          <thead className="">
-            <tr>
-              <th className="px-2 sm:px-6 py-3 text-left text-xs font-medium text-white bg-[#204349] uppercase tracking-wider">
-                Employee
-              </th>
-              <th className="px-2 sm:px-6 py-3 text-left text-xs font-medium text-white bg-[#204349] uppercase tracking-wider">
-                Role
-              </th>
-              <th className="px-2 sm:px-6 py-3 text-left text-xs font-medium text-white bg-[#204349] uppercase tracking-wider">
-                Last active
-              </th>
-              <th className="px-2 sm:px-6 py-3 text-left text-xs font-medium text-white bg-[#204349] uppercase tracking-wider">
-                Status
-              </th>
-            </tr>
-          </thead>
-          <tbody className={ ` ${themes==="dark"&&"bg-black"} divide-y divide-gray-200`}>{rows}</tbody>
-        </table>
+          <table className="min-w-full divide-y border-[#204349] border-2 overflow-x-scroll">
+            <thead className="">
+              <tr className="divide-y border-[#204349] border-2">
+                <th className="px-2 sm:px-6 py-3 text-left text-xs font-medium text-white bg-[#204349] uppercase tracking-wider">
+                  Employee
+                </th>
+                <th className="px-2 sm:px-6 py-3 text-left text-xs font-medium text-white bg-[#204349] uppercase tracking-wider">
+                  Role
+                </th>
+                <th className="px-2 sm:px-6 py-3 text-left text-xs font-medium text-white bg-[#204349] uppercase tracking-wider">
+                  Last active
+                </th>
+                <th className="px-2 sm:px-6 py-3 text-left text-xs font-medium text-white bg-[#204349] uppercase tracking-wider">
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody className={`  divide-y border-[#204349] border-2 `}>
+              {rows}
+            </tbody>
+          </table>
         </div>
       </div>
-    </div> 
-   
+    </div>
   );
 }
 

@@ -21,22 +21,26 @@ const Tabs = () => {
     localStorage.setItem("numberOfCourses", numberOfCourses);
   }, [numberOfCourses]);
 
-  const activeClasses =
-    "bg-[#204349] text-white border-l border-t border-r rounded-t";
-  const inactiveClasses =
-    "text-[#204349] hover:bg-[#204349] hover:text-white";
+  const activeClasses = "bg-[#204349] text-white  rounded-sm";
+  const inactiveClasses = " rounded-sm hover:bg-[#204349] hover:text-white";
 
   const handleTabClick = (tabNumber) => {
     setOpenTab(tabNumber);
     setIsMenuOpen(false); // Close menu when a tab is clicked
   };
-  const themes= localStorage.getItem("theme")
+  const themes = localStorage.getItem("theme");
   return (
-    <div className={`p-4 sm:p-6 overflow-x-auto ${themes==="dark"&&"bg-black"}`}>
+    <div
+      className={`bg-white text-black  rounded-lg shadow-lg p-4 sm:p-6 overflow-x-auto ${
+        themes === "dark" && "bg-black"
+      }`}
+    >
       <div className="flex items-center justify-between mb-4">
-      <h1 className={`${themes === "dark" ? "bg-black text-white border-white" : ""} text-[#204349] font-semibold text-[16px] sm:text-xl md:text-3xl p-2 sm:p-4`}>
-  Trainee name - Sumithra
-</h1>
+        <h1
+          className={`  font-semibold text-[16px] sm:text-xl md:text-2xl p-2 sm:p-4`}
+        >
+          Trainee - Sumithra Mahapatra
+        </h1>
 
         {/* <button
           className="block sm:hidden p-2"
@@ -44,23 +48,27 @@ const Tabs = () => {
         >
           <MenuIcon className="w-6 h-6 text-[#FF9B26]" />
         </button> */}
-        <p className={` ${themes === "dark" ? "bg-black text-white border-white" : ""} text-[#204349] text-sm sm:text-base`}>
+        <p className={` text-sm sm:text-base`}>
           Number of Courses: {numberOfCourses}
         </p>
-      </div> 
+      </div>
       <button
-          className="block sm:hidden p-2"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <MenuIcon className="w-6 h-6 text-[#204349]" />
-        </button>
-      <div className={`flex flex-col  sm:flex-row border-b ${isMenuOpen ? 'block' : 'hidden'} sm:block`}>
-        <ul className="flex flex-col  text-white sm:flex-row">
+        className="block sm:hidden p-2"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <MenuIcon className="w-6 h-6 text-[#204349]" />
+      </button>
+      <div
+        className={`flex flex-col  sm:flex-row border-b ${
+          isMenuOpen ? "block" : "hidden"
+        } sm:block`}
+      >
+        <ul className="flex flex-col space-x-2  sm:flex-row">
           {courses.map((course) => (
             <li
               key={course.id}
               onClick={() => handleTabClick(course.id)}
-              className={`mb-2 sm:mb-0 ${openTab === course.id ? "-mb-px" : ""}`}
+              className={`mb-2 sm:mb-0 ${openTab === course.id ? "" : ""}`}
             >
               <a
                 href="#"
@@ -74,7 +82,7 @@ const Tabs = () => {
           ))}
         </ul>
       </div>
-      <div className={`  ${themes === "dark" ? "bg-black text-white border-white" : "text-[#204349]"}  w-full mt-4`}>
+      <div className={`   w-full mt-4`}>
         {openTab === 1 && <TraineeCourseTable1 />}
         {openTab === 2 && <TraineeCourseTable2 />}
         {openTab === 3 && <TraineeCourseTable3 />}

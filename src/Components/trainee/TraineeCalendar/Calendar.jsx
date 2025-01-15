@@ -1,6 +1,3 @@
-
- 
-
 import React, { useState } from "react";
 import { FaPlusCircle } from "react-icons/fa";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
@@ -18,10 +15,20 @@ const ReactCalendar = ({ onEventClick }) => {
   const currentDate = new Date();
   const [currentMonth, setCurrentMonth] = useState(currentDate.getMonth());
   const [currentYear, setCurrentYear] = useState(currentDate.getFullYear());
-  
+
   const months = [
-    "January", "February", "March", "April", "May", "June", "July",
-    "August", "September", "October", "November", "December",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
@@ -39,7 +46,9 @@ const ReactCalendar = ({ onEventClick }) => {
         i === currentDate.getDate() &&
         currentMonth === currentDate.getMonth() &&
         currentYear === currentDate.getFullYear();
-      const dayClasses = `day text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl m-1 sm:m-2 ${isToday ? "bg-[#FDE68A] rounded-full" : ""}`;
+      const dayClasses = `day text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl m-1 sm:m-2 ${
+        isToday ? "bg-[#204349] text-white rounded-full" : ""
+      }`;
       daysArray.push(
         <div key={i} className={dayClasses} onClick={() => onEventClick(i)}>
           <span className="font-roboto font-medium">{i}</span>
@@ -68,17 +77,23 @@ const ReactCalendar = ({ onEventClick }) => {
   };
 
   return (
-    <div className="calendar-container p-2 sm:p-4">
+    <div className="calendar-container  p-2 sm:p-4">
       <div className="max-w-full mx-auto rounded-lg overflow-hidden p-4">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
           <h2 className="font-semibold text-lg sm:text-xl md:text-2xl mb-2 sm:mb-0">
             {getCurrentDateString()}
           </h2>
           <div className="flex space-x-2 mb-2 sm:mb-0">
-            <button onClick={goToPreviousMonth} className="border border-[#204349] rounded-full p-2 sm:p-3 text-sm sm:text-base hover:text-gray-800">
+            <button
+              onClick={goToPreviousMonth}
+              className="border border-[#204349] rounded-full p-2 sm:p-3 text-sm sm:text-base hover:text-gray-800"
+            >
               <GoChevronLeft />
             </button>
-            <button onClick={goToNextMonth} className="border border-[#204349]  rounded-full p-2 sm:p-3 text-sm sm:text-base hover:text-gray-800">
+            <button
+              onClick={goToNextMonth}
+              className="border border-[#204349]  rounded-full p-2 sm:p-3 text-sm sm:text-base hover:text-gray-800"
+            >
               <GoChevronRight />
             </button>
           </div>
@@ -86,7 +101,9 @@ const ReactCalendar = ({ onEventClick }) => {
 
         <div className="grid grid-cols-7 gap-1 sm:gap-2 text-center font-semibold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
           {abbreviatedDays.map((day, index) => (
-            <div key={index} className="hidden sm:flex justify-center">{day}</div>
+            <div key={index} className="hidden sm:flex justify-center">
+              {day}
+            </div>
           ))}
           {renderDays()}
         </div>
@@ -120,7 +137,10 @@ const Events = () => {
       setEvents(updatedEvents);
     } else {
       const newEventObject = {
-        id: events.length > 0 ? Math.max(...events.map((event) => event.id)) + 1 : 1,
+        id:
+          events.length > 0
+            ? Math.max(...events.map((event) => event.id)) + 1
+            : 1,
         ...newEvent,
       };
       setEvents([...events, newEventObject]);
@@ -147,7 +167,7 @@ const Events = () => {
   const themes = localStorage.getItem("theme");
 
   return (
-    <div className={`${themes === "dark" ? "bg-black" : "bg-white"} p-4 `}>
+    <div className={`bg-white text-black  rounded-lg shadow-lg p-4 `}>
       <div className="flex justify-end mb-4">
         <button
           className="bg-[#204349] text-white flex justify-center items-center py-3 p-4 rounded-lg"
@@ -173,7 +193,8 @@ const Events = () => {
           ) : (
             events.map((event) => (
               <div key={event.id} className=" py-2">
-                <span className="font-medium">{event.name}</span> - {event.date} ({event.day})
+                <span className="font-medium">{event.name}</span> - {event.date}{" "}
+                ({event.day})
               </div>
             ))
           )}
@@ -196,18 +217,16 @@ const Events = () => {
                   onChange={handleInputChange}
                   className="border p-2 w-full border-[#204349] placeholder:text-black border-opacity-40 focus:outline-none text-[#204349]" // Change text color here
                 />
-
               </div>
               <div>
                 <label className="block mb-2 text-white">Event Name</label>
                 <input
-  type="text"
-  name="name"
-  value={newEvent.name}
-  onChange={handleInputChange}
-  className="border p-2 w-full border-[#204349] border-opacity-40 focus:outline-none text-black" // Change text color to black here
-/>
-
+                  type="text"
+                  name="name"
+                  value={newEvent.name}
+                  onChange={handleInputChange}
+                  className="border p-2 w-full border-[#204349] border-opacity-40 focus:outline-none text-black" // Change text color to black here
+                />
               </div>
               <div className="flex justify-end space-x-2">
                 <button
