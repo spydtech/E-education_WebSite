@@ -3,6 +3,7 @@ import { TfiArrowTopRight } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import { RxDoubleArrowRight } from "react-icons/rx";
 import CourseCompletionTable from "./CourseCompletionTable";
+import StatusButtonTrainee from "../status/StatusButtonTrainee";
 function HomeTrainee() {
   const filessent = localStorage.getItem("filessent") || 0;
   const Activeusers = localStorage.getItem("Activeusers") || 0;
@@ -38,6 +39,7 @@ function HomeTrainee() {
   return (
     <div id="container ">
       {/* Container for the cards */}
+      <StatusButtonTrainee />
       <div
         className={`text-black  grid grid-cols-1     lg:grid-cols-3 gap-4 p-4`}
       >

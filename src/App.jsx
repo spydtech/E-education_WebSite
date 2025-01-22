@@ -130,6 +130,8 @@ import Todo from "./Components/trainee/SheduledReports/Todo";
 import Dashboard from "./Admin/Components/pymentData/MainDashBoard";
 import TraineeDashboard from "./Components/trainee/TraineeDashboard/TraineeDashboard";
 import ThemeToggle from "./Components/trainee/TraineeDashboard/Themetoggle";
+// import EmployeeStatus from "./Admin/Components/status/EmployeeStatus";
+// import StatusButton from "./Admin/Components/status/StatusButton";
 // import ReportsAndMasters from "./Components/Meeting/hospita/reports";
 // import Sarvices from "./Components/Meeting/hospita/sarvices";
 function App() {
@@ -185,6 +187,10 @@ function App() {
             <Route path="/linechart" element={<CountOfSeals />} />
             <Route path="/countofproducts" element={<CountOfProduct />} />
             <Route path="/countofcustomers" element={<CountOfCustomers />} />
+
+            {/* status */}
+
+            {/* <Route path="/admin/status" element={<StatusButton />} /> */}
 
             {/* WSpace */}
             <Route path="/WSpace" element={<WSpace />} />

@@ -16,6 +16,7 @@ import AccessField from "./AccessField";
 import RegisterEmployee from "./Register/RegisterEmployee";
 import RegisterTrainee from "./Register/RegisterTraniee";
 import Meeting from "./Meet/Meeting";
+import { GrStatusGood } from "react-icons/gr";
 // import ThemeToggle from "../../Components/trainee/TraineeDashboard/Theamtoggle";
 import IMG from "../../assets/logo/E-educationlogo.png";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
@@ -29,6 +30,9 @@ import { MdOutlinePayment } from "react-icons/md";
 import { SiGooglemeet } from "react-icons/si";
 import { getUser, logout } from "../../State/Auth/Action";
 import AdminSettings from "./adminsettings/AdminSettings ";
+import EmployeeStatus from "./status/EmployeeStatus";
+import { useLocation } from "react-router-dom";
+import TraineeStatus from "./status/TraineeStatus";
 
 const themesBackGroundColor = [
   { value: "light", colorClass: "bg-light-theme" },
@@ -71,6 +75,15 @@ const menu = [
     icon: <SiGooglemeet className="w-5 h-5 mr-3" />,
   },
   {
+    name: "Status",
+    path: "/admin/status",
+    icon: <GrStatusGood className="w-6 h-6 mr-2" />,
+    subMenu: [
+      { name: "Trainee", path: "/admin/status/trainee" },
+      { name: "Employee", path: "/admin/status/employee" },
+    ],
+  },
+  {
     name: "Settings",
     path: "/admin/settings",
     icon: <SettingsIcon className="w-6 h-6 mr-2" />,
@@ -90,7 +103,7 @@ const Admin = () => {
   const themes = localStorage.getItem("theme");
   const jwt = localStorage.getItem("jwt");
   const auth = useSelector((state) => state.auth);
-
+  const location = useLocation();
   const dispatch = useDispatch();
   ///////////////////////////////////////////
   const [themeBg, setThemeBg] = useState(() => {
@@ -196,7 +209,12 @@ const Admin = () => {
                     navigate(item.path);
                   }
                 }}
-                className="flex items-center px-4 py-3 hover:bg-white hover:text-black hover:bg-opacity-80 w-full border-l-8 border-transparent hover:border-[#001510] transition-all duration-300 "
+                className={`flex items-center px-4 py-3 w-full border-l-8 transition-all duration-300 
+          ${
+            location.pathname === item.path
+              ? " text-black border-[#001510]"
+              : " hover:text-black hover:bg-opacity-80 border-transparent"
+          }`}
               >
                 <span className="text-base">{item.icon}</span>
                 <span className="text-sm">{item.name}</span>
@@ -212,7 +230,12 @@ const Admin = () => {
                     <li key={subItem.name} className="relative">
                       <button
                         onClick={() => navigate(subItem.path)}
-                        className="flex items-center space-x-2 px-4 py-3 hover:bg-white hover:text-black hover:bg-opacity-80 w-full border-l-8 border-transparent hover:border-[#001510] transition-all duration-300 "
+                        className={`flex items-center space-x-2 px-4 py-3 w-full transition-all duration-300 
+                  ${
+                    location.pathname === subItem.path
+                      ? " text-black border-[#001510]"
+                      : " hover:text-black hover:bg-opacity-80 border-transparent"
+                  }`}
                       >
                         <span className="text-sm pl-8">{subItem.name}</span>
                       </button>
@@ -297,6 +320,8 @@ const Admin = () => {
           <Route path="/register-trainee" element={<RegisterTrainee />} />
           <Route path="/meeting" element={<Meeting />} />
           <Route path="/settings" element={<AdminSettings />} />
+          <Route path="/status/employee" element={<EmployeeStatus />} />
+          <Route path="/status/trainee" element={<TraineeStatus />} />
         </Routes>
       </div>
     </div>

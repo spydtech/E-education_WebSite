@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { Textarea } from "flowbite-react";
 import TraineForgotPassword from "../ForgotPassword/forgotpassword";
 import Themetoggle from "../../TraineeDashboard/Themetoggle";
+import TraineeStatus from "../../status/TraineeStatus";
 
 const ProfileSection = () => {
   const [avatar, setAvatar] = useState(
@@ -220,6 +221,9 @@ const ProfileSection = () => {
             Update Password
           </button>
         </form>
+      </div>
+      <div className=" mt-5">
+        <TraineeStatus />
       </div>
       <div className=" mt-5">
         <Themetoggle />

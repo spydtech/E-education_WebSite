@@ -286,7 +286,7 @@ const TraineeTable = () => {
   const groupedData = groupDataByCourse(dataToDisplay);
 
   return (
-    <div className=" p-4">
+    <div className="text-black p-4">
       <h1 className="text-3xl text-center font-bold text-[#153243]">
         User Information{" "}
       </h1>

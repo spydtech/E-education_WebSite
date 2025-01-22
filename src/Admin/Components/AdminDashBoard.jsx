@@ -5,12 +5,15 @@ import students from "../../assetss/admindashboard/students.png";
 import courses from "../../assetss/admindashboard/courses.png";
 import { TfiStatsUp } from "react-icons/tfi";
 import PaymentData from "./PaymentData";
+
 // import { useDispatch, useSelector } from "react-redux";
 // import { setTheme } from '../../../State/Theme/Theme';
 import { setTheme } from "../../State/Theme/Theme";
 // import adminimg from "../../assetss/Home/Admin.png";
 import { useDispatch, useSelector } from "react-redux";
 import ThemeToggle from "../../Components/trainee/TraineeDashboard/Themetoggle";
+// import StatusButton from "./status/StatusButton";
+import StatusButtonEmployee from "./status/StatusButtonEmployee";
 const data = [
   { img: sales, alt: "Sales", value: "2,42,000", text: "Sales" },
   { img: courses, alt: "Courses", value: "90", text: "Courses" },
@@ -32,6 +35,7 @@ const AdminDashBoard = () => {
   const themes = localStorage.getItem("theme");
   return (
     <div className="  grid   ">
+      <StatusButtonEmployee />
       <div
         id="div1"
         className={`  bg-white text-black   h-auto     rounded-lg  sm:ml-5 mt-8  lg:ml-3 p-3 text-start  lg:w-auto max-w-[1140px] md:w-[500px]  `}

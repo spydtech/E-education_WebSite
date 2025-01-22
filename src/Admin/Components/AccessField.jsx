@@ -17,7 +17,7 @@ const AccessField = () => {
   return (
     <div className="flex justify-center p-8 px-6 min-h-screen">
       <div
-        className={`   rounded-lg shadow-lg w-68 h-80 md:w-[700px]  md:h-[420px]  `}
+        className={`bg-white   rounded-lg shadow-lg w-68 h-80 md:w-[700px]  md:h-[420px]  `}
       >
         <div className="w-auto h-24 bg-[#153243]  rounded-t-lg flex justify-center items-center">
           <h2 className="md:lg:text-2xl font-bold text-xl  text-white ">
