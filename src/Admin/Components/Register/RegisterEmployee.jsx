@@ -17,7 +17,7 @@ function generatePassword(length = 12) {
   return password;
 }
 
-const API_URL = "http://localhost:8080/auth/employee/register";
+const API_URL = "http://localhost:8082/auth/employee/register";
 const RegisterEmployee = () => {
   const [employeeId, setEmployee] = useState(null);
   const [firstName, setFirstName] = useState("");
