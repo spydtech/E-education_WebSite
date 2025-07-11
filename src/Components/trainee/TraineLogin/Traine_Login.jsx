@@ -26,7 +26,7 @@ const Traine_Login = () => {
     };
   
     try {
-      const response = await axios.post('http://localhost:8080/trainee/signin', traineeData);
+      const response = await axios.post('http://localhost:8082/trainee/signin', traineeData);
       console.log(response);
       if (response.data.status) {
         localStorage.setItem('jwt', response.data.jwt);
