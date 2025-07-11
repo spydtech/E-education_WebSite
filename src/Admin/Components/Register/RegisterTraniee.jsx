@@ -358,7 +358,7 @@ const RegisterTrainee = () => {
   const [emailError, setEmailError] = useState("");
 
   // Backend API URL
-  const API_URL = "http://localhost:8080/trainee/register";
+  const API_URL = "http://localhost:8082/trainee/register";
 
   const validateInputs = () => {
     let isValid = true;
