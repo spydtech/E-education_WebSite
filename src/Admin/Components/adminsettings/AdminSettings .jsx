@@ -24,7 +24,7 @@ function AdminSettings() {
 
   const fetchProfileData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/users/profile", {
+      const response = await axios.get("http://localhost:8082/api/users/profile", {
         headers: { Authorization: `Bearer ${jwt}` },
       });
       const user = response.data;
