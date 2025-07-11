@@ -8,7 +8,7 @@ import traineloginpageimage from "../../../assetss/login/traineloginpageimage.pn
 import Eeducationlogo from "../../../assets/logo/E-educationlogo.png";
 import axios from 'axios';
 
-const API_URL = "http://localhost:8080/trainee/signin"; // Backend API URL
+const API_URL = "http://localhost:8082/trainee/signin"; // Backend API URL
 
 const Traine_Login = () => {
   const [errorMessage, setErrorMessage] = useState('');
